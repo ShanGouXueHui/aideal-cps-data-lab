@@ -1,0 +1,19 @@
+collector:
+  mode: authorized_browser
+  browser:
+    headless: false
+    storage_state_path: .secrets/jd_storage_state.json
+  output:
+    raw_dir: data/raw
+    clean_dir: data/clean
+    import_dir: data/import
+
+safety:
+  production_write_default: false
+  never_commit:
+    - .secrets/
+    - data/raw/
+    - data/clean/
+    - data/import/
+    - run/
+    - logs/
