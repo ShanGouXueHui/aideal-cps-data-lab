@@ -264,3 +264,129 @@ AIdeal CPS / 智省优选是微信服务号 + 京东联盟 CPS 导购系统。Da
 - `docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md`
 
 这三个文件合起来构成 DL2 数据采集阶段的设计、状态与新对话启动上下文。
+---
+
+## HZ11 多浏览器双菜单采集状态更新
+
+MARKER: DL2_HZ11_MULTI_BROWSER_MENU_UPDATE_20260510
+
+### 时间
+
+2026-05-10
+
+### 当前机器
+
+- 采集机：杭州 121.41.111.36
+- 用户：cpsdata
+- 项目路径：/home/cpsdata/projects/aideal-cps-data-lab
+- Chrome A：
+  - 用途：商品推广 / 全部商品
+  - CDP：127.0.0.1:19228
+  - profile：.secrets/jd_union_public_manual_profile
+  - noVNC：18772
+- Chrome B：
+  - 用途：实时榜单 / 高佣榜
+  - CDP：127.0.0.1:19229
+  - profile：.secrets/jd_union_commission_manual_profile
+  - noVNC：18773
+
+### 设计决策
+
+1. 不再用一个浏览器来回切榜单。
+2. 一个 worker 固定绑定一个 Chrome profile、一个 CDP 端口、一个菜单。
+3. 一期只开两个浏览器，避免并发过高导致风控。
+4. product_all 采集“商品推广 / 全部商品”。
+5. high_commission 采集“实时榜单 / 高佣榜”。
+6. 不再采集“今日热销榜”，避免与全部商品池高度重复。
+7. 推广短链有效期按 60 天建模：
+   - link_expire_days = 60
+   - refresh_after_days = 40
+   - refresh_before_expiry_days = 20
+8. 目标总量：一期 100000 条去重 SKU。
+9. 达到 100000 后进入刷新轮，从头刷新链接，避免短链过期。
+10. 出现验证码、安全验证、登录失效、风控提示，必须写 STOP 文件并停止，不允许自动反复登录。
+
+### 已提交脚本和配置
+
+- run/hz11_rank_worker.py
+- run/hz11_merge_multi_menu_latest.py
+- run/hz11_high_commission_probe.py
+- config/hz11_product_all.env
+- config/hz11_high_commission.env
+- docs/ops/DL2_HZ11_SMOKE_REPORT.md
+- reports/hz11_smoke_summary_latest.json
+- reports/hz11_high_commission_dom_probe_latest.json
+
+### Smoke 结果
+
+#### product_all
+
+结论：链路可用。
+
+发现问题：
+
+- 第一次 smoke 成功点击一键领链。
+- 但同一页内出现重复 SKU 领链。
+- 已补丁：
+  - fresh candidates 去重。
+  - collect loop 内二次检查 skip_sku。
+  - 避免同一轮重复点击同一 SKU。
+
+后续需要：
+
+- 清理或重置 product_all state 后再跑 smoke。
+- 确认 patch 后 dedup_sku 接近 ok_rows。
+- 再启动长期守护。
+
+#### high_commission
+
+结论：页面可用，但旧 HZ9 parser 不适配。
+
+DOM probe 发现：
+
+- 有商品卡片文本。
+- 有商品链接。
+- hover 后有按钮。
+- 一键领链按钮存在，但位于 expanded hover content。
+- HZ9 的 get_candidates 在 realTimeRankings 页面返回 0。
+
+后续需要：
+
+1. 为高佣榜写专用 DOM card parser。
+2. 通过商品卡片文本提取 title、price、commission_rate、estimated_income、image_url、rank_index。
+3. 优先从链接或 DOM 属性提取 SKU。
+4. 如果卡片阶段提取不到 SKU，则点击一键领链后，从 modal 的 long_url、jd_url 或 union-click 参数中反推 SKU。
+5. 高佣榜点击逻辑应为：定位卡片，hover 卡片，找该卡片内的一键领链，点击，读取 modal，写 JSONL。
+
+### 当前数据状态
+
+- HZ9 旧数据：60 条，字段完整：
+  - short_url
+  - long_url
+  - qr_url
+  - jd_command
+- product_all smoke：已验证能生成短链，但需要重置 state 后再做干净统计。
+- high_commission：0 条，需要专用 parser。
+- 合并目标文件：
+  - data/import/hz_jd_union_multi_menu_promotion_links_latest.jsonl
+
+### Git 状态
+
+- remote 已从 HTTPS 切换到 SSH：
+  - git@github.com:ShanGouXueHui/aideal-cps-data-lab.git
+- cpsdata 用户已配置 GitHub SSH key。
+- 已完成 rebase 并 push。
+- 关键提交：
+  - ae37fb7：HZ11 multi-menu collector diagnostics
+
+### 下一步
+
+1. 修高佣榜专用 DOM parser 和 hover click。
+2. 重置 product_all smoke state，验证去重补丁。
+3. 两个 worker 分别跑 15 到 30 分钟。
+4. 生成吞吐率报告：
+   - 每小时新增 SKU
+   - 每日估算新增 SKU
+   - 100000 条预计完成天数
+   - 是否满足 40 天刷新周期
+5. 稳定后再启动 HZ12 watchdog，24 小时不停跑。

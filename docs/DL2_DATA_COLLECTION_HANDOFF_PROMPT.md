@@ -350,3 +350,36 @@ latest links 是否增长
 ```
 
 然后根据状态继续。
+---
+
+## HZ11 最新接续提示
+
+MARKER: DL2_HZ11_HANDOFF_UPDATE_20260510
+
+如果从新对话继续，请先读取：
+
+- memory/DL2_DATA_COLLECTION_MEMORY.md
+- docs/ops/DL2_HZ11_SMOKE_REPORT.md
+- reports/hz11_smoke_summary_latest.json
+- reports/hz11_high_commission_dom_probe_latest.json
+
+当前状态：
+
+1. 杭州采集机 121.41.111.36 / cpsdata 已配置两个 Chrome。
+2. product_all 绑定 CDP 19228，采集“商品推广 / 全部商品”。
+3. high_commission 绑定 CDP 19229，采集“实时榜单 / 高佣榜”。
+4. 不再抓“今日热销榜”。
+5. HZ11 脚本已提交，但还不能直接 24 小时放量。
+6. product_all smoke 成功，但需要重置 state 后复测去重补丁。
+7. high_commission 需要专用 DOM parser，不能复用 HZ9 的 get_candidates。
+8. 高佣榜按钮需要 hover 商品卡片后出现，应实现 card-level hover + card-level click。
+9. 短链有效期 60 天，提前 20 天刷新，即第 40 天进入 refresh queue。
+10. 目标是一阶段 100000 条去重 SKU，并根据实测吞吐率计算刷新周期。
+
+禁止事项：
+
+- 不要提交 .secrets/。
+- 不要提交账号、密码、Cookie、token、HAR、二维码。
+- 不要提交 data/import/*.jsonl 大数据文件，除非明确要求。
+- 不要 force push。
+- 不要在出现验证码、登录失效、风控时自动重试登录。

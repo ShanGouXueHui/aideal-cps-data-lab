@@ -421,3 +421,67 @@ pgrep -af "dl2z_guard_watchdog|dl2y_union_guarded_daemon|chrome.*19228" || true
 - 不高频点击一键领链。
 - 不绕过平台风控或验证码。
 - 不把未经过滤的医疗、成人、强功效、风险商品直接用于公众号推荐。
+---
+
+## HZ11 多浏览器双菜单采集架构
+
+MARKER: DL2_HZ11_MULTI_BROWSER_DESIGN_20260510
+
+### 目标
+
+在杭州采集机上构建低频、可持续、可暂停的京东联盟登录态推广链采集器。一期目标为 100000 条去重 SKU 推广链，用于后续商业安全过滤、微信 feed 合并和生产 dry-run 导入。
+
+### worker 拆分
+
+- product_all
+  - 菜单：商品推广 / 全部商品
+  - CDP：19228
+  - profile：.secrets/jd_union_public_manual_profile
+  - 特点：按页翻页采集，按钮常驻可见
+
+- high_commission
+  - 菜单：实时榜单 / 高佣榜
+  - CDP：19229
+  - profile：.secrets/jd_union_commission_manual_profile
+  - 特点：hover 商品卡片后点击一键领链
+
+### 关键原则
+
+1. 一个 worker 绑定一个浏览器，不共享页面。
+2. 不使用同一浏览器反复切换榜单。
+3. 初期只跑两个浏览器，避免账号风控。
+4. 后续如果扩并发，也必须按“一个 worker = 一个 Chrome profile + 一个 CDP + 一个 state + 一个 output”扩展。
+5. 出现验证码、登录失效、风险验证、安全验证，立即写 STOP 文件并停止。
+
+### 链接生命周期
+
+京东联盟短链有效期按 60 天处理：
+
+- link_created_at：创建时间
+- link_expire_at：创建时间 + 60 天
+- refresh_due_at：创建时间 + 40 天
+- refresh_before_expiry_days：20
+
+采集池达到 100000 条后，从头刷新，确保链接不过期。
+
+### 吞吐率目标
+
+为保证 100000 条链接在 40 天刷新周期内完成，系统至少需要：
+
+- 100000 / 40 = 2500 条/天
+
+两浏览器均摊：
+
+- product_all + high_commission 合计约 2500 条/天
+- 每个 worker 约 1250 条/天
+- 每个 worker 约 52 条/小时
+
+该目标不激进，优先保证稳定性和低风控风险。
+
+### 当前待修
+
+- product_all：去重补丁已完成，需要重置 state 后 smoke 复测。
+- high_commission：需要实现专用 card parser 和 hover click。
+- 合并器需要持续输出：
+  - data/import/hz_jd_union_multi_menu_promotion_links_latest.jsonl
+  - run/hz11_multi_menu_merge_report_latest.json
