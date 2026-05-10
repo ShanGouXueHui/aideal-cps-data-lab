@@ -517,59 +517,422 @@ def cycle_product_all(page, state):
     return processed, pages
 
 
+
+def extract_sku_from_texts(*vals):
+    import re
+    patterns = [
+        r'(?:skuId|sku_id|sku|wareId|ware_id|materialId|material_id|itemId|item_id)[=:/%3D]+(\d{5,})',
+        r'item\.jd\.com/(\d{5,})\.html',
+        r'jd\.com/(\d{5,})\.html',
+        r'wareId["\\\']?\s*[:=]\s*["\\\']?(\d{5,})',
+        r'skuId["\\\']?\s*[:=]\s*["\\\']?(\d{5,})',
+    ]
+    blob = " ".join(str(v or "") for v in vals)
+    for pat in patterns:
+        m = re.search(pat, blob, flags=re.I)
+        if m:
+            return m.group(1), pat
+    return "", ""
+
+
+def get_high_commission_cards(page):
+    """
+    realTimeRankings / 高佣榜 专用 parser。
+    HZ9 get_candidates 适配商品推广页，不适配实时榜单页。
+    这里从可见卡片 DOM 中解析 rank/title/price/commission，并给卡片打 data-hz11-card-id。
+    """
+    return page.evaluate(
+        """
+        () => {
+          const norm = s => (s || '').replace(/\\s+/g, ' ').trim();
+          const compact = s => (s || '').replace(/\\s+/g, '').trim();
+
+          const skuFromUrl = (u) => {
+            if (!u) return '';
+            const patterns = [
+              /item\\.jd\\.com\\/(\\d{5,})\\.html/i,
+              /jd\\.com\\/(\\d{5,})\\.html/i,
+              /(?:skuId|sku_id|sku|wareId|ware_id|materialId|material_id|itemId|item_id)[=:/%3D]+(\\d{5,})/i
+            ];
+            for (const p of patterns) {
+              const m = String(u).match(p);
+              if (m) return m[1];
+            }
+            return '';
+          };
+
+          const parseMoney = (txt, label) => {
+            const re = new RegExp(label + '\\\\s*¥?\\\\s*([0-9]+(?:\\\\.[0-9]+)?)', 'i');
+            const m = txt.match(re);
+            return m ? m[1] : '';
+          };
+
+          const parseRate = (txt) => {
+            const m = txt.match(/佣金率\\s*([0-9]+(?:\\.[0-9]+)?%)/);
+            return m ? m[1] : '';
+          };
+
+          let raw = Array.from(document.querySelectorAll('div')).map((el, idx) => {
+            const r = el.getBoundingClientRect();
+            const txt = norm(el.innerText || el.textContent || '');
+            return {el, idx, txt, rect:{x:r.x,y:r.y,w:r.width,h:r.height}, area:r.width*r.height};
+          }).filter(x =>
+            x.rect.w >= 240 &&
+            x.rect.w <= 520 &&
+            x.rect.h >= 120 &&
+            x.rect.h <= 520 &&
+            x.rect.x >= 180 &&
+            x.rect.y >= -80 &&
+            x.rect.y <= window.innerHeight + 360 &&
+            /到手价/.test(x.txt) &&
+            /佣金/.test(x.txt) &&
+            x.txt.length >= 40 &&
+            x.txt.length <= 1000 &&
+            !/选择页面全部商品/.test(x.txt) &&
+            !/批量推广/.test(x.txt)
+          );
+
+          // 保留更小的卡片容器，去掉包含其它候选卡的大容器。
+          raw = raw.filter(a => !raw.some(b => a.el !== b.el && a.el.contains(b.el) && b.area < a.area * 0.82));
+
+          raw.sort((a,b) => (a.rect.y - b.rect.y) || (a.rect.x - b.rect.x));
+
+          const seenText = new Set();
+          const out = [];
+
+          for (const x of raw) {
+            const key = compact(x.txt).slice(0, 120);
+            if (seenText.has(key)) continue;
+            seenText.add(key);
+
+            const cardId = 'hc_' + out.length + '_' + Date.now();
+            x.el.setAttribute('data-hz11-card-id', cardId);
+
+            const txt = x.txt;
+            const links = Array.from(x.el.querySelectorAll('a[href]')).map(a => a.href || '').filter(Boolean);
+            const imgs = Array.from(x.el.querySelectorAll('img')).map(img => img.currentSrc || img.src || '').filter(Boolean);
+            const hrefBlob = links.join(' ');
+            let sku = skuFromUrl(hrefBlob);
+
+            let rank = '';
+            let rankMatch = txt.match(/^\\s*(\\d{1,3})\\s+/);
+            if (rankMatch) rank = rankMatch[1];
+
+            let titlePart = txt;
+            titlePart = titlePart.replace(/^\\s*\\d{1,3}\\s+/, '');
+            const pricePos = titlePart.search(/到手价/);
+            let title = pricePos > 0 ? titlePart.slice(0, pricePos) : titlePart;
+            title = title
+              .replace(/精品推荐/g, ' ')
+              .replace(/京喜自营/g, ' ')
+              .replace(/自营/g, ' ')
+              .replace(/奖励/g, ' ')
+              .replace(/券/g, ' ')
+              .replace(/\\s+/g, ' ')
+              .trim()
+              .slice(0, 180);
+
+            const price = parseMoney(txt, '到手价');
+            const income = parseMoney(txt, '佣金');
+            const rate = parseRate(txt);
+
+            out.push({
+              card_id: cardId,
+              rank_index: rank,
+              sku: sku,
+              sku_source: sku ? 'card_link' : '',
+              title: title,
+              itemUrl: links[0] || '',
+              imageUrl: imgs[0] || '',
+              price: price,
+              rate: rate,
+              income: income,
+              raw_text: txt.slice(0, 900),
+              rect: x.rect,
+              center: {x: x.rect.x + x.rect.w / 2, y: x.rect.y + Math.min(x.rect.h / 2, 180)}
+            });
+          }
+
+          return out;
+        }
+        """
+    )
+
+
+def click_high_commission_card(page, card):
+    """
+    高佣榜：hover 卡片后，在该卡片附近点击一键领链。
+    """
+    cid = card.get("card_id")
+    center = card.get("center") or {}
+    x = float(center.get("x") or 0)
+    y = float(center.get("y") or 0)
+
+    if x > 0 and y > 0:
+        page.mouse.move(x, y)
+        page.wait_for_timeout(900)
+
+    return page.evaluate(
+        """
+        (cid) => {
+          const norm = s => (s || '').replace(/\\s+/g, '').trim();
+          const root = document.querySelector(`[data-hz11-card-id="${cid}"]`);
+          if (!root) return {ok:false, reason:'card_not_found', cid};
+
+          const rr = root.getBoundingClientRect();
+          const cx = rr.x + rr.width / 2;
+          const cy = rr.y + rr.height / 2;
+
+          const fireHover = (el) => {
+            for (const name of ['mouseover', 'mouseenter', 'mousemove']) {
+              el.dispatchEvent(new MouseEvent(name, {bubbles:true, cancelable:true, view:window, clientX:cx, clientY:cy}));
+            }
+          };
+          fireHover(root);
+
+          const scoreNode = (el) => {
+            const r = el.getBoundingClientRect();
+            const visible = r.width > 0 && r.height > 0 && r.top >= -80 && r.top <= window.innerHeight + 220;
+            const bx = r.x + r.width / 2;
+            const by = r.y + r.height / 2;
+            const dx = Math.abs(bx - cx);
+            const dy = Math.abs(by - cy);
+            const insideX = bx >= rr.x - 80 && bx <= rr.x + rr.width + 80;
+            const nearY = by >= rr.y - 80 && by <= rr.y + rr.height + 260;
+            return {visible, dx, dy, insideX, nearY, dist: dx + dy, rect:{x:r.x,y:r.y,w:r.width,h:r.height}};
+          };
+
+          let nodes = Array.from(root.querySelectorAll('button,a,span,div'))
+            .map((el, idx) => ({el, idx, txt:norm(el.innerText || el.textContent), s:scoreNode(el)}))
+            .filter(x => x.txt === '一键领链' || x.txt.includes('一键领链'));
+
+          if (!nodes.length) {
+            nodes = Array.from(document.querySelectorAll('button,a,span,div'))
+              .map((el, idx) => ({el, idx, txt:norm(el.innerText || el.textContent), s:scoreNode(el)}))
+              .filter(x => (x.txt === '一键领链' || x.txt.includes('一键领链')) && x.s.insideX && x.s.nearY);
+          }
+
+          if (!nodes.length) return {ok:false, reason:'onekey_not_found_near_card', cid, rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height}};
+
+          nodes.sort((a,b) => {
+            const av = a.s.visible ? 0 : 1;
+            const bv = b.s.visible ? 0 : 1;
+            if (av !== bv) return av - bv;
+            return a.s.dist - b.s.dist;
+          });
+
+          const target = nodes[0];
+          target.el.scrollIntoView({block:'center', inline:'center'});
+          target.el.click();
+
+          return {
+            ok:true,
+            cid,
+            clicked_text:target.txt,
+            index:target.idx,
+            visible:target.s.visible,
+            rect:target.s.rect,
+            rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height}
+          };
+        }
+        """,
+        cid,
+    )
+
+
+def collect_high_commission_one(page, candidate, state, location):
+    close_dialog(page)
+
+    click_res = click_high_commission_card(page, candidate)
+    if not click_res.get("ok"):
+        raise RuntimeError("high_commission_click_failed:" + repr(click_res))
+
+    result = {}
+    for _ in range(60):
+        page.wait_for_timeout(1000)
+        result = hz9.parse_modal(page)
+        if result.get("short_url"):
+            break
+
+    close_dialog(page)
+
+    if not result.get("short_url"):
+        raise RuntimeError("short_url_not_found")
+
+    sku_from_result, sku_pat = extract_sku_from_texts(
+        candidate.get("sku"),
+        candidate.get("itemUrl"),
+        result.get("long_url"),
+        result.get("short_url"),
+        result.get("qr_url"),
+        result.get("jd_command"),
+    )
+
+    candidate_key = "hc_title_" + str(abs(hash((candidate.get("title") or "")[:120])))
+    sku = sku_from_result or str(candidate.get("sku") or "").strip() or candidate_key
+    sku_source = "modal_or_url" if sku_from_result else (candidate.get("sku_source") or "generated_title_key")
+
+    created_at, expire_at, refresh_due_at = link_dates()
+
+    row = {
+        "status": "ok",
+        "ts": now(),
+        "worker_name": WORKER_NAME,
+        "menu_mode": MENU_MODE,
+        "location": location,
+        "rank_index": candidate.get("rank_index"),
+        "sku": sku,
+        "sku_source": sku_source,
+        "sku_extract_pattern": sku_pat,
+        "title": candidate.get("title"),
+        "item_url": candidate.get("itemUrl"),
+        "image_url": candidate.get("imageUrl"),
+        "price": candidate.get("price"),
+        "commission_rate": candidate.get("rate"),
+        "estimated_income": candidate.get("income"),
+        "short_url": result.get("short_url"),
+        "long_url": result.get("long_url"),
+        "qr_url": result.get("qr_url"),
+        "jd_command": result.get("jd_command"),
+        "promotion_mode": "hz_jd_union_high_commission_hover_onekey",
+        "link_created_at": created_at,
+        "link_expire_at": expire_at,
+        "link_expire_days": LINK_EXPIRE_DAYS,
+        "refresh_due_at": refresh_due_at,
+        "refresh_after_days": REFRESH_AFTER_DAYS,
+        "refresh_before_expiry_days": REFRESH_BEFORE_EXPIRY_DAYS,
+        "refresh_round": state.get("refresh_round", 0),
+        "run_id": RUN_ID,
+        "click_result": click_res,
+    }
+
+    append_jsonl(OUT, row)
+    ensure_latest_link()
+
+    if sku and sku not in state["known_skus"]:
+        state["known_skus"].append(sku)
+    if sku and sku not in state["round_seen_skus"]:
+        state["round_seen_skus"].append(sku)
+    short = str(result.get("short_url") or "").strip()
+    if short and short not in state["seen_short_urls"]:
+        state["seen_short_urls"].append(short)
+
+    state["fail_streak"] = 0
+    state["empty_streak"] = 0
+    state["last_event"] = {
+        "event": "ITEM_OK",
+        "ts": now(),
+        "sku": sku,
+        "short_url": short,
+        "location": location,
+        "sku_source": sku_source,
+    }
+    save_state(state)
+
+    log(
+        "ITEM_OK",
+        sku=sku,
+        sku_source=sku_source,
+        short_url=short,
+        location=location,
+        known_sku_count=len(state.get("known_skus") or []),
+        round_seen_sku_count=len(state.get("round_seen_skus") or []),
+        refresh_round=state.get("refresh_round", 0),
+    )
+    return row
+
+
+
 def cycle_high_commission(page, state):
     processed = 0
-    hover_checked = 0
+    units = 0
+
     maybe_start_refresh_round(state)
     scroll_round, info = open_high_commission(page, state)
 
-    for x, y in hover_points():
-        if processed >= MAX_ITEMS_PER_CYCLE or hover_checked >= MAX_HOVER_POINTS_PER_CYCLE:
-            break
-        try:
-            page.mouse.move(x, y)
-            page.wait_for_timeout(700)
-        except Exception:
+    cards = get_high_commission_cards(page)
+    fresh = []
+    fresh_keys = set()
+
+    for c in cards:
+        key = str(c.get("sku") or c.get("title") or c.get("raw_text") or "").strip()
+        if not key:
             continue
-
-        candidates = get_candidates_basic(page)
-        fresh = []
-        fresh_skus = set()
-        for c in candidates:
-            sku = str(c.get("sku") or "").strip()
-            if sku and sku not in fresh_skus and not skip_sku(state, sku):
-                fresh.append(c)
-                fresh_skus.add(sku)
-
-        hover_checked += 1
-        log(
-            "HOVER_CANDIDATES",
-            x=x,
-            y=y,
-            scroll_round=scroll_round,
-            total=len(candidates),
-            fresh=len(fresh),
-            processed=processed,
-            page_info=info,
-        )
-
-        if not fresh:
+        key_for_state = str(c.get("sku") or ("hc_title_" + str(abs(hash(key[:120])))))
+        if key_for_state in fresh_keys:
             continue
+        if skip_sku(state, key_for_state):
+            continue
+        c["_state_key"] = key_for_state
+        fresh.append(c)
+        fresh_keys.add(key_for_state)
 
-        try:
-            collect_one(page, fresh[0], state, {"scroll_round": scroll_round, "x": x, "y": y})
-            processed += 1
-            write_report(state, {"last_cycle_processed": processed, "last_scroll_round": scroll_round})
-            time.sleep(random.uniform(ITEM_SLEEP_MIN, ITEM_SLEEP_MAX))
-        except Exception as e:
-            state["fail_streak"] = int(state.get("fail_streak") or 0) + 1
-            state["last_event"] = {"event": "ITEM_FAIL", "ts": now(), "err": repr(e), "scroll_round": scroll_round, "x": x, "y": y}
-            save_state(state)
-            log("ITEM_FAIL", err=repr(e), scroll_round=scroll_round, x=x, y=y, fail_streak=state["fail_streak"])
-            close_dialog(page)
-            if state["fail_streak"] >= MAX_FAIL_STREAK:
-                stop_required("max_fail_streak_reached", fail_streak=state["fail_streak"], last_error=repr(e))
-            time.sleep(random.uniform(20, 40))
+    log(
+        "HC_CARDS",
+        scroll_round=scroll_round,
+        total=len(cards),
+        fresh=len(fresh),
+        processed=processed,
+        page_info=info,
+        sample=[
+            {
+                "rank_index": x.get("rank_index"),
+                "sku": x.get("sku"),
+                "title": (x.get("title") or "")[:60],
+                "price": x.get("price"),
+                "rate": x.get("rate"),
+                "income": x.get("income"),
+            }
+            for x in fresh[:5]
+        ],
+    )
+
+    if not fresh:
+        state["empty_streak"] = int(state.get("empty_streak") or 0) + 1
+        save_state(state)
+    else:
+        for c in fresh:
+            if processed >= MAX_ITEMS_PER_CYCLE:
+                break
+            try:
+                collect_high_commission_one(
+                    page,
+                    c,
+                    state,
+                    {
+                        "scroll_round": scroll_round,
+                        "rank_index": c.get("rank_index"),
+                        "card_id": c.get("card_id"),
+                        "rect": c.get("rect"),
+                    },
+                )
+                processed += 1
+                units += 1
+                write_report(state, {"last_cycle_processed": processed, "last_scroll_round": scroll_round})
+                time.sleep(random.uniform(ITEM_SLEEP_MIN, ITEM_SLEEP_MAX))
+            except Exception as e:
+                state["fail_streak"] = int(state.get("fail_streak") or 0) + 1
+                state["last_event"] = {
+                    "event": "ITEM_FAIL",
+                    "ts": now(),
+                    "err": repr(e),
+                    "scroll_round": scroll_round,
+                    "rank_index": c.get("rank_index"),
+                    "title": (c.get("title") or "")[:80],
+                }
+                save_state(state)
+                log(
+                    "ITEM_FAIL",
+                    err=repr(e),
+                    scroll_round=scroll_round,
+                    rank_index=c.get("rank_index"),
+                    title=(c.get("title") or "")[:80],
+                    fail_streak=state["fail_streak"],
+                )
+                close_dialog(page)
+                if state["fail_streak"] >= MAX_FAIL_STREAK:
+                    stop_required("max_fail_streak_reached", fail_streak=state["fail_streak"], last_error=repr(e))
+                time.sleep(random.uniform(20, 40))
 
     if processed <= 0:
         state["empty_streak"] = int(state.get("empty_streak") or 0) + 1
@@ -586,8 +949,7 @@ def cycle_high_commission(page, state):
     if state["empty_streak"] >= EMPTY_STREAK_LIMIT:
         stop_required("empty_streak_limit", empty_streak=state["empty_streak"], scroll_round=state.get("scroll_round"))
 
-    return processed, hover_checked
-
+    return processed, max(units, len(cards))
 
 def main():
     log(
@@ -606,7 +968,8 @@ def main():
         stop_required("existing_stop_file_present", stop_path=str(STOP_PATH))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    ensure_latest_link()
+    if OUT.exists() and OUT.stat().st_size > 0:
+        ensure_latest_link()
 
     with sync_playwright() as p:
         browser = p.chromium.connect_over_cdp(f"http://127.0.0.1:{CDP_PORT}", timeout=15000)
