@@ -1,0 +1,880 @@
+{
+  "captured": [
+    {
+      "content_type": "text/html",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:47",
+      "url": {
+        "host": "union.jd.com",
+        "kept_query": {},
+        "path": "/proManager/realTimeRankings",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json;charset=UTF-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "jra.jd.com",
+        "kept_query": {},
+        "path": "/jsTk.do",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {},
+        "path": "/",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {},
+        "path": "/api",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {},
+        "path": "/",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "stream-outside.jd.com",
+        "kept_query": {},
+        "path": "/checkWhiteList",
+        "query_keys": [
+          "code"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/event/getRule",
+        "query_keys": [
+          "aid",
+          "version"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:48",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:49",
+      "url": {
+        "host": "cactus.jd.com",
+        "kept_query": {},
+        "path": "/behavior_report",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/x-javascript",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:50",
+      "url": {
+        "host": "storage.jd.com",
+        "kept_query": {},
+        "path": "/jadfe/theup/feedback/union/pc/theup-feedback.js",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:50",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/",
+        "query_keys": [
+          "appid",
+          "body",
+          "functionId",
+          "loginType",
+          "sign",
+          "t",
+          "uuid"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "cactus.jd.com",
+        "kept_query": {},
+        "path": "/behavior_report",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "image/jpeg",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:51",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/v2/speed/activity",
+        "query_keys": [
+          "flag",
+          "libVer",
+          "network",
+          "p1",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "resources",
+          "rts",
+          "sid",
+          "title",
+          "url"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 403,
+      "ts": "2026-05-10 19:24:53",
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "h5st",
+          "loginType",
+          "uuid",
+          "x-api-eid-token"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:55",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/event/log",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "image/jpeg",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:55",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/v2/speed/event",
+        "query_keys": [
+          "cls",
+          "clsInfo",
+          "fcp",
+          "flag",
+          "fp",
+          "fps",
+          "lcp",
+          "libVer",
+          "longTask",
+          "network",
+          "rts",
+          "sid",
+          "tbt",
+          "title",
+          "url"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:24:59",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/event/log",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:25:01",
+      "url": {
+        "host": "cactus.jd.com",
+        "kept_query": {},
+        "path": "/behavior_report",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "read_error": "TypeError(\"Response.text() got an unexpected keyword argument 'timeout'\")",
+      "status": 200,
+      "ts": "2026-05-10 19:25:04",
+      "url": {
+        "host": "h5speed.m.jd.com",
+        "kept_query": {},
+        "path": "/event/log",
+        "query_keys": [],
+        "scheme": "https"
+      }
+    }
+  ],
+  "captured_count": 39,
+  "diagnosis": {
+    "hint_hit_count": 0,
+    "json_with_product_like": 0
+  },
+  "page_markers": {
+    "body_len": 571,
+    "has_high_commission": true,
+    "has_one_key": false,
+    "one_key_count": 0,
+    "sample": "我的推广 效果报表 结算中心 工具场景 狂欢日历 消息公告 收起  【通知公告】 《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示  04.27  【通知公告】 《CID 业务合作要求及规范》修订内容公示  04.07   【运营消息】 【营销补贴】5月9日-5月11日京喜订单奖励活动  05.09   【运营消息】 【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10%  05.08   【运营消息】 【京东生鲜】5月8日-15日指定商品客单价区间激励  05.07  查看全部>  99+  帮助中心   aidealfy   概览  我要推广 商品推广 店铺推广 自定义推广 奖励活动推广 京享红包推广 官方活动推广 营销频道推广 品类频道推广  推广管理  我的工具 我的推广 我要推广 实时榜单 2小时热销榜 高佣榜 今日热销榜  类目筛选  全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味  暂无数据  上一页 下一页 选择页面全部商品(20) 已选 0 /20个商品  我的选品库 加入选品库 批量",
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/realTimeRankings"
+  },
+  "phase": "HZ11G high_commission network probe",
+  "port": 19229,
+  "security": [
+    "headers/cookies are not stored",
+    "URLs are sanitized to host/path/query-key level",
+    "response payloads are reduced to product-like object samples only"
+  ],
+  "tab_result": {
+    "clicked": "高佣榜",
+    "index": 188,
+    "ok": true
+  },
+  "ts": "2026-05-10 19:25:07",
+  "url": "https://union.jd.com/proManager/realTimeRankings"
+}
