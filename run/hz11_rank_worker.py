@@ -247,14 +247,16 @@ def open_product_all(page, state):
 
 
 def open_high_commission(page, state):
-    if "realTimeRankings" not in (page.url or ""):
-        page.goto(REALTIME_URL, wait_until="domcontentloaded", timeout=30000)
-        page.wait_for_timeout(4000)
+    setup_high_commission_rank_api_capture(page)
+    page.goto(REALTIME_URL, wait_until="domcontentloaded", timeout=30000)
+    page.wait_for_timeout(4000)
     close_dialog(page)
     res = click_text(page, HIGH_COMMISSION_TAB_TEXT)
-    page.wait_for_timeout(2500)
+    page.wait_for_timeout(6000)
     close_dialog(page)
     info = check_page(page)
+    info["rank_api_count"] = len(getattr(page, "_hz11_rank_skus", []) or [])
+    info["rank_api_last_error"] = getattr(page, "_hz11_rank_api_last_error", "")
     return int(state.get("scroll_round") or 0), {"tab_click": res, **info}
 
 
@@ -535,13 +537,159 @@ def extract_sku_from_texts(*vals):
     return "", ""
 
 
+
+def normalize_jd_image_url(v):
+    s = str(v or "").strip()
+    if not s:
+        return ""
+    if s.startswith("http://") or s.startswith("https://"):
+        return s
+    if s.startswith("//"):
+        return "https:" + s
+    if s.startswith("jfs/") or s.startswith("/jfs/"):
+        return "https://img14.360buyimg.com/n1/" + s.lstrip("/")
+    return s
+
+
+def setup_high_commission_rank_api_capture(page):
+    """
+    监听高佣榜列表接口 union_search_rank_api，缓存 result.rankSkuList。
+    不保存 cookies/header/h5st/sign，只在 worker 内使用商品字段。
+    """
+    if getattr(page, "_hz11_rank_api_capture_ready", False):
+        return
+
+    page._hz11_rank_api_capture_ready = True
+    page._hz11_rank_skus = []
+    page._hz11_rank_api_last_error = ""
+
+    def on_response(resp):
+        try:
+            url = resp.url or ""
+            if "functionId=union_search_rank_api" not in url:
+                return
+            text = resp.text()
+            payload = json.loads(text)
+            items = (((payload or {}).get("result") or {}).get("rankSkuList") or [])
+            clean = []
+            for idx, x in enumerate(items):
+                if not isinstance(x, dict):
+                    continue
+                sku = str(x.get("skuId") or "").strip()
+                name = str(x.get("skuName") or "").strip()
+                if not sku and not name:
+                    continue
+                image = normalize_jd_image_url(x.get("imageUrl"))
+                item_url = f"https://item.jd.com/{sku}.html" if sku else ""
+                clean.append({
+                    "api_index": idx,
+                    "sku": sku,
+                    "skuId": sku,
+                    "skuName": name,
+                    "title": name,
+                    "itemUrl": item_url,
+                    "imageUrl": image,
+                    "price": str(x.get("wlprice") or ""),
+                    "rate": (str(x.get("commissionShare")) + "%") if x.get("commissionShare") not in (None, "") else "",
+                    "income": str(x.get("commission") or ""),
+                    "commission": str(x.get("commission") or ""),
+                    "commissionShare": str(x.get("commissionShare") or ""),
+                    "rank_index": str(x.get("rankPos") or idx + 1),
+                    "raw_keys": sorted(list(x.keys()))[:80],
+                })
+            if clean:
+                page._hz11_rank_skus = clean
+                log("HC_RANK_API_CAPTURED", count=len(clean), sample=[
+                    {
+                        "api_index": z.get("api_index"),
+                        "sku": z.get("sku"),
+                        "title": (z.get("title") or "")[:60],
+                        "price": z.get("price"),
+                        "rate": z.get("rate"),
+                        "income": z.get("income"),
+                    }
+                    for z in clean[:5]
+                ])
+        except Exception as e:
+            page._hz11_rank_api_last_error = repr(e)
+            log("HC_RANK_API_CAPTURE_FAIL", err=repr(e))
+
+    page.on("response", on_response)
+
+
+def title_score(a, b):
+    aa = str(a or "")
+    bb = str(b or "")
+    if not aa or not bb:
+        return 0
+    aa_c = "".join(ch for ch in aa if not ch.isspace())
+    bb_c = "".join(ch for ch in bb if not ch.isspace())
+    if aa_c and bb_c and (aa_c in bb_c or bb_c in aa_c):
+        return min(len(aa_c), len(bb_c)) + 1000
+    aset = set(aa_c)
+    bset = set(bb_c)
+    if not aset or not bset:
+        return 0
+    return len(aset & bset)
+
+
+def attach_rank_api_items_to_cards(page, cards):
+    api_items = list(getattr(page, "_hz11_rank_skus", []) or [])
+    if not cards or not api_items:
+        return cards
+
+    used = set()
+    enriched = []
+
+    for i, c in enumerate(cards):
+        title = c.get("title") or c.get("raw_text") or ""
+        best_j = None
+        best_score = -1
+
+        # 优先标题匹配；分数太低时按顺序兜底。
+        for j, item in enumerate(api_items):
+            if j in used:
+                continue
+            s = title_score(title, item.get("title"))
+            if s > best_score:
+                best_score = s
+                best_j = j
+
+        if best_j is None:
+            enriched.append(c)
+            continue
+
+        # 标题分数低也接受同序兜底，避免 DOM 文本截断导致无法匹配。
+        if best_score < 6 and i < len(api_items) and i not in used:
+            best_j = i
+            best_score = title_score(title, api_items[i].get("title"))
+
+        item = api_items[best_j]
+        used.add(best_j)
+
+        cc = dict(c)
+        cc["sku"] = item.get("sku") or cc.get("sku")
+        cc["sku_source"] = "api_rank_title_match" if best_score >= 6 else "api_rank_order"
+        cc["api_match_score"] = best_score
+        cc["api_index"] = item.get("api_index")
+        cc["rank_index"] = item.get("rank_index") or cc.get("rank_index")
+        cc["title"] = item.get("title") or cc.get("title")
+        cc["itemUrl"] = item.get("itemUrl") or cc.get("itemUrl")
+        cc["imageUrl"] = item.get("imageUrl") or cc.get("imageUrl")
+        cc["price"] = item.get("price") or cc.get("price")
+        cc["rate"] = item.get("rate") or cc.get("rate")
+        cc["income"] = item.get("income") or cc.get("income")
+        enriched.append(cc)
+
+    return enriched
+
 def get_high_commission_cards(page):
     """
     realTimeRankings / 高佣榜 专用 parser。
     HZ9 get_candidates 适配商品推广页，不适配实时榜单页。
     这里从可见卡片 DOM 中解析 rank/title/price/commission，并给卡片打 data-hz11-card-id。
     """
-    return page.evaluate(
+    cards = page.evaluate(
         """
         () => {
           const norm = s => (s || '').replace(/\\s+/g, ' ').trim();
@@ -657,6 +805,7 @@ def get_high_commission_cards(page):
         }
         """
     )
+    return attach_rank_api_items_to_cards(page, cards)
 
 
 def click_high_commission_card(page, card):

@@ -1,0 +1,574 @@
+{
+  "decision_rule": "If real_sku_count equals ok count and no STOP, proceed to 15-30 minute dual-worker throughput test.",
+  "events": [
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "0.44",
+          "price": "3.1",
+          "rate": "40.0%",
+          "sku": "10217476881782",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "api_index": 2,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 3,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 4,
+          "income": "5.0",
+          "price": "99.9",
+          "rate": "5.0%",
+          "sku": "10216100157821",
+          "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+        }
+      ],
+      "ts": "2026-05-11 01:48:32",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "0.44",
+          "price": "3.1",
+          "rate": "40.0%",
+          "sku": "10217476881782",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "api_index": 2,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 3,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 4,
+          "income": "5.0",
+          "price": "99.9",
+          "rate": "5.0%",
+          "sku": "10216100157821",
+          "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+        }
+      ],
+      "ts": "2026-05-11 01:48:32",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "0.44",
+          "price": "3.1",
+          "rate": "40.0%",
+          "sku": "10217476881782",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 3,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 4,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        }
+      ],
+      "ts": "2026-05-11 01:48:36",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 18,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [
+        {
+          "income": "0.44",
+          "price": "3.1",
+          "rank_index": "1",
+          "rate": "40.0%",
+          "sku": "10217476881782",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "income": "3.41",
+          "price": "17.9",
+          "rank_index": "2",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "income": "0.28",
+          "price": "3.2",
+          "rank_index": "3",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "income": "0.8",
+          "price": "5.99",
+          "rank_index": "4",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "income": "0.47",
+          "price": "3.9",
+          "rank_index": "5",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        }
+      ],
+      "scroll_round": 0,
+      "total": 18,
+      "ts": "2026-05-11 01:48:42",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 61,
+      "location": {
+        "card_id": "hc_0_1778435322968",
+        "rank_index": "1",
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 226,
+          "y": 299
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 1,
+      "short_url": "https://u.jd.com/HGCfZIg",
+      "sku": "10217476881782",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 01:48:53",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 62,
+      "location": {
+        "card_id": "hc_1_1778435322968",
+        "rank_index": "2",
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 621,
+          "y": 299
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 2,
+      "short_url": "https://u.jd.com/HaCEVg3",
+      "sku": "100326717148",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 01:49:19",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 63,
+      "location": {
+        "card_id": "hc_2_1778435322969",
+        "rank_index": "3",
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 1016,
+          "y": 299
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 3,
+      "short_url": "https://u.jd.com/HgCvlo0",
+      "sku": "10212577320245",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 01:49:43",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 64,
+      "location": {
+        "card_id": "hc_3_1778435322969",
+        "rank_index": "4",
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 226,
+          "y": 497
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 4,
+      "short_url": "https://u.jd.com/HgCVkGn",
+      "sku": "10210891572089",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 01:50:03",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 65,
+      "location": {
+        "card_id": "hc_4_1778435322969",
+        "rank_index": "5",
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 621,
+          "y": 497
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 5,
+      "short_url": "https://u.jd.com/HaCRaOP",
+      "sku": "10191500638971",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 01:50:30",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 65,
+      "mode": "high_commission",
+      "processed": 5,
+      "refresh_round": 0,
+      "round_seen_sku_count": 5,
+      "ts": "2026-05-11 01:50:45",
+      "units": 18,
+      "worker": "high_commission"
+    }
+  ],
+  "logs": {
+    "high_commission": "logs/hz11j_high_commission_real_sku_smoke_20260511_014829.log"
+  },
+  "outputs": {
+    "high_commission": {
+      "dedup_sku": 5,
+      "exists": true,
+      "ok": 5,
+      "real_sku_count": 0,
+      "rows": 5,
+      "sample": [
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "40.0%",
+          "estimated_income": "0.44",
+          "menu_mode": "high_commission",
+          "price": "3.1",
+          "rank_index": "1",
+          "short_url": "https://u.jd.com/HGCfZIg",
+          "sku": "10217476881782",
+          "sku_source": "modal_or_url",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "20.2%",
+          "estimated_income": "3.41",
+          "menu_mode": "high_commission",
+          "price": "17.9",
+          "rank_index": "2",
+          "short_url": "https://u.jd.com/HaCEVg3",
+          "sku": "100326717148",
+          "sku_source": "modal_or_url",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "23.0%",
+          "estimated_income": "0.28",
+          "menu_mode": "high_commission",
+          "price": "3.2",
+          "rank_index": "3",
+          "short_url": "https://u.jd.com/HgCvlo0",
+          "sku": "10212577320245",
+          "sku_source": "modal_or_url",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "20.0%",
+          "estimated_income": "0.8",
+          "menu_mode": "high_commission",
+          "price": "5.99",
+          "rank_index": "4",
+          "short_url": "https://u.jd.com/HgCVkGn",
+          "sku": "10210891572089",
+          "sku_source": "modal_or_url",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "12.0%",
+          "estimated_income": "0.47",
+          "menu_mode": "high_commission",
+          "price": "3.9",
+          "rank_index": "5",
+          "short_url": "https://u.jd.com/HaCRaOP",
+          "sku": "10191500638971",
+          "sku_source": "modal_or_url",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        }
+      ],
+      "sku_sources": {
+        "modal_or_url": 5
+      }
+    },
+    "multi_menu": {
+      "dedup_sku": 68,
+      "exists": true,
+      "ok": 68,
+      "real_sku_count": 0,
+      "rows": 68,
+      "sample": [
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "3",
+          "estimated_income": "1.59",
+          "menu_mode": null,
+          "price": "52.9",
+          "rank_index": null,
+          "short_url": "https://u.jd.com/fDEo47q",
+          "sku": "3779899",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "20",
+          "estimated_income": "11.60",
+          "menu_mode": null,
+          "price": "58",
+          "rank_index": null,
+          "short_url": "https://u.jd.com/fgEUhon",
+          "sku": "69542791298",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "20.2%",
+          "estimated_income": "3.41",
+          "menu_mode": "high_commission",
+          "price": "17.9",
+          "rank_index": "2",
+          "short_url": "https://u.jd.com/HaCEVg3",
+          "sku": "100326717148",
+          "sku_source": "modal_or_url",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "12.0%",
+          "estimated_income": "0.47",
+          "menu_mode": "high_commission",
+          "price": "3.9",
+          "rank_index": "5",
+          "short_url": "https://u.jd.com/HaCRaOP",
+          "sku": "10191500638971",
+          "sku_source": "modal_or_url",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "20.0%",
+          "estimated_income": "0.8",
+          "menu_mode": "high_commission",
+          "price": "5.99",
+          "rank_index": "4",
+          "short_url": "https://u.jd.com/HgCVkGn",
+          "sku": "10210891572089",
+          "sku_source": "modal_or_url",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "23.0%",
+          "estimated_income": "0.28",
+          "menu_mode": "high_commission",
+          "price": "3.2",
+          "rank_index": "3",
+          "short_url": "https://u.jd.com/HgCvlo0",
+          "sku": "10212577320245",
+          "sku_source": "modal_or_url",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "40.0%",
+          "estimated_income": "0.44",
+          "menu_mode": "high_commission",
+          "price": "3.1",
+          "rank_index": "1",
+          "short_url": "https://u.jd.com/HGCfZIg",
+          "sku": "10217476881782",
+          "sku_source": "modal_or_url",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "15",
+          "estimated_income": "6.89",
+          "menu_mode": "product_all",
+          "price": "45.9",
+          "rank_index": null,
+          "short_url": "https://u.jd.com/HGLoAX6",
+          "sku": "100101571052",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "5",
+          "estimated_income": "74.45",
+          "menu_mode": "product_all",
+          "price": "1489",
+          "rank_index": null,
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "api_index": null,
+          "api_match_score": null,
+          "commission_rate": "1",
+          "estimated_income": "50.99",
+          "menu_mode": "product_all",
+          "price": "5099",
+          "rank_index": null,
+          "short_url": "https://u.jd.com/HrLE7fv",
+          "sku": "100341910908",
+          "sku_source": null,
+          "title": ""
+        }
+      ],
+      "sku_sources": {
+        "modal_or_url": 5,
+        "unknown": 63
+      }
+    }
+  },
+  "phase": "HZ11J high_commission real SKU from union_search_rank_api",
+  "stop": {
+    "high_commission_stop_exists": false
+  },
+  "ts": "2026-05-11 01:50:45"
+}
