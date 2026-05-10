@@ -1,0 +1,3576 @@
+{
+  "events": [
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:55:06",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:55:06",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:55:10",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 9,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:55:16",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 10
+      },
+      "ts": "2026-05-11 02:55:23",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:55:23",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:55:49",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:55:49",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:55:54",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 10,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:56:00",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 11
+      },
+      "ts": "2026-05-11 02:56:07",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:56:07",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:56:33",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:56:33",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:56:37",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 11,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:56:44",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 12
+      },
+      "ts": "2026-05-11 02:56:51",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:56:51",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:57:17",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:57:17",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:57:21",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 12,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:57:28",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 13
+      },
+      "ts": "2026-05-11 02:57:34",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:57:34",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:58:01",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:58:01",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:58:05",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 13,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:58:12",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 14
+      },
+      "ts": "2026-05-11 02:58:18",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:58:18",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:58:44",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:58:44",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:58:49",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 14,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:58:55",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 15
+      },
+      "ts": "2026-05-11 02:59:02",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:59:02",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:59:28",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 02:59:28",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 02:59:33",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 15,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:59:39",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 16
+      },
+      "ts": "2026-05-11 02:59:46",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:59:46",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:00:12",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:00:12",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:00:16",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 16,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:00:23",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 17
+      },
+      "ts": "2026-05-11 03:00:29",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:00:29",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:00:56",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:00:56",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:01:00",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 17,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:01:07",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 18
+      },
+      "ts": "2026-05-11 03:01:13",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:01:13",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:01:40",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:01:40",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:01:44",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 18,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:01:51",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 19
+      },
+      "ts": "2026-05-11 03:01:57",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:01:57",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:02:23",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:02:23",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:02:28",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 19,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:02:34",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 20
+      },
+      "ts": "2026-05-11 03:02:41",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:02:41",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:03:07",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:03:07",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:03:12",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 20,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:03:18",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 21
+      },
+      "ts": "2026-05-11 03:03:25",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:03:25",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:03:51",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:03:51",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:03:55",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 21,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:04:02",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 22
+      },
+      "ts": "2026-05-11 03:04:08",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:04:08",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:04:35",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "23.0",
+          "price": "4599.0",
+          "rate": "0.5%",
+          "sku": "100246339057",
+          "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+        },
+        {
+          "api_index": 1,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 2,
+          "income": "0.7",
+          "price": "69.9",
+          "rate": "1.0%",
+          "sku": "10220938219671",
+          "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+        },
+        {
+          "api_index": 3,
+          "income": "5.94",
+          "price": "99.0",
+          "rate": "6.0%",
+          "sku": "100002715968",
+          "title": "PLUS京典年卡"
+        },
+        {
+          "api_index": 4,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
+      "ts": "2026-05-11 03:04:35",
+      "worker": "high_commission"
+    },
+    {
+      "count": 20,
+      "event": "HC_RANK_API_CAPTURED",
+      "mode": "high_commission",
+      "sample": [
+        {
+          "api_index": 0,
+          "income": "3.41",
+          "price": "17.9",
+          "rate": "20.2%",
+          "sku": "100326717148",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+        },
+        {
+          "api_index": 1,
+          "income": "0.28",
+          "price": "3.2",
+          "rate": "23.0%",
+          "sku": "10212577320245",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "api_index": 2,
+          "income": "0.8",
+          "price": "5.99",
+          "rate": "20.0%",
+          "sku": "10210891572089",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "api_index": 3,
+          "income": "0.47",
+          "price": "3.9",
+          "rate": "12.0%",
+          "sku": "10191500638971",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "api_index": 4,
+          "income": "1.96",
+          "price": "21.8",
+          "rate": "10.0%",
+          "sku": "100009746032",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器"
+        }
+      ],
+      "ts": "2026-05-11 03:04:39",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 22,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 03:04:46",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 23
+      },
+      "ts": "2026-05-11 03:04:52",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 03:04:52",
+      "units": 20,
+      "worker": "high_commission"
+    }
+  ],
+  "events_summary": {
+    "changed_next_events": 0,
+    "item_ok_events": 0,
+    "next_click_events": 14,
+    "skip_no_numeric_sku_events": 0
+  },
+  "logs": {
+    "high_commission": "logs/hz11n_high_commission_numeric_gate_10min_20260511_025503.log",
+    "merge": "logs/hz11n_merge_20260511_025503.log"
+  },
+  "next_decision": "If non_numeric_sku remains 0 and no high_commission STOP, optimize next-page/pageNo mechanism. Product_all STOP still remains separate.",
+  "outputs": {
+    "high_commission": {
+      "dedup_sku": 14,
+      "non_numeric_sku": 8,
+      "numeric_sku": 6,
+      "ok": 14,
+      "rows": 14,
+      "sample": [
+        {
+          "commission_rate": "12%",
+          "estimated_income": "0.47",
+          "location": {
+            "card_id": "hc_4_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.90",
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "sku_source": "generated_title_key",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "commission_rate": "20%",
+          "estimated_income": "2.00",
+          "location": {
+            "card_id": "hc_5_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "9.99",
+          "short_url": "https://u.jd.com/HDC0rtV",
+          "sku": "hc_title_1474039211640438956",
+          "sku_source": "generated_title_key",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+10只（5对）手指套"
+        },
+        {
+          "commission_rate": "10%",
+          "estimated_income": "1.96",
+          "location": {
+            "card_id": "hc_6_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "19.62",
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "sku_source": "generated_title_key",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "9.77",
+          "location": {
+            "card_id": "hc_7_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "48.35",
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "6.31",
+          "location": {
+            "card_id": "hc_18_1778438601466",
+            "high_commission_page_no": 2,
+            "rank_index": "19",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "34.9",
+          "short_url": "https://u.jd.com/HrCAs5A",
+          "sku": "100244548735",
+          "sku_source": "modal_or_url",
+          "title": "日本叮叮驱蚊花露水200ml驱蚊喷雾防蚊水户外防蚊虫叮咬无味防基孔肯雅热"
+        },
+        {
+          "commission_rate": "14.0%",
+          "estimated_income": "26.46",
+          "location": {
+            "card_id": "hc_13_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "14",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "189.0",
+          "short_url": "https://u.jd.com/HOCjAzQ",
+          "sku": "10216561328514",
+          "sku_source": "modal_or_url",
+          "title": "恋火（Passional Lover）PL绒绒限定看不见气垫BB霜定妆二合一遮瑕持久不脱妆效期27年4月 【绒绒限定款】看不见气垫含替换芯*1 01象牙白"
+        },
+        {
+          "commission_rate": "12.0%",
+          "estimated_income": "5.99",
+          "location": {
+            "card_id": "hc_14_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "15",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "139.9",
+          "short_url": "https://u.jd.com/HGC0udS",
+          "sku": "10150950489832",
+          "sku_source": "modal_or_url",
+          "title": "鲁禧山东大樱桃5斤装 精品大果产地直发 新鲜水果 时令生鲜 坏果包赔 4斤(净重) 整箱5斤单果22-26mm实惠装"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "0.3",
+          "location": {
+            "card_id": "hc_15_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "16",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/HaCR2e3",
+          "sku": "10161216858688",
+          "sku_source": "modal_or_url",
+          "title": "简雷240超级充电适用华为充电器Mate60pro手机充电头闪充插头mate50pro/30/40适用荣耀nova8/9数据线 1.0米6A快充线"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "0.56",
+          "location": {
+            "card_id": "hc_16_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "17",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "5.6",
+          "short_url": "https://u.jd.com/HOCf4LS",
+          "sku": "10114247053547",
+          "sku_source": "modal_or_url",
+          "title": "顾瓷法式碗盘套装鱼盘菜盘2026新款陶瓷饭碗家用碗碟碗筷一人食用餐具 4.75英寸碗-1个装 1件"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "18.99",
+          "location": {
+            "card_id": "hc_19_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "20",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "299.9",
+          "short_url": "https://u.jd.com/HaCptfw",
+          "sku": "10219577615104",
+          "sku_source": "modal_or_url",
+          "title": "鲁禧泰国金枕榴莲 【多地次日达】 进口新鲜榴莲 鲜果整个带壳  精品金枕鲜榴莲8-10斤（2-4个装）"
+        }
+      ],
+      "sku_sources": {
+        "generated_title_key": 8,
+        "modal_or_url": 6
+      }
+    },
+    "multi_menu": {
+      "dedup_sku": 77,
+      "non_numeric_sku": 8,
+      "numeric_sku": 69,
+      "ok": 77,
+      "rows": 77,
+      "sample": [
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "3.41",
+          "location": {
+            "card_id": "hc_0_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "16.90",
+          "short_url": "https://u.jd.com/HDCJhuL",
+          "sku": "hc_title_2369419321821528256",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒 百亿补贴 促销"
+        },
+        {
+          "commission_rate": "20%",
+          "estimated_income": "0.80",
+          "location": {
+            "card_id": "hc_3_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/HrCfuVt",
+          "sku": "hc_title_246270919383821263",
+          "sku_source": "generated_title_key",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "commission_rate": "40%",
+          "estimated_income": "0.44",
+          "location": {
+            "card_id": "hc_1_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "1.10",
+          "short_url": "https://u.jd.com/HOCZxE8",
+          "sku": "hc_title_3185883729905399866",
+          "sku_source": "generated_title_key",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "commission_rate": "12%",
+          "estimated_income": "0.47",
+          "location": {
+            "card_id": "hc_4_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.90",
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "sku_source": "generated_title_key",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "commission_rate": "10%",
+          "estimated_income": "1.96",
+          "location": {
+            "card_id": "hc_6_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "19.62",
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "sku_source": "generated_title_key",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "9.77",
+          "location": {
+            "card_id": "hc_7_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "48.35",
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        },
+        {
+          "commission_rate": "23%",
+          "estimated_income": "0.28",
+          "location": {
+            "card_id": "hc_2_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "1.20",
+          "short_url": "https://u.jd.com/HDCTgtx",
+          "sku": "hc_title_8670521423351176855",
+          "sku_source": "generated_title_key",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "commission_rate": "15",
+          "estimated_income": "6.89",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "45.9",
+          "short_url": "https://u.jd.com/HGLoAX6",
+          "sku": "100101571052",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "commission_rate": "5",
+          "estimated_income": "74.45",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "1489",
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "sku_source": null,
+          "title": ""
+        },
+        {
+          "commission_rate": "1",
+          "estimated_income": "50.99",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "5099",
+          "short_url": "https://u.jd.com/HrLE7fv",
+          "sku": "100341910908",
+          "sku_source": null,
+          "title": ""
+        }
+      ],
+      "sku_sources": {
+        "generated_title_key": 8,
+        "modal_or_url": 6,
+        "unknown": 63
+      }
+    }
+  },
+  "phase": "HZ11N high_commission numeric SKU gate",
+  "return_codes": {
+    "high_commission": "124",
+    "merge": "0",
+    "timeout_124_is_expected": true
+  },
+  "stop": {
+    "high_commission_stop_exists": false,
+    "product_all_stop_exists": true
+  },
+  "ts": "2026-05-11 03:05:03"
+}
