@@ -1,0 +1,8 @@
+{
+  "decision": "HZ12 official collection uses product_all only; high_commission is no longer primary source.",
+  "high_commission_after_numeric": 23,
+  "high_commission_before": 23,
+  "multi_menu_after_clean": 86,
+  "multi_menu_before": 86,
+  "ts": "2026-05-11 03:43:06"
+}
