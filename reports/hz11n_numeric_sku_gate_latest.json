@@ -3111,18 +3111,70 @@
   ],
   "events_summary": {
     "changed_next_events": 0,
+    "item_fail_events": 0,
     "item_ok_events": 0,
     "next_click_events": 14,
-    "skip_no_numeric_sku_events": 0
+    "skip_no_numeric_sku_events": 0,
+    "stop_events": 0
   },
   "logs": {
     "high_commission": "logs/hz11n_high_commission_numeric_gate_10min_20260511_025503.log",
-    "merge": "logs/hz11n_merge_20260511_025503.log"
+    "merge": "logs/hz11n_recover_report_merge_20260511_030604.log"
   },
-  "next_decision": "If non_numeric_sku remains 0 and no high_commission STOP, optimize next-page/pageNo mechanism. Product_all STOP still remains separate.",
+  "next_decision": "If non_numeric_sku is 0 and skip_no_numeric_sku_events is acceptable, continue by fixing high_commission pagination/pageNo. Product_all STOP remains separate.",
   "outputs": {
     "high_commission": {
       "dedup_sku": 14,
+      "non_numeric_sample": [
+        {
+          "short_url": "https://u.jd.com/HDCJhuL",
+          "sku": "hc_title_2369419321821528256",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒 百亿补贴 促销"
+        },
+        {
+          "short_url": "https://u.jd.com/HOCZxE8",
+          "sku": "hc_title_3185883729905399866",
+          "sku_source": "generated_title_key",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "short_url": "https://u.jd.com/HDCTgtx",
+          "sku": "hc_title_8670521423351176855",
+          "sku_source": "generated_title_key",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "short_url": "https://u.jd.com/HrCfuVt",
+          "sku": "hc_title_246270919383821263",
+          "sku_source": "generated_title_key",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "sku_source": "generated_title_key",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "short_url": "https://u.jd.com/HDC0rtV",
+          "sku": "hc_title_1474039211640438956",
+          "sku_source": "generated_title_key",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+10只（5对）手指套"
+        },
+        {
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "sku_source": "generated_title_key",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        }
+      ],
       "non_numeric_sku": 8,
       "numeric_sku": 6,
       "ok": 14,
@@ -3356,6 +3408,56 @@
     },
     "multi_menu": {
       "dedup_sku": 77,
+      "non_numeric_sample": [
+        {
+          "short_url": "https://u.jd.com/HDC0rtV",
+          "sku": "hc_title_1474039211640438956",
+          "sku_source": "generated_title_key",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+10只（5对）手指套"
+        },
+        {
+          "short_url": "https://u.jd.com/HDCJhuL",
+          "sku": "hc_title_2369419321821528256",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒 百亿补贴 促销"
+        },
+        {
+          "short_url": "https://u.jd.com/HrCfuVt",
+          "sku": "hc_title_246270919383821263",
+          "sku_source": "generated_title_key",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "short_url": "https://u.jd.com/HOCZxE8",
+          "sku": "hc_title_3185883729905399866",
+          "sku_source": "generated_title_key",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "sku_source": "generated_title_key",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "sku_source": "generated_title_key",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "sku_source": "generated_title_key",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        },
+        {
+          "short_url": "https://u.jd.com/HDCTgtx",
+          "sku": "hc_title_8670521423351176855",
+          "sku_source": "generated_title_key",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        }
+      ],
       "non_numeric_sku": 8,
       "numeric_sku": 69,
       "ok": 77,
@@ -3562,15 +3664,13 @@
       }
     }
   },
-  "phase": "HZ11N high_commission numeric SKU gate",
+  "phase": "HZ11N recovered high_commission numeric SKU gate",
   "return_codes": {
-    "high_commission": "124",
-    "merge": "0",
-    "timeout_124_is_expected": true
+    "merge": "0"
   },
   "stop": {
     "high_commission_stop_exists": false,
     "product_all_stop_exists": true
   },
-  "ts": "2026-05-11 03:05:03"
+  "ts": "2026-05-11 03:06:04"
 }
