@@ -248,12 +248,24 @@ def open_product_all(page, state):
 
 def open_high_commission(page, state):
     setup_high_commission_rank_api_capture(page)
-    page.goto(REALTIME_URL, wait_until="domcontentloaded", timeout=30000)
-    page.wait_for_timeout(4000)
-    close_dialog(page)
-    res = click_text(page, HIGH_COMMISSION_TAB_TEXT)
-    page.wait_for_timeout(6000)
-    close_dialog(page)
+
+    current_url = page.url or ""
+    initialized = bool(getattr(page, "_hz11_high_commission_initialized", False))
+
+    if "realTimeRankings" not in current_url or not initialized:
+        page.goto(REALTIME_URL, wait_until="domcontentloaded", timeout=30000)
+        page.wait_for_timeout(4000)
+        close_dialog(page)
+        res = click_text(page, HIGH_COMMISSION_TAB_TEXT)
+        page.wait_for_timeout(6000)
+        close_dialog(page)
+        page._hz11_high_commission_initialized = True
+    else:
+        # HZ11O: 不要每轮重新 goto/click tab，否则会回到第一页，分页永远扩不出去。
+        res = {"ok": True, "skipped": "already_on_high_commission_page"}
+        close_dialog(page)
+        page.wait_for_timeout(1200)
+
     info = check_page(page)
     info["rank_api_count"] = len(getattr(page, "_hz11_rank_skus", []) or [])
     info["rank_api_last_error"] = getattr(page, "_hz11_rank_api_last_error", "")
@@ -1169,22 +1181,21 @@ def collect_high_commission_one(page, candidate, state, location):
 
 def click_high_commission_next_page(page, state):
     """
-    高佣榜底部有“上一页 / 下一页”。按钮可能在视口底部或被 sticky footer 贴近遮挡。
-    处理策略：
-    1. scroll 到底部；
-    2. 查找可见、非 disabled 的“下一页”按钮/文本节点；
-    3. 优先用 mouse 坐标点击；
-    4. 等待 union_search_rank_api 刷新。
+    HZ11O:
+    - 不再依赖 mouse.click 屏幕坐标；
+    - 直接对 DOM 中可用“下一页”节点执行 el.click()；
+    - 等待 union_search_rank_api 捕获到新的 rankSkuList；
+    - 只有 rank API 前后 SKU 变化时才认为翻页成功。
     """
     before_skus = [str(x.get("sku") or "") for x in (getattr(page, "_hz11_rank_skus", []) or [])[:8]]
 
     try:
         page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)")
-        page.wait_for_timeout(1200)
+        page.wait_for_timeout(1000)
     except Exception:
         pass
 
-    found = page.evaluate(
+    click_res = page.evaluate(
         """
         () => {
           const norm = s => (s || '').replace(/\\s+/g, '').trim();
@@ -1205,7 +1216,7 @@ def click_high_commission_next_page(page, state):
               txt,
               disabled,
               cls: cls.slice(0, 160),
-              visible: r.width > 0 && r.height > 0 && r.top >= -80 && r.left >= 0 && r.top <= window.innerHeight + 120,
+              visible: r.width > 0 && r.height > 0 && r.top >= -120 && r.left >= -50 && r.top <= window.innerHeight + 180,
               rect: {x:r.x, y:r.y, w:r.width, h:r.height, cx:r.x + r.width/2, cy:r.y + r.height/2}
             };
           }).filter(x =>
@@ -1231,53 +1242,53 @@ def click_high_commission_next_page(page, state):
                   idx,
                   txt,
                   cls:String(el.className || '').slice(0,100),
-                  visible:r.width>0 && r.height>0 && r.top>=-100 && r.top<=window.innerHeight+150,
+                  visible:r.width>0 && r.height>0 && r.top>=-150 && r.top<=window.innerHeight+200,
                   rect:{x:r.x,y:r.y,w:r.width,h:r.height}
                 };
-              }).filter(x => x.txt.includes('上一页') || x.txt.includes('下一页')).slice(-20)
+              }).filter(x => x.txt.includes('上一页') || x.txt.includes('下一页')).slice(-30)
             };
           }
 
-          return {
-            ok:true,
-            target:{
-              idx:candidates[0].idx,
-              txt:candidates[0].txt,
-              cls:candidates[0].cls,
-              rect:candidates[0].rect
-            }
+          const target = candidates[0].el;
+          const meta = {
+            idx:candidates[0].idx,
+            txt:candidates[0].txt,
+            cls:candidates[0].cls,
+            rect:candidates[0].rect
           };
+
+          target.scrollIntoView({block:'center', inline:'center'});
+          target.dispatchEvent(new MouseEvent('mouseover', {bubbles:true, cancelable:true, view:window}));
+          target.dispatchEvent(new MouseEvent('mousedown', {bubbles:true, cancelable:true, view:window}));
+          target.click();
+          target.dispatchEvent(new MouseEvent('mouseup', {bubbles:true, cancelable:true, view:window}));
+
+          return {ok:true, clicked:meta};
         }
         """
     )
 
-    if not found.get("ok"):
-        log("HC_NEXT_PAGE_NOT_FOUND", result=found)
-        return found
+    if not click_res.get("ok"):
+        log("HC_NEXT_PAGE_NOT_FOUND", result=click_res)
+        return click_res
 
-    rect = found.get("target", {}).get("rect") or {}
-    x = float(rect.get("cx") or 0)
-    y = float(rect.get("cy") or 0)
+    changed = False
+    after_skus = []
+    for _ in range(16):
+        page.wait_for_timeout(1000)
+        after_skus = [str(x.get("sku") or "") for x in (getattr(page, "_hz11_rank_skus", []) or [])[:8]]
+        if after_skus and after_skus != before_skus:
+            changed = True
+            break
 
-    if x <= 0 or y <= 0:
-        res = {"ok": False, "reason": "next_button_center_invalid", "found": found}
-        log("HC_NEXT_PAGE_FAIL", result=res)
-        return res
+    if changed:
+        state["high_commission_page_no"] = int(state.get("high_commission_page_no") or 1) + 1
 
-    page.mouse.move(x, y)
-    page.wait_for_timeout(300)
-    page.mouse.click(x, y)
-    page.wait_for_timeout(5000)
-
-    after_skus = [str(x.get("sku") or "") for x in (getattr(page, "_hz11_rank_skus", []) or [])[:8]]
-    changed = bool(after_skus and after_skus != before_skus)
-
-    state["high_commission_page_no"] = int(state.get("high_commission_page_no") or 1) + 1
     state["scroll_round"] = 0
     state["last_event"] = {
         "event": "HC_NEXT_PAGE",
         "ts": now(),
-        "page_no": state["high_commission_page_no"],
+        "page_no": state.get("high_commission_page_no", 1),
         "changed": changed,
         "before_skus": before_skus[:5],
         "after_skus": after_skus[:5],
@@ -1286,9 +1297,9 @@ def click_high_commission_next_page(page, state):
 
     res = {
         "ok": True,
-        "clicked": found.get("target"),
+        "clicked": click_res.get("clicked"),
         "changed": changed,
-        "page_no": state["high_commission_page_no"],
+        "page_no": state.get("high_commission_page_no", 1),
         "before_skus": before_skus[:5],
         "after_skus": after_skus[:5],
     }
