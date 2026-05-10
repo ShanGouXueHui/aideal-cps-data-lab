@@ -1,0 +1,3459 @@
+{
+  "diagnosis": {
+    "hint_hit_count": 3,
+    "json_with_product_like": 11,
+    "runtime_card_links": 17,
+    "runtime_card_nodes": 90
+  },
+  "next_goal": "Use union_search_rank_api response or runtime node/link mapping to attach real SKU/materialId to high_commission cards.",
+  "phase": "HZ11I union_search_rank_api focused report",
+  "rank_requests": [
+    {
+      "functionId": "union_search_rank_api",
+      "method": "GET",
+      "query_body_kept": {
+        "clientPageId": "jingfen_pc",
+        "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+      },
+      "query_body_keys": [
+        "clientPageId",
+        "funName",
+        "page",
+        "param"
+      ],
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "functionId": "union_search_rank_api",
+      "method": "GET",
+      "query_body_kept": {
+        "clientPageId": "jingfen_pc",
+        "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+      },
+      "query_body_keys": [
+        "clientPageId",
+        "funName",
+        "page",
+        "param"
+      ],
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "functionId": "union_search_rank_api",
+      "method": "GET",
+      "query_body_kept": {
+        "clientPageId": "jingfen_pc",
+        "page": "{'pageSize': 20, 'hasNext': True, 'pageNo': 1}"
+      },
+      "query_body_keys": [
+        "clientPageId",
+        "funName",
+        "page",
+        "param"
+      ],
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': True, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    }
+  ],
+  "rank_requests_count": 3,
+  "rank_responses": [
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 5,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "content",
+            "createTime",
+            "deleteFlag",
+            "detail",
+            "end",
+            "endTime",
+            "exhibitionId",
+            "expType",
+            "id",
+            "landUrl",
+            "mainTitle",
+            "mainTitleColor",
+            "name",
+            "operator",
+            "order",
+            "pcLandUrl",
+            "start",
+            "startTime",
+            "status",
+            "subtitle",
+            "subtitleColor",
+            "targetUserTag",
+            "type",
+            "updateTime",
+            "url",
+            "urlList"
+          ],
+          "money_hit": false,
+          "path": "$.result[0]",
+          "sample": {
+            "name": "",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "content",
+            "createTime",
+            "deleteFlag",
+            "detail",
+            "end",
+            "endTime",
+            "exhibitionId",
+            "expType",
+            "id",
+            "mainTitle",
+            "mainTitleColor",
+            "name",
+            "operator",
+            "order",
+            "start",
+            "startTime",
+            "status",
+            "subtitle",
+            "subtitleColor",
+            "targetUserTag",
+            "updateTime",
+            "url",
+            "urlList"
+          ],
+          "money_hit": false,
+          "path": "$.result[1]",
+          "sample": {
+            "name": "京粉APP",
+            "url": "http://img10.360buyimg.com/u/jfs/t1/191625/33/43089/9227/65fab012F90601976/bd4ba03f19ec67d6.png"
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "content",
+            "createTime",
+            "deleteFlag",
+            "detail",
+            "end",
+            "endTime",
+            "exhibitionId",
+            "expType",
+            "id",
+            "mainTitle",
+            "mainTitleColor",
+            "name",
+            "operator",
+            "order",
+            "start",
+            "startTime",
+            "status",
+            "subtitle",
+            "subtitleColor",
+            "targetUserTag",
+            "updateTime",
+            "url",
+            "urlList"
+          ],
+          "money_hit": false,
+          "path": "$.result[2]",
+          "sample": {
+            "name": "京粉公众号",
+            "url": "http://img10.360buyimg.com/u/jfs/t1/200010/12/41303/22121/65f7e2f8F82c53b96/ffb010440fe3183a.jpg"
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "content",
+            "createTime",
+            "deleteFlag",
+            "detail",
+            "end",
+            "endTime",
+            "exhibitionId",
+            "expType",
+            "id",
+            "mainTitle",
+            "mainTitleColor",
+            "name",
+            "operator",
+            "order",
+            "start",
+            "startTime",
+            "status",
+            "subtitle",
+            "subtitleColor",
+            "targetUserTag",
+            "updateTime",
+            "url",
+            "urlList"
+          ],
+          "money_hit": false,
+          "path": "$.result[3]",
+          "sample": {
+            "name": "京东联盟公众号",
+            "url": "http://img10.360buyimg.com/u/jfs/t1/104241/37/48135/21149/65f7e318Fb424768a/d2abb51956d749f5.jpg"
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "content",
+            "createTime",
+            "deleteFlag",
+            "detail",
+            "end",
+            "endTime",
+            "exhibitionId",
+            "expType",
+            "id",
+            "mainTitle",
+            "mainTitleColor",
+            "name",
+            "operator",
+            "order",
+            "start",
+            "startTime",
+            "status",
+            "subtitle",
+            "subtitleColor",
+            "targetUserTag",
+            "updateTime",
+            "url",
+            "urlList"
+          ],
+          "money_hit": false,
+          "path": "$.result[4]",
+          "sample": {
+            "name": "京粉精选小程序",
+            "url": "http://img10.360buyimg.com/u/jfs/t1/185370/12/42912/33087/65f7e335Fc82c726b/411666a08eb4b29c.jpg"
+          },
+          "url_hit": true
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 3153,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "param"
+          ],
+          "functionId": [
+            "union_exhibition_bff"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 2,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "title",
+            "top"
+          ],
+          "money_hit": false,
+          "path": "$.result.notices[0]",
+          "sample": {
+            "title": "《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "title",
+            "top"
+          ],
+          "money_hit": false,
+          "path": "$.result.notices[1]",
+          "sample": {
+            "title": "《CID 业务合作要求及规范》修订内容公示"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 547,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "param"
+          ],
+          "functionId": [
+            "union_message_logout"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 3,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[0]",
+          "sample": {
+            "title": "【营销补贴】5月9日-5月11日京喜订单奖励活动",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[1]",
+          "sample": {
+            "title": "【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10%",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[2]",
+          "sample": {
+            "title": "【京东生鲜】5月8日-15日指定商品客单价区间激励",
+            "url": ""
+          },
+          "url_hit": true
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 818,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "param"
+          ],
+          "functionId": [
+            "union_message"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 164,
+      "product_like_sample": [
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "hasCoupon",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "commissionShare": "40.0",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963",
+            "skuName": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": false,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusPerType",
+            "commission",
+            "imageUrl",
+            "num",
+            "skuId"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0].headline.headlineSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[0]",
+          "sample": {
+            "name": "近90天高佣"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[1]",
+          "sample": {
+            "name": "京喜"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[2]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[3]",
+          "sample": {
+            "name": "超百人正在推广"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[1]",
+          "sample": {
+            "commission": "0.52",
+            "commissionShare": "8.0",
+            "imageUrl": "jfs/t20280402/411956/25/14076/97451/69cf5eb5F84c96a49/0a023203205c29aa.jpg",
+            "skuId": "10214408963835",
+            "skuName": "袜子男短袜夏季薄款纯色运动学生船袜吸汗透气浅口袜 黑白灰船袜【混发】20双"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[1].skuTagList[0]",
+          "sample": {
+            "name": "同款高转化"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[2]",
+          "sample": {
+            "commission": "76.5",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/416154/22/20735/104466/69e1c3d6F30213078/0083320320f10a15.jpg",
+            "skuId": "100345844560",
+            "skuName": "韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[0]",
+          "sample": {
+            "name": "自营"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[1]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[2]",
+          "sample": {
+            "name": "同款高转化"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[3]",
+          "sample": {
+            "commission": "0.45",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/426053/6/865/137021/69e9d9e2F7e36e50a/0083320320781d2e.jpg",
+            "skuId": "10218966343555",
+            "skuName": "铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[4]",
+          "sample": {
+            "commission": "0.36",
+            "commissionShare": "12.0",
+            "imageUrl": "jfs/t20260820/294066/2/8718/276682/68a5eb07F96b060e8/3ea333e051b2f2b7.png",
+            "skuId": "10105047817142",
+            "skuName": "【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[6]",
+          "sample": {
+            "name": "联盟API（高级）"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[7]",
+          "sample": {
+            "name": "宙斯联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0]",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": true,
+      "text_len": 34876,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 164,
+      "product_like_sample": [
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "hasCoupon",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "commissionShare": "40.0",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963",
+            "skuName": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": false,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusPerType",
+            "commission",
+            "imageUrl",
+            "num",
+            "skuId"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0].headline.headlineSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[0]",
+          "sample": {
+            "name": "近90天高佣"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[1]",
+          "sample": {
+            "name": "京喜"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[2]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[3]",
+          "sample": {
+            "name": "超百人正在推广"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[1]",
+          "sample": {
+            "commission": "0.52",
+            "commissionShare": "8.0",
+            "imageUrl": "jfs/t20280402/411956/25/14076/97451/69cf5eb5F84c96a49/0a023203205c29aa.jpg",
+            "skuId": "10214408963835",
+            "skuName": "袜子男短袜夏季薄款纯色运动学生船袜吸汗透气浅口袜 黑白灰船袜【混发】20双"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[1].skuTagList[0]",
+          "sample": {
+            "name": "同款高转化"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[2]",
+          "sample": {
+            "commission": "76.5",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/416154/22/20735/104466/69e1c3d6F30213078/0083320320f10a15.jpg",
+            "skuId": "100345844560",
+            "skuName": "韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[0]",
+          "sample": {
+            "name": "自营"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[1]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[2].skuTagList[2]",
+          "sample": {
+            "name": "同款高转化"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[3]",
+          "sample": {
+            "commission": "0.45",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/426053/6/865/137021/69e9d9e2F7e36e50a/0083320320781d2e.jpg",
+            "skuId": "10218966343555",
+            "skuName": "铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[4]",
+          "sample": {
+            "commission": "0.36",
+            "commissionShare": "12.0",
+            "imageUrl": "jfs/t20260820/294066/2/8718/276682/68a5eb07F96b060e8/3ea333e051b2f2b7.png",
+            "skuId": "10105047817142",
+            "skuName": "【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[6]",
+          "sample": {
+            "name": "联盟API（高级）"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.bestUnionActivityInfo.unionUdts[7]",
+          "sample": {
+            "name": "宙斯联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0]",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[4].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": true,
+      "text_len": 34876,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': False, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "application/json",
+      "product_like_count": 1,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "describeName",
+            "name",
+            "optionList",
+            "title"
+          ],
+          "money_hit": false,
+          "path": "$.data.satisfaction",
+          "sample": {
+            "name": "您认为我们在哪些功能上有待提升?",
+            "title": "您对京东联盟平台整体体验是否满意?"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 520,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "theup_feedback_union"
+          ],
+          "body_kept": {
+            "deviceType": "pc",
+            "systemType": "union"
+          },
+          "body_keys": [
+            "currentUrl",
+            "deviceType",
+            "systemType"
+          ],
+          "functionId": [
+            "ads_theup_survey_query"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/",
+        "query_keys": [
+          "appid",
+          "body",
+          "functionId",
+          "loginType",
+          "t"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 2,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[0]",
+          "sample": {
+            "title": "【营销补贴】5月9日-5月11日京喜订单奖励活动",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "text",
+            "title",
+            "top"
+          ],
+          "money_hit": false,
+          "path": "$.result.notices[0]",
+          "sample": {
+            "title": "《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 591,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName"
+          ],
+          "functionId": [
+            "union_message"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 2,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "title",
+            "top"
+          ],
+          "money_hit": false,
+          "path": "$.result.notices[0]",
+          "sample": {
+            "title": "《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "title",
+            "top"
+          ],
+          "money_hit": false,
+          "path": "$.result.notices[1]",
+          "sample": {
+            "title": "《CID 业务合作要求及规范》修订内容公示"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 547,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "param"
+          ],
+          "functionId": [
+            "union_message_logout"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 3,
+      "product_like_sample": [
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[0]",
+          "sample": {
+            "title": "【营销补贴】5月9日-5月11日京喜订单奖励活动",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[1]",
+          "sample": {
+            "title": "【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10%",
+            "url": ""
+          },
+          "url_hit": true
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "businessType",
+            "content",
+            "contentId",
+            "id",
+            "sendTime",
+            "status",
+            "subType",
+            "title",
+            "type",
+            "url"
+          ],
+          "money_hit": false,
+          "path": "$.result.messages[2]",
+          "sample": {
+            "title": "【京东生鲜】5月8日-15日指定商品客单价区间激励",
+            "url": ""
+          },
+          "url_hit": true
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": false,
+      "text_len": 818,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "param"
+          ],
+          "functionId": [
+            "union_message"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    },
+    {
+      "content_type": "text/plain;charset=utf-8",
+      "product_like_count": 144,
+      "product_like_sample": [
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "hasCoupon",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "commissionShare": "40.0",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963",
+            "skuName": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": false,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusPerType",
+            "commission",
+            "imageUrl",
+            "num",
+            "skuId"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[0].headline.headlineSkuList[0]",
+          "sample": {
+            "commission": "0.44",
+            "imageUrl": "jfs/t1/420883/36/4492/142307/69e1cc6dFb22b8c80/00833203208323b5.jpg",
+            "skuId": "10218834886963"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[0]",
+          "sample": {
+            "name": "近90天高佣"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[1]",
+          "sample": {
+            "name": "京喜"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[2]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[0].skuTagList[3]",
+          "sample": {
+            "name": "超百人正在推广"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[1]",
+          "sample": {
+            "commission": "76.5",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/416154/22/20735/104466/69e1c3d6F30213078/0083320320f10a15.jpg",
+            "skuId": "100345844560",
+            "skuName": "韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[1].skuTagList[0]",
+          "sample": {
+            "name": "自营"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[1].skuTagList[1]",
+          "sample": {
+            "name": "7天无理由退货"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "id",
+            "index",
+            "name",
+            "type"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[1].skuTagList[2]",
+          "sample": {
+            "name": "同款高转化"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": true,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[2]",
+          "sample": {
+            "commission": "0.45",
+            "commissionShare": "9.0",
+            "imageUrl": "jfs/t1/426053/6/865/137021/69e9d9e2F7e36e50a/0083320320781d2e.jpg",
+            "skuId": "10218966343555",
+            "skuName": "铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": true,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": true,
+          "keys": [
+            "bonusActivityInfo",
+            "comments",
+            "commission",
+            "commissionShare",
+            "goodComments",
+            "goodCommentsShare",
+            "headline",
+            "imageUrl",
+            "imgList",
+            "last24hSales",
+            "last2hSales",
+            "maxCommissionTargetGoods",
+            "minPriceTargetGoods",
+            "purchasePriceInfo",
+            "rankPos",
+            "skuId",
+            "skuName",
+            "skuTagList",
+            "wlprice"
+          ],
+          "money_hit": true,
+          "path": "$.result.rankSkuList[3]",
+          "sample": {
+            "commission": "0.36",
+            "commissionShare": "12.0",
+            "imageUrl": "jfs/t20260820/294066/2/8718/276682/68a5eb07F96b060e8/3ea333e051b2f2b7.png",
+            "skuId": "10105047817142",
+            "skuName": "【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[6]",
+          "sample": {
+            "name": "联盟API（高级）"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.bestUnionActivityInfo.unionUdts[7]",
+          "sample": {
+            "name": "宙斯联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "activityType",
+            "applyStatus",
+            "beginTime",
+            "beginTimeStamp",
+            "bestActivity",
+            "bonusRate",
+            "bonusSkuNum",
+            "bonusType",
+            "endTime",
+            "endTimeStamp",
+            "estimateBonus",
+            "hasSuperBenefit",
+            "id",
+            "level",
+            "name",
+            "remark",
+            "showType",
+            "state",
+            "stockSkuNum",
+            "unionUdts"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0]",
+          "sample": {
+            "name": "【营销补贴】5月9日-5月11日京喜订单奖励活动"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[0]",
+          "sample": {
+            "name": "全平台"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[1]",
+          "sample": {
+            "name": "公众号"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[2]",
+          "sample": {
+            "name": "京粉APP"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[3]",
+          "sample": {
+            "name": "小程序"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[4]",
+          "sample": {
+            "name": "联盟API"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[5]",
+          "sample": {
+            "name": "联盟PC端"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[6]",
+          "sample": {
+            "name": "联盟API（高级）"
+          },
+          "url_hit": false
+        },
+        {
+          "has_sku": false,
+          "has_title": true,
+          "hint_hit": false,
+          "image_hit": false,
+          "keys": [
+            "name",
+            "udt"
+          ],
+          "money_hit": false,
+          "path": "$.result.rankSkuList[3].bonusActivityInfo.unionGoodsActivityInfos[0].unionUdts[7]",
+          "sample": {
+            "name": "宙斯联盟API"
+          },
+          "url_hit": false
+        }
+      ],
+      "status": 200,
+      "text_hint_hit": true,
+      "text_len": 33943,
+      "url": {
+        "host": "api.m.jd.com",
+        "kept_query": {
+          "appid": [
+            "unionpc"
+          ],
+          "body_kept": {
+            "clientPageId": "jingfen_pc",
+            "page": "{'pageSize': 20, 'hasNext': True, 'pageNo': 1}"
+          },
+          "body_keys": [
+            "clientPageId",
+            "funName",
+            "page",
+            "param"
+          ],
+          "functionId": [
+            "union_search_rank_api"
+          ],
+          "loginType": [
+            "3"
+          ]
+        },
+        "path": "/api",
+        "query_keys": [
+          "_",
+          "appid",
+          "body",
+          "functionId",
+          "loginType"
+        ],
+        "scheme": "https"
+      }
+    }
+  ],
+  "rank_responses_count": 10,
+  "runtime_focus": {
+    "card_links_count": 17,
+    "card_links_sample": [
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 1,
+        "rect": {
+          "h": 60,
+          "w": 96,
+          "x": 265,
+          "y": 0
+        },
+        "text": "我的推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 2,
+        "rect": {
+          "h": 60,
+          "w": 96,
+          "x": 361,
+          "y": 0
+        },
+        "text": "效果报表"
+      },
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 3,
+        "rect": {
+          "h": 60,
+          "w": 96,
+          "x": 457,
+          "y": 0
+        },
+        "text": "结算中心"
+      },
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 4,
+        "rect": {
+          "h": 60,
+          "w": 96,
+          "x": 553,
+          "y": 0
+        },
+        "text": "工具场景"
+      },
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 5,
+        "rect": {
+          "h": 60,
+          "w": 96,
+          "x": 649,
+          "y": 0
+        },
+        "text": "狂欢日历"
+      },
+      {
+        "href": "https://union.jd.com/msg/index?queryId=3",
+        "idx": 6,
+        "rect": {
+          "h": 40,
+          "w": 306,
+          "x": 1182,
+          "y": 292.96875
+        },
+        "text": "查看全部>"
+      },
+      {
+        "href": "https://union.jd.com/helpcenter",
+        "idx": 7,
+        "rect": {
+          "h": 16,
+          "w": 59.890625,
+          "x": 1250.890625,
+          "y": 22
+        },
+        "text": "帮助中心"
+      },
+      {
+        "href": "https://union.jd.com/overview",
+        "idx": 8,
+        "rect": {
+          "h": 40,
+          "w": 180,
+          "x": 0,
+          "y": 60
+        },
+        "text": "概览"
+      },
+      {
+        "href": "https://union.jd.com/proManager/realTimeRankings",
+        "idx": 9,
+        "rect": {
+          "h": 34,
+          "w": 180,
+          "x": 0,
+          "y": 140
+        },
+        "text": ""
+      },
+      {
+        "href": "https://union.jd.com/proManager/index?pageNo=1",
+        "idx": 10,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 174
+        },
+        "text": "商品推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/shopPromotion",
+        "idx": 11,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 201
+        },
+        "text": "店铺推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/custompromotion",
+        "idx": 12,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 228
+        },
+        "text": "自定义推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/rewardChannel",
+        "idx": 13,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 255
+        },
+        "text": "奖励活动推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/couponPromotion",
+        "idx": 14,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 282
+        },
+        "text": "京享红包推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/officalPromotion",
+        "idx": 15,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 309
+        },
+        "text": "官方活动推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/marketActivities",
+        "idx": 16,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 336
+        },
+        "text": "营销频道推广"
+      },
+      {
+        "href": "https://union.jd.com/proManager/channelPromotion",
+        "idx": 17,
+        "rect": {
+          "h": 27,
+          "w": 180,
+          "x": 0,
+          "y": 363
+        },
+        "text": "品类频道推广"
+      }
+    ],
+    "card_nodes_count": 90,
+    "card_nodes_sample": [
+      {
+        "attrs": {
+          "id": "app"
+        },
+        "cls": "",
+        "idx": 0,
+        "rect": {
+          "h": 1008,
+          "w": 1527,
+          "x": 0,
+          "y": 0
+        },
+        "text": "我的推广 效果报表 结算中心 工具场景 狂欢日历 消息公告 收起 【通知公告】 《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示 04.27 【通知公告】 《CID 业务合作要求及规范》修订内容公示 04.07 【运营消息】 【营销补贴】5月9日-5月11日京喜订单奖励活动 05.09 【运营消息】 【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10% 05.08 【运营消息】 【京东生鲜】5月8日-15日指定商品客单价区间激励 05.07 查看全部> 99+ 帮助中心 aidealfy 概览 我要推广 商品推广 店铺推广 自定义推广 奖励活动推广 京享红包推广 官方活动推"
+      },
+      {
+        "attrs": {
+          "class": "layout-css openSidebar bfc",
+          "data-backup": "1"
+        },
+        "cls": "layout-css openSidebar bfc",
+        "idx": 1,
+        "rect": {
+          "h": 1008,
+          "w": 1527,
+          "x": 0,
+          "y": 0
+        },
+        "text": "我的推广 效果报表 结算中心 工具场景 狂欢日历 消息公告 收起 【通知公告】 《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示 04.27 【通知公告】 《CID 业务合作要求及规范》修订内容公示 04.07 【运营消息】 【营销补贴】5月9日-5月11日京喜订单奖励活动 05.09 【运营消息】 【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10% 05.08 【运营消息】 【京东生鲜】5月8日-15日指定商品客单价区间激励 05.07 查看全部> 99+ 帮助中心 aidealfy 概览 我要推广 商品推广 店铺推广 自定义推广 奖励活动推广 京享红包推广 官方活动推"
+      },
+      {
+        "attrs": {},
+        "cls": "main-container",
+        "idx": 49,
+        "rect": {
+          "h": 947,
+          "w": 1347,
+          "x": 180,
+          "y": 60
+        },
+        "text": "我的推广 我要推广 实时榜单 2小时热销榜 高佣榜 今日热销榜 类目筛选 全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味 1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价"
+      },
+      {
+        "attrs": {},
+        "cls": "app-wrapper",
+        "idx": 51,
+        "rect": {
+          "h": 913,
+          "w": 1347,
+          "x": 180,
+          "y": 94
+        },
+        "text": "2小时热销榜 高佣榜 今日热销榜 类目筛选 全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味 1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% "
+      },
+      {
+        "attrs": {},
+        "cls": "app-content",
+        "idx": 52,
+        "rect": {
+          "h": 1770,
+          "w": 1292,
+          "x": 200,
+          "y": 94
+        },
+        "text": "2小时热销榜 高佣榜 今日热销榜 类目筛选 全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味 1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% "
+      },
+      {
+        "attrs": {
+          "style": "overflow: hidden; min-width: 1040px;"
+        },
+        "cls": "",
+        "idx": 53,
+        "rect": {
+          "h": 1770,
+          "w": 1292,
+          "x": 200,
+          "y": 94
+        },
+        "text": "2小时热销榜 高佣榜 今日热销榜 类目筛选 全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味 1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% "
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "",
+        "idx": 54,
+        "rect": {
+          "h": 1770,
+          "w": 1292,
+          "x": 200,
+          "y": 94
+        },
+        "text": "2小时热销榜 高佣榜 今日热销榜 类目筛选 全部 食品酒水 家庭清洁 个护美妆 医药保健 生鲜 数码家电 家居日用 时尚生活 母婴 宠物用品 玩具 粮油调味 1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% "
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "search_commodity",
+        "idx": 74,
+        "rect": {
+          "h": 1591,
+          "w": 1292,
+          "x": 200,
+          "y": 273
+        },
+        "text": "1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% 佣金 ¥0.45 【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张 京喜自营 奖励 到手价 ¥ "
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "realCard",
+        "idx": 75,
+        "rect": {
+          "h": 1591,
+          "w": 1292,
+          "x": 200,
+          "y": 273
+        },
+        "text": "1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% 佣金 ¥0.45 【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张 京喜自营 奖励 到手价 ¥ "
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "cardList",
+        "idx": 76,
+        "rect": {
+          "h": 1591,
+          "w": 1292,
+          "x": 200,
+          "y": 273
+        },
+        "text": "1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44 2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50 3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% 佣金 ¥0.45 【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张 京喜自营 奖励 到手价 ¥ "
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "realCard-container",
+        "idx": 77,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 215,
+          "y": 288
+        },
+        "text": "1 红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44"
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": "",
+          "data-v-5a68968a": ""
+        },
+        "cls": "content",
+        "idx": 80,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 215,
+          "y": 288
+        },
+        "text": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44"
+      },
+      {
+        "attrs": {
+          "class": "product-card",
+          "data-v-5a68968a": ""
+        },
+        "cls": "product-card",
+        "idx": 81,
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 226,
+          "y": 299
+        },
+        "text": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44"
+      },
+      {
+        "attrs": {
+          "class": "product-info",
+          "data-v-5a68968a": ""
+        },
+        "cls": "product-info",
+        "idx": 83,
+        "rect": {
+          "h": 154,
+          "w": 209,
+          "x": 380,
+          "y": 299
+        },
+        "text": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋 券 到手价 ¥ 1.10 佣金率 40% 佣金 ¥0.44"
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "realCard-container",
+        "idx": 104,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 610,
+          "y": 288
+        },
+        "text": "2 自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50"
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": "",
+          "data-v-5a68968a": ""
+        },
+        "cls": "content",
+        "idx": 107,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 610,
+          "y": 288
+        },
+        "text": "自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50"
+      },
+      {
+        "attrs": {
+          "class": "product-card",
+          "data-v-5a68968a": ""
+        },
+        "cls": "product-card",
+        "idx": 108,
+        "rect": {
+          "h": 154,
+          "w": 363,
+          "x": 621,
+          "y": 299
+        },
+        "text": "自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50"
+      },
+      {
+        "attrs": {
+          "class": "product-info",
+          "data-v-5a68968a": ""
+        },
+        "cls": "product-info",
+        "idx": 110,
+        "rect": {
+          "h": 154,
+          "w": 209,
+          "x": 775,
+          "y": 299
+        },
+        "text": "自营 韩束白蛮腰美白防晒霜男女士防紫外线50+防晒隔离三合一防水防汗40ml 到手价 ¥ 850.00 佣金率 9% 佣金 ¥76.50"
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": ""
+        },
+        "cls": "realCard-container",
+        "idx": 128,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 1005,
+          "y": 288
+        },
+        "text": "3 铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% 佣金 ¥0.45"
+      },
+      {
+        "attrs": {
+          "data-v-55ec4471": "",
+          "data-v-5a68968a": ""
+        },
+        "cls": "content",
+        "idx": 131,
+        "rect": {
+          "h": 178,
+          "w": 385,
+          "x": 1005,
+          "y": 288
+        },
+        "text": "铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】 到手价 ¥ 4.99 佣金率 9% 佣金 ¥0.45"
+      }
+    ]
+  },
+  "security": [
+    "No cookies, headers, h5st, sign, uuid, token-like values are included.",
+    "Only product-like field names and short samples are kept."
+  ],
+  "source": "reports/hz11h_high_commission_data_source_probe_latest.json",
+  "tab_result": {
+    "clicked": "高佣榜",
+    "index": 188,
+    "ok": true
+  },
+  "ts": "2026-05-10 19:32:05",
+  "wait_result": {
+    "body_len": 2093,
+    "has_commission": true,
+    "has_no_data": false,
+    "has_price": true,
+    "ok": true,
+    "one_key_count": 0,
+    "sample": "我的推广\n效果报表\n结算中心\n工具场景\n狂欢日历\n消息公告\n收起\n\n【通知公告】 《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示\n\n04.27\n\n【通知公告】 《CID 业务合作要求及规范》修订内容公示\n\n04.07\n\n 【运营消息】 【营销补贴】5月9日-5月11日京喜订单奖励活动\n\n05.09\n\n 【运营消息】 【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10%\n\n05.08\n\n 【运营消息】 【京东生鲜】5月8日-15日指定商品客单价区间激励\n\n05.07\n\n查看全部>\n\n99+\n 帮助中心 \n aidealfy \n 概览\n 我要推广\n商品推广\n店铺推广\n自定义推广\n奖励活动推广\n京享红包推广\n官方活动推广\n营销频道推广\n品类频道推广\n 推广管理\n 我的工具\n我的推广\n我要推广\n实时榜单\n2小时热销榜\n高佣榜\n今日热销榜\n\n类目筛选\n\n全部\n食品酒水\n家庭清洁\n个护美妆\n医药保健\n生鲜\n数码家电\n家居日用\n时尚生活\n母婴\n宠物用品\n玩具\n粮油调味\n1\n红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋\n券\n到手价\n¥\n1.1"
+  }
+}
