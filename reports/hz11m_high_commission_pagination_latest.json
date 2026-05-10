@@ -1,0 +1,1477 @@
+{
+  "events": [
+    {
+      "event": "HC_CARDS",
+      "fresh": 20,
+      "high_commission_page_no": 1,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 0,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [
+        {
+          "income": "3.41",
+          "price": "16.90",
+          "rank_index": "",
+          "rate": "20.2%",
+          "sku": "",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒 百亿补贴 促销"
+        },
+        {
+          "income": "0.44",
+          "price": "1.10",
+          "rank_index": "",
+          "rate": "40%",
+          "sku": "",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "income": "0.28",
+          "price": "1.20",
+          "rank_index": "",
+          "rate": "23%",
+          "sku": "",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "income": "0.80",
+          "price": "3.99",
+          "rank_index": "",
+          "rate": "20%",
+          "sku": "",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "income": "0.47",
+          "price": "3.90",
+          "rank_index": "",
+          "rate": "12%",
+          "sku": "",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        }
+      ],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:39:19",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 87,
+      "location": {
+        "card_id": "hc_0_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 226.25,
+          "y": 274.4921875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 27,
+      "short_url": "https://u.jd.com/HDCJhuL",
+      "sku": "hc_title_2369419321821528256",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:39:30",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 88,
+      "location": {
+        "card_id": "hc_1_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 621.25,
+          "y": 274.4921875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 28,
+      "short_url": "https://u.jd.com/HOCZxE8",
+      "sku": "hc_title_3185883729905399866",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:39:50",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 89,
+      "location": {
+        "card_id": "hc_2_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1016.25,
+          "y": 274.4921875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 29,
+      "short_url": "https://u.jd.com/HDCTgtx",
+      "sku": "hc_title_8670521423351176855",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:40:15",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 90,
+      "location": {
+        "card_id": "hc_3_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1411.25,
+          "y": 274.4921875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 30,
+      "short_url": "https://u.jd.com/HrCfuVt",
+      "sku": "hc_title_246270919383821263",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:40:35",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 91,
+      "location": {
+        "card_id": "hc_4_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 226.25,
+          "y": 472.48046875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 31,
+      "short_url": "https://u.jd.com/HOCNn9G",
+      "sku": "hc_title_6742284041088781875",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:41:02",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 92,
+      "location": {
+        "card_id": "hc_5_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 621.25,
+          "y": 472.48046875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 32,
+      "short_url": "https://u.jd.com/HDC0rtV",
+      "sku": "hc_title_1474039211640438956",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:41:30",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 93,
+      "location": {
+        "card_id": "hc_6_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1016.25,
+          "y": 472.48046875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 33,
+      "short_url": "https://u.jd.com/HGCysCR",
+      "sku": "hc_title_7104551216546045987",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:41:53",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 94,
+      "location": {
+        "card_id": "hc_7_1778438359515",
+        "high_commission_page_no": 1,
+        "rank_index": "",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1411.25,
+          "y": 472.48046875
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 34,
+      "short_url": "https://u.jd.com/HrCTIys",
+      "sku": "hc_title_8046761894204053118",
+      "sku_source": "generated_title_key",
+      "ts": "2026-05-11 02:42:19",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [],
+        "before_skus": [],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 921,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 2
+      },
+      "ts": "2026-05-11 02:42:43",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 94,
+      "mode": "high_commission",
+      "processed": 8,
+      "refresh_round": 0,
+      "round_seen_sku_count": 34,
+      "ts": "2026-05-11 02:42:43",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 1,
+      "high_commission_page_no": 2,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [
+        {
+          "income": "6.31",
+          "price": "34.9",
+          "rank_index": "19",
+          "rate": "20.2%",
+          "sku": "100244548735",
+          "title": "日本叮叮驱蚊花露水200ml驱蚊喷雾防蚊水户外防蚊虫叮咬无味防基孔肯雅热"
+        }
+      ],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:43:21",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 95,
+      "location": {
+        "card_id": "hc_18_1778438601466",
+        "high_commission_page_no": 2,
+        "rank_index": "19",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1016.25,
+          "y": 1066.4453125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "short_url": "https://u.jd.com/HrCAs5A",
+      "sku": "100244548735",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:43:32",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "10220822854156",
+          "10214385572752",
+          "10193006752714",
+          "10211251225088",
+          "10216561328514"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": true,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1156.689453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1142.6953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 3
+      },
+      "ts": "2026-05-11 02:43:54",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 1,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:43:54",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 3,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:44:32",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 4
+      },
+      "ts": "2026-05-11 02:44:38",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:44:38",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 4,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:45:15",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 5
+      },
+      "ts": "2026-05-11 02:45:22",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:45:22",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 5,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:45:59",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 6
+      },
+      "ts": "2026-05-11 02:46:06",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:46:06",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 6,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:46:43",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 7
+      },
+      "ts": "2026-05-11 02:46:49",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:46:49",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 7,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:47:27",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10217476881782",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971"
+        ],
+        "changed": false,
+        "clicked": {
+          "cls": "next",
+          "idx": 906,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1369.189453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1355.1953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 8
+      },
+      "ts": "2026-05-11 02:47:33",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 95,
+      "mode": "high_commission",
+      "processed": 0,
+      "refresh_round": 0,
+      "round_seen_sku_count": 35,
+      "ts": "2026-05-11 02:47:33",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 5,
+      "high_commission_page_no": 8,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [
+        {
+          "income": "26.46",
+          "price": "189.0",
+          "rank_index": "14",
+          "rate": "14.0%",
+          "sku": "10216561328514",
+          "title": "恋火（Passional Lover）PL绒绒限定看不见气垫BB霜定妆二合一遮瑕持久不脱妆效期27年4月 【绒绒限定款】"
+        },
+        {
+          "income": "5.99",
+          "price": "139.9",
+          "rank_index": "15",
+          "rate": "12.0%",
+          "sku": "10150950489832",
+          "title": "鲁禧山东大樱桃5斤装 精品大果产地直发 新鲜水果 时令生鲜 坏果包赔 4斤(净重) 整箱5斤单果22-26mm实惠装"
+        },
+        {
+          "income": "0.3",
+          "price": "3.99",
+          "rank_index": "16",
+          "rate": "10.0%",
+          "sku": "10161216858688",
+          "title": "简雷240超级充电适用华为充电器Mate60pro手机充电头闪充插头mate50pro/30/40适用荣耀nova8/9"
+        },
+        {
+          "income": "0.56",
+          "price": "5.6",
+          "rank_index": "17",
+          "rate": "10.0%",
+          "sku": "10114247053547",
+          "title": "顾瓷法式碗盘套装鱼盘菜盘2026新款陶瓷饭碗家用碗碟碗筷一人食用餐具 4.75英寸碗-1个装 1件"
+        },
+        {
+          "income": "18.99",
+          "price": "299.9",
+          "rank_index": "20",
+          "rate": "10.0%",
+          "sku": "10219577615104",
+          "title": "鲁禧泰国金枕榴莲 【多地次日达】 进口新鲜榴莲 鲜果整个带壳  精品金枕鲜榴莲8-10斤（2-4个装）"
+        }
+      ],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:48:11",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 96,
+      "location": {
+        "card_id": "hc_13_1778438890991",
+        "high_commission_page_no": 8,
+        "rank_index": "14",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 621.25,
+          "y": 868.45703125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 36,
+      "short_url": "https://u.jd.com/HOCjAzQ",
+      "sku": "10216561328514",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:48:21",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 97,
+      "location": {
+        "card_id": "hc_14_1778438890991",
+        "high_commission_page_no": 8,
+        "rank_index": "15",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1016.25,
+          "y": 868.45703125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 37,
+      "short_url": "https://u.jd.com/HGC0udS",
+      "sku": "10150950489832",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:48:49",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 98,
+      "location": {
+        "card_id": "hc_15_1778438890991",
+        "high_commission_page_no": 8,
+        "rank_index": "16",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1411.25,
+          "y": 868.45703125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 38,
+      "short_url": "https://u.jd.com/HaCR2e3",
+      "sku": "10161216858688",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:49:14",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 99,
+      "location": {
+        "card_id": "hc_16_1778438890991",
+        "high_commission_page_no": 8,
+        "rank_index": "17",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 226.25,
+          "y": 1066.4453125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 39,
+      "short_url": "https://u.jd.com/HOCf4LS",
+      "sku": "10114247053547",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:49:43",
+      "worker": "high_commission"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 100,
+      "location": {
+        "card_id": "hc_19_1778438890991",
+        "high_commission_page_no": 8,
+        "rank_index": "20",
+        "rect": {
+          "h": 153.984375,
+          "w": 362.5,
+          "x": 1411.25,
+          "y": 1066.4453125
+        },
+        "scroll_round": 0
+      },
+      "mode": "high_commission",
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "short_url": "https://u.jd.com/HaCptfw",
+      "sku": "10219577615104",
+      "sku_source": "modal_or_url",
+      "ts": "2026-05-11 02:50:02",
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_NEXT_PAGE",
+      "mode": "high_commission",
+      "result": {
+        "after_skus": [
+          "100338823674",
+          "10175252716652",
+          "10148559540316",
+          "10084527837456",
+          "10190920504533"
+        ],
+        "before_skus": [
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "100009746032"
+        ],
+        "changed": true,
+        "clicked": {
+          "cls": "next",
+          "idx": 920,
+          "rect": {
+            "cx": 1824.013671875,
+            "cy": 1156.689453125,
+            "h": 27.98828125,
+            "w": 41.97265625,
+            "x": 1803.02734375,
+            "y": 1142.6953125
+          },
+          "txt": "下一页"
+        },
+        "ok": true,
+        "page_no": 9
+      },
+      "ts": "2026-05-11 02:50:23",
+      "worker": "high_commission"
+    },
+    {
+      "event": "CYCLE_DONE",
+      "known_sku_count": 100,
+      "mode": "high_commission",
+      "processed": 5,
+      "refresh_round": 0,
+      "round_seen_sku_count": 40,
+      "ts": "2026-05-11 02:50:23",
+      "units": 20,
+      "worker": "high_commission"
+    },
+    {
+      "event": "HC_CARDS",
+      "fresh": 0,
+      "high_commission_page_no": 9,
+      "mode": "high_commission",
+      "page_info": {
+        "one_key_count": 0,
+        "promo_hit": true,
+        "rank_api_count": 20,
+        "rank_api_last_error": "",
+        "risk": [],
+        "tab_click": {
+          "clicked": "高佣榜",
+          "index": 188,
+          "ok": true,
+          "text": "高佣榜"
+        },
+        "url": "https://union.jd.com/proManager/realTimeRankings"
+      },
+      "processed": 0,
+      "sample": [],
+      "scroll_round": 0,
+      "total": 20,
+      "ts": "2026-05-11 02:51:01",
+      "worker": "high_commission"
+    }
+  ],
+  "logs": {
+    "high_commission": "logs/hz11m_high_commission_pagination_12min_20260511_023906.log",
+    "merge": "logs/hz11m_merge_20260511_023906.log"
+  },
+  "next_decision": "If changed_next_events > 0 and no high_commission STOP, run high_commission longer or build HZ12 watchdog with product_all disabled until product_all STOP is fixed.",
+  "outputs": {
+    "high_commission": {
+      "dedup_sku": 14,
+      "numeric_sku": 6,
+      "ok": 14,
+      "rows": 14,
+      "sample": [
+        {
+          "commission_rate": "12%",
+          "estimated_income": "0.47",
+          "location": {
+            "card_id": "hc_4_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.90",
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "commission_rate": "20%",
+          "estimated_income": "2.00",
+          "location": {
+            "card_id": "hc_5_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "9.99",
+          "short_url": "https://u.jd.com/HDC0rtV",
+          "sku": "hc_title_1474039211640438956",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+10只（5对）手指套"
+        },
+        {
+          "commission_rate": "10%",
+          "estimated_income": "1.96",
+          "location": {
+            "card_id": "hc_6_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "19.62",
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "9.77",
+          "location": {
+            "card_id": "hc_7_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "48.35",
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "6.31",
+          "location": {
+            "card_id": "hc_18_1778438601466",
+            "high_commission_page_no": 2,
+            "rank_index": "19",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "34.9",
+          "short_url": "https://u.jd.com/HrCAs5A",
+          "sku": "100244548735",
+          "title": "日本叮叮驱蚊花露水200ml驱蚊喷雾防蚊水户外防蚊虫叮咬无味防基孔肯雅热"
+        },
+        {
+          "commission_rate": "14.0%",
+          "estimated_income": "26.46",
+          "location": {
+            "card_id": "hc_13_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "14",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "189.0",
+          "short_url": "https://u.jd.com/HOCjAzQ",
+          "sku": "10216561328514",
+          "title": "恋火（Passional Lover）PL绒绒限定看不见气垫BB霜定妆二合一遮瑕持久不脱妆效期27年4月 【绒绒限定款】看不见气垫含替换芯*1 01象牙白"
+        },
+        {
+          "commission_rate": "12.0%",
+          "estimated_income": "5.99",
+          "location": {
+            "card_id": "hc_14_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "15",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "139.9",
+          "short_url": "https://u.jd.com/HGC0udS",
+          "sku": "10150950489832",
+          "title": "鲁禧山东大樱桃5斤装 精品大果产地直发 新鲜水果 时令生鲜 坏果包赔 4斤(净重) 整箱5斤单果22-26mm实惠装"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "0.3",
+          "location": {
+            "card_id": "hc_15_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "16",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 868.45703125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/HaCR2e3",
+          "sku": "10161216858688",
+          "title": "简雷240超级充电适用华为充电器Mate60pro手机充电头闪充插头mate50pro/30/40适用荣耀nova8/9数据线 1.0米6A快充线"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "0.56",
+          "location": {
+            "card_id": "hc_16_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "17",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "5.6",
+          "short_url": "https://u.jd.com/HOCf4LS",
+          "sku": "10114247053547",
+          "title": "顾瓷法式碗盘套装鱼盘菜盘2026新款陶瓷饭碗家用碗碟碗筷一人食用餐具 4.75英寸碗-1个装 1件"
+        },
+        {
+          "commission_rate": "10.0%",
+          "estimated_income": "18.99",
+          "location": {
+            "card_id": "hc_19_1778438890991",
+            "high_commission_page_no": 8,
+            "rank_index": "20",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 1066.4453125
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "299.9",
+          "short_url": "https://u.jd.com/HaCptfw",
+          "sku": "10219577615104",
+          "title": "鲁禧泰国金枕榴莲 【多地次日达】 进口新鲜榴莲 鲜果整个带壳  精品金枕鲜榴莲8-10斤（2-4个装）"
+        }
+      ]
+    },
+    "multi_menu": {
+      "dedup_sku": 77,
+      "numeric_sku": 69,
+      "ok": 77,
+      "rows": 77,
+      "sample": [
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "3.41",
+          "location": {
+            "card_id": "hc_0_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "16.90",
+          "short_url": "https://u.jd.com/HDCJhuL",
+          "sku": "hc_title_2369419321821528256",
+          "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒 百亿补贴 促销"
+        },
+        {
+          "commission_rate": "20%",
+          "estimated_income": "0.80",
+          "location": {
+            "card_id": "hc_3_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/HrCfuVt",
+          "sku": "hc_title_246270919383821263",
+          "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+        },
+        {
+          "commission_rate": "40%",
+          "estimated_income": "0.44",
+          "location": {
+            "card_id": "hc_1_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 621.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "1.10",
+          "short_url": "https://u.jd.com/HOCZxE8",
+          "sku": "hc_title_3185883729905399866",
+          "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+        },
+        {
+          "commission_rate": "12%",
+          "estimated_income": "0.47",
+          "location": {
+            "card_id": "hc_4_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 226.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "3.90",
+          "short_url": "https://u.jd.com/HOCNn9G",
+          "sku": "hc_title_6742284041088781875",
+          "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+        },
+        {
+          "commission_rate": "10%",
+          "estimated_income": "1.96",
+          "location": {
+            "card_id": "hc_6_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "19.62",
+          "short_url": "https://u.jd.com/HGCysCR",
+          "sku": "hc_title_7104551216546045987",
+          "title": "百家好世平板拖把37cm3布家用一拖净免手洗2026懒人地拖墩布宿舍拖地神器 促销"
+        },
+        {
+          "commission_rate": "20.2%",
+          "estimated_income": "9.77",
+          "location": {
+            "card_id": "hc_7_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1411.25,
+              "y": 472.48046875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "48.35",
+          "short_url": "https://u.jd.com/HrCTIys",
+          "sku": "hc_title_8046761894204053118",
+          "title": "日本叮叮清凉止痒滚珠液儿童防叮咬速效止痒舒缓消包消肿全家适用50ml*2 促销 购新国补最高5%"
+        },
+        {
+          "commission_rate": "23%",
+          "estimated_income": "0.28",
+          "location": {
+            "card_id": "hc_2_1778438359515",
+            "high_commission_page_no": 1,
+            "rank_index": "",
+            "rect": {
+              "h": 153.984375,
+              "w": 362.5,
+              "x": 1016.25,
+              "y": 274.4921875
+            },
+            "scroll_round": 0
+          },
+          "menu_mode": "high_commission",
+          "price": "1.20",
+          "short_url": "https://u.jd.com/HDCTgtx",
+          "sku": "hc_title_8670521423351176855",
+          "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+        },
+        {
+          "commission_rate": "15",
+          "estimated_income": "6.89",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "45.9",
+          "short_url": "https://u.jd.com/HGLoAX6",
+          "sku": "100101571052",
+          "title": ""
+        },
+        {
+          "commission_rate": "5",
+          "estimated_income": "74.45",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "1489",
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "title": ""
+        },
+        {
+          "commission_rate": "1",
+          "estimated_income": "50.99",
+          "location": {
+            "page_no": 1
+          },
+          "menu_mode": "product_all",
+          "price": "5099",
+          "short_url": "https://u.jd.com/HrLE7fv",
+          "sku": "100341910908",
+          "title": ""
+        }
+      ]
+    }
+  },
+  "pagination": {
+    "changed_next_events": 2,
+    "item_ok_events_in_log_tail": 14,
+    "next_click_events": 8
+  },
+  "phase": "HZ11M high_commission pagination smoke",
+  "return_codes": {
+    "high_commission": "124",
+    "merge": "0",
+    "timeout_124_is_expected": true
+  },
+  "stop": {
+    "high_commission_stop_exists": false,
+    "product_all_stop_exists": true
+  },
+  "ts": "2026-05-11 02:51:06"
+}

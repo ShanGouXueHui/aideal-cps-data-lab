@@ -1166,6 +1166,135 @@ def collect_high_commission_one(page, candidate, state, location):
 
 
 
+
+def click_high_commission_next_page(page, state):
+    """
+    高佣榜底部有“上一页 / 下一页”。按钮可能在视口底部或被 sticky footer 贴近遮挡。
+    处理策略：
+    1. scroll 到底部；
+    2. 查找可见、非 disabled 的“下一页”按钮/文本节点；
+    3. 优先用 mouse 坐标点击；
+    4. 等待 union_search_rank_api 刷新。
+    """
+    before_skus = [str(x.get("sku") or "") for x in (getattr(page, "_hz11_rank_skus", []) or [])[:8]]
+
+    try:
+        page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(1200)
+    except Exception:
+        pass
+
+    found = page.evaluate(
+        """
+        () => {
+          const norm = s => (s || '').replace(/\\s+/g, '').trim();
+          const nodes = Array.from(document.querySelectorAll('button,a,span,div,li'));
+          const candidates = nodes.map((el, idx) => {
+            const r = el.getBoundingClientRect();
+            const txt = norm(el.innerText || el.textContent);
+            const cls = String(el.className || '');
+            const disabled =
+              el.disabled ||
+              el.getAttribute('disabled') !== null ||
+              cls.includes('disabled') ||
+              cls.includes('is-disabled') ||
+              el.getAttribute('aria-disabled') === 'true';
+            return {
+              el,
+              idx,
+              txt,
+              disabled,
+              cls: cls.slice(0, 160),
+              visible: r.width > 0 && r.height > 0 && r.top >= -80 && r.left >= 0 && r.top <= window.innerHeight + 120,
+              rect: {x:r.x, y:r.y, w:r.width, h:r.height, cx:r.x + r.width/2, cy:r.y + r.height/2}
+            };
+          }).filter(x =>
+            x.visible &&
+            !x.disabled &&
+            (x.txt === '下一页' || x.txt.includes('下一页')) &&
+            x.txt.length <= 20
+          ).sort((a,b) => {
+            const ae = a.txt === '下一页' ? 0 : 1;
+            const be = b.txt === '下一页' ? 0 : 1;
+            if (ae !== be) return ae - be;
+            return b.rect.y - a.rect.y;
+          });
+
+          if (!candidates.length) {
+            return {
+              ok:false,
+              reason:'next_button_not_found',
+              samples: nodes.map((el, idx) => {
+                const r = el.getBoundingClientRect();
+                const txt = norm(el.innerText || el.textContent);
+                return {
+                  idx,
+                  txt,
+                  cls:String(el.className || '').slice(0,100),
+                  visible:r.width>0 && r.height>0 && r.top>=-100 && r.top<=window.innerHeight+150,
+                  rect:{x:r.x,y:r.y,w:r.width,h:r.height}
+                };
+              }).filter(x => x.txt.includes('上一页') || x.txt.includes('下一页')).slice(-20)
+            };
+          }
+
+          return {
+            ok:true,
+            target:{
+              idx:candidates[0].idx,
+              txt:candidates[0].txt,
+              cls:candidates[0].cls,
+              rect:candidates[0].rect
+            }
+          };
+        }
+        """
+    )
+
+    if not found.get("ok"):
+        log("HC_NEXT_PAGE_NOT_FOUND", result=found)
+        return found
+
+    rect = found.get("target", {}).get("rect") or {}
+    x = float(rect.get("cx") or 0)
+    y = float(rect.get("cy") or 0)
+
+    if x <= 0 or y <= 0:
+        res = {"ok": False, "reason": "next_button_center_invalid", "found": found}
+        log("HC_NEXT_PAGE_FAIL", result=res)
+        return res
+
+    page.mouse.move(x, y)
+    page.wait_for_timeout(300)
+    page.mouse.click(x, y)
+    page.wait_for_timeout(5000)
+
+    after_skus = [str(x.get("sku") or "") for x in (getattr(page, "_hz11_rank_skus", []) or [])[:8]]
+    changed = bool(after_skus and after_skus != before_skus)
+
+    state["high_commission_page_no"] = int(state.get("high_commission_page_no") or 1) + 1
+    state["scroll_round"] = 0
+    state["last_event"] = {
+        "event": "HC_NEXT_PAGE",
+        "ts": now(),
+        "page_no": state["high_commission_page_no"],
+        "changed": changed,
+        "before_skus": before_skus[:5],
+        "after_skus": after_skus[:5],
+    }
+    save_state(state)
+
+    res = {
+        "ok": True,
+        "clicked": found.get("target"),
+        "changed": changed,
+        "page_no": state["high_commission_page_no"],
+        "before_skus": before_skus[:5],
+        "after_skus": after_skus[:5],
+    }
+    log("HC_NEXT_PAGE", result=res)
+    return res
+
 def cycle_high_commission(page, state):
     processed = 0
     units = 0
@@ -1193,6 +1322,7 @@ def cycle_high_commission(page, state):
     log(
         "HC_CARDS",
         scroll_round=scroll_round,
+        high_commission_page_no=state.get("high_commission_page_no", 1),
         total=len(cards),
         fresh=len(fresh),
         processed=processed,
@@ -1213,49 +1343,59 @@ def cycle_high_commission(page, state):
     if not fresh:
         state["empty_streak"] = int(state.get("empty_streak") or 0) + 1
         save_state(state)
-    else:
-        for c in fresh:
-            if processed >= MAX_ITEMS_PER_CYCLE:
-                break
-            try:
-                collect_high_commission_one(
-                    page,
-                    c,
-                    state,
-                    {
-                        "scroll_round": scroll_round,
-                        "rank_index": c.get("rank_index"),
-                        "card_id": c.get("card_id"),
-                        "rect": c.get("rect"),
-                    },
-                )
-                processed += 1
-                units += 1
-                write_report(state, {"last_cycle_processed": processed, "last_scroll_round": scroll_round})
-                time.sleep(random.uniform(ITEM_SLEEP_MIN, ITEM_SLEEP_MAX))
-            except Exception as e:
-                state["fail_streak"] = int(state.get("fail_streak") or 0) + 1
-                state["last_event"] = {
-                    "event": "ITEM_FAIL",
-                    "ts": now(),
-                    "err": repr(e),
+
+        # 关键修复：当前页没有新 SKU 时，直接点击下一页扩池，而不是反复刷新同一页。
+        next_res = click_high_commission_next_page(page, state)
+        write_report(state, {"last_cycle_processed": 0, "last_high_commission_next": next_res})
+
+        if not next_res.get("ok"):
+            if state["empty_streak"] >= EMPTY_STREAK_LIMIT:
+                stop_required("empty_streak_limit", empty_streak=state["empty_streak"], next_result=next_res)
+        return 0, len(cards)
+
+    for c in fresh:
+        if processed >= MAX_ITEMS_PER_CYCLE:
+            break
+        try:
+            collect_high_commission_one(
+                page,
+                c,
+                state,
+                {
                     "scroll_round": scroll_round,
+                    "high_commission_page_no": state.get("high_commission_page_no", 1),
                     "rank_index": c.get("rank_index"),
-                    "title": (c.get("title") or "")[:80],
-                }
-                save_state(state)
-                log(
-                    "ITEM_FAIL",
-                    err=repr(e),
-                    scroll_round=scroll_round,
-                    rank_index=c.get("rank_index"),
-                    title=(c.get("title") or "")[:80],
-                    fail_streak=state["fail_streak"],
-                )
-                close_dialog(page)
-                if state["fail_streak"] >= MAX_FAIL_STREAK:
-                    stop_required("max_fail_streak_reached", fail_streak=state["fail_streak"], last_error=repr(e))
-                time.sleep(random.uniform(20, 40))
+                    "card_id": c.get("card_id"),
+                    "rect": c.get("rect"),
+                },
+            )
+            processed += 1
+            units += 1
+            write_report(state, {"last_cycle_processed": processed, "last_scroll_round": scroll_round})
+            time.sleep(random.uniform(ITEM_SLEEP_MIN, ITEM_SLEEP_MAX))
+        except Exception as e:
+            state["fail_streak"] = int(state.get("fail_streak") or 0) + 1
+            state["last_event"] = {
+                "event": "ITEM_FAIL",
+                "ts": now(),
+                "err": repr(e),
+                "scroll_round": scroll_round,
+                "rank_index": c.get("rank_index"),
+                "title": (c.get("title") or "")[:80],
+            }
+            save_state(state)
+            log(
+                "ITEM_FAIL",
+                err=repr(e),
+                scroll_round=scroll_round,
+                rank_index=c.get("rank_index"),
+                title=(c.get("title") or "")[:80],
+                fail_streak=state["fail_streak"],
+            )
+            close_dialog(page)
+            if state["fail_streak"] >= MAX_FAIL_STREAK:
+                stop_required("max_fail_streak_reached", fail_streak=state["fail_streak"], last_error=repr(e))
+            time.sleep(random.uniform(20, 40))
 
     if processed <= 0:
         state["empty_streak"] = int(state.get("empty_streak") or 0) + 1
@@ -1263,11 +1403,9 @@ def cycle_high_commission(page, state):
         state["empty_streak"] = 0
     save_state(state)
 
-    if at_bottom(page):
-        log("SCROLL_BOTTOM_RESET", scroll_round=state.get("scroll_round"))
-        reset_scroll(page, state)
-    else:
-        move_scroll(page, state)
+    # 当前页处理过新 SKU 后，也尝试进入下一页，避免后续 cycle 再撞同一页已见 SKU。
+    next_res = click_high_commission_next_page(page, state)
+    write_report(state, {"last_cycle_processed": processed, "last_high_commission_next": next_res})
 
     if state["empty_streak"] >= EMPTY_STREAK_LIMIT:
         stop_required("empty_streak_limit", empty_streak=state["empty_streak"], scroll_round=state.get("scroll_round"))
