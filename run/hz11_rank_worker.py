@@ -806,6 +806,109 @@ def click_high_commission_card(page, card):
 
     return {"ok": True, "clicked_by": "mouse_coordinate", "button": btn, "after": after, "found": found}
 
+
+def click_modal_tab(page, tab_text):
+    """
+    在“生成推广链接”弹窗中切换 短链接 / 长链接 / 二维码 / 京口令。
+    """
+    try:
+        return page.evaluate(
+            """
+            (tabText) => {
+              const norm = s => (s || '').replace(/\\s+/g, '').trim();
+              const target = norm(tabText);
+              const nodes = Array.from(document.querySelectorAll('button,a,span,div,li'));
+              const matched = nodes
+                .map((el, idx) => {
+                  const r = el.getBoundingClientRect();
+                  return {
+                    el,
+                    idx,
+                    txt: norm(el.innerText || el.textContent),
+                    visible: r.width > 0 && r.height > 0 && r.top >= 0 && r.left >= 0 && r.top <= window.innerHeight && r.left <= window.innerWidth,
+                    rect: {x:r.x,y:r.y,w:r.width,h:r.height}
+                  };
+                })
+                .filter(x => x.visible && (x.txt === target || x.txt.includes(target)) && x.txt.length <= 20)
+                .sort((a,b) => a.txt.length - b.txt.length);
+              if (!matched.length) return {ok:false, reason:'tab_not_found', tabText};
+              matched[0].el.click();
+              return {ok:true, tabText, clicked:matched[0].txt, index:matched[0].idx, rect:matched[0].rect};
+            }
+            """,
+            tab_text,
+        )
+    except Exception as e:
+        return {"ok": False, "reason": repr(e), "tabText": tab_text}
+
+
+def parse_modal_all_tabs(page):
+    """
+    高佣榜弹窗中，短链 tab 默认只展示短链接。
+    为了提取真实 SKU，需要切换到“长链接”tab 后再解析。
+    """
+    merged = {}
+    tab_results = {}
+
+    for tab in ("短链接", "长链接", "京口令", "二维码"):
+        tab_res = click_modal_tab(page, tab)
+        tab_results[tab] = tab_res
+        page.wait_for_timeout(800)
+
+        try:
+            r = hz9.parse_modal(page)
+        except Exception as e:
+            r = {"_parse_error": repr(e)}
+
+        for k, v in r.items():
+            if v and not merged.get(k):
+                merged[k] = v
+
+    # 再补一份弹窗整体文本和输入框 value，便于后续诊断，但只保存短样本。
+    try:
+        extra = page.evaluate(
+            """
+            () => {
+              const txt = document.body ? document.body.innerText || '' : '';
+              const values = Array.from(document.querySelectorAll('input,textarea'))
+                .map(x => x.value || x.getAttribute('value') || '')
+                .filter(Boolean)
+                .slice(0, 20);
+              const hrefs = Array.from(document.querySelectorAll('a[href]'))
+                .map(a => a.href || '')
+                .filter(Boolean)
+                .slice(0, 80);
+              return {
+                text_sample: txt.slice(0, 1200),
+                input_values: values,
+                hrefs: hrefs
+              };
+            }
+            """
+        )
+    except Exception as e:
+        extra = {"_extra_error": repr(e)}
+
+    # 从 input/href 兜底补 URL
+    blobs = []
+    blobs.extend(extra.get("input_values") or [])
+    blobs.extend(extra.get("hrefs") or [])
+
+    for v in blobs:
+        s = str(v or "")
+        if "u.jd.com" in s and not merged.get("short_url"):
+            merged["short_url"] = s
+        if ("union-click.jd.com" in s or "jd.com" in s) and not merged.get("long_url"):
+            merged["long_url"] = s
+
+    merged["_tab_results"] = tab_results
+    merged["_extra_sample"] = {
+        "input_values": [str(x)[:300] for x in (extra.get("input_values") or [])[:8]],
+        "hrefs": [str(x)[:300] for x in (extra.get("hrefs") or [])[:8]],
+        "text_sample": str(extra.get("text_sample") or "")[:500],
+    }
+    return merged
+
 def collect_high_commission_one(page, candidate, state, location):
     close_dialog(page)
 
@@ -817,13 +920,12 @@ def collect_high_commission_one(page, candidate, state, location):
     result = {}
     for _ in range(60):
         page.wait_for_timeout(1000)
-        result = hz9.parse_modal(page)
+        result = parse_modal_all_tabs(page)
         if result.get("short_url"):
             break
 
-    close_dialog(page)
-
     if not result.get("short_url"):
+        close_dialog(page)
         raise RuntimeError("short_url_not_found")
 
     sku_from_result, sku_pat = extract_sku_from_texts(
@@ -833,7 +935,10 @@ def collect_high_commission_one(page, candidate, state, location):
         result.get("short_url"),
         result.get("qr_url"),
         result.get("jd_command"),
+        json.dumps(result.get("_extra_sample") or {}, ensure_ascii=False),
     )
+
+    close_dialog(page)
 
     candidate_key = "hc_title_" + str(abs(hash((candidate.get("title") or "")[:120])))
     sku = sku_from_result or str(candidate.get("sku") or "").strip() or candidate_key
@@ -871,6 +976,8 @@ def collect_high_commission_one(page, candidate, state, location):
         "refresh_round": state.get("refresh_round", 0),
         "run_id": RUN_ID,
         "click_result": click_res,
+        "modal_tab_results": result.get("_tab_results"),
+        "modal_extra_sample": result.get("_extra_sample"),
     }
 
     append_jsonl(OUT, row)
