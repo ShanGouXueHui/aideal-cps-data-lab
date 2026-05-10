@@ -661,84 +661,150 @@ def get_high_commission_cards(page):
 
 def click_high_commission_card(page, card):
     """
-    高佣榜：hover 卡片后，在该卡片附近点击一键领链。
+    高佣榜专用点击：
+    1. scroll card into center
+    2. hover card center
+    3. 找可见的一键领链按钮
+    4. 用 mouse.click 点击按钮中心点
     """
     cid = card.get("card_id")
     center = card.get("center") or {}
-    x = float(center.get("x") or 0)
-    y = float(center.get("y") or 0)
 
-    if x > 0 and y > 0:
-        page.mouse.move(x, y)
-        page.wait_for_timeout(900)
-
-    return page.evaluate(
+    prep = page.evaluate(
         """
         (cid) => {
-          const norm = s => (s || '').replace(/\\s+/g, '').trim();
           const root = document.querySelector(`[data-hz11-card-id="${cid}"]`);
           if (!root) return {ok:false, reason:'card_not_found', cid};
-
-          const rr = root.getBoundingClientRect();
-          const cx = rr.x + rr.width / 2;
-          const cy = rr.y + rr.height / 2;
-
-          const fireHover = (el) => {
-            for (const name of ['mouseover', 'mouseenter', 'mousemove']) {
-              el.dispatchEvent(new MouseEvent(name, {bubbles:true, cancelable:true, view:window, clientX:cx, clientY:cy}));
-            }
-          };
-          fireHover(root);
-
-          const scoreNode = (el) => {
-            const r = el.getBoundingClientRect();
-            const visible = r.width > 0 && r.height > 0 && r.top >= -80 && r.top <= window.innerHeight + 220;
-            const bx = r.x + r.width / 2;
-            const by = r.y + r.height / 2;
-            const dx = Math.abs(bx - cx);
-            const dy = Math.abs(by - cy);
-            const insideX = bx >= rr.x - 80 && bx <= rr.x + rr.width + 80;
-            const nearY = by >= rr.y - 80 && by <= rr.y + rr.height + 260;
-            return {visible, dx, dy, insideX, nearY, dist: dx + dy, rect:{x:r.x,y:r.y,w:r.width,h:r.height}};
-          };
-
-          let nodes = Array.from(root.querySelectorAll('button,a,span,div'))
-            .map((el, idx) => ({el, idx, txt:norm(el.innerText || el.textContent), s:scoreNode(el)}))
-            .filter(x => x.txt === '一键领链' || x.txt.includes('一键领链'));
-
-          if (!nodes.length) {
-            nodes = Array.from(document.querySelectorAll('button,a,span,div'))
-              .map((el, idx) => ({el, idx, txt:norm(el.innerText || el.textContent), s:scoreNode(el)}))
-              .filter(x => (x.txt === '一键领链' || x.txt.includes('一键领链')) && x.s.insideX && x.s.nearY);
-          }
-
-          if (!nodes.length) return {ok:false, reason:'onekey_not_found_near_card', cid, rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height}};
-
-          nodes.sort((a,b) => {
-            const av = a.s.visible ? 0 : 1;
-            const bv = b.s.visible ? 0 : 1;
-            if (av !== bv) return av - bv;
-            return a.s.dist - b.s.dist;
-          });
-
-          const target = nodes[0];
-          target.el.scrollIntoView({block:'center', inline:'center'});
-          target.el.click();
-
+          root.scrollIntoView({block:'center', inline:'center'});
+          const r = root.getBoundingClientRect();
           return {
             ok:true,
             cid,
-            clicked_text:target.txt,
-            index:target.idx,
-            visible:target.s.visible,
-            rect:target.s.rect,
-            rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height}
+            rootRect:{x:r.x,y:r.y,w:r.width,h:r.height},
+            center:{x:r.x + r.width / 2, y:r.y + Math.min(r.height / 2, 160)}
           };
         }
         """,
         cid,
     )
 
+    if not prep.get("ok"):
+        return prep
+
+    page.wait_for_timeout(800)
+
+    cx = float(prep.get("center", {}).get("x") or center.get("x") or 0)
+    cy = float(prep.get("center", {}).get("y") or center.get("y") or 0)
+
+    if cx > 0 and cy > 0:
+        page.mouse.move(cx, cy)
+        page.wait_for_timeout(1200)
+        page.mouse.move(cx + 8, cy + 8)
+        page.wait_for_timeout(700)
+
+    # 先找可见按钮；如果没有，找卡片附近按钮。
+    found = page.evaluate(
+        """
+        (cid) => {
+          const norm = s => (s || '').replace(/\\s+/g, '').trim();
+          const root = document.querySelector(`[data-hz11-card-id="${cid}"]`);
+          if (!root) return {ok:false, reason:'card_not_found_after_hover', cid};
+
+          const rr = root.getBoundingClientRect();
+          const rootCx = rr.x + rr.width / 2;
+          const rootCy = rr.y + rr.height / 2;
+
+          const all = Array.from(document.querySelectorAll('button,a,span,div')).map((el, idx) => {
+            const r = el.getBoundingClientRect();
+            const txt = norm(el.innerText || el.textContent);
+            const visible = r.width > 0 && r.height > 0 && r.top >= 0 && r.left >= 0 && r.top <= window.innerHeight && r.left <= window.innerWidth;
+            const bx = r.x + r.width / 2;
+            const by = r.y + r.height / 2;
+            const insideX = bx >= rr.x - 80 && bx <= rr.x + rr.width + 80;
+            const nearY = by >= rr.y - 120 && by <= rr.y + rr.height + 320;
+            const dist = Math.abs(bx - rootCx) + Math.abs(by - rootCy);
+            return {
+              idx,
+              tag: el.tagName,
+              txt,
+              visible,
+              insideX,
+              nearY,
+              dist,
+              rect:{x:r.x,y:r.y,w:r.width,h:r.height,cx:bx,cy:by},
+              cls:String(el.className || '').slice(0,120)
+            };
+          }).filter(x => x.txt === '一键领链' || x.txt.includes('一键领链'));
+
+          const exactVisible = all.filter(x => x.visible && x.txt === '一键领链' && x.insideX && x.nearY);
+          const anyVisible = all.filter(x => x.visible && x.insideX && x.nearY);
+          const nearAny = all.filter(x => x.insideX && x.nearY);
+
+          let candidates = exactVisible.length ? exactVisible : (anyVisible.length ? anyVisible : nearAny);
+          candidates.sort((a,b) => {
+            const av = a.visible ? 0 : 1;
+            const bv = b.visible ? 0 : 1;
+            if (av !== bv) return av - bv;
+            const ae = a.txt === '一键领链' ? 0 : 1;
+            const be = b.txt === '一键领链' ? 0 : 1;
+            if (ae !== be) return ae - be;
+            return a.dist - b.dist;
+          });
+
+          if (!candidates.length) {
+            return {
+              ok:false,
+              reason:'onekey_button_not_found',
+              cid,
+              rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height},
+              allSample:all.slice(0,12)
+            };
+          }
+
+          return {
+            ok:true,
+            cid,
+            rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height},
+            button:candidates[0],
+            allCount:all.length,
+            visibleCount:all.filter(x => x.visible).length
+          };
+        }
+        """,
+        cid,
+    )
+
+    if not found.get("ok"):
+        return found
+
+    btn = found.get("button") or {}
+    rect = btn.get("rect") or {}
+    bx = float(rect.get("cx") or 0)
+    by = float(rect.get("cy") or 0)
+
+    if bx <= 0 or by <= 0:
+        return {"ok": False, "reason": "button_center_invalid", "found": found}
+
+    page.mouse.move(bx, by)
+    page.wait_for_timeout(400)
+    page.mouse.click(bx, by)
+    page.wait_for_timeout(1500)
+
+    # 点击后检查是否出现弹窗/短链相关文本
+    after = page.evaluate(
+        """
+        () => {
+          const txt = document.body ? document.body.innerText || '' : '';
+          return {
+            has_short_hint: /短链|推广链接|复制链接|京口令|二维码/.test(txt),
+            short_url_count: (txt.match(/u\\.jd\\.com/g) || []).length,
+            body_sample: txt.slice(0, 800)
+          };
+        }
+        """
+    )
+
+    return {"ok": True, "clicked_by": "mouse_coordinate", "button": btn, "after": after, "found": found}
 
 def collect_high_commission_one(page, candidate, state, location):
     close_dialog(page)
@@ -746,6 +812,7 @@ def collect_high_commission_one(page, candidate, state, location):
     click_res = click_high_commission_card(page, candidate)
     if not click_res.get("ok"):
         raise RuntimeError("high_commission_click_failed:" + repr(click_res))
+    log("HC_CLICK_RESULT", title=(candidate.get("title") or "")[:80], click_result=click_res)
 
     result = {}
     for _ in range(60):

@@ -1,0 +1,134 @@
+# DL2 HZ11E High Commission Click Smoke
+
+- Generated at: 2026-05-10 19:18:41
+- high_commission: {'exists': True, 'rows': 1, 'ok': 1, 'dedup_sku': 1, 'sample': [{'menu_mode': 'high_commission', 'rank_index': '', 'sku': 'hc_title_5187259356807506966', 'sku_source': 'generated_title_key', 'short_url': 'https://u.jd.com/H1Lk6fy', 'title': '红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 250g*1袋', 'price': '1.10', 'commission_rate': '40%', 'estimated_income': '0.44'}]}
+- multi_menu: {'exists': True, 'rows': 64, 'ok': 64, 'dedup_sku': 64, 'sample': [{'menu_mode': None, 'rank_index': None, 'sku': '69542791298', 'sku_source': None, 'short_url': 'https://u.jd.com/fgEUhon', 'title': '', 'price': '58', 'commission_rate': '20', 'estimated_income': '11.60'}, {'menu_mode': 'high_commission', 'rank_index': '', 'sku': 'hc_title_5187259356807506966', 'sku_source': 'generated_title_key', 'short_url': 'https://u.jd.com/H1Lk6fy', 'title': '红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 250g*1袋', 'price': '1.10', 'commission_rate': '40%', 'estimated_income': '0.44'}, {'menu_mode': 'product_all', 'rank_index': None, 'sku': '100101571052', 'sku_source': None, 'short_url': 'https://u.jd.com/HGLoAX6', 'title': '', 'price': '45.9', 'commission_rate': '15', 'estimated_income': '6.89'}, {'menu_mode': 'product_all', 'rank_index': None, 'sku': '100228933817', 'sku_source': None, 'short_url': 'https://u.jd.com/HGLRii2', 'title': '', 'price': '1489', 'commission_rate': '5', 'estimated_income': '74.45'}, {'menu_mode': 'product_all', 'rank_index': None, 'sku': '100341910908', 'sku_source': None, 'short_url': 'https://u.jd.com/HrLE7fv', 'title': '', 'price': '5099', 'commission_rate': '1', 'estimated_income': '50.99'}]}
+- stop: {'high_commission_stop_exists': False}
+
+## Key Events
+
+Indented JSON below.
+
+[
+  {
+    "event": "HC_CARDS",
+    "fresh": 18,
+    "mode": "high_commission",
+    "page_info": {
+      "one_key_count": 0,
+      "promo_hit": true,
+      "risk": [],
+      "tab_click": {
+        "clicked": "高佣榜",
+        "index": 184,
+        "ok": true,
+        "text": "高佣榜"
+      },
+      "url": "https://union.jd.com/proManager/realTimeRankings"
+    },
+    "processed": 0,
+    "sample": [
+      {
+        "income": "0.44",
+        "price": "1.10",
+        "rank_index": "",
+        "rate": "40%",
+        "sku": "",
+        "title": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 250g*1袋"
+      },
+      {
+        "income": "0.45",
+        "price": "1.80",
+        "rank_index": "",
+        "rate": "25%",
+        "sku": "",
+        "title": "【拍两单发货！清仓】灯饰照明7号电池适用遥控器电视风扇计算器 家庭简装【超优惠】 金昊电池7号/到手二粒【长续航】"
+      },
+      {
+        "income": "0.45",
+        "price": "4.99",
+        "rank_index": "",
+        "rate": "9%",
+        "sku": "",
+        "title": "铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】"
+      },
+      {
+        "income": "0.55",
+        "price": "1.10",
+        "rank_index": "",
+        "rate": "50%",
+        "sku": "",
+        "title": "云南黄冰糖老冰糖土冰糖甘蔗多晶冰糖家用煲汤泡水 100g*1袋"
+      },
+      {
+        "income": "0.40",
+        "price": "1.01",
+        "rank_index": "",
+        "rate": "40%",
+        "sku": "",
+        "title": "京喜指数【一周不重样】时尚可爱美拉德头绳小熊高马尾弹力发圈 主推混色5根 1件套"
+      }
+    ],
+    "scroll_round": 0,
+    "total": 18,
+    "ts": "2026-05-10 19:18:17",
+    "worker": "high_commission"
+  },
+  {
+    "click_result_summary": {
+      "after": {
+        "body_sample": "我的推广\n效果报表\n结算中心\n工具场景\n狂欢日历\n消息公告\n收起\n\n【通知公告】 《联盟开放平台-API接口开放标准及使用规范说明》修订内容公示\n\n04.27\n\n【通知公告】 《CID 业务合作要求及规范》修订内容公示\n\n04.07\n\n 【运营消息】 【营销补贴】5月9日-5月11日京喜订单奖励活动\n\n05.09\n\n 【运营消息】 【营销补贴】京东服饰5.9-5.19指定单品佣金补贴10%\n\n05.08\n\n 【运营消息】 【京东生鲜】5月8日-15日指定商品客单价区间激励\n\n05.07\n\n查看全部>\n\n99+\n 帮助中心 \n aidealfy \n 概览\n 我要推广\n商品推广\n店铺推广\n自定义推广\n奖励活动推广\n京享红包推广\n官方活动推广\n营销频道推广\n品类频道推广\n 推广管理\n 我的工具\n我的推广\n我要推广\n实时榜单\n2小时热销榜\n高佣榜\n今日热销榜\n\n类目筛选\n\n全部\n食品酒水\n家庭清洁\n个护美妆\n医药保健\n生鲜\n数码家电\n家居日用\n时尚生活\n母婴\n宠物用品\n玩具\n粮油调味\n1\n红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 精品推荐 250g*1袋\n券\n到手价\n¥\n1.10\n佣金率\n40%\n佣金\n¥0.44\n2\n【拍两单发货！清仓】灯饰照明7号电池适用遥控器电视风扇计算器 家庭简装【超优惠】 金昊电池7号/到手二粒【长续航】\n京喜自营\n券\n到手价\n¥\n1.80\n佣金率\n25%\n佣金\n¥0.45\n3\n铝箔保鲜袋食品级铝钛箔冰箱食物密封自封袋冷冻冷藏收纳袋 镀铝保鲜袋60个【小号30个+中号20个+大号10个】\n到手价\n¥\n4.99\n佣金率\n9%\n佣金\n¥0.45\n云南黄冰糖老冰糖土冰糖甘蔗多晶冰糖家用煲汤泡水 100g*1袋\n券\n到手价\n¥\n1.10\n佣金率\n50%\n佣金\n¥0.55\n京喜指数【一周不重样】时尚可爱美拉德头绳小熊高马尾弹力发圈 主推混色5根 1件",
+        "has_short_hint": true,
+        "short_url_count": 0
+      },
+      "button": {
+        "cls": "el-button card-button el-button--default",
+        "dist": 332.4921875,
+        "idx": 217,
+        "insideX": true,
+        "nearY": true,
+        "rect": {
+          "cx": 543.9921875,
+          "cy": 572,
+          "h": 42,
+          "w": 90.015625,
+          "x": 498.984375,
+          "y": 551
+        },
+        "tag": "BUTTON",
+        "txt": "一键领链",
+        "visible": true
+      },
+      "clicked_by": "mouse_coordinate",
+      "ok": true
+    },
+    "event": "HC_CLICK_RESULT",
+    "mode": "high_commission",
+    "title": "红枣骏枣大枣煲汤煮粥零食软糯甘甜果肉饱满送礼滋补山西仓发 250g*1袋",
+    "ts": "2026-05-10 19:18:22",
+    "worker": "high_commission"
+  },
+  {
+    "event": "ITEM_OK",
+    "known_sku_count": 61,
+    "location": {
+      "card_id": "hc_0_1778411897420",
+      "rank_index": "",
+      "rect": {
+        "h": 154,
+        "w": 363,
+        "x": 226,
+        "y": 299
+      },
+      "scroll_round": 0
+    },
+    "mode": "high_commission",
+    "refresh_round": 0,
+    "round_seen_sku_count": 1,
+    "short_url": "https://u.jd.com/H1Lk6fy",
+    "sku": "hc_title_5187259356807506966",
+    "sku_source": "generated_title_key",
+    "ts": "2026-05-10 19:18:24",
+    "worker": "high_commission"
+  }
+]
