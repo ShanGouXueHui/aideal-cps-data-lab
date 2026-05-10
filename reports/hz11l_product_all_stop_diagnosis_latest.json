@@ -1,0 +1,2992 @@
+{
+  "events": {
+    "high_commission": [
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:12:57",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 78,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 18,
+        "ts": "2026-05-11 02:12:59",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 3,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 4,
+            "income": "5.0",
+            "price": "99.9",
+            "rate": "5.0%",
+            "sku": "10216100157821",
+            "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+          }
+        ],
+        "ts": "2026-05-11 02:13:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 3,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 4,
+            "income": "5.0",
+            "price": "99.9",
+            "rate": "5.0%",
+            "sku": "10216100157821",
+            "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+          }
+        ],
+        "ts": "2026-05-11 02:13:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:13:49",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:13:56",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 78,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 18,
+        "ts": "2026-05-11 02:13:58",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 3,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 4,
+            "income": "5.0",
+            "price": "99.9",
+            "rate": "5.0%",
+            "sku": "10216100157821",
+            "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+          }
+        ],
+        "ts": "2026-05-11 02:14:44",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 3,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 4,
+            "income": "5.0",
+            "price": "99.9",
+            "rate": "5.0%",
+            "sku": "10216100157821",
+            "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+          }
+        ],
+        "ts": "2026-05-11 02:14:44",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:14:49",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:14:55",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 78,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 18,
+        "ts": "2026-05-11 02:14:57",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 3,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 4,
+            "income": "5.0",
+            "price": "99.9",
+            "rate": "5.0%",
+            "sku": "10216100157821",
+            "title": "【老师推荐】黄铜正宗朱砂山鬼花钱钥匙扣手把挂件钥匙扣 真黄铜真朱砂【山鬼花钱】+精编挂件绳"
+          }
+        ],
+        "ts": "2026-05-11 02:15:44",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:15:44",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:15:48",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 8,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [
+          {
+            "income": "2.85",
+            "price": "17.24",
+            "rank_index": "10",
+            "rate": "20.0%",
+            "sku": "10148559540316",
+            "title": "林饱饱早餐任选加购8件49.9元纸皮烧麦芝士牛肉卷鸡肉卷饭团速食半成品z 鲜肉纸皮烧麦1袋240g"
+          },
+          {
+            "income": "0.36",
+            "price": "3.01",
+            "rank_index": "12",
+            "rate": "12.0%",
+            "sku": "10105047817142",
+            "title": "【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张"
+          },
+          {
+            "income": "1.09",
+            "price": "10.9",
+            "rank_index": "13",
+            "rate": "11.0%",
+            "sku": "100089928005",
+            "title": "禾煜若羌红枣500g 新疆特产 地标大枣 泡茶煲汤原料"
+          },
+          {
+            "income": "0.98",
+            "price": "3.9",
+            "rank_index": "14",
+            "rate": "25.0%",
+            "sku": "10142016842523",
+            "title": "植护抽纸 气垫纸巾 压花餐巾纸 面巾纸 【360张/包】 4层 90抽*2包"
+          },
+          {
+            "income": "0.75",
+            "price": "3.99",
+            "rank_index": "15",
+            "rate": "25.0%",
+            "sku": "10212816218550",
+            "title": "黄桃罐头510g砀山新鲜水果即食罐头单罐 1瓶 黄桃"
+          }
+        ],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:15:54",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 79,
+        "location": {
+          "card_id": "hc_9_1778436954890",
+          "rank_index": "10",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 226,
+            "y": 893
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 19,
+        "short_url": "https://u.jd.com/HrCAGZf",
+        "sku": "10148559540316",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:16:05",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 80,
+        "location": {
+          "card_id": "hc_11_1778436954890",
+          "rank_index": "12",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 1016,
+            "y": 893
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 20,
+        "short_url": "https://u.jd.com/H6CJR6a",
+        "sku": "10105047817142",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:16:24",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 81,
+        "location": {
+          "card_id": "hc_12_1778436954890",
+          "rank_index": "13",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 226,
+            "y": 1091
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 21,
+        "short_url": "https://u.jd.com/HgCWM8l",
+        "sku": "100089928005",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:16:47",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 82,
+        "location": {
+          "card_id": "hc_13_1778436954890",
+          "rank_index": "14",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 621,
+            "y": 1091
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 22,
+        "short_url": "https://u.jd.com/H1CBTzN",
+        "sku": "10142016842523",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:17:13",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 83,
+        "location": {
+          "card_id": "hc_14_1778436954890",
+          "rank_index": "15",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 1016,
+            "y": 1091
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 23,
+        "short_url": "https://u.jd.com/H1C2GuG",
+        "sku": "10212816218550",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:17:35",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 84,
+        "location": {
+          "card_id": "hc_15_1778436954890",
+          "rank_index": "16",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 226,
+            "y": 1289
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 24,
+        "short_url": "https://u.jd.com/HrCWohs",
+        "sku": "10190920504533",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:18:01",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 85,
+        "location": {
+          "card_id": "hc_16_1778436954890",
+          "rank_index": "17",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 621,
+            "y": 1289
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 25,
+        "short_url": "https://u.jd.com/HrC0DFK",
+        "sku": "10219842867620",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:18:28",
+        "worker": "high_commission"
+      },
+      {
+        "event": "ITEM_OK",
+        "known_sku_count": 86,
+        "location": {
+          "card_id": "hc_17_1778436954890",
+          "rank_index": "18",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 1016,
+            "y": 1289
+          },
+          "scroll_round": 0
+        },
+        "mode": "high_commission",
+        "refresh_round": 0,
+        "round_seen_sku_count": 26,
+        "short_url": "https://u.jd.com/HDCWFI8",
+        "sku": "10193294449394",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:18:49",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 86,
+        "mode": "high_commission",
+        "processed": 8,
+        "refresh_round": 0,
+        "round_seen_sku_count": 26,
+        "ts": "2026-05-11 02:19:00",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:19:46",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:19:46",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:19:51",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:19:57",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 86,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 26,
+        "ts": "2026-05-11 02:19:59",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:20:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:20:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:20:50",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:20:56",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 86,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 26,
+        "ts": "2026-05-11 02:20:58",
+        "units": 18,
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:21:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "23.0",
+            "price": "4599.0",
+            "rate": "0.5%",
+            "sku": "100246339057",
+            "title": "Apple/苹果AI笔记本/MacBookNeo13英寸A18 PRO(6+5核)8G 512G桃粉色笔记本电脑【教育优"
+          },
+          {
+            "api_index": 1,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 2,
+            "income": "0.7",
+            "price": "69.9",
+            "rate": "1.0%",
+            "sku": "10220938219671",
+            "title": "【拍一发二】正品真菌脚糜烂脱皮皲裂 脚后跟专用止痒舒缓霜zqy 【拍一发二】2瓶去臭止痒王"
+          },
+          {
+            "api_index": 3,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 4,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          }
+        ],
+        "ts": "2026-05-11 02:21:45",
+        "worker": "high_commission"
+      },
+      {
+        "count": 20,
+        "event": "HC_RANK_API_CAPTURED",
+        "mode": "high_commission",
+        "sample": [
+          {
+            "api_index": 0,
+            "income": "3.41",
+            "price": "17.9",
+            "rate": "20.2%",
+            "sku": "100326717148",
+            "title": "日本叮叮檀香型驱蚊蚊香盘防基孔肯雅热家用防蚊灭蚊传统蚊香盘10圈*3盒"
+          },
+          {
+            "api_index": 1,
+            "income": "0.44",
+            "price": "3.1",
+            "rate": "40.0%",
+            "sku": "10217476881782",
+            "title": "果蔬营养多果味膳食纤维酸甜零食膳食纤维独立包装 蓝莓味乌梅干 80g*2袋"
+          },
+          {
+            "api_index": 2,
+            "income": "0.28",
+            "price": "3.2",
+            "rate": "23.0%",
+            "sku": "10212577320245",
+            "title": "（多单合并发货）儿童零食办公室充饥食品 麦丽素50颗"
+          },
+          {
+            "api_index": 3,
+            "income": "0.8",
+            "price": "5.99",
+            "rate": "20.0%",
+            "sku": "10210891572089",
+            "title": "桌面鱼缸小型家用积木缸生态缸水族箱斗鱼缸带小夜灯氛围灯摆件 黑色斗鱼缸【不带灯】"
+          },
+          {
+            "api_index": 4,
+            "income": "0.47",
+            "price": "3.9",
+            "rate": "12.0%",
+            "sku": "10191500638971",
+            "title": "塑料收纳箱家用加大容量整理储物箱子多功能装衣服玩具收纳盒 北欧蓝专享 24*18*14cm 【不带轮】"
+          }
+        ],
+        "ts": "2026-05-11 02:21:49",
+        "worker": "high_commission"
+      },
+      {
+        "event": "HC_CARDS",
+        "fresh": 0,
+        "mode": "high_commission",
+        "page_info": {
+          "one_key_count": 0,
+          "promo_hit": true,
+          "rank_api_count": 20,
+          "rank_api_last_error": "",
+          "risk": [],
+          "tab_click": {
+            "clicked": "高佣榜",
+            "index": 188,
+            "ok": true,
+            "text": "高佣榜"
+          },
+          "url": "https://union.jd.com/proManager/realTimeRankings"
+        },
+        "processed": 0,
+        "sample": [],
+        "scroll_round": 0,
+        "total": 18,
+        "ts": "2026-05-11 02:21:56",
+        "worker": "high_commission"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 86,
+        "mode": "high_commission",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 26,
+        "ts": "2026-05-11 02:21:58",
+        "units": 18,
+        "worker": "high_commission"
+      }
+    ],
+    "product_all": [
+      {
+        "cdp_port": 19228,
+        "event": "HZ11_RANK_WORKER_START",
+        "latest": "data/import/hz_jd_union_product_all_promotion_links_latest.jsonl",
+        "link_expire_days": 60,
+        "menu_mode": "product_all",
+        "mode": "product_all",
+        "out": "data/import/hz_jd_union_product_all_promotion_links_20260511_015230.jsonl",
+        "refresh_after_days": 40,
+        "target_total": 70000,
+        "ts": "2026-05-11 01:52:30",
+        "worker": "product_all",
+        "worker_name": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=2"
+        },
+        "page_no": 2,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:52:36",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=3"
+        },
+        "page_no": 3,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:52:53",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=4"
+        },
+        "page_no": 4,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:53:05",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=5"
+        },
+        "page_no": 5,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:53:24",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 01:53:36",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=6"
+        },
+        "page_no": 6,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:54:26",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=7"
+        },
+        "page_no": 7,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:54:41",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=8"
+        },
+        "page_no": 8,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:54:52",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=9"
+        },
+        "page_no": 9,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:55:04",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 01:55:11",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=10"
+        },
+        "page_no": 10,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:56:00",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=11"
+        },
+        "page_no": 11,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:56:15",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=12"
+        },
+        "page_no": 12,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:56:31",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=13"
+        },
+        "page_no": 13,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:56:51",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 01:56:59",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=14"
+        },
+        "page_no": 14,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:57:49",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=15"
+        },
+        "page_no": 15,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:58:07",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=16"
+        },
+        "page_no": 16,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:58:23",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=17"
+        },
+        "page_no": 17,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:58:42",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 01:58:56",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=18"
+        },
+        "page_no": 18,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 01:59:46",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=19"
+        },
+        "page_no": 19,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:00:06",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=20"
+        },
+        "page_no": 20,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:00:20",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=21"
+        },
+        "page_no": 21,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:00:35",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 02:00:47",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=22"
+        },
+        "page_no": 22,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:01:37",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=23"
+        },
+        "page_no": 23,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:01:51",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=24"
+        },
+        "page_no": 24,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:02:02",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=25"
+        },
+        "page_no": 25,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:02:21",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 02:02:32",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=26"
+        },
+        "page_no": 26,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:03:22",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=27"
+        },
+        "page_no": 27,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:03:35",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=28"
+        },
+        "page_no": 28,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:03:55",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=29"
+        },
+        "page_no": 29,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:04:12",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 02:04:20",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=30"
+        },
+        "page_no": 30,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:05:10",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=31"
+        },
+        "page_no": 31,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:05:23",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=32"
+        },
+        "page_no": 32,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:05:36",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=33"
+        },
+        "page_no": 33,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:05:57",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 02:06:08",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=34"
+        },
+        "page_no": 34,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:06:58",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=35"
+        },
+        "page_no": 35,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:07:10",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=36"
+        },
+        "page_no": 36,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:07:25",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=37"
+        },
+        "page_no": 37,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:07:41",
+        "worker": "product_all"
+      },
+      {
+        "event": "CYCLE_DONE",
+        "known_sku_count": 63,
+        "mode": "product_all",
+        "processed": 0,
+        "refresh_round": 0,
+        "round_seen_sku_count": 3,
+        "ts": "2026-05-11 02:07:50",
+        "units": 4,
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=38"
+        },
+        "page_no": 38,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:08:40",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=39"
+        },
+        "page_no": 39,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:09:00",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=40"
+        },
+        "page_no": 40,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:09:11",
+        "worker": "product_all"
+      },
+      {
+        "event": "PAGE_CANDIDATES",
+        "fresh": 0,
+        "mode": "product_all",
+        "page_info": {
+          "one_key_count": 3,
+          "promo_hit": true,
+          "risk": [],
+          "url": "https://union.jd.com/proManager/index?pageNo=41"
+        },
+        "page_no": 41,
+        "processed": 0,
+        "total": 6,
+        "ts": "2026-05-11 02:09:28",
+        "worker": "product_all"
+      },
+      {
+        "empty_streak": 40,
+        "event": "STOP_REQUIRED",
+        "mode": "product_all",
+        "page_no": 41,
+        "reason": "empty_streak_limit",
+        "ts": "2026-05-11 02:09:28",
+        "worker": "product_all"
+      }
+    ]
+  },
+  "key_lines": {
+    "product_all": [
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=2\"}, \"page_no\": 2, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:52:36\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=3\"}, \"page_no\": 3, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:52:53\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=4\"}, \"page_no\": 4, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:53:05\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=5\"}, \"page_no\": 5, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:53:24\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=6\"}, \"page_no\": 6, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:54:26\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=7\"}, \"page_no\": 7, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:54:41\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=8\"}, \"page_no\": 8, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:54:52\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=9\"}, \"page_no\": 9, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:55:04\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=10\"}, \"page_no\": 10, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:56:00\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=11\"}, \"page_no\": 11, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:56:15\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=12\"}, \"page_no\": 12, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:56:31\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=13\"}, \"page_no\": 13, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:56:51\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=14\"}, \"page_no\": 14, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:57:49\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=15\"}, \"page_no\": 15, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:58:07\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=16\"}, \"page_no\": 16, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:58:23\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=17\"}, \"page_no\": 17, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:58:42\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=18\"}, \"page_no\": 18, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 01:59:46\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=19\"}, \"page_no\": 19, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:00:06\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=20\"}, \"page_no\": 20, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:00:20\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=21\"}, \"page_no\": 21, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:00:35\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=22\"}, \"page_no\": 22, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:01:37\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=23\"}, \"page_no\": 23, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:01:51\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=24\"}, \"page_no\": 24, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:02:02\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=25\"}, \"page_no\": 25, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:02:21\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=26\"}, \"page_no\": 26, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:03:22\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=27\"}, \"page_no\": 27, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:03:35\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=28\"}, \"page_no\": 28, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:03:55\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=29\"}, \"page_no\": 29, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:04:12\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=30\"}, \"page_no\": 30, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:05:10\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=31\"}, \"page_no\": 31, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:05:23\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=32\"}, \"page_no\": 32, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:05:36\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=33\"}, \"page_no\": 33, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:05:57\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=34\"}, \"page_no\": 34, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:06:58\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=35\"}, \"page_no\": 35, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:07:10\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=36\"}, \"page_no\": 36, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:07:25\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=37\"}, \"page_no\": 37, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:07:41\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=38\"}, \"page_no\": 38, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:08:40\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=39\"}, \"page_no\": 39, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:09:00\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=40\"}, \"page_no\": 40, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:09:11\", \"worker\": \"product_all\"}",
+      "{\"event\": \"PAGE_CANDIDATES\", \"fresh\": 0, \"mode\": \"product_all\", \"page_info\": {\"one_key_count\": 3, \"promo_hit\": true, \"risk\": [], \"url\": \"https://union.jd.com/proManager/index?pageNo=41\"}, \"page_no\": 41, \"processed\": 0, \"total\": 6, \"ts\": \"2026-05-11 02:09:28\", \"worker\": \"product_all\"}",
+      "{\"empty_streak\": 40, \"event\": \"STOP_REQUIRED\", \"mode\": \"product_all\", \"page_no\": 41, \"reason\": \"empty_streak_limit\", \"ts\": \"2026-05-11 02:09:28\", \"worker\": \"product_all\"}"
+    ]
+  },
+  "latest_reports": {
+    "high_commission": {
+      "dedup_sku_this_run": 21,
+      "estimated_days_to_worker_target": 55.34,
+      "estimated_per_day_this_worker": 903.55,
+      "estimated_per_hour_this_worker": 37.65,
+      "known_sku_count": 86,
+      "last_cycle_processed": 0,
+      "last_cycle_units": 18,
+      "latest": "data/import/hz_jd_union_high_commission_promotion_links_latest.jsonl",
+      "menu_mode": "high_commission",
+      "ok_rows_this_run": 21,
+      "out": "data/import/hz_jd_union_high_commission_promotion_links_20260511_015230.jsonl",
+      "required_daily_for_40d_refresh": 1250.0,
+      "round_seen_sku_count": 26,
+      "rows_this_run": 21,
+      "run_id": "20260511_015230",
+      "sleep_seconds": 45.0,
+      "state": {
+        "created_at": "2026-05-11 01:48:30",
+        "current_page_no": 1,
+        "empty_streak": 6,
+        "fail_streak": 0,
+        "known_sku_count": 86,
+        "known_skus": [
+          "10074067617066",
+          "100028753873",
+          "10212821134920",
+          "10208021098853",
+          "10163869166274",
+          "10122715967306",
+          "1386919",
+          "100034178950",
+          "10164230875399",
+          "1386936",
+          "69542791298",
+          "10125956530870",
+          "100065844241",
+          "100089145579",
+          "10215654653012",
+          "10115160608745",
+          "10097917249470",
+          "10084185218615",
+          "100031774544",
+          "13272313",
+          "10122526781139",
+          "10201559928082",
+          "100014494268",
+          "10215654647085",
+          "10094522712624",
+          "100155964071",
+          "10197389585247",
+          "10039229085016",
+          "100103838561",
+          "10209745837430",
+          "1753220168",
+          "10084006780990",
+          "30959638667",
+          "100207547955",
+          "10128386854629",
+          "100182398635",
+          "10090211125199",
+          "3779899",
+          "100217453475",
+          "100002485838",
+          "14613297",
+          "100157073221",
+          "12088654",
+          "1179700",
+          "10081482185091",
+          "10097633266041",
+          "10053472229875",
+          "10190463035599",
+          "10026614064904",
+          "100191604509",
+          "10213081161981",
+          "100210528239",
+          "12734794",
+          "10114409648497",
+          "100209462297",
+          "10170626513855",
+          "10180683954714",
+          "10217176731992",
+          "100317780788",
+          "2362416",
+          "10217476881782",
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "10212209172551",
+          "10208918002364",
+          "10179187350167",
+          "10147194656858",
+          "100009746032",
+          "100322685620",
+          "10220822854156",
+          "10203721923124",
+          "10211251225088",
+          "10144263135876",
+          "10097019649791",
+          "10106391022223",
+          "10175252716652",
+          "10148559540316",
+          "10105047817142",
+          "100089928005",
+          "10142016842523",
+          "10212816218550",
+          "10190920504533",
+          "10219842867620",
+          "10193294449394"
+        ],
+        "last_event": {
+          "event": "ITEM_OK",
+          "location": {
+            "card_id": "hc_17_1778436954890",
+            "rank_index": "18",
+            "rect": {
+              "h": 154,
+              "w": 363,
+              "x": 1016,
+              "y": 1289
+            },
+            "scroll_round": 0
+          },
+          "short_url": "https://u.jd.com/HDCWFI8",
+          "sku": "10193294449394",
+          "sku_source": "modal_or_url",
+          "ts": "2026-05-11 02:18:49"
+        },
+        "menu_mode": "high_commission",
+        "refresh_round": 0,
+        "refresh_started_at": null,
+        "round_seen_sku_count": 26,
+        "round_seen_skus": [
+          "10217476881782",
+          "100326717148",
+          "10212577320245",
+          "10210891572089",
+          "10191500638971",
+          "10212209172551",
+          "10208918002364",
+          "10179187350167",
+          "10147194656858",
+          "100009746032",
+          "100322685620",
+          "10220822854156",
+          "10203721923124",
+          "10211251225088",
+          "10144263135876",
+          "10097019649791",
+          "10106391022223",
+          "10175252716652",
+          "10148559540316",
+          "10105047817142",
+          "100089928005",
+          "10142016842523",
+          "10212816218550",
+          "10190920504533",
+          "10219842867620",
+          "10193294449394"
+        ],
+        "run_id": "20260511_014830",
+        "scroll_round": 0,
+        "seen_short_urls": [
+          "https://u.jd.com/HGCfZIg",
+          "https://u.jd.com/HaCEVg3",
+          "https://u.jd.com/HgCvlo0",
+          "https://u.jd.com/HgCVkGn",
+          "https://u.jd.com/HaCRaOP",
+          "https://u.jd.com/HGCWeSI",
+          "https://u.jd.com/HaCpJbA",
+          "https://u.jd.com/H1CpVtO",
+          "https://u.jd.com/HaC0smD",
+          "https://u.jd.com/HrCveJY",
+          "https://u.jd.com/HDCAES6",
+          "https://u.jd.com/HaCyzLu",
+          "https://u.jd.com/HrCE1gk",
+          "https://u.jd.com/HOCTSEw",
+          "https://u.jd.com/HrCfvJJ",
+          "https://u.jd.com/HOCZK6J",
+          "https://u.jd.com/HrCYGcQ",
+          "https://u.jd.com/HaCZlMJ",
+          "https://u.jd.com/HrCAGZf",
+          "https://u.jd.com/H6CJR6a",
+          "https://u.jd.com/HgCWM8l",
+          "https://u.jd.com/H1CBTzN",
+          "https://u.jd.com/H1C2GuG",
+          "https://u.jd.com/HrCWohs",
+          "https://u.jd.com/HrC0DFK",
+          "https://u.jd.com/HDCWFI8"
+        ],
+        "target_total": 50000,
+        "updated_at": "2026-05-11 02:21:58",
+        "worker_name": "high_commission"
+      },
+      "target_total": 50000,
+      "ts": "2026-05-11 02:21:58",
+      "worker_name": "high_commission"
+    },
+    "merge": {
+      "dedup_sku": 84,
+      "expired": 0,
+      "inputs": [
+        "data/import/hz_jd_union_product_all_promotion_links_latest.jsonl",
+        "data/import/hz_jd_union_high_commission_promotion_links_latest.jsonl",
+        "data/import/hz_jd_union_guarded_promotion_links_latest.jsonl"
+      ],
+      "out": "data/import/hz_jd_union_multi_menu_promotion_links_latest.jsonl",
+      "progress_pct": 0.084,
+      "raw_ok_rows": 84,
+      "refresh_due_or_overdue": 0,
+      "source_counts": {
+        "data/import/hz_jd_union_guarded_promotion_links_latest.jsonl": 60,
+        "data/import/hz_jd_union_high_commission_promotion_links_latest.jsonl": 21,
+        "data/import/hz_jd_union_product_all_promotion_links_latest.jsonl": 3
+      },
+      "target_total": 100000,
+      "ts": "2026-05-11 02:28:53"
+    },
+    "product_all": {
+      "dedup_sku_this_run": 0,
+      "estimated_days_to_worker_target": null,
+      "estimated_per_day_this_worker": 0.0,
+      "estimated_per_hour_this_worker": 0.0,
+      "known_sku_count": 63,
+      "last_cycle_processed": 0,
+      "last_cycle_units": 4,
+      "latest": "data/import/hz_jd_union_product_all_promotion_links_latest.jsonl",
+      "menu_mode": "product_all",
+      "ok_rows_this_run": 0,
+      "out": "data/import/hz_jd_union_product_all_promotion_links_20260511_015230.jsonl",
+      "required_daily_for_40d_refresh": 1750.0,
+      "round_seen_sku_count": 3,
+      "rows_this_run": 0,
+      "run_id": "20260511_015230",
+      "sleep_seconds": 45.0,
+      "state": {
+        "created_at": "2026-05-10 19:01:18",
+        "current_page_no": 38,
+        "empty_streak": 36,
+        "fail_streak": 0,
+        "known_sku_count": 63,
+        "known_skus": [
+          "10074067617066",
+          "100028753873",
+          "10212821134920",
+          "10208021098853",
+          "10163869166274",
+          "10122715967306",
+          "1386919",
+          "100034178950",
+          "10164230875399",
+          "1386936",
+          "69542791298",
+          "10125956530870",
+          "100065844241",
+          "100089145579",
+          "10215654653012",
+          "10115160608745",
+          "10097917249470",
+          "10084185218615",
+          "100031774544",
+          "13272313",
+          "10122526781139",
+          "10201559928082",
+          "100014494268",
+          "10215654647085",
+          "10094522712624",
+          "100155964071",
+          "10197389585247",
+          "10039229085016",
+          "100103838561",
+          "10209745837430",
+          "1753220168",
+          "10084006780990",
+          "30959638667",
+          "100207547955",
+          "10128386854629",
+          "100182398635",
+          "10090211125199",
+          "3779899",
+          "100217453475",
+          "100002485838",
+          "14613297",
+          "100157073221",
+          "12088654",
+          "1179700",
+          "10081482185091",
+          "10097633266041",
+          "10053472229875",
+          "10190463035599",
+          "10026614064904",
+          "100191604509",
+          "10213081161981",
+          "100210528239",
+          "12734794",
+          "10114409648497",
+          "100209462297",
+          "10170626513855",
+          "10180683954714",
+          "10217176731992",
+          "100317780788",
+          "2362416",
+          "100341910908",
+          "100101571052",
+          "100228933817"
+        ],
+        "last_event": {
+          "event": "ITEM_OK",
+          "location": {
+            "page_no": 1
+          },
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "ts": "2026-05-10 19:01:51"
+        },
+        "menu_mode": "product_all",
+        "refresh_round": 0,
+        "refresh_started_at": null,
+        "round_seen_sku_count": 3,
+        "round_seen_skus": [
+          "100341910908",
+          "100101571052",
+          "100228933817"
+        ],
+        "run_id": "20260510_190118",
+        "scroll_round": 0,
+        "seen_short_urls": [
+          "https://u.jd.com/HrLE7fv",
+          "https://u.jd.com/HGLoAX6",
+          "https://u.jd.com/HGLRii2"
+        ],
+        "target_total": 70000,
+        "updated_at": "2026-05-11 02:07:41",
+        "worker_name": "product_all"
+      },
+      "target_total": 70000,
+      "ts": "2026-05-11 02:07:50",
+      "worker_name": "product_all"
+    }
+  },
+  "logs": {
+    "high_commission": "logs/hz11k_high_commission_30min_20260511_015230.log",
+    "product_all": "logs/hz11k_product_all_30min_20260511_015230.log"
+  },
+  "next_rule": "Do not restart product_all until STOP reason is reviewed. high_commission can be tuned for pagination after product_all STOP is understood.",
+  "outputs": {
+    "high_commission": {
+      "dedup_sku": 21,
+      "exists": true,
+      "ok": 21,
+      "rows": 21,
+      "sample": [
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "17.24",
+          "short_url": "https://u.jd.com/HrCAGZf",
+          "sku": "10148559540316",
+          "title": "林饱饱早餐任选加购8件49.9元纸皮烧麦芝士牛肉卷鸡肉卷饭团速食半成品z 鲜肉纸皮烧麦1袋240g"
+        },
+        {
+          "commission_rate": "12.0%",
+          "menu_mode": "high_commission",
+          "price": "3.01",
+          "short_url": "https://u.jd.com/H6CJR6a",
+          "sku": "10105047817142",
+          "title": "【全网热销】a4纸打印复印纸 70g办公A4白纸草稿纸学生作业用草稿本空白纸用品 【畅销款】70gA4纸50张"
+        },
+        {
+          "commission_rate": "11.0%",
+          "menu_mode": "high_commission",
+          "price": "10.9",
+          "short_url": "https://u.jd.com/HgCWM8l",
+          "sku": "100089928005",
+          "title": "禾煜若羌红枣500g 新疆特产 地标大枣 泡茶煲汤原料"
+        },
+        {
+          "commission_rate": "25.0%",
+          "menu_mode": "high_commission",
+          "price": "3.9",
+          "short_url": "https://u.jd.com/H1CBTzN",
+          "sku": "10142016842523",
+          "title": "植护抽纸 气垫纸巾 压花餐巾纸 面巾纸 【360张/包】 4层 90抽*2包"
+        },
+        {
+          "commission_rate": "25.0%",
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/H1C2GuG",
+          "sku": "10212816218550",
+          "title": "黄桃罐头510g砀山新鲜水果即食罐头单罐 1瓶 黄桃"
+        },
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "9.98",
+          "short_url": "https://u.jd.com/HrCWohs",
+          "sku": "10190920504533",
+          "title": "植护云柔纸巾 婴儿乳霜纸 茶树油保湿纸 手帕纸 3层 30抽*16包"
+        },
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "37.9",
+          "short_url": "https://u.jd.com/HrC0DFK",
+          "sku": "10219842867620",
+          "title": "五月私语【关晓彤代言】轻云安睡裤卫生巾安心裤女经期卫生裤超薄裸感30条 XL 30条 140-210斤"
+        },
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "14.9",
+          "short_url": "https://u.jd.com/HDCWFI8",
+          "sku": "10193294449394",
+          "title": "美丽雅（MARYYA）收纳袋 食品级加厚自封袋 家用厨房分装收纳袋防水防潮可微波炉 【中号35只+小号35只】70只装"
+        }
+      ]
+    },
+    "multi_menu": {
+      "dedup_sku": 84,
+      "exists": true,
+      "ok": 84,
+      "rows": 84,
+      "sample": [
+        {
+          "commission_rate": "15.0%",
+          "menu_mode": "high_commission",
+          "price": "8.5",
+          "short_url": "https://u.jd.com/HOCTSEw",
+          "sku": "10211251225088",
+          "title": "【优等品】白姑娘520张超大包原木抽纸餐巾纸面巾纸卫生纸家庭装 优等品大包 6层 520张*5包"
+        },
+        {
+          "commission_rate": "10.0%",
+          "menu_mode": "high_commission",
+          "price": "29.9",
+          "short_url": "https://u.jd.com/HGCWeSI",
+          "sku": "10212209172551",
+          "title": "真维斯（Jeanswest）2026新款短袖t恤男士夏季圆领休闲百搭潮流打底衫体恤 黑色 2XL （建议140-160斤）"
+        },
+        {
+          "commission_rate": "25.0%",
+          "menu_mode": "high_commission",
+          "price": "3.99",
+          "short_url": "https://u.jd.com/H1C2GuG",
+          "sku": "10212816218550",
+          "title": "黄桃罐头510g砀山新鲜水果即食罐头单罐 1瓶 黄桃"
+        },
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "37.9",
+          "short_url": "https://u.jd.com/HrC0DFK",
+          "sku": "10219842867620",
+          "title": "五月私语【关晓彤代言】轻云安睡裤卫生巾安心裤女经期卫生裤超薄裸感30条 XL 30条 140-210斤"
+        },
+        {
+          "commission_rate": "20.0%",
+          "menu_mode": "high_commission",
+          "price": "3.01",
+          "short_url": "https://u.jd.com/HaCyzLu",
+          "sku": "10220822854156",
+          "title": "新茉莉白茶无挂钩高颜值ins按动笔学生考试好写速干黑色0.5中性笔 茉莉白茶款5支笔"
+        },
+        {
+          "commission_rate": "15",
+          "menu_mode": "product_all",
+          "price": "45.9",
+          "short_url": "https://u.jd.com/HGLoAX6",
+          "sku": "100101571052",
+          "title": ""
+        },
+        {
+          "commission_rate": "5",
+          "menu_mode": "product_all",
+          "price": "1489",
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "title": ""
+        },
+        {
+          "commission_rate": "1",
+          "menu_mode": "product_all",
+          "price": "5099",
+          "short_url": "https://u.jd.com/HrLE7fv",
+          "sku": "100341910908",
+          "title": ""
+        }
+      ]
+    },
+    "product_all": {
+      "dedup_sku": 3,
+      "exists": true,
+      "ok": 3,
+      "rows": 3,
+      "sample": [
+        {
+          "commission_rate": "1",
+          "menu_mode": "product_all",
+          "price": "5099",
+          "short_url": "https://u.jd.com/HrLE7fv",
+          "sku": "100341910908",
+          "title": ""
+        },
+        {
+          "commission_rate": "15",
+          "menu_mode": "product_all",
+          "price": "45.9",
+          "short_url": "https://u.jd.com/HGLoAX6",
+          "sku": "100101571052",
+          "title": ""
+        },
+        {
+          "commission_rate": "5",
+          "menu_mode": "product_all",
+          "price": "1489",
+          "short_url": "https://u.jd.com/HGLRii2",
+          "sku": "100228933817",
+          "title": ""
+        }
+      ]
+    }
+  },
+  "phase": "HZ11L product_all STOP diagnosis",
+  "state_files": {
+    "high_commission": {
+      "created_at": "2026-05-11 01:48:30",
+      "current_page_no": 1,
+      "empty_streak": 6,
+      "fail_streak": 0,
+      "known_sku_count": 86,
+      "known_skus": [
+        "10074067617066",
+        "100028753873",
+        "10212821134920",
+        "10208021098853",
+        "10163869166274",
+        "10122715967306",
+        "1386919",
+        "100034178950",
+        "10164230875399",
+        "1386936",
+        "69542791298",
+        "10125956530870",
+        "100065844241",
+        "100089145579",
+        "10215654653012",
+        "10115160608745",
+        "10097917249470",
+        "10084185218615",
+        "100031774544",
+        "13272313",
+        "10122526781139",
+        "10201559928082",
+        "100014494268",
+        "10215654647085",
+        "10094522712624",
+        "100155964071",
+        "10197389585247",
+        "10039229085016",
+        "100103838561",
+        "10209745837430",
+        "1753220168",
+        "10084006780990",
+        "30959638667",
+        "100207547955",
+        "10128386854629",
+        "100182398635",
+        "10090211125199",
+        "3779899",
+        "100217453475",
+        "100002485838",
+        "14613297",
+        "100157073221",
+        "12088654",
+        "1179700",
+        "10081482185091",
+        "10097633266041",
+        "10053472229875",
+        "10190463035599",
+        "10026614064904",
+        "100191604509",
+        "10213081161981",
+        "100210528239",
+        "12734794",
+        "10114409648497",
+        "100209462297",
+        "10170626513855",
+        "10180683954714",
+        "10217176731992",
+        "100317780788",
+        "2362416",
+        "10217476881782",
+        "100326717148",
+        "10212577320245",
+        "10210891572089",
+        "10191500638971",
+        "10212209172551",
+        "10208918002364",
+        "10179187350167",
+        "10147194656858",
+        "100009746032",
+        "100322685620",
+        "10220822854156",
+        "10203721923124",
+        "10211251225088",
+        "10144263135876",
+        "10097019649791",
+        "10106391022223",
+        "10175252716652",
+        "10148559540316",
+        "10105047817142",
+        "100089928005",
+        "10142016842523",
+        "10212816218550",
+        "10190920504533",
+        "10219842867620",
+        "10193294449394"
+      ],
+      "last_event": {
+        "event": "ITEM_OK",
+        "location": {
+          "card_id": "hc_17_1778436954890",
+          "rank_index": "18",
+          "rect": {
+            "h": 154,
+            "w": 363,
+            "x": 1016,
+            "y": 1289
+          },
+          "scroll_round": 0
+        },
+        "short_url": "https://u.jd.com/HDCWFI8",
+        "sku": "10193294449394",
+        "sku_source": "modal_or_url",
+        "ts": "2026-05-11 02:18:49"
+      },
+      "menu_mode": "high_commission",
+      "refresh_round": 0,
+      "refresh_started_at": null,
+      "round_seen_sku_count": 26,
+      "round_seen_skus": [
+        "10217476881782",
+        "100326717148",
+        "10212577320245",
+        "10210891572089",
+        "10191500638971",
+        "10212209172551",
+        "10208918002364",
+        "10179187350167",
+        "10147194656858",
+        "100009746032",
+        "100322685620",
+        "10220822854156",
+        "10203721923124",
+        "10211251225088",
+        "10144263135876",
+        "10097019649791",
+        "10106391022223",
+        "10175252716652",
+        "10148559540316",
+        "10105047817142",
+        "100089928005",
+        "10142016842523",
+        "10212816218550",
+        "10190920504533",
+        "10219842867620",
+        "10193294449394"
+      ],
+      "run_id": "20260511_014830",
+      "scroll_round": 0,
+      "seen_short_urls": [
+        "https://u.jd.com/HGCfZIg",
+        "https://u.jd.com/HaCEVg3",
+        "https://u.jd.com/HgCvlo0",
+        "https://u.jd.com/HgCVkGn",
+        "https://u.jd.com/HaCRaOP",
+        "https://u.jd.com/HGCWeSI",
+        "https://u.jd.com/HaCpJbA",
+        "https://u.jd.com/H1CpVtO",
+        "https://u.jd.com/HaC0smD",
+        "https://u.jd.com/HrCveJY",
+        "https://u.jd.com/HDCAES6",
+        "https://u.jd.com/HaCyzLu",
+        "https://u.jd.com/HrCE1gk",
+        "https://u.jd.com/HOCTSEw",
+        "https://u.jd.com/HrCfvJJ",
+        "https://u.jd.com/HOCZK6J",
+        "https://u.jd.com/HrCYGcQ",
+        "https://u.jd.com/HaCZlMJ",
+        "https://u.jd.com/HrCAGZf",
+        "https://u.jd.com/H6CJR6a",
+        "https://u.jd.com/HgCWM8l",
+        "https://u.jd.com/H1CBTzN",
+        "https://u.jd.com/H1C2GuG",
+        "https://u.jd.com/HrCWohs",
+        "https://u.jd.com/HrC0DFK",
+        "https://u.jd.com/HDCWFI8"
+      ],
+      "target_total": 50000,
+      "updated_at": "2026-05-11 02:21:58",
+      "worker_name": "high_commission"
+    },
+    "product_all": {
+      "created_at": "2026-05-10 19:01:18",
+      "current_page_no": 42,
+      "empty_streak": 40,
+      "fail_streak": 0,
+      "known_sku_count": 63,
+      "known_skus": [
+        "10074067617066",
+        "100028753873",
+        "10212821134920",
+        "10208021098853",
+        "10163869166274",
+        "10122715967306",
+        "1386919",
+        "100034178950",
+        "10164230875399",
+        "1386936",
+        "69542791298",
+        "10125956530870",
+        "100065844241",
+        "100089145579",
+        "10215654653012",
+        "10115160608745",
+        "10097917249470",
+        "10084185218615",
+        "100031774544",
+        "13272313",
+        "10122526781139",
+        "10201559928082",
+        "100014494268",
+        "10215654647085",
+        "10094522712624",
+        "100155964071",
+        "10197389585247",
+        "10039229085016",
+        "100103838561",
+        "10209745837430",
+        "1753220168",
+        "10084006780990",
+        "30959638667",
+        "100207547955",
+        "10128386854629",
+        "100182398635",
+        "10090211125199",
+        "3779899",
+        "100217453475",
+        "100002485838",
+        "14613297",
+        "100157073221",
+        "12088654",
+        "1179700",
+        "10081482185091",
+        "10097633266041",
+        "10053472229875",
+        "10190463035599",
+        "10026614064904",
+        "100191604509",
+        "10213081161981",
+        "100210528239",
+        "12734794",
+        "10114409648497",
+        "100209462297",
+        "10170626513855",
+        "10180683954714",
+        "10217176731992",
+        "100317780788",
+        "2362416",
+        "100341910908",
+        "100101571052",
+        "100228933817"
+      ],
+      "last_event": {
+        "event": "ITEM_OK",
+        "location": {
+          "page_no": 1
+        },
+        "short_url": "https://u.jd.com/HGLRii2",
+        "sku": "100228933817",
+        "ts": "2026-05-10 19:01:51"
+      },
+      "menu_mode": "product_all",
+      "refresh_round": 0,
+      "refresh_started_at": null,
+      "round_seen_sku_count": 3,
+      "round_seen_skus": [
+        "100341910908",
+        "100101571052",
+        "100228933817"
+      ],
+      "run_id": "20260510_190118",
+      "scroll_round": 0,
+      "seen_short_urls": [
+        "https://u.jd.com/HrLE7fv",
+        "https://u.jd.com/HGLoAX6",
+        "https://u.jd.com/HGLRii2"
+      ],
+      "target_total": 70000,
+      "updated_at": "2026-05-11 02:09:28",
+      "worker_name": "product_all"
+    }
+  },
+  "stop_files": {
+    "high_commission": null,
+    "product_all": {
+      "empty_streak": 40,
+      "mode": "product_all",
+      "page_no": 41,
+      "reason": "empty_streak_limit",
+      "ts": "2026-05-11 02:09:28",
+      "worker": "product_all"
+    }
+  },
+  "ts": "2026-05-11 02:35:46"
+}
