@@ -1,0 +1,314 @@
+{
+  "decision": "If ok=10, STOP=false, non_numeric=0, and title missing is 0 or materially reduced, start overnight full collection.",
+  "dedup_sku": 10,
+  "events": [
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 23,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "5295411",
+          "title": "京鲜生 泰国进口金枕头鲜榴莲 净重4-5斤 1个装 生鲜 新鲜水果"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        },
+        {
+          "sku": "100019869919",
+          "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+        },
+        {
+          "sku": "100039834318",
+          "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        }
+      ],
+      "total": 39,
+      "ts": "2026-05-18 03:55:42",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 39,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 23,
+        "risk": [],
+        "text_len": 3392,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 1,
+      "processed": 0,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "5295411",
+          "title": "京鲜生 泰国进口金枕头鲜榴莲 净重4-5斤 1个装 生鲜 新鲜水果"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        }
+      ],
+      "total": 39,
+      "total_hint": 60,
+      "ts": "2026-05-18 03:55:42",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 1,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HgEBPL6",
+      "sku": "100011878656",
+      "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果",
+      "ts": "2026-05-18 03:55:46",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 2,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H6EpEex",
+      "sku": "2922989",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装",
+      "ts": "2026-05-18 03:56:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 3,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HgEA9O3",
+      "sku": "5899267",
+      "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿",
+      "ts": "2026-05-18 03:56:26",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 4,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H6ERe0L",
+      "sku": "5295411",
+      "title": "京鲜生 泰国进口金枕头鲜榴莲 净重4-5斤 1个装 生鲜 新鲜水果",
+      "ts": "2026-05-18 03:56:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 5,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HDEWobr",
+      "sku": "100212687086",
+      "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月",
+      "ts": "2026-05-18 03:56:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 6,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H1EWrlJ",
+      "sku": "100019869919",
+      "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾",
+      "ts": "2026-05-18 03:57:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 7,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HgEc0wx",
+      "sku": "100039834318",
+      "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发",
+      "ts": "2026-05-18 03:57:28",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 8,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H1E76uC",
+      "sku": "100053606751",
+      "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电",
+      "ts": "2026-05-18 03:57:43",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 9,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HDEJmCK",
+      "sku": "100013875646",
+      "title": "伊利纯牛奶250ml*21盒 早餐奶 礼盒装 1月产",
+      "ts": "2026-05-18 03:57:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 10,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HDEVTs2",
+      "sku": "100083026779",
+      "title": "babycare电蚊香液婴儿驱蚊水驱蚊液蚊香套装儿童宝宝防蚊灭蚊无香5液+1器",
+      "ts": "2026-05-18 03:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TARGET_TOTAL_REACHED",
+      "known_sku_count": 10,
+      "target_total": 10,
+      "ts": "2026-05-18 03:58:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "FULL_CYCLE_DONE",
+      "processed": 10,
+      "ts": "2026-05-18 03:58:27",
+      "worker": "product_all_full"
+    }
+  ],
+  "log": "logs/hz12r_product_all_v3_title_smoke_20260518_035531.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 0,
+    "item_url": 0,
+    "jd_command": 0,
+    "long_url": 0,
+    "price": 0,
+    "qr_url": 0,
+    "refresh_due_at": 0,
+    "title": 0
+  },
+  "non_numeric": 0,
+  "ok": 10,
+  "phase": "HZ12R product_all v3 title smoke",
+  "return_codes": {
+    "smoke": "0",
+    "static": "0"
+  },
+  "rows": 10,
+  "sample": [
+    {
+      "commission_rate": "0.01",
+      "estimated_income": "0.01",
+      "page_no": 1,
+      "price": "99.9",
+      "short_url": "https://u.jd.com/HgEBPL6",
+      "sku": "100011878656",
+      "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+    },
+    {
+      "commission_rate": "2.9",
+      "estimated_income": "1.10",
+      "page_no": 1,
+      "price": "37.9",
+      "short_url": "https://u.jd.com/HDEJmCK",
+      "sku": "100013875646",
+      "title": "伊利纯牛奶250ml*21盒 早餐奶 礼盒装 1月产"
+    },
+    {
+      "commission_rate": "3.1",
+      "estimated_income": "1.99",
+      "page_no": 1,
+      "price": "64.32",
+      "short_url": "https://u.jd.com/H1EWrlJ",
+      "sku": "100019869919",
+      "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "4.39",
+      "page_no": 1,
+      "price": "43.9",
+      "short_url": "https://u.jd.com/HgEc0wx",
+      "sku": "100039834318",
+      "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "6.81",
+      "page_no": 1,
+      "price": "194.56",
+      "short_url": "https://u.jd.com/H1E76uC",
+      "sku": "100053606751",
+      "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+    },
+    {
+      "commission_rate": "8",
+      "estimated_income": "2.63",
+      "page_no": 1,
+      "price": "32.9",
+      "short_url": "https://u.jd.com/HDEVTs2",
+      "sku": "100083026779",
+      "title": "babycare电蚊香液婴儿驱蚊水驱蚊液蚊香套装儿童宝宝防蚊灭蚊无香5液+1器"
+    },
+    {
+      "commission_rate": "2.9",
+      "estimated_income": "1.45",
+      "page_no": 1,
+      "price": "49.9",
+      "short_url": "https://u.jd.com/HDEWobr",
+      "sku": "100212687086",
+      "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "1.20",
+      "page_no": 1,
+      "price": "39.9",
+      "short_url": "https://u.jd.com/H6EpEex",
+      "sku": "2922989",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+    },
+    {
+      "commission_rate": "0.01",
+      "estimated_income": "0.01",
+      "page_no": 1,
+      "price": "129.8",
+      "short_url": "https://u.jd.com/H6ERe0L",
+      "sku": "5295411",
+      "title": "京鲜生 泰国进口金枕头鲜榴莲 净重4-5斤 1个装 生鲜 新鲜水果"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "13.49",
+      "page_no": 1,
+      "price": "134.9",
+      "short_url": "https://u.jd.com/HgEA9O3",
+      "sku": "5899267",
+      "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+    }
+  ],
+  "stop_exists": false,
+  "ts": "2026-05-18 03:58:27"
+}
