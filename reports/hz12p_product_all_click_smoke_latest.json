@@ -1,0 +1,274 @@
+{
+  "decision": "If ok reaches 10 without STOP and missing fields are acceptable, start overnight full collection.",
+  "dedup_sku": 10,
+  "events": [
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 49,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 44,
+        "risk": [],
+        "text_len": 5994,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 1,
+      "processed": 0,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": ""
+        },
+        {
+          "sku": "2922989",
+          "title": ""
+        },
+        {
+          "sku": "5899267",
+          "title": ""
+        },
+        {
+          "sku": "100212687086",
+          "title": ""
+        },
+        {
+          "sku": "100108349203",
+          "title": ""
+        }
+      ],
+      "total": 49,
+      "total_hint": 60,
+      "ts": "2026-05-18 03:27:36",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 1,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HGElkJe",
+      "sku": "100011878656",
+      "title": "",
+      "ts": "2026-05-18 03:27:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 2,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HGEpMes",
+      "sku": "2922989",
+      "title": "",
+      "ts": "2026-05-18 03:27:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 3,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H6E49jI",
+      "sku": "5899267",
+      "title": "",
+      "ts": "2026-05-18 03:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 4,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H1EXSbQ",
+      "sku": "100212687086",
+      "title": "",
+      "ts": "2026-05-18 03:28:30",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 5,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HOEUZ2G",
+      "sku": "100108349203",
+      "title": "",
+      "ts": "2026-05-18 03:28:48",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 6,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H6ExiBk",
+      "sku": "100019869919",
+      "title": "",
+      "ts": "2026-05-18 03:29:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 7,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HaExxwX",
+      "sku": "100013875646",
+      "title": "",
+      "ts": "2026-05-18 03:29:23",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 8,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HGE4GtR",
+      "sku": "100053606751",
+      "title": "",
+      "ts": "2026-05-18 03:29:35",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 9,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/H1Ejy6t",
+      "sku": "100039834318",
+      "title": "",
+      "ts": "2026-05-18 03:29:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 10,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/HgEZT2x",
+      "sku": "100064078094",
+      "title": "",
+      "ts": "2026-05-18 03:30:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TARGET_TOTAL_REACHED",
+      "known_sku_count": 10,
+      "target_total": 10,
+      "ts": "2026-05-18 03:30:26",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "FULL_CYCLE_DONE",
+      "processed": 10,
+      "ts": "2026-05-18 03:30:26",
+      "worker": "product_all_full"
+    }
+  ],
+  "log": "logs/hz12p_product_all_click_smoke_20260518_032726.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 0,
+    "item_url": 0,
+    "jd_command": 0,
+    "long_url": 0,
+    "price": 0,
+    "qr_url": 0,
+    "refresh_due_at": 0,
+    "title": 10
+  },
+  "non_numeric": 0,
+  "ok": 10,
+  "phase": "HZ12P product_all click smoke from github patch",
+  "return_codes": {
+    "smoke": "0",
+    "static": "0",
+    "timeout_124_can_be_expected": true
+  },
+  "rows": 10,
+  "sample": [
+    {
+      "commission_rate": "0.01",
+      "estimated_income": "0.01",
+      "page_no": 1,
+      "price": "99.9",
+      "short_url": "https://u.jd.com/HGElkJe",
+      "sku": "100011878656",
+      "title": ""
+    },
+    {
+      "commission_rate": "2.9",
+      "estimated_income": "1.10",
+      "page_no": 1,
+      "price": "37.9",
+      "short_url": "https://u.jd.com/HaExxwX",
+      "sku": "100013875646",
+      "title": ""
+    },
+    {
+      "commission_rate": "3.1",
+      "estimated_income": "1.99",
+      "page_no": 1,
+      "price": "64.32",
+      "short_url": "https://u.jd.com/H6ExiBk",
+      "sku": "100019869919",
+      "title": ""
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "4.39",
+      "page_no": 1,
+      "price": "43.9",
+      "short_url": "https://u.jd.com/H1Ejy6t",
+      "sku": "100039834318",
+      "title": ""
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "6.81",
+      "page_no": 1,
+      "price": "194.56",
+      "short_url": "https://u.jd.com/HGE4GtR",
+      "sku": "100053606751",
+      "title": ""
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "0.36",
+      "page_no": 1,
+      "price": "36.25",
+      "short_url": "https://u.jd.com/HgEZT2x",
+      "sku": "100064078094",
+      "title": ""
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "2.00",
+      "page_no": 1,
+      "price": "99.8",
+      "short_url": "https://u.jd.com/HOEUZ2G",
+      "sku": "100108349203",
+      "title": ""
+    },
+    {
+      "commission_rate": "2.9",
+      "estimated_income": "1.45",
+      "page_no": 1,
+      "price": "49.9",
+      "short_url": "https://u.jd.com/H1EXSbQ",
+      "sku": "100212687086",
+      "title": ""
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "1.20",
+      "page_no": 1,
+      "price": "39.9",
+      "short_url": "https://u.jd.com/HGEpMes",
+      "sku": "2922989",
+      "title": ""
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "13.49",
+      "page_no": 1,
+      "price": "134.9",
+      "short_url": "https://u.jd.com/H6E49jI",
+      "sku": "5899267",
+      "title": ""
+    }
+  ],
+  "stop_exists": false,
+  "ts": "2026-05-18 03:30:26"
+}
