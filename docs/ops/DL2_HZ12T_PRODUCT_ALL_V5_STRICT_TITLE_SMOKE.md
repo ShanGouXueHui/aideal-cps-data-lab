@@ -1,0 +1,9 @@
+# HZ12T Product All V5 Strict Title Smoke
+
+- Generated at: 2026-05-21 20:25:25
+- counts: {'rows': 20, 'ok': 20, 'dedup_sku': 20, 'non_numeric': 0, 'pages': [1], 'page_count': 1}
+- missing: {'title': 0, 'image_url': 0, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'long_url': 0, 'qr_url': 0, 'jd_command': 0, 'refresh_due_at': 0}
+- stop_exists: False
+- pagination: {'next_events': 7, 'changed_next_events': 0}
+- failures: {'item_fail_events': 0, 'stop_events': 0}
+- strict_title: {'strict_events': 123, 'last': {'event': 'STRICT_TITLE_CANDIDATES', 'kept': 20, 'sample': [{'sku': '2922989', 'title': '小米【价保618】米家空调 巨省电 1.5匹挂机 一级能效 快速冷暖 纯铜管 KFR-35GW/N1A1【整机十年质'}, {'sku': '100212513162', 'title': '圣农鸡长爪 净重4斤 生鲜鸡爪 柠檬无骨鸡爪食材冷冻鸡爪纯原料鸡爪'}, {'sku': '4134901', 'title': '佳沛（zespri）新西兰 阳光金奇异果12粒特大果单果124-146g 猕猴桃水果礼盒'}, {'sku': '100010958780', 'title': '京鲜生广东妃子笑荔枝净重5斤装 单果16-25g 新鲜水果 源头直发包邮'}, {'sku': '3505364', 'title': '鲜京采 生鸡爪 2斤 40-50g/只 柠檬鸡爪凤爪烧烤鸡爪卤鸡爪生鲜食材'}, {'sku': '7219155', 'title': '鲜京采 原切鸡翅中 2斤 烤鸡翅炸鸡翅卤鸡翅红烧鸡翅'}, {'sku': '100051210211', 'title': '京鲜生 无籽麒麟瓜西瓜 1粒装 净重5-7斤 生鲜水果源头直发包邮'}, {'sku': '100244825133', 'title': '京鲜生【预售】山东大樱桃净重4.5斤单果22mm+ 生鲜应季水果 源头直发'}], 'skipped': 30, 'skipped_sample': [{'reason': 'missing_title', 'sku': '100325728578', 'title': ''}, {'reason': 'missing_title', 'sku': '100241347830', 'title': ''}, {'reason': 'missing_title', 'sku': '100077803007', 'title': ''}, {'reason': 'missing_title', 'sku': '100006061653', 'title': ''}, {'reason': 'missing_title', 'sku': '10211698401038', 'title': ''}, {'reason': 'missing_title', 'sku': '10138364419460', 'title': ''}, {'reason': 'missing_title', 'sku': '100068474701', 'title': ''}, {'reason': 'missing_title', 'sku': '100257228096', 'title': ''}, {'reason': 'missing_title', 'sku': '100055353565', 'title': ''}, {'reason': 'missing_title', 'sku': '100311657034', 'title': ''}], 'total': 50, 'ts': '2026-05-21 20:25:25', 'worker': 'product_all_full'}}
