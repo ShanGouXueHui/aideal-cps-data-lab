@@ -1,0 +1,2097 @@
+{
+  "commercial_readiness": {
+    "ready_for_dry_run_import": false,
+    "ready_for_production_import": false,
+    "reason": "Production import requires full-run completion and dry-run importer validation. This check only assesses collected JSONL quality."
+  },
+  "counts": {
+    "dedup_sku": 52,
+    "duplicate_ok_rows": 0,
+    "first_page": 1,
+    "last_page": 3,
+    "non_numeric": 0,
+    "ok": 52,
+    "page_count": 3,
+    "rows": 52
+  },
+  "events_tail": [
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 30,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "100011878658",
+          "title": "京鲜生 泰国金枕巴掌鲜榴莲2个装总净重4.5-5.5斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        },
+        {
+          "sku": "100019869919",
+          "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+        },
+        {
+          "sku": "100039834318",
+          "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        }
+      ],
+      "total": 46,
+      "ts": "2026-05-18 04:27:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 0,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 34,
+        "risk": [],
+        "text_len": 4793,
+        "url": "https://union.jd.com/proManager/index?pageNo=41"
+      },
+      "page_no": 41,
+      "processed": 52,
+      "sample": [],
+      "total": 46,
+      "total_hint": 60,
+      "ts": "2026-05-18 04:27:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 25,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "100011878658",
+          "title": "京鲜生 泰国金枕巴掌鲜榴莲2个装总净重4.5-5.5斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        },
+        {
+          "sku": "100019869919",
+          "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+        },
+        {
+          "sku": "100039834318",
+          "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        }
+      ],
+      "total": 41,
+      "ts": "2026-05-18 04:27:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 0,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 28,
+        "risk": [],
+        "text_len": 4060,
+        "url": "https://union.jd.com/proManager/index?pageNo=42"
+      },
+      "page_no": 42,
+      "processed": 52,
+      "sample": [],
+      "total": 41,
+      "total_hint": 60,
+      "ts": "2026-05-18 04:27:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 33,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "100011878658",
+          "title": "京鲜生 泰国金枕巴掌鲜榴莲2个装总净重4.5-5.5斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        },
+        {
+          "sku": "100019869919",
+          "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+        },
+        {
+          "sku": "100039834318",
+          "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        }
+      ],
+      "total": 49,
+      "ts": "2026-05-18 04:27:33",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 0,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 43,
+        "risk": [],
+        "text_len": 5915,
+        "url": "https://union.jd.com/proManager/index?pageNo=43"
+      },
+      "page_no": 43,
+      "processed": 52,
+      "sample": [],
+      "total": 49,
+      "total_hint": 60,
+      "ts": "2026-05-18 04:27:33",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 33,
+      "sample": [
+        {
+          "sku": "100011878656",
+          "title": "京鲜生【预售】泰国进口金枕头榴莲 3.5-4.5斤 1个装 鲜果 生鲜水果"
+        },
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "5899267",
+          "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+        },
+        {
+          "sku": "100011878658",
+          "title": "京鲜生 泰国金枕巴掌鲜榴莲2个装总净重4.5-5.5斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "100212687086",
+          "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+        },
+        {
+          "sku": "100019869919",
+          "title": "洁柔抽纸 粉Face3层110抽*48包 可湿水纸巾卫生纸 柔韧抽纸 整箱纸巾"
+        },
+        {
+          "sku": "100039834318",
+          "title": "舒客小苏打牙膏含氟防蛀去渍美白3支共480g青柠薄荷洋甘菊新老随机发"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        }
+      ],
+      "total": 49,
+      "ts": "2026-05-18 04:27:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 0,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 43,
+        "risk": [],
+        "text_len": 5915,
+        "url": "https://union.jd.com/proManager/index?pageNo=44"
+      },
+      "page_no": 44,
+      "processed": 52,
+      "sample": [],
+      "total": 49,
+      "total_hint": 60,
+      "ts": "2026-05-18 04:27:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "TITLE_ENRICHED_CANDIDATES_V3",
+      "missing_title": 0,
+      "sample": [],
+      "total": 0,
+      "ts": "2026-05-18 04:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 0,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 0,
+        "risk": [],
+        "text_len": 572,
+        "url": "https://union.jd.com/proManager/index?pageNo=45"
+      },
+      "page_no": 45,
+      "processed": 52,
+      "sample": [],
+      "total": 0,
+      "total_hint": 60,
+      "ts": "2026-05-18 04:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "empty_pages": 42,
+      "event": "EMPTY_PAGE_LIMIT_REACHED",
+      "page_no": 45,
+      "ts": "2026-05-18 04:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "FULL_CYCLE_DONE",
+      "processed": 52,
+      "ts": "2026-05-18 04:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 04:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 04:58:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 05:28:03",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 05:58:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 06:28:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 06:58:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 07:28:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 07:58:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 08:28:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 08:58:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 09:28:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 09:58:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 10:28:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 10:58:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 11:28:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 11:58:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 12:28:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 12:58:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 13:28:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 13:58:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 14:28:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 14:58:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 15:28:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 15:58:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 16:28:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 16:58:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 17:28:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 17:58:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 18:28:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 18:58:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 19:28:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 19:58:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 20:28:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 20:58:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 21:28:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 21:58:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 22:28:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 22:58:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 23:28:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-18 23:58:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 00:28:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 00:58:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 01:28:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 01:58:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 02:28:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 02:58:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 03:28:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 03:58:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 04:28:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 04:58:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 05:28:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 05:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 06:28:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 06:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 07:28:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 07:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 08:28:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 08:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 09:28:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 09:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 10:28:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 10:58:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 11:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 11:58:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 12:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 12:58:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 13:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 13:58:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 14:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 14:58:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 15:28:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 15:58:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 16:28:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 16:58:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 17:28:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 17:58:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 18:28:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 18:58:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 19:28:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 19:58:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 20:28:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 20:58:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 21:28:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 21:58:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 22:28:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 22:58:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 23:28:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-19 23:58:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 00:28:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 00:58:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 01:28:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 01:58:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 02:28:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 02:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 03:28:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 03:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 04:28:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 04:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 05:28:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 05:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 06:28:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 06:58:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 07:28:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 07:58:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 08:28:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 08:58:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 09:28:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 09:58:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 10:28:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 10:58:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 11:28:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 11:58:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 12:28:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 12:58:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 13:28:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 13:58:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 14:28:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 14:58:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 15:28:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 15:58:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 16:28:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 16:58:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 17:28:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 17:58:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 18:28:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 18:58:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 19:28:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 19:58:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 20:28:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 20:58:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 21:28:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 21:58:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 22:28:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 22:58:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 23:28:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-20 23:58:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 00:28:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 00:58:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 01:28:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 01:58:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 02:28:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 02:58:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 03:28:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 03:58:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 04:28:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 04:58:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 05:28:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 05:58:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 06:28:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 06:58:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 07:28:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 07:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 08:28:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 08:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 09:28:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 09:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 10:28:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 10:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 11:28:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 11:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 12:28:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 12:58:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 13:28:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 13:58:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 14:28:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 14:58:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 15:28:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-21 15:58:20",
+      "worker": "product_all_full"
+    }
+  ],
+  "files": {
+    "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
+    "runtime_report": "run/hz12_product_all_full_report_latest.json",
+    "state": "run/hz12_product_all_full_state.json",
+    "stop": "run/hz12_product_all_STOP_REQUIRED.json"
+  },
+  "head": "639ecb4",
+  "latest_log": "logs/hz12_product_all_full_v3_overnight_20260518_040141.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 1,
+    "item_url": 0,
+    "jd_command": 0,
+    "link_created_at": 0,
+    "link_expire_at": 0,
+    "long_url": 0,
+    "price": 0,
+    "qr_url": 0,
+    "refresh_due_at": 0,
+    "short_url": 0,
+    "title": 33
+  },
+  "next_decision": "If no STOP and quality is good, continue collection until roughly 4000 SKU. If STOP exists, inspect stop reason before restart.",
+  "page_counts_sample": {
+    "1": 20,
+    "2": 20,
+    "3": 12
+  },
+  "phase": "HZ12 product_all full result check",
+  "processes": [
+    "30073 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19228 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "30813 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=18 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=2689596256 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9707303555383192621,944854569504904531,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709003178624776",
+    "31235 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=21 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=3084494454 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16150984383135774655,1160708162090800132,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709005989750323",
+    "90042 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19229 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "90127 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=7 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=597554857766 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16208265014382412072,13159075389174745411,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190708992871164437",
+    "90529 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=19 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=598093526729 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14671244850568944341,16436198809862861882,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709004115666625",
+    "91412 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=22 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=599005193539 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15734030695083693844,9382617413635888269,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709006926792172",
+    "130661 .venv-browser/bin/python run/hz12_product_all_full_collector_v3.py"
+  ],
+  "rates": {
+    "commission_complete_rate": 1.0,
+    "image_complete_rate": 0.9808,
+    "link_complete_rate": 1.0,
+    "price_complete_rate": 1.0,
+    "title_complete_rate": 0.3654
+  },
+  "runtime_report": {
+    "dedup_sku": 52,
+    "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
+    "missing": {
+      "commission_rate": 0,
+      "estimated_income": 0,
+      "image_url": 1,
+      "item_url": 0,
+      "jd_command": 0,
+      "long_url": 0,
+      "price": 0,
+      "qr_url": 0,
+      "refresh_due_at": 0,
+      "title": 33
+    },
+    "next_refresh_due_at": "2026-06-27T04:28:03",
+    "non_numeric_sku": 0,
+    "ok": 52,
+    "out": "data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl",
+    "rows": 52,
+    "run_id": "20260518_040147",
+    "sleep_reason": "refresh_not_due",
+    "state": {
+      "created_at": "2026-05-18 04:01:47",
+      "current_page_no": 1,
+      "empty_page_streak": 0,
+      "fail_streak": 0,
+      "known_sku_count": 52,
+      "known_skus": [
+        "100011878656",
+        "2922989",
+        "5899267",
+        "5295411",
+        "100212687086",
+        "100019869919",
+        "100039834318",
+        "100053606751",
+        "100013875646",
+        "100083026779",
+        "100241311103",
+        "100259348596",
+        "100149164924",
+        "100063167527",
+        "100064078094",
+        "100055353565",
+        "100006970555",
+        "100029700935",
+        "100311657034",
+        "100029082004",
+        "100011878658",
+        "100095152765",
+        "100241311123",
+        "100117373622",
+        "100327206736",
+        "3505364",
+        "100094853884",
+        "1297484",
+        "8139349",
+        "10213048554278",
+        "100339786248",
+        "100107092388",
+        "100193980850",
+        "100081338354",
+        "100053539383",
+        "100190910995",
+        "598706",
+        "100026198539",
+        "1230816",
+        "100165307248",
+        "100052818774",
+        "100100411727",
+        "100028223045",
+        "100022053387",
+        "100011491977",
+        "100045250213",
+        "4423688",
+        "100319527724",
+        "100167779365",
+        "100321107942",
+        "100283426188",
+        "100164369585"
+      ],
+      "last_event": {
+        "event": "ITEM_OK",
+        "page_no": 3,
+        "short_url": "https://u.jd.com/HgEZBSO",
+        "sku": "100164369585",
+        "ts": "2026-05-18 04:16:07"
+      },
+      "last_full_cycle_finished_at": "2026-05-18 04:28:03",
+      "next_refresh_due_at": "2026-06-27T04:28:03",
+      "page_total_hint": 60,
+      "refresh_round": 0,
+      "round_seen_sku_count": 0,
+      "round_seen_skus": [],
+      "run_id": "20260518_040147",
+      "target_total": 4000,
+      "updated_at": "2026-05-18 04:28:03"
+    },
+    "target_total": 4000,
+    "ts": "2026-05-21 15:58:20"
+  },
+  "sample_last_20": [
+    {
+      "commission_rate": "2.9",
+      "estimated_income": "1.45",
+      "page_no": 1,
+      "price": "49.9",
+      "refresh_due_at": "2026-06-27T04:03:05",
+      "short_url": "https://u.jd.com/HGERso7",
+      "sku": "100212687086",
+      "title": "伊利【新鲜日期】金典纯牛奶整箱 200ml*24 3.6g乳蛋白礼盒装 3-4月"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "5.99",
+      "page_no": 1,
+      "price": "199.75",
+      "refresh_due_at": "2026-06-27T04:04:39",
+      "short_url": "https://u.jd.com/HaE4mgJ",
+      "sku": "100241311103",
+      "title": "iKF V11 Pro2.0【可视化接收器】四模游戏耳机头戴式无线FPS专用驱动7.1声场三角洲听声辨位 黑红色"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "2.00",
+      "page_no": 2,
+      "price": "199.75",
+      "refresh_due_at": "2026-06-27T04:08:11",
+      "short_url": "https://u.jd.com/HrEXHLV",
+      "sku": "100241311123",
+      "title": "iKF V11 Pro2.0四模游戏耳机头戴式无线电竞7.1声道蓝牙屏显2.4G接收器FPS专用三角洲听声辨位 银白色"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "20.50",
+      "page_no": 1,
+      "price": "410",
+      "refresh_due_at": "2026-06-27T04:04:55",
+      "short_url": "https://u.jd.com/HgEp5EU",
+      "sku": "100259348596",
+      "title": "YSL圣罗兰全新小金条口红1936哑光持久唇膏化妆品生日礼物520送女朋友礼物"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "5.99",
+      "page_no": 3,
+      "price": "39.9",
+      "refresh_due_at": "2026-06-27T04:15:53",
+      "short_url": "https://u.jd.com/HGEELec",
+      "sku": "100283426188",
+      "title": ""
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "2.68",
+      "page_no": 1,
+      "price": "66.9",
+      "refresh_due_at": "2026-06-27T04:06:53",
+      "short_url": "https://u.jd.com/HgExdbQ",
+      "sku": "100311657034",
+      "title": ""
+    },
+    {
+      "commission_rate": "20",
+      "estimated_income": "5.98",
+      "page_no": 3,
+      "price": "29.9",
+      "refresh_due_at": "2026-06-27T04:15:14",
+      "short_url": "https://u.jd.com/HaEXR8a",
+      "sku": "100319527724",
+      "title": ""
+    },
+    {
+      "commission_rate": "12",
+      "estimated_income": "7.19",
+      "page_no": 3,
+      "price": "59.9",
+      "refresh_due_at": "2026-06-27T04:15:40",
+      "short_url": "https://u.jd.com/HaEpHIC",
+      "sku": "100321107942",
+      "title": ""
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "5.97",
+      "page_no": 2,
+      "price": "39.8",
+      "refresh_due_at": "2026-06-27T04:08:42",
+      "short_url": "https://u.jd.com/H1EAtKg",
+      "sku": "100327206736",
+      "title": ""
+    },
+    {
+      "commission_rate": "9",
+      "estimated_income": "2.69",
+      "page_no": 2,
+      "price": "29.9",
+      "refresh_due_at": "2026-06-27T04:10:27",
+      "short_url": "https://u.jd.com/H6E0M8W",
+      "sku": "100339786248",
+      "title": ""
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "2.90",
+      "page_no": 2,
+      "price": "289.8",
+      "refresh_due_at": "2026-06-27T04:10:08",
+      "short_url": "https://u.jd.com/HrEWkw5",
+      "sku": "10213048554278",
+      "title": ""
+    },
+    {
+      "commission_rate": "8",
+      "estimated_income": "11.19",
+      "page_no": 2,
+      "price": "139.9",
+      "refresh_due_at": "2026-06-27T04:12:35",
+      "short_url": "https://u.jd.com/HDEj98N",
+      "sku": "1230816",
+      "title": ""
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "4.99",
+      "page_no": 2,
+      "price": "49.9",
+      "refresh_due_at": "2026-06-27T04:09:38",
+      "short_url": "https://u.jd.com/HGElBLr",
+      "sku": "1297484",
+      "title": ""
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "1.20",
+      "page_no": 1,
+      "price": "39.9",
+      "refresh_due_at": "2026-06-27T04:02:15",
+      "short_url": "https://u.jd.com/HaEEaZx",
+      "sku": "2922989",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+    },
+    {
+      "commission_rate": "1.5",
+      "estimated_income": "0.66",
+      "page_no": 2,
+      "price": "44.1",
+      "refresh_due_at": "2026-06-27T04:09:00",
+      "short_url": "https://u.jd.com/HrETV28",
+      "sku": "3505364",
+      "title": ""
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "2.99",
+      "page_no": 3,
+      "price": "29.9",
+      "refresh_due_at": "2026-06-27T04:14:58",
+      "short_url": "https://u.jd.com/HDEcSpQ",
+      "sku": "4423688",
+      "title": ""
+    },
+    {
+      "commission_rate": "0.01",
+      "estimated_income": "0.01",
+      "page_no": 1,
+      "price": "129.8",
+      "refresh_due_at": "2026-06-27T04:02:45",
+      "short_url": "https://u.jd.com/HGEH9Xs",
+      "sku": "5295411",
+      "title": "京鲜生 泰国进口金枕头鲜榴莲 净重4-5斤 1个装 生鲜 新鲜水果"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "13.49",
+      "page_no": 1,
+      "price": "134.9",
+      "refresh_due_at": "2026-06-27T04:02:31",
+      "short_url": "https://u.jd.com/HOE70ob",
+      "sku": "5899267",
+      "title": "露安适（Lelch）安敏微气候系列日用拉拉裤XL32片(12-17kg) 婴儿学走裤尿不湿"
+    },
+    {
+      "commission_rate": "12.5",
+      "estimated_income": "3.74",
+      "page_no": 2,
+      "price": "29.88",
+      "refresh_due_at": "2026-06-27T04:11:56",
+      "short_url": "https://u.jd.com/HDE7LeE",
+      "sku": "598706",
+      "title": ""
+    },
+    {
+      "commission_rate": "1.9",
+      "estimated_income": "0.91",
+      "page_no": 2,
+      "price": "47.9",
+      "refresh_due_at": "2026-06-27T04:09:52",
+      "short_url": "https://u.jd.com/HrEcITU",
+      "sku": "8139349",
+      "title": ""
+    }
+  ],
+  "state": {
+    "created_at": "2026-05-18 04:01:47",
+    "current_page_no": 1,
+    "empty_page_streak": 0,
+    "fail_streak": 0,
+    "known_sku_count": 52,
+    "known_skus": [
+      "100011878656",
+      "2922989",
+      "5899267",
+      "5295411",
+      "100212687086",
+      "100019869919",
+      "100039834318",
+      "100053606751",
+      "100013875646",
+      "100083026779",
+      "100241311103",
+      "100259348596",
+      "100149164924",
+      "100063167527",
+      "100064078094",
+      "100055353565",
+      "100006970555",
+      "100029700935",
+      "100311657034",
+      "100029082004",
+      "100011878658",
+      "100095152765",
+      "100241311123",
+      "100117373622",
+      "100327206736",
+      "3505364",
+      "100094853884",
+      "1297484",
+      "8139349",
+      "10213048554278",
+      "100339786248",
+      "100107092388",
+      "100193980850",
+      "100081338354",
+      "100053539383",
+      "100190910995",
+      "598706",
+      "100026198539",
+      "1230816",
+      "100165307248",
+      "100052818774",
+      "100100411727",
+      "100028223045",
+      "100022053387",
+      "100011491977",
+      "100045250213",
+      "4423688",
+      "100319527724",
+      "100167779365",
+      "100321107942",
+      "100283426188",
+      "100164369585"
+    ],
+    "last_event": {
+      "event": "ITEM_OK",
+      "page_no": 3,
+      "short_url": "https://u.jd.com/HgEZBSO",
+      "sku": "100164369585",
+      "ts": "2026-05-18 04:16:07"
+    },
+    "last_full_cycle_finished_at": "2026-05-18 04:28:03",
+    "next_refresh_due_at": "2026-06-27T04:28:03",
+    "page_total_hint": 60,
+    "refresh_round": 0,
+    "round_seen_sku_count": 0,
+    "round_seen_skus": [],
+    "run_id": "20260518_040147",
+    "target_total": 4000,
+    "updated_at": "2026-05-18 04:28:03"
+  },
+  "stop": null,
+  "stop_exists": false,
+  "suspicious_sample": [
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/H6ENItw",
+      "sku": "100006970555",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/H1EBb0w",
+      "sku": "100011491977",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEck1i",
+      "sku": "100022053387",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEUMf1",
+      "sku": "100026198539",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HgENCCH",
+      "sku": "100028223045",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HgEJltt",
+      "sku": "100029082004",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HGEFO5E",
+      "sku": "100029700935",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEVLp8",
+      "sku": "100045250213",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEk3MM",
+      "sku": "100052818774",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HGEPXKe",
+      "sku": "100053539383",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HOENyQu",
+      "sku": "100081338354",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HGEAhgk",
+      "sku": "100094853884",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HrEBUhP",
+      "sku": "100100411727",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HgE0TG4",
+      "sku": "100107092388",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HaE0MfU",
+      "sku": "100117373622",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HgEZBSO",
+      "sku": "100164369585",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEXpap",
+      "sku": "100165307248",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEjdSI",
+      "sku": "100167779365",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/H1EkeqP",
+      "sku": "100190910995",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HOETU1d",
+      "sku": "100193980850",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HGEELec",
+      "sku": "100283426188",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HgExdbQ",
+      "sku": "100311657034",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HaEXR8a",
+      "sku": "100319527724",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HaEpHIC",
+      "sku": "100321107942",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/H1EAtKg",
+      "sku": "100327206736",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/H6E0M8W",
+      "sku": "100339786248",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HrEWkw5",
+      "sku": "10213048554278",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HDEj98N",
+      "sku": "1230816",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HGElBLr",
+      "sku": "1297484",
+      "title": ""
+    },
+    {
+      "reason": "short_title",
+      "short_url": "https://u.jd.com/HrETV28",
+      "sku": "3505364",
+      "title": ""
+    }
+  ],
+  "throughput": {
+    "estimated_days_to_4000": 0.75,
+    "estimated_ok_per_day": 5304.37,
+    "estimated_ok_per_hour": 221.02,
+    "first_ts": "2026-05-18T04:02:00",
+    "last_ts": "2026-05-18T04:16:07",
+    "runtime_hours_est": 0.235
+  },
+  "ts": "2026-05-21 16:00:15",
+  "value_ranges": {
+    "estimated_income_max": 44.0,
+    "estimated_income_min": 0.01,
+    "price_max": 999.0,
+    "price_min": 9.69
+  }
+}
