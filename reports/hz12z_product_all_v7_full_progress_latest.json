@@ -1,14 +1,14 @@
 {
   "counts": {
-    "dedup_sku": 16,
+    "dedup_sku": 88,
     "duplicate_ok_rows": 0,
     "first_page": 1,
-    "last_page": 1,
+    "last_page": 6,
     "non_numeric": 0,
-    "ok": 16,
-    "page_count": 1,
-    "progress_pct": 0.4,
-    "rows": 16,
+    "ok": 88,
+    "page_count": 6,
+    "progress_pct": 2.2,
+    "rows": 88,
     "target_total": 4000
   },
   "decision": "If process is alive, stop=false, title missing=0, and dedup_sku keeps growing, continue. If target reached or worker sleeps, run final quality/dry-run report.",
@@ -309,6 +309,2496 @@
       "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB",
       "ts": "2026-05-23 00:01:49",
       "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "2922989",
+          "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发"
+        },
+        {
+          "sku": "100032229606",
+          "title": "香满园美味精制小麦粉10斤 面粉馒头粉饺子粉面条粉"
+        },
+        {
+          "sku": "4134901",
+          "title": "【风柔轻音】简约现代多功能USB小风扇即插即用办公室学生宿舍静音大风力伸缩折叠便携电风扇 【颜色随机】1个装-USB直插+伸缩折叠"
+        },
+        {
+          "sku": "100023815614",
+          "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物"
+        },
+        {
+          "sku": "100051210211",
+          "title": "【电池能量站】5号7号大号纽扣电池适用血压计/燃气表/遥控器/电子秤/车钥匙/燃气灶/无线鼠标等 5号8粒+7号8粒"
+        },
+        {
+          "sku": "100335695554",
+          "title": "美的空调 风尊三代PRO 大1.5匹一级能效全面风双排纯铜管舒适风卧室 空调挂机国家补贴KFR-35GW/MXC3P"
+        },
+        {
+          "sku": "5254604",
+          "title": "鲜京采 生鸡爪 2斤 40-50g/只 柠檬鸡爪凤爪烧烤鸡爪卤鸡爪生鲜食材"
+        },
+        {
+          "sku": "100151494892",
+          "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100011878658",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "7891989",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10179187350168",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100113323112",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "7219155",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100325728578",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10219369742525",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100344442138",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100018834988",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100213122216",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:01:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100099390570",
+          "title": "美的（Midea）【暴风循环】空气循环扇大风量摇头电风扇家用台式落地扇轻音卧室节能小风扇柔风轻羽扇 FGA24TQ"
+        },
+        {
+          "sku": "100222068761",
+          "title": "添可【保价618】极客蒸汽2.0【380℃高温蒸汽源 28KPa吸力】0缠毛蒸汽洗地机洗地机"
+        },
+        {
+          "sku": "100008131728",
+          "title": "星鲨维生素D滴剂 30粒*10盒【300粒】维生素d3儿童3-12岁1-3岁婴幼儿0-6个月青少年11-17岁促钙吸收全年龄段可用"
+        },
+        {
+          "sku": "100254751065",
+          "title": "安井锁鲜装鱼豆腐 240g/包 鱼糜含量≥65% 火锅麻辣烫关东煮烧烤食材"
+        },
+        {
+          "sku": "100241347830",
+          "title": "京鲜生泰国金枕巴掌鲜榴莲2个装 总净重5-6斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "12535867",
+          "title": "黄雀记 苏童 茅盾文学奖获奖作品全集 第九届茅奖 人民文学出版社 小说"
+        },
+        {
+          "sku": "100019313112",
+          "title": "鲜京采 冷冻无冰小龙虾虾尾（一级）2斤（120-130粒/斤）无添加生鲜"
+        },
+        {
+          "sku": "100013109672",
+          "title": "安井虾滑 150g/袋 虾肉虾仁含量≥80% 火锅关东煮麻辣烫丸子食材"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "10175344196363",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100006731994",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100022610126",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100016407792",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267795",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1586349",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100032049358",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100113323110",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100191091166",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100324618102",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:02:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "100099390570",
+          "100222068761",
+          "100008131728",
+          "100254751065",
+          "100241347830"
+        ],
+        "before_skus": [
+          "2922989",
+          "100032229606",
+          "4134901",
+          "100023815614",
+          "100051210211"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 2
+      },
+      "ts": "2026-05-23 00:02:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100099390570",
+          "title": "美的（Midea）【暴风循环】空气循环扇大风量摇头电风扇家用台式落地扇轻音卧室节能小风扇柔风轻羽扇 FGA24TQ"
+        },
+        {
+          "sku": "100222068761",
+          "title": "添可【保价618】极客蒸汽2.0【380℃高温蒸汽源 28KPa吸力】0缠毛蒸汽洗地机洗地机"
+        },
+        {
+          "sku": "100008131728",
+          "title": "星鲨维生素D滴剂 30粒*10盒【300粒】维生素d3儿童3-12岁1-3岁婴幼儿0-6个月青少年11-17岁促钙吸收全年龄段可用"
+        },
+        {
+          "sku": "100254751065",
+          "title": "安井锁鲜装鱼豆腐 240g/包 鱼糜含量≥65% 火锅麻辣烫关东煮烧烤食材"
+        },
+        {
+          "sku": "100241347830",
+          "title": "京鲜生泰国金枕巴掌鲜榴莲2个装 总净重5-6斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "12535867",
+          "title": "黄雀记 苏童 茅盾文学奖获奖作品全集 第九届茅奖 人民文学出版社 小说"
+        },
+        {
+          "sku": "100019313112",
+          "title": "鲜京采 冷冻无冰小龙虾虾尾（一级）2斤（120-130粒/斤）无添加生鲜"
+        },
+        {
+          "sku": "100013109672",
+          "title": "安井虾滑 150g/袋 虾肉虾仁含量≥80% 火锅关东煮麻辣烫丸子食材"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "10175344196363",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100006731994",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100022610126",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100016407792",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267795",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1586349",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100032049358",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100113323110",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100191091166",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100324618102",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:02:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7443,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 2,
+      "processed": 16,
+      "sample": [
+        {
+          "sku": "100099390570",
+          "title": "美的（Midea）【暴风循环】空气循环扇大风量摇头电风扇家用台式落地扇轻音卧室节能小风扇柔风轻羽扇 FGA24TQ"
+        },
+        {
+          "sku": "100222068761",
+          "title": "添可【保价618】极客蒸汽2.0【380℃高温蒸汽源 28KPa吸力】0缠毛蒸汽洗地机洗地机"
+        },
+        {
+          "sku": "100008131728",
+          "title": "星鲨维生素D滴剂 30粒*10盒【300粒】维生素d3儿童3-12岁1-3岁婴幼儿0-6个月青少年11-17岁促钙吸收全"
+        },
+        {
+          "sku": "100254751065",
+          "title": "安井锁鲜装鱼豆腐 240g/包 鱼糜含量≥65% 火锅麻辣烫关东煮烧烤食材"
+        },
+        {
+          "sku": "100241347830",
+          "title": "京鲜生泰国金枕巴掌鲜榴莲2个装 总净重5-6斤 单果2-3斤 源头直发"
+        },
+        {
+          "sku": "12535867",
+          "title": "黄雀记 苏童 茅盾文学奖获奖作品全集 第九届茅奖 人民文学出版社 小说"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 00:02:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 17,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/Rrwcjma",
+      "sku": "100099390570",
+      "title": "美的（Midea）【暴风循环】空气循环扇大风量摇头电风扇家用台式落地扇轻音卧室节能小风扇柔风轻羽扇 FGA24TQ",
+      "ts": "2026-05-23 00:02:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 18,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgwBDRM",
+      "sku": "100222068761",
+      "title": "添可【保价618】极客蒸汽2.0【380℃高温蒸汽源 28KPa吸力】0缠毛蒸汽洗地机洗地机",
+      "ts": "2026-05-23 00:02:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 19,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgwWtOA",
+      "sku": "100008131728",
+      "title": "星鲨维生素D滴剂 30粒*10盒【300粒】维生素d3儿童3-12岁1-3岁婴幼儿0-6个月青少年11-17岁促钙吸收全",
+      "ts": "2026-05-23 00:02:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 20,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RawP3Uj",
+      "sku": "100254751065",
+      "title": "安井锁鲜装鱼豆腐 240g/包 鱼糜含量≥65% 火锅麻辣烫关东煮烧烤食材",
+      "ts": "2026-05-23 00:02:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 21,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R1wVqay",
+      "sku": "100241347830",
+      "title": "京鲜生泰国金枕巴掌鲜榴莲2个装 总净重5-6斤 单果2-3斤 源头直发",
+      "ts": "2026-05-23 00:02:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 22,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R6wTO7S",
+      "sku": "12535867",
+      "title": "黄雀记 苏童 茅盾文学奖获奖作品全集 第九届茅奖 人民文学出版社 小说",
+      "ts": "2026-05-23 00:03:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 23,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgwRlzP",
+      "sku": "100019313112",
+      "title": "鲜京采 冷冻无冰小龙虾虾尾（一级）2斤（120-130粒/斤）无添加生鲜",
+      "ts": "2026-05-23 00:03:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 24,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/ROwHAOj",
+      "sku": "100013109672",
+      "title": "安井虾滑 150g/袋 虾肉虾仁含量≥80% 火锅关东煮麻辣烫丸子食材",
+      "ts": "2026-05-23 00:03:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 25,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RGw0Zzz",
+      "sku": "100115319917",
+      "title": "卡诗*山茶花护发精油75ml修护保湿滋养防毛躁柔顺亮泽礼盒生日礼物",
+      "ts": "2026-05-23 00:03:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 26,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/ROwnQWW",
+      "sku": "7293773",
+      "title": "添可【保价618】极客2.0 AI真助力【110℃除菌 28Kpa暴风吸】防臭超薄躺平0缠毛洗地机吸拖",
+      "ts": "2026-05-23 00:03:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 27,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgwvpeI",
+      "sku": "10217402083315",
+      "title": "好奇（Huggies）铂金装小桃裤成长裤XL96片(12-17kg)加大号尿不湿【透爽散热】",
+      "ts": "2026-05-23 00:03:46",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 28,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R1w0j4V",
+      "sku": "100339942308",
+      "title": "5月25日前发货泰国金枕巴掌榴莲非礼盒新鲜水果带壳榴莲鲜果整箱 家庭装8-10斤(2-4个装，大小随机发)",
+      "ts": "2026-05-23 00:03:56",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 29,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RDwBWsO",
+      "sku": "100203122085",
+      "title": "TCL电视【价保618】 98T7L Ultra 98英寸 QD-Mini LED 蝶翼星曜屏 万象分区 98/100英",
+      "ts": "2026-05-23 00:04:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 30,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RDwTytk",
+      "sku": "100101208654",
+      "title": "飞鹤星飞帆幼儿配方奶粉3段(1-3岁) 900g*6罐 HMOs OPO【加量不加价】",
+      "ts": "2026-05-23 00:04:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 31,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/ROwvchq",
+      "sku": "10148058763471",
+      "title": "维达（Vinda）有芯卷纸 棉韧4层140节30卷 卫生纸厕纸纸巾整箱（121克*30卷）",
+      "ts": "2026-05-23 00:04:28",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 32,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R1wjRax",
+      "sku": "100025375040",
+      "title": "徕芬一代扫振电动牙刷SE礼盒款 莱芬舒适清洁护龈牙刷 情侣送男友/女友生日礼物 风信紫",
+      "ts": "2026-05-23 00:04:36",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100099390570",
+          "title": "卡诗*山茶花护发精油75ml修护保湿滋养防毛躁柔顺亮泽礼盒生日礼物"
+        },
+        {
+          "sku": "100222068761",
+          "title": "添可【保价618】极客2.0 AI真助力【110℃除菌 28Kpa暴风吸】防臭超薄躺平0缠毛洗地机吸拖"
+        },
+        {
+          "sku": "100008131728",
+          "title": "好奇（Huggies）铂金装小桃裤成长裤XL96片(12-17kg)加大号尿不湿【透爽散热】"
+        },
+        {
+          "sku": "100254751065",
+          "title": "5月25日前发货泰国金枕巴掌榴莲非礼盒新鲜水果带壳榴莲鲜果整箱 家庭装8-10斤(2-4个装，大小随机发)"
+        },
+        {
+          "sku": "100241347830",
+          "title": "TCL电视【价保618】 98T7L Ultra 98英寸 QD-Mini LED 蝶翼星曜屏 万象分区 98/100英寸电视"
+        },
+        {
+          "sku": "12535867",
+          "title": "飞鹤星飞帆幼儿配方奶粉3段(1-3岁) 900g*6罐 HMOs OPO【加量不加价】"
+        },
+        {
+          "sku": "100019313112",
+          "title": "维达（Vinda）有芯卷纸 棉韧4层140节30卷 卫生纸厕纸纸巾整箱（121克*30卷）"
+        },
+        {
+          "sku": "100013109672",
+          "title": "徕芬一代扫振电动牙刷SE礼盒款 莱芬舒适清洁护龈牙刷 情侣送男友/女友生日礼物 风信紫"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "8267795",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1586349",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100032049358",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100113323110",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100191091166",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100324618102",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100067489150",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100243910649",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10122639628876",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100201394058",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:04:45",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100151494910",
+          "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 3XL"
+        },
+        {
+          "sku": "100032432993",
+          "title": "优时颜（UNISKIN）优能平衡洁面乳洗面奶100g*3 氨基酸洁面深层清洁纪念日生日礼物"
+        },
+        {
+          "sku": "100022610206",
+          "title": "雅诗兰黛小棕瓶精华眼霜15ml淡纹抗老护肤品套装化妆品礼盒生日礼物送女友"
+        },
+        {
+          "sku": "100017319863",
+          "title": "飞鹤星飞帆卓睿 婴儿配方奶粉 2段6-12个月)130克【京东试用装】"
+        },
+        {
+          "sku": "100012820043",
+          "title": "安井糯米大烧卖 1kg 2斤装约20个烧麦 家庭装面点 速冻早餐半成品"
+        },
+        {
+          "sku": "100043907496",
+          "title": "舒适达护釉健焕亮美白牙膏100g 牙釉修复管重塑去牙渍 新旧包装随机发"
+        },
+        {
+          "sku": "100003277713",
+          "title": "卡士（CLASSY.KISS）蓝莓黑莓果粒鲜酪乳100g*6杯 低温酸奶 风味发酵乳"
+        },
+        {
+          "sku": "100253548314",
+          "title": "欧乐B德国进口智能电动牙刷成人iO7专业全能刷白色刷头*4深度清洁护龈（新旧包装随机发）【价保618】"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100007435037",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100164369585",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100215754367",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100247864871",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100054001939",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2525447",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1180552",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10031571375390",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100079959526",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100014968100",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:04:48",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "100151494910",
+          "100032432993",
+          "100022610206",
+          "100017319863",
+          "100012820043"
+        ],
+        "before_skus": [
+          "100099390570",
+          "100222068761",
+          "100008131728",
+          "100254751065",
+          "100241347830"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 3
+      },
+      "ts": "2026-05-23 00:04:48",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100151494910",
+          "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 3XL"
+        },
+        {
+          "sku": "100032432993",
+          "title": "优时颜（UNISKIN）优能平衡洁面乳洗面奶100g*3 氨基酸洁面深层清洁纪念日生日礼物"
+        },
+        {
+          "sku": "100022610206",
+          "title": "雅诗兰黛小棕瓶精华眼霜15ml淡纹抗老护肤品套装化妆品礼盒生日礼物送女友"
+        },
+        {
+          "sku": "100017319863",
+          "title": "飞鹤星飞帆卓睿 婴儿配方奶粉 2段6-12个月)130克【京东试用装】"
+        },
+        {
+          "sku": "100012820043",
+          "title": "安井糯米大烧卖 1kg 2斤装约20个烧麦 家庭装面点 速冻早餐半成品"
+        },
+        {
+          "sku": "100043907496",
+          "title": "舒适达护釉健焕亮美白牙膏100g 牙釉修复管重塑去牙渍 新旧包装随机发"
+        },
+        {
+          "sku": "100003277713",
+          "title": "卡士（CLASSY.KISS）蓝莓黑莓果粒鲜酪乳100g*6杯 低温酸奶 风味发酵乳"
+        },
+        {
+          "sku": "100253548314",
+          "title": "欧乐B德国进口智能电动牙刷成人iO7专业全能刷白色刷头*4深度清洁护龈（新旧包装随机发）【价保618】"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100007435037",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100164369585",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100215754367",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100247864871",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100054001939",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2525447",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1180552",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10031571375390",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100079959526",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100014968100",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:04:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7424,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 3,
+      "processed": 32,
+      "sample": [
+        {
+          "sku": "100151494910",
+          "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 3XL"
+        },
+        {
+          "sku": "100032432993",
+          "title": "优时颜（UNISKIN）优能平衡洁面乳洗面奶100g*3 氨基酸洁面深层清洁纪念日生日礼物"
+        },
+        {
+          "sku": "100022610206",
+          "title": "雅诗兰黛小棕瓶精华眼霜15ml淡纹抗老护肤品套装化妆品礼盒生日礼物送女友"
+        },
+        {
+          "sku": "100017319863",
+          "title": "飞鹤星飞帆卓睿 婴儿配方奶粉 2段6-12个月)130克【京东试用装】"
+        },
+        {
+          "sku": "100012820043",
+          "title": "安井糯米大烧卖 1kg 2斤装约20个烧麦 家庭装面点 速冻早餐半成品"
+        },
+        {
+          "sku": "100043907496",
+          "title": "舒适达护釉健焕亮美白牙膏100g 牙釉修复管重塑去牙渍 新旧包装随机发"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 00:04:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 33,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RgwAVEw",
+      "sku": "100151494910",
+      "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 3XL",
+      "ts": "2026-05-23 00:04:56",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 34,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/ROwPkxU",
+      "sku": "100032432993",
+      "title": "优时颜（UNISKIN）优能平衡洁面乳洗面奶100g*3 氨基酸洁面深层清洁纪念日生日礼物",
+      "ts": "2026-05-23 00:05:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 35,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/Raw3znr",
+      "sku": "100022610206",
+      "title": "雅诗兰黛小棕瓶精华眼霜15ml淡纹抗老护肤品套装化妆品礼盒生日礼物送女友",
+      "ts": "2026-05-23 00:05:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 36,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RDwBnVI",
+      "sku": "100017319863",
+      "title": "飞鹤星飞帆卓睿 婴儿配方奶粉 2段6-12个月)130克【京东试用装】",
+      "ts": "2026-05-23 00:05:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 37,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R6wSInt",
+      "sku": "100012820043",
+      "title": "安井糯米大烧卖 1kg 2斤装约20个烧麦 家庭装面点 速冻早餐半成品",
+      "ts": "2026-05-23 00:05:35",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 38,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrwYEc2",
+      "sku": "100043907496",
+      "title": "舒适达护釉健焕亮美白牙膏100g 牙釉修复管重塑去牙渍 新旧包装随机发",
+      "ts": "2026-05-23 00:05:43",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 39,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/ROwBnAM",
+      "sku": "100003277713",
+      "title": "卡士（CLASSY.KISS）蓝莓黑莓果粒鲜酪乳100g*6杯 低温酸奶 风味发酵乳",
+      "ts": "2026-05-23 00:05:53",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 40,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RDwyAcj",
+      "sku": "100253548314",
+      "title": "欧乐B德国进口智能电动牙刷成人iO7专业全能刷白色刷头*4深度清洁护龈（新旧包装随机发）【价保618】",
+      "ts": "2026-05-23 00:06:02",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 41,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RgwEBH3",
+      "sku": "100309707974",
+      "title": "金故烘焙生骨肉高蛋白全价猫粮鸭肉味1.8kg【邓峰家猫咪同款】",
+      "ts": "2026-05-23 00:06:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 42,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R1wf8qP",
+      "sku": "100012397899",
+      "title": "圣迪乐村可生食营养新鲜鸡蛋30枚礼盒装净重3斤 无沙门氏菌京东自营生鲜",
+      "ts": "2026-05-23 00:06:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 43,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R1wyACu",
+      "sku": "100218948381",
+      "title": "新良大师日式吐司面包粉5斤装 高筋面粉 烘焙原料 面包机用纸包装面粉",
+      "ts": "2026-05-23 00:06:30",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 44,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R6w05CH",
+      "sku": "100053539383",
+      "title": "拜灭士杀虫气雾剂80ml*2灭驱蚊液喷雾基孔肯雅热蚊香液防蚊神器热门商品",
+      "ts": "2026-05-23 00:06:41",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 45,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RDwV2De",
+      "sku": "100042257661",
+      "title": "雅诗兰黛小棕瓶精华露115ml淡纹紧致抗老护肤品套装化妆品礼盒生日礼物",
+      "ts": "2026-05-23 00:06:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 46,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/Raw7Urj",
+      "sku": "100150206524",
+      "title": "天湖11.5度精酿白啤酒麦香浓郁500ml*24罐辽宁特产啤酒京东自营整箱装",
+      "ts": "2026-05-23 00:07:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 47,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrwRB8f",
+      "sku": "100195145863",
+      "title": "玉兰油（OLAY）全新超红瓶面霜轻润50g抗皱紧致大红瓶护肤品生日礼物送女友",
+      "ts": "2026-05-23 00:07:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 48,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/ROwR670",
+      "sku": "100102689815",
+      "title": "比瑞吉猫粮爱不将就藻鱼儿全价成猫粮10KG 含三文鱼螺旋藻原料透明",
+      "ts": "2026-05-23 00:07:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100151494910",
+          "title": "金故烘焙生骨肉高蛋白全价猫粮鸭肉味1.8kg【邓峰家猫咪同款】"
+        },
+        {
+          "sku": "100032432993",
+          "title": "圣迪乐村可生食营养新鲜鸡蛋30枚礼盒装净重3斤 无沙门氏菌京东自营生鲜"
+        },
+        {
+          "sku": "100022610206",
+          "title": "新良大师日式吐司面包粉5斤装 高筋面粉 烘焙原料 面包机用纸包装面粉"
+        },
+        {
+          "sku": "100017319863",
+          "title": "拜灭士杀虫气雾剂80ml*2灭驱蚊液喷雾基孔肯雅热蚊香液防蚊神器热门商品"
+        },
+        {
+          "sku": "100012820043",
+          "title": "雅诗兰黛小棕瓶精华露115ml淡纹紧致抗老护肤品套装化妆品礼盒生日礼物"
+        },
+        {
+          "sku": "100043907496",
+          "title": "天湖11.5度精酿白啤酒麦香浓郁500ml*24罐辽宁特产啤酒京东自营整箱装"
+        },
+        {
+          "sku": "100003277713",
+          "title": "玉兰油（OLAY）全新超红瓶面霜轻润50g抗皱紧致大红瓶护肤品生日礼物送女友"
+        },
+        {
+          "sku": "100253548314",
+          "title": "比瑞吉猫粮爱不将就藻鱼儿全价成猫粮10KG 含三文鱼螺旋藻原料透明"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100054001939",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2525447",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1180552",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10031571375390",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100079959526",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100014968100",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100186818537",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100208130625",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267785",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100241577273",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:07:28",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "10044958392578",
+          "title": "美的（Midea）电风扇家用7叶落地扇摇头电风扇循卧室宿舍轻音风扇【价低头部主播九折】 白色丨7叶台地两用"
+        },
+        {
+          "sku": "100132370894",
+          "title": "许翠花 经典升级纯植物猫砂2.5kg*4包木薯猫砂不粘底强吸水易结团"
+        },
+        {
+          "sku": "4423688",
+          "title": "雷达（Raid）杀虫剂喷雾 550ml*2瓶 香甜橙花香型家用室内杀蟑 杀虫气雾剂"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        },
+        {
+          "sku": "100013702761",
+          "title": "MOONY苏菲尤妮佳Q薄萌羽慕怡小羊驼拉拉裤XL码30片(12-17kg)超薄透气"
+        },
+        {
+          "sku": "100185508953",
+          "title": "KTC 23.8英寸2K 260Hz原生240Hz显示器 京东方NF2面板 HDR400 FastIPS升降旋转笔记本电脑显示屏H24E7"
+        },
+        {
+          "sku": "100101890666",
+          "title": "颐莲【张凌赫同款】玻尿酸深层补水喷雾600ml（300ml*2）情人节礼物"
+        },
+        {
+          "sku": "100161277266",
+          "title": "雪川食品（Snow Valley）1/4冷冻细薯条半成品 4斤/袋原味空气炸锅食材速食预制菜炸货小食"
+        }
+      ],
+      "skipped": 33,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100255086807",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100152256496",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100323016356",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100283426188",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100142698553",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100343501860",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100213721762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10149212746798",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100015858738",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100122992591",
+          "title": ""
+        }
+      ],
+      "total": 49,
+      "ts": "2026-05-23 00:07:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "10044958392578",
+          "100132370894",
+          "4423688",
+          "100053606751",
+          "100013702761"
+        ],
+        "before_skus": [
+          "100151494910",
+          "100032432993",
+          "100022610206",
+          "100017319863",
+          "100012820043"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 4
+      },
+      "ts": "2026-05-23 00:07:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "10044958392578",
+          "title": "美的（Midea）电风扇家用7叶落地扇摇头电风扇循卧室宿舍轻音风扇【价低头部主播九折】 白色丨7叶台地两用"
+        },
+        {
+          "sku": "100132370894",
+          "title": "许翠花 经典升级纯植物猫砂2.5kg*4包木薯猫砂不粘底强吸水易结团"
+        },
+        {
+          "sku": "4423688",
+          "title": "雷达（Raid）杀虫剂喷雾 550ml*2瓶 香甜橙花香型家用室内杀蟑 杀虫气雾剂"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        },
+        {
+          "sku": "100013702761",
+          "title": "MOONY苏菲尤妮佳Q薄萌羽慕怡小羊驼拉拉裤XL码30片(12-17kg)超薄透气"
+        },
+        {
+          "sku": "100185508953",
+          "title": "KTC 23.8英寸2K 260Hz原生240Hz显示器 京东方NF2面板 HDR400 FastIPS升降旋转笔记本电脑显示屏H24E7"
+        },
+        {
+          "sku": "100101890666",
+          "title": "颐莲【张凌赫同款】玻尿酸深层补水喷雾600ml（300ml*2）情人节礼物"
+        },
+        {
+          "sku": "100161277266",
+          "title": "雪川食品（Snow Valley）1/4冷冻细薯条半成品 4斤/袋原味空气炸锅食材速食预制菜炸货小食"
+        }
+      ],
+      "skipped": 33,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100255086807",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100152256496",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100323016356",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100283426188",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100142698553",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100343501860",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100213721762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10149212746798",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100015858738",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100122992591",
+          "title": ""
+        }
+      ],
+      "total": 49,
+      "ts": "2026-05-23 00:07:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7251,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 4,
+      "processed": 48,
+      "sample": [
+        {
+          "sku": "10044958392578",
+          "title": "美的（Midea）电风扇家用7叶落地扇摇头电风扇循卧室宿舍轻音风扇【价低头部主播九折】 白色丨7叶台地两用"
+        },
+        {
+          "sku": "100132370894",
+          "title": "许翠花 经典升级纯植物猫砂2.5kg*4包木薯猫砂不粘底强吸水易结团"
+        },
+        {
+          "sku": "4423688",
+          "title": "雷达（Raid）杀虫剂喷雾 550ml*2瓶 香甜橙花香型家用室内杀蟑 杀虫气雾剂"
+        },
+        {
+          "sku": "100053606751",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        },
+        {
+          "sku": "100013702761",
+          "title": "MOONY苏菲尤妮佳Q薄萌羽慕怡小羊驼拉拉裤XL码30片(12-17kg)超薄透气"
+        },
+        {
+          "sku": "100185508953",
+          "title": "KTC 23.8英寸2K 260Hz原生240Hz显示器 京东方NF2面板 HDR400 FastIPS升降旋转笔记本电"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 00:07:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 49,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1w3PlJ",
+      "sku": "10044958392578",
+      "title": "美的（Midea）电风扇家用7叶落地扇摇头电风扇循卧室宿舍轻音风扇【价低头部主播九折】 白色丨7叶台地两用",
+      "ts": "2026-05-23 00:07:41",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 50,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RDwcXWZ",
+      "sku": "100132370894",
+      "title": "许翠花 经典升级纯植物猫砂2.5kg*4包木薯猫砂不粘底强吸水易结团",
+      "ts": "2026-05-23 00:07:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 51,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RgwfUs1",
+      "sku": "4423688",
+      "title": "雷达（Raid）杀虫剂喷雾 550ml*2瓶 香甜橙花香型家用室内杀蟑 杀虫气雾剂",
+      "ts": "2026-05-23 00:07:58",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 52,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1wDH3Q",
+      "sku": "100053606751",
+      "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电",
+      "ts": "2026-05-23 00:08:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 53,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RrwpY9p",
+      "sku": "100013702761",
+      "title": "MOONY苏菲尤妮佳Q薄萌羽慕怡小羊驼拉拉裤XL码30片(12-17kg)超薄透气",
+      "ts": "2026-05-23 00:08:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 54,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RrwNycC",
+      "sku": "100185508953",
+      "title": "KTC 23.8英寸2K 260Hz原生240Hz显示器 京东方NF2面板 HDR400 FastIPS升降旋转笔记本电",
+      "ts": "2026-05-23 00:08:29",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 55,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RrwYMhy",
+      "sku": "100101890666",
+      "title": "颐莲【张凌赫同款】玻尿酸深层补水喷雾600ml（300ml*2）情人节礼物",
+      "ts": "2026-05-23 00:08:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 56,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RawYJsI",
+      "sku": "100161277266",
+      "title": "雪川食品（Snow Valley）1/4冷冻细薯条半成品 4斤/袋原味空气炸锅食材速食预制菜炸货小食",
+      "ts": "2026-05-23 00:08:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 57,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RGw0HRR",
+      "sku": "100080694246",
+      "title": "小N卫生巾babycare消毒级国家标准母婴级日夜用姨妈巾38片京东",
+      "ts": "2026-05-23 00:08:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 58,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1wnC3L",
+      "sku": "4683613",
+      "title": "上鲜鸡翅中 净重2斤 大号鸡翅中出口级 烤翅鸡中翅鸡肉生鲜烧烤食材",
+      "ts": "2026-05-23 00:09:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 59,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RDwf1iK",
+      "sku": "100165975085",
+      "title": "得力（deli）六边形战神按动中性笔 0.5mm双球珠ST头消音学生考试中性笔刷题笔 备考考试专用黑色3支/盒 SA30",
+      "ts": "2026-05-23 00:09:19",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 60,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/Rrwylgp",
+      "sku": "100222162910",
+      "title": "好奇（Huggies）金装拉拉裤XXL33(15kg以上)尿不湿【速干不易红】",
+      "ts": "2026-05-23 00:09:30",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 61,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/ROw05gb",
+      "sku": "100291443314",
+      "title": "杰士邦玻尿酸避孕套安全套零感超薄尊享四合一36只套套成人计生用品byt",
+      "ts": "2026-05-23 00:09:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 62,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1wBPTS",
+      "sku": "100077640595",
+      "title": "绿联适用苹果17/16/15充电线Type-C数据线双头PD60W快充ctoc车载iPhone17/16e/15ProM",
+      "ts": "2026-05-23 00:09:50",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 63,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RGwy1x5",
+      "sku": "10136941147644",
+      "title": "聪妈【100%原生木浆】抽纸纸巾纸抽卫生纸餐巾纸擦手纸抽纸云柔巾 【100%原生木浆】 4层 70抽*1包",
+      "ts": "2026-05-23 00:09:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 64,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R6wHv52",
+      "sku": "100210120007",
+      "title": "KTC 27英寸2K 220Hz 旋转升降 内置音箱FastIPS显示屏HDR400硬件护眼三角洲电脑显示器H27T22",
+      "ts": "2026-05-23 00:10:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "10044958392578",
+          "title": "小N卫生巾babycare消毒级国家标准母婴级日夜用姨妈巾38片京东"
+        },
+        {
+          "sku": "100132370894",
+          "title": "上鲜鸡翅中 净重2斤 大号鸡翅中出口级 烤翅鸡中翅鸡肉生鲜烧烤食材"
+        },
+        {
+          "sku": "4423688",
+          "title": "得力（deli）六边形战神按动中性笔 0.5mm双球珠ST头消音学生考试中性笔刷题笔 备考考试专用黑色3支/盒 SA300"
+        },
+        {
+          "sku": "100053606751",
+          "title": "好奇（Huggies）金装拉拉裤XXL33(15kg以上)尿不湿【速干不易红】"
+        },
+        {
+          "sku": "100013702761",
+          "title": "杰士邦玻尿酸避孕套安全套零感超薄尊享四合一36只套套成人计生用品byt"
+        },
+        {
+          "sku": "100185508953",
+          "title": "绿联适用苹果17/16/15充电线Type-C数据线双头PD60W快充ctoc车载iPhone17/16e/15ProMax平板iPad笔记本"
+        },
+        {
+          "sku": "100101890666",
+          "title": "聪妈【100%原生木浆】抽纸纸巾纸抽卫生纸餐巾纸擦手纸抽纸云柔巾 【100%原生木浆】 4层 70抽*1包"
+        },
+        {
+          "sku": "100161277266",
+          "title": "KTC 27英寸2K 220Hz 旋转升降 内置音箱FastIPS显示屏HDR400硬件护眼三角洲电脑显示器H27T22S-3 Pro"
+        }
+      ],
+      "skipped": 29,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100142698553",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100343501860",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100213721762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10149212746798",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100015858738",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100122992591",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100232637907",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "598706",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100086864913",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100161814240",
+          "title": ""
+        }
+      ],
+      "total": 49,
+      "ts": "2026-05-23 00:10:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100207825837",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体水箱版RLS88HE"
+        },
+        {
+          "sku": "100230201848",
+          "title": "海尔（Haier）云溪4.0PRO 双擎热泵全自动滚筒烘干机烘衣服 除毛烘 家电京东自营 GA100-STQ7KJ3U1"
+        },
+        {
+          "sku": "100135119475",
+          "title": "领先主食猫罐头猫零食湿粮舔舔质地鸡肉味85g*24（新老款随机发）"
+        },
+        {
+          "sku": "100206833425",
+          "title": "艾歌超薄大承重嵌入式电视伸缩挂架65-90英寸电视支架 适用小米海信TCL创维等 不挡插座 不挡音响AG-P8"
+        },
+        {
+          "sku": "100190910995",
+          "title": "HKC 27英寸2K高清300Hz超频FastIPS旋转升降电脑HDR400硬件低蓝光电竞游戏HDMI2.1显示器G27H4Plus"
+        },
+        {
+          "sku": "100150587649",
+          "title": "日本叮叮电蚊香液儿童孕妇驱蚊水基孔肯雅热防蚊540晚3器12液45ml定时无香"
+        },
+        {
+          "sku": "100005399524",
+          "title": "京鲜生海南妃子笑荔枝【大果】 净重5斤 单果18-25g 生鲜水果"
+        },
+        {
+          "sku": "100222087831",
+          "title": "海尔「一级能效风冷无霜」165L两门家用小户型冰箱真省电抗菌净味灰色HC2-165WGHC2E9S9国家补贴"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100240769723",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100212738416",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100342567392",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100160601628",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100129659328",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100107253762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100097246287",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100029449913",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100133134399",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100319052246",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:10:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "100207825837",
+          "100230201848",
+          "100135119475",
+          "100206833425",
+          "100190910995"
+        ],
+        "before_skus": [
+          "10044958392578",
+          "100132370894",
+          "4423688",
+          "100053606751",
+          "100013702761"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 5
+      },
+      "ts": "2026-05-23 00:10:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100207825837",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体水箱版RLS88HE"
+        },
+        {
+          "sku": "100230201848",
+          "title": "海尔（Haier）云溪4.0PRO 双擎热泵全自动滚筒烘干机烘衣服 除毛烘 家电京东自营 GA100-STQ7KJ3U1"
+        },
+        {
+          "sku": "100135119475",
+          "title": "领先主食猫罐头猫零食湿粮舔舔质地鸡肉味85g*24（新老款随机发）"
+        },
+        {
+          "sku": "100206833425",
+          "title": "艾歌超薄大承重嵌入式电视伸缩挂架65-90英寸电视支架 适用小米海信TCL创维等 不挡插座 不挡音响AG-P8"
+        },
+        {
+          "sku": "100190910995",
+          "title": "HKC 27英寸2K高清300Hz超频FastIPS旋转升降电脑HDR400硬件低蓝光电竞游戏HDMI2.1显示器G27H4Plus"
+        },
+        {
+          "sku": "100150587649",
+          "title": "日本叮叮电蚊香液儿童孕妇驱蚊水基孔肯雅热防蚊540晚3器12液45ml定时无香"
+        },
+        {
+          "sku": "100005399524",
+          "title": "京鲜生海南妃子笑荔枝【大果】 净重5斤 单果18-25g 生鲜水果"
+        },
+        {
+          "sku": "100222087831",
+          "title": "海尔「一级能效风冷无霜」165L两门家用小户型冰箱真省电抗菌净味灰色HC2-165WGHC2E9S9国家补贴"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100240769723",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100212738416",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100342567392",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100160601628",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100129659328",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100107253762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100097246287",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100029449913",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100133134399",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100319052246",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:10:23",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7275,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 5,
+      "processed": 64,
+      "sample": [
+        {
+          "sku": "100207825837",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体水箱版RLS88HE"
+        },
+        {
+          "sku": "100230201848",
+          "title": "海尔（Haier）云溪4.0PRO 双擎热泵全自动滚筒烘干机烘衣服 除毛烘 家电京东自营 GA100-STQ7KJ3U1"
+        },
+        {
+          "sku": "100135119475",
+          "title": "领先主食猫罐头猫零食湿粮舔舔质地鸡肉味85g*24（新老款随机发）"
+        },
+        {
+          "sku": "100206833425",
+          "title": "艾歌超薄大承重嵌入式电视伸缩挂架65-90英寸电视支架 适用小米海信TCL创维等 不挡插座 不挡音响AG-P8"
+        },
+        {
+          "sku": "100190910995",
+          "title": "HKC 27英寸2K高清300Hz超频FastIPS旋转升降电脑HDR400硬件低蓝光电竞游戏HDMI2.1显示器G27"
+        },
+        {
+          "sku": "100150587649",
+          "title": "日本叮叮电蚊香液儿童孕妇驱蚊水基孔肯雅热防蚊540晚3器12液45ml定时无香"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 00:10:23",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 65,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/R6wvRkj",
+      "sku": "100207825837",
+      "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体水箱版RLS88HE",
+      "ts": "2026-05-23 00:10:26",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 66,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RawpltB",
+      "sku": "100230201848",
+      "title": "海尔（Haier）云溪4.0PRO 双擎热泵全自动滚筒烘干机烘衣服 除毛烘 家电京东自营 GA100-STQ7KJ3U1",
+      "ts": "2026-05-23 00:10:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 67,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RrwyoYK",
+      "sku": "100135119475",
+      "title": "领先主食猫罐头猫零食湿粮舔舔质地鸡肉味85g*24（新老款随机发）",
+      "ts": "2026-05-23 00:10:46",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 68,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROwRSlW",
+      "sku": "100206833425",
+      "title": "艾歌超薄大承重嵌入式电视伸缩挂架65-90英寸电视支架 适用小米海信TCL创维等 不挡插座 不挡音响AG-P8",
+      "ts": "2026-05-23 00:10:55",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 69,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROwAz0a",
+      "sku": "100190910995",
+      "title": "HKC 27英寸2K高清300Hz超频FastIPS旋转升降电脑HDR400硬件低蓝光电竞游戏HDMI2.1显示器G27",
+      "ts": "2026-05-23 00:11:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 70,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/R1wn5OX",
+      "sku": "100150587649",
+      "title": "日本叮叮电蚊香液儿童孕妇驱蚊水基孔肯雅热防蚊540晚3器12液45ml定时无香",
+      "ts": "2026-05-23 00:11:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 71,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/R6wToxO",
+      "sku": "100005399524",
+      "title": "京鲜生海南妃子笑荔枝【大果】 净重5斤 单果18-25g 生鲜水果",
+      "ts": "2026-05-23 00:11:24",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 72,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROwvvlT",
+      "sku": "100222087831",
+      "title": "海尔「一级能效风冷无霜」165L两门家用小户型冰箱真省电抗菌净味灰色HC2-165WGHC2E9S9国家补贴",
+      "ts": "2026-05-23 00:11:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 73,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgwDeVN",
+      "sku": "100048092090",
+      "title": "龙大肉食国产黑猪肋排4斤（不含脊骨） 免切排骨猪肋骨含软骨 黑猪肉烧烤",
+      "ts": "2026-05-23 00:11:41",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 74,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGw0Qjr",
+      "sku": "10113012590160",
+      "title": "自拍杆手机伸缩旅游神器360度旋转多功能迷你三脚架手持直播落地便携防抖支架带蓝牙可选美颜补光 黑色活动款-0.7米",
+      "ts": "2026-05-23 00:11:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 75,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGwYApG",
+      "sku": "10117404308228",
+      "title": "依能天然苏打水400ml*15瓶无糖弱碱性pH值8.5+饮用水 线下同款",
+      "ts": "2026-05-23 00:11:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 76,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RawEOOV",
+      "sku": "100007856029",
+      "title": "京鲜生 山东网纹瓜 净重4.5-5斤 单果1.8斤起2粒装 水果源头直发包邮",
+      "ts": "2026-05-23 00:12:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 77,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgwpQrL",
+      "sku": "100067993887",
+      "title": "京东跑山猪黑猪精肋排 净重1.6斤 整切排骨黑猪肋排猪肋条 红烧煲汤生鲜食材",
+      "ts": "2026-05-23 00:12:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 78,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROw7Vsb",
+      "sku": "100290300374",
+      "title": "新希望有机鲜牛奶巴氏杀菌冷藏鲜奶2L*2桶家庭分享早餐奶源头直发",
+      "ts": "2026-05-23 00:12:24",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 79,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RrwfFgb",
+      "sku": "100118816729",
+      "title": "皇家小虎手抓饼20片/4斤原味手抓饼皮儿童学生早餐半成品冷冻煎饼源头直发",
+      "ts": "2026-05-23 00:12:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 80,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RrwEuZY",
+      "sku": "100088611156",
+      "title": "兰蔻新持妆粉底液PO-01象牙白30ml持久遮瑕护肤品化妆品礼盒生日礼物",
+      "ts": "2026-05-23 00:12:42",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100207825837",
+          "title": "龙大肉食国产黑猪肋排4斤（不含脊骨） 免切排骨猪肋骨含软骨 黑猪肉烧烤"
+        },
+        {
+          "sku": "100230201848",
+          "title": "自拍杆手机伸缩旅游神器360度旋转多功能迷你三脚架手持直播落地便携防抖支架带蓝牙可选美颜补光 黑色活动款-0.7米"
+        },
+        {
+          "sku": "100135119475",
+          "title": "依能天然苏打水400ml*15瓶无糖弱碱性pH值8.5+饮用水 线下同款"
+        },
+        {
+          "sku": "100206833425",
+          "title": "京鲜生 山东网纹瓜 净重4.5-5斤 单果1.8斤起2粒装 水果源头直发包邮"
+        },
+        {
+          "sku": "100190910995",
+          "title": "京东跑山猪黑猪精肋排 净重1.6斤 整切排骨黑猪肋排猪肋条 红烧煲汤生鲜食材"
+        },
+        {
+          "sku": "100150587649",
+          "title": "新希望有机鲜牛奶巴氏杀菌冷藏鲜奶2L*2桶家庭分享早餐奶源头直发"
+        },
+        {
+          "sku": "100005399524",
+          "title": "皇家小虎手抓饼20片/4斤原味手抓饼皮儿童学生早餐半成品冷冻煎饼源头直发"
+        },
+        {
+          "sku": "100222087831",
+          "title": "兰蔻新持妆粉底液PO-01象牙白30ml持久遮瑕护肤品化妆品礼盒生日礼物"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100129659328",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100107253762",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100097246287",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100029449913",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100133134399",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100319052246",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100183193595",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100319603104",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100247822397",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100027217508",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:12:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100219262793",
+          "title": "添可【价保618】【一价全包】芙万Station Pod升级版自动上下水免打扰躺平基站洗地机自清洗吸尘拖地机"
+        },
+        {
+          "sku": "100042640369",
+          "title": "小米智能门锁 M40 Pro 人脸锁掌静脉锁 指纹锁 电子锁防盗门锁"
+        },
+        {
+          "sku": "100056020191",
+          "title": "鲜京采 鲜冻大号黑虎虾 去冰净重2斤 31-40只/盒 斑节对虾"
+        },
+        {
+          "sku": "100320855844",
+          "title": "兰蔻塑颜精雕面霜50ml百肽紧致提拉淡纹滋润护肤品化妆品礼盒生日礼物"
+        },
+        {
+          "sku": "10212218972819",
+          "title": "美菱（MeiLing）电风扇落地扇大风量办公室家用可拆洗电扇摇头轻音立式交流定频风扇落地 【超值推荐】16英寸7叶3档"
+        },
+        {
+          "sku": "100003604105",
+          "title": "亚太森博派部落A4打印纸 70g单包装 500张复印纸 顺滑不卡纸双面打印 高性价比草稿纸【店铺销冠】"
+        },
+        {
+          "sku": "100282588394",
+          "title": "索邦扫把簸箕套装可旋转扫把防风梳齿簸箕防缠头发套扫暖白色"
+        },
+        {
+          "sku": "100081273355",
+          "title": "美的（Midea）电热水壶烧水壶食品级304不锈钢自动断电双层防烫全钢无缝1.5L容量 MK-HJ1566【价保618】"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "10157131314171",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100169940120",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1865256",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100196686568",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100002143889",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100103222748",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100014696148",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2273766",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100201170858",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100020996822",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:12:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "100219262793",
+          "100042640369",
+          "100056020191",
+          "100320855844",
+          "10212218972819"
+        ],
+        "before_skus": [
+          "100207825837",
+          "100230201848",
+          "100135119475",
+          "100206833425",
+          "100190910995"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 6
+      },
+      "ts": "2026-05-23 00:12:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100219262793",
+          "title": "添可【价保618】【一价全包】芙万Station Pod升级版自动上下水免打扰躺平基站洗地机自清洗吸尘拖地机"
+        },
+        {
+          "sku": "100042640369",
+          "title": "小米智能门锁 M40 Pro 人脸锁掌静脉锁 指纹锁 电子锁防盗门锁"
+        },
+        {
+          "sku": "100056020191",
+          "title": "鲜京采 鲜冻大号黑虎虾 去冰净重2斤 31-40只/盒 斑节对虾"
+        },
+        {
+          "sku": "100320855844",
+          "title": "兰蔻塑颜精雕面霜50ml百肽紧致提拉淡纹滋润护肤品化妆品礼盒生日礼物"
+        },
+        {
+          "sku": "10212218972819",
+          "title": "美菱（MeiLing）电风扇落地扇大风量办公室家用可拆洗电扇摇头轻音立式交流定频风扇落地 【超值推荐】16英寸7叶3档"
+        },
+        {
+          "sku": "100003604105",
+          "title": "亚太森博派部落A4打印纸 70g单包装 500张复印纸 顺滑不卡纸双面打印 高性价比草稿纸【店铺销冠】"
+        },
+        {
+          "sku": "100282588394",
+          "title": "索邦扫把簸箕套装可旋转扫把防风梳齿簸箕防缠头发套扫暖白色"
+        },
+        {
+          "sku": "100081273355",
+          "title": "美的（Midea）电热水壶烧水壶食品级304不锈钢自动断电双层防烫全钢无缝1.5L容量 MK-HJ1566【价保618】"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "10157131314171",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100169940120",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1865256",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100196686568",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100002143889",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100103222748",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100014696148",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2273766",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100201170858",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100020996822",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 00:12:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7487,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 6,
+      "processed": 80,
+      "sample": [
+        {
+          "sku": "100219262793",
+          "title": "添可【价保618】【一价全包】芙万Station Pod升级版自动上下水免打扰躺平基站洗地机自清洗吸尘拖地机"
+        },
+        {
+          "sku": "100042640369",
+          "title": "小米智能门锁 M40 Pro 人脸锁掌静脉锁 指纹锁 电子锁防盗门锁"
+        },
+        {
+          "sku": "100056020191",
+          "title": "鲜京采 鲜冻大号黑虎虾 去冰净重2斤 31-40只/盒 斑节对虾"
+        },
+        {
+          "sku": "100320855844",
+          "title": "兰蔻塑颜精雕面霜50ml百肽紧致提拉淡纹滋润护肤品化妆品礼盒生日礼物"
+        },
+        {
+          "sku": "10212218972819",
+          "title": "美菱（MeiLing）电风扇落地扇大风量办公室家用可拆洗电扇摇头轻音立式交流定频风扇落地 【超值推荐】16英寸7叶3档"
+        },
+        {
+          "sku": "100003604105",
+          "title": "亚太森博派部落A4打印纸 70g单包装 500张复印纸 顺滑不卡纸双面打印 高性价比草稿纸【店铺销冠】"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 00:12:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 81,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/R6wfHQW",
+      "sku": "100219262793",
+      "title": "添可【价保618】【一价全包】芙万Station Pod升级版自动上下水免打扰躺平基站洗地机自清洗吸尘拖地机",
+      "ts": "2026-05-23 00:13:01",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 82,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RDwSx17",
+      "sku": "100042640369",
+      "title": "小米智能门锁 M40 Pro 人脸锁掌静脉锁 指纹锁 电子锁防盗门锁",
+      "ts": "2026-05-23 00:13:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 83,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RDwv7RN",
+      "sku": "100056020191",
+      "title": "鲜京采 鲜冻大号黑虎虾 去冰净重2斤 31-40只/盒 斑节对虾",
+      "ts": "2026-05-23 00:13:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 84,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/R6wvO94",
+      "sku": "100320855844",
+      "title": "兰蔻塑颜精雕面霜50ml百肽紧致提拉淡纹滋润护肤品化妆品礼盒生日礼物",
+      "ts": "2026-05-23 00:13:30",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 85,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/R1wyOGG",
+      "sku": "10212218972819",
+      "title": "美菱（MeiLing）电风扇落地扇大风量办公室家用可拆洗电扇摇头轻音立式交流定频风扇落地 【超值推荐】16英寸7叶3档",
+      "ts": "2026-05-23 00:13:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 86,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RgwYMRA",
+      "sku": "100003604105",
+      "title": "亚太森博派部落A4打印纸 70g单包装 500张复印纸 顺滑不卡纸双面打印 高性价比草稿纸【店铺销冠】",
+      "ts": "2026-05-23 00:13:50",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 87,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RGwBS70",
+      "sku": "100282588394",
+      "title": "索邦扫把簸箕套装可旋转扫把防风梳齿簸箕防缠头发套扫暖白色",
+      "ts": "2026-05-23 00:14:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 88,
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RGwBCci",
+      "sku": "100081273355",
+      "title": "美的（Midea）电热水壶烧水壶食品级304不锈钢自动断电双层防烫全钢无缝1.5L容量 MK-HJ1566【价保618】",
+      "ts": "2026-05-23 00:14:12",
+      "worker": "product_all_full"
     }
   ],
   "failures": {
@@ -330,9 +2820,37 @@
     "title": 0
   },
   "pagination": {
-    "changed_next_events_tail": 0,
-    "last_next": null,
-    "next_events_tail": 0
+    "changed_next_events_tail": 5,
+    "last_next": {
+      "event": "PRODUCT_NEXT_TEXT",
+      "result": {
+        "after_skus": [
+          "100219262793",
+          "100042640369",
+          "100056020191",
+          "100320855844",
+          "10212218972819"
+        ],
+        "before_skus": [
+          "100207825837",
+          "100230201848",
+          "100135119475",
+          "100206833425",
+          "100190910995"
+        ],
+        "changed": true,
+        "click": {
+          "count": 1,
+          "method": "get_by_text_exact_last",
+          "ok": true
+        },
+        "ok": true,
+        "page_no": 6
+      },
+      "ts": "2026-05-23 00:12:52",
+      "worker": "product_all_full"
+    },
+    "next_events_tail": 5
   },
   "phase": "HZ12Z v7 full 4000 progress check",
   "processes": [
@@ -346,9 +2864,9 @@
     "152910 .venv-browser/bin/python run/hz12_product_all_full_collector_v7.py"
   ],
   "runtime_report": {
-    "dedup_sku": 16,
-    "last_cycle_processed": 16,
-    "last_page_no": 1,
+    "dedup_sku": 88,
+    "last_cycle_processed": 88,
+    "last_page_no": 6,
     "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
     "missing": {
       "commission_rate": 0,
@@ -363,16 +2881,16 @@
       "title": 0
     },
     "non_numeric_sku": 0,
-    "ok": 16,
+    "ok": 88,
     "out": "data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl",
-    "rows": 16,
+    "rows": 88,
     "run_id": "20260522_235913",
     "state": {
       "created_at": "2026-05-22 23:59:13",
-      "current_page_no": 1,
+      "current_page_no": 6,
       "empty_page_streak": 0,
       "fail_streak": 0,
-      "known_sku_count": 16,
+      "known_sku_count": 88,
       "known_skus": [
         "2922989",
         "100032229606",
@@ -389,20 +2907,92 @@
         "10203721923125",
         "100328209650",
         "100095494527",
-        "100018967765"
+        "100018967765",
+        "100099390570",
+        "100222068761",
+        "100008131728",
+        "100254751065",
+        "100241347830",
+        "12535867",
+        "100019313112",
+        "100013109672",
+        "100115319917",
+        "7293773",
+        "10217402083315",
+        "100339942308",
+        "100203122085",
+        "100101208654",
+        "10148058763471",
+        "100025375040",
+        "100151494910",
+        "100032432993",
+        "100022610206",
+        "100017319863",
+        "100012820043",
+        "100043907496",
+        "100003277713",
+        "100253548314",
+        "100309707974",
+        "100012397899",
+        "100218948381",
+        "100053539383",
+        "100042257661",
+        "100150206524",
+        "100195145863",
+        "100102689815",
+        "10044958392578",
+        "100132370894",
+        "4423688",
+        "100053606751",
+        "100013702761",
+        "100185508953",
+        "100101890666",
+        "100161277266",
+        "100080694246",
+        "4683613",
+        "100165975085",
+        "100222162910",
+        "100291443314",
+        "100077640595",
+        "10136941147644",
+        "100210120007",
+        "100207825837",
+        "100230201848",
+        "100135119475",
+        "100206833425",
+        "100190910995",
+        "100150587649",
+        "100005399524",
+        "100222087831",
+        "100048092090",
+        "10113012590160",
+        "10117404308228",
+        "100007856029",
+        "100067993887",
+        "100290300374",
+        "100118816729",
+        "100088611156",
+        "100219262793",
+        "100042640369",
+        "100056020191",
+        "100320855844",
+        "10212218972819",
+        "100003604105",
+        "100282588394",
+        "100081273355"
       ],
       "last_event": {
         "event": "ITEM_OK",
-        "page_no": 1,
-        "short_url": "https://u.jd.com/R6wRGJs",
-        "sku": "100018967765",
-        "ts": "2026-05-23 00:01:49"
+        "page_no": 6,
+        "short_url": "https://u.jd.com/RGwBCci",
+        "sku": "100081273355",
+        "ts": "2026-05-23 00:14:12"
       },
       "last_full_cycle_finished_at": null,
       "next_refresh_due_at": null,
       "page_total_hint": 60,
       "refresh_round": 0,
-      "round_seen_sku_count": 16,
+      "round_seen_sku_count": 88,
       "round_seen_skus": [
         "2922989",
         "100032229606",
@@ -419,167 +3009,275 @@
         "10203721923125",
         "100328209650",
         "100095494527",
-        "100018967765"
+        "100018967765",
+        "100099390570",
+        "100222068761",
+        "100008131728",
+        "100254751065",
+        "100241347830",
+        "12535867",
+        "100019313112",
+        "100013109672",
+        "100115319917",
+        "7293773",
+        "10217402083315",
+        "100339942308",
+        "100203122085",
+        "100101208654",
+        "10148058763471",
+        "100025375040",
+        "100151494910",
+        "100032432993",
+        "100022610206",
+        "100017319863",
+        "100012820043",
+        "100043907496",
+        "100003277713",
+        "100253548314",
+        "100309707974",
+        "100012397899",
+        "100218948381",
+        "100053539383",
+        "100042257661",
+        "100150206524",
+        "100195145863",
+        "100102689815",
+        "10044958392578",
+        "100132370894",
+        "4423688",
+        "100053606751",
+        "100013702761",
+        "100185508953",
+        "100101890666",
+        "100161277266",
+        "100080694246",
+        "4683613",
+        "100165975085",
+        "100222162910",
+        "100291443314",
+        "100077640595",
+        "10136941147644",
+        "100210120007",
+        "100207825837",
+        "100230201848",
+        "100135119475",
+        "100206833425",
+        "100190910995",
+        "100150587649",
+        "100005399524",
+        "100222087831",
+        "100048092090",
+        "10113012590160",
+        "10117404308228",
+        "100007856029",
+        "100067993887",
+        "100290300374",
+        "100118816729",
+        "100088611156",
+        "100219262793",
+        "100042640369",
+        "100056020191",
+        "100320855844",
+        "10212218972819",
+        "100003604105",
+        "100282588394",
+        "100081273355"
       ],
       "run_id": "20260522_235913",
       "target_total": 4000,
-      "updated_at": "2026-05-23 00:01:49"
+      "updated_at": "2026-05-23 00:14:12"
     },
     "target_total": 4000,
-    "ts": "2026-05-23 00:01:55"
+    "ts": "2026-05-23 00:14:12"
   },
   "sample_last_20": [
     {
-      "commission_rate": "3.2",
-      "estimated_income": "1.28",
-      "page_no": 1,
-      "price": "39.9",
-      "short_url": "https://u.jd.com/ROwlb7L",
-      "sku": "2922989",
-      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+      "commission_rate": "3",
+      "estimated_income": "29.97",
+      "page_no": 5,
+      "price": "999",
+      "short_url": "https://u.jd.com/ROwAz0a",
+      "sku": "100190910995",
+      "title": "HKC 27英寸2K高清300Hz超频FastIPS旋转升降电脑HDR400硬件低蓝光电竞游戏HDMI2.1显示器G27H4Plus"
     },
     {
-      "commission_rate": "5",
-      "estimated_income": "5.60",
-      "page_no": 1,
-      "price": "112",
-      "short_url": "https://u.jd.com/RDw2C7n",
-      "sku": "100032229606",
-      "title": "理肤泉【黄子弘凡同款】B5霜40ml*2支套装修护保湿面霜护肤品生日礼物"
+      "commission_rate": "20",
+      "estimated_income": "20.78",
+      "page_no": 5,
+      "price": "103.9",
+      "short_url": "https://u.jd.com/R1wn5OX",
+      "sku": "100150587649",
+      "title": "日本叮叮电蚊香液儿童孕妇驱蚊水基孔肯雅热防蚊540晚3器12液45ml定时无香"
     },
     {
-      "commission_rate": "7.8",
-      "estimated_income": "8.50",
-      "page_no": 1,
-      "price": "109",
-      "short_url": "https://u.jd.com/ROwcoqf",
-      "sku": "4134901",
-      "title": "鲜京采【超百万销量】 厄瓜多尔白虾 净重 3斤/盒 28-46只/盒"
+      "commission_rate": "10",
+      "estimated_income": "5.98",
+      "page_no": 5,
+      "price": "59.8",
+      "short_url": "https://u.jd.com/R6wToxO",
+      "sku": "100005399524",
+      "title": "京鲜生海南妃子笑荔枝【大果】 净重5斤 单果18-25g 生鲜水果"
     },
     {
-      "commission_rate": "13.1",
-      "estimated_income": "14.21",
-      "page_no": 1,
-      "price": "100.8",
-      "short_url": "https://u.jd.com/RrwfMKT",
-      "sku": "100023815614",
-      "title": "保宁（B&B）婴幼儿洗衣皂儿童肥皂尿布皂专用内衣裤肥皂200g*8【到手共8块】"
+      "commission_rate": "1",
+      "estimated_income": "9.98",
+      "page_no": 5,
+      "price": "998.1",
+      "short_url": "https://u.jd.com/ROwvvlT",
+      "sku": "100222087831",
+      "title": "海尔「一级能效风冷无霜」165L两门家用小户型冰箱真省电抗菌净味灰色HC2-165WGHC2E9S9国家补贴"
+    },
+    {
+      "commission_rate": "9",
+      "estimated_income": "8.09",
+      "page_no": 5,
+      "price": "89.9",
+      "short_url": "https://u.jd.com/RgwDeVN",
+      "sku": "100048092090",
+      "title": "龙大肉食国产黑猪肋排4斤（不含脊骨） 免切排骨猪肋骨含软骨 黑猪肉烧烤"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "0.07",
+      "page_no": 5,
+      "price": "7.14",
+      "short_url": "https://u.jd.com/RGw0Qjr",
+      "sku": "10113012590160",
+      "title": "自拍杆手机伸缩旅游神器360度旋转多功能迷你三脚架手持直播落地便携防抖支架带蓝牙可选美颜补光 黑色活动款-0.7米"
     },
     {
       "commission_rate": "12",
-      "estimated_income": "2.51",
-      "page_no": 1,
-      "price": "20.9",
-      "short_url": "https://u.jd.com/ROwlOQ9",
-      "sku": "100051210211",
-      "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发"
-    },
-    {
-      "commission_rate": "3",
-      "estimated_income": "289.95",
-      "page_no": 1,
-      "price": "5799",
-      "short_url": "https://u.jd.com/ROwPiJm",
-      "sku": "100335695554",
-      "title": "美的空调 酷省电二代Pro 大3匹 一级能效变频 双出风 双排铜管立式柜机（支持鸿蒙智联）KFR-72LW/KS2P"
-    },
-    {
-      "commission_rate": "5.5",
-      "estimated_income": "4.12",
-      "page_no": 1,
-      "price": "74.9",
-      "short_url": "https://u.jd.com/RgwNHMd",
-      "sku": "5254604",
-      "title": "佳沛（zespri）新西兰 阳光金奇异果12粒特大果单果124-146g 猕猴桃水果礼盒"
-    },
-    {
-      "commission_rate": "11",
-      "estimated_income": "12.58",
-      "page_no": 1,
-      "price": "59.9",
-      "short_url": "https://u.jd.com/ROwVvQe",
-      "sku": "100151494892",
-      "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 2XL"
+      "estimated_income": "3.59",
+      "page_no": 5,
+      "price": "29.9",
+      "short_url": "https://u.jd.com/RGwYApG",
+      "sku": "10117404308228",
+      "title": "依能天然苏打水400ml*15瓶无糖弱碱性pH值8.5+饮用水 线下同款"
     },
     {
       "commission_rate": "6",
       "estimated_income": "1.01",
-      "page_no": 1,
+      "page_no": 5,
       "price": "16.9",
-      "short_url": "https://u.jd.com/RgwTFI9",
-      "sku": "100055353565",
-      "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发"
-    },
-    {
-      "commission_rate": "1.1",
-      "estimated_income": "0.38",
-      "page_no": 1,
-      "price": "18.18",
-      "short_url": "https://u.jd.com/RrwA90M",
-      "sku": "100304419342",
-      "title": "香满园美味精制小麦粉10斤 面粉馒头粉饺子粉面条粉"
-    },
-    {
-      "commission_rate": "1",
-      "estimated_income": "0.08",
-      "page_no": 1,
-      "price": "7.84",
-      "short_url": "https://u.jd.com/RGw0JA6",
-      "sku": "10211698401038",
-      "title": "【风柔轻音】简约现代多功能USB小风扇即插即用办公室学生宿舍静音大风力伸缩折叠便携电风扇 【颜色随机】1个装-USB直插+伸缩折叠"
-    },
-    {
-      "commission_rate": "1.1",
-      "estimated_income": "3.08",
-      "page_no": 1,
-      "price": "280",
-      "short_url": "https://u.jd.com/RDwAQ1N",
-      "sku": "100069118941",
-      "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物"
-    },
-    {
-      "commission_rate": "20",
-      "estimated_income": "0.80",
-      "page_no": 1,
-      "price": "3.99",
-      "short_url": "https://u.jd.com/RDwcBS5",
-      "sku": "10203721923125",
-      "title": "【电池能量站】5号7号大号纽扣电池适用血压计/燃气表/遥控器/电子秤/车钥匙/燃气灶/无线鼠标等 5号8粒+7号8粒"
-    },
-    {
-      "commission_rate": "2",
-      "estimated_income": "110.16",
-      "page_no": 1,
-      "price": "2754.05",
-      "short_url": "https://u.jd.com/RDwNnkD",
-      "sku": "100328209650",
-      "title": "美的空调 风尊三代PRO 大1.5匹一级能效全面风双排纯铜管舒适风卧室 空调挂机国家补贴KFR-35GW/MXC3P"
+      "short_url": "https://u.jd.com/RawEOOV",
+      "sku": "100007856029",
+      "title": "京鲜生 山东网纹瓜 净重4.5-5斤 单果1.8斤起2粒装 水果源头直发包邮"
     },
     {
       "commission_rate": "6",
-      "estimated_income": "1.67",
-      "page_no": 1,
-      "price": "27.9",
-      "short_url": "https://u.jd.com/RGwYga0",
-      "sku": "100095494527",
-      "title": "鲜京采 生鸡爪 2斤 40-50g/只 柠檬鸡爪凤爪烧烤鸡爪卤鸡爪生鲜食材"
+      "estimated_income": "3.59",
+      "page_no": 5,
+      "price": "59.9",
+      "short_url": "https://u.jd.com/RgwpQrL",
+      "sku": "100067993887",
+      "title": "京东跑山猪黑猪精肋排 净重1.6斤 整切排骨黑猪肋排猪肋条 红烧煲汤生鲜食材"
+    },
+    {
+      "commission_rate": "12.1",
+      "estimated_income": "4.21",
+      "page_no": 5,
+      "price": "34.8",
+      "short_url": "https://u.jd.com/ROw7Vsb",
+      "sku": "100290300374",
+      "title": "新希望有机鲜牛奶巴氏杀菌冷藏鲜奶2L*2桶家庭分享早餐奶源头直发"
+    },
+    {
+      "commission_rate": "6",
+      "estimated_income": "1.49",
+      "page_no": 5,
+      "price": "24.8",
+      "short_url": "https://u.jd.com/RrwfFgb",
+      "sku": "100118816729",
+      "title": "皇家小虎手抓饼20片/4斤原味手抓饼皮儿童学生早餐半成品冷冻煎饼源头直发"
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "18.80",
+      "page_no": 5,
+      "price": "470",
+      "short_url": "https://u.jd.com/RrwEuZY",
+      "sku": "100088611156",
+      "title": "兰蔻新持妆粉底液PO-01象牙白30ml持久遮瑕护肤品化妆品礼盒生日礼物"
     },
     {
       "commission_rate": "3",
-      "estimated_income": "6.54",
-      "page_no": 1,
-      "price": "109",
-      "short_url": "https://u.jd.com/R6wRGJs",
-      "sku": "100018967765",
-      "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB"
+      "estimated_income": "71.88",
+      "page_no": 6,
+      "price": "2396.15",
+      "short_url": "https://u.jd.com/R6wfHQW",
+      "sku": "100219262793",
+      "title": "添可【价保618】【一价全包】芙万Station Pod升级版自动上下水免打扰躺平基站洗地机自清洗吸尘拖地机"
+    },
+    {
+      "commission_rate": "7.8",
+      "estimated_income": "5.06",
+      "page_no": 6,
+      "price": "64.9",
+      "short_url": "https://u.jd.com/RDwSx17",
+      "sku": "100042640369",
+      "title": "小米智能门锁 M40 Pro 人脸锁掌静脉锁 指纹锁 电子锁防盗门锁"
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "30.56",
+      "page_no": 6,
+      "price": "764",
+      "short_url": "https://u.jd.com/RDwv7RN",
+      "sku": "100056020191",
+      "title": "鲜京采 鲜冻大号黑虎虾 去冰净重2斤 31-40只/盒 斑节对虾"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "168.35",
+      "page_no": 6,
+      "price": "2589.98",
+      "short_url": "https://u.jd.com/R6wvO94",
+      "sku": "100320855844",
+      "title": "兰蔻塑颜精雕面霜50ml百肽紧致提拉淡纹滋润护肤品化妆品礼盒生日礼物"
+    },
+    {
+      "commission_rate": "2.3",
+      "estimated_income": "3.40",
+      "page_no": 6,
+      "price": "89.6",
+      "short_url": "https://u.jd.com/R1wyOGG",
+      "sku": "10212218972819",
+      "title": "美菱（MeiLing）电风扇落地扇大风量办公室家用可拆洗电扇摇头轻音立式交流定频风扇落地 【超值推荐】16英寸7叶3档"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "0.50",
+      "page_no": 6,
+      "price": "16.5",
+      "short_url": "https://u.jd.com/RgwYMRA",
+      "sku": "100003604105",
+      "title": "亚太森博派部落A4打印纸 70g单包装 500张复印纸 顺滑不卡纸双面打印 高性价比草稿纸【店铺销冠】"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "2.84",
+      "page_no": 6,
+      "price": "18.9",
+      "short_url": "https://u.jd.com/RGwBS70",
+      "sku": "100282588394",
+      "title": "索邦扫把簸箕套装可旋转扫把防风梳齿簸箕防缠头发套扫暖白色"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "1.18",
+      "page_no": 6,
+      "price": "58.99",
+      "short_url": "https://u.jd.com/RGwBCci",
+      "sku": "100081273355",
+      "title": "美的（Midea）电热水壶烧水壶食品级304不锈钢自动断电双层防烫全钢无缝1.5L容量 MK-HJ1566【价保618】"
     }
   ],
   "state": {
     "created_at": "2026-05-22 23:59:13",
-    "current_page_no": 1,
+    "current_page_no": 6,
     "empty_page_streak": 0,
     "fail_streak": 0,
-    "known_sku_count": 16,
+    "known_sku_count": 88,
     "known_skus": [
       "2922989",
       "100032229606",
@@ -596,20 +3294,92 @@
       "10203721923125",
       "100328209650",
       "100095494527",
-      "100018967765"
+      "100018967765",
+      "100099390570",
+      "100222068761",
+      "100008131728",
+      "100254751065",
+      "100241347830",
+      "12535867",
+      "100019313112",
+      "100013109672",
+      "100115319917",
+      "7293773",
+      "10217402083315",
+      "100339942308",
+      "100203122085",
+      "100101208654",
+      "10148058763471",
+      "100025375040",
+      "100151494910",
+      "100032432993",
+      "100022610206",
+      "100017319863",
+      "100012820043",
+      "100043907496",
+      "100003277713",
+      "100253548314",
+      "100309707974",
+      "100012397899",
+      "100218948381",
+      "100053539383",
+      "100042257661",
+      "100150206524",
+      "100195145863",
+      "100102689815",
+      "10044958392578",
+      "100132370894",
+      "4423688",
+      "100053606751",
+      "100013702761",
+      "100185508953",
+      "100101890666",
+      "100161277266",
+      "100080694246",
+      "4683613",
+      "100165975085",
+      "100222162910",
+      "100291443314",
+      "100077640595",
+      "10136941147644",
+      "100210120007",
+      "100207825837",
+      "100230201848",
+      "100135119475",
+      "100206833425",
+      "100190910995",
+      "100150587649",
+      "100005399524",
+      "100222087831",
+      "100048092090",
+      "10113012590160",
+      "10117404308228",
+      "100007856029",
+      "100067993887",
+      "100290300374",
+      "100118816729",
+      "100088611156",
+      "100219262793",
+      "100042640369",
+      "100056020191",
+      "100320855844",
+      "10212218972819",
+      "100003604105",
+      "100282588394",
+      "100081273355"
     ],
     "last_event": {
       "event": "ITEM_OK",
-      "page_no": 1,
-      "short_url": "https://u.jd.com/R6wRGJs",
-      "sku": "100018967765",
-      "ts": "2026-05-23 00:01:49"
+      "page_no": 6,
+      "short_url": "https://u.jd.com/RGwBCci",
+      "sku": "100081273355",
+      "ts": "2026-05-23 00:14:12"
     },
     "last_full_cycle_finished_at": null,
     "next_refresh_due_at": null,
     "page_total_hint": 60,
     "refresh_round": 0,
-    "round_seen_sku_count": 16,
+    "round_seen_sku_count": 88,
     "round_seen_skus": [
       "2922989",
       "100032229606",
@@ -626,20 +3396,92 @@
       "10203721923125",
       "100328209650",
       "100095494527",
-      "100018967765"
+      "100018967765",
+      "100099390570",
+      "100222068761",
+      "100008131728",
+      "100254751065",
+      "100241347830",
+      "12535867",
+      "100019313112",
+      "100013109672",
+      "100115319917",
+      "7293773",
+      "10217402083315",
+      "100339942308",
+      "100203122085",
+      "100101208654",
+      "10148058763471",
+      "100025375040",
+      "100151494910",
+      "100032432993",
+      "100022610206",
+      "100017319863",
+      "100012820043",
+      "100043907496",
+      "100003277713",
+      "100253548314",
+      "100309707974",
+      "100012397899",
+      "100218948381",
+      "100053539383",
+      "100042257661",
+      "100150206524",
+      "100195145863",
+      "100102689815",
+      "10044958392578",
+      "100132370894",
+      "4423688",
+      "100053606751",
+      "100013702761",
+      "100185508953",
+      "100101890666",
+      "100161277266",
+      "100080694246",
+      "4683613",
+      "100165975085",
+      "100222162910",
+      "100291443314",
+      "100077640595",
+      "10136941147644",
+      "100210120007",
+      "100207825837",
+      "100230201848",
+      "100135119475",
+      "100206833425",
+      "100190910995",
+      "100150587649",
+      "100005399524",
+      "100222087831",
+      "100048092090",
+      "10113012590160",
+      "10117404308228",
+      "100007856029",
+      "100067993887",
+      "100290300374",
+      "100118816729",
+      "100088611156",
+      "100219262793",
+      "100042640369",
+      "100056020191",
+      "100320855844",
+      "10212218972819",
+      "100003604105",
+      "100282588394",
+      "100081273355"
     ],
     "run_id": "20260522_235913",
     "target_total": 4000,
-    "updated_at": "2026-05-23 00:01:49"
+    "updated_at": "2026-05-23 00:14:12"
   },
   "stop": null,
   "stop_exists": false,
   "throughput": {
-    "estimated_ok_per_hour": 397.24,
-    "eta_hours_to_4000": 10.03,
+    "estimated_ok_per_hour": 356.76,
+    "eta_hours_to_4000": 10.97,
     "first_ts": "2026-05-22T23:59:24",
-    "last_ts": "2026-05-23T00:01:49",
-    "runtime_hours_est": 0.04
+    "last_ts": "2026-05-23T00:14:12",
+    "runtime_hours_est": 0.247
   },
-  "ts": "2026-05-23 00:01:55"
+  "ts": "2026-05-23 00:14:13"
 }
