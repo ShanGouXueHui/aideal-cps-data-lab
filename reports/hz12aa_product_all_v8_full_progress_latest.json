@@ -1,0 +1,2005 @@
+{
+  "counts": {
+    "dedup_sku": 32,
+    "duplicate_ok_rows": 0,
+    "first_page": 1,
+    "last_page": 3,
+    "non_numeric": 0,
+    "ok": 32,
+    "page_count": 3,
+    "progress_pct": 0.8,
+    "rows": 32,
+    "target_total": 4000
+  },
+  "decision": "If v8 process is alive, stop=false, missing=0, and dedup_sku grows beyond the v7 plateau, continue. If still stuck, switch to category/query expansion.",
+  "events_tail": [
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100113323112",
+          "title": "京鲜生 无籽麒麟瓜西瓜 1粒装 净重5-7斤 生鲜水果源头直发包邮"
+        },
+        {
+          "sku": "100113323110",
+          "title": "京鲜生 无籽麒麟西瓜 净重7-9斤 1粒装 生鲜水果源头直发包邮"
+        },
+        {
+          "sku": "2922989",
+          "title": "追觅守护家1.0 Pro洗地机用智能扫吸拖洗一体自动清洁机【悠净pro同款】"
+        },
+        {
+          "sku": "100232595217",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "10191489644462",
+          "title": "【质感升级】平板支架桌面懒人平板电脑支架手机支架自拍视频可调节高低折叠旋转支撑架子大牌平替 皓月银"
+        },
+        {
+          "sku": "10211698401038",
+          "title": "【风柔轻音】简约现代多功能USB小风扇即插即用办公室学生宿舍静音大风力伸缩折叠便携电风扇 【颜色随机】1个装-USB直插+伸缩折叠"
+        },
+        {
+          "sku": "10179187350168",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+1对手指套"
+        },
+        {
+          "sku": "100086864913",
+          "title": "雷达（Raid）欧护驱蚊喷雾100ml*4（芦荟*2+金银花*2）花露水驱蚊液"
+        }
+      ],
+      "skipped": 20,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100241347830",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100008131728",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100311657068",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "7293773",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "4264786",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100091120706",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100032229606",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "3505364",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100293447482",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100094853884",
+          "title": ""
+        }
+      ],
+      "total": 36,
+      "ts": "2026-05-23 05:08:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 10,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 20,
+        "risk": [],
+        "text_len": 3277,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 1,
+      "processed": 0,
+      "sample": [
+        {
+          "sku": "100113323112",
+          "title": "京鲜生 无籽麒麟瓜西瓜 1粒装 净重5-7斤 生鲜水果源头直发包邮"
+        },
+        {
+          "sku": "100113323110",
+          "title": "京鲜生 无籽麒麟西瓜 净重7-9斤 1粒装 生鲜水果源头直发包邮"
+        },
+        {
+          "sku": "100232595217",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "10191489644462",
+          "title": "【质感升级】平板支架桌面懒人平板电脑支架手机支架自拍视频可调节高低折叠旋转支撑架子大牌平替 皓月银"
+        },
+        {
+          "sku": "10179187350168",
+          "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+1对手指套"
+        },
+        {
+          "sku": "100086864913",
+          "title": "雷达（Raid）欧护驱蚊喷雾100ml*4（芦荟*2+金银花*2）花露水驱蚊液"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 05:08:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 178,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RaI1Q7h",
+      "sku": "100113323112",
+      "title": "京鲜生 无籽麒麟瓜西瓜 1粒装 净重5-7斤 生鲜水果源头直发包邮",
+      "ts": "2026-05-23 05:08:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 179,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R1I15nM",
+      "sku": "100113323110",
+      "title": "京鲜生 无籽麒麟西瓜 净重7-9斤 1粒装 生鲜水果源头直发包邮",
+      "ts": "2026-05-23 05:08:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 180,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RgIQg9d",
+      "sku": "100232595217",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装",
+      "ts": "2026-05-23 05:08:28",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 181,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RgI8dbK",
+      "sku": "10191489644462",
+      "title": "【质感升级】平板支架桌面懒人平板电脑支架手机支架自拍视频可调节高低折叠旋转支撑架子大牌平替 皓月银",
+      "ts": "2026-05-23 05:08:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 182,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R1w9z8d",
+      "sku": "10179187350168",
+      "title": "手机散热器S72大风扇降温神器支架背夹环保壳护眼蓝光低价款涡轮 吃鸡直播电竞适用于苹果小米华为 s72散热器+1对手指套",
+      "ts": "2026-05-23 05:08:45",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 183,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R1IwvRn",
+      "sku": "100086864913",
+      "title": "雷达（Raid）欧护驱蚊喷雾100ml*4（芦荟*2+金银花*2）花露水驱蚊液",
+      "ts": "2026-05-23 05:08:56",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 184,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RrIbiLc",
+      "sku": "7219155",
+      "title": "京鲜生 广东妃子笑荔枝净重5斤装 单果16-25g 新鲜水果 源头直发包邮",
+      "ts": "2026-05-23 05:09:06",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 185,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RaIQfmQ",
+      "sku": "100306846708",
+      "title": "得宝（TEMPO）一博同款 无香抽纸4层加厚100抽*24包M码 家庭囤货装 整箱纸巾",
+      "ts": "2026-05-23 05:09:16",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 186,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R6IQHLq",
+      "sku": "100156340173",
+      "title": "ATK 蜻蜓A9无线鼠标电竞游戏办公鼠标 有线/蓝牙/2.4G/星闪三模连接轻量化对称极简工学 A9Plus玫红色",
+      "ts": "2026-05-23 05:09:26",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 187,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RDwkqp8",
+      "sku": "100076915183",
+      "title": "安井 火山石烤肠原味1斤500g 10根肉肠热狗香肠 油炸烧烤火锅脆皮地道",
+      "ts": "2026-05-23 05:09:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100113323112",
+          "title": "京鲜生 广东妃子笑荔枝净重5斤装 单果16-25g 新鲜水果 源头直发包邮"
+        },
+        {
+          "sku": "100113323110",
+          "title": "京鲜生 泰国进口金枕头鲜榴莲 3-4斤 1个装 新鲜水果 生鲜"
+        },
+        {
+          "sku": "2922989",
+          "title": "得宝（TEMPO）一博同款 无香抽纸4层加厚100抽*24包M码 家庭囤货装 整箱纸巾"
+        },
+        {
+          "sku": "100232595217",
+          "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发"
+        },
+        {
+          "sku": "10191489644462",
+          "title": "ATK 蜻蜓A9无线鼠标电竞游戏办公鼠标 有线/蓝牙/2.4G/星闪三模连接轻量化对称极简工学 A9Plus玫红色"
+        },
+        {
+          "sku": "10211698401038",
+          "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB"
+        },
+        {
+          "sku": "10179187350168",
+          "title": "赛霸鱼油rTG型鱼油EPA+DHAomega3高纯度健身ifos五星认证 RTG型 30粒*2盒 （粒粒独立包装）"
+        },
+        {
+          "sku": "100086864913",
+          "title": "安井 火山石烤肠原味1斤500g 10根肉肠热狗香肠 油炸烧烤火锅脆皮地道"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "4264786",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100091120706",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100032229606",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "3505364",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100293447482",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100094853884",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100095152765",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100097484090",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100013109672",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "4423688",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:09:46",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100149032561",
+          "title": "小鹿蓝蓝高钙多谷物棒饼干3口味 宝宝儿童零食注芯米果棒66根/198g"
+        },
+        {
+          "sku": "100142698553",
+          "title": "雷蛇（Razer）毒蝰V3pro专业版 Sentinels战队限定款 电竞游戏轻量化 无线鼠标 Sen战队 赤焰红色 cs 无畏契约"
+        },
+        {
+          "sku": "100013277862",
+          "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套"
+        },
+        {
+          "sku": "100069118941",
+          "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物"
+        },
+        {
+          "sku": "100327206736",
+          "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷"
+        },
+        {
+          "sku": "100191091166",
+          "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC"
+        },
+        {
+          "sku": "100055353565",
+          "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发"
+        },
+        {
+          "sku": "100107253762",
+          "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "7891989",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100058003940",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100291443314",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100257033880",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100071258799",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10113012590160",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100077803007",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100047588914",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267663",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100039156132",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:09:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_REPOSITION",
+      "result": {
+        "after_skus": [
+          "100149032561",
+          "100142698553",
+          "100013277862",
+          "100069118941",
+          "100327206736"
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "count": 1,
+            "method": "exact_text_last",
+            "ok": true
+          }
+        ],
+        "before_skus": [
+          "100113323112",
+          "100113323110",
+          "2922989",
+          "100232595217",
+          "10191489644462"
+        ],
+        "changed": true,
+        "ok": true,
+        "page_no": 2
+      },
+      "ts": "2026-05-23 05:09:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100149032561",
+          "title": "小鹿蓝蓝高钙多谷物棒饼干3口味 宝宝儿童零食注芯米果棒66根/198g"
+        },
+        {
+          "sku": "100142698553",
+          "title": "雷蛇（Razer）毒蝰V3pro专业版 Sentinels战队限定款 电竞游戏轻量化 无线鼠标 Sen战队 赤焰红色 cs 无畏契约"
+        },
+        {
+          "sku": "100013277862",
+          "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套"
+        },
+        {
+          "sku": "100069118941",
+          "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物"
+        },
+        {
+          "sku": "100327206736",
+          "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷"
+        },
+        {
+          "sku": "100191091166",
+          "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC"
+        },
+        {
+          "sku": "100055353565",
+          "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发"
+        },
+        {
+          "sku": "100107253762",
+          "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "7891989",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100058003940",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100291443314",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100257033880",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100071258799",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10113012590160",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100077803007",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100047588914",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267663",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100039156132",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:09:56",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 11,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7518,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 2,
+      "processed": 10,
+      "sample": [
+        {
+          "sku": "100149032561",
+          "title": "小鹿蓝蓝高钙多谷物棒饼干3口味 宝宝儿童零食注芯米果棒66根/198g"
+        },
+        {
+          "sku": "100142698553",
+          "title": "雷蛇（Razer）毒蝰V3pro专业版 Sentinels战队限定款 电竞游戏轻量化 无线鼠标 Sen战队 赤焰红色 c"
+        },
+        {
+          "sku": "100013277862",
+          "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套"
+        },
+        {
+          "sku": "100327206736",
+          "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷"
+        },
+        {
+          "sku": "100191091166",
+          "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC"
+        },
+        {
+          "sku": "100107253762",
+          "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 05:09:56",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 188,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RGwXElM",
+      "sku": "100149032561",
+      "title": "小鹿蓝蓝高钙多谷物棒饼干3口味 宝宝儿童零食注芯米果棒66根/198g",
+      "ts": "2026-05-23 05:10:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 189,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgIbzG5",
+      "sku": "100142698553",
+      "title": "雷蛇（Razer）毒蝰V3pro专业版 Sentinels战队限定款 电竞游戏轻量化 无线鼠标 Sen战队 赤焰红色 c",
+      "ts": "2026-05-23 05:10:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 190,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RaIaMaI",
+      "sku": "100013277862",
+      "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套",
+      "ts": "2026-05-23 05:10:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 191,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R1IzoCK",
+      "sku": "100327206736",
+      "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷",
+      "ts": "2026-05-23 05:10:29",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 192,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgwxKk7",
+      "sku": "100191091166",
+      "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC",
+      "ts": "2026-05-23 05:10:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 193,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RGIKNom",
+      "sku": "100107253762",
+      "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用",
+      "ts": "2026-05-23 05:10:48",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 194,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RgIasCH",
+      "sku": "100324618102",
+      "title": "艾美特（AIRMATE）【轻语系列】电风扇安静卧室一级能效落地扇轻音家用直流变频大风力台立式节能遥控全屋驱蚊循环扇",
+      "ts": "2026-05-23 05:11:00",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 195,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/RrILQzu",
+      "sku": "100192637760",
+      "title": "艾美特（AIRMATE）【超级单品】七叶家用大风力落地扇电风扇台式桌面空气循环小风扇大角度摇头节能台立两用电扇 X97",
+      "ts": "2026-05-23 05:11:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 196,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R6Id404",
+      "sku": "100326721838",
+      "title": "钻石牌（DIAMOND）电风扇家用遥控落地风扇【一级能效+直流变频+纯铜电机】节能落地扇客厅立式大风量客厅轻音电扇XR",
+      "ts": "2026-05-23 05:11:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 197,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R6IGgEd",
+      "sku": "100196686568",
+      "title": "六神驱蚊蛋48ml 雨后栀子 花露水 户外防蚊喷雾 驱蚊液喷雾 蚊怕水",
+      "ts": "2026-05-23 05:11:29",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 198,
+      "page_no": 2,
+      "short_url": "https://u.jd.com/R6IwTzb",
+      "sku": "7533597",
+      "title": "鲜京采麻辣小龙虾 3-5钱/只 共3盒4.2斤 净虾2.31斤 2026年新虾加热即食",
+      "ts": "2026-05-23 05:11:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100149032561",
+          "title": "手机防水袋可触摸屏潜水套游泳外卖骑手专用温泉防尘包防水手机套 粉色【两个装】"
+        },
+        {
+          "sku": "100142698553",
+          "title": "星鲨维生素D滴剂 30粒*10盒【300粒】维生素d3儿童3-12岁1-3岁婴幼儿0-6个月青少年11-17岁促钙吸收全年龄段可用"
+        },
+        {
+          "sku": "100013277862",
+          "title": "米家小米直流变频电风扇 落地风扇1X升级版自然风 米家APP100挡调节 支持充电宝供电"
+        },
+        {
+          "sku": "100069118941",
+          "title": "艾美特（AIRMATE）【轻语系列】电风扇安静卧室一级能效落地扇轻音家用直流变频大风力台立式节能遥控全屋驱蚊循环扇"
+        },
+        {
+          "sku": "100327206736",
+          "title": "艾美特（AIRMATE）【超级单品】七叶家用大风力落地扇电风扇台式桌面空气循环小风扇大角度摇头节能台立两用电扇 X97"
+        },
+        {
+          "sku": "100191091166",
+          "title": "钻石牌（DIAMOND）电风扇家用遥控落地风扇【一级能效+直流变频+纯铜电机】节能落地扇客厅立式大风量客厅轻音电扇XR"
+        },
+        {
+          "sku": "100055353565",
+          "title": "六神驱蚊蛋48ml 雨后栀子 花露水 户外防蚊喷雾 驱蚊液喷雾 蚊怕水"
+        },
+        {
+          "sku": "100107253762",
+          "title": "鲜京采麻辣小龙虾 3-5钱/只 共3盒4.2斤 净虾2.31斤 2026年新虾加热即食"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100071258799",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10113012590160",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100077803007",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100047588914",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "8267663",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100039156132",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100209543701",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100011855774",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100222867876",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100100411727",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:11:48",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100218807846",
+          "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发"
+        },
+        {
+          "sku": "6514957",
+          "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友"
+        },
+        {
+          "sku": "100313818892",
+          "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号"
+        },
+        {
+          "sku": "10219369742525",
+          "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤"
+        },
+        {
+          "sku": "100312008382",
+          "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】"
+        },
+        {
+          "sku": "100112947294",
+          "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果"
+        },
+        {
+          "sku": "100149164924",
+          "title": "京觅山东荷兰水果黄瓜 净重5斤 单果约70g 健康轻食水果 源头直发"
+        },
+        {
+          "sku": "100012515939",
+          "title": "伊利中老年高钙低脂富硒奶粉 中老年奶粉 礼盒 营养品 送长辈 850g*2"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100275929320",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100018503398",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100149874424",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100277970800",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100278894024",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100127704857",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100023815614",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100091663121",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100002336733",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100149040139",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:11:53",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_REPOSITION",
+      "result": {
+        "after_skus": [
+          "100218807846",
+          "6514957",
+          "100313818892",
+          "10219369742525",
+          "100312008382"
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "count": 1,
+            "method": "exact_text_last",
+            "ok": true
+          }
+        ],
+        "before_skus": [
+          "100149032561",
+          "100142698553",
+          "100013277862",
+          "100069118941",
+          "100327206736"
+        ],
+        "changed": true,
+        "ok": true,
+        "page_no": 3
+      },
+      "ts": "2026-05-23 05:11:53",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100218807846",
+          "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发"
+        },
+        {
+          "sku": "6514957",
+          "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友"
+        },
+        {
+          "sku": "100313818892",
+          "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号"
+        },
+        {
+          "sku": "10219369742525",
+          "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤"
+        },
+        {
+          "sku": "100312008382",
+          "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】"
+        },
+        {
+          "sku": "100112947294",
+          "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果"
+        },
+        {
+          "sku": "100149164924",
+          "title": "京觅山东荷兰水果黄瓜 净重5斤 单果约70g 健康轻食水果 源头直发"
+        },
+        {
+          "sku": "100012515939",
+          "title": "伊利中老年高钙低脂富硒奶粉 中老年奶粉 礼盒 营养品 送长辈 850g*2"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100275929320",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100018503398",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100149874424",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100277970800",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100278894024",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100127704857",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100023815614",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100091663121",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100002336733",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100149040139",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:11:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 13,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7342,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 3,
+      "processed": 21,
+      "sample": [
+        {
+          "sku": "100218807846",
+          "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发"
+        },
+        {
+          "sku": "6514957",
+          "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友"
+        },
+        {
+          "sku": "100313818892",
+          "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号"
+        },
+        {
+          "sku": "10219369742525",
+          "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤"
+        },
+        {
+          "sku": "100312008382",
+          "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】"
+        },
+        {
+          "sku": "100112947294",
+          "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 05:11:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 199,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/ROICDr5",
+      "sku": "100218807846",
+      "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发",
+      "ts": "2026-05-23 05:12:02",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 200,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RgwUQrx",
+      "sku": "6514957",
+      "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友",
+      "ts": "2026-05-23 05:12:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 201,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R6IMvQm",
+      "sku": "100313818892",
+      "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号",
+      "ts": "2026-05-23 05:12:22",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 202,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrI6C7f",
+      "sku": "10219369742525",
+      "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤",
+      "ts": "2026-05-23 05:12:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 203,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RawUnzj",
+      "sku": "100312008382",
+      "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】",
+      "ts": "2026-05-23 05:12:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 204,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R1ICyt9",
+      "sku": "100112947294",
+      "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果",
+      "ts": "2026-05-23 05:12:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 205,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R6IM3q3",
+      "sku": "100149164924",
+      "title": "京觅山东荷兰水果黄瓜 净重5斤 单果约70g 健康轻食水果 源头直发",
+      "ts": "2026-05-23 05:13:01",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 206,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RaIQMWq",
+      "sku": "100012515939",
+      "title": "伊利中老年高钙低脂富硒奶粉 中老年奶粉 礼盒 营养品 送长辈 850g*2",
+      "ts": "2026-05-23 05:13:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 207,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RGIKBVJ",
+      "sku": "100213122216",
+      "title": "京觅 沙地麒麟少籽甜西瓜 净重5-7斤 新鲜水果时令生鲜应当季源头直发",
+      "ts": "2026-05-23 05:13:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 208,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrwkDPd",
+      "sku": "100215868252",
+      "title": "城市理享樱花白茶除臭颗粒瞬吸结团食用级木薯猫砂2.5kg*4不粘底不散团",
+      "ts": "2026-05-23 05:13:30",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 209,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrIzjme",
+      "sku": "100122992591",
+      "title": "小鹿蓝蓝婴幼儿炭烧棒饼干磨牙棒草莓苹果味宝宝儿童零食饼干130g 10月+",
+      "ts": "2026-05-23 05:13:42",
+      "worker": "product_all_full"
+    }
+  ],
+  "failures": {
+    "item_fail_events_tail": 0,
+    "last_fail": null,
+    "stop_events_tail": 0
+  },
+  "latest_log": "logs/hz12aa_product_all_v8_reposition_full_4000_20260523_050747.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 0,
+    "item_url": 0,
+    "jd_command": 0,
+    "long_url": 0,
+    "price": 0,
+    "qr_url": 0,
+    "refresh_due_at": 0,
+    "title": 0
+  },
+  "pagination": {
+    "changed_next_events_tail": 2,
+    "last_next": {
+      "event": "PRODUCT_NEXT_REPOSITION",
+      "result": {
+        "after_skus": [
+          "100218807846",
+          "6514957",
+          "100313818892",
+          "10219369742525",
+          "100312008382"
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "count": 1,
+            "method": "exact_text_last",
+            "ok": true
+          }
+        ],
+        "before_skus": [
+          "100149032561",
+          "100142698553",
+          "100013277862",
+          "100069118941",
+          "100327206736"
+        ],
+        "changed": true,
+        "ok": true,
+        "page_no": 3
+      },
+      "ts": "2026-05-23 05:11:53",
+      "worker": "product_all_full"
+    },
+    "next_reposition_events_tail": 2,
+    "next_text_events_tail": 0
+  },
+  "phase": "HZ12AA v8 full 4000 progress check",
+  "processes": [
+    "30073 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19228 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "30813 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=18 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=2689596256 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9707303555383192621,944854569504904531,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709003178624776",
+    "31235 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=21 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=3084494454 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16150984383135774655,1160708162090800132,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709005989750323",
+    "90042 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19229 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "90127 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=7 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=597554857766 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16208265014382412072,13159075389174745411,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190708992871164437",
+    "90529 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=19 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=598093526729 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14671244850568944341,16436198809862861882,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709004115666625",
+    "91412 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=22 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=599005193539 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15734030695083693844,9382617413635888269,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709006926792172",
+    "156203 .venv-browser/bin/python run/hz12_product_all_full_collector_v8.py"
+  ],
+  "runtime_report": {
+    "dedup_sku": 32,
+    "last_cycle_processed": 32,
+    "last_page_no": 3,
+    "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
+    "missing": {
+      "commission_rate": 0,
+      "estimated_income": 0,
+      "image_url": 0,
+      "item_url": 0,
+      "jd_command": 0,
+      "long_url": 0,
+      "price": 0,
+      "qr_url": 0,
+      "refresh_due_at": 0,
+      "title": 0
+    },
+    "non_numeric_sku": 0,
+    "ok": 32,
+    "out": "data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl",
+    "rows": 32,
+    "run_id": "20260523_050750",
+    "state": {
+      "created_at": "2026-05-23 05:07:50",
+      "current_page_no": 3,
+      "empty_page_streak": 0,
+      "fail_streak": 0,
+      "known_sku_count": 209,
+      "known_skus": [
+        "100003277713",
+        "100003604105",
+        "100003780887",
+        "100005399524",
+        "100006368703",
+        "100007856029",
+        "100008131728",
+        "100011480214",
+        "100012046128",
+        "100012397899",
+        "100012820043",
+        "100013109672",
+        "100013702761",
+        "100017319863",
+        "100018967765",
+        "100019033870",
+        "100019313112",
+        "100019863636",
+        "100022609970",
+        "100022610206",
+        "100023815614",
+        "100024097990",
+        "100025375040",
+        "100032229606",
+        "100032432993",
+        "100032668716",
+        "100035083751",
+        "100042257661",
+        "100042640369",
+        "100043907496",
+        "100046159079",
+        "100047588914",
+        "100048092090",
+        "100050125483",
+        "100051210211",
+        "100052592671",
+        "100053539383",
+        "100053606751",
+        "100055353565",
+        "100056020191",
+        "100057735312",
+        "100061888792",
+        "100067993887",
+        "100068249604",
+        "100069118941",
+        "100077496286",
+        "100077640595",
+        "100080694246",
+        "100081273355",
+        "100085475246",
+        "100085475248",
+        "100088611156",
+        "100091935494",
+        "100095006897",
+        "100095494527",
+        "100098294510",
+        "100099390570",
+        "100099980322",
+        "100100139162",
+        "100101208654",
+        "100101253004",
+        "100101890666",
+        "100102689815",
+        "100106858403",
+        "100108349203",
+        "100112184019",
+        "100115319917",
+        "100118816729",
+        "100130158201",
+        "100130936320",
+        "100132370894",
+        "100132804335",
+        "100135119475",
+        "100138029628",
+        "100141655267",
+        "100143684539",
+        "100150206524",
+        "100150587649",
+        "100151494892",
+        "100151494910",
+        "100154667283",
+        "100155289623",
+        "100161081513",
+        "100161277266",
+        "100165938093",
+        "100165975085",
+        "100166993208",
+        "100167003670",
+        "100182378084",
+        "100185508953",
+        "100186278724",
+        "100189037340",
+        "100189210246",
+        "100190910995",
+        "100191726084",
+        "100192823125",
+        "100195145863",
+        "100203122085",
+        "100205465310",
+        "100206833425",
+        "100207825837",
+        "100210120007",
+        "100212597317",
+        "100214728021",
+        "100218948381",
+        "100219262793",
+        "100222068761",
+        "100222087831",
+        "100222162910",
+        "100222867876",
+        "100224792137",
+        "100228072595",
+        "100230201848",
+        "100231366028",
+        "100241347830",
+        "100241837763",
+        "100242736477",
+        "100245936963",
+        "100246268693",
+        "100247795303",
+        "100251214836",
+        "100253548314",
+        "100254751065",
+        "100272488116",
+        "100272655804",
+        "100275998636",
+        "100278341498",
+        "100282588394",
+        "100284929282",
+        "100287911974",
+        "100290300374",
+        "100291443314",
+        "100298548542",
+        "100304419342",
+        "100309707974",
+        "100320855844",
+        "100322704732",
+        "100323906032",
+        "100325737886",
+        "100327193954",
+        "100328209650",
+        "100328377904",
+        "100335695554",
+        "100335939584",
+        "100336503028",
+        "100339942308",
+        "100340192066",
+        "100343776978",
+        "10044958392578",
+        "10065879647582",
+        "10078236049328",
+        "10094542832872",
+        "10108187876075",
+        "10113012590160",
+        "10117404308228",
+        "10120542692388",
+        "10136941147644",
+        "10143261783927",
+        "10148058763471",
+        "10157005007030",
+        "10179665114071",
+        "10201501355198",
+        "10203721923125",
+        "10211698401038",
+        "10212218972819",
+        "10213782085837",
+        "10217402083315",
+        "12535867",
+        "241204",
+        "255797",
+        "2922989",
+        "4134901",
+        "4423688",
+        "4683613",
+        "5254604",
+        "6268257",
+        "7293773",
+        "100113323112",
+        "100113323110",
+        "100232595217",
+        "10191489644462",
+        "10179187350168",
+        "100086864913",
+        "7219155",
+        "100306846708",
+        "100156340173",
+        "100076915183",
+        "100149032561",
+        "100142698553",
+        "100013277862",
+        "100327206736",
+        "100191091166",
+        "100107253762",
+        "100324618102",
+        "100192637760",
+        "100326721838",
+        "100196686568",
+        "7533597",
+        "100218807846",
+        "6514957",
+        "100313818892",
+        "10219369742525",
+        "100312008382",
+        "100112947294",
+        "100149164924",
+        "100012515939",
+        "100213122216",
+        "100215868252",
+        "100122992591"
+      ],
+      "last_event": {
+        "event": "ITEM_OK",
+        "page_no": 3,
+        "short_url": "https://u.jd.com/RrIzjme",
+        "sku": "100122992591",
+        "ts": "2026-05-23 05:13:42"
+      },
+      "last_full_cycle_finished_at": null,
+      "next_refresh_due_at": null,
+      "page_total_hint": 60,
+      "refresh_round": 0,
+      "round_seen_sku_count": 32,
+      "round_seen_skus": [
+        "100113323112",
+        "100113323110",
+        "100232595217",
+        "10191489644462",
+        "10179187350168",
+        "100086864913",
+        "7219155",
+        "100306846708",
+        "100156340173",
+        "100076915183",
+        "100149032561",
+        "100142698553",
+        "100013277862",
+        "100327206736",
+        "100191091166",
+        "100107253762",
+        "100324618102",
+        "100192637760",
+        "100326721838",
+        "100196686568",
+        "7533597",
+        "100218807846",
+        "6514957",
+        "100313818892",
+        "10219369742525",
+        "100312008382",
+        "100112947294",
+        "100149164924",
+        "100012515939",
+        "100213122216",
+        "100215868252",
+        "100122992591"
+      ],
+      "run_id": "20260523_050750",
+      "target_total": 4000,
+      "updated_at": "2026-05-23 05:13:42"
+    },
+    "target_total": 4000,
+    "ts": "2026-05-23 05:13:42"
+  },
+  "sample_last_20": [
+    {
+      "commission_rate": "5",
+      "estimated_income": "5.40",
+      "page_no": 2,
+      "price": "59.9",
+      "short_url": "https://u.jd.com/RaIaMaI",
+      "sku": "100013277862",
+      "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套"
+    },
+    {
+      "commission_rate": "25",
+      "estimated_income": "9.95",
+      "page_no": 2,
+      "price": "39.8",
+      "short_url": "https://u.jd.com/R1IzoCK",
+      "sku": "100327206736",
+      "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "3.82",
+      "page_no": 2,
+      "price": "109",
+      "short_url": "https://u.jd.com/RgwxKk7",
+      "sku": "100191091166",
+      "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC"
+    },
+    {
+      "commission_rate": "6.1",
+      "estimated_income": "107.36",
+      "page_no": 2,
+      "price": "1759.99",
+      "short_url": "https://u.jd.com/RGIKNom",
+      "sku": "100107253762",
+      "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用"
+    },
+    {
+      "commission_rate": "8",
+      "estimated_income": "17.01",
+      "page_no": 2,
+      "price": "179",
+      "short_url": "https://u.jd.com/RgIasCH",
+      "sku": "100324618102",
+      "title": "艾美特（AIRMATE）【轻语系列】电风扇安静卧室一级能效落地扇轻音家用直流变频大风力台立式节能遥控全屋驱蚊循环扇"
+    },
+    {
+      "commission_rate": "8",
+      "estimated_income": "9.40",
+      "page_no": 2,
+      "price": "98.99",
+      "short_url": "https://u.jd.com/RrILQzu",
+      "sku": "100192637760",
+      "title": "艾美特（AIRMATE）【超级单品】七叶家用大风力落地扇电风扇台式桌面空气循环小风扇大角度摇头节能台立两用电扇 X97"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "4.69",
+      "page_no": 2,
+      "price": "134.1",
+      "short_url": "https://u.jd.com/R6Id404",
+      "sku": "100326721838",
+      "title": "钻石牌（DIAMOND）电风扇家用遥控落地风扇【一级能效+直流变频+纯铜电机】节能落地扇客厅立式大风量客厅轻音电扇XR"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "5.69",
+      "page_no": 2,
+      "price": "37.9",
+      "short_url": "https://u.jd.com/R6IGgEd",
+      "sku": "100196686568",
+      "title": "六神驱蚊蛋48ml 雨后栀子 花露水 户外防蚊喷雾 驱蚊液喷雾 蚊怕水"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "2.35",
+      "page_no": 2,
+      "price": "46.9",
+      "short_url": "https://u.jd.com/R6IwTzb",
+      "sku": "7533597",
+      "title": "鲜京采麻辣小龙虾 3-5钱/只 共3盒4.2斤 净虾2.31斤 2026年新虾加热即食"
+    },
+    {
+      "commission_rate": "8",
+      "estimated_income": "5.99",
+      "page_no": 3,
+      "price": "74.9",
+      "short_url": "https://u.jd.com/ROICDr5",
+      "sku": "100218807846",
+      "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发"
+    },
+    {
+      "commission_rate": "6.1",
+      "estimated_income": "35.99",
+      "page_no": 3,
+      "price": "590",
+      "short_url": "https://u.jd.com/RgwUQrx",
+      "sku": "6514957",
+      "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "10.20",
+      "page_no": 3,
+      "price": "68",
+      "short_url": "https://u.jd.com/R6IMvQm",
+      "sku": "100313818892",
+      "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号"
+    },
+    {
+      "commission_rate": "12",
+      "estimated_income": "0.70",
+      "page_no": 3,
+      "price": "5.8",
+      "short_url": "https://u.jd.com/RrI6C7f",
+      "sku": "10219369742525",
+      "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤"
+    },
+    {
+      "commission_rate": "8.3",
+      "estimated_income": "42.93",
+      "page_no": 3,
+      "price": "379.93",
+      "short_url": "https://u.jd.com/RawUnzj",
+      "sku": "100312008382",
+      "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "0.40",
+      "page_no": 3,
+      "price": "39.8",
+      "short_url": "https://u.jd.com/R1ICyt9",
+      "sku": "100112947294",
+      "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果"
+    },
+    {
+      "commission_rate": "9",
+      "estimated_income": "1.15",
+      "page_no": 3,
+      "price": "12.8",
+      "short_url": "https://u.jd.com/R6IM3q3",
+      "sku": "100149164924",
+      "title": "京觅山东荷兰水果黄瓜 净重5斤 单果约70g 健康轻食水果 源头直发"
+    },
+    {
+      "commission_rate": "6",
+      "estimated_income": "5.34",
+      "page_no": 3,
+      "price": "88.99",
+      "short_url": "https://u.jd.com/RaIQMWq",
+      "sku": "100012515939",
+      "title": "伊利中老年高钙低脂富硒奶粉 中老年奶粉 礼盒 营养品 送长辈 850g*2"
+    },
+    {
+      "commission_rate": "9",
+      "estimated_income": "1.79",
+      "page_no": 3,
+      "price": "19.9",
+      "short_url": "https://u.jd.com/RGIKBVJ",
+      "sku": "100213122216",
+      "title": "京觅 沙地麒麟少籽甜西瓜 净重5-7斤 新鲜水果时令生鲜应当季源头直发"
+    },
+    {
+      "commission_rate": "16",
+      "estimated_income": "14.86",
+      "page_no": 3,
+      "price": "92.9",
+      "short_url": "https://u.jd.com/RrwkDPd",
+      "sku": "100215868252",
+      "title": "城市理享樱花白茶除臭颗粒瞬吸结团食用级木薯猫砂2.5kg*4不粘底不散团"
+    },
+    {
+      "commission_rate": "20",
+      "estimated_income": "2.46",
+      "page_no": 3,
+      "price": "12.3",
+      "short_url": "https://u.jd.com/RrIzjme",
+      "sku": "100122992591",
+      "title": "小鹿蓝蓝婴幼儿炭烧棒饼干磨牙棒草莓苹果味宝宝儿童零食饼干130g 10月+"
+    }
+  ],
+  "state": {
+    "created_at": "2026-05-23 05:07:50",
+    "current_page_no": 3,
+    "empty_page_streak": 0,
+    "fail_streak": 0,
+    "known_sku_count": 209,
+    "known_skus": [
+      "100003277713",
+      "100003604105",
+      "100003780887",
+      "100005399524",
+      "100006368703",
+      "100007856029",
+      "100008131728",
+      "100011480214",
+      "100012046128",
+      "100012397899",
+      "100012820043",
+      "100013109672",
+      "100013702761",
+      "100017319863",
+      "100018967765",
+      "100019033870",
+      "100019313112",
+      "100019863636",
+      "100022609970",
+      "100022610206",
+      "100023815614",
+      "100024097990",
+      "100025375040",
+      "100032229606",
+      "100032432993",
+      "100032668716",
+      "100035083751",
+      "100042257661",
+      "100042640369",
+      "100043907496",
+      "100046159079",
+      "100047588914",
+      "100048092090",
+      "100050125483",
+      "100051210211",
+      "100052592671",
+      "100053539383",
+      "100053606751",
+      "100055353565",
+      "100056020191",
+      "100057735312",
+      "100061888792",
+      "100067993887",
+      "100068249604",
+      "100069118941",
+      "100077496286",
+      "100077640595",
+      "100080694246",
+      "100081273355",
+      "100085475246",
+      "100085475248",
+      "100088611156",
+      "100091935494",
+      "100095006897",
+      "100095494527",
+      "100098294510",
+      "100099390570",
+      "100099980322",
+      "100100139162",
+      "100101208654",
+      "100101253004",
+      "100101890666",
+      "100102689815",
+      "100106858403",
+      "100108349203",
+      "100112184019",
+      "100115319917",
+      "100118816729",
+      "100130158201",
+      "100130936320",
+      "100132370894",
+      "100132804335",
+      "100135119475",
+      "100138029628",
+      "100141655267",
+      "100143684539",
+      "100150206524",
+      "100150587649",
+      "100151494892",
+      "100151494910",
+      "100154667283",
+      "100155289623",
+      "100161081513",
+      "100161277266",
+      "100165938093",
+      "100165975085",
+      "100166993208",
+      "100167003670",
+      "100182378084",
+      "100185508953",
+      "100186278724",
+      "100189037340",
+      "100189210246",
+      "100190910995",
+      "100191726084",
+      "100192823125",
+      "100195145863",
+      "100203122085",
+      "100205465310",
+      "100206833425",
+      "100207825837",
+      "100210120007",
+      "100212597317",
+      "100214728021",
+      "100218948381",
+      "100219262793",
+      "100222068761",
+      "100222087831",
+      "100222162910",
+      "100222867876",
+      "100224792137",
+      "100228072595",
+      "100230201848",
+      "100231366028",
+      "100241347830",
+      "100241837763",
+      "100242736477",
+      "100245936963",
+      "100246268693",
+      "100247795303",
+      "100251214836",
+      "100253548314",
+      "100254751065",
+      "100272488116",
+      "100272655804",
+      "100275998636",
+      "100278341498",
+      "100282588394",
+      "100284929282",
+      "100287911974",
+      "100290300374",
+      "100291443314",
+      "100298548542",
+      "100304419342",
+      "100309707974",
+      "100320855844",
+      "100322704732",
+      "100323906032",
+      "100325737886",
+      "100327193954",
+      "100328209650",
+      "100328377904",
+      "100335695554",
+      "100335939584",
+      "100336503028",
+      "100339942308",
+      "100340192066",
+      "100343776978",
+      "10044958392578",
+      "10065879647582",
+      "10078236049328",
+      "10094542832872",
+      "10108187876075",
+      "10113012590160",
+      "10117404308228",
+      "10120542692388",
+      "10136941147644",
+      "10143261783927",
+      "10148058763471",
+      "10157005007030",
+      "10179665114071",
+      "10201501355198",
+      "10203721923125",
+      "10211698401038",
+      "10212218972819",
+      "10213782085837",
+      "10217402083315",
+      "12535867",
+      "241204",
+      "255797",
+      "2922989",
+      "4134901",
+      "4423688",
+      "4683613",
+      "5254604",
+      "6268257",
+      "7293773",
+      "100113323112",
+      "100113323110",
+      "100232595217",
+      "10191489644462",
+      "10179187350168",
+      "100086864913",
+      "7219155",
+      "100306846708",
+      "100156340173",
+      "100076915183",
+      "100149032561",
+      "100142698553",
+      "100013277862",
+      "100327206736",
+      "100191091166",
+      "100107253762",
+      "100324618102",
+      "100192637760",
+      "100326721838",
+      "100196686568",
+      "7533597",
+      "100218807846",
+      "6514957",
+      "100313818892",
+      "10219369742525",
+      "100312008382",
+      "100112947294",
+      "100149164924",
+      "100012515939",
+      "100213122216",
+      "100215868252",
+      "100122992591"
+    ],
+    "last_event": {
+      "event": "ITEM_OK",
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrIzjme",
+      "sku": "100122992591",
+      "ts": "2026-05-23 05:13:42"
+    },
+    "last_full_cycle_finished_at": null,
+    "next_refresh_due_at": null,
+    "page_total_hint": 60,
+    "refresh_round": 0,
+    "round_seen_sku_count": 32,
+    "round_seen_skus": [
+      "100113323112",
+      "100113323110",
+      "100232595217",
+      "10191489644462",
+      "10179187350168",
+      "100086864913",
+      "7219155",
+      "100306846708",
+      "100156340173",
+      "100076915183",
+      "100149032561",
+      "100142698553",
+      "100013277862",
+      "100327206736",
+      "100191091166",
+      "100107253762",
+      "100324618102",
+      "100192637760",
+      "100326721838",
+      "100196686568",
+      "7533597",
+      "100218807846",
+      "6514957",
+      "100313818892",
+      "10219369742525",
+      "100312008382",
+      "100112947294",
+      "100149164924",
+      "100012515939",
+      "100213122216",
+      "100215868252",
+      "100122992591"
+    ],
+    "run_id": "20260523_050750",
+    "target_total": 4000,
+    "updated_at": "2026-05-23 05:13:42"
+  },
+  "stop": null,
+  "stop_exists": false,
+  "throughput": {
+    "estimated_ok_per_hour": 340.83,
+    "eta_hours_to_4000": 11.64,
+    "first_ts": "2026-05-23T05:08:04",
+    "last_ts": "2026-05-23T05:13:42",
+    "runtime_hours_est": 0.094
+  },
+  "ts": "2026-05-23 05:13:46"
+}
