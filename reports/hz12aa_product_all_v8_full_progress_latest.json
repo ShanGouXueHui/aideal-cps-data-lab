@@ -1,14 +1,14 @@
 {
   "counts": {
-    "dedup_sku": 32,
+    "dedup_sku": 63,
     "duplicate_ok_rows": 0,
     "first_page": 1,
-    "last_page": 3,
+    "last_page": 5,
     "non_numeric": 0,
-    "ok": 32,
-    "page_count": 3,
-    "progress_pct": 0.8,
-    "rows": 32,
+    "ok": 63,
+    "page_count": 5,
+    "progress_pct": 1.57,
+    "rows": 63,
     "target_total": 4000
   },
   "decision": "If v8 process is alive, stop=false, missing=0, and dedup_sku grows beyond the v7 plateau, continue. If still stuck, switch to category/query expansion.",
@@ -1183,6 +1183,1030 @@
       "title": "小鹿蓝蓝婴幼儿炭烧棒饼干磨牙棒草莓苹果味宝宝儿童零食饼干130g 10月+",
       "ts": "2026-05-23 05:13:42",
       "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 210,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/R6I8YA7",
+      "sku": "100210025087",
+      "title": "ALittleFlower适用iPhone17手机壳苹果17保护套钢化膜超薄防摔软壳透明镜头全包男女款套装一朵小花",
+      "ts": "2026-05-23 05:13:52",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 211,
+      "page_no": 3,
+      "short_url": "https://u.jd.com/RrI8oBv",
+      "sku": "100003198451",
+      "title": "好奇（Huggies）金装拉拉裤XL96片(12-17kg)尿不湿【速干不易红】",
+      "ts": "2026-05-23 05:14:01",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "100218807846",
+          "title": "圣迪乐村可生食营养新鲜鸡蛋30枚礼盒装净重3斤 无沙门氏菌京东自营生鲜"
+        },
+        {
+          "sku": "6514957",
+          "title": "京觅 沙地麒麟少籽甜西瓜 净重5-7斤 新鲜水果时令生鲜应当季源头直发"
+        },
+        {
+          "sku": "100313818892",
+          "title": "城市理享樱花白茶除臭颗粒瞬吸结团食用级木薯猫砂2.5kg*4不粘底不散团"
+        },
+        {
+          "sku": "10219369742525",
+          "title": "绿联适用苹果17/16/15充电线Type-C数据线双头PD60W快充ctoc车载iPhone17/16e/15ProMax平板iPad笔记本"
+        },
+        {
+          "sku": "100312008382",
+          "title": "小鹿蓝蓝婴幼儿炭烧棒饼干磨牙棒草莓苹果味宝宝儿童零食饼干130g 10月+"
+        },
+        {
+          "sku": "100112947294",
+          "title": "ALittleFlower适用iPhone17手机壳苹果17保护套钢化膜超薄防摔软壳透明镜头全包男女款套装一朵小花"
+        },
+        {
+          "sku": "100149164924",
+          "title": "馥华福州鱼丸240g 鱼肉+猪肉≥78%手工包心丸子火锅食材关东煮麻辣烫"
+        },
+        {
+          "sku": "100012515939",
+          "title": "好奇（Huggies）金装拉拉裤XL96片(12-17kg)尿不湿【速干不易红】"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100278894024",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100127704857",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100023815614",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100091663121",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100002336733",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100149040139",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100225860374",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100304419342",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100016340774",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "2324631",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:14:08",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "8267785",
+          "title": "圣农鸡大胸2斤 冷冻白羽鸡 健身减脂鸡胸肉 低脂鸡胸肉 减脂 鸡排早餐"
+        },
+        {
+          "sku": "100243302705",
+          "title": "三星Galaxy S26 AI手机 超清夜间拍摄 IP68 第五代骁龙8至尊版 游戏手机 国家补贴 12+256GB 旷宇黑"
+        },
+        {
+          "sku": "100067489150",
+          "title": "京鲜生泰国金枕头榴莲肉2斤果肉单袋 冷冻新鲜榴莲 低温水果 进口生鲜"
+        },
+        {
+          "sku": "100238404340",
+          "title": "绿联苹果17充电头45W氮化镓充电器适用iPhone17ProMax16e/15/iPad手机PD40/30W快充头Type-C数据线插头"
+        },
+        {
+          "sku": "100264285174",
+          "title": "雷神黑武士23.8英寸2K260Hz HDR500nit升级版 FastIPS 电竞显示器屏 硬件低蓝光游戏升降旋转JQ24F260L"
+        },
+        {
+          "sku": "100187329304",
+          "title": "花西子【618抢先购】好气色防晒粉饼Z25定妆SPF50+四合一控油提亮9g礼物"
+        },
+        {
+          "sku": "100035629496",
+          "title": "晨光（M&G）绿晨光 A4 70g多功能双面打印纸复印纸 500张/包 单包装 双面畅打 APYVQAF4"
+        },
+        {
+          "sku": "100319634672",
+          "title": "蕉内银皮331S男士袜子纯棉商务精梳棉袜透气10A抗菌防臭中筒夏季5双"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100117108830",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100272488146",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100293334624",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1180552",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100152256496",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100012046128",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100031944956",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100208130625",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100284964054",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100034355572",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:14:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_REPOSITION",
+      "result": {
+        "after_skus": [
+          "8267785",
+          "100243302705",
+          "100067489150",
+          "100238404340",
+          "100264285174"
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "count": 1,
+            "method": "exact_text_last",
+            "ok": true
+          }
+        ],
+        "before_skus": [
+          "100218807846",
+          "6514957",
+          "100313818892",
+          "10219369742525",
+          "100312008382"
+        ],
+        "changed": true,
+        "ok": true,
+        "page_no": 4
+      },
+      "ts": "2026-05-23 05:14:13",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "8267785",
+          "title": "圣农鸡大胸2斤 冷冻白羽鸡 健身减脂鸡胸肉 低脂鸡胸肉 减脂 鸡排早餐"
+        },
+        {
+          "sku": "100243302705",
+          "title": "三星Galaxy S26 AI手机 超清夜间拍摄 IP68 第五代骁龙8至尊版 游戏手机 国家补贴 12+256GB 旷宇黑"
+        },
+        {
+          "sku": "100067489150",
+          "title": "京鲜生泰国金枕头榴莲肉2斤果肉单袋 冷冻新鲜榴莲 低温水果 进口生鲜"
+        },
+        {
+          "sku": "100238404340",
+          "title": "绿联苹果17充电头45W氮化镓充电器适用iPhone17ProMax16e/15/iPad手机PD40/30W快充头Type-C数据线插头"
+        },
+        {
+          "sku": "100264285174",
+          "title": "雷神黑武士23.8英寸2K260Hz HDR500nit升级版 FastIPS 电竞显示器屏 硬件低蓝光游戏升降旋转JQ24F260L"
+        },
+        {
+          "sku": "100187329304",
+          "title": "花西子【618抢先购】好气色防晒粉饼Z25定妆SPF50+四合一控油提亮9g礼物"
+        },
+        {
+          "sku": "100035629496",
+          "title": "晨光（M&G）绿晨光 A4 70g多功能双面打印纸复印纸 500张/包 单包装 双面畅打 APYVQAF4"
+        },
+        {
+          "sku": "100319634672",
+          "title": "蕉内银皮331S男士袜子纯棉商务精梳棉袜透气10A抗菌防臭中筒夏季5双"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100117108830",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100272488146",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100293334624",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "1180552",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100152256496",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100012046128",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100031944956",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100208130625",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100284964054",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100034355572",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:14:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7673,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 4,
+      "processed": 34,
+      "sample": [
+        {
+          "sku": "8267785",
+          "title": "圣农鸡大胸2斤 冷冻白羽鸡 健身减脂鸡胸肉 低脂鸡胸肉 减脂 鸡排早餐"
+        },
+        {
+          "sku": "100243302705",
+          "title": "三星Galaxy S26 AI手机 超清夜间拍摄 IP68 第五代骁龙8至尊版 游戏手机 国家补贴 12+256GB 旷"
+        },
+        {
+          "sku": "100067489150",
+          "title": "京鲜生泰国金枕头榴莲肉2斤果肉单袋 冷冻新鲜榴莲 低温水果 进口生鲜"
+        },
+        {
+          "sku": "100238404340",
+          "title": "绿联苹果17充电头45W氮化镓充电器适用iPhone17ProMax16e/15/iPad手机PD40/30W快充头Ty"
+        },
+        {
+          "sku": "100264285174",
+          "title": "雷神黑武士23.8英寸2K260Hz HDR500nit升级版 FastIPS 电竞显示器屏 硬件低蓝光游戏升降旋转JQ"
+        },
+        {
+          "sku": "100187329304",
+          "title": "花西子【618抢先购】好气色防晒粉饼Z25定妆SPF50+四合一控油提亮9g礼物"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 05:14:18",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 212,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RrIrOCb",
+      "sku": "8267785",
+      "title": "圣农鸡大胸2斤 冷冻白羽鸡 健身减脂鸡胸肉 低脂鸡胸肉 减脂 鸡排早餐",
+      "ts": "2026-05-23 05:14:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 213,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R6IqdI4",
+      "sku": "100243302705",
+      "title": "三星Galaxy S26 AI手机 超清夜间拍摄 IP68 第五代骁龙8至尊版 游戏手机 国家补贴 12+256GB 旷",
+      "ts": "2026-05-23 05:14:33",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 214,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RDwxM6o",
+      "sku": "100067489150",
+      "title": "京鲜生泰国金枕头榴莲肉2斤果肉单袋 冷冻新鲜榴莲 低温水果 进口生鲜",
+      "ts": "2026-05-23 05:14:44",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 215,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1IKpTR",
+      "sku": "100238404340",
+      "title": "绿联苹果17充电头45W氮化镓充电器适用iPhone17ProMax16e/15/iPad手机PD40/30W快充头Ty",
+      "ts": "2026-05-23 05:14:55",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 216,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RaIbdoc",
+      "sku": "100264285174",
+      "title": "雷神黑武士23.8英寸2K260Hz HDR500nit升级版 FastIPS 电竞显示器屏 硬件低蓝光游戏升降旋转JQ",
+      "ts": "2026-05-23 05:15:05",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 217,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R6IGGZA",
+      "sku": "100187329304",
+      "title": "花西子【618抢先购】好气色防晒粉饼Z25定妆SPF50+四合一控油提亮9g礼物",
+      "ts": "2026-05-23 05:15:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 218,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1I1wPH",
+      "sku": "100035629496",
+      "title": "晨光（M&G）绿晨光 A4 70g多功能双面打印纸复印纸 500张/包 单包装 双面畅打 APYVQAF4",
+      "ts": "2026-05-23 05:15:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 219,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RgIqCIC",
+      "sku": "100319634672",
+      "title": "蕉内银皮331S男士袜子纯棉商务精梳棉袜透气10A抗菌防臭中筒夏季5双",
+      "ts": "2026-05-23 05:15:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 220,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R6IiQLS",
+      "sku": "100016720604",
+      "title": "超威强效洁厕灵 500g*4瓶 卫生间浴室马桶厕所清洁剂洁厕液 松木香",
+      "ts": "2026-05-23 05:15:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 221,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1IbBh2",
+      "sku": "758086",
+      "title": "芙丽芳丝（Freeplus）洁面洗面奶霜氨基酸敏感肌男女士通用深层清洁保湿100g",
+      "ts": "2026-05-23 05:15:58",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 222,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/R1IIuW3",
+      "sku": "100067747362",
+      "title": "长城（Great Wall）额定750W X7金牌全模电脑电源（ATX3.1/原生PCIe5.1/漏电监测/单路12V/",
+      "ts": "2026-05-23 05:16:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 223,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RDIuwXd",
+      "sku": "100177717993",
+      "title": "飞利浦【价保618】新款男士电动剃须刀新一代旋护式鹅卵石Pro 无线充电便携款 父亲节生日礼物送男生",
+      "ts": "2026-05-23 05:16:15",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 224,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RgIKt8o",
+      "sku": "100247266185",
+      "title": "飞智B9X磁吸手机散热器 半导体吸风散热智能控温 游戏直播平板降温神器 一加苹果iphone17promaxIQOO",
+      "ts": "2026-05-23 05:16:26",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 225,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RgIbfV2",
+      "sku": "100090068606",
+      "title": "高露洁（Colgate）速感白美白牙膏去烟渍去黄去口臭亮白男士女士进口85g*2 包装随机",
+      "ts": "2026-05-23 05:16:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 226,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/ROICavq",
+      "sku": "100221187906",
+      "title": "钻石牌落地扇家用电风扇【1级能效+直流变频+纯铜电机】摇头扇省电无极变速强劲风力大网罩DFS-ZBHM07z",
+      "ts": "2026-05-23 05:16:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 227,
+      "page_no": 4,
+      "short_url": "https://u.jd.com/RrI1mB8",
+      "sku": "100190452813",
+      "title": "雷蛇（Razer）炼狱蝰蛇V4pro专业版 黑色 无线鼠标 电竞游戏 超轻量化 光学传感器高精度 全面升级新品 Niko",
+      "ts": "2026-05-23 05:16:58",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 20,
+      "sample": [
+        {
+          "sku": "8267785",
+          "title": "超威强效洁厕灵 500g*4瓶 卫生间浴室马桶厕所清洁剂洁厕液 松木香"
+        },
+        {
+          "sku": "100243302705",
+          "title": "芙丽芳丝（Freeplus）洁面洗面奶霜氨基酸敏感肌男女士通用深层清洁保湿100g"
+        },
+        {
+          "sku": "100067489150",
+          "title": "长城（Great Wall）额定750W X7金牌全模电脑电源（ATX3.1/原生PCIe5.1/漏电监测/单路12V/自动启停/支持50系显卡）"
+        },
+        {
+          "sku": "100238404340",
+          "title": "飞利浦【价保618】新款男士电动剃须刀新一代旋护式鹅卵石Pro 无线充电便携款 父亲节生日礼物送男生"
+        },
+        {
+          "sku": "100264285174",
+          "title": "飞智B9X磁吸手机散热器 半导体吸风散热智能控温 游戏直播平板降温神器 一加苹果iphone17promaxIQOO"
+        },
+        {
+          "sku": "100187329304",
+          "title": "高露洁（Colgate）速感白美白牙膏去烟渍去黄去口臭亮白男士女士进口85g*2 包装随机"
+        },
+        {
+          "sku": "100035629496",
+          "title": "钻石牌落地扇家用电风扇【1级能效+直流变频+纯铜电机】摇头扇省电无极变速强劲风力大网罩DFS-ZBHM07z"
+        },
+        {
+          "sku": "100319634672",
+          "title": "雷蛇（Razer）炼狱蝰蛇V4pro专业版 黑色 无线鼠标 电竞游戏 超轻量化 光学传感器高精度 全面升级新品 Niko推荐"
+        }
+      ],
+      "skipped": 30,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100152256496",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100012046128",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100031944956",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100208130625",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100284964054",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100034355572",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100052882480",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100068533986",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100251656416",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100191091164",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:17:04",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100013143896",
+          "title": "羽西【肖战同款全新包装】白玉防晒隔离妆前SPF50生日礼物送女友"
+        },
+        {
+          "sku": "10201501355198",
+          "title": "美菱（MeiLing）电风扇家用落地扇客厅卧室一级能效省电智能风扇直流变频大风力风扇 直流变频机械款【1级能效+纯铜电机】"
+        },
+        {
+          "sku": "100112283355",
+          "title": "卡诗*山茶花护发精油30ml修护滋养保湿柔顺亮泽防毛躁礼盒生日礼物"
+        },
+        {
+          "sku": "100274572932",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体超薄版RLS88HE"
+        },
+        {
+          "sku": "100012759262",
+          "title": "鲜京采41/50南美白虾仁 无冰净重2斤 90-110只 去虾线"
+        },
+        {
+          "sku": "100079478326",
+          "title": "罗技（G）GPW3 狗屁王三代gpw无线游戏鼠标 专业电竞手型 GPW2金刚升级款 三角洲/无畏契约 粉【全网爆款】"
+        },
+        {
+          "sku": "100244560795",
+          "title": "CUKTECH酷态科6号屏显充Ultra氮化镓充电器100W快充头多口兼容苹果45W笔记本65W适用华为小米17"
+        },
+        {
+          "sku": "1098359",
+          "title": "博士伦润明清透 隐形眼镜水护理液830ml 隐形眼镜多功能护理液"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100013225672",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100111281760",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100081142608",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100008100535",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100068249604",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100017751266",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100033342002",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100024699876",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100022294050",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100197847384",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:17:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PRODUCT_NEXT_REPOSITION",
+      "result": {
+        "after_skus": [
+          "100013143896",
+          "10201501355198",
+          "100112283355",
+          "100274572932",
+          "100012759262"
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "count": 1,
+            "method": "exact_text_last",
+            "ok": true
+          }
+        ],
+        "before_skus": [
+          "8267785",
+          "100243302705",
+          "100067489150",
+          "100238404340",
+          "100264285174"
+        ],
+        "changed": true,
+        "ok": true,
+        "page_no": 5
+      },
+      "ts": "2026-05-23 05:17:09",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "100013143896",
+          "title": "羽西【肖战同款全新包装】白玉防晒隔离妆前SPF50生日礼物送女友"
+        },
+        {
+          "sku": "10201501355198",
+          "title": "美菱（MeiLing）电风扇家用落地扇客厅卧室一级能效省电智能风扇直流变频大风力风扇 直流变频机械款【1级能效+纯铜电机】"
+        },
+        {
+          "sku": "100112283355",
+          "title": "卡诗*山茶花护发精油30ml修护滋养保湿柔顺亮泽防毛躁礼盒生日礼物"
+        },
+        {
+          "sku": "100274572932",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体超薄版RLS88HE"
+        },
+        {
+          "sku": "100012759262",
+          "title": "鲜京采41/50南美白虾仁 无冰净重2斤 90-110只 去虾线"
+        },
+        {
+          "sku": "100079478326",
+          "title": "罗技（G）GPW3 狗屁王三代gpw无线游戏鼠标 专业电竞手型 GPW2金刚升级款 三角洲/无畏契约 粉【全网爆款】"
+        },
+        {
+          "sku": "100244560795",
+          "title": "CUKTECH酷态科6号屏显充Ultra氮化镓充电器100W快充头多口兼容苹果45W笔记本65W适用华为小米17"
+        },
+        {
+          "sku": "1098359",
+          "title": "博士伦润明清透 隐形眼镜水护理液830ml 隐形眼镜多功能护理液"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100013225672",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100111281760",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100081142608",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100008100535",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100068249604",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100017751266",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100033342002",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100024699876",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100022294050",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100197847384",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-23 05:17:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 13,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7460,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 5,
+      "processed": 50,
+      "sample": [
+        {
+          "sku": "100013143896",
+          "title": "羽西【肖战同款全新包装】白玉防晒隔离妆前SPF50生日礼物送女友"
+        },
+        {
+          "sku": "100112283355",
+          "title": "卡诗*山茶花护发精油30ml修护滋养保湿柔顺亮泽防毛躁礼盒生日礼物"
+        },
+        {
+          "sku": "100274572932",
+          "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体超薄版RLS88HE"
+        },
+        {
+          "sku": "100012759262",
+          "title": "鲜京采41/50南美白虾仁 无冰净重2斤 90-110只 去虾线"
+        },
+        {
+          "sku": "100079478326",
+          "title": "罗技（G）GPW3 狗屁王三代gpw无线游戏鼠标 专业电竞手型 GPW2金刚升级款 三角洲/无畏契约 粉【全网爆款】"
+        },
+        {
+          "sku": "100244560795",
+          "title": "CUKTECH酷态科6号屏显充Ultra氮化镓充电器100W快充头多口兼容苹果45W笔记本65W适用华为小米17"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-23 05:17:14",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 228,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgI1Bk6",
+      "sku": "100013143896",
+      "title": "羽西【肖战同款全新包装】白玉防晒隔离妆前SPF50生日礼物送女友",
+      "ts": "2026-05-23 05:17:17",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 229,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROIgvWp",
+      "sku": "100112283355",
+      "title": "卡诗*山茶花护发精油30ml修护滋养保湿柔顺亮泽防毛躁礼盒生日礼物",
+      "ts": "2026-05-23 05:17:27",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 230,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RrI6VGT",
+      "sku": "100274572932",
+      "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体超薄版RLS88HE",
+      "ts": "2026-05-23 05:17:37",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 231,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/ROIzcar",
+      "sku": "100012759262",
+      "title": "鲜京采41/50南美白虾仁 无冰净重2斤 90-110只 去虾线",
+      "ts": "2026-05-23 05:17:49",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 232,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGIMf9X",
+      "sku": "100079478326",
+      "title": "罗技（G）GPW3 狗屁王三代gpw无线游戏鼠标 专业电竞手型 GPW2金刚升级款 三角洲/无畏契约 粉【全网爆款】",
+      "ts": "2026-05-23 05:18:01",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 233,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RaIzPsE",
+      "sku": "100244560795",
+      "title": "CUKTECH酷态科6号屏显充Ultra氮化镓充电器100W快充头多口兼容苹果45W笔记本65W适用华为小米17",
+      "ts": "2026-05-23 05:18:12",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 234,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RaIrSyJ",
+      "sku": "1098359",
+      "title": "博士伦润明清透 隐形眼镜水护理液830ml 隐形眼镜多功能护理液",
+      "ts": "2026-05-23 05:18:22",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 235,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGIzT5X",
+      "sku": "100269242042",
+      "title": "图拉斯【AR抗反光+3D大弧边】适用iphone17promax钢化膜苹果17promax手机膜防指纹全屏覆盖高清无尘仓",
+      "ts": "2026-05-23 05:18:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 236,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RrIbiDl",
+      "sku": "100250551352",
+      "title": "品胜【3C认证可上飞机】充电宝自带四线20000毫安22.5W快充小巧移动电源适用苹果iphone17promax华为黑",
+      "ts": "2026-05-23 05:18:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 237,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgIC86I",
+      "sku": "100216324708",
+      "title": "CareMagic进口水蛭素纳豆激酶非辅酶血压血脂呵护中老年心脑管健康60粒*1瓶",
+      "ts": "2026-05-23 05:18:50",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 238,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgIdmQs",
+      "sku": "4857197",
+      "title": "山山活性炭除甲醛碳包2000g室内除臭碳包汽车去甲醛清除剂除味炭包",
+      "ts": "2026-05-23 05:18:59",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 239,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RgIsIMf",
+      "sku": "10138364419460",
+      "title": "扬子电风扇家用落地扇空气循环扇落地式台立两用电扇插电学生宿舍卧室制冷轻音摇头办公室室内客厅 【高级灰】左右摇头-高0.8",
+      "ts": "2026-05-23 05:19:10",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 240,
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGIibD5",
+      "sku": "100037601961",
+      "title": "网易严选冻干桶鸡肉宠物零食100%鲜肉蛋黄五拼猫狗通用 呵护肠胃 500g",
+      "ts": "2026-05-23 05:19:21",
+      "worker": "product_all_full"
     }
   ],
   "failures": {
@@ -1204,16 +2228,16 @@
     "title": 0
   },
   "pagination": {
-    "changed_next_events_tail": 2,
+    "changed_next_events_tail": 4,
     "last_next": {
       "event": "PRODUCT_NEXT_REPOSITION",
       "result": {
         "after_skus": [
-          "100218807846",
-          "6514957",
-          "100313818892",
-          "10219369742525",
-          "100312008382"
+          "100013143896",
+          "10201501355198",
+          "100112283355",
+          "100274572932",
+          "100012759262"
         ],
         "attempts": [
           {
@@ -1224,20 +2248,20 @@
           }
         ],
         "before_skus": [
-          "100149032561",
-          "100142698553",
-          "100013277862",
-          "100069118941",
-          "100327206736"
+          "8267785",
+          "100243302705",
+          "100067489150",
+          "100238404340",
+          "100264285174"
         ],
         "changed": true,
         "ok": true,
-        "page_no": 3
+        "page_no": 5
       },
-      "ts": "2026-05-23 05:11:53",
+      "ts": "2026-05-23 05:17:09",
       "worker": "product_all_full"
     },
-    "next_reposition_events_tail": 2,
+    "next_reposition_events_tail": 4,
     "next_text_events_tail": 0
   },
   "phase": "HZ12AA v8 full 4000 progress check",
@@ -1252,9 +2276,9 @@
     "156203 .venv-browser/bin/python run/hz12_product_all_full_collector_v8.py"
   ],
   "runtime_report": {
-    "dedup_sku": 32,
-    "last_cycle_processed": 32,
-    "last_page_no": 3,
+    "dedup_sku": 63,
+    "last_cycle_processed": 63,
+    "last_page_no": 5,
     "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
     "missing": {
       "commission_rate": 0,
@@ -1269,16 +2293,16 @@
       "title": 0
     },
     "non_numeric_sku": 0,
-    "ok": 32,
+    "ok": 63,
     "out": "data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl",
-    "rows": 32,
+    "rows": 63,
     "run_id": "20260523_050750",
     "state": {
       "created_at": "2026-05-23 05:07:50",
-      "current_page_no": 3,
+      "current_page_no": 5,
       "empty_page_streak": 0,
       "fail_streak": 0,
-      "known_sku_count": 209,
+      "known_sku_count": 240,
       "known_skus": [
         "100003277713",
         "100003604105",
@@ -1488,20 +2512,51 @@
         "100012515939",
         "100213122216",
         "100215868252",
-        "100122992591"
+        "100122992591",
+        "100210025087",
+        "100003198451",
+        "8267785",
+        "100243302705",
+        "100067489150",
+        "100238404340",
+        "100264285174",
+        "100187329304",
+        "100035629496",
+        "100319634672",
+        "100016720604",
+        "758086",
+        "100067747362",
+        "100177717993",
+        "100247266185",
+        "100090068606",
+        "100221187906",
+        "100190452813",
+        "100013143896",
+        "100112283355",
+        "100274572932",
+        "100012759262",
+        "100079478326",
+        "100244560795",
+        "1098359",
+        "100269242042",
+        "100250551352",
+        "100216324708",
+        "4857197",
+        "10138364419460",
+        "100037601961"
       ],
       "last_event": {
         "event": "ITEM_OK",
-        "page_no": 3,
-        "short_url": "https://u.jd.com/RrIzjme",
-        "sku": "100122992591",
-        "ts": "2026-05-23 05:13:42"
+        "page_no": 5,
+        "short_url": "https://u.jd.com/RGIibD5",
+        "sku": "100037601961",
+        "ts": "2026-05-23 05:19:21"
       },
       "last_full_cycle_finished_at": null,
       "next_refresh_due_at": null,
       "page_total_hint": 60,
       "refresh_round": 0,
-      "round_seen_sku_count": 32,
+      "round_seen_sku_count": 63,
       "round_seen_skus": [
         "100113323112",
         "100113323110",
@@ -1534,203 +2589,234 @@
         "100012515939",
         "100213122216",
         "100215868252",
-        "100122992591"
+        "100122992591",
+        "100210025087",
+        "100003198451",
+        "8267785",
+        "100243302705",
+        "100067489150",
+        "100238404340",
+        "100264285174",
+        "100187329304",
+        "100035629496",
+        "100319634672",
+        "100016720604",
+        "758086",
+        "100067747362",
+        "100177717993",
+        "100247266185",
+        "100090068606",
+        "100221187906",
+        "100190452813",
+        "100013143896",
+        "100112283355",
+        "100274572932",
+        "100012759262",
+        "100079478326",
+        "100244560795",
+        "1098359",
+        "100269242042",
+        "100250551352",
+        "100216324708",
+        "4857197",
+        "10138364419460",
+        "100037601961"
       ],
       "run_id": "20260523_050750",
       "target_total": 4000,
-      "updated_at": "2026-05-23 05:13:42"
+      "updated_at": "2026-05-23 05:19:21"
     },
     "target_total": 4000,
-    "ts": "2026-05-23 05:13:42"
+    "ts": "2026-05-23 05:19:21"
   },
   "sample_last_20": [
     {
-      "commission_rate": "5",
-      "estimated_income": "5.40",
-      "page_no": 2,
-      "price": "59.9",
-      "short_url": "https://u.jd.com/RaIaMaI",
-      "sku": "100013277862",
-      "title": "冈本（OKAMOTO）避孕套 情趣组合25片(冰粒粒10+skin纯10+激薄5)男女用安全套套"
-    },
-    {
-      "commission_rate": "25",
-      "estimated_income": "9.95",
-      "page_no": 2,
-      "price": "39.8",
-      "short_url": "https://u.jd.com/R1IzoCK",
-      "sku": "100327206736",
-      "title": "超威电蚊拍灭蚊紫光灯诱蚊防阻燃多功能强力充电家用大网面灭蚊器便捷"
-    },
-    {
-      "commission_rate": "2",
-      "estimated_income": "3.82",
-      "page_no": 2,
-      "price": "109",
-      "short_url": "https://u.jd.com/RgwxKk7",
-      "sku": "100191091166",
-      "title": "美的（Midea）电风扇 家用七叶立式落地扇宿舍卧室轻音节能摇头桌面小风扇大风力空气循环风扇 SAF30AC"
-    },
-    {
-      "commission_rate": "6.1",
-      "estimated_income": "107.36",
-      "page_no": 2,
-      "price": "1759.99",
-      "short_url": "https://u.jd.com/RGIKNom",
-      "sku": "100107253762",
-      "title": "科兰黎【采销直播间专享】焕亮VC淡斑去黄精华24组护肤品抗氧敏感肌可用"
-    },
-    {
-      "commission_rate": "8",
-      "estimated_income": "17.01",
-      "page_no": 2,
-      "price": "179",
-      "short_url": "https://u.jd.com/RgIasCH",
-      "sku": "100324618102",
-      "title": "艾美特（AIRMATE）【轻语系列】电风扇安静卧室一级能效落地扇轻音家用直流变频大风力台立式节能遥控全屋驱蚊循环扇"
-    },
-    {
-      "commission_rate": "8",
-      "estimated_income": "9.40",
-      "page_no": 2,
-      "price": "98.99",
-      "short_url": "https://u.jd.com/RrILQzu",
-      "sku": "100192637760",
-      "title": "艾美特（AIRMATE）【超级单品】七叶家用大风力落地扇电风扇台式桌面空气循环小风扇大角度摇头节能台立两用电扇 X97"
-    },
-    {
-      "commission_rate": "2",
-      "estimated_income": "4.69",
-      "page_no": 2,
-      "price": "134.1",
-      "short_url": "https://u.jd.com/R6Id404",
-      "sku": "100326721838",
-      "title": "钻石牌（DIAMOND）电风扇家用遥控落地风扇【一级能效+直流变频+纯铜电机】节能落地扇客厅立式大风量客厅轻音电扇XR"
-    },
-    {
-      "commission_rate": "15",
-      "estimated_income": "5.69",
-      "page_no": 2,
-      "price": "37.9",
-      "short_url": "https://u.jd.com/R6IGgEd",
-      "sku": "100196686568",
-      "title": "六神驱蚊蛋48ml 雨后栀子 花露水 户外防蚊喷雾 驱蚊液喷雾 蚊怕水"
-    },
-    {
-      "commission_rate": "5",
-      "estimated_income": "2.35",
-      "page_no": 2,
-      "price": "46.9",
-      "short_url": "https://u.jd.com/R6IwTzb",
-      "sku": "7533597",
-      "title": "鲜京采麻辣小龙虾 3-5钱/只 共3盒4.2斤 净虾2.31斤 2026年新虾加热即食"
-    },
-    {
-      "commission_rate": "8",
-      "estimated_income": "5.99",
-      "page_no": 3,
-      "price": "74.9",
-      "short_url": "https://u.jd.com/ROICDr5",
-      "sku": "100218807846",
-      "title": "怡颗莓Driscoll's 云南蓝莓12mm+ 12盒装 约125g/盒 新鲜水果 源头直发"
-    },
-    {
-      "commission_rate": "6.1",
-      "estimated_income": "35.99",
-      "page_no": 3,
-      "price": "590",
-      "short_url": "https://u.jd.com/RgwUQrx",
-      "sku": "6514957",
-      "title": "赫莲娜HR洁面泡沫125ml洗面奶清洁护肤品化妆品生日礼物送女友"
-    },
-    {
-      "commission_rate": "15",
-      "estimated_income": "10.20",
-      "page_no": 3,
-      "price": "68",
-      "short_url": "https://u.jd.com/R6IMvQm",
-      "sku": "100313818892",
-      "title": "凤牌 红茶 云南滇红 特级工夫红茶250g 茶叶 中华老字号"
-    },
-    {
-      "commission_rate": "12",
-      "estimated_income": "0.70",
-      "page_no": 3,
-      "price": "5.8",
-      "short_url": "https://u.jd.com/RrI6C7f",
-      "sku": "10219369742525",
-      "title": "砀山2k西瓜当季手剥薄皮小糖丸西瓜新鲜孕妇水果冰糖子小西瓜整箱 小糖丸1.5-2斤"
-    },
-    {
-      "commission_rate": "8.3",
-      "estimated_income": "42.93",
-      "page_no": 3,
-      "price": "379.93",
-      "short_url": "https://u.jd.com/RawUnzj",
-      "sku": "100312008382",
-      "title": "美朵嘉【安睡舱Pro3】婴儿防摔蚊帐床围栏1.8x2米家用蓝色【螺纹三通】"
-    },
-    {
       "commission_rate": "1",
-      "estimated_income": "0.40",
-      "page_no": 3,
-      "price": "39.8",
-      "short_url": "https://u.jd.com/R1ICyt9",
-      "sku": "100112947294",
-      "title": "京鲜生 海南妃子笑荔枝【大果】 净重3斤 单果18g 生鲜水果"
+      "estimated_income": "0.95",
+      "page_no": 4,
+      "price": "94.9",
+      "short_url": "https://u.jd.com/R1IbBh2",
+      "sku": "758086",
+      "title": "芙丽芳丝（Freeplus）洁面洗面奶霜氨基酸敏感肌男女士通用深层清洁保湿100g"
     },
     {
-      "commission_rate": "9",
-      "estimated_income": "1.15",
-      "page_no": 3,
-      "price": "12.8",
-      "short_url": "https://u.jd.com/R6IM3q3",
-      "sku": "100149164924",
-      "title": "京觅山东荷兰水果黄瓜 净重5斤 单果约70g 健康轻食水果 源头直发"
+      "commission_rate": "2",
+      "estimated_income": "7.08",
+      "page_no": 4,
+      "price": "354",
+      "short_url": "https://u.jd.com/R1IIuW3",
+      "sku": "100067747362",
+      "title": "长城（Great Wall）额定750W X7金牌全模电脑电源（ATX3.1/原生PCIe5.1/漏电监测/单路12V/自动启停/支持50系显卡）"
     },
     {
-      "commission_rate": "6",
-      "estimated_income": "5.34",
-      "page_no": 3,
-      "price": "88.99",
-      "short_url": "https://u.jd.com/RaIQMWq",
-      "sku": "100012515939",
-      "title": "伊利中老年高钙低脂富硒奶粉 中老年奶粉 礼盒 营养品 送长辈 850g*2"
-    },
-    {
-      "commission_rate": "9",
-      "estimated_income": "1.79",
-      "page_no": 3,
-      "price": "19.9",
-      "short_url": "https://u.jd.com/RGIKBVJ",
-      "sku": "100213122216",
-      "title": "京觅 沙地麒麟少籽甜西瓜 净重5-7斤 新鲜水果时令生鲜应当季源头直发"
+      "commission_rate": "8",
+      "estimated_income": "53.60",
+      "page_no": 4,
+      "price": "670",
+      "short_url": "https://u.jd.com/RDIuwXd",
+      "sku": "100177717993",
+      "title": "飞利浦【价保618】新款男士电动剃须刀新一代旋护式鹅卵石Pro 无线充电便携款 父亲节生日礼物送男生"
     },
     {
       "commission_rate": "16",
-      "estimated_income": "14.86",
-      "page_no": 3,
-      "price": "92.9",
-      "short_url": "https://u.jd.com/RrwkDPd",
-      "sku": "100215868252",
-      "title": "城市理享樱花白茶除臭颗粒瞬吸结团食用级木薯猫砂2.5kg*4不粘底不散团"
+      "estimated_income": "35.04",
+      "page_no": 4,
+      "price": "219",
+      "short_url": "https://u.jd.com/RgIKt8o",
+      "sku": "100247266185",
+      "title": "飞智B9X磁吸手机散热器 半导体吸风散热智能控温 游戏直播平板降温神器 一加苹果iphone17promaxIQOO"
     },
     {
       "commission_rate": "20",
-      "estimated_income": "2.46",
-      "page_no": 3,
-      "price": "12.3",
-      "short_url": "https://u.jd.com/RrIzjme",
-      "sku": "100122992591",
-      "title": "小鹿蓝蓝婴幼儿炭烧棒饼干磨牙棒草莓苹果味宝宝儿童零食饼干130g 10月+"
+      "estimated_income": "33.00",
+      "page_no": 4,
+      "price": "165",
+      "short_url": "https://u.jd.com/RgIbfV2",
+      "sku": "100090068606",
+      "title": "高露洁（Colgate）速感白美白牙膏去烟渍去黄去口臭亮白男士女士进口85g*2 包装随机"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "4.06",
+      "page_no": 4,
+      "price": "116.08",
+      "short_url": "https://u.jd.com/ROICavq",
+      "sku": "100221187906",
+      "title": "钻石牌落地扇家用电风扇【1级能效+直流变频+纯铜电机】摇头扇省电无极变速强劲风力大网罩DFS-ZBHM07z"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "38.97",
+      "page_no": 4,
+      "price": "1299",
+      "short_url": "https://u.jd.com/RrI1mB8",
+      "sku": "100190452813",
+      "title": "雷蛇（Razer）炼狱蝰蛇V4pro专业版 黑色 无线鼠标 电竞游戏 超轻量化 光学传感器高精度 全面升级新品 Niko推荐"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "15.40",
+      "page_no": 5,
+      "price": "154",
+      "short_url": "https://u.jd.com/RgI1Bk6",
+      "sku": "100013143896",
+      "title": "羽西【肖战同款全新包装】白玉防晒隔离妆前SPF50生日礼物送女友"
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "8.80",
+      "page_no": 5,
+      "price": "220",
+      "short_url": "https://u.jd.com/ROIgvWp",
+      "sku": "100112283355",
+      "title": "卡诗*山茶花护发精油30ml修护滋养保湿柔顺亮泽防毛躁礼盒生日礼物"
+    },
+    {
+      "commission_rate": "4.2",
+      "estimated_income": "162.63",
+      "page_no": 5,
+      "price": "2112.03",
+      "short_url": "https://u.jd.com/RrI6VGT",
+      "sku": "100274572932",
+      "title": "追觅【522超级品牌日】S50增强版扫地机器人扫地洗地机吸洗拖扫拖一体超薄版RLS88HE"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "2.25",
+      "page_no": 5,
+      "price": "74.9",
+      "short_url": "https://u.jd.com/ROIzcar",
+      "sku": "100012759262",
+      "title": "鲜京采41/50南美白虾仁 无冰净重2斤 90-110只 去虾线"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "15.54",
+      "page_no": 5,
+      "price": "777",
+      "short_url": "https://u.jd.com/RGIMf9X",
+      "sku": "100079478326",
+      "title": "罗技（G）GPW3 狗屁王三代gpw无线游戏鼠标 专业电竞手型 GPW2金刚升级款 三角洲/无畏契约 粉【全网爆款】"
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "5.56",
+      "page_no": 5,
+      "price": "138.9",
+      "short_url": "https://u.jd.com/RaIzPsE",
+      "sku": "100244560795",
+      "title": "CUKTECH酷态科6号屏显充Ultra氮化镓充电器100W快充头多口兼容苹果45W笔记本65W适用华为小米17"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "12.59",
+      "page_no": 5,
+      "price": "69.9",
+      "short_url": "https://u.jd.com/RaIrSyJ",
+      "sku": "1098359",
+      "title": "博士伦润明清透 隐形眼镜水护理液830ml 隐形眼镜多功能护理液"
+    },
+    {
+      "commission_rate": "3.2",
+      "estimated_income": "4.37",
+      "page_no": 5,
+      "price": "136.62",
+      "short_url": "https://u.jd.com/RGIzT5X",
+      "sku": "100269242042",
+      "title": "图拉斯【AR抗反光+3D大弧边】适用iphone17promax钢化膜苹果17promax手机膜防指纹全屏覆盖高清无尘仓膜"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "4.99",
+      "page_no": 5,
+      "price": "99.7",
+      "short_url": "https://u.jd.com/RrIbiDl",
+      "sku": "100250551352",
+      "title": "品胜【3C认证可上飞机】充电宝自带四线20000毫安22.5W快充小巧移动电源适用苹果iphone17promax华为黑"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "3.28",
+      "page_no": 5,
+      "price": "328.2",
+      "short_url": "https://u.jd.com/RgIC86I",
+      "sku": "100216324708",
+      "title": "CareMagic进口水蛭素纳豆激酶非辅酶血压血脂呵护中老年心脑管健康60粒*1瓶"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "1.99",
+      "page_no": 5,
+      "price": "19.9",
+      "short_url": "https://u.jd.com/RgIdmQs",
+      "sku": "4857197",
+      "title": "山山活性炭除甲醛碳包2000g室内除臭碳包汽车去甲醛清除剂除味炭包"
+    },
+    {
+      "commission_rate": "20.1",
+      "estimated_income": "7.60",
+      "page_no": 5,
+      "price": "37.8",
+      "short_url": "https://u.jd.com/RgIsIMf",
+      "sku": "10138364419460",
+      "title": "扬子电风扇家用落地扇空气循环扇落地式台立两用电扇插电学生宿舍卧室制冷轻音摇头办公室室内客厅 【高级灰】左右摇头-高0.85m"
+    },
+    {
+      "commission_rate": "12",
+      "estimated_income": "6.96",
+      "page_no": 5,
+      "price": "58",
+      "short_url": "https://u.jd.com/RGIibD5",
+      "sku": "100037601961",
+      "title": "网易严选冻干桶鸡肉宠物零食100%鲜肉蛋黄五拼猫狗通用 呵护肠胃 500g"
     }
   ],
   "state": {
     "created_at": "2026-05-23 05:07:50",
-    "current_page_no": 3,
+    "current_page_no": 5,
     "empty_page_streak": 0,
     "fail_streak": 0,
-    "known_sku_count": 209,
+    "known_sku_count": 240,
     "known_skus": [
       "100003277713",
       "100003604105",
@@ -1940,20 +3026,51 @@
       "100012515939",
       "100213122216",
       "100215868252",
-      "100122992591"
+      "100122992591",
+      "100210025087",
+      "100003198451",
+      "8267785",
+      "100243302705",
+      "100067489150",
+      "100238404340",
+      "100264285174",
+      "100187329304",
+      "100035629496",
+      "100319634672",
+      "100016720604",
+      "758086",
+      "100067747362",
+      "100177717993",
+      "100247266185",
+      "100090068606",
+      "100221187906",
+      "100190452813",
+      "100013143896",
+      "100112283355",
+      "100274572932",
+      "100012759262",
+      "100079478326",
+      "100244560795",
+      "1098359",
+      "100269242042",
+      "100250551352",
+      "100216324708",
+      "4857197",
+      "10138364419460",
+      "100037601961"
     ],
     "last_event": {
       "event": "ITEM_OK",
-      "page_no": 3,
-      "short_url": "https://u.jd.com/RrIzjme",
-      "sku": "100122992591",
-      "ts": "2026-05-23 05:13:42"
+      "page_no": 5,
+      "short_url": "https://u.jd.com/RGIibD5",
+      "sku": "100037601961",
+      "ts": "2026-05-23 05:19:21"
     },
     "last_full_cycle_finished_at": null,
     "next_refresh_due_at": null,
     "page_total_hint": 60,
     "refresh_round": 0,
-    "round_seen_sku_count": 32,
+    "round_seen_sku_count": 63,
     "round_seen_skus": [
       "100113323112",
       "100113323110",
@@ -1986,20 +3103,51 @@
       "100012515939",
       "100213122216",
       "100215868252",
-      "100122992591"
+      "100122992591",
+      "100210025087",
+      "100003198451",
+      "8267785",
+      "100243302705",
+      "100067489150",
+      "100238404340",
+      "100264285174",
+      "100187329304",
+      "100035629496",
+      "100319634672",
+      "100016720604",
+      "758086",
+      "100067747362",
+      "100177717993",
+      "100247266185",
+      "100090068606",
+      "100221187906",
+      "100190452813",
+      "100013143896",
+      "100112283355",
+      "100274572932",
+      "100012759262",
+      "100079478326",
+      "100244560795",
+      "1098359",
+      "100269242042",
+      "100250551352",
+      "100216324708",
+      "4857197",
+      "10138364419460",
+      "100037601961"
     ],
     "run_id": "20260523_050750",
     "target_total": 4000,
-    "updated_at": "2026-05-23 05:13:42"
+    "updated_at": "2026-05-23 05:19:21"
   },
   "stop": null,
   "stop_exists": false,
   "throughput": {
-    "estimated_ok_per_hour": 340.83,
-    "eta_hours_to_4000": 11.64,
+    "estimated_ok_per_hour": 335.01,
+    "eta_hours_to_4000": 11.75,
     "first_ts": "2026-05-23T05:08:04",
-    "last_ts": "2026-05-23T05:13:42",
-    "runtime_hours_est": 0.094
+    "last_ts": "2026-05-23T05:19:21",
+    "runtime_hours_est": 0.188
   },
-  "ts": "2026-05-23 05:13:46"
+  "ts": "2026-05-23 05:19:22"
 }
