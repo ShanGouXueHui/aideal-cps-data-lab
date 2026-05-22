@@ -1,0 +1,645 @@
+{
+  "counts": {
+    "dedup_sku": 16,
+    "duplicate_ok_rows": 0,
+    "first_page": 1,
+    "last_page": 1,
+    "non_numeric": 0,
+    "ok": 16,
+    "page_count": 1,
+    "progress_pct": 0.4,
+    "rows": 16,
+    "target_total": 4000
+  },
+  "decision": "If process is alive, stop=false, title missing=0, and dedup_sku keeps growing, continue. If target reached or worker sleeps, run final quality/dry-run report.",
+  "events_tail": [
+    {
+      "event": "STRICT_TITLE_CANDIDATES",
+      "kept": 16,
+      "sample": [
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "100032229606",
+          "title": "理肤泉【黄子弘凡同款】B5霜40ml*2支套装修护保湿面霜护肤品生日礼物"
+        },
+        {
+          "sku": "4134901",
+          "title": "鲜京采【超百万销量】 厄瓜多尔白虾 净重 3斤/盒 28-46只/盒"
+        },
+        {
+          "sku": "100023815614",
+          "title": "保宁（B&B）婴幼儿洗衣皂儿童肥皂尿布皂专用内衣裤肥皂200g*8【到手共8块】"
+        },
+        {
+          "sku": "100051210211",
+          "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发"
+        },
+        {
+          "sku": "100335695554",
+          "title": "美的空调 酷省电二代Pro 大3匹 一级能效变频 双出风 双排铜管立式柜机（支持鸿蒙智联）KFR-72LW/KS2P"
+        },
+        {
+          "sku": "5254604",
+          "title": "佳沛（zespri）新西兰 阳光金奇异果12粒特大果单果124-146g 猕猴桃水果礼盒"
+        },
+        {
+          "sku": "100151494892",
+          "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 2XL"
+        }
+      ],
+      "skipped": 34,
+      "skipped_sample": [
+        {
+          "reason": "missing_title",
+          "sku": "100316991428",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100006061653",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "3505364",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100232001485",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100011878658",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "7891989",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "10179187350168",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100113323112",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "7219155",
+          "title": ""
+        },
+        {
+          "reason": "missing_title",
+          "sku": "100325728578",
+          "title": ""
+        }
+      ],
+      "total": 50,
+      "ts": "2026-05-22 23:59:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "PAGE_CANDIDATES",
+      "fresh": 16,
+      "page_info": {
+        "has_product": true,
+        "one_key_count": 50,
+        "risk": [],
+        "text_len": 7821,
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "page_no": 1,
+      "processed": 0,
+      "sample": [
+        {
+          "sku": "2922989",
+          "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+        },
+        {
+          "sku": "100032229606",
+          "title": "理肤泉【黄子弘凡同款】B5霜40ml*2支套装修护保湿面霜护肤品生日礼物"
+        },
+        {
+          "sku": "4134901",
+          "title": "鲜京采【超百万销量】 厄瓜多尔白虾 净重 3斤/盒 28-46只/盒"
+        },
+        {
+          "sku": "100023815614",
+          "title": "保宁（B&B）婴幼儿洗衣皂儿童肥皂尿布皂专用内衣裤肥皂200g*8【到手共8块】"
+        },
+        {
+          "sku": "100051210211",
+          "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发"
+        },
+        {
+          "sku": "100335695554",
+          "title": "美的空调 酷省电二代Pro 大3匹 一级能效变频 双出风 双排铜管立式柜机（支持鸿蒙智联）KFR-72LW/KS2P"
+        }
+      ],
+      "total": 16,
+      "total_hint": 60,
+      "ts": "2026-05-22 23:59:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 1,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/ROwlb7L",
+      "sku": "2922989",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装",
+      "ts": "2026-05-22 23:59:24",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 2,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RDw2C7n",
+      "sku": "100032229606",
+      "title": "理肤泉【黄子弘凡同款】B5霜40ml*2支套装修护保湿面霜护肤品生日礼物",
+      "ts": "2026-05-22 23:59:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 3,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/ROwcoqf",
+      "sku": "4134901",
+      "title": "鲜京采【超百万销量】 厄瓜多尔白虾 净重 3斤/盒 28-46只/盒",
+      "ts": "2026-05-22 23:59:41",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 4,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RrwfMKT",
+      "sku": "100023815614",
+      "title": "保宁（B&B）婴幼儿洗衣皂儿童肥皂尿布皂专用内衣裤肥皂200g*8【到手共8块】",
+      "ts": "2026-05-22 23:59:50",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 5,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/ROwlOQ9",
+      "sku": "100051210211",
+      "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发",
+      "ts": "2026-05-23 00:00:02",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 6,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/ROwPiJm",
+      "sku": "100335695554",
+      "title": "美的空调 酷省电二代Pro 大3匹 一级能效变频 双出风 双排铜管立式柜机（支持鸿蒙智联）KFR-72LW/KS2P",
+      "ts": "2026-05-23 00:00:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 7,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RgwNHMd",
+      "sku": "5254604",
+      "title": "佳沛（zespri）新西兰 阳光金奇异果12粒特大果单果124-146g 猕猴桃水果礼盒",
+      "ts": "2026-05-23 00:00:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 8,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/ROwVvQe",
+      "sku": "100151494892",
+      "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 2XL",
+      "ts": "2026-05-23 00:00:31",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 9,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RgwTFI9",
+      "sku": "100055353565",
+      "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发",
+      "ts": "2026-05-23 00:00:41",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 10,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RrwA90M",
+      "sku": "100304419342",
+      "title": "香满园美味精制小麦粉10斤 面粉馒头粉饺子粉面条粉",
+      "ts": "2026-05-23 00:00:51",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 11,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RGw0JA6",
+      "sku": "10211698401038",
+      "title": "【风柔轻音】简约现代多功能USB小风扇即插即用办公室学生宿舍静音大风力伸缩折叠便携电风扇 【颜色随机】1个装-USB直插",
+      "ts": "2026-05-23 00:01:02",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 12,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RDwAQ1N",
+      "sku": "100069118941",
+      "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物",
+      "ts": "2026-05-23 00:01:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 13,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RDwcBS5",
+      "sku": "10203721923125",
+      "title": "【电池能量站】5号7号大号纽扣电池适用血压计/燃气表/遥控器/电子秤/车钥匙/燃气灶/无线鼠标等 5号8粒+7号8粒",
+      "ts": "2026-05-23 00:01:22",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 14,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RDwNnkD",
+      "sku": "100328209650",
+      "title": "美的空调 风尊三代PRO 大1.5匹一级能效全面风双排纯铜管舒适风卧室 空调挂机国家补贴KFR-35GW/MXC3P",
+      "ts": "2026-05-23 00:01:31",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 15,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/RGwYga0",
+      "sku": "100095494527",
+      "title": "鲜京采 生鸡爪 2斤 40-50g/只 柠檬鸡爪凤爪烧烤鸡爪卤鸡爪生鲜食材",
+      "ts": "2026-05-23 00:01:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 16,
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R6wRGJs",
+      "sku": "100018967765",
+      "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB",
+      "ts": "2026-05-23 00:01:49",
+      "worker": "product_all_full"
+    }
+  ],
+  "failures": {
+    "item_fail_events_tail": 0,
+    "last_fail": null,
+    "stop_events_tail": 0
+  },
+  "latest_log": "logs/hz12z_product_all_v7_full_4000_20260522_235911.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 0,
+    "item_url": 0,
+    "jd_command": 0,
+    "long_url": 0,
+    "price": 0,
+    "qr_url": 0,
+    "refresh_due_at": 0,
+    "title": 0
+  },
+  "pagination": {
+    "changed_next_events_tail": 0,
+    "last_next": null,
+    "next_events_tail": 0
+  },
+  "phase": "HZ12Z v7 full 4000 progress check",
+  "processes": [
+    "30073 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19228 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "30813 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=18 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=2689596256 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9707303555383192621,944854569504904531,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709003178624776",
+    "31235 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=21 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=3084494454 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16150984383135774655,1160708162090800132,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709005989750323",
+    "90042 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19229 --disable-blink-features=AutomationControlled https://union.jd.com/index",
+    "90127 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=7 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=597554857766 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,16208265014382412072,13159075389174745411,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190708992871164437",
+    "90529 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=19 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=598093526729 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,14671244850568944341,16436198809862861882,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709004115666625",
+    "91412 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=90050 --enable-crash-reporter=3783978f-1b5d-4fa1-98f4-9d86fa6e7d5c, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_commission_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19229 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=22 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=599005193539 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,15734030695083693844,9382617413635888269,2097152 --field-trial-handle=3,i,1846522450778162538,14595232583625274867,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,7632765793478805221,10957488426293518432,4 --trace-process-track-uuid=3190709006926792172",
+    "152910 .venv-browser/bin/python run/hz12_product_all_full_collector_v7.py"
+  ],
+  "runtime_report": {
+    "dedup_sku": 16,
+    "last_cycle_processed": 16,
+    "last_page_no": 1,
+    "latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
+    "missing": {
+      "commission_rate": 0,
+      "estimated_income": 0,
+      "image_url": 0,
+      "item_url": 0,
+      "jd_command": 0,
+      "long_url": 0,
+      "price": 0,
+      "qr_url": 0,
+      "refresh_due_at": 0,
+      "title": 0
+    },
+    "non_numeric_sku": 0,
+    "ok": 16,
+    "out": "data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl",
+    "rows": 16,
+    "run_id": "20260522_235913",
+    "state": {
+      "created_at": "2026-05-22 23:59:13",
+      "current_page_no": 1,
+      "empty_page_streak": 0,
+      "fail_streak": 0,
+      "known_sku_count": 16,
+      "known_skus": [
+        "2922989",
+        "100032229606",
+        "4134901",
+        "100023815614",
+        "100051210211",
+        "100335695554",
+        "5254604",
+        "100151494892",
+        "100055353565",
+        "100304419342",
+        "10211698401038",
+        "100069118941",
+        "10203721923125",
+        "100328209650",
+        "100095494527",
+        "100018967765"
+      ],
+      "last_event": {
+        "event": "ITEM_OK",
+        "page_no": 1,
+        "short_url": "https://u.jd.com/R6wRGJs",
+        "sku": "100018967765",
+        "ts": "2026-05-23 00:01:49"
+      },
+      "last_full_cycle_finished_at": null,
+      "next_refresh_due_at": null,
+      "page_total_hint": 60,
+      "refresh_round": 0,
+      "round_seen_sku_count": 16,
+      "round_seen_skus": [
+        "2922989",
+        "100032229606",
+        "4134901",
+        "100023815614",
+        "100051210211",
+        "100335695554",
+        "5254604",
+        "100151494892",
+        "100055353565",
+        "100304419342",
+        "10211698401038",
+        "100069118941",
+        "10203721923125",
+        "100328209650",
+        "100095494527",
+        "100018967765"
+      ],
+      "run_id": "20260522_235913",
+      "target_total": 4000,
+      "updated_at": "2026-05-23 00:01:49"
+    },
+    "target_total": 4000,
+    "ts": "2026-05-23 00:01:55"
+  },
+  "sample_last_20": [
+    {
+      "commission_rate": "3.2",
+      "estimated_income": "1.28",
+      "page_no": 1,
+      "price": "39.9",
+      "short_url": "https://u.jd.com/ROwlb7L",
+      "sku": "2922989",
+      "title": "蒙牛【新鲜日期】特仑苏纯牛奶250ml*16盒 家庭早餐 送礼盒装"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "5.60",
+      "page_no": 1,
+      "price": "112",
+      "short_url": "https://u.jd.com/RDw2C7n",
+      "sku": "100032229606",
+      "title": "理肤泉【黄子弘凡同款】B5霜40ml*2支套装修护保湿面霜护肤品生日礼物"
+    },
+    {
+      "commission_rate": "7.8",
+      "estimated_income": "8.50",
+      "page_no": 1,
+      "price": "109",
+      "short_url": "https://u.jd.com/ROwcoqf",
+      "sku": "4134901",
+      "title": "鲜京采【超百万销量】 厄瓜多尔白虾 净重 3斤/盒 28-46只/盒"
+    },
+    {
+      "commission_rate": "13.1",
+      "estimated_income": "14.21",
+      "page_no": 1,
+      "price": "100.8",
+      "short_url": "https://u.jd.com/RrwfMKT",
+      "sku": "100023815614",
+      "title": "保宁（B&B）婴幼儿洗衣皂儿童肥皂尿布皂专用内衣裤肥皂200g*8【到手共8块】"
+    },
+    {
+      "commission_rate": "12",
+      "estimated_income": "2.51",
+      "page_no": 1,
+      "price": "20.9",
+      "short_url": "https://u.jd.com/ROwlOQ9",
+      "sku": "100051210211",
+      "title": "京鲜生 无抗保洁鲜鸡蛋30枚/盒 健康轻食 礼盒送礼 1.5kg/盒 源头直发"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "289.95",
+      "page_no": 1,
+      "price": "5799",
+      "short_url": "https://u.jd.com/ROwPiJm",
+      "sku": "100335695554",
+      "title": "美的空调 酷省电二代Pro 大3匹 一级能效变频 双出风 双排铜管立式柜机（支持鸿蒙智联）KFR-72LW/KS2P"
+    },
+    {
+      "commission_rate": "5.5",
+      "estimated_income": "4.12",
+      "page_no": 1,
+      "price": "74.9",
+      "short_url": "https://u.jd.com/RgwNHMd",
+      "sku": "5254604",
+      "title": "佳沛（zespri）新西兰 阳光金奇异果12粒特大果单果124-146g 猕猴桃水果礼盒"
+    },
+    {
+      "commission_rate": "11",
+      "estimated_income": "12.58",
+      "page_no": 1,
+      "price": "59.9",
+      "short_url": "https://u.jd.com/ROwVvQe",
+      "sku": "100151494892",
+      "title": "京舒然京东自有品牌【新疆棉】男士纯棉内裤10A抗菌平角短裤6条 2XL"
+    },
+    {
+      "commission_rate": "6",
+      "estimated_income": "1.01",
+      "page_no": 1,
+      "price": "16.9",
+      "short_url": "https://u.jd.com/RgwTFI9",
+      "sku": "100055353565",
+      "title": "京鲜生天目小香薯净重5斤 单果约70-180g 产地海南香甜软糯源头直发"
+    },
+    {
+      "commission_rate": "1.1",
+      "estimated_income": "0.38",
+      "page_no": 1,
+      "price": "18.18",
+      "short_url": "https://u.jd.com/RrwA90M",
+      "sku": "100304419342",
+      "title": "香满园美味精制小麦粉10斤 面粉馒头粉饺子粉面条粉"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "0.08",
+      "page_no": 1,
+      "price": "7.84",
+      "short_url": "https://u.jd.com/RGw0JA6",
+      "sku": "10211698401038",
+      "title": "【风柔轻音】简约现代多功能USB小风扇即插即用办公室学生宿舍静音大风力伸缩折叠便携电风扇 【颜色随机】1个装-USB直插+伸缩折叠"
+    },
+    {
+      "commission_rate": "1.1",
+      "estimated_income": "3.08",
+      "page_no": 1,
+      "price": "280",
+      "short_url": "https://u.jd.com/RDwAQ1N",
+      "sku": "100069118941",
+      "title": "理肤泉【孙颖莎推荐】B5面膜PRO含赠到手40片积雪草补水保湿生日礼物"
+    },
+    {
+      "commission_rate": "20",
+      "estimated_income": "0.80",
+      "page_no": 1,
+      "price": "3.99",
+      "short_url": "https://u.jd.com/RDwcBS5",
+      "sku": "10203721923125",
+      "title": "【电池能量站】5号7号大号纽扣电池适用血压计/燃气表/遥控器/电子秤/车钥匙/燃气灶/无线鼠标等 5号8粒+7号8粒"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "110.16",
+      "page_no": 1,
+      "price": "2754.05",
+      "short_url": "https://u.jd.com/RDwNnkD",
+      "sku": "100328209650",
+      "title": "美的空调 风尊三代PRO 大1.5匹一级能效全面风双排纯铜管舒适风卧室 空调挂机国家补贴KFR-35GW/MXC3P"
+    },
+    {
+      "commission_rate": "6",
+      "estimated_income": "1.67",
+      "page_no": 1,
+      "price": "27.9",
+      "short_url": "https://u.jd.com/RGwYga0",
+      "sku": "100095494527",
+      "title": "鲜京采 生鸡爪 2斤 40-50g/只 柠檬鸡爪凤爪烧烤鸡爪卤鸡爪生鲜食材"
+    },
+    {
+      "commission_rate": "3",
+      "estimated_income": "6.54",
+      "page_no": 1,
+      "price": "109",
+      "short_url": "https://u.jd.com/R6wRGJs",
+      "sku": "100018967765",
+      "title": "美的（Midea）【超级单品】七叶轻音立式电风扇家用柔风落地扇台式桌面小型风扇大风量节能摇头宿舍电扇 SAF30AB"
+    }
+  ],
+  "state": {
+    "created_at": "2026-05-22 23:59:13",
+    "current_page_no": 1,
+    "empty_page_streak": 0,
+    "fail_streak": 0,
+    "known_sku_count": 16,
+    "known_skus": [
+      "2922989",
+      "100032229606",
+      "4134901",
+      "100023815614",
+      "100051210211",
+      "100335695554",
+      "5254604",
+      "100151494892",
+      "100055353565",
+      "100304419342",
+      "10211698401038",
+      "100069118941",
+      "10203721923125",
+      "100328209650",
+      "100095494527",
+      "100018967765"
+    ],
+    "last_event": {
+      "event": "ITEM_OK",
+      "page_no": 1,
+      "short_url": "https://u.jd.com/R6wRGJs",
+      "sku": "100018967765",
+      "ts": "2026-05-23 00:01:49"
+    },
+    "last_full_cycle_finished_at": null,
+    "next_refresh_due_at": null,
+    "page_total_hint": 60,
+    "refresh_round": 0,
+    "round_seen_sku_count": 16,
+    "round_seen_skus": [
+      "2922989",
+      "100032229606",
+      "4134901",
+      "100023815614",
+      "100051210211",
+      "100335695554",
+      "5254604",
+      "100151494892",
+      "100055353565",
+      "100304419342",
+      "10211698401038",
+      "100069118941",
+      "10203721923125",
+      "100328209650",
+      "100095494527",
+      "100018967765"
+    ],
+    "run_id": "20260522_235913",
+    "target_total": 4000,
+    "updated_at": "2026-05-23 00:01:49"
+  },
+  "stop": null,
+  "stop_exists": false,
+  "throughput": {
+    "estimated_ok_per_hour": 397.24,
+    "eta_hours_to_4000": 10.03,
+    "first_ts": "2026-05-22T23:59:24",
+    "last_ts": "2026-05-23T00:01:49",
+    "runtime_hours_est": 0.04
+  },
+  "ts": "2026-05-23 00:01:55"
+}
