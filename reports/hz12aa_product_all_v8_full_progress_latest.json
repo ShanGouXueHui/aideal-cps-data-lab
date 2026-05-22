@@ -20,16 +20,6 @@
       "skipped": 0,
       "skipped_sample": [],
       "total": 0,
-      "ts": "2026-05-23 05:46:50",
-      "worker": "product_all_full"
-    },
-    {
-      "event": "STRICT_TITLE_CANDIDATES",
-      "kept": 0,
-      "sample": [],
-      "skipped": 0,
-      "skipped_sample": [],
-      "total": 0,
       "ts": "2026-05-23 05:46:53",
       "worker": "product_all_full"
     },
@@ -3036,6 +3026,13 @@
       "sleep_seconds": 1800,
       "ts": "2026-05-23 05:57:36",
       "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-07-02T05:57:36",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-23 06:27:37",
+      "worker": "product_all_full"
     }
   ],
   "failures": {
@@ -3521,7 +3518,7 @@
       "updated_at": "2026-05-23 05:57:36"
     },
     "target_total": 4000,
-    "ts": "2026-05-23 05:57:36"
+    "ts": "2026-05-23 06:27:37"
   },
   "sample_last_20": [
     {
@@ -4049,5 +4046,5 @@
     "last_ts": "2026-05-23T05:31:55",
     "runtime_hours_est": 0.398
   },
-  "ts": "2026-05-23 06:10:23"
+  "ts": "2026-05-23 06:31:08"
 }
