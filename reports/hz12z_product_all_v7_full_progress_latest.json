@@ -25,21 +25,6 @@
       "skipped": 0,
       "skipped_sample": [],
       "total": 1,
-      "ts": "2026-05-23 00:33:03",
-      "worker": "product_all_full"
-    },
-    {
-      "event": "STRICT_TITLE_CANDIDATES",
-      "kept": 1,
-      "sample": [
-        {
-          "sku": "100052592671",
-          "title": "九洲丰园有机儿童卡通馒头330g宝宝馒头速食儿童早餐食品半成品早饭面点"
-        }
-      ],
-      "skipped": 0,
-      "skipped_sample": [],
-      "total": 1,
       "ts": "2026-05-23 00:33:05",
       "worker": "product_all_full"
     },
@@ -17638,6 +17623,13 @@
       "sleep_seconds": 1800,
       "ts": "2026-05-23 04:14:38",
       "worker": "product_all_full"
+    },
+    {
+      "event": "SLEEP_REFRESH_NOT_DUE",
+      "next_refresh_due_at": "2026-07-02T00:44:38",
+      "sleep_seconds": 1800,
+      "ts": "2026-05-23 04:44:38",
+      "worker": "product_all_full"
     }
   ],
   "failures": {
@@ -17927,7 +17919,7 @@
       "updated_at": "2026-05-23 00:44:38"
     },
     "target_total": 4000,
-    "ts": "2026-05-23 04:14:38"
+    "ts": "2026-05-23 04:44:38"
   },
   "sample_last_20": [
     {
@@ -18322,5 +18314,5 @@
     "last_ts": "2026-05-23T00:36:19",
     "runtime_hours_est": 0.615
   },
-  "ts": "2026-05-23 04:36:20"
+  "ts": "2026-05-23 04:57:08"
 }

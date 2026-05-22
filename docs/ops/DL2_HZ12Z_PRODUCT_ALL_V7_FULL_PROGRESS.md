@@ -1,6 +1,6 @@
 # HZ12Z Product All V7 Full Progress
 
-- Generated at: 2026-05-23 04:36:20
+- Generated at: 2026-05-23 04:57:08
 - counts: {'rows': 177, 'ok': 177, 'dedup_sku': 177, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 12, 'first_page': 1, 'last_page': 12, 'target_total': 4000, 'progress_pct': 4.42}
 - missing: {'title': 0, 'image_url': 0, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'long_url': 0, 'qr_url': 0, 'jd_command': 0, 'refresh_due_at': 0}
 - stop_exists: False
