@@ -1,0 +1,29 @@
+{
+  "decision": "Current page is JD risk verification; manually verify in noVNC, then rerun.",
+  "events": [],
+  "initial": {
+    "activePageText": null,
+    "has4000": false,
+    "hasEmpty": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "risk": [
+      "快速验证",
+      "购物无忧",
+      "risk_handler"
+    ],
+    "skuCount": 0,
+    "skus": [],
+    "tail": "验证一下，购物无忧\n快速验证\n遇到问题点我反馈",
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D2&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188544481-10258-1779648853140&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhrISYwe6hbCNxA6JWd-rciykACz4ovHmVMiTgnhB5O0U0YNcl"
+  },
+  "phase": "HZ15 jump-to-page 30/60 probe",
+  "status": "NEED_MANUAL_VERIFY_BEFORE_PROBE",
+  "targets": [
+    30,
+    60
+  ],
+  "ts": "2026-05-25 03:27:08"
+}
