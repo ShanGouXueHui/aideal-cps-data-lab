@@ -1,41 +1,5 @@
 {
-  "bootstrap": {
-    "event": "HZ14_V4_BOOTSTRAP_MERGE",
-    "latest": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
-    "merged_dedup_sku": 967,
-    "out": "data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl",
-    "raw_ok": 9338,
-    "sources": {
-      "data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl": 191,
-      "data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl": 14,
-      "data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl": 676,
-      "data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl": 720,
-      "data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl": 967,
-      "data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl": 967,
-      "data/import/hz_jd_union_all_product_full_links_latest.jsonl": 967,
-      "data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl": 1,
-      "data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl": 10,
-      "data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl": 10,
-      "data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl": 10,
-      "data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl": 52,
-      "data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl": 90,
-      "data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl": 20,
-      "data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl": 20,
-      "data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl": 20,
-      "data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl": 112,
-      "data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl": 177,
-      "data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl": 133,
-      "data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl": 3,
-      "data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl": 191,
-      "data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl": 657,
-      "data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl": 676,
-      "data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl": 720,
-      "data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl": 967,
-      "data/import/hz_jd_union_product_all_full_links_latest.jsonl": 967
-    },
-    "ts": "2026-05-25 15:17:23",
-    "worker": "hz15_jump_pages"
-  },
+  "bootstrap": null,
   "compat_latest_exists": true,
   "counts": {
     "dedup_sku": 967,
@@ -50,99 +14,20 @@
     "target_total": 4000
   },
   "decision": "Continue if process_alive=true, stop=false, jump ok, latest cumulative grows, skips do not stop the job, and missing new rows are acceptable. If risk STOP exists, verify manually and resume with slower/smaller page segment.",
-  "events_tail": [
-    {
-      "event": "HZ14_V4_BOOTSTRAP_MERGE",
-      "latest": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
-      "merged_dedup_sku": 967,
-      "out": "data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl",
-      "raw_ok": 9338,
-      "sources": {
-        "data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl": 191,
-        "data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl": 14,
-        "data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl": 676,
-        "data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl": 720,
-        "data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl": 967,
-        "data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl": 967,
-        "data/import/hz_jd_union_all_product_full_links_latest.jsonl": 967,
-        "data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl": 1,
-        "data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl": 10,
-        "data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl": 10,
-        "data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl": 10,
-        "data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl": 52,
-        "data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl": 90,
-        "data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl": 20,
-        "data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl": 20,
-        "data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl": 20,
-        "data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl": 112,
-        "data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl": 177,
-        "data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl": 133,
-        "data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl": 3,
-        "data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl": 191,
-        "data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl": 657,
-        "data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl": 676,
-        "data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl": 720,
-        "data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl": 967,
-        "data/import/hz_jd_union_product_all_full_links_latest.jsonl": 967
-      },
-      "ts": "2026-05-25 15:17:23",
-      "worker": "hz15_jump_pages"
-    },
-    {
-      "event": "HZ15_JUMP_PAGES_START",
-      "item_sleep": [
-        10.0,
-        22.0
-      ],
-      "page_sleep": [
-        300.0,
-        520.0
-      ],
-      "pages": [
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20
-      ],
-      "run_once": true,
-      "target_total": 4000,
-      "ts": "2026-05-25 15:17:23",
-      "worker": "hz15_jump_pages"
-    },
-    {
-      "context": "hz15_after_click_product_all",
-      "event": "STOP_REQUIRED",
-      "reason": "jd_risk_verification_required",
-      "risk": [
-        "risk_handler",
-        "京东验证",
-        "快速验证",
-        "购物无忧"
-      ],
-      "ts": "2026-05-25 15:17:35",
-      "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D1&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-112038507-10451-1779693449797&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhYaMXkiIumPvvNZhk1U25wPKzk7yNHdei4DEiQkWeqQjSFhGz",
-      "worker": "hz15_jump_pages"
-    }
-  ],
+  "events_tail": [],
   "failures": {
     "item_fail_events_tail": 0,
     "item_skip_events_tail": 0,
     "last_fail": null,
     "last_skip": null,
-    "stop_events_tail": 1
+    "stop_events_tail": 0
   },
   "jump": {
     "last_page_jump": null,
     "page_jump_events_tail": 0,
     "page_jump_ok_tail": 0
   },
-  "latest_log": "logs/hz15_jump_pages_resume_11_20_ultraslow_v2_20260525_151719.log",
+  "latest_log": "logs/hz15_jump_pages_resume_11_20_no_reset_v3_20260525_161702.log",
   "missing": {
     "commission_rate": 0,
     "estimated_income": 0,
@@ -346,47 +231,10 @@
       "title": "LP781专业级运动髌骨带护膝髌腱稳固加压束缚带跑步登山羽毛球 均码"
     }
   ],
-  "start": {
-    "event": "HZ15_JUMP_PAGES_START",
-    "item_sleep": [
-      10.0,
-      22.0
-    ],
-    "page_sleep": [
-      300.0,
-      520.0
-    ],
-    "pages": [
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20
-    ],
-    "run_once": true,
-    "target_total": 4000,
-    "ts": "2026-05-25 15:17:23",
-    "worker": "hz15_jump_pages"
-  },
+  "start": null,
   "state": null,
-  "stop": {
-    "context": "hz15_after_click_product_all",
-    "reason": "jd_risk_verification_required",
-    "risk": [
-      "risk_handler",
-      "京东验证",
-      "快速验证",
-      "购物无忧"
-    ],
-    "ts": "2026-05-25 15:17:35",
-    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D1&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-112038507-10451-1779693449797&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhYaMXkiIumPvvNZhk1U25wPKzk7yNHdei4DEiQkWeqQjSFhGz"
-  },
-  "stop_exists": true,
+  "stop": null,
+  "stop_exists": false,
   "throughput": {
     "estimated_ok_per_hour": 2.86,
     "eta_hours_to_4000": 1061.05,
@@ -394,5 +242,5 @@
     "last_ts": "2026-05-25T06:02:54",
     "runtime_hours_est": 338.291
   },
-  "ts": "2026-05-25 16:11:33"
+  "ts": "2026-05-25 16:25:40"
 }
