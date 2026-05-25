@@ -1,0 +1,117 @@
+{
+  "counts": {
+    "dedup_sku": 967,
+    "first_page": 1,
+    "last_page": 14,
+    "ok": 967,
+    "page_count": 13,
+    "progress_pct": 24.18,
+    "rows": 967
+  },
+  "decision": "Continue if process_alive=true, stop=false, ITEM_OK grows, and PAGE_JUMP works. If exited with no events, inspect plain_tail_80.",
+  "event_count": 2,
+  "interesting_event_count": 2,
+  "interesting_events_tail": [
+    {
+      "event": "HZ14_V4_BOOTSTRAP_MERGE",
+      "latest": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+      "merged_dedup_sku": 967,
+      "out": "data/import/hz_jd_union_all_product_full_links_20260525_164252.jsonl",
+      "raw_ok": 10305,
+      "sources": {
+        "data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl": 191,
+        "data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl": 14,
+        "data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl": 676,
+        "data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl": 720,
+        "data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl": 967,
+        "data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl": 967,
+        "data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl": 967,
+        "data/import/hz_jd_union_all_product_full_links_latest.jsonl": 967,
+        "data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl": 1,
+        "data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl": 10,
+        "data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl": 10,
+        "data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl": 10,
+        "data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl": 52,
+        "data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl": 90,
+        "data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl": 20,
+        "data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl": 20,
+        "data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl": 20,
+        "data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl": 112,
+        "data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl": 177,
+        "data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl": 133,
+        "data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl": 3,
+        "data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl": 191,
+        "data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl": 657,
+        "data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl": 676,
+        "data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl": 720,
+        "data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl": 967,
+        "data/import/hz_jd_union_product_all_full_links_latest.jsonl": 967
+      },
+      "ts": "2026-05-25 16:42:52",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "HZ15_NO_RESET_V4_START",
+      "item_sleep": [
+        10.0,
+        22.0
+      ],
+      "page_sleep": [
+        300.0,
+        520.0
+      ],
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "run_once": true,
+      "target_total": 4000,
+      "ts": "2026-05-25 16:42:52",
+      "worker": "hz15_jump_pages"
+    }
+  ],
+  "latest_log": "logs/hz15_jump_pages_resume_11_20_no_reset_v4_20260525_164249.log",
+  "missing": {
+    "commission_rate": 0,
+    "estimated_income": 0,
+    "image_url": 1,
+    "price": 0,
+    "short_url": 0,
+    "title": 55
+  },
+  "plain_tail_80": [
+    "{\"event\": \"HZ14_V4_BOOTSTRAP_MERGE\", \"latest\": \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\", \"merged_dedup_sku\": 967, \"out\": \"data/import/hz_jd_union_all_product_full_links_20260525_164252.jsonl\", \"raw_ok\": 10305, \"sources\": {\"data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl\": 14, \"data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\": 967, \"data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl\": 1, \"data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl\": 52, \"data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl\": 90, \"data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl\": 112, \"data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl\": 177, \"data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl\": 133, \"data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl\": 3, \"data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl\": 657, \"data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_product_all_full_links_latest.jsonl\": 967}, \"ts\": \"2026-05-25 16:42:52\", \"worker\": \"hz15_jump_pages\"}",
+    "{\"event\": \"HZ15_NO_RESET_V4_START\", \"item_sleep\": [10.0, 22.0], \"page_sleep\": [300.0, 520.0], \"pages\": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20], \"run_once\": true, \"target_total\": 4000, \"ts\": \"2026-05-25 16:42:52\", \"worker\": \"hz15_jump_pages\"}",
+    "Traceback (most recent call last):",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v4_no_reset.py\", line 148, in <module>",
+    "    main()",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v4_no_reset.py\", line 138, in main",
+    "    n = run_pages_no_reset(page, state, pages)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v4_no_reset.py\", line 88, in run_pages_no_reset",
+    "    ready = ensure_product_list_without_reset(page)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v4_no_reset.py\", line 74, in ensure_product_list_without_reset",
+    "    probe = current_page_usable(page)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v4_no_reset.py\", line 68, in current_page_usable",
+    "    info = hz15_v2.strict_page_info(page)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v2.py\", line 77, in strict_page_info",
+    "    info = v1.page_info(page)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v2.py\", line 77, in strict_page_info",
+    "    info = v1.page_info(page)",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/run/hz15_jump_pages_collector_v2.py\", line 77, in strict_page_info",
+    "    info = v1.page_info(page)",
+    "  [Previous line repeated 992 more times]",
+    "RecursionError: maximum recursion depth exceeded"
+  ],
+  "process_alive": false,
+  "processes": [],
+  "stop_exists": false,
+  "ts": "2026-05-26 00:01:01"
+}
