@@ -35,15 +35,15 @@
   },
   "compat_latest_exists": true,
   "counts": {
-    "dedup_sku": 947,
+    "dedup_sku": 967,
     "duplicate_ok_rows": 0,
     "first_page": 1,
     "last_page": 14,
     "non_numeric": 0,
-    "ok": 947,
+    "ok": 967,
     "page_count": 13,
-    "progress_pct": 23.67,
-    "rows": 947,
+    "progress_pct": 24.18,
+    "rows": 967,
     "target_total": 4000
   },
   "decision": "Continue if process_alive=true, stop=false, jump ok, latest cumulative grows, skips do not stop the job, and missing new rows are acceptable. If risk STOP exists, verify manually and resume with slower/smaller page segment.",
@@ -5585,6 +5585,404 @@
       "sku": "100198550287",
       "ts": "2026-05-25 05:58:03",
       "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 948,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RgG32Vw",
+      "sku": "100165335073",
+      "title": "固满德电动车轮胎半热熔轮胎猪猪侠联名款8层级3.00-10【免费上门安装】",
+      "ts": "2026-05-25 05:58:20",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 948,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RgG32Vw",
+      "sku": "100165335073",
+      "ts": "2026-05-25 05:58:20",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 949,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGS66l",
+      "sku": "100016922430",
+      "title": "KONOKO宠物除臭剂猫咪猫砂抑菌除螨去尿味狗狗除臭喷雾臭味生物酶分解剂",
+      "ts": "2026-05-25 05:58:32",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 949,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGS66l",
+      "sku": "100016922430",
+      "ts": "2026-05-25 05:58:32",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 950,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GgBsE",
+      "sku": "12932325",
+      "title": "【自营包邮】我的阿勒泰 马伊琍 周依然 于适 蒋奇明主演的同名电视剧 新疆风光 李娟阿勒泰畅销代表作",
+      "ts": "2026-05-25 05:58:45",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 950,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GgBsE",
+      "sku": "12932325",
+      "ts": "2026-05-25 05:58:45",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 951,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R1GvgqL",
+      "sku": "686943",
+      "title": "博世（BOSCH）DOT4 刹车油/制动液/离合器油 1L 通用型 一升装汽车养护套装",
+      "ts": "2026-05-25 05:58:57",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 951,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R1GvgqL",
+      "sku": "686943",
+      "ts": "2026-05-25 05:58:58",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 952,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDG2OtP",
+      "sku": "100329225996",
+      "title": "公牛电动汽车放电枪插排座枪适配于理想小米汽车比亚迪小鹏等 10A/黑色/5米防雷套装",
+      "ts": "2026-05-25 05:59:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 952,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDG2OtP",
+      "sku": "100329225996",
+      "ts": "2026-05-25 05:59:11",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 953,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGnXn2",
+      "sku": "100149980622",
+      "title": "蜀香 盐渍猪肠衣2袋 天然猪肠衣灌香肠灌蜀香香肠灌约12斤肉",
+      "ts": "2026-05-25 05:59:25",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 953,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGnXn2",
+      "sku": "100149980622",
+      "ts": "2026-05-25 05:59:25",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 954,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGBK71",
+      "sku": "100280169868",
+      "title": "小熊（Bear）【价保618】全玻璃养生壶 纯玻璃多功能恒温烧水壶煮水壶 办公室轻音炖煮茶壶 1L YSH-J10D1",
+      "ts": "2026-05-25 05:59:40",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 954,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGBK71",
+      "sku": "100280169868",
+      "ts": "2026-05-25 05:59:40",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 955,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R1G0YLs",
+      "sku": "100189196238",
+      "title": "墨斗鱼防撞贴硅胶防撞条PU门把手柜门防磕碰静音颗粒组合装50粒+10条",
+      "ts": "2026-05-25 05:59:53",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 955,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R1G0YLs",
+      "sku": "100189196238",
+      "ts": "2026-05-25 05:59:53",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 956,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGBDjT",
+      "sku": "100054321889",
+      "title": "南华千牧（SOUTH RANCH）兽药除癞灵兽用体外驱虫药猪牛羊犬水产辛硫磷溶液真菌虱子跳蚤",
+      "ts": "2026-05-25 06:00:07",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 956,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGBDjT",
+      "sku": "100054321889",
+      "ts": "2026-05-25 06:00:07",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 957,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RGGbfWH",
+      "sku": "12386397",
+      "title": "张素芳小儿推拿技法图谱 小儿推拿精解 推拿实用挂图 婴幼儿推拿穴位讲解50多种小儿常见病 零基础无忧上手 小儿推拿技法图",
+      "ts": "2026-05-25 06:00:21",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 957,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RGGbfWH",
+      "sku": "12386397",
+      "ts": "2026-05-25 06:00:21",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 958,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RgGP4Mr",
+      "sku": "10199018633571",
+      "title": "飞利浦即热式电热水龙头机械臂速热变频恒温不锈钢冷热厨房卫生间家用屏显电热水器小厨宝包安装2105 【新款上新】六档变频不",
+      "ts": "2026-05-25 06:00:38",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 958,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RgGP4Mr",
+      "sku": "10199018633571",
+      "ts": "2026-05-25 06:00:38",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 959,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GDVAl",
+      "sku": "100167209667",
+      "title": "八海鸟电视机顶盒遮丑神器路由器放置架wifi托架墙上壁挂式免打孔收纳盒",
+      "ts": "2026-05-25 06:00:54",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 959,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GDVAl",
+      "sku": "100167209667",
+      "ts": "2026-05-25 06:00:54",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 960,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDGDauO",
+      "sku": "100254441258",
+      "title": "SHUKIKU星星屋迷你包儿童防泼水斜挎包可爱手提小包包 海盐西瓜 s+",
+      "ts": "2026-05-25 06:01:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 960,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDGDauO",
+      "sku": "100254441258",
+      "ts": "2026-05-25 06:01:11",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 961,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RaG2Oiu",
+      "sku": "100035494758",
+      "title": "芭比波朗【618现货】五花肉高光晶亮颜彩盘便携装#1修容提亮生日礼物",
+      "ts": "2026-05-25 06:01:25",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 961,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RaG2Oiu",
+      "sku": "100035494758",
+      "ts": "2026-05-25 06:01:26",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 962,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGPHLg",
+      "sku": "100000725208",
+      "title": "丹碧丝易推长导管式卫生棉条21支(普通14+大流量7)棉条卫生巾京东",
+      "ts": "2026-05-25 06:01:42",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 962,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrGPHLg",
+      "sku": "100000725208",
+      "ts": "2026-05-25 06:01:42",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 963,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGgN44",
+      "sku": "100064081358",
+      "title": "彩虹【高温断电】双人定时双温双控除螨无纺布电热毯电褥子1.8*1.5米",
+      "ts": "2026-05-25 06:01:58",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 963,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGgN44",
+      "sku": "100064081358",
+      "ts": "2026-05-25 06:01:58",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 964,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GzIol",
+      "sku": "11011281930",
+      "title": "【销量10W+】正版歌碟车载cd碟片光盘2026精选抖友流行新歌 汽车音乐热门歌曲黑胶无损音质唱片10CD光碟",
+      "ts": "2026-05-25 06:02:11",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 964,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/R6GzIol",
+      "sku": "11011281930",
+      "ts": "2026-05-25 06:02:11",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 965,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGPxO9",
+      "sku": "10100877169484",
+      "title": "肌肉科技【肌肉科技官旗】一水肌酸粉高纯度健身营养补剂耐力训练运动男女 【原装进口】锌镁肌酸 300g*1桶",
+      "ts": "2026-05-25 06:02:25",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 965,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/ROGPxO9",
+      "sku": "10100877169484",
+      "ts": "2026-05-25 06:02:25",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 966,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDGqmn2",
+      "sku": "100128755277",
+      "title": "七小七山药煮苹果四神汤养养水*1包（10袋）宝宝果泥儿童果汁健康饮料",
+      "ts": "2026-05-25 06:02:42",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 966,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RDGqmn2",
+      "sku": "100128755277",
+      "ts": "2026-05-25 06:02:42",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 967,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrG069b",
+      "sku": "10162591576675",
+      "title": "VVC遮阳镜女新款修容折叠墨镜女款防紫外线户外太阳镜 森林黑",
+      "ts": "2026-05-25 06:02:54",
+      "worker": "product_all_full"
+    },
+    {
+      "event": "ITEM_OK",
+      "known_sku_count": 967,
+      "page_no": 10,
+      "short_url": "https://u.jd.com/RrG069b",
+      "sku": "10162591576675",
+      "ts": "2026-05-25 06:02:54",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "event": "PAGE_JUMP_SLEEP",
+      "seconds": 137.82,
+      "target_page": 11,
+      "ts": "2026-05-25 06:03:03",
+      "worker": "hz15_jump_pages"
+    },
+    {
+      "context": "hz15_after_jump_11",
+      "event": "STOP_REQUIRED",
+      "reason": "jd_risk_verification_required",
+      "risk": [
+        "风险"
+      ],
+      "ts": "2026-05-25 06:05:23",
+      "url": "https://union.jd.com/proManager/index?pageNo=11",
+      "worker": "hz15_jump_pages"
     }
   ],
   "failures": {
@@ -5592,7 +5990,7 @@
     "item_skip_events_tail": 0,
     "last_fail": null,
     "last_skip": null,
-    "stop_events_tail": 0
+    "stop_events_tail": 1
   },
   "jump": {
     "last_page_jump": {
@@ -5718,18 +6116,18 @@
     "title": 55
   },
   "phase": "HZ15 resume cumulative progress check",
-  "process_alive": true,
+  "process_alive": false,
   "processes": [
     "30073 /usr/bin/google-chrome --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1536,1100 --lang=zh-CN --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --remote-debugging-address=127.0.0.1 --remote-debugging-port=19228 --disable-blink-features=AutomationControlled https://union.jd.com/index",
     "30813 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=18 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=2689596256 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,9707303555383192621,944854569504904531,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709003178624776",
-    "176657 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=150 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=1844388528822 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5607232763505639641,15577982998713520933,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709126868148844",
-    "177321 .venv-browser/bin/python run/hz15_jump_pages_collector.py"
+    "176657 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=30082 --enable-crash-reporter=, --user-data-dir=/home/cpsdata/projects/aideal-cps-data-lab/.secrets/jd_union_public_manual_profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --remote-debugging-port=19228 --ozone-platform=x11 --disable-gpu-compositing --disable-blink-features=AutomationControlled --lang=en-US --num-raster-threads=1 --renderer-client-id=150 --time-ticks-at-unix-epoch=-1777809706075787 --launch-time-ticks=1844388528822 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,5607232763505639641,15577982998713520933,2097152 --field-trial-handle=3,i,10709816608756102670,17480246403413794853,262144 --variations-seed-version --pseudonymization-salt-handle=7,i,16255656096572889656,1981783894352167861,4 --trace-process-track-uuid=3190709126868148844"
   ],
   "runtime_report": {
-    "dedup_sku": 947,
+    "cycle_processed": 247,
+    "dedup_sku": 967,
     "hz12_compat_latest": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
     "last_page_no": 10,
-    "last_page_processed": 21,
+    "last_page_processed": 41,
     "latest": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
     "missing": {
       "commission_rate": 0,
@@ -5744,9 +6142,75 @@
       "short_url": 0,
       "title": 55
     },
-    "ok_rows": 947,
+    "ok_rows": 967,
     "out": "data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl",
     "page_count": 13,
+    "page_sequence": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
     "pages": [
       1,
       2,
@@ -5762,15 +6226,15 @@
       12,
       14
     ],
-    "progress_pct": 23.67,
-    "rows": 947,
+    "progress_pct": 24.18,
+    "rows": 967,
     "run_id": "20260525_044408",
     "state": {
       "created_at": "2026-05-25 04:44:21",
       "current_page_no": 10,
       "empty_page_streak": 0,
       "fail_streak": 0,
-      "known_sku_count": 947,
+      "known_sku_count": 967,
       "known_skus": [
         "100003427923",
         "100006061653",
@@ -6718,14 +7182,34 @@
         "100015801178",
         "100022803094",
         "4295237",
-        "100198550287"
+        "100198550287",
+        "100165335073",
+        "100016922430",
+        "12932325",
+        "686943",
+        "100329225996",
+        "100149980622",
+        "100280169868",
+        "100189196238",
+        "100054321889",
+        "12386397",
+        "10199018633571",
+        "100167209667",
+        "100254441258",
+        "100035494758",
+        "100000725208",
+        "100064081358",
+        "11011281930",
+        "10100877169484",
+        "100128755277",
+        "10162591576675"
       ],
       "last_event": {
         "event": "ITEM_OK",
         "page_no": 10,
-        "short_url": "https://u.jd.com/RrGyaDR",
-        "sku": "100198550287",
-        "ts": "2026-05-25 05:58:03"
+        "short_url": "https://u.jd.com/RrG069b",
+        "sku": "10162591576675",
+        "ts": "2026-05-25 06:02:54"
       },
       "pages_done": [
         4,
@@ -6733,10 +7217,11 @@
         6,
         7,
         8,
-        9
+        9,
+        10
       ],
       "refresh_round": 0,
-      "round_seen_sku_count": 947,
+      "round_seen_sku_count": 967,
       "round_seen_skus": [
         "100003427923",
         "100006061653",
@@ -7684,7 +8169,27 @@
         "100015801178",
         "100022803094",
         "4295237",
-        "100198550287"
+        "100198550287",
+        "100165335073",
+        "100016922430",
+        "12932325",
+        "686943",
+        "100329225996",
+        "100149980622",
+        "100280169868",
+        "100189196238",
+        "100054321889",
+        "12386397",
+        "10199018633571",
+        "100167209667",
+        "100254441258",
+        "100035494758",
+        "100000725208",
+        "100064081358",
+        "11011281930",
+        "10100877169484",
+        "100128755277",
+        "10162591576675"
       ],
       "run_id": "20260525_044408",
       "seen_short_urls": [],
@@ -8413,192 +8918,192 @@
       "skipped_sku_count": 0,
       "skipped_skus": [],
       "target_total": 4000,
-      "updated_at": "2026-05-25 05:58:03"
+      "updated_at": "2026-05-25 06:03:02"
     },
     "target_total": 4000,
-    "ts": "2026-05-25 05:58:03",
+    "ts": "2026-05-25 06:03:02",
     "worker": "hz15_jump_pages"
   },
   "sample_last_20": [
     {
-      "commission_rate": "27",
-      "estimated_income": "1.35",
+      "commission_rate": "5",
+      "estimated_income": "4.95",
       "page_no": 10,
-      "price": "4.99",
-      "short_url": "https://u.jd.com/RgGSUDz",
-      "sku": "10215970352138",
-      "title": "康恩贝【买2发3】芦荟软胶囊 便秘者通便 成人中老人 0.5g/粒*90粒"
-    },
-    {
-      "commission_rate": "8",
-      "estimated_income": "1.83",
-      "page_no": 10,
-      "price": "22.85",
-      "short_url": "https://u.jd.com/RDGsY3E",
-      "sku": "695270",
-      "title": "2026冰丝短裤男款夏外穿运动速干五分裤男新款男士冰爽透气沙滩裤 黑色 2XL 【建议135-150斤】"
-    },
-    {
-      "commission_rate": "12.5",
-      "estimated_income": "48.25",
-      "page_no": 10,
-      "price": "386",
-      "short_url": "https://u.jd.com/RGGqAbo",
-      "sku": "100074021699",
-      "title": "嘉士利饼干零食 营养早餐饼干 原味1000g/箱 早餐食品零食礼盒团购"
-    },
-    {
-      "commission_rate": "1",
-      "estimated_income": "4.74",
-      "page_no": 10,
-      "price": "474",
-      "short_url": "https://u.jd.com/R6GvK9z",
-      "sku": "10180309982951",
-      "title": "派克（PARKER）签字笔 时尚商务办公送礼生日礼物高颜值 IM纯黑丽雅金夹宝珠笔+流光礼盒"
-    },
-    {
-      "commission_rate": "12",
-      "estimated_income": "15.40",
-      "page_no": 10,
-      "price": "128.3",
-      "short_url": "https://u.jd.com/RaGupGc",
-      "sku": "100185648805",
-      "title": "三星（SAMSUNG）IPS 1K 120Hz 家用办公HDMI接口 护眼 支持壁挂 超薄机身设计 家用办公 显示器 官翻机 24英寸 S24F322GAC"
-    },
-    {
-      "commission_rate": "3",
-      "estimated_income": "8.37",
-      "page_no": 10,
-      "price": "279",
-      "short_url": "https://u.jd.com/RaGBY77",
-      "sku": "100027844951",
-      "title": "派菲特医用静脉曲张弹力袜 压力I级短筒露趾中号肤色 静脉曲张袜压力袜"
-    },
-    {
-      "commission_rate": "15",
-      "estimated_income": "3.66",
-      "page_no": 10,
-      "price": "24.4",
-      "short_url": "https://u.jd.com/ROG1zxt",
-      "sku": "13130204",
-      "title": "沧浪之水（插图典藏版） 小说"
+      "price": "99",
+      "short_url": "https://u.jd.com/RgG32Vw",
+      "sku": "100165335073",
+      "title": "固满德电动车轮胎半热熔轮胎猪猪侠联名款8层级3.00-10【免费上门安装】"
     },
     {
       "commission_rate": "10",
-      "estimated_income": "2.79",
+      "estimated_income": "3.49",
       "page_no": 10,
-      "price": "27.9",
-      "short_url": "https://u.jd.com/RaG0inZ",
-      "sku": "100011936360",
-      "title": "美丽雅粘毛器滚筒7卷替换纸共420撕沾毛神器衣服猫毛地毯清理宠物毡毛刷"
+      "price": "34.9",
+      "short_url": "https://u.jd.com/RrGS66l",
+      "sku": "100016922430",
+      "title": "KONOKO宠物除臭剂猫咪猫砂抑菌除螨去尿味狗狗除臭喷雾臭味生物酶分解剂"
     },
     {
-      "commission_rate": "20",
-      "estimated_income": "2.58",
+      "commission_rate": "15",
+      "estimated_income": "4.05",
       "page_no": 10,
-      "price": "12.9",
-      "short_url": "https://u.jd.com/ROGrRtX",
-      "sku": "10125368295124",
-      "title": "电煮电热锅小电锅宿舍小锅学生寝室一体泡面小火锅多功能锅多功能一锅多用小锅宿舍用1-2人煮面锅小型开学季 【限时特价】不锈钢内胆不带蒸笼"
+      "price": "27",
+      "short_url": "https://u.jd.com/R6GgBsE",
+      "sku": "12932325",
+      "title": "【自营包邮】我的阿勒泰 马伊琍 周依然 于适 蒋奇明主演的同名电视剧 新疆风光 李娟阿勒泰畅销代表作"
     },
     {
-      "commission_rate": "3",
-      "estimated_income": "4.71",
+      "commission_rate": "2",
+      "estimated_income": "0.70",
       "page_no": 10,
-      "price": "157",
-      "short_url": "https://u.jd.com/ROGsg53",
-      "sku": "100030186896",
-      "title": "汉维宠仕优泌安猫尿通泌尿猫应激利尿自发性膀胱黏膜养复胶囊30粒"
-    },
-    {
-      "commission_rate": "5",
-      "estimated_income": "2.76",
-      "page_no": 10,
-      "price": "55.24",
-      "short_url": "https://u.jd.com/ROGvjth",
-      "sku": "5131647",
-      "title": "曼牌滤清器（MANNFILTER）空气滤清器空气滤芯C30005M/C30052迈腾高尔夫7凌渡途安途观L速派"
-    },
-    {
-      "commission_rate": "2.5",
-      "estimated_income": "1.75",
-      "page_no": 10,
-      "price": "69.9",
-      "short_url": "https://u.jd.com/R1GSutu",
-      "sku": "1044732",
-      "title": "雀巢（Nestle）即饮咖啡 丝滑拿铁口味 咖啡饮料 268ml*15瓶"
-    },
-    {
-      "commission_rate": "9.5",
-      "estimated_income": "7.41",
-      "page_no": 10,
-      "price": "78",
-      "short_url": "https://u.jd.com/RaGbsRX",
-      "sku": "100077397453",
-      "title": "毕亚兹 手机无线投屏器5G+2.4双频传输协议音视频同屏器 支持苹果华为手机电脑接电视显示器投影仪"
-    },
-    {
-      "commission_rate": "1",
-      "estimated_income": "1.79",
-      "page_no": 10,
-      "price": "179",
-      "short_url": "https://u.jd.com/R6G6weh",
-      "sku": "100065627064",
-      "title": "PROIRON普力艾 仰卧起坐专用垫折叠瑜伽垫午休加厚儿童舞蹈练功体操垫紫"
-    },
-    {
-      "commission_rate": "28",
-      "estimated_income": "16.52",
-      "page_no": 10,
-      "price": "59",
-      "short_url": "https://u.jd.com/RaG6LKI",
-      "sku": "10084247457831",
-      "title": "西域皇后新疆头茬新货桑葚干250g无沙特产黑桑椹泡水泡酒桑茶免洗 桑葚干250g*4袋"
-    },
-    {
-      "commission_rate": "5",
-      "estimated_income": "3.21",
-      "page_no": 10,
-      "price": "64.26",
-      "short_url": "https://u.jd.com/RrG8fn1",
-      "sku": "100027840552",
-      "title": "九牧（JOMOO）铝合金浴室柜陶瓷一体盆洗脸盆柜组合80cm A2736-74AT-3"
+      "price": "35",
+      "short_url": "https://u.jd.com/R1GvgqL",
+      "sku": "686943",
+      "title": "博世（BOSCH）DOT4 刹车油/制动液/离合器油 1L 通用型 一升装汽车养护套装"
     },
     {
       "commission_rate": "6",
-      "estimated_income": "3.56",
+      "estimated_income": "11.94",
       "page_no": 10,
-      "price": "59.3",
-      "short_url": "https://u.jd.com/RGGr5V0",
-      "sku": "100015801178",
-      "title": "日康（rikang）宝宝餐椅 叫叫椅婴儿学坐椅多功能儿童吃饭餐桌 RK-X2009-2 橙色"
+      "price": "199",
+      "short_url": "https://u.jd.com/RDG2OtP",
+      "sku": "100329225996",
+      "title": "公牛电动汽车放电枪插排座枪适配于理想小米汽车比亚迪小鹏等 10A/黑色/5米防雷套装"
     },
     {
-      "commission_rate": "12",
-      "estimated_income": "66.24",
+      "commission_rate": "15.1",
+      "estimated_income": "1.48",
       "page_no": 10,
-      "price": "552",
-      "short_url": "https://u.jd.com/RaGzdqI",
-      "sku": "100022803094",
-      "title": "绿联M.2 NVMe固态硬盘盒 硬盘读取器移动硬盘盒 适用笔记本电脑iPhone17手机外接SSD硬盘盒 铝合金散热"
+      "price": "9.8",
+      "short_url": "https://u.jd.com/RrGnXn2",
+      "sku": "100149980622",
+      "title": "蜀香 盐渍猪肠衣2袋 天然猪肠衣灌香肠灌蜀香香肠灌约12斤肉"
     },
     {
-      "commission_rate": "1.5",
-      "estimated_income": "2.09",
+      "commission_rate": "3",
+      "estimated_income": "4.47",
       "page_no": 10,
-      "price": "139",
-      "short_url": "https://u.jd.com/RGG0r1b",
-      "sku": "4295237",
-      "title": "斯伯丁（SPALDING）篮球TF系列7号PU比赛室内外兼用耐磨学生成人青少年 77-176Y"
+      "price": "148.96",
+      "short_url": "https://u.jd.com/ROGBK71",
+      "sku": "100280169868",
+      "title": "小熊（Bear）【价保618】全玻璃养生壶 纯玻璃多功能恒温烧水壶煮水壶 办公室轻音炖煮茶壶 1L YSH-J10D1"
+    },
+    {
+      "commission_rate": "5",
+      "estimated_income": "1.02",
+      "page_no": 10,
+      "price": "20.3",
+      "short_url": "https://u.jd.com/R1G0YLs",
+      "sku": "100189196238",
+      "title": "墨斗鱼防撞贴硅胶防撞条PU门把手柜门防磕碰静音颗粒组合装50粒+10条"
     },
     {
       "commission_rate": "3.5",
-      "estimated_income": "44.58",
+      "estimated_income": "0.84",
       "page_no": 10,
-      "price": "1273.73",
-      "short_url": "https://u.jd.com/RrGyaDR",
-      "sku": "100198550287",
-      "title": "米其林（MICHELIN）汽车轮胎 215/55R17 94V 耐越 ENERGY MILE 适配秦PLUS/探歌/缤智"
+      "price": "24",
+      "short_url": "https://u.jd.com/ROGBDjT",
+      "sku": "100054321889",
+      "title": "南华千牧（SOUTH RANCH）兽药除癞灵兽用体外驱虫药猪牛羊犬水产辛硫磷溶液真菌虱子跳蚤"
+    },
+    {
+      "commission_rate": "4",
+      "estimated_income": "0.75",
+      "page_no": 10,
+      "price": "18.7",
+      "short_url": "https://u.jd.com/RGGbfWH",
+      "sku": "12386397",
+      "title": "张素芳小儿推拿技法图谱 小儿推拿精解 推拿实用挂图 婴幼儿推拿穴位讲解50多种小儿常见病 零基础无忧上手 小儿推拿技法图谱"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "62.85",
+      "page_no": 10,
+      "price": "419",
+      "short_url": "https://u.jd.com/RgGP4Mr",
+      "sku": "10199018633571",
+      "title": "飞利浦即热式电热水龙头机械臂速热变频恒温不锈钢冷热厨房卫生间家用屏显电热水器小厨宝包安装2105 【新款上新】六档变频不锈钢机械臂"
+    },
+    {
+      "commission_rate": "6",
+      "estimated_income": "0.59",
+      "page_no": 10,
+      "price": "9.9",
+      "short_url": "https://u.jd.com/R6GDVAl",
+      "sku": "100167209667",
+      "title": "八海鸟电视机顶盒遮丑神器路由器放置架wifi托架墙上壁挂式免打孔收纳盒"
+    },
+    {
+      "commission_rate": "11",
+      "estimated_income": "8.10",
+      "page_no": 10,
+      "price": "73.6",
+      "short_url": "https://u.jd.com/RDGDauO",
+      "sku": "100254441258",
+      "title": "SHUKIKU星星屋迷你包儿童防泼水斜挎包可爱手提小包包 海盐西瓜 s+"
+    },
+    {
+      "commission_rate": "7",
+      "estimated_income": "23.45",
+      "page_no": 10,
+      "price": "335",
+      "short_url": "https://u.jd.com/RaG2Oiu",
+      "sku": "100035494758",
+      "title": "芭比波朗【618现货】五花肉高光晶亮颜彩盘便携装#1修容提亮生日礼物"
+    },
+    {
+      "commission_rate": "2",
+      "estimated_income": "0.94",
+      "page_no": 10,
+      "price": "46.9",
+      "short_url": "https://u.jd.com/RrGPHLg",
+      "sku": "100000725208",
+      "title": "丹碧丝易推长导管式卫生棉条21支(普通14+大流量7)棉条卫生巾京东"
+    },
+    {
+      "commission_rate": "1",
+      "estimated_income": "6.08",
+      "page_no": 10,
+      "price": "151.92",
+      "short_url": "https://u.jd.com/ROGgN44",
+      "sku": "100064081358",
+      "title": "彩虹【高温断电】双人定时双温双控除螨无纺布电热毯电褥子1.8*1.5米"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "5.84",
+      "page_no": 10,
+      "price": "38.9",
+      "short_url": "https://u.jd.com/R6GzIol",
+      "sku": "11011281930",
+      "title": "【销量10W+】正版歌碟车载cd碟片光盘2026精选抖友流行新歌 汽车音乐热门歌曲黑胶无损音质唱片10CD光碟"
+    },
+    {
+      "commission_rate": "15",
+      "estimated_income": "7.95",
+      "page_no": 10,
+      "price": "53",
+      "short_url": "https://u.jd.com/ROGPxO9",
+      "sku": "10100877169484",
+      "title": "肌肉科技【肌肉科技官旗】一水肌酸粉高纯度健身营养补剂耐力训练运动男女 【原装进口】锌镁肌酸 300g*1桶"
+    },
+    {
+      "commission_rate": "10",
+      "estimated_income": "2.99",
+      "page_no": 10,
+      "price": "29.9",
+      "short_url": "https://u.jd.com/RDGqmn2",
+      "sku": "100128755277",
+      "title": "七小七山药煮苹果四神汤养养水*1包（10袋）宝宝果泥儿童果汁健康饮料"
+    },
+    {
+      "commission_rate": "10.3",
+      "estimated_income": "6.80",
+      "page_no": 10,
+      "price": "66",
+      "short_url": "https://u.jd.com/RrG069b",
+      "sku": "10162591576675",
+      "title": "VVC遮阳镜女新款修容折叠墨镜女款防紫外线户外太阳镜 森林黑"
     }
   ],
   "start": {
@@ -8687,7 +9192,7 @@
     "current_page_no": 10,
     "empty_page_streak": 0,
     "fail_streak": 0,
-    "known_sku_count": 947,
+    "known_sku_count": 967,
     "known_skus": [
       "100003427923",
       "100006061653",
@@ -9635,14 +10140,34 @@
       "100015801178",
       "100022803094",
       "4295237",
-      "100198550287"
+      "100198550287",
+      "100165335073",
+      "100016922430",
+      "12932325",
+      "686943",
+      "100329225996",
+      "100149980622",
+      "100280169868",
+      "100189196238",
+      "100054321889",
+      "12386397",
+      "10199018633571",
+      "100167209667",
+      "100254441258",
+      "100035494758",
+      "100000725208",
+      "100064081358",
+      "11011281930",
+      "10100877169484",
+      "100128755277",
+      "10162591576675"
     ],
     "last_event": {
       "event": "ITEM_OK",
       "page_no": 10,
-      "short_url": "https://u.jd.com/RrGyaDR",
-      "sku": "100198550287",
-      "ts": "2026-05-25 05:58:03"
+      "short_url": "https://u.jd.com/RrG069b",
+      "sku": "10162591576675",
+      "ts": "2026-05-25 06:02:54"
     },
     "pages_done": [
       4,
@@ -9650,10 +10175,11 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
     "refresh_round": 0,
-    "round_seen_sku_count": 947,
+    "round_seen_sku_count": 967,
     "round_seen_skus": [
       "100003427923",
       "100006061653",
@@ -10601,7 +11127,27 @@
       "100015801178",
       "100022803094",
       "4295237",
-      "100198550287"
+      "100198550287",
+      "100165335073",
+      "100016922430",
+      "12932325",
+      "686943",
+      "100329225996",
+      "100149980622",
+      "100280169868",
+      "100189196238",
+      "100054321889",
+      "12386397",
+      "10199018633571",
+      "100167209667",
+      "100254441258",
+      "100035494758",
+      "100000725208",
+      "100064081358",
+      "11011281930",
+      "10100877169484",
+      "100128755277",
+      "10162591576675"
     ],
     "run_id": "20260525_044408",
     "seen_short_urls": [],
@@ -11330,16 +11876,24 @@
     "skipped_sku_count": 0,
     "skipped_skus": [],
     "target_total": 4000,
-    "updated_at": "2026-05-25 05:58:03"
+    "updated_at": "2026-05-25 06:03:02"
   },
-  "stop": null,
-  "stop_exists": false,
+  "stop": {
+    "context": "hz15_after_jump_11",
+    "reason": "jd_risk_verification_required",
+    "risk": [
+      "风险"
+    ],
+    "ts": "2026-05-25 06:05:23",
+    "url": "https://union.jd.com/proManager/index?pageNo=11"
+  },
+  "stop_exists": true,
   "throughput": {
-    "estimated_ok_per_hour": 2.8,
-    "eta_hours_to_4000": 1090.34,
+    "estimated_ok_per_hour": 2.86,
+    "eta_hours_to_4000": 1061.05,
     "first_ts": "2026-05-11T03:45:28",
-    "last_ts": "2026-05-25T05:58:03",
-    "runtime_hours_est": 338.21
+    "last_ts": "2026-05-25T06:02:54",
+    "runtime_hours_est": 338.291
   },
-  "ts": "2026-05-25 05:58:18"
+  "ts": "2026-05-25 15:07:27"
 }
