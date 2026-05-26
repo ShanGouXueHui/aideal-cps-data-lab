@@ -1,0 +1,13 @@
+# HZ15 No-Reset V6 Latest-Segment Progress
+
+- Generated at: 2026-05-27 05:16:27
+- latest_log: logs/hz15_jump_pages_resume_21_30_no_reset_v6_strict_4000_20260527_040610.log
+- process_alive: True
+- stop_exists: False
+- counts: {'rows': 1437, 'ok': 1437, 'dedup_sku': 1437, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 24, 'first_page': 1, 'last_page': 24, 'target_total': 4000, 'progress_pct': 35.93}
+- missing: {'title': 55, 'image_url': 1, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'short_url': 0, 'long_url': 0, 'qr_url': 0, 'jd_command': 0, 'refresh_due_at': 0}
+- event_count: 261
+- interesting_event_count: 253
+- last_page_jump: {'event': 'PAGE_JUMP', 'result': {'after': {'activePageText': '24', 'has4000': True, 'hasEmpty': False, 'jumpInputValue': '24', 'oneKeyCount': 59, 'pagerText': '共 4000 条 1222324252667 前往页', 'risk': [], 'skuCount': 59, 'skus': ['10153803241121', '100215015962', '100018764524', '100314589556', '8444259', '100133136803', '10209523344804', '10212144578337', '10099860419676', '10067983409174', '100112917955', '5175521', '1458447', '10037032334720', '10214110364577', '100278312682', '100200754323', '10205688142516', '10209014212798', '10043188238481', '100185553018', '100049667412', '100214716861', '100035018014', '100002943895', '10057131057', '100166544669', '100087184154', '100070565423', '414256', '10166137562274', '100292647308', '100000561340', '10155766413539', '100039675741', '100017767824', '10185205261272', '1027959', '10078226302742', '100022332755', '4189097', '10081931570239', '100273962448', '100265648298', '100037014376', '100247896210', '100017578766', '100259348596', '100222083327', '100104275215', '100038339699', '10213574301570', '100090992033', '100045520119', '12343327', '100258503502', '10166298538571', '10158821050351', '10067873869062'], 'title': '京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！', 'url': 'https://union.jd.com/proManager/index?pageNo=24'}, 'attempt': 1, 'before': {'activePageText': '23', 'skuCount': 60, 'skus': ['100004849094', '100070523781', '100130756121', '100096208988', '100037261777', '100003598836', '100111719585', '100244592513'], 'url': 'https://union.jd.com/proManager/index?pageNo=23'}, 'changed': True, 'click': {'attempt': 1, 'method': 'locator_fill_enter', 'ok': True}, 'ok': True, 'target_page': 24}, 'target_page': 24, 'ts': '2026-05-27 05:02:14', 'worker': 'hz15_jump_pages'}
+- last_item_ok: {'event': 'ITEM_OK', 'known_sku_count': 1437, 'page_no': 24, 'short_url': 'https://u.jd.com/RrnitgT', 'sku': '10081931570239', 'ts': '2026-05-27 05:15:28', 'worker': 'hz15_jump_pages'}
+- cycle_done_tail: []
