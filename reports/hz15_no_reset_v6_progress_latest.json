@@ -1,14 +1,14 @@
 {
   "counts": {
-    "dedup_sku": 1319,
+    "dedup_sku": 1412,
     "duplicate_ok_rows": 0,
     "first_page": 1,
-    "last_page": 20,
+    "last_page": 24,
     "non_numeric": 0,
-    "ok": 1319,
-    "page_count": 20,
-    "progress_pct": 32.98,
-    "rows": 1319,
+    "ok": 1412,
+    "page_count": 24,
+    "progress_pct": 35.3,
+    "rows": 1412,
     "target_total": 4000
   },
   "decision": "Continue if strict 4000 gate passed, process_alive=true, stop=false, PAGE_JUMP/ITEM_OK appear, and dedup_sku grows beyond 967. If manual_product_all_4000_required, put browser on 商品推广/全部商品 共4000条 and rerun.",
@@ -2058,9 +2058,11 @@
     "{\"event\": \"ITEM_OK\", \"known_sku_count\": 1319, \"page_no\": 20, \"short_url\": \"https://u.jd.com/R1gUcYR\", \"sku\": \"100275920454\", \"ts\": \"2026-05-26 06:30:01\", \"worker\": \"hz15_jump_pages\"}",
     "{\"event\": \"CYCLE_DONE\", \"known_sku_count\": 1319, \"processed\": 352, \"ts\": \"2026-05-26 06:30:19\", \"worker\": \"hz15_jump_pages\"}"
   ],
-  "process_alive": false,
-  "processes": [],
+  "process_alive": true,
+  "processes": [
+    "193867 .venv-browser/bin/python run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py"
+  ],
   "stop": null,
   "stop_exists": false,
-  "ts": "2026-05-27 03:58:59"
+  "ts": "2026-05-27 05:07:09"
 }
