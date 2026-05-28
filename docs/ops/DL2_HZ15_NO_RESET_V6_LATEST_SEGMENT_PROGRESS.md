@@ -1,13 +1,13 @@
 # HZ15 No-Reset V6 Latest-Segment Progress
 
-- Generated at: 2026-05-27 06:02:33
+- Generated at: 2026-05-29 03:36:22
 - latest_log: logs/hz15_jump_pages_resume_21_30_no_reset_v6_strict_4000_20260527_040610.log
-- process_alive: True
-- stop_exists: False
-- counts: {'rows': 1524, 'ok': 1524, 'dedup_sku': 1524, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 27, 'first_page': 1, 'last_page': 27, 'target_total': 4000, 'progress_pct': 38.1}
+- process_alive: False
+- stop_exists: True
+- counts: {'rows': 1538, 'ok': 1538, 'dedup_sku': 1538, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 27, 'first_page': 1, 'last_page': 27, 'target_total': 4000, 'progress_pct': 38.45}
 - missing: {'title': 55, 'image_url': 1, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'short_url': 0, 'long_url': 0, 'qr_url': 0, 'jd_command': 0, 'refresh_due_at': 0}
-- event_count: 449
-- interesting_event_count: 435
+- event_count: 479
+- interesting_event_count: 465
 - last_page_jump: {'event': 'PAGE_JUMP', 'result': {'after': {'activePageText': '27', 'has4000': True, 'hasEmpty': False, 'jumpInputValue': '27', 'oneKeyCount': 60, 'pagerText': '共 4000 条 1252627282967 前往页', 'risk': [], 'skuCount': 60, 'skus': ['10095877784593', '15235754', '100022610206', '100015985738', '100009710457', '100025662623', '100247896210', '100215967193', '100194567046', '100185593303', '10071520397004', '100140008328', '100087914180', '100139282698', '100095091825', '10172151396761', '10071289151390', '100294928878', '100151578775', '100011514457', '100192762770', '100029081978', '10191484471391', '10111891317529', '10221110073869', '100085997013', '5705174', '100216298910', '100213408029', '100333072594', '100275486946', '100029477079', '100120100611', '100097057894', '14519097', '100135119475', '100014424178', '12731242', '10137022911467', '100240980315', '100023917309', '10210092417995', '10105679083693', '100064964996', '100179124359', '4372062', '100117133331', '100106646052', '10123624621632', '100072500963', '100011136026', '10075731604556', '100189319470', '5911415', '100219237129', '100086901935', '100122462179', '100110564082', '10113289714502', '100206359350'], 'title': '京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！', 'url': 'https://union.jd.com/proManager/index?pageNo=27'}, 'attempt': 1, 'before': {'activePageText': '26', 'skuCount': 60, 'skus': ['100108890694', '100038697742', '3764581', '177274', '6007366', '100005896470', '2900851', '202567'], 'url': 'https://union.jd.com/proManager/index?pageNo=26'}, 'changed': True, 'click': {'attempt': 1, 'method': 'locator_fill_enter', 'ok': True}, 'ok': True, 'target_page': 27}, 'target_page': 27, 'ts': '2026-05-27 05:55:16', 'worker': 'hz15_jump_pages'}
-- last_item_ok: {'event': 'ITEM_OK', 'known_sku_count': 1524, 'page_no': 27, 'short_url': 'https://u.jd.com/RDnTdtA', 'sku': '10191484471391', 'ts': '2026-05-27 06:02:25', 'worker': 'hz15_jump_pages'}
+- last_item_ok: {'event': 'ITEM_OK', 'known_sku_count': 1538, 'page_no': 27, 'short_url': 'https://u.jd.com/RanQlZG', 'sku': '10210092417995', 'ts': '2026-05-27 06:06:53', 'worker': 'hz15_jump_pages'}
 - cycle_done_tail: []
