@@ -1,13 +1,13 @@
 # HZ15 No-Reset V6 Latest-Segment Progress
 
-- Generated at: 2026-05-31 01:29:58
-- latest_log: logs/hz15_jump_pages_resume_31_40_no_reset_v6_strict_4000_20260530_224905.log
-- process_alive: True
-- stop_exists: False
-- counts: {'rows': 1774, 'ok': 1774, 'dedup_sku': 1774, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 36, 'first_page': 1, 'last_page': 36, 'target_total': 4000, 'progress_pct': 44.35}
-- missing: {'title': 55, 'image_url': 1, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'short_url': 0, 'long_url': 0, 'qr_url': 0, 'jd_command': 0, 'refresh_due_at': 0}
-- event_count: 342
-- interesting_event_count: 330
-- last_page_jump: {'event': 'PAGE_JUMP', 'result': {'after': {'activePageText': '36', 'has4000': True, 'hasEmpty': False, 'jumpInputValue': '36', 'oneKeyCount': 60, 'pagerText': '共 4000 条 1343536373867 前往页', 'risk': [], 'skuCount': 60, 'skus': ['100093530323', '100153245431', '100104665644', '14174562', '13636619', '10829742', '100274504804', '100033801920', '10218999320418', '100152659495', '100096623949', '10171930334316', '10134491079964', '100150216207', '100023312954', '100019106924', '100018440234', '100273642930', '100010237888', '100147480407', '10079945131656', '100312008430', '100089560402', '100020665208', '15169772', '100014108138', '100182404104', '100148668869', '10204147431404', '100039916384', '10211600212699', '10127059543150', '100292319028', '100237304733', '100198550291', '100028259685', '10102132014422', '100292335892', '100257243416', '10176491861668', '100143427586', '100018161748', '546492', '12526022', '6513363', '100066309483', '100165460436', '100113958971', '100065727381', '100031577000', '100014968100', '100201553439', '100192638634', '100059555000', '100046967665', '10100148151335', '100145357766', '100205250202', '100082032434', '100027238841'], 'title': '京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！', 'url': 'https://union.jd.com/proManager/index?pageNo=36'}, 'attempt': 1, 'before': {'activePageText': '35', 'skuCount': 59, 'skus': ['100050191682', '100025007832', '100016407792', '10162488793401', '100078497597', '100254236939', '100017105384', '10165182644027'], 'url': 'https://union.jd.com/proManager/index?pageNo=35'}, 'changed': True, 'click': {'attempt': 1, 'method': 'locator_fill_enter', 'ok': True}, 'ok': True, 'target_page': 36}, 'target_page': 36, 'ts': '2026-05-31 01:23:21', 'worker': 'hz15_jump_pages'}
-- last_item_ok: {'event': 'ITEM_OK', 'known_sku_count': 1774, 'page_no': 36, 'short_url': 'https://u.jd.com/Rr9DCj5', 'sku': '100093530323', 'ts': '2026-05-31 01:23:35', 'worker': 'hz15_jump_pages'}
+- Generated at: 2026-05-31 20:43:52
+- latest_log: logs/hz15_jump_pages_resume_36_40_no_reset_v6_strict_4000_20260531_200328.log
+- process_alive: False
+- stop_exists: True
+- counts: {'rows': 1911, 'ok': 1911, 'dedup_sku': 1911, 'non_numeric': 0, 'duplicate_ok_rows': 0, 'page_count': 39, 'first_page': 1, 'last_page': 39, 'target_total': 4000, 'progress_pct': 47.77}
+- missing: {'title': 55, 'image_url': 1, 'item_url': 0, 'price': 0, 'commission_rate': 0, 'estimated_income': 0, 'short_url': 0, 'long_url': 0, 'qr_url': 2, 'jd_command': 0, 'refresh_due_at': 0}
+- event_count: 4
+- interesting_event_count: 4
+- last_page_jump: None
+- last_item_ok: None
 - cycle_done_tail: []
