@@ -20,8 +20,8 @@
       "event": "HZ14_V4_BOOTSTRAP_MERGE",
       "latest": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
       "merged_dedup_sku": 1911,
-      "out": "data/import/hz_jd_union_all_product_full_links_20260531_200331.jsonl",
-      "raw_ok": 30491,
+      "out": "data/import/hz_jd_union_all_product_full_links_20260531_205531.jsonl",
+      "raw_ok": 32402,
       "sources": {
         "data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl": 191,
         "data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl": 14,
@@ -37,6 +37,7 @@
         "data/import/hz_jd_union_all_product_full_links_20260529_051352.jsonl": 1640,
         "data/import/hz_jd_union_all_product_full_links_20260530_224908.jsonl": 1774,
         "data/import/hz_jd_union_all_product_full_links_20260531_013543.jsonl": 1911,
+        "data/import/hz_jd_union_all_product_full_links_20260531_200331.jsonl": 1911,
         "data/import/hz_jd_union_all_product_full_links_latest.jsonl": 1911,
         "data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl": 1,
         "data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl": 10,
@@ -63,76 +64,89 @@
         "data/import/hz_jd_union_product_all_full_links_20260531_013543.jsonl": 1911,
         "data/import/hz_jd_union_product_all_full_links_latest.jsonl": 1911
       },
-      "ts": "2026-05-31 20:03:32",
+      "ts": "2026-05-31 20:55:32",
       "worker": "hz15_jump_pages"
     },
     {
       "event": "HZ15_NO_RESET_V6_STRICT_4000_START",
       "item_sleep": [
-        10.0,
-        22.0
+        12.0,
+        28.0
       ],
       "page_sleep": [
-        420.0,
-        720.0
+        900.0,
+        1500.0
       ],
       "pages": [
-        36,
-        37,
-        38,
-        39,
-        40
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
       ],
       "run_once": true,
       "target_total": 4000,
-      "ts": "2026-05-31 20:03:32",
+      "ts": "2026-05-31 20:55:32",
       "worker": "hz15_jump_pages"
     },
     {
       "event": "STRICT_4000_CURRENT_LIST_NOT_USABLE",
       "info": {
-        "activePageText": null,
+        "activePageText": "1",
         "has4000": false,
-        "jumpInputValue": null,
-        "oneKeyCount": 0,
-        "pagerText": "",
-        "risk": [
-          "risk_handler",
-          "京东验证",
-          "快速验证",
-          "购物无忧"
-        ],
-        "skuCount": 0,
-        "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D40&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188373567-10166-1780167958116&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh7K7jXTr1r9yOBo6DbznXd63YgRsyiFuqIn6hL7yzKRR_eQFK"
+        "jumpInputValue": "1",
+        "oneKeyCount": 7,
+        "pagerText": "共 0 条1前往页",
+        "risk": [],
+        "skuCount": 7,
+        "url": "https://union.jd.com/proManager/index?pageNo=40"
       },
-      "ts": "2026-05-31 20:03:33",
+      "ts": "2026-05-31 20:55:32",
       "worker": "hz15_jump_pages"
     },
     {
       "event": "STOP_REQUIRED",
       "info": {
-        "activePageText": null,
+        "activePageText": "1",
         "has4000": false,
-        "jumpInputValue": null,
-        "oneKeyCount": 0,
-        "pagerText": "",
-        "risk": [
-          "risk_handler",
-          "京东验证",
-          "快速验证",
-          "购物无忧"
-        ],
-        "skuCount": 0,
-        "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D40&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188373567-10166-1780167958116&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh7K7jXTr1r9yOBo6DbznXd63YgRsyiFuqIn6hL7yzKRR_eQFK"
+        "jumpInputValue": "1",
+        "oneKeyCount": 7,
+        "pagerText": "共 0 条1前往页",
+        "risk": [],
+        "skuCount": 7,
+        "url": "https://union.jd.com/proManager/index?pageNo=40"
       },
       "reason": "manual_product_all_4000_required",
-      "ts": "2026-05-31 20:03:33",
+      "ts": "2026-05-31 20:55:32",
       "worker": "hz15_jump_pages"
     }
   ],
   "last_item_ok": null,
   "last_page_jump": null,
-  "latest_log": "logs/hz15_jump_pages_resume_36_40_no_reset_v6_strict_4000_20260531_200328.log",
+  "latest_log": "logs/hz15_jump_pages_resume_40_67_no_reset_v6_strict_4000_overnight_20260531_205528.log",
   "missing": {
     "commission_rate": 0,
     "estimated_income": 0,
@@ -148,32 +162,14 @@
   },
   "phase": "HZ15 no-reset v6 latest-segment progress check",
   "plain_tail_80": [
-    "{\"event\": \"HZ14_V4_BOOTSTRAP_MERGE\", \"latest\": \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\", \"merged_dedup_sku\": 1911, \"out\": \"data/import/hz_jd_union_all_product_full_links_20260531_200331.jsonl\", \"raw_ok\": 30491, \"sources\": {\"data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl\": 14, \"data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_164252.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260526_000900.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260526_032940.jsonl\": 1319, \"data/import/hz_jd_union_all_product_full_links_20260527_040613.jsonl\": 1538, \"data/import/hz_jd_union_all_product_full_links_20260529_051352.jsonl\": 1640, \"data/import/hz_jd_union_all_product_full_links_20260530_224908.jsonl\": 1774, \"data/import/hz_jd_union_all_product_full_links_20260531_013543.jsonl\": 1911, \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\": 1911, \"data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl\": 1, \"data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl\": 52, \"data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl\": 90, \"data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl\": 112, \"data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl\": 177, \"data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl\": 133, \"data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl\": 3, \"data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl\": 657, \"data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_product_all_full_links_20260526_032940.jsonl\": 1319, \"data/import/hz_jd_union_product_all_full_links_20260527_040613.jsonl\": 1538, \"data/import/hz_jd_union_product_all_full_links_20260529_051352.jsonl\": 1640, \"data/import/hz_jd_union_product_all_full_links_20260530_224908.jsonl\": 1774, \"data/import/hz_jd_union_product_all_full_links_20260531_013543.jsonl\": 1911, \"data/import/hz_jd_union_product_all_full_links_latest.jsonl\": 1911}, \"ts\": \"2026-05-31 20:03:32\", \"worker\": \"hz15_jump_pages\"}",
-    "{\"event\": \"HZ15_NO_RESET_V6_STRICT_4000_START\", \"item_sleep\": [10.0, 22.0], \"page_sleep\": [420.0, 720.0], \"pages\": [36, 37, 38, 39, 40], \"run_once\": true, \"target_total\": 4000, \"ts\": \"2026-05-31 20:03:32\", \"worker\": \"hz15_jump_pages\"}",
-    "{\"event\": \"STRICT_4000_CURRENT_LIST_NOT_USABLE\", \"info\": {\"activePageText\": null, \"has4000\": false, \"jumpInputValue\": null, \"oneKeyCount\": 0, \"pagerText\": \"\", \"risk\": [\"risk_handler\", \"京东验证\", \"快速验证\", \"购物无忧\"], \"skuCount\": 0, \"url\": \"https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D40&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188373567-10166-1780167958116&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh7K7jXTr1r9yOBo6DbznXd63YgRsyiFuqIn6hL7yzKRR_eQFK\"}, \"ts\": \"2026-05-31 20:03:33\", \"worker\": \"hz15_jump_pages\"}",
-    "{\"event\": \"STOP_REQUIRED\", \"info\": {\"activePageText\": null, \"has4000\": false, \"jumpInputValue\": null, \"oneKeyCount\": 0, \"pagerText\": \"\", \"risk\": [\"risk_handler\", \"京东验证\", \"快速验证\", \"购物无忧\"], \"skuCount\": 0, \"url\": \"https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D40&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188373567-10166-1780167958116&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh7K7jXTr1r9yOBo6DbznXd63YgRsyiFuqIn6hL7yzKRR_eQFK\"}, \"reason\": \"manual_product_all_4000_required\", \"ts\": \"2026-05-31 20:03:33\", \"worker\": \"hz15_jump_pages\"}"
+    "{\"event\": \"HZ14_V4_BOOTSTRAP_MERGE\", \"latest\": \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\", \"merged_dedup_sku\": 1911, \"out\": \"data/import/hz_jd_union_all_product_full_links_20260531_205531.jsonl\", \"raw_ok\": 32402, \"sources\": {\"data/import/hz_jd_union_all_product_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_all_product_full_links_20260523_235538.jsonl\": 14, \"data/import/hz_jd_union_all_product_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_all_product_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_all_product_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151316.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_151722.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260525_164252.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260526_000900.jsonl\": 967, \"data/import/hz_jd_union_all_product_full_links_20260526_032940.jsonl\": 1319, \"data/import/hz_jd_union_all_product_full_links_20260527_040613.jsonl\": 1538, \"data/import/hz_jd_union_all_product_full_links_20260529_051352.jsonl\": 1640, \"data/import/hz_jd_union_all_product_full_links_20260530_224908.jsonl\": 1774, \"data/import/hz_jd_union_all_product_full_links_20260531_013543.jsonl\": 1911, \"data/import/hz_jd_union_all_product_full_links_20260531_200331.jsonl\": 1911, \"data/import/hz_jd_union_all_product_full_links_latest.jsonl\": 1911, \"data/import/hz_jd_union_product_all_full_links_20260511_034444.jsonl\": 1, \"data/import/hz_jd_union_product_all_full_links_20260518_032726.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_033847.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_035532.jsonl\": 10, \"data/import/hz_jd_union_product_all_full_links_20260518_040147.jsonl\": 52, \"data/import/hz_jd_union_product_all_full_links_20260521_172524.jsonl\": 90, \"data/import/hz_jd_union_product_all_full_links_20260521_182014.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260521_201359.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_181730.jsonl\": 20, \"data/import/hz_jd_union_product_all_full_links_20260522_233625.jsonl\": 112, \"data/import/hz_jd_union_product_all_full_links_20260522_235913.jsonl\": 177, \"data/import/hz_jd_union_product_all_full_links_20260523_050750.jsonl\": 133, \"data/import/hz_jd_union_product_all_full_links_20260523_081637.jsonl\": 3, \"data/import/hz_jd_union_product_all_full_links_20260523_145830.jsonl\": 191, \"data/import/hz_jd_union_product_all_full_links_20260523_235538.jsonl\": 657, \"data/import/hz_jd_union_product_all_full_links_20260525_024759.jsonl\": 676, \"data/import/hz_jd_union_product_all_full_links_20260525_040758.jsonl\": 720, \"data/import/hz_jd_union_product_all_full_links_20260525_044408.jsonl\": 967, \"data/import/hz_jd_union_product_all_full_links_20260526_032940.jsonl\": 1319, \"data/import/hz_jd_union_product_all_full_links_20260527_040613.jsonl\": 1538, \"data/import/hz_jd_union_product_all_full_links_20260529_051352.jsonl\": 1640, \"data/import/hz_jd_union_product_all_full_links_20260530_224908.jsonl\": 1774, \"data/import/hz_jd_union_product_all_full_links_20260531_013543.jsonl\": 1911, \"data/import/hz_jd_union_product_all_full_links_latest.jsonl\": 1911}, \"ts\": \"2026-05-31 20:55:32\", \"worker\": \"hz15_jump_pages\"}",
+    "{\"event\": \"HZ15_NO_RESET_V6_STRICT_4000_START\", \"item_sleep\": [12.0, 28.0], \"page_sleep\": [900.0, 1500.0], \"pages\": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67], \"run_once\": true, \"target_total\": 4000, \"ts\": \"2026-05-31 20:55:32\", \"worker\": \"hz15_jump_pages\"}",
+    "{\"event\": \"STRICT_4000_CURRENT_LIST_NOT_USABLE\", \"info\": {\"activePageText\": \"1\", \"has4000\": false, \"jumpInputValue\": \"1\", \"oneKeyCount\": 7, \"pagerText\": \"共 0 条1前往页\", \"risk\": [], \"skuCount\": 7, \"url\": \"https://union.jd.com/proManager/index?pageNo=40\"}, \"ts\": \"2026-05-31 20:55:32\", \"worker\": \"hz15_jump_pages\"}",
+    "{\"event\": \"STOP_REQUIRED\", \"info\": {\"activePageText\": \"1\", \"has4000\": false, \"jumpInputValue\": \"1\", \"oneKeyCount\": 7, \"pagerText\": \"共 0 条1前往页\", \"risk\": [], \"skuCount\": 7, \"url\": \"https://union.jd.com/proManager/index?pageNo=40\"}, \"reason\": \"manual_product_all_4000_required\", \"ts\": \"2026-05-31 20:55:32\", \"worker\": \"hz15_jump_pages\"}"
   ],
   "process_alive": false,
   "processes": [],
-  "stop": {
-    "info": {
-      "activePageText": null,
-      "has4000": false,
-      "jumpInputValue": null,
-      "oneKeyCount": 0,
-      "pagerText": "",
-      "risk": [
-        "risk_handler",
-        "京东验证",
-        "快速验证",
-        "购物无忧"
-      ],
-      "skuCount": 0,
-      "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D40&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188373567-10166-1780167958116&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh7K7jXTr1r9yOBo6DbznXd63YgRsyiFuqIn6hL7yzKRR_eQFK"
-    },
-    "reason": "manual_product_all_4000_required",
-    "ts": "2026-05-31 20:03:33"
-  },
-  "stop_exists": true,
-  "ts": "2026-05-31 20:43:52"
+  "stop": null,
+  "stop_exists": false,
+  "ts": "2026-06-11 21:39:57"
 }
