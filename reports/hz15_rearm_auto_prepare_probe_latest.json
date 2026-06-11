@@ -1,0 +1,48 @@
+{
+  "actions": [
+    {
+      "initial_pagerText": "共 4000 条 12345667 前往页",
+      "initial_skuCount": 60,
+      "initial_url": "https://union.jd.com/proManager/index?pageNo=1"
+    },
+    {
+      "click_exact": "商品推广",
+      "result": {
+        "className": "",
+        "count": 6,
+        "ok": true,
+        "tag": "SPAN"
+      }
+    },
+    {
+      "click_exact": "全部商品",
+      "result": {
+        "className": "el-radio-button__inner",
+        "count": 1,
+        "ok": true,
+        "tag": "SPAN"
+      }
+    },
+    {
+      "click_contains": "搜索全部商品",
+      "result": {
+        "count": 11,
+        "ok": true,
+        "tag": "DIV",
+        "text": "我的推广\n效果报表\n结算中心\n工具场景\n狂欢日历\n 618大促实时数据大屏\n消息公告\n收起\n\n【通知"
+      }
+    }
+  ],
+  "activePageText": "1",
+  "has4000": true,
+  "jumpInputValue": "1",
+  "ok": true,
+  "oneKeyCount": 60,
+  "pagerText": "共 4000 条 12345667 前往页",
+  "reason": "safe_all_product_4000_after_auto_prepare",
+  "risk": [],
+  "skuCount": 60,
+  "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+  "ts": "2026-06-11 21:17:17",
+  "url": "https://union.jd.com/proManager/index?pageNo=1"
+}
