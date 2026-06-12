@@ -1,0 +1,273 @@
+# DL2 HZ17 Recover Page49 Smoke
+
+- ts: `2026-06-13 03:43:13`
+- ok: `True`
+- reason: `None`
+- pages: `[49]`
+- limit: `20`
+- retry: `1`
+- total_ok: `0`
+- total_fail: `5`
+- known_sku_count: `1935`
+- page_summary: `{"49": {"fail": 5, "final_snapshot": {"activePageText": "49", "has4000": true, "hasEmpty": false, "jumpInputValue": "49", "oneKeyCount": 60, "pagerText": "共 4000 条 1474849505167 前往页", "risk": [], "skuCount": 60, "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！", "url": "https://union.jd.com/proManager/index?pageNo=49"}, "fresh_initial": 39, "ok": 0}}`
+
+## initial/final
+```json
+{
+  "initial": {
+    "activePageText": "49",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "49",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1474849505167 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=49"
+  },
+  "page_ready": {
+    "49": {
+      "info": {
+        "activePageText": "49",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "49",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1474849505167 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "10220513705613",
+          "1027542",
+          "100191839766",
+          "10113473063835",
+          "100330349470",
+          "100279475524",
+          "100115256159",
+          "100016509578",
+          "7168012",
+          "10217890622092",
+          "10171893817585",
+          "100301438260",
+          "100283885018",
+          "100069081309",
+          "100014217924",
+          "32295499050",
+          "15339734",
+          "100223803031",
+          "100152084723",
+          "294574",
+          "19593175106",
+          "100134554977",
+          "100064061547",
+          "100132375363",
+          "100006663708",
+          "10219428235237",
+          "100015133918",
+          "100010372895",
+          "11862483",
+          "10139092334156",
+          "10110494247628",
+          "100141104656",
+          "13608778",
+          "1260092",
+          "100098296823",
+          "100054364471",
+          "100051262623",
+          "14631418",
+          "10104567216236",
+          "100305172358",
+          "10093655153553",
+          "100097238231",
+          "100097134118",
+          "100076190951",
+          "10130844206824",
+          "100135465074",
+          "10078184121977",
+          "10028109053439",
+          "100065438554",
+          "100053819270",
+          "100030517333",
+          "6989846",
+          "15225064",
+          "1140965006",
+          "100327543120",
+          "100081966294",
+          "100005163573",
+          "10110090244644",
+          "100299085088",
+          "10223981315887"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=49"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "final": {
+    "activePageText": "49",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "49",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1474849505167 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=49"
+  }
+}
+```
+
+## results tail
+```json
+[
+  {
+    "ok": false,
+    "order": 0,
+    "page_no": 49,
+    "reason": "retry_exhausted_fast",
+    "sku": "100115256159",
+    "tries": [
+      {
+        "attempt": 1,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      },
+      {
+        "attempt": 2,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "order": 1,
+    "page_no": 49,
+    "reason": "retry_exhausted_fast",
+    "sku": "100016509578",
+    "tries": [
+      {
+        "attempt": 1,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      },
+      {
+        "attempt": 2,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "order": 2,
+    "page_no": 49,
+    "reason": "retry_exhausted_fast",
+    "sku": "7168012",
+    "tries": [
+      {
+        "attempt": 1,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      },
+      {
+        "attempt": 2,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "order": 3,
+    "page_no": 49,
+    "reason": "retry_exhausted_fast",
+    "sku": "10217890622092",
+    "tries": [
+      {
+        "attempt": 1,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      },
+      {
+        "attempt": 2,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "order": 4,
+    "page_no": 49,
+    "reason": "retry_exhausted_fast",
+    "sku": "100283885018",
+    "tries": [
+      {
+        "attempt": 1,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      },
+      {
+        "attempt": 2,
+        "click": {
+          "method": "hz9_click_candidate",
+          "ok": true
+        },
+        "err": "fast_short_url_timeout",
+        "modal_keys": [],
+        "wait": 6
+      }
+    ]
+  }
+]
+```
