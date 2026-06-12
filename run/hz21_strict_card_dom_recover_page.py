@@ -145,19 +145,75 @@ def quarantine_unsafe_hz20(state:Dict[str,Any])->Dict[str,Any]:
     return {'removed_count':len(removed),'removed_sample':removed[:20],'rows_after':len(keep)}
 
 def click_card(page, card:Dict[str,Any])->Dict[str,Any]:
-    br=card.get('buttonRect') or {}; x=float(br.get('cx') or 0); y=float(br.get('cy') or 0)
-    page.evaluate("(p)=>{const el=document.elementFromPoint(p.x,p.y); if(el) el.scrollIntoView({block:'center',inline:'center'});}", {'x':x,'y':y})
-    page.wait_for_timeout(500)
-    # re-collect and locate the same SKU after scroll.
-    refreshed=[]
-    for c in collect_cards(page):
-        if str(c.get('sku'))==str(card.get('sku')):
-            refreshed.append(c)
-    if not refreshed:
-        return {'ok':False,'reason':'sku_not_visible_after_scroll','sku':card.get('sku')}
-    card=refreshed[0]; br=card.get('buttonRect') or {}; x=float(br.get('cx') or 0); y=float(br.get('cy') or 0)
-    page.mouse.move(x,y); page.wait_for_timeout(120); page.mouse.down(); page.wait_for_timeout(120); page.mouse.up()
-    return {'ok':True,'method':'hz21_strict_sku_mouse_click','sku':card.get('sku'),'buttonRect':br,'itemUrl':card.get('itemUrl'),'rootText':(card.get('raw_text') or '')[:500]}
+    sku=str(card.get('sku') or '').strip()
+    token=f"hz21_{sku}_{int(time.time()*1000)}"
+    mark=page.evaluate("""
+    ({sku,token}) => {
+      const compact=s=>(s||'').replace(/\s+/g,'').trim();
+      const links=Array.from(document.querySelectorAll('a[href]')).filter(a=>(a.href||'').includes('/'+sku+'.html') || (a.href||'').includes(sku));
+      const rows=[];
+      for (const a of links) {
+        let cur=a, root=null;
+        for (let d=0; d<16 && cur; d++,cur=cur.parentElement) {
+          const r=cur.getBoundingClientRect(); const raw=cur.innerText||cur.textContent||''; const c=compact(raw);
+          if (r.width>=160 && r.height>=100 && c.includes('一键领链') && (c.includes('到手价')||c.includes('佣金'))) { root=cur; break; }
+        }
+        if (!root) continue;
+        const btn=Array.from(root.querySelectorAll('button,a,span,div')).find(el=>compact(el.innerText||el.textContent)==='一键领链');
+        if (!btn) continue;
+        btn.setAttribute('data-hz21-token', token);
+        root.setAttribute('data-hz21-root', token);
+        const br=btn.getBoundingClientRect(); const rr=root.getBoundingClientRect();
+        rows.push({rootText:(root.innerText||root.textContent||'').slice(0,500), itemUrl:a.href, rootRect:{x:rr.x,y:rr.y,w:rr.width,h:rr.height}, buttonRect:{x:br.x,y:br.y,w:br.width,h:br.height,cx:br.x+br.width/2,cy:br.y+br.height/2}});
+      }
+      rows.sort((a,b)=>a.rootRect.y-b.rootRect.y);
+      if (!rows.length) return {ok:false, reason:'exact_sku_button_not_found', sku};
+      const el=document.querySelector('[data-hz21-token="'+token+'"]');
+      el.scrollIntoView({block:'center',inline:'center'});
+      return {ok:true, method:'exact_sku_token_marked', sku, token, matched:rows[0]};
+    }
+    """, {'sku':sku,'token':token})
+    if not mark.get('ok'):
+        return mark
+    page.wait_for_timeout(600)
+    selector=f'[data-hz21-token="{token}"]'
+    loc=page.locator(selector).first
+    try:
+        loc.scroll_into_view_if_needed(timeout=5000)
+    except Exception as exc:
+        mark['scroll_error']=repr(exc)
+    for _ in range(4):
+        box=loc.bounding_box(timeout=5000)
+        if not box:
+            return {'ok':False,'reason':'bounding_box_missing','sku':sku,'mark':mark}
+        inner=page.evaluate('() => window.innerHeight')
+        if box['y'] < 150 or box['y'] > inner-120:
+            page.evaluate("""
+            (sel) => {
+              const el=document.querySelector(sel);
+              if (!el) return;
+              const r=el.getBoundingClientRect();
+              window.scrollBy(0, r.top - window.innerHeight*0.55);
+            }
+            """, selector)
+            page.wait_for_timeout(500)
+        else:
+            break
+    box=loc.bounding_box(timeout=5000)
+    if not box:
+        return {'ok':False,'reason':'bounding_box_missing_after_adjust','sku':sku,'mark':mark}
+    x=box['x']+box['width']/2; y=box['y']+box['height']/2
+    hit=page.evaluate("""
+    ({x,y,token}) => {
+      const el=document.elementFromPoint(x,y);
+      const m=el && el.closest('[data-hz21-token="'+token+'"]');
+      return {ok:!!m, tag:el?el.tagName:null, text:el?(el.innerText||el.textContent||'').replace(/\s+/g,'').slice(0,50):null, cls:el?String(el.className||'').slice(0,100):null};
+    }
+    """, {'x':x,'y':y,'token':token})
+    if not hit.get('ok'):
+        return {'ok':False,'reason':'hit_test_not_target_button','sku':sku,'mark':mark,'box':box,'hit':hit}
+    page.mouse.move(x,y); page.wait_for_timeout(150); page.mouse.down(); page.wait_for_timeout(120); page.mouse.up()
+    return {'ok':True,'method':'hz21_exact_sku_locator_safe_mouse_click','sku':sku,'token':token,'box':box,'mouse_click':{'x':x,'y':y},'hit':hit,'matched':mark.get('matched')}
 
 def collect_one(page,card:Dict[str,Any],state:Dict[str,Any],page_no:int,order:int)->Dict[str,Any]:
     sku=str(card.get('sku') or '').strip()
