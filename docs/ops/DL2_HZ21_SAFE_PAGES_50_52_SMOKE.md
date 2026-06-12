@@ -1,0 +1,94 @@
+# DL2 HZ21 Safe Pages 50-52 Smoke
+
+```json
+{
+  "pages": [
+    50,
+    51,
+    52
+  ],
+  "rows": [
+    {
+      "known_sku_count": 1989,
+      "ok": true,
+      "page": 50,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "50",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "50",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1484950515267 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=50"
+        },
+        "fresh_initial": 28,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2014,
+      "ok": true,
+      "page": 51,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "51",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "51",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1495051525367 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=51"
+        },
+        "fresh_initial": 28,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2039,
+      "ok": true,
+      "page": 52,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "52",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "52",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1505152535467 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=52"
+        },
+        "fresh_initial": 26,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    }
+  ],
+  "total_ok": 75,
+  "total_fail": 0,
+  "last_known_sku_count": 2039
+}
+```
