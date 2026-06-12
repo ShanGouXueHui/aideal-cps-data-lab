@@ -125,7 +125,7 @@ def link_dates():
     c=datetime.now(); return c.isoformat(timespec='seconds'),(c+timedelta(days=60)).isoformat(timespec='seconds'),(c+timedelta(days=40)).isoformat(timespec='seconds')
 
 def quarantine_unsafe_hz20(state:Dict[str,Any])->Dict[str,Any]:
-    rows=core.load_jsonl(core.LATEST)
+    rows=core.read_jsonl(core.LATEST)
     keep=[]; removed=[]
     for r in rows:
         if r.get('worker_name')=='hz20_mouse_click' or 'hz20' in str(r.get('menu_mode') or ''):
@@ -133,7 +133,12 @@ def quarantine_unsafe_hz20(state:Dict[str,Any])->Dict[str,Any]:
         else:
             keep.append(r)
     if removed:
-        core.write_jsonl(core.LATEST, keep)
+        core.LATEST.parent.mkdir(parents=True, exist_ok=True)
+        with core.LATEST.open('w', encoding='utf-8') as f:
+            for row in keep:
+                f.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + '\\n')
+        import shutil
+        shutil.copyfile(core.LATEST, core.HZ12_COMPAT_LATEST)
         valid={str(r.get('sku')) for r in keep if str(r.get('sku') or '').isdigit() and r.get('short_url')}
         state['known_skus']=[x for x in (state.get('known_skus') or []) if str(x) in valid]
         core.save_state(state)

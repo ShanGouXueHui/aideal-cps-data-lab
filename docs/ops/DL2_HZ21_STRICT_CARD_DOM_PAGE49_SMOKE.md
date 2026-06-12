@@ -1,3 +1,230 @@
 # DL2 HZ21 Strict Card DOM Page49 Smoke
 
-No JSON report found.
+- ts: `2026-06-13 04:37:01`
+- ok: `True`
+- reason: `None`
+- pages: `[49]`
+- limit: `20`
+- wait: `10`
+- total_ok: `0`
+- total_fail: `6`
+- known_sku_count: `1936`
+- quarantine: `{'removed_count': 14, 'removed_sample': [{'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VDtnNOf', 'sku': '100016509578', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/V6tnUSO', 'sku': '100064061547', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VDt3VpO', 'sku': '100069081309', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VOtsZon', 'sku': '100132375363', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VGtYHfs', 'sku': '100134554977', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VatQCap', 'sku': '100152084723', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VDtGuA7', 'sku': '100223803031', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VDt1cKA', 'sku': '100283885018', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VDtZXH5', 'sku': '10217890622092', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/V6tbLfh', 'sku': '15339734', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VgtyX6T', 'sku': '19593175106', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VGtTZE5', 'sku': '294574', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VgtpIOi', 'sku': '32295499050', 'worker_name': 'hz20_mouse_click'}, {'menu_mode': 'hz20_mouse_click_recovery', 'short_url': 'https://u.jd.com/VOtTrNW', 'sku': '7168012', 'worker_name': 'hz20_mouse_click'}], 'rows_after': 1936}`
+- page_summary: `{"49": {"fail": 6, "final_snapshot": {"activePageText": null, "has4000": false, "hasEmpty": false, "jumpInputValue": null, "oneKeyCount": 0, "pagerText": "", "risk": [], "skuCount": 0, "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！", "url": "https://union.jd.com/entire"}, "fresh_initial": 24, "ok": 0}}`
+
+## initial/final
+```json
+{
+  "initial": {
+    "activePageText": "49",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "49",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1474849505167 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=49"
+  },
+  "page_ready": {
+    "49": {
+      "info": {
+        "activePageText": "49",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "49",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1474849505167 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "10220513705613",
+          "1027542",
+          "100191839766",
+          "10113473063835",
+          "100330349470",
+          "100279475524",
+          "100115256159",
+          "100016509578",
+          "7168012",
+          "10217890622092",
+          "10171893817585",
+          "100301438260",
+          "100283885018",
+          "100069081309",
+          "100014217924",
+          "32295499050",
+          "15339734",
+          "100223803031",
+          "100152084723",
+          "294574",
+          "19593175106",
+          "100134554977",
+          "100064061547",
+          "100132375363",
+          "100006663708",
+          "10219428235237",
+          "100015133918",
+          "100010372895",
+          "11862483",
+          "10139092334156",
+          "10110494247628",
+          "100141104656",
+          "13608778",
+          "1260092",
+          "100098296823",
+          "100054364471",
+          "100051262623",
+          "14631418",
+          "10104567216236",
+          "100305172358",
+          "10093655153553",
+          "100097238231",
+          "100097134118",
+          "100076190951",
+          "10130844206824",
+          "100135465074",
+          "10078184121977",
+          "10028109053439",
+          "100065438554",
+          "100053819270",
+          "100030517333",
+          "6989846",
+          "15225064",
+          "1140965006",
+          "100327543120",
+          "100081966294",
+          "100005163573",
+          "10110090244644",
+          "100299085088",
+          "10223981315887"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=49"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "final": {
+    "activePageText": null,
+    "has4000": false,
+    "hasEmpty": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "risk": [],
+    "skuCount": 0,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/entire"
+  }
+}
+```
+
+## results tail
+```json
+[
+  {
+    "click": {
+      "buttonRect": {
+        "cx": 332.375,
+        "cy": 38.3984375,
+        "h": 33.984375,
+        "w": 85.25,
+        "x": 289.75,
+        "y": 21.40625
+      },
+      "itemUrl": "https://item.jd.com/100054364471.html",
+      "method": "hz21_strict_sku_mouse_click",
+      "ok": true,
+      "rootText": "预估收益 ￥ 9.27\n|\n佣金比例3%\n\n米家小米智能生态客厅桌面小型鱼缸超白玻璃一体缸过滤增氧自循环免换\n\n到手价￥309￥364\n2.0万+ 好评\n\n自营\n定向\n京配\n券\n促销\n小米京东自营旗舰店\n我要推广\n一键领链",
+      "sku": "100054364471"
+    },
+    "dom": {
+      "bodyHasShort": false,
+      "nodes": [
+        {
+          "cls": "el-dialog",
+          "i": 0,
+          "rect": {
+            "h": 0,
+            "w": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "我的授权Key",
+          "visible": false
+        }
+      ],
+      "risk": []
+    },
+    "modal_keys": [],
+    "ok": false,
+    "order": 0,
+    "page_no": 49,
+    "reason": "short_url_timeout",
+    "sku": "100054364471"
+  },
+  {
+    "click": {
+      "ok": false,
+      "reason": "sku_not_visible_after_scroll",
+      "sku": "100051262623"
+    },
+    "ok": false,
+    "order": 1,
+    "page_no": 49,
+    "reason": "click_failed",
+    "sku": "100051262623"
+  },
+  {
+    "click": {
+      "ok": false,
+      "reason": "sku_not_visible_after_scroll",
+      "sku": "14631418"
+    },
+    "ok": false,
+    "order": 2,
+    "page_no": 49,
+    "reason": "click_failed",
+    "sku": "14631418"
+  },
+  {
+    "click": {
+      "ok": false,
+      "reason": "sku_not_visible_after_scroll",
+      "sku": "10104567216236"
+    },
+    "ok": false,
+    "order": 3,
+    "page_no": 49,
+    "reason": "click_failed",
+    "sku": "10104567216236"
+  },
+  {
+    "click": {
+      "ok": false,
+      "reason": "sku_not_visible_after_scroll",
+      "sku": "100305172358"
+    },
+    "ok": false,
+    "order": 4,
+    "page_no": 49,
+    "reason": "click_failed",
+    "sku": "100305172358"
+  },
+  {
+    "click": {
+      "ok": false,
+      "reason": "sku_not_visible_after_scroll",
+      "sku": "10093655153553"
+    },
+    "ok": false,
+    "order": 5,
+    "page_no": 49,
+    "reason": "click_failed",
+    "sku": "10093655153553"
+  }
+]
+```
