@@ -1,0 +1,139 @@
+# DL2 HZ21 Safe Pages 58-67 Smoke
+
+```json
+{
+  "pages": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "rows": [
+    {
+      "known_sku_count": 2189,
+      "ok": true,
+      "page": 58,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "58",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "58",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1565758596067 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=58"
+        },
+        "fresh_initial": 29,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2214,
+      "ok": true,
+      "page": 59,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "59",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "59",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1575859606167 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=59"
+        },
+        "fresh_initial": 28,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "ok": false,
+      "page": 60,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 61,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 62,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 63,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 64,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 65,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 66,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 67,
+      "rc": 99,
+      "reason": "prepare_not_safe",
+      "total_fail": 0,
+      "total_ok": 0
+    }
+  ],
+  "total_ok": 50,
+  "total_fail": 0,
+  "last_known_sku_count": null
+}
+```

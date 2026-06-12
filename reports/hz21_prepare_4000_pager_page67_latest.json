@@ -1,0 +1,23 @@
+{
+  "before": {
+    "activePageText": null,
+    "has4000": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "pagers": [],
+    "risk": [
+      "risk_handler",
+      "快速验证",
+      "购物无忧"
+    ],
+    "skuCount": 0,
+    "skus": [],
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D60&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188544450-10187-1781305259863&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhuITRQvhcTUnCzAoG_tEXH2Xj7FKAd_i80-xJ8XEcN06Vy8rj"
+  },
+  "ok": false,
+  "reason": "risk_before",
+  "target_page": 67,
+  "ts": "2026-06-13 07:01:39"
+}
