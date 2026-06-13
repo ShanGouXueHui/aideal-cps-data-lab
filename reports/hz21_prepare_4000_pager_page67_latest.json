@@ -1,23 +1,77 @@
 {
-  "before": {
-    "activePageText": null,
+  "after": {
+    "activePageText": "1",
     "has4000": false,
-    "jumpInputValue": null,
-    "oneKeyCount": 0,
-    "pagerText": "",
-    "pagers": [],
-    "risk": [
-      "risk_handler",
-      "快速验证",
-      "购物无忧"
+    "jumpInputValue": "1",
+    "oneKeyCount": 44,
+    "pagerText": "共 0 条1前往页",
+    "pagers": [
+      {
+        "active": "1",
+        "i": 0,
+        "input": "1",
+        "text": "共 0 条1前往页"
+      }
     ],
-    "skuCount": 0,
-    "skus": [],
-    "title": "京东验证",
-    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D60&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-188544450-10187-1781305259863&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhuITRQvhcTUnCzAoG_tEXH2Xj7FKAd_i80-xJ8XEcN06Vy8rj"
+    "risk": [],
+    "skuCount": 44,
+    "skus": [
+      "10223055867798",
+      "10194540357078",
+      "10094665472696",
+      "10124162182823",
+      "10129297599815",
+      "10221246408482",
+      "10121593448387",
+      "10119898068884",
+      "10153350154583",
+      "10219662836592",
+      "10105976463560",
+      "100183681428"
+    ],
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=1"
+  },
+  "before": {
+    "activePageText": "1",
+    "has4000": false,
+    "jumpInputValue": "1",
+    "oneKeyCount": 44,
+    "pagerText": "共 0 条1前往页",
+    "pagers": [
+      {
+        "active": "1",
+        "i": 0,
+        "input": "1",
+        "text": "共 0 条1前往页"
+      }
+    ],
+    "risk": [],
+    "skuCount": 44,
+    "skus": [
+      "10223055867798",
+      "10194540357078",
+      "10094665472696",
+      "10124162182823",
+      "10129297599815",
+      "10221246408482",
+      "10121593448387",
+      "10119898068884",
+      "10153350154583",
+      "10219662836592",
+      "10105976463560",
+      "100183681428"
+    ],
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=1"
+  },
+  "jump_action": {
+    "ok": false,
+    "pagerCount": 1,
+    "reason": "no_4000_pager"
   },
   "ok": false,
-  "reason": "risk_before",
+  "reason": "jump_not_safe_page",
   "target_page": 67,
-  "ts": "2026-06-13 07:01:39"
+  "ts": "2026-06-13 21:41:08"
 }
