@@ -1,0 +1,36 @@
+{
+  "last_known_sku_count": 2223,
+  "pages": [
+    60
+  ],
+  "rows": [
+    {
+      "known_sku_count": 2223,
+      "ok": true,
+      "page": 60,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "60",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "60",
+          "oneKeyCount": 59,
+          "pagerText": "共 4000 条 1585960616267 前往页",
+          "risk": [],
+          "skuCount": 59,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=60"
+        },
+        "fresh_initial": 9,
+        "ok": 9
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 9
+    }
+  ],
+  "total_fail": 0,
+  "total_ok": 9
+}
