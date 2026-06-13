@@ -1,0 +1,334 @@
+# DL2 HZ21 Mainline Safe Pages
+
+```json
+{
+  "pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "rows": [
+    {
+      "ok": false,
+      "page": 61,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 62,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 63,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 64,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 65,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 66,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 67,
+      "prepare_after": {
+        "activePageText": "1",
+        "has4000": false,
+        "jumpInputValue": "1",
+        "oneKeyCount": 44,
+        "pagerText": "共 0 条1前往页",
+        "pagers": [
+          {
+            "active": "1",
+            "i": 0,
+            "input": "1",
+            "text": "共 0 条1前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 44,
+        "skus": [
+          "10223055867798",
+          "10194540357078",
+          "10094665472696",
+          "10124162182823",
+          "10129297599815",
+          "10221246408482",
+          "10121593448387",
+          "10119898068884",
+          "10153350154583",
+          "10219662836592",
+          "10105976463560",
+          "100183681428"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=1"
+      },
+      "prepare_ok": false,
+      "prepare_reason": "jump_not_safe_page",
+      "rc": 0,
+      "reason": "jump_not_safe_page",
+      "total_fail": 0,
+      "total_ok": 0
+    }
+  ],
+  "total_ok": 0,
+  "total_fail": 0,
+  "last_known_sku_count": null,
+  "completed_pages": [],
+  "unfinished_pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "stop_page": null,
+  "stop_reason": null,
+  "commercial_segment_complete": false
+}
+```
