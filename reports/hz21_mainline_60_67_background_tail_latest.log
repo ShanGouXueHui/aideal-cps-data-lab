@@ -1,0 +1,20 @@
+===== HZ21 mainline safe remaining runner =====
+PWD=/home/cpsdata/projects/aideal-cps-data-lab
+USER=cpsdata
+SERVER_TIME=2026-06-13 15:19:24 CST
+HEAD_BEFORE=c7b4525
+PAGE_START=60
+PAGE_END=67
+PAGES=60 61 62 63 64 65 66 67
+  File "<stdin>", line 41
+    Path('reports/hz21_safe_pages_'''+f'{start}_{end}'+'''_per_page.jsonl').open('a',encoding='utf-8').write(json.dumps(row,ensure_ascii=False,sort_keys=True)+'\\n')
+                                                       ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 41)
+sleep: invalid time interval ‘5,\n’
+sleep: invalid time interval ‘python3’
+sleep: invalid time interval ‘-’
+sleep: invalid time interval ‘’
+sleep: invalid time interval ‘’
+Try 'sleep --help' for more information.
+scripts/hz21_mainline_safe_remaining.sh: line 102: syntax error near unexpected token `('
+scripts/hz21_mainline_safe_remaining.sh: line 102: `'''out={'pages':['''+pages_comma+'''],'rows':rows,'total_ok':sum(int(r.get('total_ok') or 0) for r in rows),'total_fail':sum(int(r.get('total_fail') or 0) for r in rows),'last_known_sku_count': rows[-1].get('known_sku_count') if rows else None}''','
