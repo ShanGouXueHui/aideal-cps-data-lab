@@ -1,0 +1,63 @@
+{
+  "background_log": "logs/hz21_mainline_remaining_background_20260613_151922.log",
+  "background_log_exists": true,
+  "completed_pages": [],
+  "failed_pages": [],
+  "final_report_exists": false,
+  "generated_at": "2026-06-13T16:58:48",
+  "key_log_lines": [],
+  "latest_report_exists": true,
+  "latest_report_summary": {
+    "final": {
+      "activePageText": "59",
+      "has4000": true,
+      "hasEmpty": false,
+      "jumpInputValue": "59",
+      "oneKeyCount": 60,
+      "pagerText": "共 4000 条 1575859606167 前往页",
+      "risk": [],
+      "skuCount": 60,
+      "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+      "url": "https://union.jd.com/proManager/index?pageNo=59"
+    },
+    "known_sku_count": 2214,
+    "ok": true,
+    "page_summary": {
+      "59": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "59",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "59",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1575859606167 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=59"
+        },
+        "fresh_initial": 28,
+        "ok": 25
+      }
+    },
+    "pages": [
+      59
+    ],
+    "reason": null,
+    "total_fail": 0,
+    "total_ok": 25
+  },
+  "per_page_report_exists": false,
+  "per_page_rows": [],
+  "unfinished_pages": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ]
+}
