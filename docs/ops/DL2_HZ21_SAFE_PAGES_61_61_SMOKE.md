@@ -7,18 +7,16 @@
   ],
   "rows": [
     {
-      "known_sku_count": 2223,
       "ok": false,
       "page": 61,
-      "page_summary": null,
-      "rc": 0,
-      "reason": "risk_initial",
+      "rc": 99,
+      "reason": "prepare_not_safe",
       "total_fail": 0,
       "total_ok": 0
     }
   ],
   "total_ok": 0,
   "total_fail": 0,
-  "last_known_sku_count": 2223
+  "last_known_sku_count": null
 }
 ```
