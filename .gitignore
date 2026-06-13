@@ -23,3 +23,4 @@ playwright/.auth/
 .auth/
 *.jpeg
 *.webp
+reports/hz23_observer_status_latest.json
