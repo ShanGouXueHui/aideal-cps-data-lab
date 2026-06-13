@@ -132,7 +132,7 @@ PY
   echo "$(date '+%F %T') HZ23_PROBE_DONE page=$PAGE prep_rc=$PREP_RC scan_rc=$SCAN_RC" | tee -a "$LOG"
   schedule_next_probe
   write_status "probe_done"
-  git add "$PREP" "$SCAN" "$STATUS" 2>/dev/null || true
+  git add "$PREP" "$SCAN" 2>/dev/null || true
   git commit -m "docs: publish HZ23 daily observation probe" >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git fetch origin main >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git rebase origin/main >/dev/null 2>&1 || true
