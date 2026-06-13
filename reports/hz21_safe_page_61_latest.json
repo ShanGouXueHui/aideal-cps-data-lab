@@ -1,0 +1,125 @@
+{
+  "final": {
+    "activePageText": null,
+    "has4000": false,
+    "hasEmpty": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "risk": [
+      "risk_handler",
+      "京东验证",
+      "快速验证",
+      "购物无忧"
+    ],
+    "skuCount": 0,
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D61&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-112047506-10279-1781342440022&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh5sCsrPZKwhLbtV3QFsfKv0Rz_C22qWJBnBDnjQgPbC4xsZZr"
+  },
+  "initial": {
+    "activePageText": null,
+    "has4000": false,
+    "hasEmpty": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "risk": [
+      "risk_handler",
+      "京东验证",
+      "快速验证",
+      "购物无忧"
+    ],
+    "skuCount": 0,
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D61&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-112047506-10279-1781342440022&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh5sCsrPZKwhLbtV3QFsfKv0Rz_C22qWJBnBDnjQgPbC4xsZZr"
+  },
+  "known_sku_count": 2223,
+  "limit": 25,
+  "ok": false,
+  "pages": [
+    61
+  ],
+  "quarantine": {
+    "removed_count": 11,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt3VpO",
+        "sku": "100069081309",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 2223
+  },
+  "reason": "risk_initial",
+  "results": [],
+  "risk": [
+    "risk_handler",
+    "快速验证",
+    "购物无忧"
+  ],
+  "total_fail": 0,
+  "total_ok": 0,
+  "ts": "2026-06-13 17:20:40",
+  "wait": 10
+}
