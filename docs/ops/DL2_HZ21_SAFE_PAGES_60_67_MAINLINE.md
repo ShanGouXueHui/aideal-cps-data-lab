@@ -1,0 +1,153 @@
+# DL2 HZ21 Mainline Safe Pages
+
+```json
+{
+  "pages": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "rows": [
+    {
+      "known_sku_count": 2223,
+      "ok": true,
+      "page": 60,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "60",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "60",
+          "oneKeyCount": 59,
+          "pagerText": "共 4000 条 1585960616267 前往页",
+          "risk": [],
+          "skuCount": 59,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=60"
+        },
+        "fresh_initial": 9,
+        "ok": 9
+      },
+      "prepare_after": {
+        "activePageText": "60",
+        "has4000": true,
+        "jumpInputValue": "60",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1585960616267 前往页",
+        "pagers": [
+          {
+            "active": "60",
+            "i": 0,
+            "input": "60",
+            "text": "共 4000 条 1585960616267 前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "10170626513855",
+          "10157419948209",
+          "10116135379841",
+          "10094985581639",
+          "100101166522",
+          "69542791298",
+          "100039526678",
+          "10020873933858",
+          "10056926300399",
+          "10211656667359",
+          "10058730225068",
+          "100202743593"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=60"
+      },
+      "prepare_ok": true,
+      "prepare_reason": "safe_all_product_4000_page",
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 9
+    },
+    {
+      "known_sku_count": 2223,
+      "ok": false,
+      "page": 61,
+      "page_summary": null,
+      "prepare_after": {
+        "activePageText": "61",
+        "has4000": true,
+        "jumpInputValue": "61",
+        "oneKeyCount": 59,
+        "pagerText": "共 4000 条 1596061626367 前往页",
+        "pagers": [
+          {
+            "active": "61",
+            "i": 0,
+            "input": "61",
+            "text": "共 4000 条 1596061626367 前往页"
+          }
+        ],
+        "risk": [],
+        "skuCount": 59,
+        "skus": [
+          "100156651321",
+          "100110564082",
+          "100090041319",
+          "100019184483",
+          "10130600868656",
+          "100285065386",
+          "100024675028",
+          "3961082",
+          "10108411211994",
+          "100082801835",
+          "100081808988",
+          "100026818890"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=61"
+      },
+      "prepare_ok": true,
+      "prepare_reason": "safe_all_product_4000_page",
+      "rc": 0,
+      "reason": "risk_initial",
+      "total_fail": 0,
+      "total_ok": 0
+    },
+    {
+      "ok": false,
+      "page": 62,
+      "prepare_after": null,
+      "prepare_ok": false,
+      "prepare_reason": "risk_before",
+      "rc": 0,
+      "reason": "risk_before",
+      "total_fail": 0,
+      "total_ok": 0
+    }
+  ],
+  "total_ok": 9,
+  "total_fail": 0,
+  "last_known_sku_count": 2223,
+  "completed_pages": [
+    60
+  ],
+  "unfinished_pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "stop_page": 62,
+  "stop_reason": "risk_before",
+  "commercial_segment_complete": false
+}
+```
