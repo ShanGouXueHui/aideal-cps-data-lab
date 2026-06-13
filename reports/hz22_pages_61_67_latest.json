@@ -1,0 +1,211 @@
+{
+  "commercial_segment_complete": true,
+  "completed_pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "last_known_sku_count": 2385,
+  "pages": [
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "rows": [
+    {
+      "known_sku_count": 2243,
+      "ok": true,
+      "page": 61,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "61",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "61",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1596061626367 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=61"
+        },
+        "fresh_initial": 20,
+        "ok": 20
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 20
+    },
+    {
+      "known_sku_count": 2268,
+      "ok": true,
+      "page": 62,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "62",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "62",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1606162636467 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=62"
+        },
+        "fresh_initial": 28,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2293,
+      "ok": true,
+      "page": 63,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "63",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "63",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1616263646567 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=63"
+        },
+        "fresh_initial": 26,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2318,
+      "ok": true,
+      "page": 64,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "64",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "64",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1626364656667 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=64"
+        },
+        "fresh_initial": 27,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2340,
+      "ok": true,
+      "page": 65,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "65",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "65",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1626364656667 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=65"
+        },
+        "fresh_initial": 22,
+        "ok": 22
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 22
+    },
+    {
+      "known_sku_count": 2365,
+      "ok": true,
+      "page": 66,
+      "page_summary": {
+        "fail": 0,
+        "final_snapshot": {
+          "activePageText": "66",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "66",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1626364656667 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=66"
+        },
+        "fresh_initial": 30,
+        "ok": 25
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 0,
+      "total_ok": 25
+    },
+    {
+      "known_sku_count": 2385,
+      "ok": true,
+      "page": 67,
+      "page_summary": {
+        "fail": 5,
+        "final_snapshot": {
+          "activePageText": "67",
+          "has4000": true,
+          "hasEmpty": false,
+          "jumpInputValue": "67",
+          "oneKeyCount": 60,
+          "pagerText": "共 4000 条 1626364656667 前往页",
+          "risk": [],
+          "skuCount": 60,
+          "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+          "url": "https://union.jd.com/proManager/index?pageNo=67"
+        },
+        "fresh_initial": 27,
+        "ok": 20
+      },
+      "rc": 0,
+      "reason": null,
+      "total_fail": 5,
+      "total_ok": 20
+    }
+  ],
+  "stop_page": null,
+  "stop_reason": null,
+  "total_fail": 5,
+  "total_ok": 162,
+  "unfinished_pages": []
+}
