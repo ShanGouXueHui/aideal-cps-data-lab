@@ -1,0 +1,75 @@
+{
+  "candidate_manifest": null,
+  "checks": {
+    "candidate_integrity_ready": false,
+    "candidate_manifest_present": false,
+    "commercial_switch_still_off": true,
+    "full_round_complete": false,
+    "full_round_present": false,
+    "observation_hours_minimum": false,
+    "service_active": true,
+    "successful_probes_minimum": false
+  },
+  "gate_failures": [
+    "successful_probes_minimum",
+    "observation_hours_minimum",
+    "full_round_present",
+    "full_round_complete",
+    "candidate_manifest_present",
+    "candidate_integrity_ready"
+  ],
+  "generated_at": "2026-06-14T22:23:21",
+  "git_head": "db5ee47e847e801b77a4edc8d36f6d7ab7bcb558",
+  "latest_observer_status": {
+    "mode": "night_rest",
+    "ts": "2026-06-14T22:18:30"
+  },
+  "latest_probe_prepare": {
+    "ok": true,
+    "reason": "safe_all_product_4000_page",
+    "target_page": 50,
+    "ts": "2026-06-14 10:05:13"
+  },
+  "latest_probe_scan": {
+    "changed": 0,
+    "new": 59,
+    "ok": true,
+    "page_no": 50,
+    "reason": null,
+    "risk": [],
+    "round_id": "probe_20260614_100513",
+    "scanned": 59,
+    "ts": "2026-06-14T10:05:16",
+    "unchanged": 0
+  },
+  "latest_round": null,
+  "mysql_initialization_allowed": false,
+  "observation_hours": 22.81,
+  "observation_ready": false,
+  "observer_state": {
+    "created_at": "2026-06-13T23:34:30",
+    "failed_probes": 0,
+    "first_successful_probe_at": "2026-06-14T10:05:16",
+    "last_full_complete": null,
+    "last_full_finished_at": null,
+    "last_full_round_id": null,
+    "last_full_started_at": null,
+    "last_probe_at": "2026-06-14T10:05:16",
+    "last_probe_ok": true,
+    "last_probe_reason": null,
+    "last_stop_reason": null,
+    "next_full_due_at": "2026-06-15T09:56:00",
+    "next_probe_due_at": "2026-06-15T10:55:00",
+    "observation_started_at": "2026-06-13T23:34:30",
+    "requires_manual": false,
+    "successful_full_rounds": 0,
+    "successful_probes": 1,
+    "version": 2
+  },
+  "schema_version": "aideal-hz23-commercial-status/v2",
+  "service": {
+    "active_enter_timestamp": "Sat 2026-06-13 23:40:12 CST",
+    "main_pid": "306716",
+    "state": "active"
+  }
+}
