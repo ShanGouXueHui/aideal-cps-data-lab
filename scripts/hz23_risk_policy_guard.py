@@ -22,43 +22,45 @@ def main() -> int:
     before = [x for x in ignored if x in source]
     hits: dict[str, int] = {}
 
-    updated = source
+    candidate = source
     for text in ignored:
         count = 0
         for quote in ("'", '"'):
             for pattern in (f",{quote}{text}{quote}", f"{quote}{text}{quote},"):
-                count += updated.count(pattern)
-                updated = updated.replace(pattern, "")
+                count += candidate.count(pattern)
+                candidate = candidate.replace(pattern, "")
         hits[text] = count
 
     changed = False
-    if args.fix and updated != source:
+    if args.fix and candidate != source:
         tmp = TARGET.with_suffix(TARGET.suffix + ".tmp")
-        tmp.write_text(updated, encoding="utf-8")
+        tmp.write_text(candidate, encoding="utf-8")
         tmp.replace(TARGET)
         changed = True
 
-    current = TARGET.read_text(encoding="utf-8")
+    checked_source = TARGET.read_text(encoding="utf-8") if args.fix else candidate
     syntax_ok = True
     syntax_error = None
     try:
-        ast.parse(current, filename=str(TARGET))
+        ast.parse(checked_source, filename=str(TARGET))
     except SyntaxError as exc:
         syntax_ok = False
         syntax_error = {"line": exc.lineno, "offset": exc.offset, "message": exc.msg}
 
-    after = [x for x in ignored if x in current]
-    missing = [x for x in strong if x not in current]
-    ok = syntax_ok and not after and not missing
+    after = [x for x in ignored if x in checked_source]
+    missing = [x for x in strong if x not in checked_source]
+    replacement_complete = all(hits.get(text, 0) > 0 or text not in source for text in ignored)
+    ok = syntax_ok and replacement_complete and not after and not missing
     result = {
         "target": str(TARGET),
         "policy": str(POLICY),
-        "fix_requested": args.fix,
+        "mode": "fix" if args.fix else "simulate",
         "changed": changed,
         "ignored_before": before,
         "ignored_after": after,
         "strong_signals_missing": missing,
         "replacement_hits": hits,
+        "replacement_complete": replacement_complete,
         "python_syntax_ok": syntax_ok,
         "syntax_error": syntax_error,
         "ok": ok,
