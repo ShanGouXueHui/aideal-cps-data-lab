@@ -14,6 +14,8 @@ def _env_bool(name: str, default: bool = False) -> bool:
 @dataclass(frozen=True, slots=True)
 class DataLabSettings:
     database_url: str = ""
+    mysql_default_file: str = ""
+    mysql_database: str = "aideal_cps_data_lab"
     db_write_enabled: bool = False
     db_dual_write_enabled: bool = False
     publish_enabled: bool = False
@@ -22,6 +24,8 @@ class DataLabSettings:
     def from_env(cls) -> "DataLabSettings":
         return cls(
             database_url=os.getenv("DATA_LAB_DATABASE_URL", "").strip(),
+            mysql_default_file=os.getenv("DATA_LAB_MYSQL_DEFAULT_FILE", "").strip(),
+            mysql_database=os.getenv("DATA_LAB_DB_NAME", "aideal_cps_data_lab").strip(),
             db_write_enabled=_env_bool("DATA_LAB_DB_WRITE_ENABLED", False),
             db_dual_write_enabled=_env_bool("DATA_LAB_DB_DUAL_WRITE_ENABLED", False),
             publish_enabled=_env_bool("DATA_LAB_PUBLISH_ENABLED", False),
@@ -30,8 +34,8 @@ class DataLabSettings:
     def assert_write_allowed(self) -> None:
         if not self.db_write_enabled:
             raise RuntimeError("DATA_LAB_DB_WRITE_ENABLED is false")
-        if not self.database_url:
-            raise RuntimeError("DATA_LAB_DATABASE_URL is empty")
+        if not self.database_url and not self.mysql_default_file:
+            raise RuntimeError("no Data Lab MySQL connection source configured")
 
     def assert_publish_allowed(self) -> None:
         if not self.publish_enabled:
