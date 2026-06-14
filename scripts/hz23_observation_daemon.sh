@@ -19,7 +19,21 @@ LOOP_MIN="${HZ23_LOOP_SLEEP_MIN:-240}"
 LOOP_MAX="${HZ23_LOOP_SLEEP_MAX:-480}"
 
 init_state() {
-  if [ -f "$STATE" ]; then return; fi
+  if [ -f "$STATE" ]; then
+    python3 - "$STATE" <<'PY'
+import json,sys
+from pathlib import Path
+p=Path(sys.argv[1]); s=json.loads(p.read_text(encoding='utf-8'))
+s.setdefault('observation_started_at',s.get('created_at'))
+s.setdefault('successful_probes',0)
+s.setdefault('failed_probes',0)
+s.setdefault('first_successful_probe_at',None)
+s.setdefault('last_probe_ok',None)
+s.setdefault('last_probe_reason',None)
+p.write_text(json.dumps(s,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
+PY
+    return
+  fi
   python3 - "$STATE" <<'PY'
 import json,random,sys
 from datetime import datetime,timedelta
@@ -29,7 +43,26 @@ days=random.randint(3,5)
 full=(now+timedelta(days=days)).replace(hour=9,minute=30,second=0,microsecond=0)+timedelta(minutes=random.randint(10,45))
 probe=now.replace(hour=10,minute=0,second=0,microsecond=0)+timedelta(minutes=random.randint(0,60))
 if probe<=now: probe+=timedelta(days=1)
-state={'version':1,'created_at':now.isoformat(timespec='seconds'),'next_full_due_at':full.isoformat(timespec='seconds'),'next_probe_due_at':probe.isoformat(timespec='seconds'),'last_probe_at':None,'last_full_started_at':None,'last_full_finished_at':None,'last_full_round_id':None,'last_full_complete':None,'last_stop_reason':None,'requires_manual':False,'successful_full_rounds':0}
+state={
+  'version':2,
+  'created_at':now.isoformat(timespec='seconds'),
+  'observation_started_at':now.isoformat(timespec='seconds'),
+  'next_full_due_at':full.isoformat(timespec='seconds'),
+  'next_probe_due_at':probe.isoformat(timespec='seconds'),
+  'last_probe_at':None,
+  'first_successful_probe_at':None,
+  'successful_probes':0,
+  'failed_probes':0,
+  'last_probe_ok':None,
+  'last_probe_reason':None,
+  'last_full_started_at':None,
+  'last_full_finished_at':None,
+  'last_full_round_id':None,
+  'last_full_complete':None,
+  'last_stop_reason':None,
+  'requires_manual':False,
+  'successful_full_rounds':0,
+}
 Path(sys.argv[1]).write_text(json.dumps(state,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
 PY
 }
@@ -80,13 +113,22 @@ PY
 }
 
 schedule_next_probe() {
-  python3 - "$STATE" <<'PY'
+  python3 - "$STATE" "$1" "$2" <<'PY'
 import json,random,sys
 from datetime import datetime,timedelta
 from pathlib import Path
-p=Path(sys.argv[1]); s=json.loads(p.read_text(encoding='utf-8'))
-now=datetime.now(); nxt=(now+timedelta(days=1)).replace(hour=10,minute=0,second=0,microsecond=0)+timedelta(minutes=random.randint(0,60))
-s['next_probe_due_at']=nxt.isoformat(timespec='seconds'); s['last_probe_at']=now.isoformat(timespec='seconds')
+p=Path(sys.argv[1]); success=sys.argv[2]=='true'; reason=sys.argv[3] or None
+s=json.loads(p.read_text(encoding='utf-8')); now=datetime.now()
+nxt=(now+timedelta(days=1)).replace(hour=10,minute=0,second=0,microsecond=0)+timedelta(minutes=random.randint(0,60))
+s['next_probe_due_at']=nxt.isoformat(timespec='seconds')
+s['last_probe_at']=now.isoformat(timespec='seconds')
+s['last_probe_ok']=success
+s['last_probe_reason']=reason
+if success:
+    s['successful_probes']=int(s.get('successful_probes') or 0)+1
+    s['first_successful_probe_at']=s.get('first_successful_probe_at') or now.isoformat(timespec='seconds')
+else:
+    s['failed_probes']=int(s.get('failed_probes') or 0)+1
 p.write_text(json.dumps(s,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
 PY
 }
@@ -129,10 +171,29 @@ PY
   else
     SCAN_RC=99
   fi
-  echo "$(date '+%F %T') HZ23_PROBE_DONE page=$PAGE prep_rc=$PREP_RC scan_rc=$SCAN_RC" | tee -a "$LOG"
-  schedule_next_probe
+  read -r PROBE_OK PROBE_REASON <<< "$(python3 - "$PREP_RC" "$SCAN_RC" "$SCAN" <<'PY'
+import json,sys
+from pathlib import Path
+prep_rc=int(sys.argv[1]); scan_rc=int(sys.argv[2]); p=Path(sys.argv[3])
+if prep_rc!=0:
+    print('false prepare_failed')
+elif scan_rc!=0:
+    print('false scan_failed')
+elif not p.exists():
+    print('false scan_report_missing')
+else:
+    try:
+        x=json.loads(p.read_text(encoding='utf-8'))
+        ok=bool(x.get('ok')) and not (x.get('risk') or []) and int(x.get('scanned') or 0)>=55
+        print('true' if ok else 'false', '' if ok else (x.get('reason') or 'semantic_failure'))
+    except Exception:
+        print('false scan_report_invalid')
+PY
+)"
+  echo "$(date '+%F %T') HZ23_PROBE_DONE page=$PAGE prep_rc=$PREP_RC scan_rc=$SCAN_RC probe_ok=$PROBE_OK reason=$PROBE_REASON" | tee -a "$LOG"
+  schedule_next_probe "$PROBE_OK" "$PROBE_REASON"
   write_status "probe_done"
-  git add "$PREP" "$SCAN" 2>/dev/null || true
+  git add "$PREP" "$SCAN" "$STATE" "$STATUS" 2>/dev/null || true
   git commit -m "docs: publish HZ23 daily observation probe" >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git fetch origin main >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git rebase origin/main >/dev/null 2>&1 || true
