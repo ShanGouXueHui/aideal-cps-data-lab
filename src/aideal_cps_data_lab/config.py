@@ -35,7 +35,7 @@ class DataLabSettings:
         if not self.db_write_enabled:
             raise RuntimeError("DATA_LAB_DB_WRITE_ENABLED is false")
         if not self.database_url and not self.mysql_default_file:
-            raise RuntimeError("no Data Lab MySQL connection source configured")
+            raise RuntimeError("DATA_LAB_DATABASE_URL is empty")
 
     def assert_publish_allowed(self) -> None:
         if not self.publish_enabled:
