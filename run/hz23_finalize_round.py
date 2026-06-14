@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List
+from typing import Any, Dict, List
 
 ROUND_ID = sys.argv[1]
 SUMMARY_PATH = Path(sys.argv[2])
@@ -17,6 +18,8 @@ LATEST_CANDIDATES = [
 ]
 EXPORT = Path("data/export/aideal_cps_products_commercial_candidate_latest.jsonl")
 MANIFEST = Path("data/export/aideal_cps_products_commercial_candidate_manifest.json")
+FEED_SCHEMA_VERSION = "aideal-cps-product-feed/v1"
+MANIFEST_SCHEMA_VERSION = "aideal-cps-product-feed-manifest/v1"
 
 
 def now() -> str:
@@ -51,6 +54,54 @@ def choose_source() -> Path | None:
         if path.exists():
             return path
     return None
+
+
+def payload_hash(row: Dict[str, Any]) -> str:
+    payload = json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def normalize_feed_row(
+    sku: str,
+    base: Dict[str, Any],
+    catalog: Dict[str, Any],
+    generated_at: str,
+) -> Dict[str, Any]:
+    row: Dict[str, Any] = {
+        "schema_version": FEED_SCHEMA_VERSION,
+        "source": "jd_union_datalab",
+        "sku": sku,
+        "title": catalog.get("title") or base.get("title"),
+        "description": base.get("description"),
+        "item_url": catalog.get("item_url") or base.get("item_url") or f"https://item.jd.com/{sku}.html",
+        "promotion_url": base.get("short_url"),
+        "short_url": base.get("short_url"),
+        "long_url": base.get("long_url"),
+        "qr_url": base.get("qr_url"),
+        "jd_command": base.get("jd_command"),
+        "image_url": catalog.get("image_url") or base.get("image_url"),
+        "category_name": base.get("category_name"),
+        "shop_name": base.get("shop_name"),
+        "price": catalog.get("price") or base.get("price"),
+        "coupon_price": base.get("coupon_price"),
+        "commission_rate": catalog.get("commission_rate") or base.get("commission_rate"),
+        "estimated_commission": catalog.get("estimated_income") or base.get("estimated_income"),
+        "sales_volume": base.get("sales_volume"),
+        "coupon_info": base.get("coupon_info"),
+        "status": "active",
+        "link_created_at": base.get("link_created_at"),
+        "link_expire_at": base.get("link_expire_at"),
+        "refresh_due_at": base.get("refresh_due_at"),
+        "last_checked_at": catalog.get("last_checked_at"),
+        "last_seen_at": catalog.get("last_seen_at"),
+        "source_round_id": catalog.get("last_round_id") or ROUND_ID,
+        "source_run_id": base.get("run_id"),
+        "source_page_no": base.get("page_no"),
+        "source_updated_at": catalog.get("last_checked_at") or base.get("ts") or generated_at,
+        "catalog_change_count": int(catalog.get("change_count") or 0),
+    }
+    row["source_payload_hash"] = payload_hash(row)
+    return row
 
 
 def main() -> None:
@@ -92,23 +143,16 @@ def main() -> None:
         "missing_item_url": 0,
         "missing_image_url": 0,
         "missing_price": 0,
-        "missing_short_url": 0,
+        "missing_promotion_url": 0,
     }
     for sku, base in dedup.items():
         catalog = products.get(sku) or {}
         if catalog and catalog.get("active") is False:
             rejected["inactive"] += 1
             continue
-        row = dict(base)
-        for key in ["title", "item_url", "image_url", "price", "commission_rate", "estimated_income"]:
-            if catalog.get(key):
-                row[key] = catalog[key]
-        row["last_checked_at"] = catalog.get("last_checked_at")
-        row["last_seen_at"] = catalog.get("last_seen_at")
-        row["catalog_round_id"] = catalog.get("last_round_id")
-        row["catalog_change_count"] = int(catalog.get("change_count") or 0)
+        row = normalize_feed_row(sku, base, catalog, generated_at)
         missing = []
-        for field in ["title", "item_url", "image_url", "price", "short_url"]:
+        for field in ["title", "item_url", "image_url", "price", "promotion_url"]:
             if not row.get(field):
                 missing.append(field)
                 rejected[f"missing_{field}"] += 1
@@ -118,6 +162,7 @@ def main() -> None:
 
     eligible.sort(key=lambda x: str(x.get("sku") or ""))
     export_text = "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in eligible)
+    export_sha256 = hashlib.sha256(export_text.encode("utf-8")).hexdigest()
     atomic_write(EXPORT, export_text)
 
     round_summary: Dict[str, Any] = {}
@@ -127,10 +172,16 @@ def main() -> None:
         except Exception:
             pass
     manifest = {
+        "schema_version": MANIFEST_SCHEMA_VERSION,
+        "feed_schema_version": FEED_SCHEMA_VERSION,
+        "feed_status": "candidate",
         "generated_at": generated_at,
         "round_id": ROUND_ID,
         "source_file": str(source) if source else None,
+        "data_file": EXPORT.name,
         "candidate_file": str(EXPORT),
+        "data_sha256": export_sha256,
+        "row_count": len(eligible),
         "trusted_dedup_sku_count": len(dedup),
         "catalog_index_sku_count": len(products),
         "round_seen_sku_count": len(seen),
