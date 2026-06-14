@@ -1,0 +1,16 @@
+{
+  "schema_version": "aideal-commission-mysql-prepare-summary/v1",
+  "recorded_at": "2026-06-14",
+  "status": "PASS",
+  "compile_rc": 0,
+  "test_rc": 0,
+  "ddl_rc": 0,
+  "migration_rc": 0,
+  "risk_rc": 0,
+  "tested_head": "4b7872e",
+  "scope": "offline_only",
+  "jd_live_called": false,
+  "mysql_connected": false,
+  "feature_flags_changed": false,
+  "evidence_source": "server summary returned after scripts/run_commission_mysql_prepare_checks.sh"
+}
