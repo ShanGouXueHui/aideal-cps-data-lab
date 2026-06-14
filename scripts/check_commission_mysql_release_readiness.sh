@@ -9,6 +9,8 @@ PYTHONPATH=src python3 -m py_compile \
   scripts/backfill_commission_products_mysql.py \
   scripts/plan_commission_mysql_initialization.py \
   scripts/verify_commission_mysql_post_migration.py \
+  scripts/verify_commission_mysql_payload_hashes.py \
+  src/aideal_cps_data_lab/application/landed_validation.py \
   src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py \
   > logs/commission_mysql_release_compile.log 2>&1
 COMPILE_RC=$?
