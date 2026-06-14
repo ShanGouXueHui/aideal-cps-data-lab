@@ -11,51 +11,69 @@ from aideal_cps_data_lab.persistence.repository import UpsertOutcome
 
 ConnectionFactory = Callable[[], Any]
 
-SELECT_ONE = """
-SELECT jd_sku_id, source_payload_hash, title, description, item_url,
-       promotion_url, short_url, image_url, price, coupon_price,
-       commission_rate, estimated_commission, sales_volume, coupon_info,
-       status, link_created_at, link_expire_at, refresh_due_at
+BUSINESS_COLUMNS = (
+    "title",
+    "description",
+    "item_url",
+    "promotion_url",
+    "short_url",
+    "long_url",
+    "qr_url",
+    "jd_command",
+    "image_url",
+    "category_name",
+    "shop_name",
+    "price",
+    "coupon_price",
+    "commission_rate",
+    "estimated_commission",
+    "sales_volume",
+    "coupon_info",
+    "status",
+    "link_created_at",
+    "link_expire_at",
+    "refresh_due_at",
+)
+
+SELECT_ONE = f"""
+SELECT jd_sku_id, source_payload_hash, {', '.join(BUSINESS_COLUMNS)}
 FROM commission_products
 WHERE jd_sku_id = %s
 FOR UPDATE
 """
 
-INSERT_ONE = """
+INSERT_ONE = f"""
 INSERT INTO commission_products (
-  jd_sku_id, title, description, item_url, promotion_url, short_url,
-  image_url, price, coupon_price, commission_rate, estimated_commission,
-  sales_volume, coupon_info, status, is_published, missing_rounds,
+  jd_sku_id, {', '.join(BUSINESS_COLUMNS)}, is_published, missing_rounds,
   source_page_no, source_round_id, source_run_id, source_payload_hash,
-  catalog_change_count, link_created_at, link_expire_at, refresh_due_at,
-  first_seen_at, last_checked_at, last_seen_at
+  catalog_change_count, first_seen_at, last_checked_at, last_seen_at
 ) VALUES (
-  %s, %s, %s, %s, %s, %s,
-  %s, %s, %s, %s, %s,
-  %s, %s, %s, 0, 0,
+  %s, {', '.join(['%s'] * len(BUSINESS_COLUMNS))}, 0, 0,
   %s, %s, %s, %s,
-  %s, %s, %s, %s,
-  %s, %s, %s
+  %s, %s, %s, %s
 )
 """
 
-UPDATE_CHANGED = """
+UPDATE_CHANGED = f"""
 UPDATE commission_products
-SET title=%s, description=%s, item_url=%s, promotion_url=%s,
-    short_url=%s, image_url=%s, price=%s, coupon_price=%s,
-    commission_rate=%s, estimated_commission=%s, sales_volume=%s,
-    coupon_info=%s, status=%s, is_published=0,
-    source_page_no=%s, source_round_id=%s, source_run_id=%s,
-    source_payload_hash=%s, catalog_change_count=catalog_change_count+1,
-    link_created_at=%s, link_expire_at=%s, refresh_due_at=%s,
-    last_checked_at=%s, last_seen_at=%s
+SET {', '.join(f'{column}=%s' for column in BUSINESS_COLUMNS)},
+    source_page_no=%s,
+    source_round_id=%s,
+    source_run_id=%s,
+    source_payload_hash=%s,
+    catalog_change_count=catalog_change_count+1,
+    last_checked_at=%s,
+    last_seen_at=%s
 WHERE jd_sku_id=%s
 """
 
 UPDATE_UNCHANGED = """
 UPDATE commission_products
-SET source_page_no=%s, source_round_id=%s, source_run_id=%s,
-    last_checked_at=%s, last_seen_at=%s
+SET source_page_no=%s,
+    source_round_id=%s,
+    source_run_id=%s,
+    last_checked_at=%s,
+    last_seen_at=%s
 WHERE jd_sku_id=%s
 """
 
@@ -97,38 +115,80 @@ class MySQLCommissionProductRepository:
                 checked_at = product.last_checked_at or now
                 seen_at = product.last_seen_at or checked_at
                 payload_hash = product.source_payload_hash()
+                business_values = self._business_values(product)
 
                 if existing is None:
                     cursor.execute(
                         INSERT_ONE,
-                        self._insert_values(product, round_id, run_id, payload_hash, checked_at, seen_at),
-                    )
-                    inserted += 1
-                elif existing.get("source_payload_hash") == payload_hash:
-                    cursor.execute(
-                        UPDATE_UNCHANGED,
-                        (product.source_page_no, round_id, run_id, checked_at, seen_at, product.jd_sku_id),
-                    )
-                    unchanged += 1
-                else:
-                    cursor.execute(
-                        UPDATE_CHANGED,
-                        self._update_values(product, round_id, run_id, payload_hash, checked_at, seen_at),
-                    )
-                    cursor.execute(
-                        INSERT_HISTORY,
                         (
                             product.jd_sku_id,
+                            *business_values,
+                            product.source_page_no,
                             round_id,
-                            "update",
-                            json.dumps(existing, ensure_ascii=False, default=str, sort_keys=True),
-                            json.dumps(product.business_payload(), ensure_ascii=False, default=str, sort_keys=True),
-                            existing.get("source_payload_hash"),
+                            run_id,
                             payload_hash,
-                            now,
+                            product.catalog_change_count,
+                            product.first_seen_at or seen_at,
+                            checked_at,
+                            seen_at,
                         ),
                     )
-                    updated += 1
+                    inserted += 1
+                    continue
+
+                if existing.get("source_payload_hash") == payload_hash:
+                    cursor.execute(
+                        UPDATE_UNCHANGED,
+                        (
+                            product.source_page_no,
+                            round_id,
+                            run_id,
+                            checked_at,
+                            seen_at,
+                            product.jd_sku_id,
+                        ),
+                    )
+                    unchanged += 1
+                    continue
+
+                cursor.execute(
+                    UPDATE_CHANGED,
+                    (
+                        *business_values,
+                        product.source_page_no,
+                        round_id,
+                        run_id,
+                        payload_hash,
+                        checked_at,
+                        seen_at,
+                        product.jd_sku_id,
+                    ),
+                )
+                cursor.execute(
+                    INSERT_HISTORY,
+                    (
+                        product.jd_sku_id,
+                        round_id,
+                        "update",
+                        json.dumps(
+                            self._existing_business_payload(existing),
+                            ensure_ascii=False,
+                            default=str,
+                            sort_keys=True,
+                        ),
+                        json.dumps(
+                            product.business_payload(),
+                            ensure_ascii=False,
+                            default=str,
+                            sort_keys=True,
+                        ),
+                        existing.get("source_payload_hash"),
+                        payload_hash,
+                        now,
+                    ),
+                )
+                updated += 1
+
             connection.commit()
             return UpsertOutcome(inserted=inserted, updated=updated, unchanged=unchanged)
         except Exception:
@@ -160,24 +220,10 @@ class MySQLCommissionProductRepository:
             connection.close()
 
     @staticmethod
-    def _insert_values(product: CommissionProduct, round_id: str, run_id: str, payload_hash: str, checked_at: Any, seen_at: Any) -> tuple[Any, ...]:
-        return (
-            product.jd_sku_id, product.title, product.description, product.item_url,
-            product.promotion_url, product.short_url, product.image_url, product.price,
-            product.coupon_price, product.commission_rate, product.estimated_commission,
-            product.sales_volume, product.coupon_info, product.status,
-            product.source_page_no, round_id, run_id, payload_hash,
-            product.catalog_change_count, product.link_created_at, product.link_expire_at,
-            product.refresh_due_at, product.first_seen_at or seen_at, checked_at, seen_at,
-        )
+    def _business_values(product: CommissionProduct) -> tuple[Any, ...]:
+        payload = product.business_payload()
+        return tuple(payload.get(column) for column in BUSINESS_COLUMNS)
 
     @staticmethod
-    def _update_values(product: CommissionProduct, round_id: str, run_id: str, payload_hash: str, checked_at: Any, seen_at: Any) -> tuple[Any, ...]:
-        return (
-            product.title, product.description, product.item_url, product.promotion_url,
-            product.short_url, product.image_url, product.price, product.coupon_price,
-            product.commission_rate, product.estimated_commission, product.sales_volume,
-            product.coupon_info, product.status, product.source_page_no, round_id, run_id,
-            payload_hash, product.link_created_at, product.link_expire_at,
-            product.refresh_due_at, checked_at, seen_at, product.jd_sku_id,
-        )
+    def _existing_business_payload(existing: dict[str, Any]) -> dict[str, Any]:
+        return {column: existing.get(column) for column in BUSINESS_COLUMNS}
