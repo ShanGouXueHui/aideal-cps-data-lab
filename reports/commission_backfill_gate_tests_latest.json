@@ -1,0 +1,20 @@
+{
+  "schema_version": "aideal-commission-backfill-gate-test/v1",
+  "recorded_at": "2026-06-14",
+  "status": "PASS",
+  "compile_rc": 0,
+  "test_rc": 0,
+  "tested_head": "a3949cf",
+  "scope": "offline_only",
+  "jd_live_called": false,
+  "mysql_connected": false,
+  "observer_restarted": false,
+  "validated": [
+    "guarded commercial backfill entrypoint",
+    "transaction-safe staging repository v2",
+    "candidate checksum and canonical payload hash",
+    "observation gate blocks execute before database access",
+    "database write feature flag remains mandatory"
+  ],
+  "evidence_source": "server summary after py_compile and unittest discover"
+}
