@@ -1,6 +1,7 @@
 .secrets/
 run/
 logs/
+backups/
 data/raw/
 data/clean/
 data/import/
