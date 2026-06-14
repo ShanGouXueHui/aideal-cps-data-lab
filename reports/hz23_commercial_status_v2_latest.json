@@ -18,11 +18,11 @@
     "candidate_manifest_present",
     "candidate_integrity_ready"
   ],
-  "generated_at": "2026-06-14T22:26:44",
-  "git_head": "e358078e1117bd1b2a8f25b6825b487e921e9a1e",
+  "generated_at": "2026-06-14T23:24:08",
+  "git_head": "44d919c781f4e68d7aa19de5d57c4dfb4c22df88",
   "latest_observer_status": {
     "mode": "night_rest",
-    "ts": "2026-06-14T22:26:34"
+    "ts": "2026-06-14T23:23:59"
   },
   "latest_probe_prepare": {
     "ok": true,
@@ -44,7 +44,7 @@
   },
   "latest_round": null,
   "mysql_initialization_allowed": false,
-  "observation_hours": 22.87,
+  "observation_hours": 23.83,
   "observation_ready": false,
   "observer_state": {
     "created_at": "2026-06-13T23:34:30",
@@ -68,8 +68,8 @@
   },
   "schema_version": "aideal-hz23-commercial-status/v2",
   "service": {
-    "active_enter_timestamp": "Sun 2026-06-14 22:26:34 CST",
-    "main_pid": "314988",
+    "active_enter_timestamp": "Sun 2026-06-14 23:23:59 CST",
+    "main_pid": "316208",
     "state": "active"
   }
 }
