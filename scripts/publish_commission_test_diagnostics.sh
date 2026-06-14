@@ -33,33 +33,25 @@ for line in lines:
         failed_tests.append({"test": match.group(1), "result": match.group(2)})
 
 sections = []
-current = []
-inside = False
-for line in lines:
-    if line.startswith("=") and ("FAIL:" in line or "ERROR:" in line):
-        if current:
-            sections.append("\n".join(current))
+index = 0
+while index < len(lines):
+    line = lines[index]
+    if line.startswith("FAIL: ") or line.startswith("ERROR: "):
         current = [line]
-        inside = True
+        index += 1
+        while index < len(lines):
+            next_line = lines[index]
+            if next_line.startswith("FAIL: ") or next_line.startswith("ERROR: "):
+                break
+            if next_line.startswith("Ran "):
+                break
+            current.append(next_line)
+            index += 1
+        sections.append("\n".join(current).strip())
         continue
-    if inside:
-        if line.startswith("-") and len(line) >= 20:
-            current.append(line)
-            continue
-        if line.startswith("Ran "):
-            if current:
-                sections.append("\n".join(current))
-                current = []
-            inside = False
-            continue
-        current.append(line)
-if current:
-    sections.append("\n".join(current))
+    index += 1
 
-summary_lines = [
-    line for line in lines[-30:]
-    if line.strip()
-]
+summary_lines = [line for line in lines[-40:] if line.strip()]
 payload = {
     "schema_version": "aideal-commission-test-diagnostic/v1",
     "generated_at": datetime.now().isoformat(timespec="seconds"),
