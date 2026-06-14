@@ -8,7 +8,7 @@ from pathlib import Path
 
 from aideal_cps_data_lab.application import build_backfill_plan
 from aideal_cps_data_lab.config import DataLabSettings
-from aideal_cps_data_lab.persistence.mysql_factory import build_secret_file_connection_factory
+from aideal_cps_data_lab.persistence.mysql_factory import build_connection_factory
 from aideal_cps_data_lab.persistence.mysql_repository import MySQLCommissionProductRepository
 
 
@@ -67,7 +67,7 @@ def main() -> int:
         print(json.dumps(payload, ensure_ascii=False, sort_keys=True))
         return 2
 
-    factory = build_secret_file_connection_factory(settings)
+    factory = build_connection_factory(settings)
     repository = MySQLCommissionProductRepository(factory, settings)
     outcome = repository.upsert_many(
         plan.unique_products,
