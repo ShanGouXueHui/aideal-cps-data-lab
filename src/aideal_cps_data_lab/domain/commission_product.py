@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-import hashlib
-import json
 from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
 from typing import Any
 from urllib.parse import urlparse
+
+from aideal_cps_data_lab.contracts import canonical_business_payload, canonical_payload_hash
 
 
 class ProductValidationError(ValueError):
@@ -59,12 +59,6 @@ def _validate_promotion_url(value: Any) -> str:
     if parsed.scheme != "https" or parsed.hostname != "u.jd.com":
         raise ProductValidationError("untrusted_promotion_url")
     return url
-
-
-def _decimal_text(value: Decimal | None) -> str | None:
-    if value is None:
-        return None
-    return format(value, "f")
 
 
 @dataclass(frozen=True, slots=True)
@@ -151,45 +145,37 @@ class CommissionProduct:
         )
 
     def business_payload(self) -> dict[str, Any]:
-        """Return only fields whose change is a business change.
+        """Return the canonical fields whose change is a business change."""
 
-        Volatile observation timestamps and lineage identifiers are intentionally excluded,
-        so an unchanged product keeps the same payload hash across refresh rounds.
-        """
-
-        return {
-            "jd_sku_id": self.jd_sku_id,
-            "title": self.title,
-            "description": self.description,
-            "item_url": self.item_url,
-            "promotion_url": self.promotion_url,
-            "short_url": self.short_url,
-            "long_url": self.long_url,
-            "qr_url": self.qr_url,
-            "jd_command": self.jd_command,
-            "image_url": self.image_url,
-            "category_name": self.category_name,
-            "shop_name": self.shop_name,
-            "price": _decimal_text(self.price),
-            "coupon_price": _decimal_text(self.coupon_price),
-            "commission_rate": _decimal_text(self.commission_rate),
-            "estimated_commission": _decimal_text(self.estimated_commission),
-            "sales_volume": self.sales_volume,
-            "coupon_info": self.coupon_info,
-            "status": self.status,
-            "link_created_at": self.link_created_at,
-            "link_expire_at": self.link_expire_at,
-            "refresh_due_at": self.refresh_due_at,
-        }
+        return canonical_business_payload(
+            {
+                "jd_sku_id": self.jd_sku_id,
+                "title": self.title,
+                "description": self.description,
+                "item_url": self.item_url,
+                "promotion_url": self.promotion_url,
+                "short_url": self.short_url,
+                "long_url": self.long_url,
+                "qr_url": self.qr_url,
+                "jd_command": self.jd_command,
+                "image_url": self.image_url,
+                "category_name": self.category_name,
+                "shop_name": self.shop_name,
+                "price": self.price,
+                "coupon_price": self.coupon_price,
+                "commission_rate": self.commission_rate,
+                "estimated_commission": self.estimated_commission,
+                "sales_volume": self.sales_volume,
+                "coupon_info": self.coupon_info,
+                "status": self.status,
+                "link_created_at": self.link_created_at,
+                "link_expire_at": self.link_expire_at,
+                "refresh_due_at": self.refresh_due_at,
+            }
+        )
 
     def source_payload_hash(self) -> str:
-        encoded = json.dumps(
-            self.business_payload(),
-            ensure_ascii=False,
-            sort_keys=True,
-            separators=(",", ":"),
-        ).encode("utf-8")
-        return hashlib.sha256(encoded).hexdigest()
+        return canonical_payload_hash(self.business_payload())
 
     def persistence_payload(self) -> dict[str, Any]:
         return {
