@@ -133,6 +133,36 @@ p.write_text(json.dumps(s,ensure_ascii=False,indent=2,sort_keys=True),encoding='
 PY
 }
 
+refresh_manifest_after_successful_probe() {
+  if [ "$1" != "true" ]; then
+    return 0
+  fi
+  LATEST_ROUND="reports/hz23_round_latest.json"
+  if [ ! -f "$LATEST_ROUND" ]; then
+    echo "$(date '+%F %T') HZ23_MANIFEST_REFRESH_SKIP reason=no_complete_round" | tee -a "$LOG"
+    return 0
+  fi
+  read -r LATEST_ROUND_ID LATEST_COMPLETE <<< "$(python3 - "$LATEST_ROUND" <<'PY'
+import json,sys
+from pathlib import Path
+try:
+    x=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+    complete=bool(x.get('commercial_segment_complete')) and (x.get('unfinished_pages') or [])==[] and x.get('stop_reason') in (None,'')
+    print(x.get('round_id') or '', 'true' if complete else 'false')
+except Exception:
+    print('', 'false')
+PY
+)"
+  if [ -z "$LATEST_ROUND_ID" ] || [ "$LATEST_COMPLETE" != "true" ]; then
+    echo "$(date '+%F %T') HZ23_MANIFEST_REFRESH_SKIP reason=latest_round_incomplete" | tee -a "$LOG"
+    return 0
+  fi
+  .venv-browser/bin/python run/hz23_finalize_round.py "$LATEST_ROUND_ID" "$LATEST_ROUND" >> "$LOG" 2>&1
+  FINALIZE_RC=$?
+  echo "$(date '+%F %T') HZ23_MANIFEST_REFRESH_DONE round=$LATEST_ROUND_ID rc=$FINALIZE_RC" | tee -a "$LOG"
+  return "$FINALIZE_RC"
+}
+
 schedule_after_full() {
   python3 - "$STATE" "$1" "$2" "$3" <<'PY'
 import json,random,sys
@@ -192,8 +222,9 @@ PY
 )"
   echo "$(date '+%F %T') HZ23_PROBE_DONE page=$PAGE prep_rc=$PREP_RC scan_rc=$SCAN_RC probe_ok=$PROBE_OK reason=$PROBE_REASON" | tee -a "$LOG"
   schedule_next_probe "$PROBE_OK" "$PROBE_REASON"
+  refresh_manifest_after_successful_probe "$PROBE_OK"
   write_status "probe_done"
-  git add "$PREP" "$SCAN" "$STATE" "$STATUS" 2>/dev/null || true
+  git add "$PREP" "$SCAN" "$STATE" "$STATUS" data/export/aideal_cps_products_commercial_candidate_manifest.json 2>/dev/null || true
   git commit -m "docs: publish HZ23 daily observation probe" >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git fetch origin main >/dev/null 2>&1 || true
   GIT_TERMINAL_PROMPT=0 git rebase origin/main >/dev/null 2>&1 || true
