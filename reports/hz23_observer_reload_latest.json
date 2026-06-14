@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-06-14T22:26:36",
+  "git_head": "3b59bf2c1a5ffda5c33b166cb44283469919dd17",
+  "jd_browser_operated": false,
+  "new_pid": "314988",
+  "new_service_state": "active",
+  "nighttime_guard_passed": true,
+  "observer_mode": "night_rest",
+  "ok": true,
+  "old_pid": "306716",
+  "old_service_state": "active",
+  "reload_stamp": "20260614_222634",
+  "restart_rc": 0,
+  "schema_version": "aideal-hz23-observer-reload/v1"
+}
