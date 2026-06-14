@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aidealfy.com/schemas/aideal-cps-product-feed-manifest-v1.schema.json",
+  "title": "AIdeal CPS Product Feed Manifest V1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "feed_schema_version",
+    "feed_status",
+    "generated_at",
+    "round_id",
+    "data_file",
+    "data_sha256",
+    "row_count",
+    "eligible_sku_count",
+    "duplicate_sku_count",
+    "round_complete",
+    "observation_ready",
+    "commercial_enabled"
+  ],
+  "properties": {
+    "schema_version": {"const": "aideal-cps-product-feed-manifest/v1"},
+    "feed_schema_version": {"const": "aideal-cps-product-feed/v1"},
+    "feed_status": {"enum": ["candidate", "commercial"]},
+    "generated_at": {"type": "string", "minLength": 1},
+    "round_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "source_file": {"type": ["string", "null"]},
+    "data_file": {"type": "string", "pattern": "^[A-Za-z0-9._-]+\\.jsonl$"},
+    "candidate_file": {"type": ["string", "null"]},
+    "data_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "row_count": {"type": "integer", "minimum": 0},
+    "trusted_dedup_sku_count": {"type": "integer", "minimum": 0},
+    "catalog_index_sku_count": {"type": "integer", "minimum": 0},
+    "round_seen_sku_count": {"type": "integer", "minimum": 0},
+    "eligible_sku_count": {"type": "integer", "minimum": 0},
+    "rejected": {"type": "object"},
+    "duplicate_sku_count": {"type": "integer", "minimum": 0},
+    "round_complete": {"type": "boolean"},
+    "round_total_ok": {"type": ["integer", "null"], "minimum": 0},
+    "round_total_fail": {"type": ["integer", "null"], "minimum": 0},
+    "observation_ready": {"type": "boolean"},
+    "commercial_enabled": {"type": "boolean"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"feed_status": {"const": "commercial"}}},
+      "then": {
+        "properties": {
+          "commercial_enabled": {"const": true},
+          "observation_ready": {"const": true},
+          "round_complete": {"const": true},
+          "duplicate_sku_count": {"const": 0}
+        }
+      }
+    }
+  ]
+}
