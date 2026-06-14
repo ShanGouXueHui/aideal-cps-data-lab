@@ -9,6 +9,11 @@ from pathlib import Path
 from typing import Any, Dict, List
 from urllib.parse import urlparse
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from aideal_cps_data_lab.contracts import canonical_payload_hash
+
 ROUND_ID = sys.argv[1]
 SUMMARY_PATH = Path(sys.argv[2])
 INDEX = Path("data/state/hz23_catalog_index.json")
@@ -26,31 +31,6 @@ MIN_SCANNED_TOTAL = 3900
 MIN_SUCCESSFUL_PROBES = 2
 MIN_OBSERVATION_HOURS = 48.0
 EXPECTED_PAGES = set(range(1, 68))
-
-BUSINESS_HASH_FIELDS = (
-    "sku",
-    "title",
-    "description",
-    "item_url",
-    "promotion_url",
-    "short_url",
-    "long_url",
-    "qr_url",
-    "jd_command",
-    "image_url",
-    "category_name",
-    "shop_name",
-    "price",
-    "coupon_price",
-    "commission_rate",
-    "estimated_commission",
-    "sales_volume",
-    "coupon_info",
-    "status",
-    "link_created_at",
-    "link_expire_at",
-    "refresh_due_at",
-)
 
 
 def now() -> str:
@@ -98,14 +78,7 @@ def choose_source() -> Path | None:
 
 
 def stable_payload_hash(row: Dict[str, Any]) -> str:
-    payload = {field: row.get(field) for field in BUSINESS_HASH_FIELDS}
-    encoded = json.dumps(
-        payload,
-        ensure_ascii=False,
-        sort_keys=True,
-        separators=(",", ":"),
-    ).encode("utf-8")
-    return hashlib.sha256(encoded).hexdigest()
+    return canonical_payload_hash(row)
 
 
 def trusted_promotion_url(value: Any) -> bool:
