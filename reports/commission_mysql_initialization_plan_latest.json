@@ -1,0 +1,42 @@
+{
+  "candidate_file": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
+  "candidate_rows": null,
+  "candidate_sha256": null,
+  "checks": {
+    "candidate_file_present": false,
+    "candidate_integrity_ready": false,
+    "candidate_manifest_present": false,
+    "commercial_switch_off": false,
+    "full_round_complete": false,
+    "mysql_initialization_allowed": false,
+    "observation_ready": false,
+    "rollback_file_present": true,
+    "round_id_consistent": false,
+    "round_id_present": false,
+    "service_active": true,
+    "status_present": true,
+    "upgrade_file_present": true
+  },
+  "database_bind": "127.0.0.1:3306",
+  "database_name": "aideal_cps_data_lab",
+  "execution_performed": false,
+  "failures": [
+    "observation_ready",
+    "mysql_initialization_allowed",
+    "full_round_complete",
+    "candidate_integrity_ready",
+    "candidate_file_present",
+    "candidate_manifest_present",
+    "commercial_switch_off",
+    "round_id_present",
+    "round_id_consistent"
+  ],
+  "generated_at": "2026-06-15T00:06:05",
+  "ready_for_database_initialization": false,
+  "rollback_file": "migrations/mysql/0001_commission_data_v1.down.sql",
+  "rollback_sha256": "cf04ecc24d8a4daf101858108b2e06e0ee7dae9a58740e991a00e85c88502c7a",
+  "round_id": null,
+  "schema_version": "aideal-commission-mysql-initialization-plan/v1",
+  "upgrade_file": "migrations/mysql/0001_commission_data_v1.up.sql",
+  "upgrade_sha256": "0ab9446da711d82ab8a81dbdda30168ccfda39024809afc2fd86bbf54251e156"
+}

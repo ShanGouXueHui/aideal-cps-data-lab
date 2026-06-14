@@ -1,0 +1,18 @@
+{
+  "execution_performed": false,
+  "generated_at": "2026-06-15T00:06:05",
+  "offline_checks_passed": true,
+  "plan_failures": [
+    "observation_ready",
+    "mysql_initialization_allowed",
+    "full_round_complete",
+    "candidate_integrity_ready",
+    "candidate_file_present",
+    "candidate_manifest_present",
+    "commercial_switch_off",
+    "round_id_present",
+    "round_id_consistent"
+  ],
+  "ready_for_database_initialization": false,
+  "schema_version": "aideal-commission-mysql-release-readiness/v1"
+}
