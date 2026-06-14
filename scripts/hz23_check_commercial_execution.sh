@@ -18,11 +18,24 @@ if [ ! -f "$REPORT" ]; then
   exit 1
 fi
 
-python3 - "$REPORT" "$PUBLISH_RC" <<'PY'
+CANDIDATE="data/export/aideal_cps_products_commercial_candidate_latest.jsonl"
+MANIFEST="data/export/aideal_cps_products_commercial_candidate_manifest.json"
+CANDIDATE_VALIDATION_RC=SKIP
+if [ -f "$CANDIDATE" ] && [ -f "$MANIFEST" ]; then
+  PYTHONPATH=src python3 scripts/validate_commercial_candidate.py \
+    --candidate "$CANDIDATE" \
+    --manifest "$MANIFEST" \
+    > logs/hz23_candidate_validation_check.log 2>&1
+  CANDIDATE_VALIDATION_RC=$?
+elif [ -f "$CANDIDATE" ] || [ -f "$MANIFEST" ]; then
+  CANDIDATE_VALIDATION_RC=98
+fi
+
+python3 - "$REPORT" "$PUBLISH_RC" "$CANDIDATE_VALIDATION_RC" <<'PY'
 import json,sys
 from pathlib import Path
 
-path=Path(sys.argv[1]); publish_rc=int(sys.argv[2])
+path=Path(sys.argv[1]); publish_rc=int(sys.argv[2]); candidate_rc=sys.argv[3]
 x=json.loads(path.read_text(encoding='utf-8'))
 service=x.get('service') or {}
 state=x.get('observer_state') or {}
@@ -32,11 +45,21 @@ checks=x.get('checks') or {}
 
 full_present=round_report is not None
 manifest_present=manifest is not None
-status='PASS' if publish_rc==0 and service.get('state')=='active' else 'FAIL'
+candidate_ok=candidate_rc in {'SKIP','0'}
+status='PASS' if publish_rc==0 and service.get('state')=='active' and candidate_ok else 'FAIL'
+
+validation={}
+validation_path=Path('reports/commercial_candidate_validation_latest.json')
+if validation_path.exists():
+    try:
+        validation=json.loads(validation_path.read_text(encoding='utf-8'))
+    except Exception:
+        validation={}
 
 print('===== SUMMARY =====')
 print(f'STATUS={status}')
 print(f'PUBLISH_RC={publish_rc}')
+print(f'CANDIDATE_VALIDATION_RC={candidate_rc}')
 print(f'SERVICE_STATE={service.get("state") or ""}')
 print(f'SERVICE_PID={service.get("main_pid") or ""}')
 print(f'OBSERVER_MODE={(x.get("latest_observer_status") or {}).get("mode") or ""}')
@@ -62,6 +85,9 @@ print(f'CANDIDATE_ROWS={(manifest or {}).get("row_count") if manifest_present el
 print(f'DUPLICATE_SKU_COUNT={(manifest or {}).get("duplicate_sku_count") if manifest_present else ""}')
 print(f'UNSAFE_HZ20_COUNT={((manifest or {}).get("rejected") or {}).get("unsafe_hz20") if manifest_present else ""}')
 print(f'UNTRUSTED_PROMOTION_URL_COUNT={((manifest or {}).get("rejected") or {}).get("untrusted_promotion_url") if manifest_present else ""}')
+print(f'VALIDATED_ROW_COUNT={validation.get("row_count") if validation else ""}')
+print(f'PAYLOAD_HASH_MISMATCH_COUNT={validation.get("payload_hash_mismatch_count") if validation else ""}')
+print(f'CANDIDATE_FILE_VALID={str(bool(validation.get("ok"))).lower() if validation else ""}')
 print(f'CANDIDATE_INTEGRITY_READY={str(bool(checks.get("candidate_integrity_ready"))).lower()}')
 print(f'OBSERVATION_READY={str(bool(x.get("observation_ready"))).lower()}')
 print(f'MYSQL_INITIALIZATION_ALLOWED={str(bool(x.get("mysql_initialization_allowed"))).lower()}')
@@ -70,6 +96,9 @@ PY
 CHECK_RC=$?
 
 if [ "$PUBLISH_RC" != "0" ] || [ "$CHECK_RC" != "0" ]; then
+  exit 1
+fi
+if [ "$CANDIDATE_VALIDATION_RC" != "SKIP" ] && [ "$CANDIDATE_VALIDATION_RC" != "0" ]; then
   exit 1
 fi
 exit 0
