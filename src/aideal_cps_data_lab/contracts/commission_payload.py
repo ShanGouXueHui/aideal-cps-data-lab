@@ -21,7 +21,11 @@ def _decimal_text(value: Any, *, percent: bool = False) -> str | None:
         number = Decimal(raw)
     except (InvalidOperation, ValueError) as exc:
         raise ValueError(f"invalid_decimal:{value}") from exc
-    return format(number, "f")
+    if not number.is_finite():
+        raise ValueError(f"non_finite_decimal:{value}")
+    if number == 0:
+        return "0"
+    return format(number.normalize(), "f")
 
 
 def _integer(value: Any) -> int | None:
