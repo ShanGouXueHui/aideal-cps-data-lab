@@ -23,7 +23,7 @@
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
     "url": "https://union.jd.com/proManager/index?pageNo=18"
   },
-  "known_sku_count": 2724,
+  "known_sku_count": 2743,
   "limit": 25,
   "ok": true,
   "page_ready": {
@@ -121,8 +121,8 @@
         "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
         "url": "https://union.jd.com/proManager/index?pageNo=18"
       },
-      "fresh_initial": 4,
-      "ok": 4
+      "fresh_initial": 0,
+      "ok": 0
     }
   },
   "pages": [
@@ -192,200 +192,11 @@
         "worker_name": "hz20_mouse_click"
       }
     ],
-    "rows_after": 2720
+    "rows_after": 2743
   },
-  "results": [
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 362.1875,
-          "y": 807
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 415.59375,
-            "cy": 828,
-            "h": 42,
-            "w": 106.8125,
-            "x": 362.1875,
-            "y": 807
-          },
-          "itemUrl": "https://item.jd.com/100160601628.html",
-          "rootRect": {
-            "h": 433,
-            "w": 240,
-            "x": 240,
-            "y": 427
-          },
-          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 3.45\n|\n佣金比例7.5%\n\n冻品先生 安井 免浆黑鱼片（袋装） 250g*5袋 冷冻鱼片 免切免洗 方便菜\n\n到手价￥45.94￥79.9\n10万+ 好评\n\n自营\n定向\n奖励\n京配\n券\n促销\n冻品先生京东自营旗舰店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 415.59375,
-          "y": 828.0
-        },
-        "ok": true,
-        "sku": "100160601628",
-        "token": "hz21_100160601628_1781510678085"
-      },
-      "ok": true,
-      "order": 0,
-      "page_no": 18,
-      "short_url": "https://u.jd.com/VDQoUTm",
-      "sku": "100160601628"
-    },
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 703.4375,
-          "y": 807
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 756.84375,
-            "cy": 828,
-            "h": 42,
-            "w": 106.8125,
-            "x": 703.4375,
-            "y": 807
-          },
-          "itemUrl": "https://item.jd.com/100093991183.html",
-          "rootRect": {
-            "h": 433,
-            "w": 240,
-            "x": 581.25,
-            "y": 427
-          },
-          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 2.75\n|\n佣金比例10%\n\n荣宝斋 扇子折扇十寸【优质头青竹】 中国风古典手工玉竹半生熟宣扇面高清微喷男女通用 千里江山-王希孟\n\n到手价￥27.5￥35.9\n1000+ 好评\n\n自营\n定向\n奖励\n京配\n促销\n荣宝斋京东自营旗舰店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 756.84375,
-          "y": 828.0
-        },
-        "ok": true,
-        "sku": "100093991183",
-        "token": "hz21_100093991183_1781510688611"
-      },
-      "ok": true,
-      "order": 1,
-      "page_no": 18,
-      "short_url": "https://u.jd.com/Vrquxza",
-      "sku": "100093991183"
-    },
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 1727.1875,
-          "y": 807
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 1780.59375,
-            "cy": 828,
-            "h": 42,
-            "w": 106.8125,
-            "x": 1727.1875,
-            "y": 807
-          },
-          "itemUrl": "https://item.jd.com/100316722726.html",
-          "rootRect": {
-            "h": 433,
-            "w": 240,
-            "x": 1605,
-            "y": 427
-          },
-          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 46.88\n|\n佣金比例7%\n\nGREGORY格里高利蜂鸟NANO户外徒步登山包20L双肩背包43J\n\n到手价￥578.7￥804\n500+ 好评\n\n自营\n定向\n奖励\n京配\n券\n促销\n购新国补最高10%\nGREGORY箱包京东自营旗舰店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 1780.59375,
-          "y": 828.0
-        },
-        "ok": true,
-        "sku": "100316722726",
-        "token": "hz21_100316722726_1781510699317"
-      },
-      "ok": true,
-      "order": 2,
-      "page_no": 18,
-      "short_url": "https://u.jd.com/V1qM6Vf",
-      "sku": "100316722726"
-    },
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 1044.6875,
-          "y": 825
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 1098.09375,
-            "cy": 2127,
-            "h": 42,
-            "w": 106.8125,
-            "x": 1044.6875,
-            "y": 2106
-          },
-          "itemUrl": "https://item.jd.com/10185660921742.html",
-          "rootRect": {
-            "h": 433,
-            "w": 240,
-            "x": 922.5,
-            "y": 1726
-          },
-          "rootText": "预估收益 ￥ 2.18\n|\n佣金比例1%\n\n医院同款手推轮椅可折叠免安装轮椅康复轮椅 24一体轮黑布坐便\n\n到手价￥218￥228\n100+ 好评\n\n促销\n椋橙旗舰店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 1098.09375,
-          "y": 846.0
-        },
-        "ok": true,
-        "sku": "10185660921742",
-        "token": "hz21_10185660921742_1781510709929"
-      },
-      "ok": true,
-      "order": 3,
-      "page_no": 18,
-      "short_url": "https://u.jd.com/VGqu79y",
-      "sku": "10185660921742"
-    }
-  ],
+  "results": [],
   "total_fail": 0,
-  "total_ok": 4,
-  "ts": "2026-06-15 16:04:31",
+  "total_ok": 0,
+  "ts": "2026-06-15 16:14:14",
   "wait": 10
 }

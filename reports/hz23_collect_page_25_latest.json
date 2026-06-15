@@ -1,0 +1,1237 @@
+{
+  "final": {
+    "activePageText": "25",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "25",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1232425262767 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=25"
+  },
+  "initial": {
+    "activePageText": "25",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "25",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1232425262767 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=25"
+  },
+  "known_sku_count": 2864,
+  "limit": 25,
+  "ok": true,
+  "page_ready": {
+    "25": {
+      "info": {
+        "activePageText": "25",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "25",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1232425262767 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "100063079326",
+          "10164786510872",
+          "100044282168",
+          "100026828234",
+          "100334067386",
+          "100110765715",
+          "3811674",
+          "12050363",
+          "100026084953",
+          "100097771088",
+          "100072756496",
+          "100064013422",
+          "100018673527",
+          "100214484102",
+          "100005294826",
+          "950435",
+          "100288158958",
+          "100003930503",
+          "10192951473044",
+          "100114941595",
+          "100012498665",
+          "100000349380",
+          "6680063",
+          "10211535232567",
+          "1025000658",
+          "100046309661",
+          "100007651966",
+          "10100970196221",
+          "100008150065",
+          "100148668869",
+          "100005174148",
+          "10157440805054",
+          "100258858386",
+          "100089013180",
+          "14002420",
+          "10083641810718",
+          "14903348",
+          "10120473803796",
+          "100260534949",
+          "100024657816",
+          "100149377044",
+          "100042802498",
+          "10096186573927",
+          "8289386",
+          "7532142",
+          "100027905006",
+          "4865226",
+          "100086218214",
+          "12419065291",
+          "100159424224",
+          "825822",
+          "100054942407",
+          "100024765114",
+          "13377893",
+          "10147248645150",
+          "100273596130",
+          "10220531569243",
+          "10214459873449",
+          "100122295673",
+          "12195429"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=25"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "page_summary": {
+    "25": {
+      "fail": 0,
+      "final_snapshot": {
+        "activePageText": "25",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "25",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1232425262767 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=25"
+      },
+      "fresh_initial": 22,
+      "ok": 22
+    }
+  },
+  "pages": [
+    25
+  ],
+  "quarantine": {
+    "removed_count": 10,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 2842
+  },
+  "results": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100063079326.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 4.56\n|\n佣金比例8%\n\n京东鲜花 冰川极冻花瓶 高端摆件客厅插花玻璃透明轻奢高级感水养玫瑰鲜花\n\n到手价￥57￥59\n2000+ 好评\n\n自营\n定向\n京配\n促销\n京东鲜花自营专区\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100063079326",
+        "token": "hz21_100063079326_1781513374182"
+      },
+      "ok": true,
+      "order": 0,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGQm1Ul",
+      "sku": "100063079326"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/10164786510872.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 569.92\n|\n佣金比例10%\n\n海尔（Haier）【价保100天】云溪4.0高配版 洗烘套装10KG 年度机皇 全自动洗衣机+AI双擎热泵烘干机 国家补贴582 【王炸爆款】云溪4.0高配版 洗烘套装 10kg\n\n到手价￥5699.16￥9409.9\n500+ 好评\n\n超补爆品|优选\n超级补贴\n定向\n星选\n券\n促销\n购新国补最高15%\n海尔官方旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "10164786510872",
+        "token": "hz21_10164786510872_1781513381574"
+      },
+      "ok": true,
+      "order": 1,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VOqLa8t",
+      "sku": "10164786510872"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100044282168.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 427
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 4.20\n|\n佣金比例5%\n\n马勒（MAHLE）滤芯套装空滤+空调滤新明锐/凌渡高7/速腾/A3/朗逸PLUS 1.2T/1.4T\n\n到手价￥84￥120\n1000+ 好评\n\n自营\n定向\n奖励\n京配\n券\n马勒MAHLE京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100044282168",
+        "token": "hz21_100044282168_1781513392549"
+      },
+      "ok": true,
+      "order": 2,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGqOTIm",
+      "sku": "100044282168"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100026828234.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 0.97\n|\n佣金比例3%\n\n莫顿（MODUN）擦手纸盒壁挂式卫生间纸巾盒免打孔厕所抽纸盒洗手间商用干手纸盒\n\n到手价￥32.21￥46.9\n1.0万+ 好评\n\n自营\n京配\n促销\n莫顿（MODUN）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100026828234",
+        "token": "hz21_100026828234_1781513402537"
+      },
+      "ok": true,
+      "order": 3,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VrqOzar",
+      "sku": "100026828234"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100334067386.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 427
+          },
+          "rootText": "佣金比例提升3%\n去报名\n\n预估收益 ￥ 259.87\n|\n佣金比例10%\n\n飞利浦（PHILIPS）制冰饮水机 制冰机冰沙冰块机 制冰机饮水机一体机大冰小冰可调台上免安装即热ADD8243冰境C1 Pro\n\n到手价￥1999.02￥2613.1\n68+ 好评\n\n自营\n超级补贴\n定向\n奖励\n京配\n券\n购新国补最高15%\n飞利浦净水京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100334067386",
+        "token": "hz21_100334067386_1781513413658"
+      },
+      "ok": true,
+      "order": 4,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGqbw7H",
+      "sku": "100334067386"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 1261,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 1240
+          },
+          "itemUrl": "https://item.jd.com/3811674.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 860
+          },
+          "rootText": "预估收益 ￥ 1.60\n|\n佣金比例3.5%\n\n蒙牛焕轻骨力牛奶250ml×12包送长辈中老年高钙整箱早餐奶端午礼盒装\n\n到手价￥45.8￥47.8\n2.0万+ 好评\n\n自营\n秒杀\n京配\n促销\n蒙牛食品京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "3811674",
+        "token": "hz21_3811674_1781513421792"
+      },
+      "ok": true,
+      "order": 5,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VrqQdPQ",
+      "sku": "3811674"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/12050363.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 4.79\n|\n佣金比例20%\n\n小岛经济学 罗辑思维推荐 鱼 美元和经济的故事 通俗易懂的经济学 中信出版社\n\n到手价￥23.94￥34.2\n2.0万+ 好评\n\n自营\n定向\n奖励\n京配\n券\n中信出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "12050363",
+        "token": "hz21_12050363_1781513429621"
+      },
+      "ok": true,
+      "order": 6,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VDqOniw",
+      "sku": "12050363"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100097771088.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 0.80\n|\n佣金比例5%\n\n盐津铺子大魔王经典麻酱味约450g 素毛肚魔芋爽火锅小吃休闲零食大礼包\n\n到手价￥15.9￥16.9\n10万+ 好评\n\n超补爆品|优选\n自营\n秒杀\n京配\n促销\n盐津铺子京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100097771088",
+        "token": "hz21_100097771088_1781513439533"
+      },
+      "ok": true,
+      "order": 7,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/Vgq80mc",
+      "sku": "100097771088"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/100072756496.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "预估收益 ￥ 2.52\n|\n佣金比例3%\n\n艾美特（AIRMATE）排气扇 卫生间厨房换气扇窗式墙式排风扇强力抽风机6寸APC15-03\n\n到手价￥84.09￥98.99\n1.0万+ 好评\n\n自营\n超级补贴\n京配\n艾美特（Airmate ）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100072756496",
+        "token": "hz21_100072756496_1781513449532"
+      },
+      "ok": true,
+      "order": 8,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGqMT8A",
+      "sku": "100072756496"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100214484102.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 266.34\n|\n佣金比例10.1%\n\n途明（TUMI）GEN 4.3 CORE男士公文包商务高端弹道尼龙海军蓝色父亲节礼物\n\n到手价￥2378￥3980\n50+ 好评\n\n超补爆品\n超补爆品|优选\n自营\n超级补贴\n定向\n奖励\n京配\n促销\n途明（TUMI）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100214484102",
+        "token": "hz21_100214484102_1781513458582"
+      },
+      "ok": true,
+      "order": 9,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VrQht2D",
+      "sku": "100214484102"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100005294826.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 0.74\n|\n佣金比例2%\n\n九牧（JOMOO）挂钩免打孔浴室置物架挂衣钩壁挂毛巾架太空铝6排浴室排钩939306\n\n到手价￥37.1￥45\n2.0万+ 好评\n\n自营\n京配\n促销\n购新国补最高15%\n九牧京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100005294826",
+        "token": "hz21_100005294826_1781513466228"
+      },
+      "ok": true,
+      "order": 10,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VDqbY8m",
+      "sku": "100005294826"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/950435.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 0.47\n|\n佣金比例3%\n\n博世（BOSCH）机油滤芯滤清器0047现代ix35索纳塔伊兰特名图途胜起亚K5K4K3智跑\n\n到手价￥15.6￥26\n5.0万+ 好评\n\n自营\n奖励\n京配\n券\n博世汽车配件京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "950435",
+        "token": "hz21_950435_1781513475393"
+      },
+      "ok": true,
+      "order": 11,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/V6Q5m04",
+      "sku": "950435"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100288158958.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "佣金比例提升10%\n进行中\n\n预估收益 ￥ 70.39\n|\n佣金比例10.1%\n\nbabycare儿童三轮车宝宝遛娃神器脚踏车多功能手推车1车5用周岁礼物微光钛\n\n到手价￥350.2￥462\n500+ 好评\n\n自营\n定向\n奖励\n京配\n券\n促销\n购新国补最高15%\nBabycare京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100288158958",
+        "token": "hz21_100288158958_1781513484834"
+      },
+      "ok": true,
+      "order": 12,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VDqum3a",
+      "sku": "100288158958"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100003930503.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 2.55\n|\n佣金比例2%\n\n雨虹防水 J100墙固界面剂 墙面加固剂 防潮型通用界面剂 透明墙固 18kg\n\n到手价￥127.37￥176.29\n1.0万+ 好评\n\n自营\n超级补贴\n定向\n京配\n券\n购新国补最高20%\n东方雨虹京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100003930503",
+        "token": "hz21_100003930503_1781513495139"
+      },
+      "ok": true,
+      "order": 13,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/Vgq80uu",
+      "sku": "100003930503"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/10192951473044.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 2.93\n|\n佣金比例20%\n\ncaramella纯棉内裤女透气三角裤甜美清新女士短裤内裤 红色蕾丝卡通款混色 3条 均码 （适合85-120斤）\n\n到手价￥13.9￥39.9\n41+ 好评\n\n定向\n奖励\n券\n卡拉美拉母婴旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10192951473044",
+        "token": "hz21_10192951473044_1781513505693"
+      },
+      "ok": true,
+      "order": 14,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VgqaqcU",
+      "sku": "10192951473044"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 871,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 850
+          },
+          "itemUrl": "https://item.jd.com/100114941595.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 3.34\n|\n佣金比例6.1%\n\nSOILETA生可可粉150g天然未碱化纯可可粉烘焙咖啡牛奶冲饮伴侣Cacao\n\n到手价￥54.8￥57.8\n2000+ 好评\n\n限量高佣\n自营\n秒杀\n京配\n促销\n剩余96件\nSOILETA京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100114941595",
+        "token": "hz21_100114941595_1781513515692"
+      },
+      "ok": true,
+      "order": 15,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VaqqY7Z",
+      "sku": "100114941595"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/100012498665.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "预估收益 ￥ 2.99\n|\n佣金比例5%\n\n拜杰切肉片机牛羊肉卷切片机肥牛冻肉土豆切片神器切肉卷铡刀家用机\n\n到手价￥59.8￥69.8\n1.0万+ 好评\n\n自营\n京配\n促销\n拜杰京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100012498665",
+        "token": "hz21_100012498665_1781513523834"
+      },
+      "ok": true,
+      "order": 16,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/V1qOzrx",
+      "sku": "100012498665"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/1025000658.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 16.38\n|\n佣金比例8%\n\n送日历+拉页 航空知识杂志 航空航天知识军事科普 2026年7月起订阅 1年共12期 杂志铺杂志订阅 空天科普军事武器飞机科普科技百科期刊杂志 国防军事科技 航空知识杂志社打造 军事爱好者非过期刊\n\n到手价￥156\n1000+ 好评\n\n定向\n奖励\n杂志铺旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "1025000658",
+        "token": "hz21_1025000658_1781513532969"
+      },
+      "ok": true,
+      "order": 17,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VDq1YPY",
+      "sku": "1025000658"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/100046309661.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 3.10\n|\n佣金比例2%\n\n迪卡侬速干衣运动t恤男透气快干体恤卡其绿圆领-孟菲尔斯同款L-4565921\n\n到手价￥99.9\n1000+ 好评\n\n自营\n奖励\n京配\n迪卡侬京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100046309661",
+        "token": "hz21_100046309661_1781513540484"
+      },
+      "ok": true,
+      "order": 18,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/V6Qe0Zm",
+      "sku": "100046309661"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/10100970196221.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 1.79\n|\n佣金比例15%\n\n太力保鲜袋双筋密实保鲜袋密封加厚食品级PE密实袋 大号20个+中号30个\n\n到手价￥11.9￥19.9\n500+ 好评\n\n定向\n券\n太力官方旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10100970196221",
+        "token": "hz21_10100970196221_1781513551111"
+      },
+      "ok": true,
+      "order": 19,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VOQmtfd",
+      "sku": "10100970196221"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100008150065.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 7.42\n|\n佣金比例25%\n\n【准新品】立达 Gigastone 存储卡32G 4K 监控摄像头 行车记录仪专用高速内存卡\n\n到手价￥29.68\n22+ 好评\n\n自营\n京配\n拍拍二手自营专区\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100008150065",
+        "token": "hz21_100008150065_1781513558844"
+      },
+      "ok": true,
+      "order": 20,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VgqdHFS",
+      "sku": "100008150065"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100148668869.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 5.58\n|\n佣金比例2%\n\n迪卡侬羽毛球网架便携式标准户外折叠快开网排球网-4904004\n\n到手价￥179.9￥199.9\n500+ 好评\n\n自营\n奖励\n京配\n促销\n迪卡侬京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100148668869",
+        "token": "hz21_100148668869_1781513567297"
+      },
+      "ok": true,
+      "order": 21,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGqCqnS",
+      "sku": "100148668869"
+    }
+  ],
+  "total_fail": 0,
+  "total_ok": 22,
+  "ts": "2026-06-15 16:49:25",
+  "wait": 10
+}

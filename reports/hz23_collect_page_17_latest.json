@@ -23,7 +23,7 @@
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
     "url": "https://union.jd.com/proManager/index?pageNo=17"
   },
-  "known_sku_count": 2720,
+  "known_sku_count": 2743,
   "limit": 25,
   "ok": true,
   "page_ready": {
@@ -121,8 +121,8 @@
         "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
         "url": "https://union.jd.com/proManager/index?pageNo=17"
       },
-      "fresh_initial": 2,
-      "ok": 2
+      "fresh_initial": 0,
+      "ok": 0
     }
   },
   "pages": [
@@ -192,106 +192,11 @@
         "worker_name": "hz20_mouse_click"
       }
     ],
-    "rows_after": 2718
+    "rows_after": 2743
   },
-  "results": [
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 703.4375,
-          "y": 825
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 756.84375,
-            "cy": 2152,
-            "h": 42,
-            "w": 106.8125,
-            "x": 703.4375,
-            "y": 2131
-          },
-          "itemUrl": "https://item.jd.com/4372062.html",
-          "rootRect": {
-            "h": 433,
-            "w": 240,
-            "x": 581.25,
-            "y": 1751
-          },
-          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 364.23\n|\n佣金比例6%\n\n天梭（TISSOT）保价618 手表 力洛克系列男表 瑞士自动机械男士钢带腕表商务表\n\n到手价￥5130￥5700\n5.0万+ 好评\n\n自营\n定向\n奖励\n京配\n促销\n天梭京东自营旗舰店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 756.84375,
-          "y": 846.0
-        },
-        "ok": true,
-        "sku": "4372062",
-        "token": "hz21_4372062_1781510480713"
-      },
-      "ok": true,
-      "order": 0,
-      "page_no": 17,
-      "short_url": "https://u.jd.com/VgQx8JZ",
-      "sku": "4372062"
-    },
-    {
-      "click": {
-        "box": {
-          "height": 42,
-          "width": 106.8125,
-          "x": 703.4375,
-          "y": 825
-        },
-        "hit": {
-          "cls": "",
-          "ok": true,
-          "tag": "SPAN",
-          "text": "一键领链"
-        },
-        "matched": {
-          "buttonRect": {
-            "cx": 756.84375,
-            "cy": 1737,
-            "h": 42,
-            "w": 106.8125,
-            "x": 703.4375,
-            "y": 1716
-          },
-          "itemUrl": "https://item.jd.com/100154053247.html",
-          "rootRect": {
-            "h": 458,
-            "w": 240,
-            "x": 581.25,
-            "y": 1311
-          },
-          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 2.45\n|\n佣金比例5%\n\n安德玛冷感运动毛巾速干健身凉爽消暑巾跑步吸汗擦汗毛巾旅行装备\n\n到手价￥49\n200+ 好评\n\n限量高佣\n自营\n超级补贴\n定向\n奖励\n京配\n购新国补最高2%\n剩余100件\n安德玛（Under Armour）护具京东自营专卖店\n我要推广\n一键领链"
-        },
-        "method": "hz21_exact_sku_locator_safe_mouse_click",
-        "mouse_click": {
-          "x": 756.84375,
-          "y": 846.0
-        },
-        "ok": true,
-        "sku": "100154053247",
-        "token": "hz21_100154053247_1781510490365"
-      },
-      "ok": true,
-      "order": 1,
-      "page_no": 17,
-      "short_url": "https://u.jd.com/VGqiNYy",
-      "sku": "100154053247"
-    }
-  ],
+  "results": [],
   "total_fail": 0,
-  "total_ok": 2,
-  "ts": "2026-06-15 16:01:13",
+  "total_ok": 0,
+  "ts": "2026-06-15 16:11:56",
   "wait": 10
 }
