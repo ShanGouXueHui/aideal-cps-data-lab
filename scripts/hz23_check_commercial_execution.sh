@@ -5,7 +5,7 @@
 cd "${HOME}/projects/aideal-cps-data-lab" || exit 1
 mkdir -p logs reports
 
-bash scripts/hz23_publish_commercial_status_v2.sh \
+bash scripts/hz23_publish_status_dirty_safe.sh \
   > logs/hz23_commercial_status_publish_check.log 2>&1
 PUBLISH_RC=$?
 
