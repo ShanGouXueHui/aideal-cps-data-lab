@@ -1,93 +1,109 @@
 {
   "after": {
-    "activePageText": null,
-    "has4000": false,
-    "jumpInputValue": null,
-    "oneKeyCount": 0,
-    "pagerText": "",
-    "pagers": [],
-    "risk": [
-      "risk_handler",
-      "京东验证",
-      "快速验证"
+    "activePageText": "17",
+    "has4000": true,
+    "jumpInputValue": "17",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1151617181967 前往页",
+    "pagers": [
+      {
+        "active": "17",
+        "i": 0,
+        "input": "17",
+        "text": "共 4000 条 1151617181967 前往页"
+      }
     ],
-    "skuCount": 0,
-    "skus": [],
-    "title": "京东验证",
-    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D17&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-104980066-10484-1781494524396&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKh4StouLmXlSK6BPM-iGSsR980_Bs70kBWV-qK4Fuy5IXYJUfr"
+    "risk": [],
+    "skuCount": 60,
+    "skus": [
+      "100052359840",
+      "100000265321",
+      "100049503892",
+      "10205575906831",
+      "100145065612",
+      "100055081483",
+      "100012314306",
+      "67465479776",
+      "100122992591",
+      "100073106524",
+      "100077380351",
+      "100261076022"
+    ],
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=17"
   },
   "after_all_product": {
-    "activePageText": "16",
+    "activePageText": "1",
     "has4000": true,
-    "jumpInputValue": "16",
+    "jumpInputValue": "1",
     "oneKeyCount": 60,
-    "pagerText": "共 4000 条 1141516171867 前往页",
+    "pagerText": "共 4000 条 12345667 前往页",
     "pagers": [
       {
-        "active": "16",
+        "active": "1",
         "i": 0,
-        "input": "16",
-        "text": "共 4000 条 1141516171867 前往页"
+        "input": "1",
+        "text": "共 4000 条 12345667 前往页"
       }
     ],
     "risk": [],
     "skuCount": 60,
     "skus": [
-      "100064586231",
-      "12932325",
-      "100278492284",
-      "100182087249",
-      "100328407900",
-      "100085051127",
-      "100348087864",
-      "100202388569",
-      "100195614184",
-      "100090732710",
-      "10208904917092",
-      "10150698397714"
+      "10144035423947",
+      "100187947866",
+      "10217404849605",
+      "13634667",
+      "10059596058070",
+      "10070864722397",
+      "4977032",
+      "10094985581639",
+      "10037525892152",
+      "10125973697004",
+      "26181853925",
+      "100026048633"
     ],
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
-    "url": "https://union.jd.com/proManager/index?pageNo=16"
+    "url": "https://union.jd.com/proManager/index?pageNo=1"
   },
   "before": {
-    "activePageText": "16",
+    "activePageText": "1",
     "has4000": true,
-    "jumpInputValue": "16",
+    "jumpInputValue": "1",
     "oneKeyCount": 60,
-    "pagerText": "共 4000 条 1141516171867 前往页",
+    "pagerText": "共 4000 条 12345667 前往页",
     "pagers": [
       {
-        "active": "16",
+        "active": "1",
         "i": 0,
-        "input": "16",
-        "text": "共 4000 条 1141516171867 前往页"
+        "input": "1",
+        "text": "共 4000 条 12345667 前往页"
       }
     ],
     "risk": [],
     "skuCount": 60,
     "skus": [
-      "100064586231",
-      "12932325",
-      "100278492284",
-      "100182087249",
-      "100328407900",
-      "100085051127",
-      "100348087864",
-      "100202388569",
-      "100195614184",
-      "100090732710",
-      "10208904917092",
-      "10150698397714"
+      "10144035423947",
+      "100187947866",
+      "10217404849605",
+      "13634667",
+      "10059596058070",
+      "10070864722397",
+      "4977032",
+      "10094985581639",
+      "10037525892152",
+      "10125973697004",
+      "26181853925",
+      "100026048633"
     ],
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
-    "url": "https://union.jd.com/proManager/index?pageNo=16"
+    "url": "https://union.jd.com/proManager/index?pageNo=1"
   },
   "jump_action": {
     "method": "4000_pager_locator_fill_enter",
     "ok": true
   },
-  "ok": false,
-  "reason": "risk_after_jump",
+  "ok": true,
+  "reason": "safe_all_product_4000_page",
   "target_page": 17,
-  "ts": "2026-06-15 11:35:22"
+  "ts": "2026-06-15 16:01:10"
 }

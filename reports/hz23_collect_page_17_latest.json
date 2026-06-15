@@ -1,0 +1,297 @@
+{
+  "final": {
+    "activePageText": "17",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "17",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1151617181967 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=17"
+  },
+  "initial": {
+    "activePageText": "17",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "17",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1151617181967 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=17"
+  },
+  "known_sku_count": 2720,
+  "limit": 25,
+  "ok": true,
+  "page_ready": {
+    "17": {
+      "info": {
+        "activePageText": "17",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "17",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1151617181967 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "100052359840",
+          "100000265321",
+          "100049503892",
+          "10205575906831",
+          "100145065612",
+          "100055081483",
+          "100012314306",
+          "67465479776",
+          "100122992591",
+          "100073106524",
+          "100077380351",
+          "100261076022",
+          "100166449317",
+          "100012372776",
+          "15075678",
+          "100216267446",
+          "4372062",
+          "10220855232161",
+          "100230587531",
+          "12152809",
+          "10066891553275",
+          "10027096999067",
+          "100226826350",
+          "100009752183",
+          "15391402",
+          "10223867595442",
+          "100154053247",
+          "952862",
+          "100248528849",
+          "100183473486",
+          "100125716969",
+          "100046702990",
+          "100206832398",
+          "1558553",
+          "100009841387",
+          "10131319801963",
+          "10158400461298",
+          "10170626513855",
+          "100006537466",
+          "10116481473136",
+          "100008169593",
+          "100003637377",
+          "274886",
+          "100016985899",
+          "100002727989",
+          "100027405912",
+          "100016294536",
+          "100049806218",
+          "100102391907",
+          "100079265252",
+          "100044551433",
+          "100110637507",
+          "10099860419676",
+          "100339196880",
+          "10032958986369",
+          "100027844951",
+          "100006850872",
+          "100249260456",
+          "100195182094",
+          "100289319882"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=17"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "page_summary": {
+    "17": {
+      "fail": 0,
+      "final_snapshot": {
+        "activePageText": "17",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "17",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1151617181967 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=17"
+      },
+      "fresh_initial": 2,
+      "ok": 2
+    }
+  },
+  "pages": [
+    17
+  ],
+  "quarantine": {
+    "removed_count": 10,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 2718
+  },
+  "results": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 2152,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 2131
+          },
+          "itemUrl": "https://item.jd.com/4372062.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 1751
+          },
+          "rootText": "佣金比例提升1.1%\n进行中\n\n预估收益 ￥ 364.23\n|\n佣金比例6%\n\n天梭（TISSOT）保价618 手表 力洛克系列男表 瑞士自动机械男士钢带腕表商务表\n\n到手价￥5130￥5700\n5.0万+ 好评\n\n自营\n定向\n奖励\n京配\n促销\n天梭京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "4372062",
+        "token": "hz21_4372062_1781510480713"
+      },
+      "ok": true,
+      "order": 0,
+      "page_no": 17,
+      "short_url": "https://u.jd.com/VgQx8JZ",
+      "sku": "4372062"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 1737,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 1716
+          },
+          "itemUrl": "https://item.jd.com/100154053247.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 581.25,
+            "y": 1311
+          },
+          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 2.45\n|\n佣金比例5%\n\n安德玛冷感运动毛巾速干健身凉爽消暑巾跑步吸汗擦汗毛巾旅行装备\n\n到手价￥49\n200+ 好评\n\n限量高佣\n自营\n超级补贴\n定向\n奖励\n京配\n购新国补最高2%\n剩余100件\n安德玛（Under Armour）护具京东自营专卖店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100154053247",
+        "token": "hz21_100154053247_1781510490365"
+      },
+      "ok": true,
+      "order": 1,
+      "page_no": 17,
+      "short_url": "https://u.jd.com/VGqiNYy",
+      "sku": "100154053247"
+    }
+  ],
+  "total_fail": 0,
+  "total_ok": 2,
+  "ts": "2026-06-15 16:01:13",
+  "wait": 10
+}
