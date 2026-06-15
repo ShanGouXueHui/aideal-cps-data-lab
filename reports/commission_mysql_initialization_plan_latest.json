@@ -31,7 +31,7 @@
     "round_id_present",
     "round_id_consistent"
   ],
-  "generated_at": "2026-06-15T00:06:05",
+  "generated_at": "2026-06-15T00:22:05",
   "ready_for_database_initialization": false,
   "rollback_file": "migrations/mysql/0001_commission_data_v1.down.sql",
   "rollback_sha256": "cf04ecc24d8a4daf101858108b2e06e0ee7dae9a58740e991a00e85c88502c7a",
