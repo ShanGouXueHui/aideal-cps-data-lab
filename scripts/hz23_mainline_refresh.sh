@@ -5,14 +5,26 @@
 # - Full card scan updates last_checked/last_seen and records field changes.
 # - HZ21 only generates links for newly discovered SKUs.
 # - Strong JD verification signals stop safely with checkpoint.
+# - HZ23_RESUME=1 preserves successful rows from the same round.
 # No set -e is used.
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
 mkdir -p logs reports docs/ops run data/import data/state data/history data/export
 
+LOCK_FILE="run/hz23_mainline.lock"
+exec 9>"$LOCK_FILE"
+if ! flock -n 9; then
+  echo "===== SUMMARY ====="
+  echo "RUN_RC=75"
+  echo "STOP_REASON=mainline_lock_busy"
+  exit 75
+fi
+
 PAGE_START="${HZ23_PAGE_START:-1}"
 PAGE_END="${HZ23_PAGE_END:-67}"
+ROUND_PAGE_START="${HZ23_ROUND_PAGE_START:-$PAGE_START}"
+RESUME="${HZ23_RESUME:-0}"
 ITEM_MIN="${HZ23_ITEM_SLEEP_MIN:-3}"
 ITEM_MAX="${HZ23_ITEM_SLEEP_MAX:-7}"
 PAGE_MIN="${HZ23_PAGE_SLEEP_MIN:-90}"
@@ -25,8 +37,44 @@ ROWS="reports/hz23_round_${ROUND_ID}_rows.jsonl"
 SUMMARY="reports/hz23_round_${ROUND_ID}_latest.json"
 LATEST_SUMMARY="reports/hz23_round_latest.json"
 MD="docs/ops/DL2_HZ23_ROUND_${ROUND_ID}.md"
+RESUME_SUMMARY="${HZ23_RESUME_SUMMARY:-$LATEST_SUMMARY}"
+PREVIOUS_DURATION_SECONDS=0
 
-: > "$ROWS"
+if [ "$RESUME" = "1" ]; then
+  if [ ! -f "$RESUME_SUMMARY" ]; then
+    echo "===== SUMMARY ====="
+    echo "RUN_RC=2"
+    echo "STOP_REASON=resume_summary_missing"
+    exit 2
+  fi
+  PREVIOUS_DURATION_SECONDS="$(python3 - "$RESUME_SUMMARY" "$ROUND_ID" "$ROWS" <<'PY'
+import json,sys
+from pathlib import Path
+source=Path(sys.argv[1]); round_id=sys.argv[2]; rows_path=Path(sys.argv[3])
+x=json.loads(source.read_text(encoding='utf-8'))
+if str(x.get('round_id') or '') != round_id:
+    raise SystemExit('resume_round_id_mismatch')
+rows_by_page={}
+for row in x.get('rows') or []:
+    page=row.get('page')
+    if row.get('ok') is True and isinstance(page,int):
+        rows_by_page[page]=row
+text=''.join(json.dumps(rows_by_page[p],ensure_ascii=False,sort_keys=True)+'\n' for p in sorted(rows_by_page))
+rows_path.write_text(text,encoding='utf-8')
+print(int(x.get('duration_seconds') or 0))
+PY
+)"
+  SEED_RC=$?
+  if [ "$SEED_RC" != "0" ]; then
+    echo "===== SUMMARY ====="
+    echo "RUN_RC=$SEED_RC"
+    echo "STOP_REASON=resume_seed_failed"
+    exit "$SEED_RC"
+  fi
+else
+  : > "$ROWS"
+fi
+
 STOP_PAGE=""
 STOP_REASON=""
 RUN_RC=0
@@ -173,16 +221,21 @@ PY
 done
 
 END_EPOCH="$(date +%s)"
-python3 - "$PAGE_START" "$PAGE_END" "$ROWS" "$SUMMARY" "$LATEST_SUMMARY" "$MD" "$STOP_PAGE" "$STOP_REASON" "$ROUND_ID" "$START_EPOCH" "$END_EPOCH" <<'PY'
+python3 - "$ROUND_PAGE_START" "$PAGE_END" "$ROWS" "$SUMMARY" "$LATEST_SUMMARY" "$MD" "$STOP_PAGE" "$STOP_REASON" "$ROUND_ID" "$START_EPOCH" "$END_EPOCH" "$PREVIOUS_DURATION_SECONDS" <<'PY'
 import json,sys
 from pathlib import Path
 start,end=int(sys.argv[1]),int(sys.argv[2])
 rows_path,summary,latest,md=map(Path,sys.argv[3:7])
 stop_page=sys.argv[7] or None; stop_reason=sys.argv[8] or None; round_id=sys.argv[9]
-start_epoch,end_epoch=int(sys.argv[10]),int(sys.argv[11])
+start_epoch,end_epoch=int(sys.argv[10]),int(sys.argv[11]); previous=int(sys.argv[12])
 rows=[]
 if rows_path.exists():
     rows=[json.loads(x) for x in rows_path.read_text(encoding='utf-8').splitlines() if x.strip()]
+rows_by_page={}
+for row in rows:
+    page=row.get('page')
+    if isinstance(page,int): rows_by_page[page]=row
+rows=[rows_by_page[p] for p in sorted(rows_by_page)]
 completed=[r.get('page') for r in rows if r.get('ok') is True]
 known=[r.get('known_sku_count') for r in rows if r.get('known_sku_count') is not None]
 unfinished=[p for p in range(start,end+1) if p not in completed]
@@ -192,7 +245,8 @@ out={
  'scanned_total':sum(int(r.get('scanned') or 0) for r in rows),'catalog_new':sum(int(r.get('new_catalog') or 0) for r in rows),
  'catalog_changed':sum(int(r.get('changed_catalog') or 0) for r in rows),'catalog_unchanged':sum(int(r.get('unchanged_catalog') or 0) for r in rows),
  'last_known_sku_count':known[-1] if known else None,'stop_page':int(stop_page) if stop_page else None,'stop_reason':stop_reason,
- 'commercial_segment_complete':len(unfinished)==0 and not stop_reason,'duration_seconds':max(0,end_epoch-start_epoch)
+ 'commercial_segment_complete':len(unfinished)==0 and not stop_reason,'duration_seconds':previous+max(0,end_epoch-start_epoch),
+ 'resumed':previous>0
 }
 text=json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)
 summary.write_text(text,encoding='utf-8'); latest.write_text(text,encoding='utf-8')
@@ -213,13 +267,15 @@ if [ "$COMPLETE" = "true" ]; then
   .venv-browser/bin/python run/hz23_finalize_round.py "$ROUND_ID" "$SUMMARY"
 fi
 
-for f in "$ROWS" "$SUMMARY" "$LATEST_SUMMARY" "$MD" reports/hz23_prepare_page*_latest.json reports/hz23_scan_page*_latest.json reports/hz23_collect_page_*_latest.json reports/hz21_strict_card_dom_recover_latest.json data/export/aideal_cps_products_commercial_candidate_manifest.json; do
-  if [ -e "$f" ]; then git add "$f" 2>/dev/null || true; fi
+PUBLISH_FILES=("$SUMMARY" "$LATEST_SUMMARY" "$MD")
+for f in reports/hz23_prepare_page*_latest.json reports/hz23_scan_page*_latest.json reports/hz23_collect_page_*_latest.json reports/hz21_strict_card_dom_recover_latest.json data/export/aideal_cps_products_commercial_candidate_manifest.json; do
+  [ -f "$f" ] && PUBLISH_FILES+=("$f")
 done
-git commit -m "docs: publish HZ23 observation round ${ROUND_ID}" >/dev/null 2>&1 || true
-GIT_TERMINAL_PROMPT=0 git fetch origin main >/dev/null 2>&1 || true
-GIT_TERMINAL_PROMPT=0 git rebase origin/main >/dev/null 2>&1 || true
-GIT_TERMINAL_PROMPT=0 git push origin HEAD:main >/dev/null 2>&1 || true
+bash scripts/git_publish_files_via_worktree.sh \
+  "docs: publish HZ23 observation round ${ROUND_ID}" \
+  "${PUBLISH_FILES[@]}" \
+  > logs/hz23_round_publish.log 2>&1
+PUBLISH_RC=$?
 
 echo "===== SUMMARY ====="
 echo "RUN_RC=$RUN_RC"
@@ -228,6 +284,13 @@ echo "PAGE_START=$PAGE_START"
 echo "PAGE_END=$PAGE_END"
 echo "STOP_PAGE=$STOP_PAGE"
 echo "STOP_REASON=$STOP_REASON"
+echo "RESUME=$RESUME"
+echo "PUBLISH_RC=$PUBLISH_RC"
 echo "SUMMARY_JSON=$SUMMARY"
 echo "HEAD=$(git rev-parse --short HEAD 2>/dev/null || true)"
 git status --short | head -n 60
+
+if [ "$PUBLISH_RC" != "0" ] && [ "$RUN_RC" = "0" ]; then
+  exit 1
+fi
+exit "$RUN_RC"
