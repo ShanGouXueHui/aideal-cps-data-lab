@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Resume the latest incomplete HZ23 round after the user manually completes JD verification.
+# Resume the latest incomplete HZ23 round after manual JD verification or a daytime cutoff.
 # Stops the observer to avoid concurrency and restarts it afterwards. No set -e is used.
 
 cd "${HOME}/projects/aideal-cps-data-lab" || exit 1
@@ -17,12 +17,7 @@ read -r ROUND_ID STOP_PAGE STOP_REASON COMPLETE <<< "$(python3 - "$SUMMARY" <<'P
 import json,sys
 from pathlib import Path
 x=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
-print(
-    x.get('round_id') or '',
-    x.get('stop_page') or '',
-    x.get('stop_reason') or '',
-    'true' if x.get('commercial_segment_complete') else 'false',
-)
+print(x.get('round_id') or '',x.get('stop_page') or '',x.get('stop_reason') or '','true' if x.get('commercial_segment_complete') else 'false')
 PY
 )"
 
@@ -39,11 +34,11 @@ if [ "$COMPLETE" = "true" ]; then
   exit 1
 fi
 case "$STOP_REASON" in
-  risk_*) ;;
+  risk_*|outside_daytime) ;;
   *)
     echo "===== SUMMARY ====="
     echo "STATUS=FAIL"
-    echo "STEP=stop_reason_not_manual_risk"
+    echo "STEP=stop_reason_not_resumable"
     echo "STOP_REASON=$STOP_REASON"
     exit 1
     ;;
@@ -74,11 +69,7 @@ fi
 
 bash -n scripts/hz23_mainline_refresh.sh > logs/hz23_resume_shell_check.log 2>&1
 SHELL_RC=$?
-python3 -m py_compile \
-  run/hz22_prepare_all_product_page.py \
-  run/hz23_scan_current_page.py \
-  run/hz23_finalize_round.py \
-  > logs/hz23_resume_python_check.log 2>&1
+python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1
 PYTHON_RC=$?
 
 if [ "$SUMMARY_BACKUP_RC" != "0" ] || [ "$STATE_BACKUP_RC" != "0" ] || [ "$SHELL_RC" != "0" ] || [ "$PYTHON_RC" != "0" ]; then
@@ -94,15 +85,15 @@ fi
 
 sudo systemctl stop aideal-hz23-observer.service
 STOP_SERVICE_RC=$?
+if [ "$STOP_SERVICE_RC" != "0" ]; then
+  echo "===== SUMMARY ====="
+  echo "STATUS=FAIL"
+  echo "STEP=observer_stop_failed"
+  echo "STOP_SERVICE_RC=$STOP_SERVICE_RC"
+  exit 1
+fi
 
-HZ23_RESUME=1 \
-HZ23_ROUND_ID="$ROUND_ID" \
-HZ23_PAGE_START="$STOP_PAGE" \
-HZ23_PAGE_END=67 \
-HZ23_ROUND_PAGE_START=1 \
-HZ23_RESUME_SUMMARY="$SUMMARY" \
-bash scripts/hz23_mainline_refresh.sh \
-  > logs/hz23_resume_round.log 2>&1
+HZ23_RESUME=1 HZ23_ROUND_ID="$ROUND_ID" HZ23_PAGE_START="$STOP_PAGE" HZ23_PAGE_END=67 HZ23_ROUND_PAGE_START=1 HZ23_RESUME_SUMMARY="$SUMMARY" bash scripts/hz23_mainline_refresh.sh > logs/hz23_resume_round.log 2>&1
 RESUME_RC=$?
 
 python3 - "$SUMMARY" "$RESUME_RC" <<'PY'
@@ -146,21 +137,12 @@ read -r FINAL_COMPLETE FINAL_STOP FINAL_COMPLETED FINAL_UNFINISHED FINAL_SCANNED
 import json,sys
 from pathlib import Path
 x=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
-print(
- 'true' if x.get('commercial_segment_complete') else 'false',
- x.get('stop_reason') or '',
- len(x.get('completed_pages') or []),
- len(x.get('unfinished_pages') or []),
- int(x.get('scanned_total') or 0),
-)
+print('true' if x.get('commercial_segment_complete') else 'false',x.get('stop_reason') or '',len(x.get('completed_pages') or []),len(x.get('unfinished_pages') or []),int(x.get('scanned_total') or 0))
 PY
 )"
 
 STATUS=PASS
-if [ "$STOP_SERVICE_RC" != "0" ] || [ "$STATE_UPDATE_RC" != "0" ] || [ "$START_SERVICE_RC" != "0" ] || [ "$SERVICE_STATE" != "active" ]; then
-  STATUS=FAIL
-fi
-if [ "$RESUME_RC" != "0" ]; then
+if [ "$STATE_UPDATE_RC" != "0" ] || [ "$START_SERVICE_RC" != "0" ] || [ "$SERVICE_STATE" != "active" ] || [ "$RESUME_RC" != "0" ]; then
   STATUS=FAIL
 fi
 
