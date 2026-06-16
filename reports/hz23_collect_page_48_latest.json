@@ -1,0 +1,1284 @@
+{
+  "final": {
+    "activePageText": "48",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "48",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1464748495067 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=48"
+  },
+  "initial": {
+    "activePageText": "48",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "48",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1464748495067 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=48"
+  },
+  "known_sku_count": 2910,
+  "limit": 25,
+  "ok": true,
+  "page_ready": {
+    "48": {
+      "info": {
+        "activePageText": "48",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "48",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1464748495067 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "10199135564389",
+          "10066337145524",
+          "100094461093",
+          "100157446124",
+          "100063743660",
+          "3547996",
+          "100331852348",
+          "100240424381",
+          "13426700",
+          "100273371724",
+          "15183708",
+          "13317622",
+          "100097075376",
+          "390383",
+          "10217628063463",
+          "10082833957298",
+          "100148383200",
+          "100136528602",
+          "100060148076",
+          "12171929",
+          "10224313344848",
+          "100266160427",
+          "100177726546",
+          "15244592",
+          "100159614834",
+          "100156295874",
+          "14538767",
+          "10188189949348",
+          "11932116",
+          "10096754080836",
+          "100017767824",
+          "853189",
+          "10119539209848",
+          "100281381346",
+          "100245804577",
+          "100244131211",
+          "100002197669",
+          "1068548",
+          "100063123438",
+          "12261127",
+          "100304952996",
+          "5158507",
+          "100253536705",
+          "100035494758",
+          "13021332",
+          "10152172183247",
+          "100244666537",
+          "100186278722",
+          "100038201498",
+          "100037876379",
+          "100004163328",
+          "100285504592",
+          "100022724513",
+          "100064583226",
+          "100053903862",
+          "100020141396",
+          "10147483935012",
+          "100340348450",
+          "100097094581",
+          "100011448436"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=48"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "page_summary": {
+    "48": {
+      "fail": 0,
+      "final_snapshot": {
+        "activePageText": "48",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "48",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1464748495067 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=48"
+      },
+      "fresh_initial": 23,
+      "ok": 23
+    }
+  },
+  "pages": [
+    48
+  ],
+  "quarantine": {
+    "removed_count": 10,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 2887
+  },
+  "results": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/10199135564389.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 427
+          },
+          "rootText": "佣金比例提升5%\n进行中\n\n预估收益 ￥ 3.60\n|\n佣金比例5.8%\n\n千茵阁鼠标垫大号顺滑办公桌布轻奢高级感书桌垫工位电脑键盘桌面保护垫 摩卡棕【护眼硅】 40cm*60cm【 加厚防滑升级】\n\n到手价￥26.1￥29\n500+ 好评\n\n定向\n奖励\n券\n千茵阁旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "10199135564389",
+        "token": "hz21_10199135564389_1781573473447"
+      },
+      "ok": true,
+      "order": 0,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V66v9wz",
+      "sku": "10199135564389"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100094461093.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 427
+          },
+          "rootText": "佣金比例提升1%\n进行中\n\n预估收益 ￥ 30.88\n|\n佣金比例7%\n\n小仙炖精炖燕窝 蝶羽礼盒40g*10瓶低糖鲜炖送孕妇妈妈即食品端午节礼物\n\n到手价￥386.01￥488.9\n1.0万+ 好评\n\n超补爆品\n超补爆品|优选\n自营\n超级补贴\n定向\n奖励\n京配\n券\n国补最高减10%\n小仙炖京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100094461093",
+        "token": "hz21_100094461093_1781573483450"
+      },
+      "ok": true,
+      "order": 1,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V16D17D",
+      "sku": "100094461093"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100157446124.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 4.17\n|\n佣金比例20%\n\n小鹿蓝蓝宝宝肉松鳕鱼拌饭海苔碎40g儿童海苔零食营养调味下饭拌饭寿司\n\n到手价￥20.86￥29.8\n2.0万+ 好评\n\n自营\n定向\n京配\n券\n小鹿蓝蓝京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100157446124",
+        "token": "hz21_100157446124_1781573493555"
+      },
+      "ok": true,
+      "order": 2,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VD6Tw6l",
+      "sku": "100157446124"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100063743660.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 427
+          },
+          "rootText": "佣金比例提升1.4%\n进行中\n\n预估收益 ￥ 1.88\n|\n佣金比例10%\n\n金蝶（kingdee）A4书写板夹 金属强力夹塑料文件夹合同标书垫夹写字垫板菜单试卷资料收纳夹 蓝色5个\n\n到手价￥16.5￥19.5\n2000+ 好评\n\n自营\n奖励\n京配\n金蝶（kingdee）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100063743660",
+        "token": "hz21_100063743660_1781573504584"
+      },
+      "ok": true,
+      "order": 3,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Vg6y5Ld",
+      "sku": "100063743660"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1261,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1240
+          },
+          "itemUrl": "https://item.jd.com/3547996.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 860
+          },
+          "rootText": "佣金比例提升2%\n进行中\n\n预估收益 ￥ 4.90\n|\n佣金比例1.95%\n\n福来恩（FRONTLINE）狗狗进口驱虫药 小型犬去跳蚤蜱虫滴剂 0.67ml*3支装\n\n到手价￥124￥129\n20万+ 好评\n\n自营\n定向\n奖励\n京配\n促销\n福来恩京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "3547996",
+        "token": "hz21_3547996_1781573515627"
+      },
+      "ok": true,
+      "order": 4,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Vr6NNZo",
+      "sku": "3547996"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100240424381.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 1.34\n|\n佣金比例4.2%\n\n九牧（JOMOO）拖把池龙头黄铜加厚四分口径防溅水快开单冷龙头71064\n\n到手价￥31.99￥37.63\n1000+ 好评\n\n自营\n定向\n京配\n购新国补最高15%\n九牧厨卫五金京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100240424381",
+        "token": "hz21_100240424381_1781573525513"
+      },
+      "ok": true,
+      "order": 5,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Va6EidP",
+      "sku": "100240424381"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100273371724.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "佣金比例提升3%\n进行中\n\n预估收益 ￥ 7.49\n|\n佣金比例6%\n\nMUJI【自营限定】舒适颈部靠枕-蓝灰条纹 u型枕颈枕飞机旅行枕脖枕\n\n到手价￥83.2￥97.9\n5000+ 好评\n\n自营\n超级补贴\n定向\n奖励\n京配\n无印良品（MUJI）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100273371724",
+        "token": "hz21_100273371724_1781573534755"
+      },
+      "ok": true,
+      "order": 6,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V16nkto",
+      "sku": "100273371724"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/15183708.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 13.86\n|\n佣金比例16%\n\n凡人修仙传 第二辑（6-10册）电视剧动画原著小说 赠宝物图鉴海报精美书签 忘语代表作 凡人亦可逆天改命\n\n到手价￥86.64￥108.3\n200+ 好评\n\n自营\n定向\n奖励\n京配\n券\n浙江文艺出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "15183708",
+        "token": "hz21_15183708_1781573543509"
+      },
+      "ok": true,
+      "order": 7,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VO6al2h",
+      "sku": "15183708"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100097075376.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 7.38\n|\n佣金比例25.1%\n\n力士（LUX）持久留香72小时香体艾叶止痒山茶香1kg沐浴露男女士金榜\n\n到手价￥29.4\n300万+ 好评\n\n自营\n超级补贴\n定向\n京配\n联合利华京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100097075376",
+        "token": "hz21_100097075376_1781573551789"
+      },
+      "ok": true,
+      "order": 8,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Vg6Dgpo",
+      "sku": "100097075376"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 816,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 795
+          },
+          "itemUrl": "https://item.jd.com/10217628063463.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 10.00\n|\n佣金比例1%\n\n【整车订金】EXEED星途凌云 限时抢购下订享6888元购车补贴\n\n到手价￥1000\n\n星途汽车旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10217628063463",
+        "token": "hz21_10217628063463_1781573563209"
+      },
+      "ok": true,
+      "order": 9,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V16PYWh",
+      "sku": "10217628063463"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1309,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1288
+          },
+          "itemUrl": "https://item.jd.com/10082833957298.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 240,
+            "y": 908
+          },
+          "rootText": "预估收益 ￥ 2.78\n|\n佣金比例20%\n\n三只松鼠休闲零食果干蜜饯0添加红薯地瓜干办公室小吃量贩袋装 【推荐】量贩红薯干500g（约12-15小袋）\n\n到手价￥13.9￥15.9\n2000+ 好评\n\n超补爆品|优选\n超级补贴\n定向\n券\n三只松鼠旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10082833957298",
+        "token": "hz21_10082833957298_1781573575255"
+      },
+      "ok": true,
+      "order": 10,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V66cSkF",
+      "sku": "10082833957298"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100148383200.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "佣金比例提升1.6%\n进行中\n\n预估收益 ￥ 171.32\n|\n佣金比例14%\n\n浩瀚卓越（hohem）【专业级丨9代增稳】M7 手机稳定器智能AI精准追踪360°跟拍正交三轴防抖云台自拍杆直播vlog神器\n\n到手价￥1098.2￥1502\n2000+ 好评\n\n自营\n超级补贴\n定向\n奖励\n京配\n促销\n购新国补最高15%\n浩瀚卓越（hohem）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100148383200",
+        "token": "hz21_100148383200_1781573585825"
+      },
+      "ok": true,
+      "order": 11,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Vr6PtA3",
+      "sku": "100148383200"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100060148076.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 0.43\n|\n佣金比例3%\n\n金隆兴防油贴铝箔厨房防油贴纸0.6*5米橱柜防水耐高温防潮灶台面保护膜\n\n到手价￥14.3￥16.9\n2.0万+ 好评\n\n自营\n京配\n金隆兴京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100060148076",
+        "token": "hz21_100060148076_1781573597014"
+      },
+      "ok": true,
+      "order": 12,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V66JIWF",
+      "sku": "100060148076"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/12171929.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 5.70\n|\n佣金比例10%\n\n社科学术文库 中国天文考古学 冯时 天文学起源与文明起源 古代政治史 宗教史 哲学史和科学史 考古学 天文学\n\n到手价￥56.99\n2000+ 好评\n\n自营\n定向\n奖励\n京配\n中国社会科学出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "12171929",
+        "token": "hz21_12171929_1781573606625"
+      },
+      "ok": true,
+      "order": 13,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VD6gYxo",
+      "sku": "12171929"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1304,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1283
+          },
+          "itemUrl": "https://item.jd.com/10224313344848.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 903
+          },
+          "rootText": "预估收益 ￥ 6.65\n|\n佣金比例23%\n\n碧翠园泥巴派巧克力抹茶脏脏蛋糕蓝莓可可夹心下午茶代餐即食甜品专用 可可5个*1袋+送抹茶5个*1袋\n\n到手价￥28.9￥49.9\n74+ 好评\n\n定向\n券\n促销\n碧翠园食品旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10224313344848",
+        "token": "hz21_10224313344848_1781573618385"
+      },
+      "ok": true,
+      "order": 14,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V66WpZY",
+      "sku": "10224313344848"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100266160427.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 5.93\n|\n佣金比例12.1%\n\n京东养车标准洗车工作日 全车型通用轿车/SUV/MPV 不满意重新洗\n\n到手价￥49\n200+ 好评\n\n自营\n定向\n京配\n京东养车京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100266160427",
+        "token": "hz21_100266160427_1781573630057"
+      },
+      "ok": true,
+      "order": 15,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VO6r7wK",
+      "sku": "100266160427"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/15244592.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 6.00\n|\n佣金比例10%\n\nPostgreSQL认证与实践（PCP）\n\n到手价￥59.95\n13+ 好评\n\n自营\n定向\n奖励\n京配\n清华大学出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "15244592",
+        "token": "hz21_15244592_1781573638977"
+      },
+      "ok": true,
+      "order": 16,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Va6pZ2r",
+      "sku": "15244592"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100159614834.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 4.80\n|\n佣金比例6%\n\n皮爷咖啡皮爷peets 海盐太妃糖扁桃仁焦糖45颗分享装315g\n\n到手价￥80￥100\n5000+ 好评\n\n自营\n定向\n京配\n券\n促销\nPeet's Coffee 皮爷咖啡京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100159614834",
+        "token": "hz21_100159614834_1781573648218"
+      },
+      "ok": true,
+      "order": 17,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V16Ak50",
+      "sku": "100159614834"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/100156295874.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 878
+          },
+          "rootText": "预估收益 ￥ 4.58\n|\n佣金比例9%\n\n妙可蓝多动物黄油淡味800g 冷藏锁鲜 烘焙原料 煎牛排蛋糕曲奇饼干\n\n到手价￥50.9￥52.9\n2.0万+ 好评\n\n自营\n定向\n京配\n促销\n妙可蓝多京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100156295874",
+        "token": "hz21_100156295874_1781573659666"
+      },
+      "ok": true,
+      "order": 18,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VD6EtiX",
+      "sku": "100156295874"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/14538767.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 2.22\n|\n佣金比例4%\n\n你好法语1 学生用书+练习册 第二版（套装共2册 附扫码音视频、听力文本、语法概要、词汇表、练习册答案）\n\n到手价￥55.56￥74.08\n2.0万+ 好评\n\n自营\n定向\n奖励\n京配\n券\n外语教学与研究出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "14538767",
+        "token": "hz21_14538767_1781573670217"
+      },
+      "ok": true,
+      "order": 19,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/VO6S576",
+      "sku": "14538767"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/10188189949348.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 28.44\n|\n佣金比例18%\n\n八马茶业 特级 茗茶组合 大红袍 金骏眉 铁观音 好运连连 端午送礼茶叶 三大茶叶礼盒装256g【送礼袋】\n\n到手价￥158￥198\n1000+ 好评\n\n定向\n券\n八马茶业旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10188189949348",
+        "token": "hz21_10188189949348_1781573682285"
+      },
+      "ok": true,
+      "order": 20,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Vr6nCWu",
+      "sku": "10188189949348"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/11932116.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 8.31\n|\n佣金比例10%\n\nS 忒修斯之船 简体中文典藏复刻版 艾布拉姆斯 著 烧脑神书 外国文学 悬疑推理 电影 纸书爱好者 中信出版社 小说\n\n到手价￥83.08￥92.31\n5.0万+ 好评\n\n自营\n定向\n奖励\n京配\n券\n中信出版社京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "11932116",
+        "token": "hz21_11932116_1781573694170"
+      },
+      "ok": true,
+      "order": 21,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/V6611uR",
+      "sku": "11932116"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/10096754080836.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 1.70\n|\n佣金比例6%\n\n燕云州手工草编织扇子创意饰品古风老式蒲扇夏季乘凉手摇扇轻巧粽叶扇子 传统蒲扇(面宽约30cm)\n\n到手价￥28.32￥37.8\n1000+ 好评\n\n定向\n奖励\n京配\n券\n燕云州旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10096754080836",
+        "token": "hz21_10096754080836_1781573704555"
+      },
+      "ok": true,
+      "order": 22,
+      "page_no": 48,
+      "short_url": "https://u.jd.com/Va6OH1c",
+      "sku": "10096754080836"
+    }
+  ],
+  "total_fail": 0,
+  "total_ok": 23,
+  "ts": "2026-06-16 09:31:03",
+  "wait": 10
+}
