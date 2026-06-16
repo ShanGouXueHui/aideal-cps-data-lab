@@ -1,6 +1,6 @@
 {
   "candidate_file": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
-  "candidate_integrity_ready": false,
+  "candidate_integrity_ready": true,
   "catalog_changed": 345,
   "catalog_index_sku_count": 3698,
   "catalog_new": 3573,
@@ -87,7 +87,7 @@
     "candidate_duplicate_sku_zero": true,
     "candidate_hash_mismatch_zero": true,
     "candidate_nonempty": true,
-    "candidate_validation_ok": false,
+    "candidate_validation_ok": true,
     "commercial_segment_complete": true,
     "observation_hours_minimum": true,
     "scanned_total_minimum": true,
@@ -99,16 +99,14 @@
     "unsafe_hz20_zero": true,
     "untrusted_promotion_url_zero": true
   },
-  "gate_failures": [
-    "candidate_validation_ok"
-  ],
-  "gate_refreshed_at": "2026-06-16T18:20:15",
+  "gate_failures": [],
+  "gate_refreshed_at": "2026-06-16T20:27:20",
   "generated_at": "2026-06-16T12:11:25",
   "last_known_sku_count": 3357,
   "minimum_observation_hours": 48.0,
   "minimum_successful_probes": 2,
-  "observation_hours": 66.76,
-  "observation_ready": false,
+  "observation_hours": 68.88,
+  "observation_ready": true,
   "rejected": {
     "inactive": 0,
     "missing_image_url": 1,

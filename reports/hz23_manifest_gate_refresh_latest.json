@@ -1,12 +1,10 @@
 {
-  "candidate_integrity_ready": false,
+  "candidate_integrity_ready": true,
   "candidate_row_count": 3304,
-  "candidate_validation_ok": false,
-  "gate_failures": [
-    "candidate_validation_ok"
-  ],
-  "observation_hours": 66.76,
-  "observation_ready": false,
+  "candidate_validation_ok": true,
+  "gate_failures": [],
+  "observation_hours": 68.88,
+  "observation_ready": true,
   "ok": true,
   "round_id": "20260615_100135",
   "source_audit": {

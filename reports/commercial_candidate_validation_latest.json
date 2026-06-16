@@ -1,0 +1,13 @@
+{
+  "candidate_path": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
+  "duplicate_sku_count": 0,
+  "errors": {},
+  "file_sha256": "509d5b09bc9843d2e083ecd29fa2cfc83569c4cf877ced7a13d37a1e820d457a",
+  "invalid_row_count": 0,
+  "manifest_path": "data/export/aideal_cps_products_commercial_candidate_manifest.json",
+  "ok": true,
+  "payload_hash_mismatch_count": 0,
+  "row_count": 3304,
+  "samples": [],
+  "unique_sku_count": 3304
+}
