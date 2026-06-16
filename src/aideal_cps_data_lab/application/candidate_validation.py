@@ -91,6 +91,8 @@ def validate_candidate(
         _add_error(errors, "commercial_switch_not_false")
     if manifest.get("data_sha256") != file_sha256:
         _add_error(errors, "file_checksum_mismatch")
+    if not str(manifest.get("round_id") or "").strip():
+        _add_error(errors, "manifest_round_id_missing")
 
     rows: list[dict[str, Any]] = []
     invalid_row_count = 0
@@ -145,8 +147,16 @@ def validate_candidate(
                 )
         if product.source_payload_hash() != expected_hash:
             _add_error(errors, "domain_hash_contract_mismatch")
-        if value.get("source_round_id") != manifest.get("round_id"):
-            _add_error(errors, "source_round_id_mismatch")
+        if not str(value.get("source_round_id") or "").strip():
+            _add_error(errors, "source_round_id_missing")
+            if len(samples) < max_samples:
+                samples.append(
+                    {
+                        "line": line_no,
+                        "sku": product.jd_sku_id,
+                        "reason": "source_round_id_missing",
+                    }
+                )
         if value.get("status") != "active":
             _add_error(errors, "row_status_not_active")
         rows.append(value)
