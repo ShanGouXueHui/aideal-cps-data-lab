@@ -67,6 +67,25 @@ class CandidateValidationTest(unittest.TestCase):
         self.assertEqual(report.row_count, 2)
         self.assertEqual(report.unique_sku_count, 2)
 
+    def test_product_lineage_round_may_precede_snapshot_round(self) -> None:
+        row = self.row("100")
+        row["source_round_id"] = "round-0"
+        row["source_payload_hash"] = canonical_payload_hash(row)
+        candidate, manifest, tmp = self.build_files([row])
+        self.addCleanup(tmp.cleanup)
+        report = validate_candidate(candidate, manifest)
+        self.assertTrue(report.ok, report.as_dict())
+
+    def test_missing_product_lineage_round_is_rejected(self) -> None:
+        row = self.row("100")
+        row["source_round_id"] = None
+        row["source_payload_hash"] = canonical_payload_hash(row)
+        candidate, manifest, tmp = self.build_files([row])
+        self.addCleanup(tmp.cleanup)
+        report = validate_candidate(candidate, manifest)
+        self.assertFalse(report.ok)
+        self.assertIn("source_round_id_missing", report.errors)
+
     def test_percent_and_decimal_rates_have_same_hash(self) -> None:
         percent = self.row("100", "12.5%")
         decimal = self.row("100", "12.5000")
