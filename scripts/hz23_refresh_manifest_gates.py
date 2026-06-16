@@ -8,7 +8,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from aideal_cps_data_lab.application import validate_candidate
-from scripts.hz23_quarantine_unsafe_source_rows import unsafe_reason
+from hz23_quarantine_unsafe_source_rows import unsafe_reason
 
 ROUND = Path("reports/hz23_round_latest.json")
 STATE = Path("run/hz23_observer_state.json")
