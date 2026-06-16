@@ -14,6 +14,7 @@ ROUND = Path("reports/hz23_round_latest.json")
 STATE = Path("run/hz23_observer_state.json")
 MANIFEST = Path("data/export/aideal_cps_products_commercial_candidate_manifest.json")
 CANDIDATE = Path("data/export/aideal_cps_products_commercial_candidate_latest.jsonl")
+VALIDATION_MANIFEST = Path("run/hz23_manifest_for_validation.json")
 REPORT = Path("reports/hz23_manifest_gate_refresh_latest.json")
 EXPECTED_PAGES = list(range(1, 68))
 MIN_SCANNED_TOTAL = 3900
@@ -104,9 +105,20 @@ def main() -> int:
         print(json.dumps(result, ensure_ascii=False, sort_keys=True))
         return 1
 
-    validation = validate_candidate(CANDIDATE, MANIFEST).as_dict()
     source = Path(str(manifest.get("source_file") or ""))
     audit = source_audit(source)
+    rejected = dict(manifest.get("rejected") or {})
+    rejected["unsafe_hz20"] = audit["unsafe"]
+    rejected["untrusted_promotion_url"] = audit["untrusted"]
+
+    validation_manifest = dict(manifest)
+    validation_manifest["rejected"] = rejected
+    atomic_json(VALIDATION_MANIFEST, validation_manifest)
+    try:
+        validation = validate_candidate(CANDIDATE, VALIDATION_MANIFEST).as_dict()
+    finally:
+        VALIDATION_MANIFEST.unlink(missing_ok=True)
+
     completed = round_report.get("completed_pages") or []
     unfinished = round_report.get("unfinished_pages") or []
     scanned = int(round_report.get("scanned_total") or 0)
@@ -148,9 +160,6 @@ def main() -> int:
         "scanned_total_minimum",
     ]
 
-    rejected = dict(manifest.get("rejected") or {})
-    rejected["unsafe_hz20"] = audit["unsafe"]
-    rejected["untrusted_promotion_url"] = audit["untrusted"]
     manifest.update(
         gate_refreshed_at=datetime.now().isoformat(timespec="seconds"),
         successful_probes=successful_probes,
