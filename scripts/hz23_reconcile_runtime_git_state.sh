@@ -9,7 +9,7 @@ if [ "$CD_RC" != "0" ]; then
   echo "STATUS=FAIL"
   echo "STEP=project_directory_missing"
   echo "CD_RC=$CD_RC"
-  return 1 2>/dev/null || true
+  exit 1
 fi
 mkdir -p logs reports backups
 
@@ -41,7 +41,7 @@ if [ -n "$UNKNOWN" ]; then
   echo "STEP=unknown_worktree_changes"
   echo "UNKNOWN_CHANGE_COUNT=$(printf '%s\n' "$UNKNOWN" | sed '/^$/d' | wc -l)"
   printf '%s\n' "$UNKNOWN" | head -n 30
-  return 1 2>/dev/null || true
+  exit 1
 fi
 
 git add reports docs/ops 2>/dev/null || true
@@ -59,7 +59,7 @@ else
     echo "STATUS=FAIL"
     echo "STEP=commit_runtime_evidence"
     echo "COMMIT_RC=$COMMIT_RC"
-    return 1 2>/dev/null || true
+    exit 1
   fi
   COMMIT_STATUS=committed
 fi
