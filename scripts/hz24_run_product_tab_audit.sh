@@ -50,17 +50,24 @@ if [ -f reports/hz24_product_tab_audit_latest.json ]; then
   PUBLISH_RC=$?
 fi
 
-python3 - <<'PY'
+METRICS="$(python3 - <<'PY'
 import json
 from pathlib import Path
 p=Path('reports/hz24_product_tab_audit_latest.json')
 x=json.loads(p.read_text(encoding='utf-8')) if p.exists() else {}
 tabs=x.get('tabs') or []
+groups=x.get('candidate_tab_groups') or []
+print('REPORT_OK='+str(bool(x.get('ok'))).lower())
+print('REPORT_ERROR='+str(x.get('error') or ''))
+print('DETECTED_TAB_NAMES='+'|'.join(str(v) for v in (x.get('detected_tab_names') or [])))
+print('CANDIDATE_GROUP_COUNT='+str(len(groups)))
+print('BEST_CANDIDATE_GROUP='+(groups[0].get('signature') if groups else ''))
 print('TAB_COUNT='+str(len(tabs)))
 print('TAB_NAMES='+'|'.join(str(t.get('tab_name') or '') for t in tabs))
 print('TAB_METRICS='+';'.join(f"{t.get('tab_name')}:{t.get('first_page_sku_count',0)}/{t.get('unique_vs_all_count',0)}/{t.get('jaccard_with_all')}" for t in tabs))
 print('RISK='+','.join(x.get('risk') or []))
 PY
+)"
 METRIC_RC=$?
 
 STATUS=PASS
@@ -76,6 +83,7 @@ echo "STOP_RC=$STOP_RC"
 echo "START_RC=$START_RC"
 echo "SERVICE_STATE=$SERVICE_STATE"
 echo "PUBLISH_RC=$PUBLISH_RC"
+printf '%s\n' "$METRICS"
 echo "HEAD=$(git rev-parse --short HEAD 2>/dev/null || true)"
 
 [ "$STATUS" = PASS ]
