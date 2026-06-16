@@ -2,18 +2,33 @@
 # Commit only known runtime evidence, then rebase onto origin/main.
 # Unknown source-code changes are never discarded. No set -e is used.
 
-cd "${HOME}/projects/aideal-cps-data-lab" || exit 1
+cd "${HOME}/projects/aideal-cps-data-lab"
+CD_RC=$?
+if [ "$CD_RC" != "0" ]; then
+  echo "===== SUMMARY ====="
+  echo "STATUS=FAIL"
+  echo "STEP=project_directory_missing"
+  echo "CD_RC=$CD_RC"
+  return 1 2>/dev/null || true
+fi
 mkdir -p logs reports backups
 
 STAMP="$(date +%Y%m%d_%H%M%S)"
-git status --porcelain=v1 > "backups/hz23_git_status_${STAMP}.txt"
+STATUS_CMD=(git status --porcelain=v1 --untracked-files=all)
+"${STATUS_CMD[@]}" > "backups/hz23_git_status_${STAMP}.txt"
 
-UNKNOWN="$(git status --porcelain=v1 | awk '
+UNKNOWN="$("${STATUS_CMD[@]}" | awk '
 {
   path=substr($0,4)
   if (path ~ /^reports\//) next
   if (path ~ /^docs\/ops\//) next
   if (path ~ /^data\/export\/.*manifest\.json$/) next
+  if (path ~ /^data\/export\/.*\.jsonl$/) next
+  if (path ~ /^data\/import\//) next
+  if (path ~ /^data\/state\//) next
+  if (path ~ /^data\/history\//) next
+  if (path ~ /^data\/raw\//) next
+  if (path ~ /^data\/clean\//) next
   if (path ~ /^backups\//) next
   if (path ~ /^logs\//) next
   if (path ~ /^run\//) next
@@ -26,7 +41,7 @@ if [ -n "$UNKNOWN" ]; then
   echo "STEP=unknown_worktree_changes"
   echo "UNKNOWN_CHANGE_COUNT=$(printf '%s\n' "$UNKNOWN" | sed '/^$/d' | wc -l)"
   printf '%s\n' "$UNKNOWN" | head -n 30
-  exit 1
+  return 1 2>/dev/null || true
 fi
 
 git add reports docs/ops 2>/dev/null || true
@@ -44,7 +59,7 @@ else
     echo "STATUS=FAIL"
     echo "STEP=commit_runtime_evidence"
     echo "COMMIT_RC=$COMMIT_RC"
-    exit 1
+    return 1 2>/dev/null || true
   fi
   COMMIT_STATUS=committed
 fi
@@ -67,7 +82,7 @@ fi
 
 LOCAL_HEAD="$(git rev-parse HEAD 2>/dev/null || true)"
 REMOTE_HEAD="$(git ls-remote origin refs/heads/main 2>/dev/null | awk '{print $1}')"
-DIRTY_COUNT="$(git status --porcelain=v1 | wc -l)"
+DIRTY_COUNT="$("${STATUS_CMD[@]}" | wc -l)"
 STATUS=PASS
 if [ "$FETCH_RC" != "0" ] || [ "$REBASE_RC" != "0" ] || [ "$PUSH_RC" != "0" ] || [ "$LOCAL_HEAD" != "$REMOTE_HEAD" ]; then
   STATUS=FAIL
