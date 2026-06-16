@@ -1,0 +1,35 @@
+{
+  "backup": "data/history/hz_jd_union_all_product_full_links_latest.jsonl.20260616_182014.before_hz20_quarantine.bak",
+  "backup_exists": true,
+  "executed": true,
+  "generated_at": "2026-06-16T18:20:14",
+  "invalid_line_count": 0,
+  "invalid_lines": [],
+  "mode": "execute",
+  "ok": true,
+  "quarantine": "data/history/hz20_unsafe_quarantine_20260616_182014.jsonl",
+  "quarantine_exists": true,
+  "reason_counts": {
+    "worker_name_hz20_mouse_click": 10
+  },
+  "safe_line_count": 3357,
+  "schema_version": "aideal-hz23-hz20-quarantine/v1",
+  "source": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+  "source_line_count_before": 3367,
+  "source_sha256_after": "95c83fb9405a7535023defae9f63c58918664109c4d36d0c758e3b671704b4cd",
+  "source_sha256_before": "228b878f5346f49b6440ae0869ca03e2b3481e10d557532d56d478aa746cd9e3",
+  "source_sha256_verified": true,
+  "unsafe_row_count": 10,
+  "unsafe_sku_samples": [
+    "100016509578",
+    "100064061547",
+    "100134554977",
+    "100152084723",
+    "100283885018",
+    "10217890622092",
+    "15339734",
+    "19593175106",
+    "294574",
+    "7168012"
+  ]
+}

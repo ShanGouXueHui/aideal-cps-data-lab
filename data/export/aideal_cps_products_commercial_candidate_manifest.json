@@ -85,27 +85,29 @@
   "gate_checks": {
     "all_pages_completed": true,
     "candidate_duplicate_sku_zero": true,
+    "candidate_hash_mismatch_zero": true,
     "candidate_nonempty": true,
-    "checksum_valid": true,
+    "candidate_validation_ok": false,
     "commercial_segment_complete": true,
     "observation_hours_minimum": true,
     "scanned_total_minimum": true,
+    "source_json_valid": true,
     "source_present": true,
     "stop_reason_null": true,
-    "successful_probes_minimum": false,
+    "successful_probes_minimum": true,
     "unfinished_pages_empty": true,
-    "unsafe_hz20_zero": false,
+    "unsafe_hz20_zero": true,
     "untrusted_promotion_url_zero": true
   },
   "gate_failures": [
-    "unsafe_hz20_zero",
-    "successful_probes_minimum"
+    "candidate_validation_ok"
   ],
+  "gate_refreshed_at": "2026-06-16T18:20:15",
   "generated_at": "2026-06-16T12:11:25",
   "last_known_sku_count": 3357,
   "minimum_observation_hours": 48.0,
   "minimum_successful_probes": 2,
-  "observation_hours": 60.62,
+  "observation_hours": 66.76,
   "observation_ready": false,
   "rejected": {
     "inactive": 0,
@@ -114,7 +116,7 @@
     "missing_price": 0,
     "missing_promotion_url": 0,
     "missing_title": 53,
-    "unsafe_hz20": 10,
+    "unsafe_hz20": 0,
     "untrusted_promotion_url": 0
   },
   "round_complete": true,
@@ -127,7 +129,7 @@
   "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
   "stop_page": null,
   "stop_reason": null,
-  "successful_probes": 1,
+  "successful_probes": 2,
   "trusted_dedup_sku_count": 3357,
   "unfinished_pages": []
 }

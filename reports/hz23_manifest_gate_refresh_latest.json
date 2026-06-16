@@ -1,0 +1,19 @@
+{
+  "candidate_integrity_ready": false,
+  "candidate_row_count": 3304,
+  "candidate_validation_ok": false,
+  "gate_failures": [
+    "candidate_validation_ok"
+  ],
+  "observation_hours": 66.76,
+  "observation_ready": false,
+  "ok": true,
+  "round_id": "20260615_100135",
+  "source_audit": {
+    "invalid": 0,
+    "rows": 3357,
+    "unsafe": 0,
+    "untrusted": 0
+  },
+  "successful_probes": 2
+}
