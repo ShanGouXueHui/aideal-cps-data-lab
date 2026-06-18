@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
+from datetime import datetime
 from itertools import combinations
 from pathlib import Path
 from typing import Any
@@ -76,6 +78,8 @@ def load_trusted_source_skus(path: Path) -> set[str]:
 
 
 def main() -> int:
+    structure_raw = STRUCTURE.read_bytes() if STRUCTURE.exists() else b""
+    structure_sha256 = hashlib.sha256(structure_raw).hexdigest() if structure_raw else ""
     structure = load_object(STRUCTURE)
     manifest = load_object(MANIFEST)
     candidate_skus = load_jsonl_skus(CANDIDATE)
@@ -97,7 +101,10 @@ def main() -> int:
             {
                 "tab_name": name,
                 "pool_sku_count": len(skus),
+                "tab_ok": row.get("ok") is True,
+                "tab_risk": row.get("risk") or [],
                 "single_page_confirmed": row.get("single_page_confirmed") is True,
+                "single_page_confirmation_method": row.get("single_page_confirmation_method"),
                 "overlap_with_candidate_count": len(skus & candidate_skus),
                 "increment_vs_candidate_count": len(skus - candidate_skus),
                 "overlap_with_trusted_source_count": len(skus & trusted_skus),
@@ -124,24 +131,38 @@ def main() -> int:
             }
         )
 
+    all_special_present = all(name in tab_map for name in SPECIAL_TABS)
     all_special_complete = all(
         (tab_map.get(name) or {}).get("single_page_confirmed") is True
         for name in SPECIAL_TABS
     )
+    all_special_safe = all(
+        (tab_map.get(name) or {}).get("ok") is True
+        and not ((tab_map.get(name) or {}).get("risk") or [])
+        and bool(tab_sets.get(name))
+        for name in SPECIAL_TABS
+    )
     checks = {
-        "structure_report_ok": structure.get("ok") is True,
-        "all_special_tabs_present": all(name in tab_map for name in SPECIAL_TABS),
+        "structure_file_present": STRUCTURE.exists(),
+        "all_special_tabs_present": all_special_present,
         "all_special_tabs_single_page_confirmed": all_special_complete,
+        "all_special_tabs_safe": all_special_safe,
         "candidate_file_present": CANDIDATE.exists(),
         "candidate_nonempty": len(candidate_skus) > 0,
         "manifest_present": bool(manifest),
         "trusted_source_present": source_path.exists(),
     }
+    ready = all(checks.values())
 
     result = {
-        "schema_version": "aideal-hz24-tab-overlap-analysis/v1",
-        "ok": all(checks.values()),
-        "analysis_ready": all(checks.values()),
+        "schema_version": "aideal-hz24-tab-overlap-analysis/v2",
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "structure_generated_at": structure.get("generated_at"),
+        "structure_sha256": structure_sha256,
+        "structure_global_ok": structure.get("ok") is True,
+        "structure_global_risk": structure.get("risk") or [],
+        "ok": ready,
+        "analysis_ready": ready,
         "checks": checks,
         "failures": [name for name, passed in checks.items() if not passed],
         "candidate_sku_count": len(candidate_skus),
@@ -161,11 +182,11 @@ def main() -> int:
         "pairwise": pairwise,
         "recommended_next_step": (
             "generate_links_only_for_global_increment"
-            if all(checks.values()) and len(union_special - trusted_skus) > 0
+            if ready and len(union_special - trusted_skus) > 0
             else "merge_already_linked_increment"
-            if all(checks.values()) and len(union_special - candidate_skus) > 0
+            if ready and len(union_special - candidate_skus) > 0
             else "no_increment"
-            if all(checks.values())
+            if ready
             else "complete_structure_audit"
         ),
     }
