@@ -1,18 +1,22 @@
 {
-  "changed": 46,
-  "new": 11,
-  "ok": true,
-  "page_no": 17,
+  "changed": 0,
+  "new": 0,
+  "ok": false,
+  "page_no": 67,
   "page_state": {
-    "activePageText": "17",
-    "has4000": true,
-    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
-    "url": "https://union.jd.com/proManager/index?pageNo=17"
+    "activePageText": null,
+    "has4000": false,
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D67&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-112046441-10292-1781750036136&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhjCnw8dEXRpa5kOT6Xl3olyfD6jJ79T5NEgfr5HSP-ts84rgt"
   },
-  "reason": null,
-  "risk": [],
-  "round_id": "probe_20260617_101950",
-  "scanned": 60,
-  "ts": "2026-06-17T10:19:53",
-  "unchanged": 3
+  "reason": "risk",
+  "risk": [
+    "risk_handler",
+    "京东验证",
+    "快速验证"
+  ],
+  "round_id": "probe_20260618_103354",
+  "scanned": 0,
+  "ts": "2026-06-18T10:33:57",
+  "unchanged": 0
 }
