@@ -3,15 +3,17 @@
   "candidate_sku_count": 3304,
   "checks": {
     "all_special_tabs_present": true,
+    "all_special_tabs_safe": true,
     "all_special_tabs_single_page_confirmed": true,
     "candidate_file_present": true,
     "candidate_nonempty": true,
     "manifest_present": true,
-    "structure_report_ok": true,
+    "structure_file_present": true,
     "trusted_source_present": true
   },
   "cross_tab_duplicate_membership_count": 11,
   "failures": [],
+  "generated_at": "2026-06-18T16:56:43",
   "ok": true,
   "pairwise": [
     {
@@ -114,13 +116,13 @@
         "10021202893006",
         "100243614257",
         "100321310178",
-        "100358318864",
         "10040988914313",
         "10050054008152",
         "10067263240607",
         "10067264166488",
         "10070386424058",
-        "10079142945735"
+        "10079142945735",
+        "10084198356228"
       ],
       "overlap_with_candidate_count": 5,
       "overlap_with_trusted_source_count": 5,
@@ -140,16 +142,19 @@
         "10021202893006",
         "100243614257",
         "100321310178",
-        "100358318864",
         "10040988914313",
         "10050054008152",
         "10067263240607",
         "10067264166488",
         "10070386424058",
-        "10079142945735"
+        "10079142945735",
+        "10084198356228"
       ],
+      "single_page_confirmation_method": "no_pagination_scroll_stable",
       "single_page_confirmed": true,
-      "tab_name": "超补爆品"
+      "tab_name": "超补爆品",
+      "tab_ok": true,
+      "tab_risk": []
     },
     {
       "increment_vs_candidate_count": 44,
@@ -201,8 +206,11 @@
         "100201330918",
         "100209512295"
       ],
+      "single_page_confirmation_method": "no_pagination_scroll_stable",
       "single_page_confirmed": true,
-      "tab_name": "限量高佣"
+      "tab_name": "限量高佣",
+      "tab_ok": true,
+      "tab_risk": []
     },
     {
       "increment_vs_candidate_count": 48,
@@ -254,8 +262,11 @@
         "10103754518058",
         "10118381913983"
       ],
+      "single_page_confirmation_method": "no_pagination_scroll_stable",
       "single_page_confirmed": true,
-      "tab_name": "秒杀专区"
+      "tab_name": "秒杀专区",
+      "tab_ok": true,
+      "tab_risk": []
     },
     {
       "increment_vs_candidate_count": 50,
@@ -307,8 +318,11 @@
         "10061866124375",
         "10062577458175"
       ],
+      "single_page_confirmation_method": "no_pagination_scroll_stable",
       "single_page_confirmed": true,
-      "tab_name": "定向高佣"
+      "tab_name": "定向高佣",
+      "tab_ok": true,
+      "tab_risk": []
     },
     {
       "increment_vs_candidate_count": 44,
@@ -360,12 +374,15 @@
         "10158608174432",
         "10158795677807"
       ],
+      "single_page_confirmation_method": "no_pagination_scroll_stable",
       "single_page_confirmed": true,
-      "tab_name": "粉丝爱买"
+      "tab_name": "粉丝爱买",
+      "tab_ok": true,
+      "tab_risk": []
     }
   ],
   "recommended_next_step": "generate_links_only_for_global_increment",
-  "schema_version": "aideal-hz24-tab-overlap-analysis/v1",
+  "schema_version": "aideal-hz24-tab-overlap-analysis/v2",
   "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
   "special_tab_membership_count": 250,
   "special_tab_union_sku_count": 239,
@@ -478,5 +495,9 @@
     "100209268163",
     "100209268193"
   ],
+  "structure_generated_at": "2026-06-18T16:46:06",
+  "structure_global_ok": true,
+  "structure_global_risk": [],
+  "structure_sha256": "25e1af1a9755ebae807e70ebd7c250ccbb38d16d9e0c7eed76253e08a1435771",
   "trusted_source_sku_count": 3357
 }
