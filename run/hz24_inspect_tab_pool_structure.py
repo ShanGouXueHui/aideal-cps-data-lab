@@ -57,6 +57,12 @@ def snapshot(page) -> dict[str, Any]:
             skus,
             one_key_count: (body.match(/一键领链/g) || []).length,
             paginations,
+            document_height: Math.max(
+              document.body ? document.body.scrollHeight : 0,
+              document.documentElement ? document.documentElement.scrollHeight : 0
+            ),
+            viewport_height: innerHeight,
+            scroll_y: scrollY,
           };
         }
         """
@@ -108,6 +114,46 @@ def click_tab(page, name: str) -> bool:
     return True
 
 
+def settle_scroll(page) -> tuple[dict[str, Any], dict[str, Any]]:
+    before = snapshot(page)
+    for _ in range(4):
+        page.evaluate(
+            """
+            () => {
+              window.scrollTo(0, Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+              for (const el of Array.from(document.querySelectorAll('body *'))) {
+                if (!(el instanceof HTMLElement)) continue;
+                const style = getComputedStyle(el);
+                if (!['auto', 'scroll'].includes(style.overflowY)) continue;
+                if (el.scrollHeight <= el.clientHeight + 20) continue;
+                el.scrollTop = el.scrollHeight;
+              }
+            }
+            """
+        )
+        page.wait_for_timeout(1800)
+    after = snapshot(page)
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(500)
+    return before, after
+
+
+def pagination_single_page(paginations: list[dict[str, Any]]) -> bool:
+    if not paginations:
+        return False
+    for item in paginations:
+        numbers = [
+            int(value.get("text"))
+            for value in item.get("page_numbers") or []
+            if str(value.get("text") or "").isdigit()
+        ]
+        if not bool(item.get("next_disabled")):
+            return False
+        if numbers and max(numbers) > 1:
+            return False
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--cdp", default="http://127.0.0.1:19228")
@@ -119,9 +165,9 @@ def main() -> int:
     args = parser.parse_args()
 
     result: dict[str, Any] = {
-        "schema_version": "aideal-hz24-tab-pool-structure/v1",
+        "schema_version": "aideal-hz24-tab-pool-structure/v2",
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "mode": "read_only",
+        "mode": "read_only_scroll_stability",
         "promotion_links_generated": False,
         "tabs": [],
         "risk": [],
@@ -154,29 +200,59 @@ def main() -> int:
                         {"tab_name": name, "ok": False, "reason": "tab_not_found"}
                     )
                     continue
-                snap = snapshot(page)
-                found_risk = risk(snap)
-                snap.pop("body_text", None)
-                paginations = snap.get("paginations") or []
-                single_page_confirmed = bool(
-                    name != "全部商品"
-                    and int(snap.get("sku_count") or 0) > 0
-                    and paginations
-                    and all(
-                        bool(item.get("next_disabled"))
-                        and (not item.get("page_numbers") or max(
-                            [int(x.get("text")) for x in item.get("page_numbers") or [] if str(x.get("text") or "").isdigit()] or [1]
-                        ) <= 1)
-                        for item in paginations
-                    )
+
+                before, after = settle_scroll(page)
+                found_risk = risk(after)
+                before.pop("body_text", None)
+                after.pop("body_text", None)
+
+                before_skus = set(before.get("skus") or [])
+                after_skus = set(after.get("skus") or [])
+                scroll_stable = bool(
+                    before_skus
+                    and before_skus == after_skus
+                    and int(before.get("sku_count") or 0) == int(after.get("sku_count") or 0)
+                    and int(before.get("one_key_count") or 0) == int(after.get("one_key_count") or 0)
+                    and int(before.get("document_height") or 0) == int(after.get("document_height") or 0)
                 )
+                active_tab_matches = name in (after.get("active_tabs") or [])
+                no_pagination_single_page = bool(
+                    name != "全部商品"
+                    and active_tab_matches
+                    and scroll_stable
+                    and not (after.get("paginations") or [])
+                    and int(after.get("sku_count") or 0) > 0
+                    and int(after.get("one_key_count") or 0) == int(after.get("sku_count") or 0)
+                )
+                explicit_pagination_single_page = bool(
+                    name != "全部商品"
+                    and active_tab_matches
+                    and scroll_stable
+                    and pagination_single_page(after.get("paginations") or [])
+                )
+                single_page_confirmed = bool(
+                    no_pagination_single_page or explicit_pagination_single_page
+                )
+                confirmation_method = (
+                    "no_pagination_scroll_stable"
+                    if no_pagination_single_page
+                    else "disabled_single_page_pagination"
+                    if explicit_pagination_single_page
+                    else None
+                )
+
                 result["tabs"].append(
                     {
                         "tab_name": name,
                         "ok": not found_risk,
                         "risk": found_risk,
                         "single_page_confirmed": single_page_confirmed,
-                        **snap,
+                        "single_page_confirmation_method": confirmation_method,
+                        "active_tab_matches": active_tab_matches,
+                        "scroll_stable": scroll_stable,
+                        "before_scroll": before,
+                        "after_scroll": after,
+                        **after,
                     }
                 )
                 if found_risk:
