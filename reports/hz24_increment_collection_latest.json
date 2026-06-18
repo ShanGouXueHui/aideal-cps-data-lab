@@ -1,14 +1,250 @@
 {
-  "batch_fail": 0,
+  "batch_fail": 5,
   "batch_limit": 35,
-  "batch_processed": 35,
-  "batch_success": 35,
+  "batch_processed": 7,
+  "batch_success": 2,
   "complete": false,
-  "failures": [],
-  "generated_at": "2026-06-18T17:48:23",
-  "ok": true,
+  "failures": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "card-disabled",
+          "ok": false,
+          "tag": "DIV",
+          "text": ""
+        },
+        "mark": {
+          "matched": {
+            "buttonRect": {
+              "cx": 1098.09375,
+              "cy": 846,
+              "h": 42,
+              "w": 106.8125,
+              "x": 1044.6875,
+              "y": 825
+            },
+            "itemUrl": "https://item.jd.com/100274451578.html",
+            "rootRect": {
+              "h": 458,
+              "w": 240,
+              "x": 922.5,
+              "y": 420
+            },
+            "rootText": "预估收益 ￥ 29.82\n|\n佣金比例1.5%\n\nHUAWEI【父亲节送礼优选】HUAWEI WATCH GT 6 Pro曜石黑46mm华为智能手表全新骑行体验21天超长续航\n\n到手价￥1988￥2288\n1.0万+ 好评\n\n自营\n定向\n秒杀\n京配\n券\n购新国补最高10%\n已抢光\n华为京东自营旗舰店\n我要推广\n一键领链"
+          },
+          "method": "exact_sku_token_marked",
+          "ok": true,
+          "sku": "100274451578",
+          "token": "hz21_100274451578_1781777075314"
+        },
+        "ok": false,
+        "reason": "hit_test_not_target_button",
+        "sku": "100274451578"
+      },
+      "ok": false,
+      "reason": "click_failed",
+      "sku": "100274451578",
+      "tab": "限量高佣"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "card-disabled",
+          "ok": false,
+          "tag": "DIV",
+          "text": ""
+        },
+        "mark": {
+          "matched": {
+            "buttonRect": {
+              "cx": 1439.34375,
+              "cy": 846,
+              "h": 42,
+              "w": 106.8125,
+              "x": 1385.9375,
+              "y": 825
+            },
+            "itemUrl": "https://item.jd.com/100327784384.html",
+            "rootRect": {
+              "h": 458,
+              "w": 240,
+              "x": 1263.75,
+              "y": 420
+            },
+            "rootText": "预估收益 ￥ 13.46\n|\n佣金比例1.5%\n\n小米（MI）Xiaomi Watch S5 黑色 时尚智能手表21天超长续航澎湃OS3心脏健康全新骑行体验汽车钥匙送男友送女\n\n到手价￥897.3￥1197\n2000+ 好评\n\n自营\n定向\n秒杀\n京配\n券\n购新国补最高15%\n已抢光\n小米京东自营旗舰店\n我要推广\n一键领链"
+          },
+          "method": "exact_sku_token_marked",
+          "ok": true,
+          "sku": "100327784384",
+          "token": "hz21_100327784384_1781777082702"
+        },
+        "ok": false,
+        "reason": "hit_test_not_target_button",
+        "sku": "100327784384"
+      },
+      "ok": false,
+      "reason": "click_failed",
+      "sku": "100327784384",
+      "tab": "限量高佣"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "card-disabled",
+          "ok": false,
+          "tag": "DIV",
+          "text": ""
+        },
+        "mark": {
+          "matched": {
+            "buttonRect": {
+              "cx": 1780.59375,
+              "cy": 846,
+              "h": 42,
+              "w": 106.8125,
+              "x": 1727.1875,
+              "y": 825
+            },
+            "itemUrl": "https://item.jd.com/100061043874.html",
+            "rootRect": {
+              "h": 458,
+              "w": 240,
+              "x": 1605,
+              "y": 420
+            },
+            "rootText": "预估收益 ￥ 14.70\n|\n佣金比例3%\n\n丸丫K2婴儿床围栏宝宝防摔防护栏床上护栏防摔档板免打钉三面1.8+2+2\n\n到手价￥489.9￥579.9\n2.0万+ 好评\n\n自营\n定向\n京配\n促销\n购新国补最高5%\n已抢光\n丸丫京东自营旗舰店\n我要推广\n一键领链"
+          },
+          "method": "exact_sku_token_marked",
+          "ok": true,
+          "sku": "100061043874",
+          "token": "hz21_100061043874_1781777088332"
+        },
+        "ok": false,
+        "reason": "hit_test_not_target_button",
+        "sku": "100061043874"
+      },
+      "ok": false,
+      "reason": "click_failed",
+      "sku": "100061043874",
+      "tab": "限量高佣"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "card-disabled",
+          "ok": false,
+          "tag": "DIV",
+          "text": ""
+        },
+        "mark": {
+          "matched": {
+            "buttonRect": {
+              "cx": 415.59375,
+              "cy": 1304,
+              "h": 42,
+              "w": 106.8125,
+              "x": 362.1875,
+              "y": 1283
+            },
+            "itemUrl": "https://item.jd.com/100158581410.html",
+            "rootRect": {
+              "h": 458,
+              "w": 240,
+              "x": 240,
+              "y": 878
+            },
+            "rootText": "预估收益 ￥ 9.70\n|\n佣金比例2.5%\n\n丸丫V2max防摔蚊帐儿童婴儿床蚊帐家用一体防掉拉链回底单蚊帐1.8*2.0\n\n到手价￥387.9\n5000+ 好评\n\n自营\n超级补贴\n定向\n京配\n已抢光\n丸丫京东自营旗舰店\n我要推广\n一键领链"
+          },
+          "method": "exact_sku_token_marked",
+          "ok": true,
+          "sku": "100158581410",
+          "token": "hz21_100158581410_1781777094759"
+        },
+        "ok": false,
+        "reason": "hit_test_not_target_button",
+        "sku": "100158581410"
+      },
+      "ok": false,
+      "reason": "click_failed",
+      "sku": "100158581410",
+      "tab": "限量高佣"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "card-disabled",
+          "ok": false,
+          "tag": "DIV",
+          "text": ""
+        },
+        "mark": {
+          "matched": {
+            "buttonRect": {
+              "cx": 756.84375,
+              "cy": 846,
+              "h": 42,
+              "w": 106.8125,
+              "x": 703.4375,
+              "y": 825
+            },
+            "itemUrl": "https://item.jd.com/100201330918.html",
+            "rootRect": {
+              "h": 458,
+              "w": 240,
+              "x": 581.25,
+              "y": 420
+            },
+            "rootText": "此商品正在参加奖励活动\n去报名\n\n预估收益 ￥ 12.48\n|\n佣金比例1%\n\n新飞【价保618】空调 1匹 新一级变频冷暖 家电补贴 省电纯铜管以旧换新卧室挂机 KFR-26GW/J11BPD11-1\n\n到手价￥1248\n2.0万+ 好评\n\n自营\n超级补贴\n定向\n奖励\n京配\n购新国补最高15%\n已抢光\n新飞空调京东自营旗舰店\n我要推广\n一键领链"
+          },
+          "method": "exact_sku_token_marked",
+          "ok": true,
+          "sku": "100201330918",
+          "token": "hz21_100201330918_1781777102640"
+        },
+        "ok": false,
+        "reason": "hit_test_not_target_button",
+        "sku": "100201330918"
+      },
+      "ok": false,
+      "reason": "click_failed",
+      "sku": "100201330918",
+      "tab": "限量高佣"
+    }
+  ],
+  "generated_at": "2026-06-18T18:05:03",
+  "ok": false,
   "output_file": "data/import/hz24_special_tab_links_latest.jsonl",
-  "pending_count": 151,
+  "pending_count": 149,
   "pending_samples": [
     "100003896480",
     "100007390797",
@@ -24,7 +260,6 @@
     "100076230129",
     "100077464323",
     "100091274342",
-    "100097742340",
     "100109919542",
     "100111833243",
     "100118905927",
@@ -39,12 +274,13 @@
     "100209268163",
     "100209268193",
     "100209512295",
-    "100216544657"
+    "100216544657",
+    "100221822321"
   ],
   "queue_count": 221,
   "risk": [],
   "schema_version": "aideal-hz24-increment-collection/v1",
   "state_file": "run/hz24_increment_collection_state.json",
-  "stop_reason": null,
-  "success_count": 70
+  "stop_reason": "item_fail_fuse",
+  "success_count": 72
 }

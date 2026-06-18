@@ -2,7 +2,7 @@
   "analysis_file": "reports/hz24_tab_overlap_analysis_latest.json",
   "commercial_enabled": false,
   "data_sha256": "7a35f74998ec753b1ff4823a3b51973e4867f51475e719a145a9c9d583b72d6f",
-  "generated_at": "2026-06-18T17:40:09",
+  "generated_at": "2026-06-18T18:04:06",
   "row_count": 221,
   "schema_version": "aideal-hz24-increment-manifest/v1",
   "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
