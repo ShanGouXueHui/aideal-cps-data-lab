@@ -1,0 +1,19 @@
+{
+  "analysis_file": "reports/hz24_tab_overlap_analysis_latest.json",
+  "commercial_enabled": false,
+  "data_sha256": "7a35f74998ec753b1ff4823a3b51973e4867f51475e719a145a9c9d583b72d6f",
+  "generated_at": "2026-06-18T17:14:09",
+  "row_count": 221,
+  "schema_version": "aideal-hz24-increment-manifest/v1",
+  "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+  "source_tabs": [
+    "超补爆品",
+    "限量高佣",
+    "秒杀专区",
+    "定向高佣",
+    "粉丝爱买"
+  ],
+  "structure_file": "reports/hz24_tab_pool_structure_special_verified_latest.json",
+  "structure_generated_at": "2026-06-18T16:46:06",
+  "structure_sha256": "25e1af1a9755ebae807e70ebd7c250ccbb38d16d9e0c7eed76253e08a1435771"
+}

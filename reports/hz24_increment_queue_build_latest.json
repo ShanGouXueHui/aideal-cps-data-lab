@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "all_tabs_present": true,
+    "all_tabs_safe": true,
+    "all_tabs_single_page_confirmed": true,
+    "analysis_increment_matches": true,
+    "analysis_ready": true,
+    "structure_present": true,
+    "trusted_source_present": true
+  },
+  "failures": [],
+  "generated_at": "2026-06-18T17:14:09",
+  "ok": true,
+  "queue_file": "data/export/hz24_special_tab_increment_latest.jsonl",
+  "queue_manifest": "data/export/hz24_special_tab_increment_manifest.json",
+  "queue_row_count": 221,
+  "queue_sha256": "7a35f74998ec753b1ff4823a3b51973e4867f51475e719a145a9c9d583b72d6f",
+  "special_union_sku_count": 239,
+  "structure_sha256": "25e1af1a9755ebae807e70ebd7c250ccbb38d16d9e0c7eed76253e08a1435771",
+  "trusted_source_sku_count": 3357
+}
