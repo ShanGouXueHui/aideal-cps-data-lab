@@ -14,8 +14,19 @@ if [ "$QUEUE_RC" != "0" ]; then
 fi
 
 OLD_STATE="$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)"
-[ "$OLD_STATE" = "active" ] && sudo systemctl stop aideal-hz23-observer.service
-STOP_RC=$?
+if [ "$OLD_STATE" = "active" ]; then
+  sudo systemctl stop aideal-hz23-observer.service
+  STOP_RC=$?
+else
+  STOP_RC=0
+fi
+if [ "$STOP_RC" != "0" ]; then
+  echo "===== SUMMARY ====="
+  echo "STATUS=FAIL"
+  echo "STEP=observer_stop"
+  echo "STOP_RC=$STOP_RC"
+  exit 1
+fi
 
 HZ24_BATCH_LIMIT="${HZ24_BATCH_LIMIT:-35}" \
 HZ24_ITEM_SLEEP_MIN="${HZ24_ITEM_SLEEP_MIN:-4}" \
@@ -25,8 +36,12 @@ HZ24_TAB_SLEEP_MAX="${HZ24_TAB_SLEEP_MAX:-240}" \
 .venv-browser/bin/python run/hz24_collect_increment_links.py > logs/hz24_batch.log 2>&1
 COLLECT_RC=$?
 
-[ "$OLD_STATE" = "active" ] && sudo systemctl start aideal-hz23-observer.service
-START_RC=$?
+if [ "$OLD_STATE" = "active" ]; then
+  sudo systemctl start aideal-hz23-observer.service
+  START_RC=$?
+else
+  START_RC=0
+fi
 sleep 2
 SERVICE_STATE="$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)"
 
@@ -45,8 +60,15 @@ else
   VALIDATE_RC=SKIP
 fi
 
+STATUS=PASS
+EXIT_RC="$COLLECT_RC"
+if [ "$COLLECT_RC" != "0" ]; then STATUS=PAUSED; fi
+if [ "$START_RC" != "0" ]; then STATUS=FAIL; EXIT_RC=1; fi
+if [ "$OLD_STATE" = "active" ] && [ "$SERVICE_STATE" != "active" ]; then STATUS=FAIL; EXIT_RC=1; fi
+if [ "$COMPLETE" = "true" ] && [ "$VALIDATE_RC" != "0" ]; then STATUS=FAIL; EXIT_RC=1; fi
+
 echo "===== SUMMARY ====="
-echo "STATUS=$([ "$COLLECT_RC" = "0" ] && echo PASS || echo PAUSED)"
+echo "STATUS=$STATUS"
 echo "QUEUE_RC=$QUEUE_RC"
 echo "STOP_RC=$STOP_RC"
 echo "COLLECT_RC=$COLLECT_RC"
@@ -58,4 +80,4 @@ echo "VALIDATE_RC=$VALIDATE_RC"
 echo "START_RC=$START_RC"
 echo "SERVICE_STATE=$SERVICE_STATE"
 
-exit "$COLLECT_RC"
+exit "$EXIT_RC"
