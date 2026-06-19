@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 54,
-  "blocker_count": 378,
+  "active_blocker_count": 53,
+  "blocker_count": 377,
   "compatibility_blocker_count": 13,
   "files_scanned": 262,
   "findings": [
@@ -363,15 +363,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "long_function",
-      "detail": "84 lines exceeds 80",
-      "line": 71,
-      "path": "src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "scan_shell"
     },
     {
       "category": "hardcoded_ip",
@@ -9455,15 +9446,15 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 67,
-  "generated_at": "2026-06-19T19:23:00",
+  "gate_blocker_count": 66,
+  "generated_at": "2026-06-19T19:24:23",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 108,
+    "blocker_file_count": 107,
     "blocker_scope_counts": {
-      "active": 54,
+      "active": 53,
       "compatibility": 13,
       "historical": 274,
       "support": 37
@@ -9475,7 +9466,7 @@
       "hardcoded_parameter": 114,
       "hardcoded_url": 131,
       "large_file": 7,
-      "long_function": 21,
+      "long_function": 20,
       "repeated_literal": 672
     },
     "top_blocker_files": [
