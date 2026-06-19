@@ -20,7 +20,11 @@ on:
       - "tests/**"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: offline-quality-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   offline-quality:
@@ -30,39 +34,45 @@ jobs:
       PYTHONPATH: src
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install offline test dependencies
         run: python -m pip install -e ".[browser,mysql]"
-      - name: Compile active Python paths
+      - name: Run offline commercialization quality gate
+        id: quality
+        continue-on-error: true
+        run: python scripts/run_offline_quality.py
+      - name: Upload offline quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-quality-report
+          path: reports/offline_quality_latest.json
+          if-no-files-found: error
+      - name: Publish main branch quality report
+        if: >-
+          always() &&
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/main' &&
+          hashFiles('reports/offline_quality_latest.json') != ''
         run: |
-          python -m compileall -q src
-          python -m py_compile \
-            run/hz22_prepare_all_product_page.py \
-            run/hz23_scan_current_page.py \
-            run/hz23_finalize_round.py \
-            run/hz24_collect_increment_links_v2.py \
-            run/hz24_audit_product_tabs.py \
-            scripts/hz23_refresh_manifest_gates.py \
-            scripts/hz23_quarantine_unsafe_source_rows.py \
-            scripts/hz24_build_increment_queue.py \
-            scripts/hz24_analyze_tab_overlap.py \
-            scripts/hz24_validate_increment_outcomes.py \
-            scripts/hz24_migrate_legacy_sold_out.py \
-            scripts/backfill_commission_products_mysql.py \
-            scripts/verify_commission_mysql_post_migration.py
-      - name: Run pure offline unit tests
-        run: |
-          python -m unittest discover -s tests -p "test_hz24_*.py"
-          python -m unittest discover -s tests -p "test_candidate_validation.py"
-          python -m unittest discover -s tests -p "test_commission_product_domain.py"
-          python -m unittest discover -s tests -p "test_data_lab_config.py"
-          python -m unittest discover -s tests -p "test_mysql_repository.py"
-          python -m unittest discover -s tests -p "test_mysql_batch_repository_contract.py"
-          python -m unittest discover -s tests -p "test_mysql_batch_repository_v2.py"
-          python -m unittest discover -s tests -p "test_backfill_execution_gate.py"
-      - name: Assert no live JD execution
-        run: |
-          test ! -e run/jd_live_called.flag
-          echo "JD_LIVE_CALLED=false"
+          cp reports/offline_quality_latest.json /tmp/offline_quality_latest.json
+          git fetch origin main
+          git checkout -B main origin/main
+          mkdir -p reports
+          cp /tmp/offline_quality_latest.json reports/offline_quality_latest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f reports/offline_quality_latest.json
+          if git diff --cached --quiet; then
+            echo "OFFLINE_REPORT_UNCHANGED=1"
+          else
+            git commit -m "reports: update offline quality baseline"
+            git push origin main
+          fi
+      - name: Enforce offline quality result
+        if: steps.quality.outcome != 'success'
+        run: exit 1
