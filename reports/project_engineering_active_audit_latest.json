@@ -1,15 +1,15 @@
 {
-  "active_blocker_count": 68,
-  "active_warning_count": 237,
+  "active_blocker_count": 66,
+  "active_warning_count": 234,
   "category_counts": {
-    "duplicate_implementation": 6,
+    "duplicate_implementation": 4,
     "hardcoded_absolute_path": 2,
     "hardcoded_ip": 2,
     "hardcoded_parameter": 3,
     "hardcoded_url": 45,
     "large_file": 2,
     "long_function": 8,
-    "repeated_literal": 237
+    "repeated_literal": 234
   },
   "findings": [
     {
@@ -184,15 +184,6 @@
       "symbol": ""
     },
     {
-      "category": "duplicate_implementation",
-      "detail": "scripts/hz23_quarantine_unsafe_source_rows.py:16, src/aideal_cps_data_lab/hz23_gate_refresh.py:25",
-      "line": 16,
-      "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "unsafe_reason"
-    },
-    {
       "category": "long_function",
       "detail": "101 lines exceeds 80",
       "line": 46,
@@ -227,15 +218,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "scripts/hz23_quarantine_unsafe_source_rows.py:16, src/aideal_cps_data_lab/hz23_gate_refresh.py:25",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "unsafe_reason"
     },
     {
       "category": "duplicate_implementation",
@@ -2003,33 +1985,6 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'worker_name_hz20_mouse_click' repeated in 3 files: scripts/hz23_quarantine_unsafe_source_rows.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz23_gate_refresh.py",
-      "line": 0,
-      "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'menu_mode_contains_hz20' repeated in 3 files: scripts/hz23_quarantine_unsafe_source_rows.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz23_gate_refresh.py",
-      "line": 0,
-      "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'promotion_mode_contains_hz20' repeated in 3 files: scripts/hz23_quarantine_unsafe_source_rows.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz23_gate_refresh.py",
-      "line": 0,
-      "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
       "detail": "'jd_sku_id' repeated in 12 files: scripts/hz23_quarantine_unsafe_source_rows.py, scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_landed_validation.py",
       "line": 0,
       "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
@@ -2759,7 +2714,7 @@
     }
   ],
   "full_files_scanned": 264,
-  "generated_at": "2026-06-19T19:32:11",
+  "generated_at": "2026-06-19T19:33:46",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
