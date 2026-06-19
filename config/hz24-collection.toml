@@ -1,0 +1,6 @@
+schema_version = "hz24-collection/v1"
+batch_limit = 35
+wait_seconds = 12
+item_sleep_min_seconds = 4
+item_sleep_max_seconds = 8
+failure_fuse = 5
