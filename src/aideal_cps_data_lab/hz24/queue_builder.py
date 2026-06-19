@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
+from .repository import load_json
 from .settings import HZ24Settings, load_settings
 
 STRUCTURE_PATH = Path("reports/hz24_tab_pool_structure_special_verified_latest.json")
@@ -14,14 +15,6 @@ BASE_MANIFEST_PATH = Path(
     "data/export/aideal_cps_products_commercial_candidate_manifest.json"
 )
 REPORT_PATH = Path("reports/hz24_increment_queue_build_latest.json")
-
-
-def load_json(path: Path) -> dict:
-    try:
-        value = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-    return value if isinstance(value, dict) else {}
 
 
 def trusted_source_skus(path: Path, settings: HZ24Settings) -> set[str]:
