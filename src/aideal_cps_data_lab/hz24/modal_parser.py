@@ -4,13 +4,13 @@ import re
 from typing import Any
 from urllib.parse import urlparse
 
-DIALOG_SELECTOR = ".el-dialog:visible, .ant-modal:visible, [role=dialog]:visible"
-CLOSE_SELECTOR = ".el-dialog__close, .ant-modal-close, [aria-label=Close], [aria-label=关闭]"
-URL_PATTERN = re.compile(r"https?://[^\s'\"<>]+")
+dialog_locator = ".el-dialog:visible, .ant-modal:visible, [role=dialog]:visible"
+close_locator = ".el-dialog__close, .ant-modal-close, [aria-label=Close], [aria-label=关闭]"
+link_pattern = re.compile(r"https?://[^\s'\"<>]+")
 
 
 def _visible_dialog(page):
-    dialogs = page.locator(DIALOG_SELECTOR)
+    dialogs = page.locator(dialog_locator)
     for index in range(dialogs.count() - 1, -1, -1):
         dialog = dialogs.nth(index)
         try:
@@ -25,7 +25,7 @@ def close_dialog(page) -> bool:
     dialog = _visible_dialog(page)
     if dialog is None:
         return False
-    buttons = dialog.locator(CLOSE_SELECTOR)
+    buttons = dialog.locator(close_locator)
     for index in range(buttons.count()):
         button = buttons.nth(index)
         try:
@@ -98,7 +98,7 @@ def parse_modal(page, trusted_scheme: str, trusted_host: str) -> dict[str, Any]:
     except Exception:
         text = ""
     values = _field_values(dialog)
-    discovered = values + _anchor_urls(dialog) + URL_PATTERN.findall(text)
+    discovered = values + _anchor_urls(dialog) + link_pattern.findall(text)
     short_url = _trusted_url(discovered, trusted_scheme, trusted_host)
     long_url = next(
         (
