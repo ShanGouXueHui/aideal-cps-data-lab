@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 BUSINESS_COLUMNS = (
     "title",
     "description",
@@ -23,3 +25,7 @@ BUSINESS_COLUMNS = (
     "link_expire_at",
     "refresh_due_at",
 )
+
+
+def business_values(payload: dict[str, Any]) -> tuple[Any, ...]:
+    return tuple(payload.get(column) for column in BUSINESS_COLUMNS)
