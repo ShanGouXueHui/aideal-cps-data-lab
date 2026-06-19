@@ -46,6 +46,8 @@ def browser_settings(data: dict[str, object]) -> BrowserSettings:
         tab_settle_ms=int(data["tab_settle_ms"]),
         modal_poll_ms=int(data["modal_poll_ms"]),
         risk_markers=tuple(str(value) for value in data["risk_markers"]),
+        tab_role_selector=str(data["tab_role_selector"]),
+        tab_class_pattern=str(data["tab_class_pattern"]),
     )
 
 
