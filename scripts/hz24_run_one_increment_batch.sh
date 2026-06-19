@@ -3,7 +3,12 @@
 
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 PROJECT_ROOT="$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)"
-cd "$PROJECT_ROOT" || exit 1
+if ! cd "$PROJECT_ROOT"; then
+  echo "===== SUMMARY ====="
+  echo "STATUS=FAIL"
+  echo "STEP=project_root"
+  exit 1
+fi
 mkdir -p logs reports run data/import data/export
 export PYTHONPATH="$PROJECT_ROOT/src"
 
@@ -40,7 +45,8 @@ if [ "$STOP_RC" != "0" ]; then
   exit 1
 fi
 
-.venv-browser/bin/python run/hz24_collect_increment_links.py > logs/hz24_batch.log 2>&1
+.venv-browser/bin/python run/hz24_collect_increment_links_v2.py \
+  > logs/hz24_batch.log 2>&1
 COLLECT_RC=$?
 
 if [ "$OLD_STATE" = "active" ]; then
