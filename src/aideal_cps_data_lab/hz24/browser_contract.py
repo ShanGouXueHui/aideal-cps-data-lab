@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 
-TAB_ROLE_SELECTOR = '[role="radio"], label.el-radio-button, [role="tab"]'
-TAB_CLASS_PATTERN = "radio|tab"
 ONE_KEY_TEXT = "一键领链"
 PRICE_TEXT = "到手价"
 COMMISSION_TEXT = "佣金"
@@ -15,11 +13,12 @@ NOT_PROMOTABLE_TEXTS = ("暂不支持推广", "不可推广")
 DISABLED_CARD_CLASS = "card-disabled"
 
 TAB_SCORE_SCRIPT = """
-el => {
+(el, options) => {
   const cls = typeof el.className === 'string' ? el.className : '';
+  const classPattern = new RegExp(options.classPattern, 'i');
   let score = 0;
-  if (el.matches('[role="radio"], label.el-radio-button, [role="tab"]')) score += 30;
-  if (/radio|tab/i.test(cls)) score += 20;
+  if (el.matches(options.roleSelector)) score += 30;
+  if (classPattern.test(cls)) score += 20;
   if (getComputedStyle(el).cursor === 'pointer') score += 10;
   return score;
 }
