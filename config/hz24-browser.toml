@@ -1,4 +1,4 @@
-schema_version = "hz24-browser/v5"
+schema_version = "hz24-browser/v6"
 cdp_scheme = "http"
 cdp_host = "127.0.0.1"
 cdp_port = 19228
@@ -8,6 +8,9 @@ trusted_link_scheme = "https"
 trusted_link_host = "u.jd.com"
 item_scheme = "https"
 item_host = "item.jd.com"
+image_scheme = "https"
+image_host = "img14.360buyimg.com"
+image_path_prefix = "/n1/"
 tab_role_selector = '[role="radio"], label.el-radio-button, [role="tab"]'
 tab_class_pattern = "radio|tab"
 default_timeout_ms = 20000
