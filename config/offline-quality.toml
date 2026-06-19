@@ -1,0 +1,27 @@
+schema_version = "offline-quality/v1"
+report_path = "reports/offline_quality_latest.json"
+entrypoints = [
+  "run/hz22_prepare_all_product_page.py",
+  "run/hz23_scan_current_page.py",
+  "run/hz23_finalize_round.py",
+  "run/hz24_collect_increment_links_v2.py",
+  "run/hz24_audit_product_tabs.py",
+  "scripts/hz23_refresh_manifest_gates.py",
+  "scripts/hz23_quarantine_unsafe_source_rows.py",
+  "scripts/hz24_build_increment_queue.py",
+  "scripts/hz24_analyze_tab_overlap.py",
+  "scripts/hz24_validate_increment_outcomes.py",
+  "scripts/hz24_migrate_legacy_sold_out.py",
+  "scripts/backfill_commission_products_mysql.py",
+  "scripts/verify_commission_mysql_post_migration.py"
+]
+test_patterns = [
+  "test_hz24_*.py",
+  "test_candidate_validation.py",
+  "test_commission_product_domain.py",
+  "test_data_lab_config.py",
+  "test_mysql_repository.py",
+  "test_mysql_batch_repository_contract.py",
+  "test_mysql_batch_repository_v2.py",
+  "test_backfill_execution_gate.py"
+]
