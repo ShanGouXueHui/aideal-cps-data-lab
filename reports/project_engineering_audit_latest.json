@@ -1,6 +1,6 @@
 {
-  "blocker_count": 420,
-  "files_scanned": 248,
+  "blocker_count": 391,
+  "files_scanned": 250,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -33,14 +33,6 @@
       "path": "run/hz11_high_commission_probe.py",
       "severity": "blocker",
       "symbol": "dom_snapshot"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 174,
-      "path": "run/hz11_high_commission_probe.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -171,14 +163,6 @@
       "symbol": "cycle_high_commission"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 1447,
-      "path": "run/hz11_rank_worker.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 1447,
@@ -246,14 +230,6 @@
       "category": "hardcoded_url",
       "detail": "https://item.jd.com/",
       "line": 440,
-      "path": "run/hz12_product_all_full_collector.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 597,
       "path": "run/hz12_product_all_full_collector.py",
       "severity": "blocker",
       "symbol": ""
@@ -395,14 +371,6 @@
       "symbol": "stop_required"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 327,
-      "path": "run/hz13_multi_channel_collector.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 327,
@@ -451,14 +419,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 411,
-      "path": "run/hz14_all_product_full_collector.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 411,
@@ -478,14 +438,6 @@
       "category": "hardcoded_url",
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 106,
-      "path": "run/hz15_jump_pages_collector.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 203,
       "path": "run/hz15_jump_pages_collector.py",
       "severity": "blocker",
       "symbol": ""
@@ -531,14 +483,6 @@
       "symbol": "build_page_sequence"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 129,
-      "path": "run/hz15_jump_pages_collector_v3_no_reset.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 129,
@@ -569,14 +513,6 @@
       "path": "run/hz15_jump_pages_collector_v4_no_reset.py",
       "severity": "blocker",
       "symbol": "ensure_product_list_without_reset"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 126,
-      "path": "run/hz15_jump_pages_collector_v4_no_reset.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -619,14 +555,6 @@
       "symbol": "ensure_product_list_without_reset"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 200,
-      "path": "run/hz15_jump_pages_collector_v5_no_reset.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 200,
@@ -643,26 +571,10 @@
       "symbol": "build_page_sequence"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:",
-      "line": 137,
-      "path": "run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:",
       "line": 137,
       "path": "run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 80,
-      "path": "run/hz16_short_url_diag.py",
       "severity": "blocker",
       "symbol": ""
     },
@@ -678,14 +590,6 @@
       "category": "hardcoded_url",
       "detail": "https://item.jd.com/",
       "line": 105,
-      "path": "run/hz17_recover_short_url_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 145,
       "path": "run/hz17_recover_short_url_page.py",
       "severity": "blocker",
       "symbol": ""
@@ -731,26 +635,10 @@
       "symbol": "fresh_candidates"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 151,
-      "path": "run/hz18_card_click_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 151,
       "path": "run/hz18_card_click_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 94,
-      "path": "run/hz19_visual_probe_failed_sku.py",
       "severity": "blocker",
       "symbol": ""
     },
@@ -795,14 +683,6 @@
       "symbol": "fresh_candidates"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 183,
-      "path": "run/hz20_mouse_click_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 183,
@@ -835,26 +715,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 256,
-      "path": "run/hz21_strict_card_dom_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 256,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 129,
-      "path": "run/hz22_prepare_all_product_page.py",
       "severity": "blocker",
       "symbol": ""
     },
@@ -923,14 +787,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "0",
-      "line": 178,
-      "path": "run/hz23_finalize_round.py",
-      "severity": "blocker",
-      "symbol": "untrusted_promotion_url_count"
-    },
-    {
       "category": "duplicate_implementation",
       "detail": "run/hz23_scan_current_page.py:67, run/hz23_finalize_round.py:66",
       "line": 67,
@@ -945,14 +801,6 @@
       "path": "run/hz23_scan_current_page.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 92,
-      "path": "run/hz23_scan_current_page.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -995,14 +843,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 240,
-      "path": "run/hz24_audit_product_tabs.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 240,
@@ -1025,14 +865,6 @@
       "path": "run/hz24_inspect_tab_pool_structure.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 159,
-      "path": "run/hz24_inspect_tab_pool_structure.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -2715,14 +2547,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "['https://union.jd.com/openplatform/console/openMngApi', 'https://union.jd.com/', 'https://jingfen.jd.com/', 'https://prodev.m.jd.com/mall/active/2LifKZwNDLSJwL2QLhY9ub4Jv6ah/index.html']",
-      "line": 22,
-      "path": "scripts/jingfen_auth_probe.py",
-      "severity": "blocker",
-      "symbol": "DEFAULT_URLS"
-    },
-    {
       "category": "hardcoded_url",
       "detail": "https://union.jd.com/openplatform/console/openMngApi",
       "line": 23,
@@ -2763,28 +2587,12 @@
       "symbol": "cookie_summary"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "''",
-      "line": 88,
-      "path": "scripts/jingfen_auth_probe.py",
-      "severity": "blocker",
-      "symbol": "final_url"
-    },
-    {
       "category": "long_function",
       "detail": "85 lines exceeds 80",
       "line": 102,
       "path": "scripts/jingfen_auth_probe.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "['https://union.jd.com/openplatform/console/openMngApi', 'https://union.jd.com/', 'https://jingfen.jd.com/']",
-      "line": 23,
-      "path": "scripts/jingfen_login_capture.py",
-      "severity": "blocker",
-      "symbol": "DEFAULT_URLS"
     },
     {
       "category": "hardcoded_url",
@@ -2817,14 +2625,6 @@
       "path": "scripts/jingfen_login_capture.py",
       "severity": "blocker",
       "symbol": "cookie_summary"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "''",
-      "line": 79,
-      "path": "scripts/jingfen_login_capture.py",
-      "severity": "blocker",
-      "symbol": "url"
     },
     {
       "category": "long_function",
@@ -2860,19 +2660,11 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "127.0.0.1:3306",
+      "detail": "127.0.0.1",
       "line": 57,
       "path": "scripts/plan_commission_mysql_initialization.py",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "['https://jingfen.jd.com/', 'https://union.jd.com/', 'https://union.jd.com/openplatform/console/openMngApi']",
-      "line": 23,
-      "path": "scripts/probe_public_urls.py",
-      "severity": "blocker",
-      "symbol": "DEFAULT_URLS"
     },
     {
       "category": "hardcoded_url",
@@ -2908,7 +2700,7 @@
     },
     {
       "category": "hardcoded_url",
-      "detail": "SELECT COUNT(*) AS value FROM commission_products WHERE promotion_url NOT LIKE 'https://u.jd.com/%'",
+      "detail": "https://u.jd.com/%",
       "line": 74,
       "path": "scripts/verify_commission_mysql_post_migration.py",
       "severity": "blocker",
@@ -2939,30 +2731,6 @@
       "symbol": "validate_candidate"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "''",
-      "line": 16,
-      "path": "src/aideal_cps_data_lab/config.py",
-      "severity": "blocker",
-      "symbol": "database_url"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal_cps_data_lab'",
-      "line": 18,
-      "path": "src/aideal_cps_data_lab/config.py",
-      "severity": "blocker",
-      "symbol": "mysql_database"
-    },
-    {
-      "category": "long_function",
-      "detail": "93 lines exceeds 80",
-      "line": 88,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "blocker",
-      "symbol": "scan_python"
-    },
-    {
       "category": "long_function",
       "detail": "84 lines exceeds 80",
       "line": 71,
@@ -2972,7 +2740,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "Mozilla/5.0 (Linux; Android 12; M2007J3SC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36",
+      "detail": "121.0.0.0",
       "line": 25,
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
@@ -2980,7 +2748,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "detail": "121.0.0.0",
       "line": 30,
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
@@ -3204,7 +2972,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "mysql+pymysql://placeholder@127.0.0.1/aideal_cps_data_lab",
+      "detail": "127.0.0.1",
       "line": 27,
       "path": "tests/test_data_lab_config.py",
       "severity": "blocker",
@@ -8532,7 +8300,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'duplicate_definition' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'duplicate_definition' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -8541,14 +8309,6 @@
     {
       "category": "repeated_literal",
       "detail": "'large_file' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "scripts/run_engineering_scan_and_publish.sh",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'long_function' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -8636,31 +8396,31 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'hardcoded_url' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'hardcoded_url' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'hardcoded_ip' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'hardcoded_absolute_path' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
       "detail": "'large_file_line_limit' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'hardcoded_ip' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'hardcoded_absolute_path' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "severity": "warning",
@@ -8763,24 +8523,24 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T15:01:10",
+  "generated_at": "2026-06-19T15:08:21",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 114,
+    "blocker_file_count": 112,
     "category_counts": {
       "duplicate_implementation": 55,
       "hardcoded_absolute_path": 5,
-      "hardcoded_ip": 67,
-      "hardcoded_parameter": 125,
+      "hardcoded_ip": 47,
+      "hardcoded_parameter": 117,
       "hardcoded_url": 133,
       "large_file": 7,
-      "long_function": 28,
-      "repeated_literal": 675
+      "long_function": 27,
+      "repeated_literal": 674
     },
     "top_blocker_files": [
       {
-        "count": 17,
+        "count": 16,
         "path": "run/hz11_rank_worker.py"
       },
       {
@@ -8788,48 +8548,16 @@
         "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh"
       },
       {
-        "count": 10,
+        "count": 9,
         "path": "run/hz12_product_all_full_collector.py"
       },
       {
-        "count": 8,
-        "path": "scripts/jingfen_auth_probe.py"
-      },
-      {
-        "count": 7,
+        "count": 6,
         "path": "run/hz14_all_product_full_collector.py"
       },
       {
-        "count": 7,
+        "count": 6,
         "path": "run/hz23_finalize_round.py"
-      },
-      {
-        "count": 7,
-        "path": "scripts/jingfen_login_capture.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz11_high_commission_probe.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz13_multi_channel_collector.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz15_jump_pages_collector_v5_no_reset.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz18_card_click_recover_page.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz20_mouse_click_recover_page.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz24_audit_product_tabs.py"
       },
       {
         "count": 6,
@@ -8861,19 +8589,35 @@
       },
       {
         "count": 6,
+        "path": "scripts/jingfen_auth_probe.py"
+      },
+      {
+        "count": 6,
         "path": "tests/test_hz23_finalize_gate.py"
       },
       {
         "count": 5,
-        "path": "run/hz15_jump_pages_collector_v4_no_reset.py"
+        "path": "run/hz11_high_commission_probe.py"
       },
       {
         "count": 5,
-        "path": "run/hz21_strict_card_dom_recover_page.py"
+        "path": "run/hz13_multi_channel_collector.py"
       },
       {
         "count": 5,
-        "path": "run/hz23_scan_current_page.py"
+        "path": "run/hz15_jump_pages_collector_v5_no_reset.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz18_card_click_recover_page.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz20_mouse_click_recover_page.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz24_audit_product_tabs.py"
       },
       {
         "count": 5,
@@ -8893,13 +8637,29 @@
       },
       {
         "count": 5,
+        "path": "scripts/jingfen_login_capture.py"
+      },
+      {
+        "count": 5,
         "path": "tests/test_commission_product_domain.py"
       },
       {
         "count": 4,
-        "path": "run/hz15_jump_pages_collector.py"
+        "path": "run/hz15_jump_pages_collector_v4_no_reset.py"
+      },
+      {
+        "count": 4,
+        "path": "run/hz21_strict_card_dom_recover_page.py"
+      },
+      {
+        "count": 4,
+        "path": "run/hz23_scan_current_page.py"
+      },
+      {
+        "count": 4,
+        "path": "scripts/hz12_run_v4_smoke_and_report.sh"
       }
     ]
   },
-  "warning_count": 675
+  "warning_count": 674
 }
