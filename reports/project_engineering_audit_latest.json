@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 27,
-  "blocker_count": 351,
+  "active_blocker_count": 18,
+  "blocker_count": 342,
   "compatibility_blocker_count": 13,
   "files_scanned": 276,
   "findings": [
@@ -34,69 +34,6 @@
     {
       "category": "hardcoded_url",
       "detail": "https://union.jd.com/openplatform/console/openMngApi",
-      "line": 23,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/",
-      "line": 24,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://jingfen.jd.com/",
-      "line": 25,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://prodev.m.jd.com/mall/active/2LifKZwNDLSJwL2QLhY9ub4Jv6ah/index.html",
-      "line": 26,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "scripts/jingfen_auth_probe.py:50, src/aideal_cps_data_lab/jingfen/browser_helpers.py:32",
-      "line": 50,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "safe_text"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "scripts/jingfen_auth_probe.py:58, scripts/jingfen_login_capture.py:49",
-      "line": 58,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "cookie_summary"
-    },
-    {
-      "category": "long_function",
-      "detail": "85 lines exceeds 80",
-      "line": 102,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "main"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/openplatform/console/openMngApi",
       "line": 24,
       "path": "scripts/jingfen_login_capture.py",
       "scope": "active",
@@ -120,15 +57,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "scripts/jingfen_auth_probe.py:58, scripts/jingfen_login_capture.py:49",
-      "line": 49,
-      "path": "scripts/jingfen_login_capture.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "cookie_summary"
     },
     {
       "category": "long_function",
@@ -237,15 +165,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": "atomic_text"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "scripts/jingfen_auth_probe.py:50, src/aideal_cps_data_lab/jingfen/browser_helpers.py:32",
-      "line": 32,
-      "path": "src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "safe_text"
     },
     {
       "category": "duplicate_implementation",
@@ -4443,225 +4362,9 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'ceshi3.com' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "detail": "'--outdir' repeated in 4 files: scripts/jingfen_login_capture.py, scripts/probe_public_urls.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
       "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'https://union.jd.com/openplatform/console/openMngApi' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/probe_public_urls.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'https://union.jd.com/' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/probe_public_urls.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'https://jingfen.jd.com/' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/probe_public_urls.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'total_cookie_count' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'jd_cookie_count' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'auth_cookie_names' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'auth_cookie_count' repeated in 5 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'final_url' repeated in 3 files: scripts/jingfen_auth_probe.py, src/aideal_cps_data_lab/http_client.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'text_head' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'login_text_hit' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'portal_text_hit' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'product_text_hit' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--profile' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--outdir' repeated in 5 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/probe_public_urls.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--headless' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'profile=' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'headless=' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--disable-blink-features=AutomationControlled' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--no-sandbox' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'--disable-dev-shm-usage' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'summary.json' repeated in 3 files: scripts/jingfen_auth_probe.py, scripts/probe_public_urls.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'screenshot_error' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'html_error' repeated in 4 files: scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'.meta.json' repeated in 3 files: scripts/jingfen_auth_probe.py, src/aideal_cps_data_lab/http_client.py, src/aideal_cps_data_lab/jingfen/auth_probe.py",
-      "line": 0,
-      "path": "scripts/jingfen_auth_probe.py",
+      "path": "scripts/jingfen_login_capture.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -4669,6 +4372,105 @@
     {
       "category": "repeated_literal",
       "detail": "'--timeout' repeated in 3 files: scripts/jingfen_login_capture.py, scripts/probe_public_urls.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'auth_cookie_count' repeated in 4 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'text_head' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'login_text_hit' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'portal_text_hit' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'product_text_hit' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'--headless' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'--profile' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'profile=' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'headless=' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'screenshot_error' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "scripts/jingfen_login_capture.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'html_error' repeated in 3 files: scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
       "line": 0,
       "path": "scripts/jingfen_login_capture.py",
       "scope": "active",
@@ -5838,7 +5640,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'domcontentloaded' repeated in 32 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz22_prepare_all_product_page.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "detail": "'domcontentloaded' repeated in 31 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz22_prepare_all_product_page.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
       "line": 0,
       "path": "run/hz11_high_commission_probe.py",
       "scope": "historical",
@@ -6099,15 +5901,6 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'%Y%m%d_%H%M%S' repeated in 9 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/http_client.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
-      "line": 0,
-      "path": "run/hz11_rank_worker.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
       "detail": "'https://union.jd.com/proManager/index?pageNo={page_no}' repeated in 3 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, scripts/hz14_probe_direct_pageno_navigation.sh",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
@@ -6172,6 +5965,15 @@
     {
       "category": "repeated_literal",
       "detail": "'last_event' repeated in 6 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, scripts/hz12_restart_v8_from_existing_latest.sh",
+      "line": 0,
+      "path": "run/hz11_rank_worker.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'%Y%m%d_%H%M%S' repeated in 8 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, scripts/jingfen_login_capture.py, src/aideal_cps_data_lab/http_client.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -9338,28 +9140,28 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 40,
-  "generated_at": "2026-06-19T19:54:29",
+  "gate_blocker_count": 31,
+  "generated_at": "2026-06-19T19:54:44",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 99,
+    "blocker_file_count": 97,
     "blocker_scope_counts": {
-      "active": 27,
+      "active": 18,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 48,
+      "duplicate_implementation": 44,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 44,
       "hardcoded_parameter": 112,
-      "hardcoded_url": 126,
+      "hardcoded_url": 122,
       "large_file": 4,
-      "long_function": 12,
-      "repeated_literal": 686
+      "long_function": 11,
+      "repeated_literal": 673
     },
     "top_blocker_files": [
       {
@@ -9373,10 +9175,6 @@
       {
         "count": 9,
         "path": "run/hz12_product_all_full_collector.py"
-      },
-      {
-        "count": 7,
-        "path": "scripts/jingfen_auth_probe.py"
       },
       {
         "count": 6,
@@ -9413,10 +9211,6 @@
       {
         "count": 6,
         "path": "tests/test_hz23_finalize_gate.py"
-      },
-      {
-        "count": 5,
-        "path": "scripts/jingfen_login_capture.py"
       },
       {
         "count": 5,
@@ -9460,6 +9254,10 @@
       },
       {
         "count": 4,
+        "path": "scripts/jingfen_login_capture.py"
+      },
+      {
+        "count": 4,
         "path": "run/hz21_strict_card_dom_recover_page.py"
       },
       {
@@ -9481,9 +9279,13 @@
       {
         "count": 4,
         "path": "scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh"
+      },
+      {
+        "count": 4,
+        "path": "scripts/hz15_resume_jump_pages_4_67_slow.sh"
       }
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 686
+  "warning_count": 673
 }
