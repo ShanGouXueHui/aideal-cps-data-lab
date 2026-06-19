@@ -19,6 +19,8 @@ class BrowserSettings:
     tab_settle_ms: int
     modal_poll_ms: int
     risk_markers: tuple[str, ...]
+    tab_role_selector: str = '[role="radio"], label.el-radio-button, [role="tab"]'
+    tab_class_pattern: str = "radio|tab"
 
 
 @dataclass(frozen=True, slots=True)
