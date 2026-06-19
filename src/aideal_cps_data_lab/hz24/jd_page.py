@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-import importlib.util
+import re
+from datetime import datetime, timedelta
 from typing import Any
 from urllib.parse import urlparse
 
@@ -12,22 +13,30 @@ from .browser_contract import (
     PRICE_PATTERN,
     TAB_SCORE_SCRIPT,
 )
+from .card_actions import click_card_button
+from .modal_parser import close_dialog, parse_modal
 from .settings import HZ24Settings
+
+BAD_TITLE_TOKENS = (
+    "预估收益",
+    "佣金比例",
+    "佣金",
+    "到手价",
+    "我要推广",
+    "一键领链",
+    "自营",
+    "京配",
+    "券",
+    "促销",
+    "定向",
+    "百亿补贴",
+    "好评",
+)
 
 
 class JDPageAdapter:
     def __init__(self, settings: HZ24Settings) -> None:
         self.settings = settings
-        self.hz21 = self._load_hz21()
-
-    def _load_hz21(self):
-        path = self.settings.contracts.hz21_adapter
-        spec = importlib.util.spec_from_file_location("hz21_for_hz24", str(path))
-        if spec is None or spec.loader is None:
-            raise RuntimeError("HZ21 adapter load failed")
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        return module
 
     def connect_page(self, playwright):
         browser = playwright.chromium.connect_over_cdp(
@@ -98,35 +107,73 @@ class JDPageAdapter:
         page.wait_for_timeout(self.settings.browser.tab_settle_ms)
         return True
 
+    @staticmethod
+    def _title(raw: str) -> str:
+        lines = [line.strip() for line in raw.splitlines() if line.strip()]
+        for line in lines:
+            compact = re.sub(r"\s+", "", line)
+            if len(compact) < 6 or any(token in compact for token in BAD_TITLE_TOKENS):
+                continue
+            if re.fullmatch(r"[¥￥]?\d+(?:\.\d+)?", compact):
+                continue
+            return line[:180]
+        return ""
+
+    @staticmethod
+    def _money(raw: str, pattern: str) -> str:
+        match = re.search(pattern, raw)
+        return str(match.group(1)) if match else ""
+
     def collect_cards(self, page) -> list[dict[str, Any]]:
         cards = page.evaluate(CARD_COLLECTION_SCRIPT)
         result: list[dict[str, Any]] = []
         for card in cards:
             raw = str(card.get("raw_text") or "")
-            card["title"] = self.hz21.extract_title(raw)
-            card["price"] = self.hz21.parse_money(raw, PRICE_PATTERN)
-            card["rate"] = self.hz21.parse_money(raw, COMMISSION_RATE_PATTERN)
-            card["income"] = self.hz21.parse_money(
-                raw,
-                ESTIMATED_INCOME_PATTERN,
-            )
+            card["title"] = self._title(raw)
+            card["price"] = self._money(raw, PRICE_PATTERN)
+            card["rate"] = self._money(raw, COMMISSION_RATE_PATTERN)
+            card["income"] = self._money(raw, ESTIMATED_INCOME_PATTERN)
             result.append(card)
         return result
 
     def close_dialog(self, page) -> None:
-        try:
-            self.hz21.base.close_dialog(page)
-        except Exception:
-            return
+        close_dialog(page)
 
     def click_card(self, page, card: dict[str, Any]) -> dict[str, Any]:
-        return dict(self.hz21.click_card(page, card))
+        return click_card_button(page, card)
 
     def parse_modal(self, page) -> dict[str, Any]:
-        return dict(self.hz21.parse_modal(page))
+        return parse_modal(
+            page,
+            self.settings.browser.trusted_link_scheme,
+            self.settings.browser.trusted_link_host,
+        )
 
-    def link_dates(self):
-        return self.hz21.link_dates()
+    def link_dates(self) -> tuple[str, str, str]:
+        created = datetime.now()
+        collection = self.settings.collection
+        return (
+            created.isoformat(timespec="seconds"),
+            (created + timedelta(days=collection.link_expire_days)).isoformat(
+                timespec="seconds"
+            ),
+            (created + timedelta(days=collection.refresh_after_days)).isoformat(
+                timespec="seconds"
+            ),
+        )
 
-    def normalize_image(self, value: Any) -> Any:
-        return self.hz21.base.normalize_img(value)
+    def normalize_image(self, value: Any) -> str:
+        image = str(value or "").strip()
+        if not image:
+            return ""
+        if image.startswith(("http://", "https://")):
+            return image
+        if image.startswith("//"):
+            return f"{self.settings.browser.image_scheme}:{image}"
+        if image.startswith(("jfs/", "/jfs/")):
+            browser = self.settings.browser
+            return (
+                f"{browser.image_scheme}://{browser.image_host}"
+                f"{browser.image_path_prefix}{image.lstrip('/')}"
+            )
+        return image
