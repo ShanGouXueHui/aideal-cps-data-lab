@@ -1,39 +1,16 @@
 from __future__ import annotations
 
-import json
 from collections.abc import Callable, Iterable
-from datetime import datetime
 from typing import Any
 
 from aideal_cps_data_lab.config import DataLabSettings
 from aideal_cps_data_lab.domain import CommissionProduct
 from aideal_cps_data_lab.persistence.repository import UpsertOutcome
 
-ConnectionFactory = Callable[[], Any]
+from .mysql_columns import BUSINESS_COLUMNS, history_values, stage_values
+from .mysql_metrics import count_duplicates, count_products
 
-BUSINESS_COLUMNS = (
-    "title",
-    "description",
-    "item_url",
-    "promotion_url",
-    "short_url",
-    "long_url",
-    "qr_url",
-    "jd_command",
-    "image_url",
-    "category_name",
-    "shop_name",
-    "price",
-    "coupon_price",
-    "commission_rate",
-    "estimated_commission",
-    "sales_volume",
-    "coupon_info",
-    "status",
-    "link_created_at",
-    "link_expire_at",
-    "refresh_due_at",
-)
+ConnectionFactory = Callable[[], Any]
 
 STAGE_COLUMNS = (
     "jd_sku_id",
@@ -85,12 +62,10 @@ CREATE TEMPORARY TABLE IF NOT EXISTS tmp_commission_products_stage (
 """
 
 TRUNCATE_STAGE = "TRUNCATE TABLE tmp_commission_products_stage"
-
 INSERT_STAGE = f"""
 INSERT INTO tmp_commission_products_stage ({', '.join(STAGE_COLUMNS)})
 VALUES ({', '.join(['%s'] * len(STAGE_COLUMNS))})
 """
-
 COUNT_DIFFS = """
 SELECT
   COALESCE(SUM(CASE WHEN p.jd_sku_id IS NULL THEN 1 ELSE 0 END), 0) AS inserted_count,
@@ -100,7 +75,6 @@ SELECT
 FROM tmp_commission_products_stage s
 LEFT JOIN commission_products p ON p.jd_sku_id = s.jd_sku_id
 """
-
 SELECT_CHANGED_FOR_HISTORY = f"""
 SELECT
   p.jd_sku_id,
@@ -113,7 +87,6 @@ JOIN tmp_commission_products_stage s ON s.jd_sku_id = p.jd_sku_id
 WHERE p.is_published = 0
   AND p.source_payload_hash <> s.source_payload_hash
 """
-
 UPDATE_CHANGED = f"""
 UPDATE commission_products p
 JOIN tmp_commission_products_stage s ON s.jd_sku_id = p.jd_sku_id
@@ -130,7 +103,6 @@ SET
 WHERE p.is_published = 0
   AND p.source_payload_hash <> s.source_payload_hash
 """
-
 UPDATE_UNCHANGED = """
 UPDATE commission_products p
 JOIN tmp_commission_products_stage s ON s.jd_sku_id = p.jd_sku_id
@@ -143,7 +115,6 @@ SET
   p.last_seen_at = s.last_seen_at
 WHERE p.source_payload_hash = s.source_payload_hash
 """
-
 INSERT_NEW = f"""
 INSERT INTO commission_products (
   {', '.join(STAGE_COLUMNS)},
@@ -158,30 +129,15 @@ FROM tmp_commission_products_stage s
 LEFT JOIN commission_products p ON p.jd_sku_id = s.jd_sku_id
 WHERE p.jd_sku_id IS NULL
 """
-
 INSERT_HISTORY = """
 INSERT INTO commission_product_history (
-  jd_sku_id,
-  round_id,
-  change_type,
-  before_payload,
-  after_payload,
-  before_hash,
-  after_hash,
-  changed_at
+  jd_sku_id, round_id, change_type, before_payload, after_payload,
+  before_hash, after_hash, changed_at
 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 
 class BatchMySQLCommissionProductRepository:
-    """Batch repository optimized for 2k-4k product refreshes.
-
-    Rows are loaded into a temporary staging table with executemany, compared in SQL,
-    and merged in one transaction. A changed row that is already published is rejected
-    until an explicit versioned publish workflow is implemented, preventing silent live
-    data mutation.
-    """
-
     def __init__(
         self,
         connection_factory: ConnectionFactory,
@@ -206,70 +162,20 @@ class BatchMySQLCommissionProductRepository:
         rows = list(products)
         if not rows:
             return UpsertOutcome()
-
-        skus = [row.jd_sku_id for row in rows]
-        if len(skus) != len(set(skus)):
-            raise ValueError("duplicate SKU in upsert batch")
-
+        self._require_unique(rows)
         connection = self._connection_factory()
         cursor = connection.cursor()
         try:
             connection.begin()
-            cursor.execute(CREATE_STAGE)
-            cursor.execute(TRUNCATE_STAGE)
-
-            stage_values = [self._stage_values(product, round_id, run_id) for product in rows]
-            for offset in range(0, len(stage_values), self._batch_size):
-                cursor.executemany(
-                    INSERT_STAGE,
-                    stage_values[offset : offset + self._batch_size],
-                )
-
-            cursor.execute(COUNT_DIFFS)
-            counts = cursor.fetchone() or {}
-            inserted = int(counts.get("inserted_count") or 0)
-            updated = int(counts.get("updated_count") or 0)
-            unchanged = int(counts.get("unchanged_count") or 0)
-            published_changed = int(counts.get("published_changed_count") or 0)
-
-            if inserted + updated + unchanged != len(rows):
-                raise RuntimeError("staging comparison count mismatch")
-            if published_changed:
-                raise RuntimeError(
-                    f"published_product_change_requires_publish_workflow:{published_changed}"
-                )
-
-            cursor.execute(SELECT_CHANGED_FOR_HISTORY)
-            changed_rows = list(cursor.fetchall())
-            if len(changed_rows) != updated:
-                raise RuntimeError("changed history count mismatch")
-            if changed_rows:
-                history_values = [
-                    self._history_values(row, round_id) for row in changed_rows
-                ]
-                for offset in range(0, len(history_values), self._batch_size):
-                    cursor.executemany(
-                        INSERT_HISTORY,
-                        history_values[offset : offset + self._batch_size],
-                    )
-
-            cursor.execute(UPDATE_CHANGED)
-            if int(cursor.rowcount or 0) != updated:
-                raise RuntimeError("changed update rowcount mismatch")
-
-            cursor.execute(UPDATE_UNCHANGED)
-            if int(cursor.rowcount or 0) > unchanged:
-                raise RuntimeError("unchanged update rowcount exceeds expected count")
-
-            cursor.execute(INSERT_NEW)
-            if int(cursor.rowcount or 0) != inserted:
-                raise RuntimeError("new insert rowcount mismatch")
-
+            self._load_stage(cursor, rows, round_id, run_id)
+            counts = self._read_counts(cursor, len(rows))
+            self._write_history(cursor, round_id, counts["updated"])
+            self._merge_stage(cursor, counts)
             connection.commit()
             return UpsertOutcome(
-                inserted=inserted,
-                updated=updated,
-                unchanged=unchanged,
+                inserted=counts["inserted"],
+                updated=counts["updated"],
+                unchanged=counts["unchanged"],
             )
         except Exception:
             connection.rollback()
@@ -278,66 +184,77 @@ class BatchMySQLCommissionProductRepository:
             cursor.close()
             connection.close()
 
-    def count_by_sku(self) -> int:
-        return self._scalar("SELECT COUNT(*) AS value FROM commission_products")
-
-    def duplicate_sku_count(self) -> int:
-        return self._scalar(
-            "SELECT COUNT(*) AS value FROM ("
-            "SELECT jd_sku_id FROM commission_products GROUP BY jd_sku_id HAVING COUNT(*) > 1"
-            ") AS duplicate_rows"
-        )
-
-    def _scalar(self, sql: str) -> int:
-        connection = self._connection_factory()
-        cursor = connection.cursor()
-        try:
-            cursor.execute(sql)
-            row = cursor.fetchone() or {}
-            return int(row.get("value") or 0)
-        finally:
-            cursor.close()
-            connection.close()
-
-    @staticmethod
-    def _stage_values(
-        product: CommissionProduct,
+    def _load_stage(
+        self,
+        cursor: Any,
+        rows: list[CommissionProduct],
         round_id: str,
         run_id: str,
-    ) -> tuple[Any, ...]:
-        now = datetime.now()
-        checked_at = product.last_checked_at or now
-        seen_at = product.last_seen_at or checked_at
-        first_seen_at = product.first_seen_at or seen_at
-        business = product.business_payload()
-        return (
-            product.jd_sku_id,
-            *(business.get(column) for column in BUSINESS_COLUMNS),
-            product.source_page_no,
-            round_id,
-            run_id,
-            product.source_payload_hash(),
-            product.catalog_change_count,
-            first_seen_at,
-            checked_at,
-            seen_at,
-        )
+    ) -> None:
+        cursor.execute(CREATE_STAGE)
+        cursor.execute(TRUNCATE_STAGE)
+        values = [stage_values(product, round_id, run_id) for product in rows]
+        self._executemany(cursor, INSERT_STAGE, values)
 
     @staticmethod
-    def _history_values(row: dict[str, Any], round_id: str) -> tuple[Any, ...]:
-        before = {
-            column: row.get(f"before_{column}") for column in BUSINESS_COLUMNS
+    def _read_counts(cursor: Any, row_count: int) -> dict[str, int]:
+        cursor.execute(COUNT_DIFFS)
+        raw = cursor.fetchone() or {}
+        counts = {
+            "inserted": int(raw.get("inserted_count") or 0),
+            "updated": int(raw.get("updated_count") or 0),
+            "unchanged": int(raw.get("unchanged_count") or 0),
+            "published_changed": int(raw.get("published_changed_count") or 0),
         }
-        after = {
-            column: row.get(f"after_{column}") for column in BUSINESS_COLUMNS
-        }
-        return (
-            row.get("jd_sku_id"),
-            round_id,
-            "update",
-            json.dumps(before, ensure_ascii=False, default=str, sort_keys=True),
-            json.dumps(after, ensure_ascii=False, default=str, sort_keys=True),
-            row.get("before_hash"),
-            row.get("after_hash"),
-            datetime.now(),
-        )
+        if counts["inserted"] + counts["updated"] + counts["unchanged"] != row_count:
+            raise RuntimeError("staging comparison count mismatch")
+        if counts["published_changed"]:
+            raise RuntimeError(
+                "published_product_change_requires_publish_workflow:"
+                f"{counts['published_changed']}"
+            )
+        return counts
+
+    def _write_history(self, cursor: Any, round_id: str, expected: int) -> None:
+        cursor.execute(SELECT_CHANGED_FOR_HISTORY)
+        changed_rows = list(cursor.fetchall())
+        if len(changed_rows) != expected:
+            raise RuntimeError("changed history count mismatch")
+        values = [history_values(row, round_id) for row in changed_rows]
+        self._executemany(cursor, INSERT_HISTORY, values)
+
+    @staticmethod
+    def _merge_stage(cursor: Any, counts: dict[str, int]) -> None:
+        cursor.execute(UPDATE_CHANGED)
+        if int(cursor.rowcount or 0) != counts["updated"]:
+            raise RuntimeError("changed update rowcount mismatch")
+        cursor.execute(UPDATE_UNCHANGED)
+        if int(cursor.rowcount or 0) > counts["unchanged"]:
+            raise RuntimeError("unchanged update rowcount exceeds expected count")
+        cursor.execute(INSERT_NEW)
+        if int(cursor.rowcount or 0) != counts["inserted"]:
+            raise RuntimeError("new insert rowcount mismatch")
+
+    def _executemany(
+        self,
+        cursor: Any,
+        statement: str,
+        values: list[tuple[Any, ...]],
+    ) -> None:
+        for offset in range(0, len(values), self._batch_size):
+            cursor.executemany(
+                statement,
+                values[offset : offset + self._batch_size],
+            )
+
+    def count_by_sku(self) -> int:
+        return count_products(self._connection_factory)
+
+    def duplicate_sku_count(self) -> int:
+        return count_duplicates(self._connection_factory)
+
+    @staticmethod
+    def _require_unique(rows: list[CommissionProduct]) -> None:
+        skus = [row.jd_sku_id for row in rows]
+        if len(skus) != len(set(skus)):
+            raise ValueError("duplicate SKU in upsert batch")
