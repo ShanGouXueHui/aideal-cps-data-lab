@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 5,
-  "blocker_count": 329,
+  "active_blocker_count": 3,
+  "blocker_count": 327,
   "compatibility_blocker_count": 13,
   "files_scanned": 279,
   "findings": [
@@ -30,24 +30,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:32, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_io.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "atomic_text"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:32, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
-      "line": 32,
-      "path": "src/aideal_cps_data_lab/hz24/repository.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "atomic_text"
     },
     {
       "category": "duplicate_implementation",
@@ -8924,21 +8906,21 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 18,
-  "generated_at": "2026-06-19T20:01:06",
+  "gate_blocker_count": 16,
+  "generated_at": "2026-06-19T20:04:28",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 91,
+    "blocker_file_count": 89,
     "blocker_scope_counts": {
-      "active": 5,
+      "active": 3,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 43,
+      "duplicate_implementation": 41,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 43,
       "hardcoded_parameter": 112,
