@@ -1,0 +1,3 @@
+schema_version = "hz24-domain/v1"
+special_tabs = ["\u8d85\u8865\u7206\u54c1", "\u9650\u91cf\u9ad8\u4f63", "\u79d2\u6740\u4e13\u533a", "\u5b9a\u5411\u9ad8\u4f63", "\u7c89\u4e1d\u7231\u4e70"]
+allowed_unavailable_reasons = ["sold_out", "delisted", "not_promotable"]
