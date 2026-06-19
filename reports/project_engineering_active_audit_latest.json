@@ -1,14 +1,14 @@
 {
-  "active_blocker_count": 84,
+  "active_blocker_count": 78,
   "active_warning_count": 235,
   "category_counts": {
-    "duplicate_implementation": 12,
+    "duplicate_implementation": 10,
     "hardcoded_absolute_path": 2,
     "hardcoded_ip": 5,
-    "hardcoded_parameter": 5,
+    "hardcoded_parameter": 3,
     "hardcoded_url": 45,
     "large_file": 3,
-    "long_function": 12,
+    "long_function": 10,
     "repeated_literal": 235
   },
   "findings": [
@@ -229,42 +229,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal-cps-product-feed/v1'",
-      "line": 12,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "EXPECTED_FEED_SCHEMA"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal-cps-product-feed-manifest/v1'",
-      "line": 13,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "EXPECTED_MANIFEST_SCHEMA"
-    },
-    {
-      "category": "long_function",
-      "detail": "151 lines exceeds 80",
-      "line": 53,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "validate_candidate"
-    },
-    {
-      "category": "long_function",
-      "detail": "84 lines exceeds 80",
-      "line": 71,
-      "path": "src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "scan_shell"
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.0.0.0",
       "line": 25,
@@ -290,24 +254,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": "unsafe_reason"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:8, src/aideal_cps_data_lab/hz24/queue_builder.py:19",
-      "line": 19,
-      "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "load_json"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:8, src/aideal_cps_data_lab/hz24/queue_builder.py:19",
-      "line": 8,
-      "path": "src/aideal_cps_data_lab/hz24/repository.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "load_json"
     },
     {
       "category": "large_file",
@@ -2885,7 +2831,7 @@
     }
   ],
   "full_files_scanned": 262,
-  "generated_at": "2026-06-19T19:18:12",
+  "generated_at": "2026-06-19T19:25:08",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
