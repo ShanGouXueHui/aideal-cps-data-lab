@@ -74,12 +74,17 @@ class JDPageAdapter:
     def click_tab(self, page, name: str) -> bool:
         locator = page.get_by_text(name, exact=True)
         candidates: list[tuple[int, int]] = []
+        score_options = {
+            "roleSelector": self.settings.browser.tab_role_selector,
+            "classPattern": self.settings.browser.tab_class_pattern,
+        }
         for index in range(locator.count()):
             item = locator.nth(index)
             try:
                 if not item.is_visible():
                     continue
-                candidates.append((int(item.evaluate(TAB_SCORE_SCRIPT)), index))
+                score = int(item.evaluate(TAB_SCORE_SCRIPT, score_options))
+                candidates.append((score, index))
             except Exception:
                 continue
         if not candidates:
