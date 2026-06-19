@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 57,
-  "blocker_count": 381,
+  "active_blocker_count": 54,
+  "blocker_count": 378,
   "compatibility_blocker_count": 13,
   "files_scanned": 262,
   "findings": [
@@ -363,33 +363,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal-cps-product-feed/v1'",
-      "line": 12,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "EXPECTED_FEED_SCHEMA"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal-cps-product-feed-manifest/v1'",
-      "line": 13,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "EXPECTED_MANIFEST_SCHEMA"
-    },
-    {
-      "category": "long_function",
-      "detail": "151 lines exceeds 80",
-      "line": 53,
-      "path": "src/aideal_cps_data_lab/application/candidate_validation.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "validate_candidate"
     },
     {
       "category": "long_function",
@@ -4282,6 +4255,15 @@
     {
       "category": "repeated_literal",
       "detail": "'files_scanned' repeated in 4 files: scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/service.py",
+      "line": 0,
+      "path": "scripts/engineering_scan_active.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'active_blocker_count' repeated in 3 files: scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, src/aideal_cps_data_lab/engineering_audit/service.py",
       "line": 0,
       "path": "scripts/engineering_scan_active.py",
       "scope": "active",
@@ -9473,15 +9455,15 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 70,
-  "generated_at": "2026-06-19T19:17:42",
+  "gate_blocker_count": 67,
+  "generated_at": "2026-06-19T19:23:00",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 109,
+    "blocker_file_count": 108,
     "blocker_scope_counts": {
-      "active": 57,
+      "active": 54,
       "compatibility": 13,
       "historical": 274,
       "support": 37
@@ -9490,11 +9472,11 @@
       "duplicate_implementation": 53,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 47,
-      "hardcoded_parameter": 116,
+      "hardcoded_parameter": 114,
       "hardcoded_url": 131,
       "large_file": 7,
-      "long_function": 22,
-      "repeated_literal": 671
+      "long_function": 21,
+      "repeated_literal": 672
     },
     "top_blocker_files": [
       {
@@ -9620,5 +9602,5 @@
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 671
+  "warning_count": 672
 }
