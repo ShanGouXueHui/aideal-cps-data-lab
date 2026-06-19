@@ -1,0 +1,67 @@
+name: Offline Quality
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "run/**"
+      - "scripts/**"
+      - "config/**"
+      - "tests/**"
+      - ".github/workflows/offline-quality.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "run/**"
+      - "scripts/**"
+      - "config/**"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-quality:
+    runs-on: ubuntu-latest
+    env:
+      AIDEAL_OFFLINE_TEST: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install offline test dependencies
+        run: python -m pip install -e ".[browser,mysql]"
+      - name: Compile active Python paths
+        run: |
+          python -m compileall -q src
+          python -m py_compile \
+            run/hz22_prepare_all_product_page.py \
+            run/hz23_scan_current_page.py \
+            run/hz23_finalize_round.py \
+            run/hz24_collect_increment_links_v2.py \
+            run/hz24_audit_product_tabs.py \
+            scripts/hz23_refresh_manifest_gates.py \
+            scripts/hz23_quarantine_unsafe_source_rows.py \
+            scripts/hz24_build_increment_queue.py \
+            scripts/hz24_analyze_tab_overlap.py \
+            scripts/hz24_validate_increment_outcomes.py \
+            scripts/backfill_commission_products_mysql.py \
+            scripts/verify_commission_mysql_post_migration.py
+      - name: Run pure offline unit tests
+        run: |
+          python -m unittest discover -s tests -p "test_hz24_*.py"
+          python -m unittest discover -s tests -p "test_candidate_validation.py"
+          python -m unittest discover -s tests -p "test_commission_product_domain.py"
+          python -m unittest discover -s tests -p "test_data_lab_config.py"
+          python -m unittest discover -s tests -p "test_mysql_repository.py"
+          python -m unittest discover -s tests -p "test_mysql_batch_repository_contract.py"
+          python -m unittest discover -s tests -p "test_mysql_batch_repository_v2.py"
+          python -m unittest discover -s tests -p "test_backfill_execution_gate.py"
+      - name: Assert no live JD execution
+        run: |
+          test ! -e run/jd_live_called.flag
+          echo "JD_LIVE_CALLED=false"
