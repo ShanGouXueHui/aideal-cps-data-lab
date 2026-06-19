@@ -1,5 +1,5 @@
 {
-  "blocker_count": 820,
+  "blocker_count": 821,
   "files_scanned": 243,
   "findings": [
     {
@@ -6203,6 +6203,14 @@
       "symbol": "TAB_SCORE_SCRIPT"
     },
     {
+      "category": "long_function",
+      "detail": "81 lines exceeds 80",
+      "line": 85,
+      "path": "src/aideal_cps_data_lab/hz24/settings.py",
+      "severity": "blocker",
+      "symbol": "load_settings"
+    },
+    {
       "category": "large_file",
       "detail": "343 lines exceeds 300",
       "line": 1,
@@ -11939,7 +11947,7 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T14:38:20",
+  "generated_at": "2026-06-19T14:38:48",
   "schema_version": "engineering-audit/v1",
   "status": "FAIL",
   "warning_count": 672
