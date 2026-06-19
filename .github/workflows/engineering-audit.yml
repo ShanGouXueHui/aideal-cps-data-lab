@@ -1,0 +1,51 @@
+name: Engineering Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "run/**"
+      - "scripts/**"
+      - "config/**"
+      - "tests/**"
+      - ".github/workflows/engineering-audit.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "run/**"
+      - "scripts/**"
+      - "config/**"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile audit modules
+        run: |
+          PYTHONPATH=src python -m py_compile \
+            scripts/engineering_scan_full.py \
+            src/aideal_cps_data_lab/engineering_audit/*.py
+      - name: Run engineering audit
+        id: audit
+        continue-on-error: true
+        run: PYTHONPATH=src python scripts/engineering_scan_full.py
+      - name: Upload engineering audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-engineering-audit
+          path: reports/project_engineering_audit_latest.json
+          if-no-files-found: error
+      - name: Enforce blockers
+        if: steps.audit.outcome != 'success'
+        run: exit 1
