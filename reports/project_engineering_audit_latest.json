@@ -1,8 +1,8 @@
 {
-  "active_blocker_count": 14,
-  "blocker_count": 338,
+  "active_blocker_count": 9,
+  "blocker_count": 333,
   "compatibility_blocker_count": 13,
-  "files_scanned": 276,
+  "files_scanned": 277,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -32,55 +32,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_url",
-      "detail": "https://example.invalid/product",
-      "line": 24,
-      "path": "scripts/make_sample_export.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://example.invalid/material",
-      "line": 25,
-      "path": "scripts/make_sample_export.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "127.0.0.1",
       "line": 57,
       "path": "scripts/plan_commission_mysql_initialization.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://jingfen.jd.com/",
-      "line": 24,
-      "path": "scripts/probe_public_urls.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/",
-      "line": 25,
-      "path": "scripts/probe_public_urls.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/openplatform/console/openMngApi",
-      "line": 26,
-      "path": "scripts/probe_public_urls.py",
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
@@ -9005,15 +8960,15 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 27,
-  "generated_at": "2026-06-19T19:54:55",
+  "gate_blocker_count": 22,
+  "generated_at": "2026-06-19T19:58:05",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 96,
+    "blocker_file_count": 94,
     "blocker_scope_counts": {
-      "active": 14,
+      "active": 9,
       "compatibility": 13,
       "historical": 274,
       "support": 37
@@ -9023,7 +8978,7 @@
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 44,
       "hardcoded_parameter": 112,
-      "hardcoded_url": 119,
+      "hardcoded_url": 114,
       "large_file": 4,
       "long_function": 10,
       "repeated_literal": 662
