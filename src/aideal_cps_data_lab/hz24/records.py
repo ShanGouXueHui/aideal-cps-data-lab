@@ -67,24 +67,27 @@ def unavailable_reason(
     return None
 
 
-def save_unavailable(
+def build_unavailable_row(
     settings: HZ24Settings,
     card: dict[str, Any],
     queue_row: dict[str, Any],
     tab: str,
     reason: str,
-) -> None:
+    *,
+    observed_at: str | None = None,
+) -> dict[str, Any]:
     sku = str(card.get("sku") or "")
+    browser = settings.browser
     row = {
         "schema_version": settings.contracts.unavailable_schema,
         "status": "unavailable",
         "reason": reason,
-        "observed_at": timestamp(),
+        "observed_at": observed_at or timestamp(),
         "worker_name": settings.contracts.worker_name,
         "sku": sku,
         "title": card.get("title"),
         "item_url": card.get("itemUrl")
-        or f"https://{settings.browser.item_host}/{sku}.html",
+        or f"{browser.item_scheme}://{browser.item_host}/{sku}.html",
         "source_tab": tab,
         "source_tabs": queue_row.get("source_tabs") or [tab],
         "structure_sha256": queue_row.get("structure_sha256"),
@@ -93,6 +96,17 @@ def save_unavailable(
         row,
         tuple(key for key in row if key != "record_sha256"),
     )
+    return row
+
+
+def save_unavailable(
+    settings: HZ24Settings,
+    card: dict[str, Any],
+    queue_row: dict[str, Any],
+    tab: str,
+    reason: str,
+) -> None:
+    row = build_unavailable_row(settings, card, queue_row, tab, reason)
     upsert_jsonl_by_sku(settings.contracts.unavailable_file, row)
 
 
@@ -107,6 +121,7 @@ def build_linked_row(
 ) -> dict[str, Any]:
     sku = str(card.get("sku") or "")
     created, expire, refresh = page_adapter.link_dates()
+    browser = settings.browser
     row: dict[str, Any] = {
         "schema_version": settings.contracts.linked_schema,
         "status": "ok",
@@ -120,7 +135,7 @@ def build_linked_row(
         "sku": sku,
         "title": card.get("title"),
         "item_url": card.get("itemUrl")
-        or f"https://{settings.browser.item_host}/{sku}.html",
+        or f"{browser.item_scheme}://{browser.item_host}/{sku}.html",
         "image_url": page_adapter.normalize_image(card.get("imageUrl")),
         "price": card.get("price"),
         "commission_rate": card.get("rate"),
