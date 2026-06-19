@@ -17,8 +17,6 @@ def build_connection_factory(settings: DataLabSettings) -> Callable[[], Any]:
         connection_args: dict[str, Any] = {
             "read_default_file": str(option_file),
             "read_default_group": "client",
-            "host": "127.0.0.1",
-            "port": 3306,
             "database": settings.mysql_database,
         }
     elif settings.database_url:
