@@ -29,6 +29,8 @@ concurrency:
 jobs:
   offline-quality:
     runs-on: ubuntu-latest
+    outputs:
+      report_b64: ${{ steps.summary.outputs.report_b64 }}
     env:
       AIDEAL_OFFLINE_TEST: "1"
       PYTHONPATH: src
@@ -49,6 +51,39 @@ jobs:
         env:
           AIDEAL_DEPENDENCY_INSTALL_OUTCOME: ${{ steps.dependencies.outcome }}
         run: python scripts/run_offline_quality.py
+      - name: Export offline quality diagnostic
+        id: summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import base64
+          import json
+          import os
+          from pathlib import Path
+
+          path = Path("reports/offline_quality_latest.json")
+          if path.exists():
+              data = json.loads(path.read_text(encoding="utf-8"))
+          else:
+              data = {"status": "MISSING", "runner_error": "report_missing"}
+          compact = {
+              "status": data.get("status"),
+              "git_head": data.get("git_head"),
+              "checks": data.get("checks") or {},
+              "tests_run": data.get("tests_run"),
+              "test_failure_count": data.get("test_failure_count"),
+              "test_error_count": data.get("test_error_count"),
+              "compile_failures": data.get("compile_failures") or [],
+              "runner_error": str(data.get("runner_error") or "")[-4000:],
+              "test_output_tail": str(data.get("test_output_tail") or "")[-6000:],
+          }
+          encoded = base64.b64encode(
+              json.dumps(compact, ensure_ascii=False).encode("utf-8")
+          ).decode("ascii")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as stream:
+              stream.write("report_b64=" + encoded + "\n")
+          print(json.dumps(compact, ensure_ascii=False, sort_keys=True))
+          PY
       - name: Upload offline quality report
         if: always()
         continue-on-error: true
@@ -84,3 +119,24 @@ jobs:
       - name: Enforce offline quality result
         if: steps.quality.outcome != 'success'
         run: exit 1
+
+  offline-diagnostic:
+    needs: offline-quality
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print offline quality diagnostic
+        env:
+          REPORT_B64: ${{ needs.offline-quality.outputs.report_b64 }}
+        run: |
+          python - <<'PY'
+          import base64
+          import os
+
+          value = os.environ.get("REPORT_B64", "")
+          print(
+              base64.b64decode(value).decode("utf-8")
+              if value
+              else '{"status":"MISSING","runner_error":"job_output_missing"}'
+          )
+          PY
