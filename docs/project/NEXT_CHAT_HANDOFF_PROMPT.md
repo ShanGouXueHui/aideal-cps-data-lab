@@ -1,55 +1,65 @@
 # 新对话无缝启动 Prompt
 
-你现在继续 AIdeal CPS / 智省优选 - 京东联盟佣金商品 Data Lab 商用化项目。请完整阅读本 Prompt，并优先读取 GitHub 文档和最新运行报告，不要从头重新设计。
+你现在继续 **AIdeal CPS / 智省优选——京东联盟佣金商品 Data Lab 商用化项目**。不要从头重新设计。请优先读取 GitHub 中已经沉淀的权威文档、代码和最新运行报告，再继续推进。
 
-## 一、交互规则
+## 一、交互与执行规则
 
 1. 使用中文，职业化、直接、结构化。
-2. 优先直接读取和修改 GitHub；不要依赖聊天短期上下文。
-3. 每次写 GitHub 后，必须使用 `fetch_file`、`fetch_commit` 或服务器 `git log` 二次确认真正落库。
-4. GitHub 连接器写入不稳定时，改用服务器本地 `git add / commit / push`。
-5. Linux 命令必须 copy-paste 可执行，不使用 `set -e`。
-6. 命令分小步，不塞巨大脚本。
-7. 日志写入 `logs/`、`reports/` 或 `docs/debug/` 并提交关键摘要；不要让用户复制大段日志。
-8. 用户通常只贴最终 `SUMMARY`；你直接从 GitHub读取详细日志和报告。
-9. 自动化测试不能调用 JD live API；JD live 只用于真实浏览器流量或显式手工 smoke。
+2. 优先直接读取和修改 GitHub，不依赖聊天短期上下文。
+3. 用户明确要求：代码、长脚本和大段命令不要打印在对话中；工程修改直接通过 GitHub 增删改查。
+4. 每次写 GitHub 后，必须通过 `fetch_file`、`fetch_commit` 或服务器 `git log` 二次确认真正落库。
+5. GitHub 连接器确实无法完成时，才改用服务器本地 `git add / commit / push`。
+6. 日志写入 `logs/`、`reports/` 或 `docs/debug/`；关键摘要提交 GitHub，用户不复制大段日志。
+7. 用户通常只返回最终 `SUMMARY`；详细运行结果直接从 GitHub读取。
+8. Linux 命令不使用 `set -e`，也不要使用会退出当前登录 Shell 的 `|| exit 1`。
+9. 自动化测试不得调用 JD live API；JD live 只用于真实浏览器流量或明确手工 smoke。
 10. 不使用 Codex CLI，除非用户重新明确要求。
-11. 不用话术掩盖工程问题；价格、佣金、推广链接和数据一致性必须通过机制验证。
+11. 不用话术掩盖工程问题；价格、佣金、推广链接和数据一致性必须由代码、数据约束和报告验证。
+12. 京东登录或验证可以由用户手工完成；账号密码、Cookie、Profile、Token、私钥和数据库密码不得进入 GitHub。
 
-## 二、必须先读取的 GitHub 文档
+## 二、第一步必须读取
 
-仓库：
+Data Lab 仓库：
 
 ```text
-https://github.com/ShanGouXueHui/aideal-cps-data-lab
+ShanGouXueHui/aideal-cps-data-lab
 ```
 
 按顺序读取：
 
 ```text
+docs/DOCUMENT_AUTHORITY.md
 docs/project/CURRENT_PROJECT_CONTEXT.md
+docs/status/COMMERCIALIZATION_STATUS_20260619.md
 docs/project/ENVIRONMENT_AND_WORKING_RULES.md
-docs/ops/DL2_HZ23_COMMERCIAL_OBSERVATION_PLAN.md
+docs/project/CODE_CHANGE_GUARDRAILS.md
+docs/project/CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md
 docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
 docs/architecture/commission_data_mysql_v1.sql
-docs/contracts/AIDEAL_CPS_COMMISSION_PRODUCTS_SIMPLE_ACCESS.md
-scripts/hz23_observation_daemon.sh
-scripts/hz23_mainline_refresh.sh
-scripts/hz23_status.sh
-run/hz23_scan_current_page.py
-run/hz23_finalize_round.py
+```
+
+再读取最新运行事实：
+
+```text
+reports/hz23_round_latest.json
+data/export/aideal_cps_products_commercial_candidate_manifest.json
+reports/hz24_tab_overlap_analysis_latest.json
+reports/hz24_increment_collection_latest.json
+reports/project_engineering_audit_latest.json
 ```
 
 AIdeal CPS 消费端仓库：
 
 ```text
-https://github.com/ShanGouXueHui/aideal-cps
+ShanGouXueHui/aideal-cps
 ```
 
 至少读取：
 
 ```text
+docs/integration/DATA_LAB_INTEGRATION_AUTHORITY.md
 docs/integration/DATA_LAB_COMMISSION_PRODUCTS_SIMPLE.md
+docs/integration/DATA_LAB_MYSQL_SYNC_V1.md
 app/models/product.py
 app/services/product_service.py
 app/services/promotion_service.py
@@ -57,7 +67,16 @@ app/core/db.py
 app/core/config.py
 ```
 
-发生冲突时优先级：最新可验证运行报告 > CURRENT_PROJECT_CONTEXT > MySQL V1 架构 > HZ23 观察计划 > 旧 JSONL/rsync 文档。
+发生冲突时：
+
+```text
+最新可验证代码和运行报告
+> CURRENT_PROJECT_CONTEXT
+> COMMERCIALIZATION_STATUS_20260619
+> CODE_CHANGE_GUARDRAILS
+> MySQL V1 架构
+> 旧实验文档
+```
 
 ## 三、环境
 
@@ -68,9 +87,10 @@ app/core/config.py
 用户：cpsdata
 目录：/home/cpsdata/projects/aideal-cps-data-lab
 GitHub：ShanGouXueHui/aideal-cps-data-lab
+分支：main
 Chrome CDP：127.0.0.1:19228
-noVNC：http://121.41.111.36:18772/vnc.html?autoconnect=true&resize=scale
 systemd：aideal-hz23-observer.service
+noVNC：http://121.41.111.36:18772/vnc.html?autoconnect=true&resize=scale
 ```
 
 ### AIdeal CPS 生产
@@ -80,155 +100,191 @@ systemd：aideal-hz23-observer.service
 用户：deploy
 目录：/home/deploy/projects/aideal-cps
 GitHub：ShanGouXueHui/aideal-cps
-本地 MySQL：aideal_cps
+分支：main
+systemd：aideal.service
+MySQL：aideal_cps
 ```
 
-### 开发环境
+### 新加坡开发环境
 
 ```text
 服务器：43.106.55.255
 用户：cpsdev
-角色：新加坡开发环境
+角色：开发环境
 ```
 
-杭州 `8.136.28.6` 是 AIdeal CPS 生产环境，不要混淆。
+杭州 `8.136.28.6` 是 AIdeal CPS 生产环境，不得与新加坡开发环境混淆。
 
-## 四、已完成的核心设计与进展
+## 四、当前准确进展
 
-1. 京东联盟“商品推广 -> 全部商品”4000 池自动选择已解决。
-2. 严格分页跳转、SKU 卡片定位、真实 mouse/pointer 点击“一键领链”已解决。
-3. 错误风控词“购物无忧”已移除；只检测强验证信号。
-4. HZ22 page 61-67 全部完成：
+### HZ23“全部商品”已通过
+
+权威轮次：
 
 ```text
+round_id=20260615_100135
 commercial_segment_complete=true
-completed_pages=[61,62,63,64,65,66,67]
+completed_pages=1..67
 unfinished_pages=[]
 stop_reason=null
-新增成功=162
-失败=5
-可信推广短链 SKU=2385
+scanned_total=4020
+last_known_sku_count=3357
 ```
 
-5. 当前准确口径：京东展示池 4000 条，已验证推广链接 2385 条，不是 4000 条全部入库。
-6. HZ23 已安装为 `aideal-hz23-observer.service`：
-   - 09:30-21:30 执行；
-   - 夜间休息；
-   - 每日随机探针；
-   - 完整轮次成功后随机 3-5 天再刷新；
-   - 商品等待 3-7 秒；
-   - 页面等待 90-210 秒；
-   - 强风控安全停止。
-7. 首次日常探针已成功并提交：
+注意口径：
 
 ```text
-commit=7aeb147
-时间=2026-06-14 10:05
-page=50
-scanned=59
+4000 = 京东展示池
+4020 = 67 页扫描卡片位总数
+3665 = 完整轮次可见唯一 SKU
+3698 = catalog index SKU
+3357 = 已有可信推广链接 SKU
+3304 = 通过全部候选门禁的商用候选
+```
+
+候选 manifest：
+
+```text
+row_count=3304
+duplicate_sku_count=0
+candidate_integrity_ready=true
+successful_probes=2
+observation_hours=68.88
+observation_ready=true
+gate_failures=[]
+commercial_enabled=false
+```
+
+HZ20 历史污染已隔离，当前 `unsafe_hz20=0`。
+
+### HZ24 专题 Tab 测重已通过
+
+页面 Tab：
+
+```text
+超补爆品
+限量高佣
+秒杀专区
+定向高佣
+粉丝爱买
+全部商品
+```
+
+5 个专题 Tab 均为滚动稳定的单页池，每个 50 个 SKU。
+
+测重结果：
+
+```text
+membership_count=250
+union_sku_count=239
+cross_tab_duplicate_membership_count=11
+overlap_with_3304_candidate=18
+increment_queue=221
+```
+
+已完成跨 Tab、当前候选、可信推广链接和断点结果四层 SKU 去重。
+
+### HZ24 增量采集当前停止
+
+权威报告：
+
+```text
+queue_count=221
+success_count=72
+pending_count=149
+stop_reason=item_fail_fuse
 risk=[]
-prepare_ok=true
-scan_ok=true
 ```
 
-8. 首次 HZ23 1-67 页完整观察轮次原计划：
+5 个连续失败样本均显示：
 
 ```text
-2026-06-15 09:56 server-local
+已抢光
+card-disabled
 ```
 
-截至上一对话归档时，GitHub 尚未出现完整轮次完成报告，不能宣称商用观察已通过。
+因此不是验证、风控或重复抓取，而是旧状态模型没有区分 unavailable 商品。
 
-## 五、当前需要先做的状态确认
-
-新对话第一步不要启动新任务，先从 GitHub确认最新状态：
-
-1. 查 `main` 最新 commits；
-2. 查是否出现：
+当前正确处理原则：
 
 ```text
-reports/hz23_round_latest.json
-reports/hz23_round_<round_id>_latest.json
-data/export/aideal_cps_products_commercial_candidate_manifest.json
-docs/ops/DL2_HZ23_ROUND_<round_id>.md
+linked=72，必须保留，不重复抓取
+unavailable_sold_out=5，需要迁移为终态
+可行动 pending 预计约 144
 ```
 
-3. 判断：
+在 HZ24 v2 分类和工程审计治理完成前，**不要启动、重启或继续 HZ24 增量采集**。
+
+## 五、当前最高优先级：工程治理
+
+用户新增强制规则：
+
+1. 修改文件前必须扫描重复定义、相邻模块已有实现和硬编码；
+2. 一律不允许散落硬编码环境地址、路径、端口、URL、Tab、selector、等待时间和阈值；
+3. 大文件必须分层解耦；
+4. Python/Shell 单文件超过 300 行、单函数超过 80 行，必须先拆分再修改；
+5. 正式代码只维护 main 一个主流分支。
+
+全仓审计：
 
 ```text
-commercial_segment_complete
-completed_pages
-unfinished_pages
-scanned_total
-catalog_new
-catalog_changed
-catalog_unchanged
-last_known_sku_count
-stop_page
-stop_reason
-duplicate_sku_count
-observation_ready
+reports/project_engineering_audit_latest.json
+files_scanned=255
+blocker_count=390
 ```
 
-4. 如果 GitHub 没有完整轮次报告，说明尚未完成或尚未提交；再给一个最小状态发布命令，不让用户贴大日志。
-5. 如果完整轮次成功，再判断是否满足 48-72 小时、两个探针和 >=3900 扫描覆盖；不满足则继续观察。
-
-## 六、目标商用数据库架构
-
-当前 Data Lab 尚无正式 MySQL，但最终方案已固定：
+审计包含大量 HZ11-HZ22 历史实验脚本问题。新对话第一项工程任务不是盲目修 390 个文件，而是：
 
 ```text
-数据库：aideal_cps_data_lab
-主表：commission_products
-轮次表：commission_refresh_runs
-历史表：commission_product_history
-发布版本表：commission_publish_versions
-只读视图：v_published_commission_products
+识别当前活跃运行路径
+-> 将历史实验代码标记为只读归档
+-> 修复活跃 HZ23/HZ24/MySQL 路径 blocker
+-> 抽取公共模块
+-> 收口配置
+-> 拆分大文件/长函数
+-> 全量复扫
 ```
 
-AIdeal CPS 使用短生命周期 SSH Tunnel 定时同步：
+严禁在旧大文件上继续叠加新逻辑。
+
+## 六、MySQL 商用架构
+
+Data Lab 目标数据库：
 
 ```text
-AIdeal CPS 127.0.0.1:13306
-  -> ssh -L
+aideal_cps_data_lab
+```
+
+对象：
+
+```text
+commission_products
+commission_refresh_runs
+commission_product_history
+commission_publish_versions
+v_published_commission_products
+```
+
+网络与消费架构：
+
+```text
+AIdeal CPS 本地 127.0.0.1:13306
+  -> 短生命周期 SSH Tunnel
 Data Lab 127.0.0.1:3306
 ```
 
-连接约定：
+要求：
 
-```text
-SSH_HOST=121.41.111.36
-SSH_USER=cpsdata
-SSH_KEY=/home/deploy/.ssh/aideal_data_lab_ro_ed25519
-DATA_LAB_DB_NAME=aideal_cps_data_lab
-DATA_LAB_DB_USER=aideal_cps_ro
-```
+- Data Lab MySQL 不开放公网；
+- 使用只读同步用户；
+- Tunnel 只在同步任务期间存在；
+- AIdeal CPS 用户请求只读本地 MySQL；
+- 不允许用户请求实时访问 Data Lab；
+- JSONL 永久保留为快照、回填、审计和灾备。
 
-密码仅存在服务器 Secret/.env，不进入 GitHub。
+代码准备已完成较多，但数据库尚未实际初始化。
 
-不开放公网 3306，不使用长期常驻 Tunnel。用户请求始终读取 AIdeal CPS 本地 `aideal_cps.products`。
-
-## 七、编程规范
-
-1. 分层解耦：browser/collector、application/service、domain、persistence/repository、contracts、ops、tests。
-2. Playwright selector 不散落到业务层。
-3. JSONL 和 MySQL 实现同一个 Repository 接口。
-4. 配置与 Secret 分离；所有写入/发布/sync feature flag 默认 false。
-5. 金额使用 Decimal/DECIMAL。
-6. SKU 唯一，写入幂等，使用事务和唯一约束。
-7. 未变化只更新时间戳；变化才写 history。
-8. 连续两次完整成功轮次未出现才 inactive，不物理删除。
-9. 可以本机备份，但正式代码只有 main 一个主流分支。
-10. 自动化测试不调用 JD live。
-11. 任何正式切换必须有备份、回滚、审计和一致性报告。
-
-## 八、下一步执行计划
-
-### 若 HZ23 观察尚未通过
-
-1. 继续读取 GitHub报告；
-2. 修复观察服务或补第二次探针；
-3. 并行准备 MySQL，但保持：
+所有开关保持：
 
 ```text
 DATA_LAB_DB_WRITE_ENABLED=false
@@ -237,20 +293,65 @@ DATA_LAB_PUBLISH_ENABLED=false
 DATA_LAB_SYNC_ENABLED=false
 ```
 
-4. 创建 Data Lab MySQL migration、model、Repository、JSONL 回填器和一致性测试；
-5. 创建 AIdeal CPS Tunnel 和同步器代码，但不正式启用。
+## 七、下一步执行顺序
 
-### 若 HZ23 观察全部通过
+严格顺序：
 
-1. 备份当前 JSONL/state/history；
-2. 初始化 Data Lab MySQL；
-3. 回填 2385+ 可信商品；
-4. 验证行数、SKU 去重、短链、价格和佣金；
-5. 开启 dual-write；
-6. 运行一个完整刷新轮次并做 JSONL/MySQL 一致性校验；
-7. 发布只读视图；
-8. AIdeal CPS dry-run 同步；
-9. 灰度接入；
-10. 正式商用。
+1. 直接从 GitHub读取工程审计详细结果；
+2. 建立活跃主线文件清单和历史归档清单；
+3. 修复活跃路径重复定义、重复实现和硬编码；
+4. 拆分 HZ23/HZ24/MySQL 活跃大文件和长函数；
+5. 全量复扫，活跃主线 blocker 清零；
+6. 完成 HZ24 v2 `linked/unavailable/pending` 状态模型；
+7. 保留 72 条 linked，将 5 条 sold-out 迁移为 unavailable；
+8. 恢复单账号串行增量采集，只处理尚未完成且仍可推广的 SKU；
+9. 对 221 条队列完成全终态校验；
+10. 生成 HZ24 独立候选版本并与 3304 基线原子合并；
+11. 初始化 Data Lab MySQL；
+12. 幂等回填并执行二次回填验证；
+13. 开启 dual-write，但 publish/sync 仍关闭；
+14. 连续稳定运行 7 天；
+15. 第 8 天生成 publish version；
+16. AIdeal CPS dry-run 同步、灰度、正式商用。
 
-现在先直接读取 GitHub最新 commits 和 HZ23 报告，给出“已完成/未完成/风险/下一步”的明确结论，然后继续推进。不要让我重新复制历史日志。
+## 八、一周稳定运行标准
+
+稳定期开始条件：
+
+```text
+活跃主线工程 blocker 处理完成
+HZ24 队列终态完整
+最终候选 checksum/schema/hash 通过
+MySQL 初始化和回填通过
+JSONL/MySQL dual-write 已启用
+publish/sync 仍为 false
+```
+
+稳定期要求：
+
+- 连续 7 天无未解释差异；
+- SKU 无重复；
+- JSONL/MySQL 行数和 hash 一致；
+- unavailable 不进入 published；
+- 推广链接均为可信 `u.jd.com`；
+- 价格和佣金使用 Decimal；
+- 回滚测试通过；
+- 任意未解释差异导致 7 天重新计时。
+
+## 九、新对话第一条回复要求
+
+不要要求用户重新复制旧日志，也不要立即运行 JD live。
+
+先直接读取 GitHub并明确回答：
+
+```text
+1. 最新 main commits；
+2. 工程审计中活跃主线 blocker；
+3. HZ24 72 条 linked 数据是否完整；
+4. HZ24 v2 unavailable 分类代码是否已落库并通过测试；
+5. 当前是否允许恢复增量采集；
+6. MySQL 初始化还缺哪些硬门禁；
+7. 本轮准备直接修改哪些 GitHub 文件。
+```
+
+然后直接推进 GitHub 修改，并在每次写入后进行二次确认。
