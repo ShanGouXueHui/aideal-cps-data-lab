@@ -29,14 +29,18 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def atomic_json(path: Path, payload: dict[str, Any]) -> None:
+def atomic_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True),
-        encoding="utf-8",
-    )
+    temporary.write_text(text, encoding="utf-8")
     temporary.replace(path)
+
+
+def atomic_json(path: Path, payload: dict[str, Any]) -> None:
+    atomic_text(
+        path,
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True),
+    )
 
 
 def upsert_jsonl_by_sku(path: Path, row: dict[str, Any]) -> None:
@@ -51,10 +55,7 @@ def upsert_jsonl_by_sku(path: Path, row: dict[str, Any]) -> None:
         json.dumps(indexed[sku], ensure_ascii=False, sort_keys=True) + "\n"
         for sku in sorted(indexed)
     )
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(data, encoding="utf-8")
-    temporary.replace(path)
+    atomic_text(path, data)
 
 
 def successful_skus(path: Path) -> set[str]:
