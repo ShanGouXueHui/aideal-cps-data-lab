@@ -1,14 +1,14 @@
 {
-  "active_blocker_count": 52,
-  "active_warning_count": 223,
+  "active_blocker_count": 51,
+  "active_warning_count": 227,
   "category_counts": {
     "duplicate_implementation": 5,
     "hardcoded_absolute_path": 2,
-    "hardcoded_ip": 2,
+    "hardcoded_ip": 1,
     "hardcoded_parameter": 1,
     "hardcoded_url": 40,
     "long_function": 2,
-    "repeated_literal": 223
+    "repeated_literal": 227
   },
   "findings": [
     {
@@ -34,15 +34,6 @@
       "detail": "/usr/bin/bash",
       "line": 44,
       "path": "scripts/hz23_install_service.sh",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 57,
-      "path": "scripts/plan_commission_mysql_initialization.py",
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
@@ -1156,7 +1147,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'duplicate_sku_count' repeated in 14 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_status.sh, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/backfill.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'duplicate_sku_count' repeated in 15 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_status.sh, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/backfill.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/application/mysql_post_migration.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -1777,6 +1768,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'database_name' repeated in 3 files: scripts/plan_commission_mysql_initialization.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
+      "line": 0,
+      "path": "scripts/plan_commission_mysql_initialization.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'candidate_file_present' repeated in 3 files: scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py",
       "line": 0,
       "path": "scripts/plan_commission_mysql_initialization.py",
@@ -1840,7 +1840,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'v_published_commission_products' repeated in 3 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py",
+      "detail": "'v_published_commission_products' repeated in 4 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
       "line": 0,
       "path": "scripts/validate_commission_mysql_ddl.py",
       "scope": "active",
@@ -1849,7 +1849,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'commission_products' repeated in 3 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py",
+      "detail": "'commission_products' repeated in 4 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
       "line": 0,
       "path": "scripts/validate_commission_mysql_ddl.py",
       "scope": "active",
@@ -1858,7 +1858,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'commission_refresh_runs' repeated in 3 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py",
+      "detail": "'commission_refresh_runs' repeated in 4 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
       "line": 0,
       "path": "scripts/validate_commission_mysql_ddl.py",
       "scope": "active",
@@ -1867,7 +1867,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'commission_product_history' repeated in 3 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py",
+      "detail": "'commission_product_history' repeated in 4 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
       "line": 0,
       "path": "scripts/validate_commission_mysql_ddl.py",
       "scope": "active",
@@ -1876,7 +1876,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'commission_publish_versions' repeated in 3 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py",
+      "detail": "'commission_publish_versions' repeated in 4 files: scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
       "line": 0,
       "path": "scripts/validate_commission_mysql_ddl.py",
       "scope": "active",
@@ -1885,7 +1885,16 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'jd_sku_id' repeated in 12 files: scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_landed_validation.py",
+      "detail": "'mysql_connection_not_configured' repeated in 3 files: scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py",
+      "line": 0,
+      "path": "scripts/verify_commission_mysql_payload_hashes.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'jd_sku_id' repeated in 13 files: scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_post_migration.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_landed_validation.py",
       "line": 0,
       "path": "scripts/verify_commission_mysql_payload_hashes.py",
       "scope": "active",
@@ -1978,6 +1987,24 @@
       "detail": "'source_round_id' repeated in 10 files: scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_landed_validation.py",
       "line": 0,
       "path": "scripts/verify_commission_mysql_payload_hashes.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'SELECT COUNT(*) AS value FROM commission_products' repeated in 3 files: scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py, src/aideal_cps_data_lab/persistence/mysql_metrics.py",
+      "line": 0,
+      "path": "scripts/verify_commission_mysql_post_migration.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'duplicate_sku_zero' repeated in 3 files: scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/application/mysql_post_migration.py, src/aideal_cps_data_lab/hz24/validation_service.py",
+      "line": 0,
+      "path": "scripts/verify_commission_mysql_post_migration.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -2487,8 +2514,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 278,
-  "generated_at": "2026-06-19T19:58:43",
+  "full_files_scanned": 279,
+  "generated_at": "2026-06-19T19:59:47",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
