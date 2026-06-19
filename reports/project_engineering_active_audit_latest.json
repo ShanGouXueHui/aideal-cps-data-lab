@@ -1,10 +1,10 @@
 {
-  "active_blocker_count": 78,
+  "active_blocker_count": 76,
   "active_warning_count": 235,
   "category_counts": {
     "duplicate_implementation": 10,
     "hardcoded_absolute_path": 2,
-    "hardcoded_ip": 5,
+    "hardcoded_ip": 3,
     "hardcoded_parameter": 3,
     "hardcoded_url": 45,
     "large_file": 3,
@@ -224,24 +224,6 @@
       "detail": "https://u.jd.com/%",
       "line": 74,
       "path": "scripts/verify_commission_mysql_post_migration.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "121.0.0.0",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/http_client.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "121.0.0.0",
-      "line": 30,
-      "path": "src/aideal_cps_data_lab/http_client.py",
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
@@ -2831,7 +2813,7 @@
     }
   ],
   "full_files_scanned": 262,
-  "generated_at": "2026-06-19T19:25:08",
+  "generated_at": "2026-06-19T19:26:19",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
