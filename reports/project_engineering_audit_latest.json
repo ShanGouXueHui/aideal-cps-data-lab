@@ -1,6 +1,6 @@
 {
   "blocker_count": 391,
-  "files_scanned": 250,
+  "files_scanned": 252,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -4892,6 +4892,14 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'candidate_file' repeated in 3 files: run/hz23_finalize_round.py, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/hz24/audit_settings.py",
+      "line": 0,
+      "path": "run/hz23_finalize_round.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'source_page_no' repeated in 9 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
@@ -5124,7 +5132,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'candidate_manifest' repeated in 6 files: scripts/backfill_commission_products_mysql.py, scripts/hz23_check_commercial_execution.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, tests/test_backfill_execution_gate.py",
+      "detail": "'candidate_manifest' repeated in 7 files: scripts/backfill_commission_products_mysql.py, scripts/hz23_check_commercial_execution.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, src/aideal_cps_data_lab/hz24/audit_settings.py, tests/test_backfill_execution_gate.py",
       "line": 0,
       "path": "scripts/backfill_commission_products_mysql.py",
       "severity": "warning",
@@ -8523,7 +8531,7 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T15:08:21",
+  "generated_at": "2026-06-19T15:09:41",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
@@ -8536,7 +8544,7 @@
       "hardcoded_url": 133,
       "large_file": 7,
       "long_function": 27,
-      "repeated_literal": 674
+      "repeated_literal": 675
     },
     "top_blocker_files": [
       {
@@ -8661,5 +8669,5 @@
       }
     ]
   },
-  "warning_count": 674
+  "warning_count": 675
 }
