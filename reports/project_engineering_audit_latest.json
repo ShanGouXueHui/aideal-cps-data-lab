@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 323,
   "compatibility_blocker_count": 0,
-  "files_scanned": 289,
+  "files_scanned": 290,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -3021,7 +3021,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'generated_at' repeated in 19 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py",
+      "detail": "'generated_at' repeated in 20 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, src/aideal_cps_data_lab/quality/offline_runner.py",
       "line": 0,
       "path": "scripts/engineering_scan_active.py",
       "scope": "active",
@@ -3030,7 +3030,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'schema_version' repeated in 22 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
+      "detail": "'schema_version' repeated in 23 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
       "line": 0,
       "path": "scripts/engineering_scan_active.py",
       "scope": "active",
@@ -3642,7 +3642,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'git_head' repeated in 3 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh",
+      "detail": "'git_head' repeated in 4 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, src/aideal_cps_data_lab/quality/offline_runner.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -6459,6 +6459,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'rev-parse' repeated in 3 files: scripts/hz12_check_product_all_result.sh, scripts/hz12_recover_v5_strict_title_report.sh, src/aideal_cps_data_lab/quality/offline_runner.py",
+      "line": 0,
+      "path": "scripts/hz12_check_product_all_result.sh",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'latest_log' repeated in 13 files: scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh",
       "line": 0,
       "path": "scripts/hz12_check_product_all_result.sh",
@@ -8952,7 +8961,7 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-19T20:31:49",
+  "generated_at": "2026-06-19T20:33:43",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
@@ -8970,7 +8979,7 @@
       "hardcoded_url": 112,
       "large_file": 4,
       "long_function": 9,
-      "repeated_literal": 671
+      "repeated_literal": 672
     },
     "top_blocker_files": [
       {
@@ -9096,5 +9105,5 @@
     ]
   },
   "support_blocker_count": 38,
-  "warning_count": 671
+  "warning_count": 672
 }
