@@ -141,48 +141,27 @@ def recommended_step(
     return "no_increment"
 
 
-def run_overlap_analysis(settings: HZ24Settings | None = None) -> int:
-    settings = settings or load_settings()
-    structure_path = settings.root / STRUCTURE_PATH
-    candidate_path = settings.root / CANDIDATE_PATH
-    manifest_path = settings.root / MANIFEST_PATH
-    report_path = settings.root / REPORT_PATH
-    raw = structure_path.read_bytes() if structure_path.exists() else b""
-    structure = load_json(structure_path)
-    manifest = load_json(manifest_path)
-    candidate_skus = load_jsonl_skus(candidate_path)
-    source_path = settings.root / str(manifest.get("source_file") or "")
-    trusted_skus = trusted_source_skus(source_path, settings)
-    tab_map = {
-        str(row.get("tab_name") or ""): row
-        for row in structure.get("tabs") or []
-        if isinstance(row, dict)
-    }
-    tabs = settings.special_tabs
-    tab_sets, per_tab = build_tab_analysis(
-        tab_map,
-        tabs,
-        candidate_skus,
-        trusted_skus,
-    )
-    union_special = set().union(*tab_sets.values()) if tab_sets else set()
-    checks = build_checks(
-        structure_path,
-        candidate_path,
-        manifest,
-        source_path,
-        tab_map,
-        tab_sets,
-        tabs,
-        candidate_skus,
-    )
+def build_result(
+    structure: dict,
+    structure_raw: bytes,
+    checks: dict[str, bool],
+    source_path: Path,
+    candidate_skus: set[str],
+    trusted_skus: set[str],
+    tab_sets: dict[str, set[str]],
+    per_tab: list[dict[str, Any]],
+    tabs: tuple[str, ...],
+) -> dict[str, Any]:
     ready = all(checks.values())
+    union_special = set().union(*tab_sets.values()) if tab_sets else set()
     membership_count = sum(len(value) for value in tab_sets.values())
-    result = {
+    return {
         "schema_version": "aideal-hz24-tab-overlap-analysis/v2",
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "structure_generated_at": structure.get("generated_at"),
-        "structure_sha256": hashlib.sha256(raw).hexdigest() if raw else "",
+        "structure_sha256": (
+            hashlib.sha256(structure_raw).hexdigest() if structure_raw else ""
+        ),
         "structure_global_ok": structure.get("ok") is True,
         "structure_global_risk": structure.get("risk") or [],
         "ok": ready,
@@ -225,12 +204,63 @@ def run_overlap_analysis(settings: HZ24Settings | None = None) -> int:
             trusted_skus,
         ),
     }
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = report_path.with_suffix(report_path.suffix + ".tmp")
+
+
+def write_result(path: Path, result: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(
         json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True),
         encoding="utf-8",
     )
-    temporary.replace(report_path)
+    temporary.replace(path)
+
+
+def run_overlap_analysis(settings: HZ24Settings | None = None) -> int:
+    settings = settings or load_settings()
+    structure_path = settings.root / STRUCTURE_PATH
+    candidate_path = settings.root / CANDIDATE_PATH
+    manifest_path = settings.root / MANIFEST_PATH
+    report_path = settings.root / REPORT_PATH
+    structure_raw = structure_path.read_bytes() if structure_path.exists() else b""
+    structure = load_json(structure_path)
+    manifest = load_json(manifest_path)
+    candidate_skus = load_jsonl_skus(candidate_path)
+    source_path = settings.root / str(manifest.get("source_file") or "")
+    trusted_skus = trusted_source_skus(source_path, settings)
+    tab_map = {
+        str(row.get("tab_name") or ""): row
+        for row in structure.get("tabs") or []
+        if isinstance(row, dict)
+    }
+    tabs = settings.special_tabs
+    tab_sets, per_tab = build_tab_analysis(
+        tab_map,
+        tabs,
+        candidate_skus,
+        trusted_skus,
+    )
+    checks = build_checks(
+        structure_path,
+        candidate_path,
+        manifest,
+        source_path,
+        tab_map,
+        tab_sets,
+        tabs,
+        candidate_skus,
+    )
+    result = build_result(
+        structure,
+        structure_raw,
+        checks,
+        source_path,
+        candidate_skus,
+        trusted_skus,
+        tab_sets,
+        per_tab,
+        tabs,
+    )
+    write_result(report_path, result)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
-    return 0 if ready else 1
+    return 0 if result["ok"] else 1
