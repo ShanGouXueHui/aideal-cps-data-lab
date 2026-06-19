@@ -2,7 +2,7 @@
   "active_blocker_count": 48,
   "blocker_count": 372,
   "compatibility_blocker_count": 13,
-  "files_scanned": 262,
+  "files_scanned": 263,
   "findings": [
     {
       "category": "large_file",
@@ -5181,7 +5181,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'SELECT COUNT(*) AS value FROM commission_products' repeated in 3 files: scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
+      "detail": "'SELECT COUNT(*) AS value FROM commission_products' repeated in 4 files: scripts/verify_commission_mysql_post_migration.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_metrics.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
       "line": 0,
       "path": "scripts/verify_commission_mysql_post_migration.py",
       "scope": "active",
@@ -5301,6 +5301,15 @@
       "detail": "'source_tabs' repeated in 4 files: src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/tab_runner.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'SELECT COUNT(*) AS value FROM (SELECT jd_sku_id FROM commission_products GROUP BY jd_sku_id HAVING COUNT(*) > 1) AS duplicate_rows' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_metrics.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -9402,7 +9411,7 @@
     }
   ],
   "gate_blocker_count": 61,
-  "generated_at": "2026-06-19T19:28:00",
+  "generated_at": "2026-06-19T19:28:24",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
@@ -9422,7 +9431,7 @@
       "hardcoded_url": 131,
       "large_file": 7,
       "long_function": 20,
-      "repeated_literal": 672
+      "repeated_literal": 673
     },
     "top_blocker_files": [
       {
@@ -9548,5 +9557,5 @@
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 672
+  "warning_count": 673
 }
