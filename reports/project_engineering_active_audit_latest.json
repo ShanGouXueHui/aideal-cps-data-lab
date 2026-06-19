@@ -1,14 +1,33 @@
 {
-  "active_blocker_count": 43,
-  "active_warning_count": 224,
+  "active_blocker_count": 45,
+  "active_warning_count": 225,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_ip": 1,
+    "hardcoded_parameter": 2,
     "hardcoded_url": 39,
     "long_function": 1,
-    "repeated_literal": 224
+    "repeated_literal": 225
   },
   "findings": [
+    {
+      "category": "hardcoded_parameter",
+      "detail": "'.el-dialog:visible, .ant-modal:visible, [role=dialog]:visible'",
+      "line": 7,
+      "path": "src/aideal_cps_data_lab/hz24/modal_parser.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "DIALOG_SELECTOR"
+    },
+    {
+      "category": "hardcoded_parameter",
+      "detail": "'.el-dialog__close, .ant-modal-close, [aria-label=Close], [aria-label=关闭]'",
+      "line": 8,
+      "path": "src/aideal_cps_data_lab/hz24/modal_parser.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "CLOSE_SELECTOR"
+    },
     {
       "category": "duplicate_implementation",
       "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
@@ -2297,6 +2316,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'hit_test_not_target_button' repeated in 3 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_safe_locator_click_and_run.sh, src/aideal_cps_data_lab/hz24/card_actions.py",
+      "line": 0,
+      "path": "run/hz21_strict_card_dom_recover_page.py",
+      "scope": "compatibility",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'quarantine' repeated in 5 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, src/aideal_cps_data_lab/hz23/quarantine_service.py",
       "line": 0,
       "path": "run/hz21_strict_card_dom_recover_page.py",
@@ -2413,8 +2441,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 279,
-  "generated_at": "2026-06-19T20:04:45",
+  "full_files_scanned": 281,
+  "generated_at": "2026-06-19T20:09:31",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
