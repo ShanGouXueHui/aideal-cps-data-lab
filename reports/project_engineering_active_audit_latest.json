@@ -1,6 +1,6 @@
 {
   "active_blocker_count": 93,
-  "active_warning_count": 238,
+  "active_warning_count": 242,
   "category_counts": {
     "duplicate_implementation": 14,
     "hardcoded_absolute_path": 2,
@@ -9,7 +9,7 @@
     "hardcoded_url": 47,
     "large_file": 3,
     "long_function": 16,
-    "repeated_literal": 238
+    "repeated_literal": 242
   },
   "findings": [
     {
@@ -862,7 +862,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'schema_version' repeated in 21 files: run/hz23_finalize_round.py, run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_safe_reload_observer.sh, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
+      "detail": "'schema_version' repeated in 22 files: run/hz23_finalize_round.py, run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_safe_reload_observer.sh, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "severity": "warning",
@@ -870,7 +870,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'generated_at' repeated in 19 files: run/hz23_finalize_round.py, run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py",
+      "detail": "'generated_at' repeated in 20 files: run/hz23_finalize_round.py, run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "severity": "warning",
@@ -1422,7 +1422,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'tab_name' repeated in 7 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh",
+      "detail": "'tab_name' repeated in 8 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, src/aideal_cps_data_lab/hz24/structure_inspection.py",
       "line": 0,
       "path": "run/hz24_audit_product_tabs.py",
       "severity": "warning",
@@ -1430,7 +1430,31 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'browser_page_missing' repeated in 3 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, src/aideal_cps_data_lab/hz24/session.py",
+      "detail": "'browser_page_missing' repeated in 4 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, src/aideal_cps_data_lab/hz24/session.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "run/hz24_audit_product_tabs.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'body_text' repeated in 3 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "run/hz24_audit_product_tabs.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'promotion_links_generated' repeated in 3 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "run/hz24_audit_product_tabs.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'tab_not_found' repeated in 3 files: run/hz24_audit_product_tabs.py, run/hz24_inspect_tab_pool_structure.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
       "line": 0,
       "path": "run/hz24_audit_product_tabs.py",
       "severity": "warning",
@@ -1446,7 +1470,15 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'single_page_confirmed' repeated in 4 files: run/hz24_inspect_tab_pool_structure.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh",
+      "detail": "'single_page_confirmed' repeated in 5 files: run/hz24_inspect_tab_pool_structure.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_finalize_verified_special_tabs.sh, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "run/hz24_inspect_tab_pool_structure.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'single_page_confirmation_method' repeated in 3 files: run/hz24_inspect_tab_pool_structure.py, scripts/hz24_analyze_tab_overlap.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
       "line": 0,
       "path": "run/hz24_inspect_tab_pool_structure.py",
       "severity": "warning",
@@ -2662,7 +2694,7 @@
     }
   ],
   "full_files_scanned": 256,
-  "generated_at": "2026-06-19T15:24:55",
+  "generated_at": "2026-06-19T15:26:04",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
