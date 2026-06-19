@@ -1,7 +1,8 @@
-schema_version = "hz24-browser/v3"
+schema_version = "hz24-browser/v4"
 cdp_scheme = "http"
 cdp_host = "127.0.0.1"
 cdp_port = 19228
+page_scheme = "https"
 page_host = "union.jd.com"
 trusted_link_scheme = "https"
 trusted_link_host = "u.jd.com"
