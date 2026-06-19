@@ -1,4 +1,5 @@
-schema_version = "hz24-contracts/v2"
+schema_version = "hz24-contracts/v3"
+observer_service = "aideal-hz23-observer.service"
 hz21_adapter = "run/hz21_strict_card_dom_recover_page.py"
 queue_file = "data/export/hz24_special_tab_increment_latest.jsonl"
 queue_manifest_file = "data/export/hz24_special_tab_increment_manifest.json"
