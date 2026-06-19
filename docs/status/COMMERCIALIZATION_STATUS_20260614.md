@@ -1,19 +1,28 @@
 # 商用化状态快照 — 2026-06-14
 
-## 结论
+> 历史快照，不代表当前状态。当前商用状态请读取：
+>
+> ```text
+> docs/status/COMMERCIALIZATION_STATUS_20260619.md
+> docs/project/CURRENT_PROJECT_CONTEXT.md
+> ```
+>
+> 2026-06-14 之后 HZ23 已完成 1-67 页完整轮次、候选门禁已通过，本文中“完整轮次尚未完成”等结论仅保留为当日历史事实。
+
+## 当日结论
 
 ```text
 采集主链路：已通过
 HZ22 page 61-67：全部完成
 可信推广链接 SKU：2385
 HZ23 首次日常探针：通过
-HZ23 首次 1-67 完整观察轮次：尚未在 GitHub 发现完成报告
-商用观察：未最终通过
-Data Lab MySQL：尚未实施
-AIdeal CPS 正式同步：尚未启用
+HZ23 首次 1-67 完整观察轮次：当日尚未在 GitHub 发现完成报告
+商用观察：当日未最终通过
+Data Lab MySQL：当日尚未实施
+AIdeal CPS 正式同步：当日尚未启用
 ```
 
-## GitHub 已验证事实
+## GitHub 当日已验证事实
 
 ### HZ22 完整段
 
@@ -40,7 +49,7 @@ risk=[]
 ok=true
 ```
 
-### 首次完整轮次
+### 首次完整轮次的当日状态
 
 原计划：
 
@@ -48,19 +57,19 @@ ok=true
 2026-06-15 09:56 server-local
 ```
 
-截至本快照：
+截至 2026-06-14：
 
 ```text
 reports/hz23_round_latest.json = GitHub Not Found
 ```
 
-因此不能判断全量轮次已完成，也不能宣布正式商用。
+因此在当时不能判断全量轮次完成，也不能宣布正式商用。该结论已被后续 2026-06-19 状态文档取代。
 
 ## 终端断开影响判断
 
 用户终端断开不影响 systemd 后台服务。
 
-已经落到 GitHub 的首次探针可以确认完成。完整轮次是否完成必须由以下任一证据确认：
+完整轮次是否完成必须由以下证据确认：
 
 - `reports/hz23_round_latest.json`；
 - `reports/hz23_round_<round_id>_latest.json`；
@@ -68,11 +77,9 @@ reports/hz23_round_latest.json = GitHub Not Found
 - `data/export/...manifest.json`；
 - 对应 Git commit。
 
-当前这些完整轮次证据尚不存在。
+## 当日归档内容
 
-## 本次归档已完成
-
-Data Lab 新增/更新：
+Data Lab：
 
 ```text
 docs/project/CURRENT_PROJECT_CONTEXT.md
@@ -85,19 +92,18 @@ docs/contracts/AIDEAL_CPS_COMMISSION_PRODUCTS_SIMPLE_ACCESS.md
 docs/status/COMMERCIALIZATION_STATUS_20260614.md
 ```
 
-AIdeal CPS 新增/更新：
+AIdeal CPS：
 
 ```text
 docs/integration/DATA_LAB_COMMISSION_PRODUCTS_SIMPLE.md
 docs/integration/DATA_LAB_MYSQL_SYNC_V1.md
 ```
 
-## 下一步
+## 当前跳转
 
-1. 新对话先从 GitHub检查 HZ23 最新完整轮次；
-2. 如果尚未完成，不重复启动，先发布紧凑状态报告；
-3. 观察期间开始 MySQL migration、Repository、回填器和测试准备；
-4. HZ23 验收通过后执行 MySQL 回填；
-5. 开启 dual-write 并做 JSONL/MySQL 一致性验证；
-6. AIdeal CPS 通过短生命周期 SSH Tunnel 做 dry-run；
-7. 灰度后正式启用。
+后续工作不再从本文的“下一步”继续，统一读取：
+
+```text
+docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
+docs/status/COMMERCIALIZATION_STATUS_20260619.md
+```
