@@ -1,9 +1,11 @@
-schema_version = "hz24-browser/v2"
+schema_version = "hz24-browser/v3"
+cdp_scheme = "http"
 cdp_host = "127.0.0.1"
 cdp_port = 19228
 page_host = "union.jd.com"
 trusted_link_scheme = "https"
 trusted_link_host = "u.jd.com"
+item_scheme = "https"
 item_host = "item.jd.com"
 default_timeout_ms = 20000
 connect_timeout_ms = 15000
