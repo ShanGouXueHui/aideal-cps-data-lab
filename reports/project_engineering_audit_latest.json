@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 323,
   "compatibility_blocker_count": 0,
-  "files_scanned": 290,
+  "files_scanned": 291,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -8961,7 +8961,7 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-19T20:33:43",
+  "generated_at": "2026-06-19T20:36:31",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
