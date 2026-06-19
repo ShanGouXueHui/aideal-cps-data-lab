@@ -1,13 +1,13 @@
 {
-  "active_blocker_count": 45,
-  "active_warning_count": 225,
+  "active_blocker_count": 43,
+  "active_warning_count": 218,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_ip": 1,
     "hardcoded_parameter": 2,
-    "hardcoded_url": 39,
+    "hardcoded_url": 37,
     "long_function": 1,
-    "repeated_literal": 225
+    "repeated_literal": 218
   },
   "findings": [
     {
@@ -33,7 +33,7 @@
       "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
       "line": 24,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "blocker",
       "symbol": "pages"
     },
@@ -42,7 +42,7 @@
       "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44, run/hz18_card_click_recover_page.py:44",
       "line": 44,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "blocker",
       "symbol": "ensure_page"
     },
@@ -51,7 +51,7 @@
       "detail": "https://item.jd.com/",
       "line": 237,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "blocker",
       "symbol": ""
     },
@@ -60,25 +60,7 @@
       "detail": "http://127.0.0.1:19228",
       "line": 256,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:19228",
-      "line": 129,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/proManager/index?pageNo=1",
-      "line": 140,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2145,6 +2127,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'browser_page_missing' repeated in 4 files: src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/session.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'jd_union_datalab' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_candidates.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23/finalize_candidates.py",
@@ -2244,15 +2235,6 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'browser_page_missing' repeated in 3 files: src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/session.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz23/page_scan.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
       "detail": "'untrusted' repeated in 3 files: src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/validation_rules.py, src/aideal_cps_data_lab/hz24/validation_service.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
@@ -2310,7 +2292,7 @@
       "detail": "'reports/hz21_strict_card_dom_recover_latest.json' repeated in 8 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh",
       "line": 0,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
@@ -2319,7 +2301,7 @@
       "detail": "'hit_test_not_target_button' repeated in 3 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_safe_locator_click_and_run.sh, src/aideal_cps_data_lab/hz24/card_actions.py",
       "line": 0,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
@@ -2328,70 +2310,7 @@
       "detail": "'quarantine' repeated in 5 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, src/aideal_cps_data_lab/hz23/quarantine_service.py",
       "line": 0,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'.el-pagination' repeated in 10 files: run/hz22_prepare_all_product_page.py, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'.el-pagination__jump input, input.el-input__inner' repeated in 8 files: run/hz22_prepare_all_product_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'no_4000_pager' repeated in 4 files: run/hz22_prepare_all_product_page.py, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'jump_action' repeated in 4 files: run/hz22_prepare_all_product_page.py, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'risk_after_jump' repeated in 5 files: run/hz22_prepare_all_product_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'safe_all_product_4000_page' repeated in 3 files: run/hz22_prepare_all_product_page.py, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'jump_not_safe_page' repeated in 3 files: run/hz22_prepare_all_product_page.py, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
-      "line": 0,
-      "path": "run/hz22_prepare_all_product_page.py",
-      "scope": "compatibility",
+      "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
@@ -2441,8 +2360,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 281,
-  "generated_at": "2026-06-19T20:11:23",
+  "full_files_scanned": 282,
+  "generated_at": "2026-06-19T20:15:59",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
