@@ -24,8 +24,9 @@ def timestamp() -> str:
 
 def atomic_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(text, encoding="utf-8")
+    temporary = path.parent / f".{path.name}.writing"
+    with temporary.open("w", encoding="utf-8") as stream:
+        stream.write(text)
     temporary.replace(path)
 
 
