@@ -1,0 +1,38 @@
+name: HZ24 Static Checks
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/aideal_cps_data_lab/hz24/**"
+      - "run/hz24_*.py"
+      - "scripts/hz24_*.py"
+      - "scripts/hz24_*.sh"
+      - "config/hz24-*.toml"
+      - "tests/test_hz24_refactor.py"
+      - ".github/workflows/hz24-static.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Python dependency only
+        run: python -m pip install "playwright>=1.45.0"
+      - name: Compile HZ24 modules
+        run: |
+          PYTHONPATH=src python -m py_compile \
+            run/hz24_collect_increment_links.py \
+            run/hz24_collect_increment_links_v2.py \
+            scripts/hz24_validate_increment_links.py \
+            scripts/hz24_validate_increment_outcomes.py \
+            src/aideal_cps_data_lab/hz24/*.py
+      - name: Run unit tests without JD live
+        run: PYTHONPATH=src python -m unittest tests.test_hz24_refactor -v
