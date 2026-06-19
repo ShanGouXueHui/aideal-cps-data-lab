@@ -43,6 +43,10 @@ def _meaningful(value: Any) -> bool:
     return True
 
 
+def _version_literal(value: str, start: int) -> bool:
+    return start > 0 and value[start - 1] == "/"
+
+
 def constant_findings(
     tree: ast.Module,
     path: Path,
@@ -99,7 +103,7 @@ def string_findings(
             )
             continue
         ip_match = IP_RE.search(value)
-        if ip_match:
+        if ip_match and not _version_literal(value, ip_match.start()):
             findings.append(
                 Finding(
                     "blocker",
