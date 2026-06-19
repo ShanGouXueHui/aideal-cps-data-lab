@@ -1,15 +1,15 @@
 {
-  "active_blocker_count": 107,
-  "active_warning_count": 239,
+  "active_blocker_count": 94,
+  "active_warning_count": 237,
   "category_counts": {
-    "duplicate_implementation": 18,
+    "duplicate_implementation": 14,
     "hardcoded_absolute_path": 2,
-    "hardcoded_ip": 10,
-    "hardcoded_parameter": 9,
+    "hardcoded_ip": 5,
+    "hardcoded_parameter": 6,
     "hardcoded_url": 47,
     "large_file": 3,
-    "long_function": 18,
-    "repeated_literal": 239
+    "long_function": 17,
+    "repeated_literal": 237
   },
   "findings": [
     {
@@ -37,26 +37,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 256,
-      "path": "run/hz21_strict_card_dom_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 256,
       "path": "run/hz21_strict_card_dom_recover_page.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 129,
-      "path": "run/hz22_prepare_all_product_page.py",
       "severity": "blocker",
       "symbol": ""
     },
@@ -125,14 +109,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "0",
-      "line": 178,
-      "path": "run/hz23_finalize_round.py",
-      "severity": "blocker",
-      "symbol": "untrusted_promotion_url_count"
-    },
-    {
       "category": "duplicate_implementation",
       "detail": "run/hz23_scan_current_page.py:67, run/hz23_finalize_round.py:66",
       "line": 67,
@@ -147,14 +123,6 @@
       "path": "run/hz23_scan_current_page.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 92,
-      "path": "run/hz23_scan_current_page.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -197,14 +165,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 240,
-      "path": "run/hz24_audit_product_tabs.py",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 240,
@@ -227,14 +187,6 @@
       "path": "run/hz24_inspect_tab_pool_structure.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "http://127.0.0.1:19228",
-      "line": 159,
-      "path": "run/hz24_inspect_tab_pool_structure.py",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_url",
@@ -366,7 +318,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "127.0.0.1:3306",
+      "detail": "127.0.0.1",
       "line": 57,
       "path": "scripts/plan_commission_mysql_initialization.py",
       "severity": "blocker",
@@ -382,7 +334,7 @@
     },
     {
       "category": "hardcoded_url",
-      "detail": "SELECT COUNT(*) AS value FROM commission_products WHERE promotion_url NOT LIKE 'https://u.jd.com/%'",
+      "detail": "https://u.jd.com/%",
       "line": 74,
       "path": "scripts/verify_commission_mysql_post_migration.py",
       "severity": "blocker",
@@ -413,62 +365,6 @@
       "symbol": "validate_candidate"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "''",
-      "line": 16,
-      "path": "src/aideal_cps_data_lab/config.py",
-      "severity": "blocker",
-      "symbol": "database_url"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'aideal_cps_data_lab'",
-      "line": 18,
-      "path": "src/aideal_cps_data_lab/config.py",
-      "severity": "blocker",
-      "symbol": "mysql_database"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py:17, src/aideal_cps_data_lab/engineering_audit/python_scan.py:13",
-      "line": 17,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
-      "severity": "blocker",
-      "symbol": "_literal"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py:29, src/aideal_cps_data_lab/engineering_audit/python_scan.py:22",
-      "line": 29,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
-      "severity": "blocker",
-      "symbol": "_assigned_names"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py:17, src/aideal_cps_data_lab/engineering_audit/python_scan.py:13",
-      "line": 13,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "blocker",
-      "symbol": "_literal"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py:29, src/aideal_cps_data_lab/engineering_audit/python_scan.py:22",
-      "line": 22,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "blocker",
-      "symbol": "_assigned_names"
-    },
-    {
-      "category": "long_function",
-      "detail": "93 lines exceeds 80",
-      "line": 88,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "blocker",
-      "symbol": "scan_python"
-    },
-    {
       "category": "long_function",
       "detail": "84 lines exceeds 80",
       "line": 71,
@@ -478,7 +374,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "Mozilla/5.0 (Linux; Android 12; M2007J3SC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Mobile Safari/537.36",
+      "detail": "121.0.0.0",
       "line": 25,
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
@@ -486,7 +382,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "detail": "121.0.0.0",
       "line": 30,
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
@@ -710,7 +606,7 @@
     },
     {
       "category": "hardcoded_ip",
-      "detail": "mysql+pymysql://placeholder@127.0.0.1/aideal_cps_data_lab",
+      "detail": "127.0.0.1",
       "line": 27,
       "path": "tests/test_data_lab_config.py",
       "severity": "blocker",
@@ -2542,7 +2438,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'duplicate_definition' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'duplicate_definition' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -2551,14 +2447,6 @@
     {
       "category": "repeated_literal",
       "detail": "'large_file' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "scripts/run_engineering_scan_and_publish.sh",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'long_function' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -2646,7 +2534,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'hardcoded_parameter' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'hardcoded_url' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
       "severity": "warning",
@@ -2654,7 +2542,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'hardcoded_url' repeated in 4 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'hardcoded_ip' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
       "severity": "warning",
@@ -2662,15 +2550,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'hardcoded_ip' repeated in 4 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'hardcoded_absolute_path' repeated in 4 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'hardcoded_absolute_path' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_hardcoding.py",
       "severity": "warning",
@@ -2782,7 +2662,7 @@
     }
   ],
   "full_files_scanned": 249,
-  "generated_at": "2026-06-19T15:02:12",
+  "generated_at": "2026-06-19T15:03:03",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
