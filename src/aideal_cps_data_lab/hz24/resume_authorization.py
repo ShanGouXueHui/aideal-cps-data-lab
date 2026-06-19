@@ -64,6 +64,8 @@ def _current_state(settings: HZ24Settings) -> dict[str, Any]:
 def _authorization_checks(
     resume: dict[str, Any],
     current: dict[str, Any],
+    *,
+    require_pending: bool,
 ) -> dict[str, bool]:
     details = resume.get("details") or {}
     baseline_counts = resume.get("counts") or {}
@@ -90,7 +92,7 @@ def _authorization_checks(
         >= int(baseline_counts.get("unavailable") or -1),
         "pending_count_monotonic": len(pending)
         <= int(baseline_counts.get("pending") or -1),
-        "pending_remaining": bool(pending),
+        "pending_state_valid": bool(pending) if require_pending else True,
         "json_valid": current["linked_invalid"] == 0
         and current["unavailable_invalid"] == 0,
         "duplicate_sku_zero": current["linked_duplicates"] == 0
@@ -109,13 +111,19 @@ def _authorization_checks(
 
 def authorize_collection(
     settings: HZ24Settings | None = None,
+    *,
+    require_pending: bool = True,
 ) -> tuple[bool, dict[str, Any]]:
     settings = settings or load_settings()
     config = load_gate_config()
     resume = load_json(Path(str(config["resume_report"])))
     try:
         current = _current_state(settings)
-        checks = _authorization_checks(resume, current)
+        checks = _authorization_checks(
+            resume,
+            current,
+            require_pending=require_pending,
+        )
         counts = {
             "queue": len(current["queue"]),
             "linked": len(current["linked"]),
@@ -126,11 +134,12 @@ def authorize_collection(
             "queue_sha256": current["queue_sha256"],
             "baseline_git_head": resume.get("git_head"),
             "baseline_counts": resume.get("counts") or {},
+            "require_pending": require_pending,
         }
     except Exception as error:
         checks = {"authorization_evaluation_completed": False}
         counts = {}
-        details = {"error": repr(error)}
+        details = {"error": repr(error), "require_pending": require_pending}
     result = {
         "schema_version": "aideal-hz24-collection-authorization/v1",
         "authorized": all(checks.values()),
