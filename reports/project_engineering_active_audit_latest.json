@@ -524,6 +524,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'git_head' repeated in 9 files: scripts/engineering_scan_full.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_hz24_resume_authorization.py",
+      "line": 0,
+      "path": "scripts/engineering_scan_full.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'gate_blocker_count' repeated in 3 files: scripts/engineering_scan_full.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/resume_gate.py",
       "line": 0,
       "path": "scripts/engineering_scan_full.py",
@@ -1155,15 +1164,6 @@
     {
       "category": "repeated_literal",
       "detail": "'rejected' repeated in 11 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/application/backfill.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py",
-      "line": 0,
-      "path": "scripts/hz23_publish_commercial_status_v2.sh",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'git_head' repeated in 8 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -2648,7 +2648,7 @@
     }
   ],
   "full_files_scanned": 307,
-  "generated_at": "2026-06-19T22:20:11",
+  "generated_at": "2026-06-19T22:26:29",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
