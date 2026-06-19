@@ -11,6 +11,7 @@ from typing import Any
 from playwright.sync_api import sync_playwright
 
 from aideal_cps_data_lab.hz24.jd_page import JDPageAdapter
+from aideal_cps_data_lab.hz24.repository import atomic_text
 from aideal_cps_data_lab.hz24.settings import HZ24Settings, load_settings
 
 PAGE_STATE_SCRIPT = """
@@ -76,13 +77,6 @@ def load_index(path: Path) -> dict[str, Any]:
     if not isinstance(value.get("products"), dict):
         value["products"] = {}
     return value
-
-
-def atomic_text(path: Path, text: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(text, encoding="utf-8")
-    temporary.replace(path)
 
 
 def append_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
