@@ -1,27 +1,9 @@
 {
-  "active_blocker_count": 2,
-  "blocker_count": 325,
+  "active_blocker_count": 0,
+  "blocker_count": 323,
   "compatibility_blocker_count": 0,
   "files_scanned": 294,
   "findings": [
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/resume_gate.py:25, src/aideal_cps_data_lab/quality/offline_runner.py:25",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/hz24/resume_gate.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "git_head"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/resume_gate.py:25, src/aideal_cps_data_lab/quality/offline_runner.py:25",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/quality/offline_runner.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "git_head"
-    },
     {
       "category": "hardcoded_parameter",
       "detail": "'https://union.jd.com/proManager/realTimeRankings'",
@@ -9014,20 +8996,19 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 2,
-  "generated_at": "2026-06-19T20:45:34",
+  "gate_blocker_count": 0,
+  "generated_at": "2026-06-19T20:50:27",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
-  "status": "FAIL",
+  "status": "PASS",
   "summary": {
-    "blocker_file_count": 90,
+    "blocker_file_count": 88,
     "blocker_scope_counts": {
-      "active": 2,
       "historical": 285,
       "support": 38
     },
     "category_counts": {
-      "duplicate_implementation": 43,
+      "duplicate_implementation": 41,
       "hardcoded_absolute_path": 3,
       "hardcoded_ip": 43,
       "hardcoded_parameter": 111,
