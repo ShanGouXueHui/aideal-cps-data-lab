@@ -1,12 +1,12 @@
 {
   "active_blocker_count": 42,
-  "active_warning_count": 247,
+  "active_warning_count": 251,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_ip": 1,
     "hardcoded_url": 38,
     "long_function": 1,
-    "repeated_literal": 247
+    "repeated_literal": 251
   },
   "findings": [
     {
@@ -1163,7 +1163,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'git_head' repeated in 7 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, src/aideal_cps_data_lab/quality/offline_runner.py",
+      "detail": "'git_head' repeated in 8 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -2342,7 +2342,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'collection_started' repeated in 4 files: src/aideal_cps_data_lab/hz24/guarded_application.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py",
+      "detail": "'collection_started' repeated in 5 files: src/aideal_cps_data_lab/hz24/guarded_application.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/guarded_application.py",
       "scope": "active",
@@ -2369,7 +2369,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'unavailable' repeated in 10 files: src/aideal_cps_data_lab/hz24/outcome_service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/repository.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_gate.py",
+      "detail": "'unavailable' repeated in 11 files: src/aideal_cps_data_lab/hz24/outcome_service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/repository.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_authorization.py, tests/test_hz24_resume_gate.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/outcome_service.py",
       "scope": "active",
@@ -2387,7 +2387,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'queue_sha256' repeated in 4 files: src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/state_store.py",
+      "detail": "'queue_sha256' repeated in 5 files: src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/state_store.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
       "scope": "active",
@@ -2405,7 +2405,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'linked_duplicates' repeated in 4 files: src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_atomic_repair.py",
+      "detail": "'linked_duplicates' repeated in 5 files: src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/repair_preflight.py",
       "scope": "active",
@@ -2414,7 +2414,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'unavailable_duplicates' repeated in 4 files: src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_atomic_repair.py",
+      "detail": "'unavailable_duplicates' repeated in 5 files: src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/repair_preflight.py",
       "scope": "active",
@@ -2486,7 +2486,43 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'resume_allowed' repeated in 3 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py",
+      "detail": "'linked_issues' repeated in 3 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_authorization.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/resume_authorization.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'unavailable_issues' repeated in 3 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_authorization.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/resume_authorization.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'baseline_linked_skus' repeated in 3 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_authorization.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/resume_authorization.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'baseline_unavailable_skus' repeated in 3 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_authorization.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/resume_authorization.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'resume_allowed' repeated in 4 files: src/aideal_cps_data_lab/hz24/resume_authorization.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/terminal_repair.py, tests/test_hz24_resume_authorization.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/resume_authorization.py",
       "scope": "active",
@@ -2611,8 +2647,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 305,
-  "generated_at": "2026-06-19T22:15:31",
+  "full_files_scanned": 306,
+  "generated_at": "2026-06-19T22:17:54",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
