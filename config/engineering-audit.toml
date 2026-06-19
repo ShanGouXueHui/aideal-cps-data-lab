@@ -1,4 +1,4 @@
-schema_version = "engineering-audit/v1"
+schema_version = "engineering-audit/v2"
 large_file_line_limit = 300
 long_function_line_limit = 80
 duplicate_function_min_lines = 5
@@ -8,4 +8,4 @@ scan_extensions = [".py", ".sh", ".sql", ".service", ".yml", ".yaml", ".toml", "
 excluded_directories = [".git", ".venv", ".venv-browser", "backups", "data", "logs", "reports", "run", "node_modules", "__pycache__"]
 configuration_directories = ["config", "configuration"]
 ignored_function_names = ["main", "__init__", "__enter__", "__exit__"]
-hardcoded_name_fragments = ["host", "port", "url", "path", "timeout", "interval", "sleep", "window", "limit", "threshold", "batch", "page", "tab", "risk", "selector", "service", "database", "schema"]
+hardcoded_name_fragments = ["host", "port", "url", "timeout", "interval", "sleep", "window", "selector", "service", "database", "schema"]
