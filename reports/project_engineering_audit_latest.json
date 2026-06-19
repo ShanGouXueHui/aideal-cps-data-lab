@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 38,
-  "blocker_count": 362,
+  "active_blocker_count": 33,
+  "blocker_count": 357,
   "compatibility_blocker_count": 13,
   "files_scanned": 266,
   "findings": [
@@ -32,15 +32,6 @@
       "symbol": "MANIFEST_SCHEMA_VERSION"
     },
     {
-      "category": "duplicate_implementation",
-      "detail": "run/hz23_scan_current_page.py:67, run/hz23_finalize_round.py:66",
-      "line": 66,
-      "path": "run/hz23_finalize_round.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "atomic_write"
-    },
-    {
       "category": "hardcoded_url",
       "detail": "https://item.jd.com/",
       "line": 123,
@@ -57,42 +48,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "run/hz23_scan_current_page.py:67, run/hz23_finalize_round.py:66",
-      "line": 67,
-      "path": "run/hz23_scan_current_page.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "atomic_write"
-    },
-    {
-      "category": "long_function",
-      "detail": "124 lines exceeds 80",
-      "line": 74,
-      "path": "run/hz23_scan_current_page.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "main"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:19228",
-      "line": 92,
-      "path": "run/hz23_scan_current_page.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 152,
-      "path": "run/hz23_scan_current_page.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "large_file",
@@ -3282,7 +3237,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'round_id' repeated in 18 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/backfill_commission_products_mysql.py, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'round_id' repeated in 17 files: run/hz23_finalize_round.py, scripts/backfill_commission_products_mysql.py, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3741,7 +3696,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'last_checked_at' repeated in 10 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'last_checked_at' repeated in 9 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3750,7 +3705,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'last_seen_at' repeated in 10 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'last_seen_at' repeated in 9 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3759,7 +3714,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'last_round_id' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'last_round_id' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3768,7 +3723,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'missing_rounds' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'missing_rounds' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3777,7 +3732,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'change_count' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'change_count' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3786,7 +3741,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'products' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'products' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3795,7 +3750,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'data/state/hz23_catalog_index.json' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'data/state/hz23_catalog_index.json' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3804,7 +3759,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'data/state/hz23_round_' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'data/state/hz23_round_' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3813,7 +3768,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'_seen.jsonl' repeated in 4 files: run/hz23_finalize_round.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'_seen.jsonl' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3870,24 +3825,6 @@
       "detail": "'jd_union_datalab' repeated in 3 files: run/hz23_finalize_round.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'unchanged' repeated in 7 files: run/hz23_scan_current_page.py, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
-      "line": 0,
-      "path": "run/hz23_scan_current_page.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'first_seen_at' repeated in 4 files: run/hz23_scan_current_page.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
-      "line": 0,
-      "path": "run/hz23_scan_current_page.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -4246,6 +4183,15 @@
     {
       "category": "repeated_literal",
       "detail": "'duration_seconds' repeated in 4 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh",
+      "line": 0,
+      "path": "scripts/hz23_mainline_refresh.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'unchanged' repeated in 6 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
       "line": 0,
       "path": "scripts/hz23_mainline_refresh.sh",
       "scope": "active",
@@ -5127,6 +5073,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'first_seen_at' repeated in 3 files: src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/domain/commission_product.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'lines exceeds' repeated in 4 files: src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_definitions.py",
@@ -5263,33 +5218,6 @@
     {
       "category": "repeated_literal",
       "detail": "'quarantine' repeated in 5 files: run/hz21_strict_card_dom_recover_page.py, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, src/aideal_cps_data_lab/hz23/quarantine_service.py",
-      "line": 0,
-      "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'到手价\\\\s*[￥¥]\\\\s*([0-9]+(?:\\\\.[0-9]+)?)' repeated in 3 files: run/hz21_strict_card_dom_recover_page.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz24/browser_contract.py",
-      "line": 0,
-      "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'佣金比例\\\\s*([0-9]+(?:\\\\.[0-9]+)?%)' repeated in 3 files: run/hz21_strict_card_dom_recover_page.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz24/browser_contract.py",
-      "line": 0,
-      "path": "run/hz21_strict_card_dom_recover_page.py",
-      "scope": "compatibility",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'预估收益\\\\s*[￥¥]\\\\s*([0-9]+(?:\\\\.[0-9]+)?)' repeated in 3 files: run/hz21_strict_card_dom_recover_page.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz24/browser_contract.py",
       "line": 0,
       "path": "run/hz21_strict_card_dom_recover_page.py",
       "scope": "compatibility",
@@ -5784,7 +5712,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'union.jd.com' repeated in 27 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz22_prepare_all_product_page.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
+      "detail": "'union.jd.com' repeated in 26 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz22_prepare_all_product_page.py, run/hz24_audit_product_tabs.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
       "line": 0,
       "path": "run/hz11_high_commission_probe.py",
       "scope": "historical",
@@ -5928,7 +5856,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'image_url' repeated in 45 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'image_url' repeated in 44 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -5937,7 +5865,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'item_url' repeated in 44 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'item_url' repeated in 43 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -5946,7 +5874,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'commission_rate' repeated in 46 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/schema.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'commission_rate' repeated in 45 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/schema.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -5955,7 +5883,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'estimated_income' repeated in 35 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'estimated_income' repeated in 34 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -6072,7 +6000,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'updated_at' repeated in 9 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, scripts/hz12_restart_v8_from_existing_latest.sh, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/state_store.py",
+      "detail": "'updated_at' repeated in 8 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, scripts/hz12_restart_v8_from_existing_latest.sh, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/state_store.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -6144,7 +6072,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'raw_text' repeated in 8 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz24_refactor.py",
+      "detail": "'raw_text' repeated in 7 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz24_refactor.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -6234,7 +6162,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://item.jd.com/' repeated in 14 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_v2.py",
+      "detail": "'https://item.jd.com/' repeated in 13 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz23_finalize_round.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_v2.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -6576,7 +6504,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'risk_handler' repeated in 18 files: run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector_v2.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh",
+      "detail": "'risk_handler' repeated in 17 files: run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector_v2.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz24_audit_product_tabs.py, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh",
       "line": 0,
       "path": "run/hz14_all_product_full_collector.py",
       "scope": "historical",
@@ -6585,7 +6513,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'activePageText' repeated in 18 files: run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_scan_current_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz23/page_scan.py",
+      "detail": "'activePageText' repeated in 17 files: run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz23/page_scan.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector.py",
       "scope": "historical",
@@ -7008,7 +6936,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'http://127.0.0.1:19228' repeated in 18 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
+      "detail": "'http://127.0.0.1:19228' repeated in 17 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz24_audit_product_tabs.py, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
       "line": 0,
       "path": "run/hz16_short_url_diag.py",
       "scope": "historical",
@@ -7182,15 +7110,6 @@
       "detail": "'short_url_timeout' repeated in 3 files: run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
       "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'page_not_ready' repeated in 3 files: run/hz19_visual_probe_failed_sku.py, run/hz23_scan_current_page.py, src/aideal_cps_data_lab/hz23/page_scan.py",
-      "line": 0,
-      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
@@ -9311,28 +9230,28 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 51,
-  "generated_at": "2026-06-19T19:37:31",
+  "gate_blocker_count": 46,
+  "generated_at": "2026-06-19T19:38:47",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 99,
+    "blocker_file_count": 98,
     "blocker_scope_counts": {
-      "active": 38,
+      "active": 33,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 45,
+      "duplicate_implementation": 43,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 44,
       "hardcoded_parameter": 114,
-      "hardcoded_url": 131,
+      "hardcoded_url": 129,
       "large_file": 6,
-      "long_function": 17,
-      "repeated_literal": 672
+      "long_function": 16,
+      "repeated_literal": 668
     },
     "top_blocker_files": [
       {
@@ -9346,10 +9265,6 @@
       {
         "count": 9,
         "path": "run/hz12_product_all_full_collector.py"
-      },
-      {
-        "count": 6,
-        "path": "run/hz23_finalize_round.py"
       },
       {
         "count": 6,
@@ -9390,6 +9305,10 @@
       {
         "count": 6,
         "path": "tests/test_hz23_finalize_gate.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz23_finalize_round.py"
       },
       {
         "count": 5,
@@ -9441,10 +9360,6 @@
       },
       {
         "count": 4,
-        "path": "run/hz23_scan_current_page.py"
-      },
-      {
-        "count": 4,
         "path": "run/hz21_strict_card_dom_recover_page.py"
       },
       {
@@ -9454,9 +9369,13 @@
       {
         "count": 4,
         "path": "scripts/hz12_run_v4_smoke_and_report.sh"
+      },
+      {
+        "count": 4,
+        "path": "scripts/hz14_probe_direct_pageno_navigation.sh"
       }
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 672
+  "warning_count": 668
 }
