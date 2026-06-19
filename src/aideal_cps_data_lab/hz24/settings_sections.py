@@ -40,6 +40,9 @@ def browser_settings(data: dict[str, object]) -> BrowserSettings:
         trusted_link_host=str(data["trusted_link_host"]),
         item_scheme=str(data["item_scheme"]),
         item_host=str(data["item_host"]),
+        image_scheme=str(data["image_scheme"]),
+        image_host=str(data["image_host"]),
+        image_path_prefix=str(data["image_path_prefix"]),
         default_timeout_ms=int(data["default_timeout_ms"]),
         connect_timeout_ms=int(data["connect_timeout_ms"]),
         tab_click_timeout_ms=int(data["tab_click_timeout_ms"]),
@@ -84,7 +87,6 @@ def contract_settings(
 ) -> ContractSettings:
     return ContractSettings(
         observer_service=str(data["observer_service"]),
-        hz21_adapter=_path(root, data["hz21_adapter"]),
         queue_file=_path(root, data["queue_file"]),
         queue_manifest_file=_path(root, data["queue_manifest_file"]),
         linked_file=_path(root, data["linked_file"]),
