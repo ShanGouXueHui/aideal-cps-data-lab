@@ -1,5 +1,6 @@
 schema_version = "hz24-terminal-repair/v1"
 source_report = "reports/hz24_increment_collection_latest.json"
+migration_report = "reports/hz24_sold_out_migration_latest.json"
 repair_report = "reports/hz24_terminal_repair_latest.json"
 expected_queue_count = 221
 expected_linked_count = 72
