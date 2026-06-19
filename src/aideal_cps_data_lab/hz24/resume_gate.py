@@ -1,10 +1,14 @@
 from __future__ import annotations
 
 import json
-import subprocess
 import tomllib
 from pathlib import Path
 from typing import Any
+
+from aideal_cps_data_lab.git_state import (
+    active_paths_unchanged_since,
+    current_git_head,
+)
 
 from .jd_page import JDPageAdapter
 from .repository import atomic_json, load_json
@@ -22,16 +26,6 @@ def load_gate_config(path: Path = config_path) -> dict[str, Any]:
         return tomllib.load(stream)
 
 
-def resolved_head() -> str:
-    result = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    return result.stdout.strip() if result.returncode == 0 else ""
-
-
 def issue_count(issues: dict[str, list[str]]) -> int:
     return sum(len(values) for values in issues.values())
 
@@ -41,17 +35,18 @@ def artifact_checks(
     engineering: dict[str, Any],
     offline: dict[str, Any],
     migration: dict[str, Any],
-    head: str,
 ) -> dict[str, bool]:
     expected_unavailable = int(config["expected_unavailable_count"])
+    tested_head = str(offline.get("git_head") or "")
     return {
         "engineering_gate_passed": (
             engineering.get("status") == "PASS"
             and int(engineering.get("gate_blocker_count") or 0) == 0
         ),
         "offline_quality_passed": offline.get("status") == "PASS",
-        "offline_quality_matches_head": bool(head)
-        and offline.get("git_head") == head,
+        "offline_quality_active_paths_current": active_paths_unchanged_since(
+            tested_head
+        ),
         "offline_quality_no_jd_live": offline.get("jd_live_called") is False,
         "sold_out_migration_passed": migration.get("ok") is True,
         "sold_out_migration_executed": migration.get("executed") is True,
@@ -175,8 +170,7 @@ def run_resume_gate(
     engineering = load_json(Path(str(config["engineering_report"])))
     offline = load_json(Path(str(config["offline_quality_report"])))
     migration = load_json(Path(str(config["sold_out_migration_report"])))
-    head = resolved_head()
-    artifacts = artifact_checks(config, engineering, offline, migration, head)
+    artifacts = artifact_checks(config, engineering, offline, migration)
     try:
         datasets, counts, details = validate_datasets(settings, config)
     except Exception as error:
@@ -186,7 +180,8 @@ def run_resume_gate(
     checks = {**artifacts, **datasets}
     result = {
         "schema_version": str(config["schema_version"]),
-        "git_head": head,
+        "git_head": current_git_head(),
+        "tested_git_head": offline.get("git_head"),
         "checks": checks,
         "failures": [name for name, passed in checks.items() if not passed],
         "counts": counts,
