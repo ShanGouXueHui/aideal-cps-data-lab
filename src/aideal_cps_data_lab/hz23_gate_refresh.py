@@ -7,6 +7,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from aideal_cps_data_lab.application import validate_candidate
+from aideal_cps_data_lab.hz23.safety import unsafe_source_reason
 from aideal_cps_data_lab.hz24.repository import atomic_json, load_json
 from aideal_cps_data_lab.hz24.settings import load_settings
 
@@ -20,19 +21,6 @@ EXPECTED_PAGES = list(range(1, 68))
 MIN_SCANNED_TOTAL = 3900
 MIN_SUCCESSFUL_PROBES = 2
 MIN_OBSERVATION_HOURS = 48.0
-
-
-def unsafe_reason(row: dict[str, Any]) -> str | None:
-    worker = str(row.get("worker_name") or "").lower()
-    menu_mode = str(row.get("menu_mode") or "").lower()
-    promotion_mode = str(row.get("promotion_mode") or "").lower()
-    if worker == "hz20_mouse_click":
-        return "worker_name_hz20_mouse_click"
-    if "hz20" in menu_mode:
-        return "menu_mode_contains_hz20"
-    if "hz20" in promotion_mode:
-        return "promotion_mode_contains_hz20"
-    return None
 
 
 def source_audit(path: Path) -> dict[str, int]:
@@ -50,7 +38,7 @@ def source_audit(path: Path) -> dict[str, int]:
             invalid += 1
             continue
         rows += 1
-        if unsafe_reason(row):
+        if unsafe_source_reason(row):
             unsafe += 1
         value = row.get("short_url")
         parsed = urlparse(str(value or "").strip())
