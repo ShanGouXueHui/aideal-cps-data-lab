@@ -1,0 +1,10 @@
+schema_version = "hz24-terminal-repair/v1"
+source_report = "reports/hz24_increment_collection_latest.json"
+repair_report = "reports/hz24_terminal_repair_latest.json"
+expected_queue_count = 221
+expected_linked_count = 72
+expected_evidence_count = 5
+expected_unavailable_before = [0, 5]
+expected_pending_before = [149, 144]
+expected_unavailable_after = 5
+expected_pending_after = 144
