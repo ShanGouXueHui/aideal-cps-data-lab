@@ -13,14 +13,14 @@ class BrowserSettings:
     trusted_link_host: str
     item_scheme: str
     item_host: str
+    tab_role_selector: str
+    tab_class_pattern: str
     default_timeout_ms: int
     connect_timeout_ms: int
     tab_click_timeout_ms: int
     tab_settle_ms: int
     modal_poll_ms: int
     risk_markers: tuple[str, ...]
-    tab_role_selector: str = '[role="radio"], label.el-radio-button, [role="tab"]'
-    tab_class_pattern: str = "radio|tab"
 
 
 @dataclass(frozen=True, slots=True)
