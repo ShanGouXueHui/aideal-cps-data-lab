@@ -12,6 +12,11 @@ SHELL_FUNCTION_RE = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*\(\)\s*\{")
 SHELL_ASSIGN_RE = re.compile(r"^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)=(.*)$")
 
 
+def name_has_fragment(name: str, fragments: tuple[str, ...]) -> bool:
+    tokens = tuple(part for part in name.lower().split("_") if part)
+    return any(fragment in tokens for fragment in fragments)
+
+
 def iter_engineering_files(root: Path, settings: dict[str, object]) -> Iterable[Path]:
     extensions = set(str(value) for value in settings["scan_extensions"])
     excluded = set(str(value) for value in settings["excluded_directories"])
