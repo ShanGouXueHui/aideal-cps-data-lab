@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import tomllib
 from pathlib import Path
@@ -30,6 +31,10 @@ def issue_count(issues: dict[str, list[str]]) -> int:
     return sum(len(values) for values in issues.values())
 
 
+def file_digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else ""
+
+
 def artifact_checks(
     config: dict[str, Any],
     engineering: dict[str, Any],
@@ -55,8 +60,7 @@ def artifact_checks(
         )
         == expected_unavailable,
         "sold_out_linked_hash_unchanged": (
-            (migration.get("post_checks") or {}).get("linked_hash_unchanged")
-            is True
+            (migration.get("checks") or {}).get("linked_hash_unchanged") is True
         ),
     }
 
@@ -155,6 +159,10 @@ def validate_datasets(
     )
     details = {
         "queue_sha256": queue_sha,
+        "linked_sha256": file_digest(settings.contracts.linked_file),
+        "unavailable_sha256": file_digest(settings.contracts.unavailable_file),
+        "baseline_linked_skus": sorted(linked),
+        "baseline_unavailable_skus": sorted(unavailable),
         "linked_issues": linked_issues,
         "unavailable_issues": unavailable_issues,
     }
