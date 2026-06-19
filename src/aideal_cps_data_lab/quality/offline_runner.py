@@ -7,6 +7,7 @@ import os
 import py_compile
 import subprocess
 import tomllib
+import traceback
 import unittest
 from datetime import datetime
 from pathlib import Path
@@ -39,8 +40,8 @@ def compile_paths(entrypoints: list[str]) -> tuple[bool, list[str]]:
     for value in entrypoints:
         try:
             py_compile.compile(value, doraise=True)
-        except Exception:
-            failures.append(value)
+        except Exception as error:
+            failures.append(f"{value}: {error!r}")
     return not failures, failures
 
 
@@ -60,45 +61,90 @@ def run_tests(patterns: list[str]) -> tuple[unittest.TestResult, str]:
     return result, stream.getvalue()
 
 
+def dependency_install_ok() -> bool:
+    return os.environ.get("AIDEAL_DEPENDENCY_INSTALL_OUTCOME", "success") == "success"
+
+
 def build_report(
     config: dict[str, Any],
     compile_ok: bool,
     compile_failures: list[str],
-    test_result: unittest.TestResult,
+    test_result: unittest.TestResult | None,
     test_output: str,
+    runner_error: str,
 ) -> dict[str, Any]:
     live_marker = Path("run/jd_live_called.flag")
+    tests_ok = test_result is not None and test_result.wasSuccessful()
     checks = {
+        "dependency_install_ok": dependency_install_ok(),
         "compile_ok": compile_ok,
-        "tests_ok": test_result.wasSuccessful(),
+        "tests_ok": tests_ok,
+        "runner_error_empty": not runner_error,
         "jd_live_called_false": not live_marker.exists(),
         "git_head_present": bool(git_head()),
     }
     return {
-        "schema_version": str(config["schema_version"]),
+        "schema_version": str(config.get("schema_version") or "offline-quality/v1"),
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "git_head": git_head(),
         "status": "PASS" if all(checks.values()) else "FAIL",
         "checks": checks,
         "compile_failures": compile_failures,
-        "tests_run": test_result.testsRun,
-        "test_failure_count": len(test_result.failures),
-        "test_error_count": len(test_result.errors),
-        "test_skipped_count": len(getattr(test_result, "skipped", [])),
+        "tests_run": test_result.testsRun if test_result is not None else 0,
+        "test_failure_count": len(test_result.failures) if test_result is not None else 0,
+        "test_error_count": len(test_result.errors) if test_result is not None else 0,
+        "test_skipped_count": (
+            len(getattr(test_result, "skipped", [])) if test_result is not None else 0
+        ),
         "test_output_tail": test_output[-12000:],
+        "runner_error": runner_error[-12000:],
         "jd_live_called": live_marker.exists(),
         "offline_mode": os.environ.get("AIDEAL_OFFLINE_TEST") == "1",
     }
 
 
+def fallback_config(path: Path) -> dict[str, Any]:
+    return {
+        "schema_version": "offline-quality/v1",
+        "report_path": "reports/offline_quality_latest.json",
+        "entrypoints": [],
+        "test_patterns": [],
+        "config_error": f"failed_to_load:{path}",
+    }
+
+
 def run_offline_quality(path: Path = config_path) -> int:
     os.environ["AIDEAL_OFFLINE_TEST"] = "1"
-    config = load_config(path)
-    compile_ok, compile_failures = compile_paths(
-        [str(value) for value in config["entrypoints"]]
+    config: dict[str, Any]
+    compile_ok = False
+    compile_failures: list[str] = []
+    test_result: unittest.TestResult | None = None
+    test_output = ""
+    runner_error = ""
+    try:
+        config = load_config(path)
+    except Exception:
+        config = fallback_config(path)
+        runner_error = traceback.format_exc()
+    if not runner_error:
+        try:
+            compile_ok, compile_failures = compile_paths(
+                [str(value) for value in config["entrypoints"]]
+            )
+            test_result, test_output = run_tests(
+                [str(value) for value in config["test_patterns"]]
+            )
+        except Exception:
+            runner_error = traceback.format_exc()
+    report = build_report(
+        config,
+        compile_ok,
+        compile_failures,
+        test_result,
+        test_output,
+        runner_error,
     )
-    result, output = run_tests([str(value) for value in config["test_patterns"]])
-    report = build_report(config, compile_ok, compile_failures, result, output)
-    atomic_json(Path(str(config["report_path"])), report)
+    report_path = Path(str(config.get("report_path") or "reports/offline_quality_latest.json"))
+    atomic_json(report_path, report)
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     return 0 if report["status"] == "PASS" else 1
