@@ -1,0 +1,25 @@
+from __future__ import annotations
+
+BUSINESS_COLUMNS = (
+    "title",
+    "description",
+    "item_url",
+    "promotion_url",
+    "short_url",
+    "long_url",
+    "qr_url",
+    "jd_command",
+    "image_url",
+    "category_name",
+    "shop_name",
+    "price",
+    "coupon_price",
+    "commission_rate",
+    "estimated_commission",
+    "sales_volume",
+    "coupon_info",
+    "status",
+    "link_created_at",
+    "link_expire_at",
+    "refresh_due_at",
+)
