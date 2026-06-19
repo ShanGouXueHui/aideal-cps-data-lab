@@ -36,6 +36,13 @@ def atomic_text(path: Path, text: str) -> None:
     temporary.replace(path)
 
 
+def atomic_bytes(path: Path, data: bytes) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_bytes(data)
+    temporary.replace(path)
+
+
 def atomic_json(path: Path, payload: dict[str, Any]) -> None:
     atomic_text(
         path,
@@ -43,19 +50,37 @@ def atomic_json(path: Path, payload: dict[str, Any]) -> None:
     )
 
 
-def upsert_jsonl_by_sku(path: Path, row: dict[str, Any]) -> None:
-    rows = read_jsonl(path)
+def encode_jsonl_by_sku(rows: list[dict[str, Any]]) -> str:
     indexed = {
-        str(item.get("sku") or ""): item
-        for item in rows
-        if str(item.get("sku") or "")
+        str(row.get("sku") or ""): row
+        for row in rows
+        if str(row.get("sku") or "")
     }
-    indexed[str(row["sku"])] = row
-    data = "".join(
+    return "".join(
         json.dumps(indexed[sku], ensure_ascii=False, sort_keys=True) + "\n"
         for sku in sorted(indexed)
     )
-    atomic_text(path, data)
+
+
+def upsert_jsonl_rows_by_sku(
+    path: Path,
+    new_rows: list[dict[str, Any]],
+) -> None:
+    indexed = {
+        str(row.get("sku") or ""): row
+        for row in read_jsonl(path)
+        if str(row.get("sku") or "")
+    }
+    for row in new_rows:
+        sku = str(row.get("sku") or "")
+        if not sku:
+            raise ValueError("missing SKU in JSONL upsert")
+        indexed[sku] = row
+    atomic_text(path, encode_jsonl_by_sku(list(indexed.values())))
+
+
+def upsert_jsonl_by_sku(path: Path, row: dict[str, Any]) -> None:
+    upsert_jsonl_rows_by_sku(path, [row])
 
 
 def successful_skus(path: Path) -> set[str]:
