@@ -5,20 +5,12 @@ from typing import Any
 from .jd_page import JDPageAdapter
 from .records import LINK_HASH_FIELDS, stable_hash
 from .settings import HZ24Settings
-
-
-REQUIRED_LINK_FIELDS = (
-    "title",
-    "item_url",
-    "price",
-    "commission_rate",
-    "estimated_income",
-    "short_url",
-)
+from .validation_config import ValidationConfig
 
 
 def validate_linked_rows(
     settings: HZ24Settings,
+    validation: ValidationConfig,
     adapter: JDPageAdapter,
     queue_by_sku: dict[str, dict[str, Any]],
     linked_by_sku: dict[str, dict[str, Any]],
@@ -36,7 +28,7 @@ def validate_linked_rows(
             issues["untrusted"].append(sku)
         if any(
             not str(row.get(field) or "").strip()
-            for field in REQUIRED_LINK_FIELDS
+            for field in validation.required_link_fields
         ):
             issues["incomplete"].append(sku)
         if row.get("record_sha256") != stable_hash(row, LINK_HASH_FIELDS):
@@ -53,7 +45,7 @@ def validate_linked_rows(
                 str(row.get("menu_mode") or ""),
             ]
         ).lower()
-        if "hz20" in source:
+        if validation.legacy_source_marker.lower() in source:
             issues["unsafe"].append(sku)
     return issues
 
