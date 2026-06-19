@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 25,
-  "blocker_count": 349,
+  "active_blocker_count": 26,
+  "blocker_count": 350,
   "compatibility_blocker_count": 13,
   "files_scanned": 270,
   "findings": [
@@ -213,7 +213,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
+      "detail": "src/aideal_cps_data_lab/hz24/repository.py:32, src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
       "line": 25,
       "path": "src/aideal_cps_data_lab/hz23/finalize_io.py",
       "scope": "active",
@@ -222,9 +222,18 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
+      "detail": "src/aideal_cps_data_lab/hz24/repository.py:32, src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
       "line": 81,
       "path": "src/aideal_cps_data_lab/hz23/page_scan.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "atomic_text"
+    },
+    {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz24/repository.py:32, src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25",
+      "line": 32,
+      "path": "src/aideal_cps_data_lab/hz24/repository.py",
       "scope": "active",
       "severity": "blocker",
       "symbol": "atomic_text"
@@ -5037,43 +5046,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'duplicate SKU in upsert batch' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py, src/aideal_cps_data_lab/persistence/mysql_repository.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'inserted_count' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py, tests/test_mysql_batch_repository_v2.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'updated_count' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py, tests/test_mysql_batch_repository_v2.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'unchanged_count' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py, tests/test_mysql_batch_repository_v2.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'published_changed_count' repeated in 4 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, src/aideal_cps_data_lab/persistence/mysql_batch_repository_v2.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py",
+      "detail": "'published_changed_count' repeated in 3 files: src/aideal_cps_data_lab/persistence/mysql_batch_repository.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/persistence/mysql_batch_repository.py",
       "scope": "active",
@@ -9149,28 +9122,28 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 38,
-  "generated_at": "2026-06-19T19:46:39",
+  "gate_blocker_count": 39,
+  "generated_at": "2026-06-19T19:50:02",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 98,
+    "blocker_file_count": 99,
     "blocker_scope_counts": {
-      "active": 25,
+      "active": 26,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 45,
+      "duplicate_implementation": 46,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 44,
       "hardcoded_parameter": 112,
       "hardcoded_url": 126,
       "large_file": 4,
       "long_function": 13,
-      "repeated_literal": 667
+      "repeated_literal": 663
     },
     "top_blocker_files": [
       {
@@ -9296,5 +9269,5 @@
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 667
+  "warning_count": 663
 }
