@@ -1,8 +1,8 @@
 {
-  "active_blocker_count": 36,
-  "blocker_count": 360,
+  "active_blocker_count": 41,
+  "blocker_count": 365,
   "compatibility_blocker_count": 13,
-  "files_scanned": 267,
+  "files_scanned": 268,
   "findings": [
     {
       "category": "large_file",
@@ -302,6 +302,33 @@
       "symbol": ""
     },
     {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25, src/aideal_cps_data_lab/hz23/finalize_round.py:42",
+      "line": 25,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_io.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "atomic_text"
+    },
+    {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz23/finalize_io.py:36, src/aideal_cps_data_lab/hz23/finalize_round.py:53",
+      "line": 36,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_io.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "observation_hours"
+    },
+    {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz23/finalize_io.py:48, src/aideal_cps_data_lab/hz23/finalize_round.py:76",
+      "line": 48,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_io.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "update_catalog"
+    },
+    {
       "category": "large_file",
       "detail": "424 lines exceeds 300",
       "line": 1,
@@ -312,7 +339,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_round.py:42",
+      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25, src/aideal_cps_data_lab/hz23/finalize_round.py:42",
       "line": 42,
       "path": "src/aideal_cps_data_lab/hz23/finalize_round.py",
       "scope": "active",
@@ -321,7 +348,25 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_round.py:42",
+      "detail": "src/aideal_cps_data_lab/hz23/finalize_io.py:36, src/aideal_cps_data_lab/hz23/finalize_round.py:53",
+      "line": 53,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_round.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "observation_hours"
+    },
+    {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz23/finalize_io.py:48, src/aideal_cps_data_lab/hz23/finalize_round.py:76",
+      "line": 76,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_round.py",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": "update_catalog"
+    },
+    {
+      "category": "duplicate_implementation",
+      "detail": "src/aideal_cps_data_lab/hz23/page_scan.py:81, src/aideal_cps_data_lab/hz23/finalize_io.py:25, src/aideal_cps_data_lab/hz23/finalize_round.py:42",
       "line": 81,
       "path": "src/aideal_cps_data_lab/hz23/page_scan.py",
       "scope": "active",
@@ -3480,7 +3525,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'observation_started_at' repeated in 7 files: run/hz23_finalize_round.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'observation_started_at' repeated in 8 files: run/hz23_finalize_round.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3840,7 +3885,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'missing_rounds' repeated in 4 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'missing_rounds' repeated in 5 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3858,7 +3903,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'products' repeated in 4 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'products' repeated in 5 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -3886,6 +3931,15 @@
     {
       "category": "repeated_literal",
       "detail": "'_seen.jsonl' repeated in 4 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, tests/test_hz23_finalize_gate.py",
+      "line": 0,
+      "path": "run/hz23_finalize_round.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'last_completed_round_id' repeated in 3 files: run/hz23_finalize_round.py, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py",
       "line": 0,
       "path": "run/hz23_finalize_round.py",
       "scope": "active",
@@ -6063,7 +6117,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'created_at' repeated in 14 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'created_at' repeated in 15 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -6117,7 +6171,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'updated_at' repeated in 9 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, scripts/hz12_restart_v8_from_existing_latest.sh, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/state_store.py",
+      "detail": "'updated_at' repeated in 10 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz23_finalize_round.py, scripts/hz12_restart_v8_from_existing_latest.sh, src/aideal_cps_data_lab/hz23/finalize_io.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/state_store.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -9356,28 +9410,28 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 49,
-  "generated_at": "2026-06-19T19:40:04",
+  "gate_blocker_count": 54,
+  "generated_at": "2026-06-19T19:40:24",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 100,
+    "blocker_file_count": 101,
     "blocker_scope_counts": {
-      "active": 36,
+      "active": 41,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 45,
+      "duplicate_implementation": 50,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 44,
       "hardcoded_parameter": 114,
       "hardcoded_url": 129,
       "large_file": 7,
       "long_function": 16,
-      "repeated_literal": 679
+      "repeated_literal": 680
     },
     "top_blocker_files": [
       {
@@ -9486,6 +9540,10 @@
       },
       {
         "count": 4,
+        "path": "src/aideal_cps_data_lab/hz23/finalize_round.py"
+      },
+      {
+        "count": 4,
         "path": "run/hz21_strict_card_dom_recover_page.py"
       },
       {
@@ -9495,13 +9553,9 @@
       {
         "count": 4,
         "path": "scripts/hz12_run_v4_smoke_and_report.sh"
-      },
-      {
-        "count": 4,
-        "path": "scripts/hz14_probe_direct_pageno_navigation.sh"
       }
     ]
   },
   "support_blocker_count": 37,
-  "warning_count": 679
+  "warning_count": 680
 }
