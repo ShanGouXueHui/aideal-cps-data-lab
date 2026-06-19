@@ -1,0 +1,38 @@
+{
+  "schema_version": "aideal-cps-data-lab-project-status/v1",
+  "generated_at": "2026-06-19",
+  "project": "AIdeal CPS / 智省优选 - JD Union DL2",
+  "repository": "ShanGouXueHui/aideal-cps-data-lab",
+  "canonical_branch": "main",
+  "phase": "HZ24_PHASE_A_STATIC_BASELINE",
+  "commercial_status": "NOT_READY",
+  "verified_data": {
+    "commercial_candidate_sku_count": 3304,
+    "special_tab_count": 5,
+    "cross_tab_duplicate_membership_count": 11,
+    "increment_queue_count": 221,
+    "linked_count": 72,
+    "pending_count": 149,
+    "collection_complete": false,
+    "latest_stop_reason": "item_fail_fuse"
+  },
+  "implemented_not_live_verified": [
+    "typed_toml_configuration",
+    "layered_hz24_collector",
+    "sku_idempotent_jsonl_upsert",
+    "terminal_unavailable_classification",
+    "queue_and_record_hash_validation",
+    "canonical_collector_and_validator_entrypoints",
+    "hz24_unit_tests_and_static_workflow"
+  ],
+  "commercial_blockers": [
+    "current_head_static_ci_status_not_archived_as_green",
+    "current_head_not_verified_by_hangzhou_authorized_smoke",
+    "queue_accounting_incomplete",
+    "stop_required_contract_incomplete",
+    "validation_report_not_committed",
+    "production_importer_dry_run_not_executed"
+  ],
+  "next_action": "Verify and fix HZ24 compile/import/unit checks on current GitHub HEAD before any new JD collection run.",
+  "handoff_document": "docs/NEXT_DIALOG_HANDOFF.md"
+}
