@@ -1,12 +1,12 @@
 {
-  "active_blocker_count": 41,
-  "active_warning_count": 224,
+  "active_blocker_count": 42,
+  "active_warning_count": 225,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_ip": 1,
-    "hardcoded_url": 37,
+    "hardcoded_url": 38,
     "long_function": 1,
-    "repeated_literal": 224
+    "repeated_literal": 225
   },
   "findings": [
     {
@@ -257,6 +257,15 @@
       "detail": "https://u.jd.com/example",
       "line": 69,
       "path": "tests/test_hz23_finalize_gate.py",
+      "scope": "support",
+      "severity": "blocker",
+      "symbol": ""
+    },
+    {
+      "category": "hardcoded_url",
+      "detail": "https://item.invalid/",
+      "line": 20,
+      "path": "tests/test_hz24_sold_out_migration.py",
       "scope": "support",
       "severity": "blocker",
       "symbol": ""
@@ -2234,7 +2243,16 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'rootText' repeated in 3 files: src/aideal_cps_data_lab/hz24/card_actions.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/records.py",
+      "detail": "'card-disabled' repeated in 3 files: src/aideal_cps_data_lab/hz24/browser_contract.py, src/aideal_cps_data_lab/hz24/card_actions.py, tests/test_hz24_sold_out_migration.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/browser_contract.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'rootText' repeated in 4 files: src/aideal_cps_data_lab/hz24/card_actions.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz24_sold_out_migration.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/card_actions.py",
       "scope": "active",
@@ -2270,7 +2288,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'source_tabs' repeated in 5 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/tab_runner.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
+      "detail": "'source_tabs' repeated in 6 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/tab_runner.py, src/aideal_cps_data_lab/hz24/validation_rules.py, tests/test_hz24_sold_out_migration.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
       "scope": "active",
@@ -2395,8 +2413,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 287,
-  "generated_at": "2026-06-19T20:28:22",
+  "full_files_scanned": 288,
+  "generated_at": "2026-06-19T20:28:53",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
