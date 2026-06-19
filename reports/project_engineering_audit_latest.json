@@ -1,5 +1,5 @@
 {
-  "blocker_count": 388,
+  "blocker_count": 387,
   "files_scanned": 260,
   "findings": [
     {
@@ -2721,14 +2721,6 @@
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "long_function",
-      "detail": "93 lines exceeds 80",
-      "line": 144,
-      "path": "src/aideal_cps_data_lab/hz24/overlap_analysis.py",
-      "severity": "blocker",
-      "symbol": "run_overlap_analysis"
     },
     {
       "category": "duplicate_implementation",
@@ -8571,11 +8563,11 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T19:08:26",
+  "generated_at": "2026-06-19T19:09:03",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 111,
+    "blocker_file_count": 110,
     "category_counts": {
       "duplicate_implementation": 57,
       "hardcoded_absolute_path": 5,
@@ -8583,7 +8575,7 @@
       "hardcoded_parameter": 116,
       "hardcoded_url": 131,
       "large_file": 7,
-      "long_function": 25,
+      "long_function": 24,
       "repeated_literal": 683
     },
     "top_blocker_files": [
