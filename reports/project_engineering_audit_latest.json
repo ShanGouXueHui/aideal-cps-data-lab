@@ -1,6 +1,6 @@
 {
-  "blocker_count": 605,
-  "files_scanned": 246,
+  "blocker_count": 420,
+  "files_scanned": 247,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -1067,54 +1067,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/check_commission_mysql_release_readiness.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/git_publish_files_via_worktree.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_check_product_all_result.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz12_product_all_full_check_latest.json\"",
-      "line": 18,
-      "path": "scripts/hz12_check_product_all_result.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ12_PRODUCT_ALL_FULL_CHECK.md\"",
-      "line": 19,
-      "path": "scripts/hz12_check_product_all_result.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_check_v7_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 4,
@@ -1131,30 +1083,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz12z_product_all_v7_full_progress_latest.json\"",
-      "line": 20,
-      "path": "scripts/hz12_check_v7_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ12Z_PRODUCT_ALL_V7_FULL_PROGRESS.md\"",
-      "line": 21,
-      "path": "scripts/hz12_check_v7_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_check_v8_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 4,
@@ -1167,38 +1095,6 @@
       "detail": "121.41.111.36",
       "line": 14,
       "path": "scripts/hz12_check_v8_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz12aa_product_all_v8_full_progress_latest.json\"",
-      "line": 23,
-      "path": "scripts/hz12_check_v8_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ12AA_PRODUCT_ALL_V8_FULL_PROGRESS.md\"",
-      "line": 24,
-      "path": "scripts/hz12_check_v8_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_probe_product_all_next_text_click.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 49,
-      "path": "scripts/hz12_probe_product_all_next_text_click.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -1219,22 +1115,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_probe_product_all_pager_dom.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 29,
-      "path": "scripts/hz12_probe_product_all_pager_dom.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:{CDP_PORT}",
       "line": 29,
@@ -1251,22 +1131,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_probe_product_all_scroll_and_pager_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 29,
-      "path": "scripts/hz12_probe_product_all_scroll_and_pager_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:{CDP_PORT}",
       "line": 29,
@@ -1279,14 +1143,6 @@
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 36,
       "path": "scripts/hz12_probe_product_all_scroll_and_pager_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_recover_v5_strict_title_report.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -1295,14 +1151,6 @@
       "detail": "121.41.111.36",
       "line": 13,
       "path": "scripts/hz12_recover_v5_strict_title_report.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_restart_v8_from_existing_latest.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -1355,14 +1203,6 @@
       "symbol": "HZ12_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_run_v4_smoke_and_report.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "5",
       "line": 62,
@@ -1393,14 +1233,6 @@
       "path": "scripts/hz12_run_v4_smoke_and_report.sh",
       "severity": "blocker",
       "symbol": "HZ12_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_run_v4_smoke_and_report_safe.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_ip",
@@ -1451,14 +1283,6 @@
       "symbol": "HZ12_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_run_v5_strict_title_smoke_and_report.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 4,
@@ -1507,14 +1331,6 @@
       "symbol": "HZ12_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_run_v6_pagination_smoke_and_report.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 4,
@@ -1561,14 +1377,6 @@
       "path": "scripts/hz12_run_v6_pagination_smoke_and_report.sh",
       "severity": "blocker",
       "symbol": "HZ12_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_run_v7_exact_next_smoke_and_report.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_ip",
@@ -1619,22 +1427,6 @@
       "symbol": "HZ12_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_start_product_all_full_v3.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz12_start_v7_full_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 4,
@@ -1683,25 +1475,9 @@
       "symbol": "HZ12_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz13_probe_product_all_categories.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 14,
-      "path": "scripts/hz13_probe_product_all_categories.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 53,
       "path": "scripts/hz13_probe_product_all_categories.sh",
       "severity": "blocker",
       "symbol": ""
@@ -1719,14 +1495,6 @@
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 59,
       "path": "scripts/hz13_probe_product_all_categories.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -1811,14 +1579,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 100,
-      "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:{CDP_PORT}",
       "line": 100,
@@ -1835,26 +1595,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "121.41.111.36",
-      "line": 192,
-      "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://121.41.111.36:18772/vnc.html",
       "line": 192,
       "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -1907,22 +1651,6 @@
       "symbol": "HZ13_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 135,
-      "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_check_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 5,
@@ -1939,30 +1667,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz14_all_product_full_progress_latest.json\"",
-      "line": 21,
-      "path": "scripts/hz14_check_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ14_ALL_PRODUCT_FULL_PROGRESS.md\"",
-      "line": 22,
-      "path": "scripts/hz14_check_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_check_v2_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 5,
@@ -1975,30 +1679,6 @@
       "detail": "121.41.111.36",
       "line": 15,
       "path": "scripts/hz14_check_v2_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz14_all_product_full_v2_progress_latest.json\"",
-      "line": 21,
-      "path": "scripts/hz14_check_v2_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ14_ALL_PRODUCT_FULL_V2_PROGRESS.md\"",
-      "line": 22,
-      "path": "scripts/hz14_check_v2_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_check_v4_full_progress.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2015,30 +1695,6 @@
       "detail": "121.41.111.36",
       "line": 16,
       "path": "scripts/hz14_check_v4_full_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz14_all_product_full_v4_progress_latest.json\"",
-      "line": 26,
-      "path": "scripts/hz14_check_v4_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ14_ALL_PRODUCT_FULL_V4_PROGRESS.md\"",
-      "line": 27,
-      "path": "scripts/hz14_check_v4_full_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_direct_pageno_navigation.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2067,34 +1723,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 63,
-      "path": "scripts/hz14_probe_direct_pageno_navigation.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:{CDP_PORT}",
       "line": 63,
       "path": "scripts/hz14_probe_direct_pageno_navigation.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_element_ui_pager_locator.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 92,
-      "path": "scripts/hz14_probe_element_ui_pager_locator.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2115,25 +1747,9 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_jump_input_navigation.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 17,
-      "path": "scripts/hz14_probe_jump_input_navigation.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 152,
       "path": "scripts/hz14_probe_jump_input_navigation.sh",
       "severity": "blocker",
       "symbol": ""
@@ -2155,25 +1771,9 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_page_number_buttons.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 13,
-      "path": "scripts/hz14_probe_page_number_buttons.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 133,
       "path": "scripts/hz14_probe_page_number_buttons.sh",
       "severity": "blocker",
       "symbol": ""
@@ -2195,33 +1795,9 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "{'ts':datetime.now().strftime('%Y-%m-%d %H:%M:%S'),'phase':'HZ14 page number buttons probe','before':before,'snap_before':snap_before,'results':results,'decision':'If page number button clicks change SKU lists, build collector over page num",
-      "line": 168,
-      "path": "scripts/hz14_probe_page_number_buttons.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_textnode_page_number_click.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 15,
-      "path": "scripts/hz14_probe_textnode_page_number_click.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 158,
       "path": "scripts/hz14_probe_textnode_page_number_click.sh",
       "severity": "blocker",
       "symbol": ""
@@ -2243,33 +1819,9 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "{'ts':datetime.now().strftime('%Y-%m-%d %H:%M:%S'),'phase':'HZ14 text-node page-number click probe','click_product_all':click_all,'start':start,'targets':targets,'results':results,'decision':'If character rect clicks change SKU lists, imple",
-      "line": 202,
-      "path": "scripts/hz14_probe_textnode_page_number_click.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_probe_visible_next_page_number.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 14,
-      "path": "scripts/hz14_probe_visible_next_page_number.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 145,
       "path": "scripts/hz14_probe_visible_next_page_number.sh",
       "severity": "blocker",
       "symbol": ""
@@ -2291,30 +1843,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 183,
-      "path": "scripts/hz14_probe_visible_next_page_number.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_recover_and_slow_pager_probe.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 123,
-      "path": "scripts/hz14_recover_and_slow_pager_probe.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 123,
@@ -2327,14 +1855,6 @@
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 137,
       "path": "scripts/hz14_recover_and_slow_pager_probe.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2355,14 +1875,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 157,
-      "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:{CDP_PORT}",
       "line": 157,
@@ -2375,22 +1887,6 @@
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 164,
       "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 194,
-      "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_restart_v2_after_state_fix.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2435,14 +1931,6 @@
       "symbol": "HZ14_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_restart_v3_skip_bad_sku.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 13,
@@ -2483,14 +1971,6 @@
       "symbol": "HZ14_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_restart_v4_cumulative.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 13,
@@ -2529,14 +2009,6 @@
       "path": "scripts/hz14_restart_v4_cumulative.sh",
       "severity": "blocker",
       "symbol": "HZ14_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz14_start_all_product_full_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_ip",
@@ -2581,224 +2053,8 @@
     {
       "category": "hardcoded_absolute_path",
       "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_jump_pages_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_jump_pages_progress_latest.json\"",
-      "line": 18,
-      "path": "scripts/hz15_check_jump_pages_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_JUMP_PAGES_PROGRESS.md\"",
-      "line": 19,
-      "path": "scripts/hz15_check_jump_pages_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_no_reset_v4_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_no_reset_v4_progress_latest.json\"",
-      "line": 12,
-      "path": "scripts/hz15_check_no_reset_v4_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_NO_RESET_V4_PROGRESS.md\"",
-      "line": 13,
-      "path": "scripts/hz15_check_no_reset_v4_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 60,
-      "path": "scripts/hz15_check_no_reset_v4_progress.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_no_reset_v5_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_no_reset_v5_progress_latest.json\"",
-      "line": 22,
-      "path": "scripts/hz15_check_no_reset_v5_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_NO_RESET_V5_PROGRESS.md\"",
-      "line": 23,
-      "path": "scripts/hz15_check_no_reset_v5_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_no_reset_v6_latest_segment_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_no_reset_v6_latest_segment_progress_latest.json\"",
-      "line": 18,
-      "path": "scripts/hz15_check_no_reset_v6_latest_segment_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_NO_RESET_V6_LATEST_SEGMENT_PROGRESS.md\"",
-      "line": 19,
-      "path": "scripts/hz15_check_no_reset_v6_latest_segment_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 89,
-      "path": "scripts/hz15_check_no_reset_v6_latest_segment_progress.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_no_reset_v6_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_no_reset_v6_progress_latest.json\"",
-      "line": 20,
-      "path": "scripts/hz15_check_no_reset_v6_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_NO_RESET_V6_PROGRESS.md\"",
-      "line": 21,
-      "path": "scripts/hz15_check_no_reset_v6_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 86,
-      "path": "scripts/hz15_check_no_reset_v6_progress.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_check_resume_progress.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_resume_progress_latest.json\"",
-      "line": 21,
-      "path": "scripts/hz15_check_resume_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_RESUME_PROGRESS.md\"",
-      "line": 22,
-      "path": "scripts/hz15_check_resume_progress.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
       "line": 61,
       "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "18",
-      "line": 116,
-      "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": "HZ15_ITEM_SLEEP_MIN"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "45",
-      "line": 117,
-      "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": "HZ15_ITEM_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "1200",
-      "line": 118,
-      "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": "HZ15_PAGE_SLEEP_MIN"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "2400",
-      "line": 119,
-      "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": "HZ15_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2835,14 +2091,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_probe_jump_to_page_30_60.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "121.41.111.36",
       "line": 17,
@@ -2859,66 +2107,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 164,
-      "path": "scripts/hz15_probe_jump_to_page_30_60.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 164,
       "path": "scripts/hz15_probe_jump_to_page_30_60.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_publish_runtime_summary_to_github.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz15_runtime_summary_latest.json\"",
-      "line": 17,
-      "path": "scripts/hz15_publish_runtime_summary_to_github.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_JSON"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"docs/ops/DL2_HZ15_RUNTIME_SUMMARY.md\"",
-      "line": 18,
-      "path": "scripts/hz15_publish_runtime_summary_to_github.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_MD"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "{",
-      "line": 117,
-      "path": "scripts/hz15_publish_runtime_summary_to_github.sh",
-      "severity": "blocker",
-      "symbol": "report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 112,
-      "path": "scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -2947,34 +2139,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 54,
-      "path": "scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 54,
       "path": "scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_jump_pages_4_67_slow.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -3011,14 +2179,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_no_reset_v3.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 65,
@@ -3051,14 +2211,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_no_reset_v4.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 66,
@@ -3089,14 +2241,6 @@
       "path": "scripts/hz15_resume_pages_11_20_no_reset_v4.sh",
       "severity": "blocker",
       "symbol": "HZ15_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_no_reset_v5.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_parameter",
@@ -3131,14 +2275,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 65,
@@ -3169,14 +2305,6 @@
       "path": "scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh",
       "severity": "blocker",
       "symbol": "HZ15_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_ultraslow.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_parameter",
@@ -3211,14 +2339,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_11_20_ultraslow_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 64,
@@ -3251,14 +2371,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 65,
@@ -3289,14 +2401,6 @@
       "path": "scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh",
       "severity": "blocker",
       "symbol": "HZ15_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_28_30_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_parameter",
@@ -3331,14 +2435,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_31_40_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 65,
@@ -3371,14 +2467,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "10",
       "line": 66,
@@ -3409,14 +2497,6 @@
       "path": "scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh",
       "severity": "blocker",
       "symbol": "HZ15_PAGE_SLEEP_MAX"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_parameter",
@@ -3451,14 +2531,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz15_start_jump_pages_1_67.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_parameter",
       "detail": "6",
       "line": 59,
@@ -3491,46 +2563,6 @@
       "symbol": "HZ15_PAGE_SLEEP_MAX"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz16_run_short_url_diag_page49.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz17_run_recover_page49_smoke.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz18_run_card_click_page49_smoke.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz19_prepare_visual_probe_failed_sku.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "121.41.111.36",
-      "line": 59,
-      "path": "scripts/hz19_prepare_visual_probe_failed_sku.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://121.41.111.36:18772/vnc.html?autoconnect=true&resize=scale",
       "line": 59,
@@ -3539,90 +2571,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz20_run_mouse_click_page49_smoke.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_mainline_safe_remaining.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_mainline_status.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_patch_safe_locator_click_and_run.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "f'[data-hz21-token=\"{token}\"]'",
-      "line": 62,
-      "path": "scripts/hz21_patch_safe_locator_click_and_run.sh",
-      "severity": "blocker",
-      "symbol": "selector"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_prepare_page49_by_4000_pager_then_run.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 70,
-      "path": "scripts/hz21_prepare_page49_by_4000_pager_then_run.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 70,
       "path": "scripts/hz21_prepare_page49_by_4000_pager_then_run.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_prepare_page49_then_run_safe_locator.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 54,
-      "path": "scripts/hz21_prepare_page49_then_run_safe_locator.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -3643,22 +2595,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_run_safe_pages_50_52.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 65,
-      "path": "scripts/hz21_run_safe_pages_50_52.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 65,
@@ -3675,22 +2611,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_run_safe_pages_53_57.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 65,
-      "path": "scripts/hz21_run_safe_pages_53_57.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 65,
@@ -3703,94 +2623,6 @@
       "detail": "https://union.jd.com/proManager/index?pageNo=1",
       "line": 78,
       "path": "scripts/hz21_run_safe_pages_53_57.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_run_strict_card_dom_page49_smoke.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_run_strong_risk_collector.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz21_start_mainline_background.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz22_mainline_all_product.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz22_start_background.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_apply_data_integrity_update.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_check_commercial_execution.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz23_commercial_status_v2_latest.json\"",
-      "line": 12,
-      "path": "scripts/hz23_check_commercial_execution.sh",
-      "severity": "blocker",
-      "symbol": "REPORT"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "x.get('service') or {}",
-      "line": 40,
-      "path": "scripts/hz23_check_commercial_execution.sh",
-      "severity": "blocker",
-      "symbol": "service"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "x.get('latest_round')",
-      "line": 42,
-      "path": "scripts/hz23_check_commercial_execution.sh",
-      "severity": "blocker",
-      "symbol": "round_report"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_install_service.sh",
       "severity": "blocker",
       "symbol": ""
     },
@@ -3819,92 +2651,12 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_parameter",
-      "detail": "45",
-      "line": 48,
-      "path": "scripts/hz23_install_service.sh",
-      "severity": "blocker",
-      "symbol": "TimeoutStopSec"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_mainline_refresh.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_migrate_state_and_publish.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_observation_daemon.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_publish_commercial_status_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_publish_compact_status.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_publish_status_dirty_safe.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz23_commercial_status_v2_latest.json\"",
-      "line": 12,
-      "path": "scripts/hz23_publish_status_dirty_safe.sh",
-      "severity": "blocker",
-      "symbol": "REPORT"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_quarantine_and_refresh_candidate.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "long_function",
       "detail": "101 lines exceeds 80",
       "line": 46,
       "path": "scripts/hz23_quarantine_unsafe_source_rows.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_reconcile_runtime_git_state.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "duplicate_implementation",
@@ -3931,110 +2683,6 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_after_manual_verification.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "$?",
-      "line": 87,
-      "path": "scripts/hz23_resume_after_manual_verification.sh",
-      "severity": "blocker",
-      "symbol": "STOP_SERVICE_RC"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "$?",
-      "line": 131,
-      "path": "scripts/hz23_resume_after_manual_verification.sh",
-      "severity": "blocker",
-      "symbol": "START_SERVICE_RC"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_nohup_conservative.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_nohup_runner.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_nohup_start.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_nohup_status.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_resume_schedule_next_daytime.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_revalidate_candidate_after_lineage_fix.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_safe_reload_observer.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/hz23_observer_reload_latest.json\"",
-      "line": 12,
-      "path": "scripts/hz23_safe_reload_observer.sh",
-      "severity": "blocker",
-      "symbol": "REPORT"
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "$?",
-      "line": 113,
-      "path": "scripts/hz23_safe_reload_observer.sh",
-      "severity": "blocker",
-      "symbol": "REPORT_RC"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz23_status.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "duplicate_implementation",
       "detail": "scripts/hz24_analyze_tab_overlap.py:19, scripts/backfill_commission_products_mysql.py:33",
       "line": 19,
@@ -4059,84 +2707,12 @@
       "symbol": "main"
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_apply_structure_fix_and_schedule.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "long_function",
       "detail": "100 lines exceeds 80",
       "line": 57,
       "path": "scripts/hz24_build_increment_queue.py",
       "severity": "blocker",
       "symbol": "main"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_finalize_verified_special_tabs.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_increment_loop.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_increment_nohup_runner.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_increment_start_or_schedule.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_run_one_increment_batch.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_run_product_tab_audit.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_run_tab_pool_analysis.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "hardcoded_parameter",
@@ -4323,62 +2899,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/publish_commission_test_diagnostics.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "\"reports/commission_data_unittest_diagnostic_latest.json\"",
-      "line": 9,
-      "path": "scripts/publish_commission_test_diagnostics.sh",
-      "severity": "blocker",
-      "symbol": "REPORT"
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/publish_mysql_readiness_reports.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/run_commission_data_checks_v2.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/run_commission_mysql_prepare_checks.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/run_engineering_scan_and_publish.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_absolute_path",
-      "detail": "/usr/bin/env",
-      "line": 1,
-      "path": "scripts/setup_browser_runtime.sh",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "long_function",
       "detail": "106 lines exceeds 80",
       "line": 25,
@@ -4445,7 +2965,7 @@
     {
       "category": "long_function",
       "detail": "84 lines exceeds 80",
-      "line": 22,
+      "line": 71,
       "path": "src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "severity": "blocker",
       "symbol": "scan_shell"
@@ -10100,23 +8620,15 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'large_file_line_limit' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'lines exceeds' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
       "detail": "'hardcoded_url' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'large_file_line_limit' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "severity": "warning",
@@ -10133,6 +8645,14 @@
     {
       "category": "repeated_literal",
       "detail": "'hardcoded_absolute_path' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'lines exceeds' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "severity": "warning",
@@ -10235,16 +8755,16 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T14:54:17",
+  "generated_at": "2026-06-19T14:59:14",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 172,
+    "blocker_file_count": 114,
     "category_counts": {
       "duplicate_implementation": 55,
-      "hardcoded_absolute_path": 118,
-      "hardcoded_ip": 89,
-      "hardcoded_parameter": 175,
+      "hardcoded_absolute_path": 5,
+      "hardcoded_ip": 67,
+      "hardcoded_parameter": 125,
       "hardcoded_url": 133,
       "large_file": 7,
       "long_function": 28,
@@ -10256,16 +8776,12 @@
         "path": "run/hz11_rank_worker.py"
       },
       {
-        "count": 16,
+        "count": 13,
         "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh"
       },
       {
         "count": 10,
         "path": "run/hz12_product_all_full_collector.py"
-      },
-      {
-        "count": 8,
-        "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh"
       },
       {
         "count": 8,
@@ -10278,34 +8794,6 @@
       {
         "count": 7,
         "path": "run/hz23_finalize_round.py"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_restart_v8_from_existing_latest.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_run_v4_smoke_and_report_safe.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_run_v5_strict_title_smoke_and_report.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_run_v6_pagination_smoke_and_report.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_run_v7_exact_next_smoke_and_report.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz12_start_v7_full_4000.sh"
-      },
-      {
-        "count": 7,
-        "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh"
       },
       {
         "count": 7,
@@ -10337,39 +8825,71 @@
       },
       {
         "count": 6,
-        "path": "scripts/hz14_probe_direct_pageno_navigation.sh"
+        "path": "scripts/hz12_restart_v8_from_existing_latest.sh"
       },
       {
         "count": 6,
-        "path": "scripts/hz14_probe_page_number_buttons.sh"
+        "path": "scripts/hz12_run_v4_smoke_and_report_safe.sh"
       },
       {
         "count": 6,
-        "path": "scripts/hz14_probe_textnode_page_number_click.sh"
+        "path": "scripts/hz12_run_v5_strict_title_smoke_and_report.sh"
       },
       {
         "count": 6,
-        "path": "scripts/hz14_probe_visible_next_page_number.sh"
+        "path": "scripts/hz12_run_v6_pagination_smoke_and_report.sh"
       },
       {
         "count": 6,
+        "path": "scripts/hz12_run_v7_exact_next_smoke_and_report.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz12_start_v7_full_4000.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh"
+      },
+      {
+        "count": 6,
+        "path": "tests/test_hz23_finalize_gate.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz15_jump_pages_collector_v4_no_reset.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz21_strict_card_dom_recover_page.py"
+      },
+      {
+        "count": 5,
+        "path": "run/hz23_scan_current_page.py"
+      },
+      {
+        "count": 5,
         "path": "scripts/hz14_restart_v2_after_state_fix.sh"
       },
       {
-        "count": 6,
+        "count": 5,
         "path": "scripts/hz14_restart_v3_skip_bad_sku.sh"
       },
       {
-        "count": 6,
+        "count": 5,
         "path": "scripts/hz14_restart_v4_cumulative.sh"
       },
       {
-        "count": 6,
+        "count": 5,
         "path": "scripts/hz14_start_all_product_full_4000.sh"
       },
       {
-        "count": 6,
-        "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh"
+        "count": 5,
+        "path": "tests/test_commission_product_domain.py"
+      },
+      {
+        "count": 4,
+        "path": "run/hz15_jump_pages_collector.py"
       }
     ]
   },
