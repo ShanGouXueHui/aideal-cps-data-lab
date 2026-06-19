@@ -33,7 +33,7 @@ HZ24_ITEM_SLEEP_MIN="${HZ24_ITEM_SLEEP_MIN:-4}" \
 HZ24_ITEM_SLEEP_MAX="${HZ24_ITEM_SLEEP_MAX:-8}" \
 HZ24_TAB_SLEEP_MIN="${HZ24_TAB_SLEEP_MIN:-120}" \
 HZ24_TAB_SLEEP_MAX="${HZ24_TAB_SLEEP_MAX:-240}" \
-.venv-browser/bin/python run/hz24_collect_increment_links.py > logs/hz24_batch.log 2>&1
+.venv-browser/bin/python run/hz24_collect_increment_links_v2.py > logs/hz24_batch.log 2>&1
 COLLECT_RC=$?
 
 if [ "$OLD_STATE" = "active" ]; then
@@ -45,16 +45,16 @@ fi
 sleep 2
 SERVICE_STATE="$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)"
 
-read -r COMPLETE SUCCESS PENDING REASON <<< "$(python3 - <<'PY'
+read -r COMPLETE LINKED UNAVAILABLE PENDING REASON <<< "$(python3 - <<'PY'
 import json
 from pathlib import Path
 x=json.loads(Path('reports/hz24_increment_collection_latest.json').read_text(encoding='utf-8'))
-print('true' if x.get('complete') else 'false',int(x.get('success_count') or 0),int(x.get('pending_count') or 0),x.get('stop_reason') or '-')
+print('true' if x.get('complete') else 'false',int(x.get('success_count') or 0),int(x.get('unavailable_count') or 0),int(x.get('pending_count') or 0),x.get('stop_reason') or '-')
 PY
 )"
 
 if [ "$COMPLETE" = "true" ]; then
-  PYTHONPATH=src python3 scripts/hz24_validate_increment_links.py > logs/hz24_validate.log 2>&1
+  PYTHONPATH=src python3 scripts/hz24_validate_increment_outcomes.py > logs/hz24_validate.log 2>&1
   VALIDATE_RC=$?
 else
   VALIDATE_RC=SKIP
@@ -73,7 +73,8 @@ echo "QUEUE_RC=$QUEUE_RC"
 echo "STOP_RC=$STOP_RC"
 echo "COLLECT_RC=$COLLECT_RC"
 echo "COMPLETE=$COMPLETE"
-echo "SUCCESS_COUNT=$SUCCESS"
+echo "LINKED_COUNT=$LINKED"
+echo "UNAVAILABLE_COUNT=$UNAVAILABLE"
 echo "PENDING_COUNT=$PENDING"
 echo "STOP_REASON=$REASON"
 echo "VALIDATE_RC=$VALIDATE_RC"
