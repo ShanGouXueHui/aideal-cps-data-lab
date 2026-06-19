@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import tomllib
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+
+from aideal_cps_data_lab.hz24.repository import atomic_json, load_json
 
 STATUS = Path("reports/hz23_commercial_status_v2_latest.json")
 UPGRADE = Path("migrations/mysql/0001_commission_data_v1.up.sql")
@@ -13,16 +15,7 @@ ROLLBACK = Path("migrations/mysql/0001_commission_data_v1.down.sql")
 CANDIDATE = Path("data/export/aideal_cps_products_commercial_candidate_latest.jsonl")
 MANIFEST = Path("data/export/aideal_cps_products_commercial_candidate_manifest.json")
 REPORT = Path("reports/commission_mysql_initialization_plan_latest.json")
-
-
-def load(path: Path) -> dict[str, Any]:
-    if not path.exists():
-        return {}
-    try:
-        value = json.loads(path.read_text(encoding="utf-8"))
-        return value if isinstance(value, dict) else {}
-    except Exception:
-        return {}
+CONFIG = Path("config/mysql-commercial.toml")
 
 
 def digest(path: Path) -> str | None:
@@ -30,8 +23,10 @@ def digest(path: Path) -> str | None:
 
 
 def main() -> int:
-    status = load(STATUS)
-    manifest = load(MANIFEST)
+    status = load_json(STATUS)
+    manifest = load_json(MANIFEST)
+    with CONFIG.open("rb") as stream:
+        topology = tomllib.load(stream)
     checks = {
         "status_present": bool(status),
         "service_active": ((status.get("service") or {}).get("state") == "active"),
@@ -49,12 +44,11 @@ def main() -> int:
     manifest_round = str(manifest.get("round_id") or "")
     checks["round_id_present"] = bool(status_round and manifest_round)
     checks["round_id_consistent"] = bool(status_round and status_round == manifest_round)
-
     result = {
         "schema_version": "aideal-commission-mysql-initialization-plan/v1",
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "database_name": "aideal_cps_data_lab",
-        "database_bind": "127.0.0.1:3306",
+        "database_name": str(topology["database_name"]),
+        "database_bind": f"{topology['bind_host']}:{topology['bind_port']}",
         "upgrade_file": str(UPGRADE),
         "upgrade_sha256": digest(UPGRADE),
         "rollback_file": str(ROLLBACK),
@@ -68,10 +62,7 @@ def main() -> int:
         "ready_for_database_initialization": all(checks.values()),
         "execution_performed": False,
     }
-    REPORT.parent.mkdir(parents=True, exist_ok=True)
-    tmp = REPORT.with_suffix(REPORT.suffix + ".tmp")
-    tmp.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
-    tmp.replace(REPORT)
+    atomic_json(REPORT, result)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
 
