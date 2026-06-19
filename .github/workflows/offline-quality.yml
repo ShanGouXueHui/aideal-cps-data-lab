@@ -49,6 +49,7 @@ jobs:
             scripts/hz24_build_increment_queue.py \
             scripts/hz24_analyze_tab_overlap.py \
             scripts/hz24_validate_increment_outcomes.py \
+            scripts/hz24_migrate_legacy_sold_out.py \
             scripts/backfill_commission_products_mysql.py \
             scripts/verify_commission_mysql_post_migration.py
       - name: Run pure offline unit tests
