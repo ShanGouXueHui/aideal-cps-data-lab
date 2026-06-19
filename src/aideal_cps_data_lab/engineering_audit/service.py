@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from .common import iter_engineering_files
+from .common import ABS_PATH_RE, IP_RE, URL_RE, is_configuration_file, iter_engineering_files
 from .models import Finding, FunctionFingerprint
 from .python_scan import scan_python
 from .shell_scan import scan_shell
@@ -18,6 +18,48 @@ def _merge_literals(
 ) -> None:
     for value, paths in source.items():
         target[value].update(paths)
+
+
+def _scan_generic(
+    root: Path,
+    path: Path,
+    settings: dict[str, object],
+) -> list[Finding]:
+    findings: list[Finding] = []
+    text = (root / path).read_text(encoding="utf-8", errors="replace")
+    lines = text.splitlines()
+    if len(lines) > int(settings["large_file_line_limit"]):
+        findings.append(
+            Finding(
+                "blocker",
+                "large_file",
+                str(path),
+                1,
+                "",
+                f"{len(lines)} lines exceeds {settings['large_file_line_limit']}",
+            )
+        )
+    if is_configuration_file(path, settings):
+        return findings
+    for line_number, line in enumerate(lines, start=1):
+        for category, pattern in (
+            ("hardcoded_url", URL_RE),
+            ("hardcoded_ip", IP_RE),
+            ("hardcoded_absolute_path", ABS_PATH_RE),
+        ):
+            match = pattern.search(line)
+            if match:
+                findings.append(
+                    Finding(
+                        "blocker",
+                        category,
+                        str(path),
+                        line_number,
+                        "",
+                        match.group(0)[:240],
+                    )
+                )
+    return findings
 
 
 def _duplicate_implementation_findings(
@@ -71,6 +113,8 @@ def run_audit(root: Path, settings: dict[str, object]) -> dict[str, Any]:
             file_findings, file_literals = scan_shell(root, path, settings)
             findings.extend(file_findings)
             _merge_literals(literals, file_literals)
+        else:
+            findings.extend(_scan_generic(root, path, settings))
 
     findings.extend(_duplicate_implementation_findings(fingerprints, settings))
     minimum_files = int(settings["repeated_literal_min_files"])
