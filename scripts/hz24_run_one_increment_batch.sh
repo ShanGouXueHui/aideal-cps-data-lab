@@ -1,9 +1,21 @@
 #!/usr/bin/env bash
 # One HZ24 increment batch. No set -e.
-cd "${HOME}/projects/aideal-cps-data-lab" || exit 1
-mkdir -p logs reports run data/import data/export
 
-PYTHONPATH=src python3 scripts/hz24_build_increment_queue.py > logs/hz24_queue.log 2>&1
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+PROJECT_ROOT="$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)"
+cd "$PROJECT_ROOT" || exit 1
+mkdir -p logs reports run data/import data/export
+export PYTHONPATH="$PROJECT_ROOT/src"
+
+OBSERVER_SERVICE="$(python3 - <<'PY'
+import tomllib
+from pathlib import Path
+with Path('config/hz24-contracts.toml').open('rb') as stream:
+    print(tomllib.load(stream)['observer_service'])
+PY
+)"
+
+python3 scripts/hz24_build_increment_queue.py > logs/hz24_queue.log 2>&1
 QUEUE_RC=$?
 if [ "$QUEUE_RC" != "0" ]; then
   echo "===== SUMMARY ====="
@@ -13,9 +25,9 @@ if [ "$QUEUE_RC" != "0" ]; then
   exit 1
 fi
 
-OLD_STATE="$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)"
+OLD_STATE="$(systemctl is-active "$OBSERVER_SERVICE" 2>/dev/null || true)"
 if [ "$OLD_STATE" = "active" ]; then
-  sudo systemctl stop aideal-hz23-observer.service
+  sudo systemctl stop "$OBSERVER_SERVICE"
   STOP_RC=$?
 else
   STOP_RC=0
@@ -28,33 +40,29 @@ if [ "$STOP_RC" != "0" ]; then
   exit 1
 fi
 
-HZ24_BATCH_LIMIT="${HZ24_BATCH_LIMIT:-35}" \
-HZ24_ITEM_SLEEP_MIN="${HZ24_ITEM_SLEEP_MIN:-4}" \
-HZ24_ITEM_SLEEP_MAX="${HZ24_ITEM_SLEEP_MAX:-8}" \
-HZ24_TAB_SLEEP_MIN="${HZ24_TAB_SLEEP_MIN:-120}" \
-HZ24_TAB_SLEEP_MAX="${HZ24_TAB_SLEEP_MAX:-240}" \
-.venv-browser/bin/python run/hz24_collect_increment_links_v2.py > logs/hz24_batch.log 2>&1
+.venv-browser/bin/python run/hz24_collect_increment_links.py > logs/hz24_batch.log 2>&1
 COLLECT_RC=$?
 
 if [ "$OLD_STATE" = "active" ]; then
-  sudo systemctl start aideal-hz23-observer.service
+  sudo systemctl start "$OBSERVER_SERVICE"
   START_RC=$?
 else
   START_RC=0
 fi
 sleep 2
-SERVICE_STATE="$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)"
+SERVICE_STATE="$(systemctl is-active "$OBSERVER_SERVICE" 2>/dev/null || true)"
 
 read -r COMPLETE LINKED UNAVAILABLE PENDING REASON <<< "$(python3 - <<'PY'
 import json
 from pathlib import Path
-x=json.loads(Path('reports/hz24_increment_collection_latest.json').read_text(encoding='utf-8'))
+path=Path('reports/hz24_increment_collection_latest.json')
+x=json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
 print('true' if x.get('complete') else 'false',int(x.get('success_count') or 0),int(x.get('unavailable_count') or 0),int(x.get('pending_count') or 0),x.get('stop_reason') or '-')
 PY
 )"
 
 if [ "$COMPLETE" = "true" ]; then
-  PYTHONPATH=src python3 scripts/hz24_validate_increment_outcomes.py > logs/hz24_validate.log 2>&1
+  python3 scripts/hz24_validate_increment_outcomes.py > logs/hz24_validate.log 2>&1
   VALIDATE_RC=$?
 else
   VALIDATE_RC=SKIP
