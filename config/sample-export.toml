@@ -1,0 +1,4 @@
+schema_version = "sample-export/v1"
+product_url = "https://example.invalid/product"
+material_url = "https://example.invalid/material"
+output = "data/import/sample_product_snapshots.jsonl"
