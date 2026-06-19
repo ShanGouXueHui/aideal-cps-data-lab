@@ -13,6 +13,9 @@ class BrowserSettings:
     trusted_link_host: str
     item_scheme: str
     item_host: str
+    image_scheme: str
+    image_host: str
+    image_path_prefix: str
     tab_role_selector: str
     tab_class_pattern: str
     default_timeout_ms: int
@@ -40,7 +43,6 @@ class CollectionSettings:
 @dataclass(frozen=True, slots=True)
 class ContractSettings:
     observer_service: str
-    hz21_adapter: Path
     queue_file: Path
     queue_manifest_file: Path
     linked_file: Path
