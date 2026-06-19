@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 323,
   "compatibility_blocker_count": 0,
-  "files_scanned": 304,
+  "files_scanned": 305,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -2913,7 +2913,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'${HOME}/projects/aideal-cps-data-lab' repeated in 108 files: scripts/check_commission_mysql_release_readiness.sh, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz12_start_product_all_full_v3.sh, scripts/hz12_start_v7_full_4000.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz14_restart_v2_after_state_fix.sh, scripts/hz14_restart_v3_skip_bad_sku.sh, scripts/hz14_restart_v4_cumulative.sh, scripts/hz14_start_all_product_full_4000.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz15_resume_jump_pages_4_67_slow.sh, scripts/hz15_resume_pages_11_20_no_reset_v3.sh, scripts/hz15_resume_pages_11_20_no_reset_v4.sh, scripts/hz15_resume_pages_11_20_no_reset_v5.sh, scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_11_20_ultraslow.sh, scripts/hz15_resume_pages_11_20_ultraslow_v2.sh, scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_28_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_31_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh, scripts/hz15_start_jump_pages_1_67.sh, scripts/hz16_run_short_url_diag_page49.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz19_prepare_visual_probe_failed_sku.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strong_risk_collector.sh, scripts/hz21_start_mainline_background.sh, scripts/hz22_mainline_all_product.sh, scripts/hz22_start_background.sh, scripts/hz23_apply_data_integrity_update.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_migrate_state_and_publish.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_publish_status_dirty_safe.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_conservative.sh, scripts/hz23_resume_nohup_runner.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_resume_schedule_next_daytime.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_increment_nohup_runner.sh, scripts/hz24_increment_start_or_schedule.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, scripts/run_commission_data_checks_v2.sh, scripts/run_commission_mysql_prepare_checks.sh",
+      "detail": "'${HOME}/projects/aideal-cps-data-lab' repeated in 107 files: scripts/check_commission_mysql_release_readiness.sh, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz12_start_product_all_full_v3.sh, scripts/hz12_start_v7_full_4000.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz14_restart_v2_after_state_fix.sh, scripts/hz14_restart_v3_skip_bad_sku.sh, scripts/hz14_restart_v4_cumulative.sh, scripts/hz14_start_all_product_full_4000.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz15_resume_jump_pages_4_67_slow.sh, scripts/hz15_resume_pages_11_20_no_reset_v3.sh, scripts/hz15_resume_pages_11_20_no_reset_v4.sh, scripts/hz15_resume_pages_11_20_no_reset_v5.sh, scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_11_20_ultraslow.sh, scripts/hz15_resume_pages_11_20_ultraslow_v2.sh, scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_28_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_31_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh, scripts/hz15_start_jump_pages_1_67.sh, scripts/hz16_run_short_url_diag_page49.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz19_prepare_visual_probe_failed_sku.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strong_risk_collector.sh, scripts/hz21_start_mainline_background.sh, scripts/hz22_mainline_all_product.sh, scripts/hz22_start_background.sh, scripts/hz23_apply_data_integrity_update.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_migrate_state_and_publish.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_publish_status_dirty_safe.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_conservative.sh, scripts/hz23_resume_nohup_runner.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_resume_schedule_next_daytime.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz23_status.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_nohup_runner.sh, scripts/hz24_increment_start_or_schedule.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, scripts/run_commission_data_checks_v2.sh, scripts/run_commission_mysql_prepare_checks.sh",
       "line": 0,
       "path": "scripts/check_commission_mysql_release_readiness.sh",
       "scope": "active",
@@ -3075,7 +3075,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$PROJECT_DIR' repeated in 83 files: scripts/git_publish_files_via_worktree.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz12_start_v7_full_4000.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz14_restart_v2_after_state_fix.sh, scripts/hz14_restart_v3_skip_bad_sku.sh, scripts/hz14_restart_v4_cumulative.sh, scripts/hz14_start_all_product_full_4000.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz15_resume_jump_pages_4_67_slow.sh, scripts/hz15_resume_pages_11_20_no_reset_v3.sh, scripts/hz15_resume_pages_11_20_no_reset_v4.sh, scripts/hz15_resume_pages_11_20_no_reset_v5.sh, scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_11_20_ultraslow.sh, scripts/hz15_resume_pages_11_20_ultraslow_v2.sh, scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_28_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_31_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh, scripts/hz15_start_jump_pages_1_67.sh, scripts/hz16_run_short_url_diag_page49.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz19_prepare_visual_probe_failed_sku.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strong_risk_collector.sh, scripts/hz21_start_mainline_background.sh, scripts/hz22_mainline_all_product.sh, scripts/hz22_start_background.sh, scripts/hz23_install_service.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/run_commission_mysql_prepare_checks.sh",
+      "detail": "'$PROJECT_DIR' repeated in 84 files: scripts/git_publish_files_via_worktree.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz12_start_v7_full_4000.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz14_restart_v2_after_state_fix.sh, scripts/hz14_restart_v3_skip_bad_sku.sh, scripts/hz14_restart_v4_cumulative.sh, scripts/hz14_start_all_product_full_4000.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_daytime_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz15_resume_jump_pages_4_67_slow.sh, scripts/hz15_resume_pages_11_20_no_reset_v3.sh, scripts/hz15_resume_pages_11_20_no_reset_v4.sh, scripts/hz15_resume_pages_11_20_no_reset_v5.sh, scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_11_20_ultraslow.sh, scripts/hz15_resume_pages_11_20_ultraslow_v2.sh, scripts/hz15_resume_pages_21_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_28_30_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_31_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh, scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh, scripts/hz15_start_jump_pages_1_67.sh, scripts/hz16_run_short_url_diag_page49.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz19_prepare_visual_probe_failed_sku.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strong_risk_collector.sh, scripts/hz21_start_mainline_background.sh, scripts/hz22_mainline_all_product.sh, scripts/hz22_start_background.sh, scripts/hz23_install_service.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/run_commission_mysql_prepare_checks.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -3102,7 +3102,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(CDPATH= cd -- ' repeated in 4 files: scripts/git_publish_files_via_worktree.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "'$(CDPATH= cd -- ' repeated in 5 files: scripts/git_publish_files_via_worktree.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -3111,7 +3111,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' && pwd)' repeated in 5 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "' && pwd)' repeated in 6 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -3120,7 +3120,16 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' && pwd)}' repeated in 3 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_publish_terminal_repair_evidence.sh",
+      "detail": "'${AIDEAL_PROJECT_DIR:-$(CDPATH= cd -- ' repeated in 3 files: scripts/git_publish_files_via_worktree.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh",
+      "line": 0,
+      "path": "scripts/git_publish_files_via_worktree.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "' && pwd)}' repeated in 4 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -3183,7 +3192,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'STATUS=FAIL' repeated in 15 files: scripts/hz23_check_commercial_execution.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "'STATUS=FAIL' repeated in 16 files: scripts/hz23_check_commercial_execution.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/hz23_check_commercial_execution.sh",
       "scope": "active",
@@ -3561,7 +3570,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)' repeated in 9 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_increment_loop.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh",
+      "detail": "'$(systemctl is-active aideal-hz23-observer.service 2>/dev/null || true)' repeated in 8 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3777,7 +3786,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(systemctl show aideal-hz23-observer.service -p MainPID --value 2>/dev/null || true)' repeated in 7 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_increment_loop.sh, scripts/hz24_run_tab_pool_analysis.sh",
+      "detail": "'$(systemctl show aideal-hz23-observer.service -p MainPID --value 2>/dev/null || true)' repeated in 6 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_run_tab_pool_analysis.sh",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -4212,6 +4221,24 @@
       "detail": "'structure_sha256' repeated in 4 files: scripts/hz24_finalize_verified_special_tabs.sh, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py",
       "line": 0,
       "path": "scripts/hz24_finalize_verified_special_tabs.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'observer_service' repeated in 3 files: scripts/hz24_increment_loop.sh, scripts/hz24_run_one_increment_batch.sh, src/aideal_cps_data_lab/hz24/settings_sections.py",
+      "line": 0,
+      "path": "scripts/hz24_increment_loop.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'unavailable_count' repeated in 3 files: scripts/hz24_increment_loop.sh, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py",
+      "line": 0,
+      "path": "scripts/hz24_increment_loop.sh",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -8457,7 +8484,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' if x.get(' repeated in 11 files: scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz24_increment_loop.sh, scripts/hz24_run_one_increment_batch.sh",
+      "detail": "' if x.get(' repeated in 10 files: scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz24_run_one_increment_batch.sh",
       "line": 0,
       "path": "scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh",
       "scope": "historical",
@@ -8646,7 +8673,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'stop_reason' repeated in 11 files: scripts/hz21_mainline_safe_remaining.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/state_store.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'stop_reason' repeated in 12 files: scripts/hz21_mainline_safe_remaining.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, scripts/hz24_increment_loop.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/state_store.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "scripts/hz21_mainline_safe_remaining.sh",
       "scope": "historical",
@@ -9132,7 +9159,7 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-19T22:00:41",
+  "generated_at": "2026-06-19T22:01:36",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
@@ -9150,7 +9177,7 @@
       "hardcoded_url": 112,
       "large_file": 4,
       "long_function": 9,
-      "repeated_literal": 691
+      "repeated_literal": 694
     },
     "top_blocker_files": [
       {
@@ -9276,5 +9303,5 @@
     ]
   },
   "support_blocker_count": 38,
-  "warning_count": 691
+  "warning_count": 694
 }
