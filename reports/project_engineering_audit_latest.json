@@ -1,5 +1,5 @@
 {
-  "blocker_count": 387,
+  "blocker_count": 386,
   "files_scanned": 258,
   "findings": [
     {
@@ -2729,14 +2729,6 @@
       "path": "src/aideal_cps_data_lab/http_client.py",
       "severity": "blocker",
       "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'[role=\"radio\"], label.el-radio-button, [role=\"tab\"]'",
-      "line": 4,
-      "path": "src/aideal_cps_data_lab/hz24/browser_contract.py",
-      "severity": "blocker",
-      "symbol": "TAB_ROLE_SELECTOR"
     },
     {
       "category": "large_file",
@@ -8475,16 +8467,16 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T19:05:51",
+  "generated_at": "2026-06-19T19:06:50",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 110,
+    "blocker_file_count": 109,
     "category_counts": {
       "duplicate_implementation": 55,
       "hardcoded_absolute_path": 5,
       "hardcoded_ip": 47,
-      "hardcoded_parameter": 117,
+      "hardcoded_parameter": 116,
       "hardcoded_url": 131,
       "large_file": 7,
       "long_function": 25,
