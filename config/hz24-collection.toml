@@ -1,6 +1,11 @@
-schema_version = "hz24-collection/v1"
+schema_version = "hz24-collection/v2"
 batch_limit = 35
 wait_seconds = 12
 item_sleep_min_seconds = 4
 item_sleep_max_seconds = 8
+tab_sleep_min_seconds = 120
+tab_sleep_max_seconds = 240
 failure_fuse = 5
+link_expire_days = 60
+refresh_after_days = 40
+refresh_before_expiry_days = 20
