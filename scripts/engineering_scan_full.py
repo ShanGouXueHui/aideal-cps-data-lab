@@ -6,6 +6,7 @@ from pathlib import Path
 
 from aideal_cps_data_lab.engineering_audit.limits import load_limits
 from aideal_cps_data_lab.engineering_audit.service import run_audit
+from aideal_cps_data_lab.git_state import current_git_head
 
 
 def main() -> int:
@@ -19,6 +20,7 @@ def main() -> int:
         | {".js", ".jsx", ".ts", ".tsx", ".html", ".css", ".scss", ".vue"}
     )
     payload = run_audit(root, settings)
+    payload["git_head"] = current_git_head()
     report = root / "reports/project_engineering_audit_latest.json"
     report.parent.mkdir(parents=True, exist_ok=True)
     report.write_text(
@@ -27,6 +29,7 @@ def main() -> int:
     )
     print("===== SUMMARY =====")
     print("STATUS=" + str(payload["status"]))
+    print("GIT_HEAD=" + str(payload["git_head"]))
     print("FILES_SCANNED=" + str(payload["files_scanned"]))
     print("GLOBAL_BLOCKER_COUNT=" + str(payload["blocker_count"]))
     print("ACTIVE_BLOCKER_COUNT=" + str(payload["active_blocker_count"]))
