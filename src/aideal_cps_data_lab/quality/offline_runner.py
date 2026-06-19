@@ -33,7 +33,7 @@ def git_head() -> str:
     return result.stdout.strip() if result.returncode == 0 else ""
 
 
-def compile_paths(entrypoints: list[str]) -> tuple[bool, list[str]]:
+def compile_python_paths(entrypoints: list[str]) -> list[str]:
     failures: list[str] = []
     if not compileall.compile_dir("src", quiet=1):
         failures.append("src")
@@ -42,6 +42,30 @@ def compile_paths(entrypoints: list[str]) -> tuple[bool, list[str]]:
             py_compile.compile(value, doraise=True)
         except Exception as error:
             failures.append(f"{value}: {error!r}")
+    return failures
+
+
+def check_shell_paths(entrypoints: list[str]) -> list[str]:
+    failures: list[str] = []
+    for value in entrypoints:
+        result = subprocess.run(
+            ["bash", "-n", value],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or result.stdout).strip()
+            failures.append(f"{value}: {detail}")
+    return failures
+
+
+def compile_paths(
+    python_entrypoints: list[str],
+    shell_entrypoints: list[str],
+) -> tuple[bool, list[str]]:
+    failures = compile_python_paths(python_entrypoints)
+    failures.extend(check_shell_paths(shell_entrypoints))
     return not failures, failures
 
 
@@ -108,6 +132,7 @@ def fallback_config(path: Path) -> dict[str, Any]:
         "schema_version": "offline-quality/v1",
         "report_path": "reports/offline_quality_latest.json",
         "entrypoints": [],
+        "shell_entrypoints": [],
         "test_patterns": [],
         "config_error": f"failed_to_load:{path}",
     }
@@ -129,7 +154,8 @@ def run_offline_quality(path: Path = config_path) -> int:
     if not runner_error:
         try:
             compile_ok, compile_failures = compile_paths(
-                [str(value) for value in config["entrypoints"]]
+                [str(value) for value in config["entrypoints"]],
+                [str(value) for value in config.get("shell_entrypoints") or []],
             )
             test_result, test_output = run_tests(
                 [str(value) for value in config["test_patterns"]]
