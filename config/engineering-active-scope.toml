@@ -1,1 +1,7 @@
 schema_version = "engineering-active-scope/v1"
+active_prefixes = ["src/", "tests/", "config/", ".github/workflows/", "migrations/"]
+active_run_files = ["run/hz21_strict_card_dom_recover_page.py", "run/hz22_prepare_all_product_page.py", "run/hz23_scan_current_page.py", "run/hz23_finalize_round.py"]
+active_run_prefixes = ["run/hz24_"]
+active_script_prefixes = ["scripts/hz23_", "scripts/hz24_", "scripts/data_lab_", "scripts/validate_", "scripts/verify_", "scripts/backfill_", "scripts/engineering_scan"]
+active_script_names = ["scripts/run_engineering_scan_and_publish.sh", "scripts/git_publish_files_via_worktree.sh"]
+active_script_fragments = ["commission"]
