@@ -1,4 +1,4 @@
-schema_version = "hz24-browser/v4"
+schema_version = "hz24-browser/v5"
 cdp_scheme = "http"
 cdp_host = "127.0.0.1"
 cdp_port = 19228
@@ -8,6 +8,8 @@ trusted_link_scheme = "https"
 trusted_link_host = "u.jd.com"
 item_scheme = "https"
 item_host = "item.jd.com"
+tab_role_selector = '[role="radio"], label.el-radio-button, [role="tab"]'
+tab_class_pattern = "radio|tab"
 default_timeout_ms = 20000
 connect_timeout_ms = 15000
 tab_click_timeout_ms = 8000
