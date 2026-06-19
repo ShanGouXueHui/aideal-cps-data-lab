@@ -1,68 +1,14 @@
 {
-  "active_blocker_count": 48,
-  "active_warning_count": 236,
+  "active_blocker_count": 42,
+  "active_warning_count": 228,
   "category_counts": {
-    "duplicate_implementation": 8,
+    "duplicate_implementation": 2,
     "hardcoded_ip": 1,
     "hardcoded_url": 38,
     "long_function": 1,
-    "repeated_literal": 236
+    "repeated_literal": 228
   },
   "findings": [
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py:37, src/aideal_cps_data_lab/hz24/sold_out_evidence.py:17",
-      "line": 37,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "evidence_from_failure"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py:58, src/aideal_cps_data_lab/hz24/sold_out_evidence.py:38",
-      "line": 58,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "collect_evidence"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/sold_out_execution.py:39, src/aideal_cps_data_lab/hz24/legacy_sold_out.py:96",
-      "line": 96,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "migration_row"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py:37, src/aideal_cps_data_lab/hz24/sold_out_evidence.py:17",
-      "line": 17,
-      "path": "src/aideal_cps_data_lab/hz24/sold_out_evidence.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "evidence_from_failure"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py:58, src/aideal_cps_data_lab/hz24/sold_out_evidence.py:38",
-      "line": 38,
-      "path": "src/aideal_cps_data_lab/hz24/sold_out_evidence.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "collect_evidence"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/sold_out_execution.py:39, src/aideal_cps_data_lab/hz24/legacy_sold_out.py:96",
-      "line": 39,
-      "path": "src/aideal_cps_data_lab/hz24/sold_out_execution.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "migration_row"
-    },
     {
       "category": "duplicate_implementation",
       "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
@@ -560,7 +506,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'schema_version' repeated in 25 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
+      "detail": "'schema_version' repeated in 24 files: scripts/engineering_scan_active.py, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/plan_commission_mysql_initialization.py, scripts/publish_commission_test_diagnostics.sh, scripts/publish_mysql_readiness_reports.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/structure_inspection.py, src/aideal_cps_data_lab/hz24/validation_service.py, src/aideal_cps_data_lab/quality/offline_runner.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py",
       "line": 0,
       "path": "scripts/engineering_scan_active.py",
       "scope": "active",
@@ -1721,15 +1667,6 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'reports/hz24_increment_collection_latest.json' repeated in 3 files: scripts/hz24_increment_loop.sh, scripts/hz24_run_one_increment_batch.sh, src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "line": 0,
-      "path": "scripts/hz24_increment_loop.sh",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
       "detail": "'START_RC=$START_RC' repeated in 3 files: scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh",
       "line": 0,
       "path": "scripts/hz24_run_one_increment_batch.sh",
@@ -2306,7 +2243,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'executed' repeated in 4 files: src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py",
+      "detail": "'executed' repeated in 3 files: src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23/quarantine_service.py",
       "scope": "active",
@@ -2333,7 +2270,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'rootText' repeated in 5 files: src/aideal_cps_data_lab/hz24/card_actions.py, src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_evidence.py, tests/test_hz24_sold_out_migration.py",
+      "detail": "'rootText' repeated in 4 files: src/aideal_cps_data_lab/hz24/card_actions.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_evidence.py, tests/test_hz24_sold_out_migration.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/card_actions.py",
       "scope": "active",
@@ -2342,99 +2279,9 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'queue_count' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py",
+      "detail": "'record_sha256' repeated in 4 files: src/aideal_cps_data_lab/hz24/link_service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
       "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'linked_count' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'unavailable_count' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'terminal_overlap_zero' repeated in 4 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_gate.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'queue_accounting_valid' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_gate.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'source_tabs' repeated in 8 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_evidence.py, src/aideal_cps_data_lab/hz24/tab_runner.py, src/aideal_cps_data_lab/hz24/validation_rules.py, tests/test_hz24_resume_gate.py, tests/test_hz24_sold_out_migration.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'sold_out' repeated in 6 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_gate.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'record_sha256' repeated in 5 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/link_service.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'linked_hash_unchanged' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'evidence_count' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'none_already_linked' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/sold_out_evidence.py, tests/test_hz24_sold_out_migration.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
+      "path": "src/aideal_cps_data_lab/hz24/link_service.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -2450,9 +2297,36 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'source_tabs' repeated in 7 files: src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_evidence.py, src/aideal_cps_data_lab/hz24/tab_runner.py, src/aideal_cps_data_lab/hz24/validation_rules.py, tests/test_hz24_resume_gate.py, tests/test_hz24_sold_out_migration.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'queue_sha256' repeated in 3 files: src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/state_store.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'sold_out' repeated in 5 files: src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_gate.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/records.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'terminal_overlap_zero' repeated in 3 files: src/aideal_cps_data_lab/hz24/repair_preflight.py, src/aideal_cps_data_lab/hz24/resume_gate.py, tests/test_hz24_resume_gate.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/repair_preflight.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -2567,7 +2441,7 @@
     }
   ],
   "full_files_scanned": 299,
-  "generated_at": "2026-06-19T21:38:33",
+  "generated_at": "2026-06-19T21:40:16",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
