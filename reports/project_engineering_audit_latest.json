@@ -8997,7 +8997,7 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-19T20:50:27",
+  "generated_at": "2026-06-19T20:54:41",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
