@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import asdict
 from datetime import datetime
 from pathlib import Path
@@ -93,6 +93,23 @@ def _duplicate_implementation_findings(
     return findings
 
 
+def _summary(findings: list[Finding]) -> dict[str, object]:
+    category_counts = Counter(item.category for item in findings)
+    blocker_files = Counter(
+        item.path
+        for item in findings
+        if item.severity == "blocker"
+    )
+    return {
+        "category_counts": dict(sorted(category_counts.items())),
+        "top_blocker_files": [
+            {"path": path, "count": count}
+            for path, count in blocker_files.most_common(30)
+        ],
+        "blocker_file_count": len(blocker_files),
+    }
+
+
 def run_audit(root: Path, settings: dict[str, object]) -> dict[str, Any]:
     findings: list[Finding] = []
     fingerprints: list[FunctionFingerprint] = []
@@ -150,5 +167,6 @@ def run_audit(root: Path, settings: dict[str, object]) -> dict[str, Any]:
         "files_scanned": len(files),
         "blocker_count": blocker_count,
         "warning_count": warning_count,
+        "summary": _summary(findings),
         "findings": [asdict(item) for item in findings],
     }
