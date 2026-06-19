@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 322,
   "compatibility_blocker_count": 0,
-  "files_scanned": 283,
+  "files_scanned": 285,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -4947,7 +4947,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'__main__' repeated in 71 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v5.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz12_product_all_full_collector_v8.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v2.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, run/hz24_collect_increment_links.py, run/hz24_collect_increment_links_v2.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_preflight_risk_policy.py, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_refresh_manifest_gates.py, scripts/hz23_refresh_manifest_gates_v2.py, scripts/hz23_risk_policy_guard.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_validate_increment_links.py, scripts/hz24_validate_increment_outcomes.py, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/make_sample_export.py, scripts/plan_commission_mysql_backfill.py, scripts/plan_commission_mysql_initialization.py, scripts/probe_public_urls.py, scripts/validate_commercial_candidate.py, scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/validate_export_jsonl.py, scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_data_lab_config.py, tests/test_hz23_finalize_gate.py, tests/test_hz24_refactor.py, tests/test_hz24_terminal_state.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_initialization_gate.py, tests/test_mysql_repository.py",
+      "detail": "'__main__' repeated in 72 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v2.py, run/hz12_product_all_full_collector_v3.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v5.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz12_product_all_full_collector_v8.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v2.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, run/hz24_collect_increment_links.py, run/hz24_collect_increment_links_v2.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_preflight_risk_policy.py, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_refresh_manifest_gates.py, scripts/hz23_refresh_manifest_gates_v2.py, scripts/hz23_risk_policy_guard.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_validate_increment_links.py, scripts/hz24_validate_increment_outcomes.py, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/make_sample_export.py, scripts/plan_commission_mysql_backfill.py, scripts/plan_commission_mysql_initialization.py, scripts/probe_public_urls.py, scripts/validate_commercial_candidate.py, scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/validate_export_jsonl.py, scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_data_lab_config.py, tests/test_hz23_finalize_gate.py, tests/test_hz24_canonical_adapter.py, tests/test_hz24_refactor.py, tests/test_hz24_terminal_state.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_initialization_gate.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -5181,7 +5181,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://' repeated in 5 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py",
+      "detail": "'https://' repeated in 5 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/modal_parser.py, tests/test_hz24_canonical_adapter.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -8880,7 +8880,7 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-19T20:20:59",
+  "generated_at": "2026-06-19T20:25:38",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
