@@ -5757,7 +5757,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://' repeated in 4 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py",
+      "detail": "'https://' repeated in 5 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -8916,7 +8916,7 @@
     }
   ],
   "gate_blocker_count": 15,
-  "generated_at": "2026-06-19T20:10:59",
+  "generated_at": "2026-06-19T20:11:43",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
