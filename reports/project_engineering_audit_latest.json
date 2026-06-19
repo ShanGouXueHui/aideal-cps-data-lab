@@ -8916,7 +8916,7 @@
     }
   ],
   "gate_blocker_count": 15,
-  "generated_at": "2026-06-19T20:10:08",
+  "generated_at": "2026-06-19T20:10:32",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
