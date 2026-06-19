@@ -1,0 +1,9 @@
+schema_version = "hz24-resume-gate/v1"
+expected_queue_count = 221
+expected_linked_count = 72
+expected_unavailable_count = 5
+expected_pending_count = 144
+engineering_report = "reports/project_engineering_audit_latest.json"
+offline_quality_report = "reports/offline_quality_latest.json"
+sold_out_migration_report = "reports/hz24_sold_out_migration_latest.json"
+resume_report = "reports/hz24_resume_gate_latest.json"
