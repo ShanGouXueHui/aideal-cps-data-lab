@@ -42,11 +42,15 @@ def artifact_checks(
     migration: dict[str, Any],
 ) -> dict[str, bool]:
     expected_unavailable = int(config["expected_unavailable_count"])
+    engineering_head = str(engineering.get("git_head") or "")
     tested_head = str(offline.get("git_head") or "")
     return {
         "engineering_gate_passed": (
             engineering.get("status") == "PASS"
             and int(engineering.get("gate_blocker_count") or 0) == 0
+        ),
+        "engineering_report_active_paths_current": active_paths_unchanged_since(
+            engineering_head
         ),
         "offline_quality_passed": offline.get("status") == "PASS",
         "offline_quality_active_paths_current": active_paths_unchanged_since(
@@ -189,6 +193,7 @@ def run_resume_gate(
     result = {
         "schema_version": str(config["schema_version"]),
         "git_head": current_git_head(),
+        "engineering_git_head": engineering.get("git_head"),
         "tested_git_head": offline.get("git_head"),
         "checks": checks,
         "failures": [name for name, passed in checks.items() if not passed],
