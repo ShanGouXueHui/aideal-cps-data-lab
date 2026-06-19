@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import tomllib
 from decimal import Decimal
 from pathlib import Path
 
@@ -9,6 +10,8 @@ from aideal_cps_data_lab.schema import ProductSnapshot
 
 
 def main() -> int:
+    with Path("config/sample-export.toml").open("rb") as stream:
+        config = tomllib.load(stream)
     rows = [
         ProductSnapshot(
             source="sample",
@@ -21,14 +24,14 @@ def main() -> int:
             basis_price=Decimal("99.00"),
             coupon_price=Decimal("79.00"),
             purchase_price=Decimal("79.00"),
-            product_url="https://example.invalid/product",
-            material_url="https://example.invalid/material",
+            product_url=str(config["product_url"]),
+            material_url=str(config["material_url"]),
         )
     ]
-    out = Path("data/import/sample_product_snapshots.jsonl")
-    count = write_jsonl(out, rows)
+    output = Path(str(config["output"]))
+    count = write_jsonl(output, rows)
     print(f"wrote={count}")
-    print(f"output={out}")
+    print(f"output={output}")
     return 0
 
 
