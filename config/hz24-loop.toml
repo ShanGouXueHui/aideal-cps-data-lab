@@ -1,0 +1,5 @@
+schema_version = "hz24-loop/v1"
+safe_start_minute = 570
+safe_end_minute = 1230
+batch_sleep_min_seconds = 900
+batch_sleep_max_seconds = 1500
