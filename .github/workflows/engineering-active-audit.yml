@@ -1,0 +1,42 @@
+name: Active Engineering Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "run/**"
+      - "scripts/**"
+      - "config/**"
+      - "tests/**"
+      - ".github/workflows/engineering-active-audit.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run active audit
+        id: scan
+        continue-on-error: true
+        run: PYTHONPATH=src python scripts/engineering_scan_active.py
+      - name: Publish report
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add reports/project_engineering_active_audit_latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "reports: update active engineering audit"
+            git push
+          fi
+      - name: Enforce blockers
+        if: steps.scan.outcome != 'success'
+        run: exit 1
