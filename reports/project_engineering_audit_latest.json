@@ -1,8 +1,8 @@
 {
-  "active_blocker_count": 9,
-  "blocker_count": 333,
+  "active_blocker_count": 8,
+  "blocker_count": 332,
   "compatibility_blocker_count": 13,
-  "files_scanned": 277,
+  "files_scanned": 278,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -27,15 +27,6 @@
       "detail": "/usr/bin/bash",
       "line": 44,
       "path": "scripts/hz23_install_service.sh",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 57,
-      "path": "scripts/plan_commission_mysql_initialization.py",
       "scope": "active",
       "severity": "blocker",
       "symbol": ""
@@ -8960,15 +8951,15 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 22,
-  "generated_at": "2026-06-19T19:58:05",
+  "gate_blocker_count": 21,
+  "generated_at": "2026-06-19T19:59:00",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 94,
+    "blocker_file_count": 93,
     "blocker_scope_counts": {
-      "active": 9,
+      "active": 8,
       "compatibility": 13,
       "historical": 274,
       "support": 37
@@ -8976,7 +8967,7 @@
     "category_counts": {
       "duplicate_implementation": 44,
       "hardcoded_absolute_path": 5,
-      "hardcoded_ip": 44,
+      "hardcoded_ip": 43,
       "hardcoded_parameter": 112,
       "hardcoded_url": 114,
       "large_file": 4,
