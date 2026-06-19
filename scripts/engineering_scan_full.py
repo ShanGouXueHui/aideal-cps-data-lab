@@ -28,10 +28,15 @@ def main() -> int:
     print("===== SUMMARY =====")
     print("STATUS=" + str(payload["status"]))
     print("FILES_SCANNED=" + str(payload["files_scanned"]))
-    print("BLOCKER_COUNT=" + str(payload["blocker_count"]))
+    print("GLOBAL_BLOCKER_COUNT=" + str(payload["blocker_count"]))
+    print("ACTIVE_BLOCKER_COUNT=" + str(payload["active_blocker_count"]))
+    print("COMPATIBILITY_BLOCKER_COUNT=" + str(payload["compatibility_blocker_count"]))
+    print("HISTORICAL_BLOCKER_COUNT=" + str(payload["historical_blocker_count"]))
+    print("SUPPORT_BLOCKER_COUNT=" + str(payload["support_blocker_count"]))
+    print("GATE_BLOCKER_COUNT=" + str(payload["gate_blocker_count"]))
     print("WARNING_COUNT=" + str(payload["warning_count"]))
     print("REPORT=" + str(report.relative_to(root)))
-    return 1 if payload["blocker_count"] else 0
+    return 1 if payload["gate_blocker_count"] else 0
 
 
 if __name__ == "__main__":
