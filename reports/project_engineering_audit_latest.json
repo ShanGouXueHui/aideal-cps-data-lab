@@ -1,6 +1,6 @@
 {
   "blocker_count": 390,
-  "files_scanned": 254,
+  "files_scanned": 255,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -8523,7 +8523,7 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T15:17:15",
+  "generated_at": "2026-06-19T15:19:46",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
