@@ -10219,8 +10219,143 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T14:42:58",
+  "generated_at": "2026-06-19T14:44:09",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
+  "summary": {
+    "blocker_file_count": 172,
+    "category_counts": {
+      "duplicate_implementation": 55,
+      "hardcoded_absolute_path": 118,
+      "hardcoded_ip": 89,
+      "hardcoded_parameter": 175,
+      "hardcoded_url": 133,
+      "large_file": 7,
+      "long_function": 28,
+      "repeated_literal": 672
+    },
+    "top_blocker_files": [
+      {
+        "count": 17,
+        "path": "run/hz11_rank_worker.py"
+      },
+      {
+        "count": 16,
+        "path": "scripts/hz13_resize_primary_browser_and_probe_pager.sh"
+      },
+      {
+        "count": 10,
+        "path": "run/hz12_product_all_full_collector.py"
+      },
+      {
+        "count": 8,
+        "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh"
+      },
+      {
+        "count": 8,
+        "path": "scripts/jingfen_auth_probe.py"
+      },
+      {
+        "count": 7,
+        "path": "run/hz14_all_product_full_collector.py"
+      },
+      {
+        "count": 7,
+        "path": "run/hz23_finalize_round.py"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_restart_v8_from_existing_latest.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_run_v4_smoke_and_report_safe.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_run_v5_strict_title_smoke_and_report.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_run_v6_pagination_smoke_and_report.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_run_v7_exact_next_smoke_and_report.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz12_start_v7_full_4000.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/hz14_reset_product_all_and_probe_visible_pager.sh"
+      },
+      {
+        "count": 7,
+        "path": "scripts/jingfen_login_capture.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz11_high_commission_probe.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz13_multi_channel_collector.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz15_jump_pages_collector_v5_no_reset.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz18_card_click_recover_page.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz20_mouse_click_recover_page.py"
+      },
+      {
+        "count": 6,
+        "path": "run/hz24_audit_product_tabs.py"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_probe_direct_pageno_navigation.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_probe_page_number_buttons.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_probe_textnode_page_number_click.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_probe_visible_next_page_number.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_restart_v2_after_state_fix.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_restart_v3_skip_bad_sku.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_restart_v4_cumulative.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz14_start_all_product_full_4000.sh"
+      },
+      {
+        "count": 6,
+        "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh"
+      }
+    ]
+  },
   "warning_count": 672
 }
