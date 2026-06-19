@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from collections import Counter, defaultdict
 from dataclasses import asdict
 from datetime import datetime
@@ -93,21 +94,66 @@ def _duplicate_implementation_findings(
     return findings
 
 
-def _summary(findings: list[Finding]) -> dict[str, object]:
+def _matches(path: str, settings: dict[str, object], key: str) -> bool:
+    return any(re.search(str(pattern), path) for pattern in settings.get(key, []))
+
+
+def _scope(path: str, settings: dict[str, object]) -> str:
+    if _matches(path, settings, "historical_path_patterns"):
+        return "historical"
+    if _matches(path, settings, "compatibility_path_patterns"):
+        return "compatibility"
+    if _matches(path, settings, "support_path_patterns"):
+        return "support"
+    return "active"
+
+
+def _summary(
+    findings: list[Finding],
+    scoped: list[dict[str, Any]],
+) -> dict[str, object]:
     category_counts = Counter(item.category for item in findings)
     blocker_files = Counter(
         item.path
         for item in findings
         if item.severity == "blocker"
     )
+    scope_counts = Counter(
+        item["scope"]
+        for item in scoped
+        if item["severity"] == "blocker"
+    )
     return {
         "category_counts": dict(sorted(category_counts.items())),
+        "blocker_scope_counts": dict(sorted(scope_counts.items())),
         "top_blocker_files": [
             {"path": path, "count": count}
             for path, count in blocker_files.most_common(30)
         ],
         "blocker_file_count": len(blocker_files),
     }
+
+
+def _repeated_literal_findings(
+    literals: dict[str, set[str]],
+    settings: dict[str, object],
+) -> list[Finding]:
+    minimum_files = int(settings["repeated_literal_min_files"])
+    output: list[Finding] = []
+    for value, paths in literals.items():
+        if len(paths) < minimum_files:
+            continue
+        output.append(
+            Finding(
+                "warning",
+                "repeated_literal",
+                sorted(paths)[0],
+                0,
+                "",
+                f"{value[:160]!r} repeated in {len(paths)} files: {', '.join(sorted(paths))}",
+            )
+        )
+    return output
 
 
 def run_audit(root: Path, settings: dict[str, object]) -> dict[str, Any]:
@@ -134,39 +180,46 @@ def run_audit(root: Path, settings: dict[str, object]) -> dict[str, Any]:
             findings.extend(_scan_generic(root, path, settings))
 
     findings.extend(_duplicate_implementation_findings(fingerprints, settings))
-    minimum_files = int(settings["repeated_literal_min_files"])
-    for value, paths in literals.items():
-        if len(paths) < minimum_files:
-            continue
-        findings.append(
-            Finding(
-                "warning",
-                "repeated_literal",
-                sorted(paths)[0],
-                0,
-                "",
-                f"{value[:160]!r} repeated in {len(paths)} files: {', '.join(sorted(paths))}",
-            )
-        )
-
+    findings.extend(_repeated_literal_findings(literals, settings))
     findings = sorted(
         findings,
         key=lambda item: (
             item.severity != "blocker",
+            _scope(item.path, settings),
             item.path,
             item.line,
             item.category,
         ),
     )
+    scoped_findings: list[dict[str, Any]] = []
+    for item in findings:
+        payload = asdict(item)
+        payload["scope"] = _scope(item.path, settings)
+        scoped_findings.append(payload)
+
     blocker_count = sum(item.severity == "blocker" for item in findings)
     warning_count = sum(item.severity == "warning" for item in findings)
+    scope_blockers = Counter(
+        item["scope"]
+        for item in scoped_findings
+        if item["severity"] == "blocker"
+    )
+    gate_blocker_count = (
+        scope_blockers.get("active", 0)
+        + scope_blockers.get("compatibility", 0)
+    )
     return {
         "schema_version": str(settings["schema_version"]),
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "status": "PASS" if blocker_count == 0 else "FAIL",
+        "status": "PASS" if gate_blocker_count == 0 else "FAIL",
         "files_scanned": len(files),
         "blocker_count": blocker_count,
+        "active_blocker_count": scope_blockers.get("active", 0),
+        "compatibility_blocker_count": scope_blockers.get("compatibility", 0),
+        "historical_blocker_count": scope_blockers.get("historical", 0),
+        "support_blocker_count": scope_blockers.get("support", 0),
+        "gate_blocker_count": gate_blocker_count,
         "warning_count": warning_count,
-        "summary": _summary(findings),
-        "findings": [asdict(item) for item in findings],
+        "summary": _summary(findings, scoped_findings),
+        "findings": scoped_findings,
     }
