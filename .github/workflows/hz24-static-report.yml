@@ -1,0 +1,70 @@
+name: Publish HZ24 Static Report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/aideal_cps_data_lab/hz24/**"
+      - "run/hz24_*.py"
+      - "scripts/hz24_*.py"
+      - "config/hz24-*.toml"
+      - "tests/test_hz24_refactor.py"
+      - ".github/workflows/hz24-static-report.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependency without browser binaries
+        run: python -m pip install "playwright>=1.45.0"
+      - name: Run checks and write report
+        id: checks
+        continue-on-error: true
+        run: |
+          mkdir -p reports
+          PYTHONPATH=src python -m py_compile run/hz24_collect_increment_links.py run/hz24_collect_increment_links_v2.py scripts/hz24_validate_increment_links.py scripts/hz24_validate_increment_outcomes.py src/aideal_cps_data_lab/hz24/*.py
+          COMPILE_RC=$?
+          PYTHONPATH=src python -m unittest discover -s tests -p 'test_hz24_refactor.py' -v
+          TEST_RC=$?
+          python - "$COMPILE_RC" "$TEST_RC" <<'PY'
+          import json
+          import sys
+          from datetime import datetime
+          from pathlib import Path
+          compile_rc = int(sys.argv[1])
+          test_rc = int(sys.argv[2])
+          payload = {
+              "schema_version": "hz24-static-report/v1",
+              "generated_at": datetime.now().isoformat(timespec="seconds"),
+              "status": "PASS" if compile_rc == 0 and test_rc == 0 else "FAIL",
+              "compile_rc": compile_rc,
+              "test_rc": test_rc,
+              "jd_live_called": False,
+          }
+          Path("reports/hz24_static_ci_latest.json").write_text(
+              json.dumps(payload, indent=2, sort_keys=True),
+              encoding="utf-8",
+          )
+          raise SystemExit(0 if payload["status"] == "PASS" else 1)
+          PY
+      - name: Publish report
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add reports/hz24_static_ci_latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "reports: update HZ24 static CI"
+            git push
+          fi
+      - name: Enforce checks
+        if: steps.checks.outcome != 'success'
+        run: exit 1
