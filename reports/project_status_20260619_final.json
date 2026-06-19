@@ -1,0 +1,81 @@
+{
+  "schema_version": "aideal-cps-data-lab-project-status/v2",
+  "generated_at": "2026-06-19",
+  "project": "AIdeal CPS / 智省优选 - JD Union DL2",
+  "repository": "ShanGouXueHui/aideal-cps-data-lab",
+  "canonical_branch": "main",
+  "phase": "HZ24_PHASE_A_CURRENT_HEAD_BASELINE",
+  "commercial_status": "NOT_READY",
+  "authoritative_handoff": "docs/COMMERCIALIZATION_HANDOFF_20260619.md",
+  "verified_data": {
+    "jd_display_pool_claim": "approximately_4000_not_all_linked_or_landed",
+    "hz23_round_id": "20260615_100135",
+    "hz23_completed_pages": 67,
+    "hz23_unfinished_pages": 0,
+    "hz23_scanned_total": 4020,
+    "hz23_stop_reason": null,
+    "commercial_candidate_sku_count": 3304,
+    "candidate_duplicate_sku_count": 0,
+    "candidate_invalid_row_count": 0,
+    "candidate_payload_hash_mismatch_count": 0,
+    "candidate_integrity_ready": true,
+    "observation_ready": true,
+    "special_tab_count": 5,
+    "special_tab_membership_count": 250,
+    "special_tab_unique_sku_count": 239,
+    "cross_tab_duplicate_membership_count": 11,
+    "special_tab_overlap_with_candidate_count": 18,
+    "increment_queue_count": 221,
+    "increment_linked_count": 72,
+    "increment_pending_count": 149,
+    "increment_collection_complete": false,
+    "latest_legacy_stop_reason": "item_fail_fuse"
+  },
+  "historical_static_evidence": {
+    "report": "reports/hz24_static_ci_latest.json",
+    "status": "PASS",
+    "compile_rc": 0,
+    "test_rc": 0,
+    "jd_live_called": false,
+    "warning": "This report predates later main-branch refactors and does not prove the current HEAD."
+  },
+  "implemented_requires_current_head_verification": [
+    "typed_toml_configuration",
+    "layered_hz24_collector",
+    "canonical_collector_and_validator_entrypoints",
+    "sku_idempotent_jsonl_upsert",
+    "terminal_unavailable_classification",
+    "queue_and_record_hash_validation",
+    "linked_unavailable_pending_accounting",
+    "hz24_unit_tests_and_static_workflows"
+  ],
+  "runtime_status_requires_verification": {
+    "data_lab_mysql_initialized": null,
+    "data_lab_mysql_backfilled": null,
+    "data_lab_dual_write_enabled": null,
+    "data_lab_publish_view_enabled": null,
+    "aideal_cps_sync_enabled": null,
+    "production_import_completed": false
+  },
+  "commercial_blockers": [
+    "current_head_static_baseline_not_reverified",
+    "current_head_hangzhou_authorized_smoke_not_completed",
+    "increment_queue_accounting_incomplete",
+    "validation_merge_allowed_not_proven",
+    "data_lab_mysql_runtime_state_not_verified",
+    "production_dry_run_and_landed_validation_not_completed",
+    "rollback_rehearsal_not_completed",
+    "one_week_stability_not_completed"
+  ],
+  "reliability_work": [
+    "pure_url_validator",
+    "linked_unavailable_repository_exclusion",
+    "collector_process_lock",
+    "machine_readable_stop_required_contract",
+    "observer_restore_trap_or_finally",
+    "final_checkpoint_regression_test",
+    "replace_hz21_compatibility_dependency"
+  ],
+  "next_action": "Read the current main HEAD and HZ24 workflow results, then fix only the first real compile/import/unit blocker. Do not start the 221-SKU run or initialize MySQL yet.",
+  "next_dialog_prompt": "docs/NEXT_DIALOG_PROMPT_20260619.md"
+}
