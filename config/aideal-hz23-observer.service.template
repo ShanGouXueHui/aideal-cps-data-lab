@@ -1,0 +1,23 @@
+[Unit]
+Description=AIdeal CPS HZ23 JD catalog observation daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=@@RUN_USER@@
+WorkingDirectory=@@PROJECT_DIR@@
+Environment=HOME=@@HOME_DIR@@
+Environment=PYTHONUNBUFFERED=1
+Environment=HZ23_DAY_START=@@DAY_START@@
+Environment=HZ23_DAY_END=@@DAY_END@@
+Environment=HZ23_LOOP_SLEEP_MIN=@@LOOP_SLEEP_MIN@@
+Environment=HZ23_LOOP_SLEEP_MAX=@@LOOP_SLEEP_MAX@@
+ExecStart=@@BASH_BIN@@ @@PROJECT_DIR@@/scripts/hz23_observation_daemon.sh
+Restart=always
+RestartSec=30
+KillSignal=SIGTERM
+TimeoutStopSec=45
+
+[Install]
+WantedBy=multi-user.target
