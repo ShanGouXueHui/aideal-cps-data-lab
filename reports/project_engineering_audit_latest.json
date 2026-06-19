@@ -1,6 +1,6 @@
 {
   "blocker_count": 420,
-  "files_scanned": 247,
+  "files_scanned": 248,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -8532,7 +8532,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'duplicate_definition' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "detail": "'duplicate_definition' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -8541,6 +8541,14 @@
     {
       "category": "repeated_literal",
       "detail": "'large_file' repeated in 4 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "scripts/run_engineering_scan_and_publish.sh",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'long_function' repeated in 3 files: scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "line": 0,
       "path": "scripts/run_engineering_scan_and_publish.sh",
       "severity": "warning",
@@ -8620,6 +8628,14 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'lines exceeds' repeated in 4 files: src/aideal_cps_data_lab/engineering_audit/python_definitions.py, src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/engineering_audit/python_definitions.py",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'hardcoded_url' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
@@ -8645,14 +8661,6 @@
     {
       "category": "repeated_literal",
       "detail": "'hardcoded_absolute_path' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'lines exceeds' repeated in 3 files: src/aideal_cps_data_lab/engineering_audit/python_scan.py, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/engineering_audit/shell_scan.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/engineering_audit/python_scan.py",
       "severity": "warning",
@@ -8755,7 +8763,7 @@
       "symbol": ""
     }
   ],
-  "generated_at": "2026-06-19T14:59:14",
+  "generated_at": "2026-06-19T15:01:10",
   "schema_version": "engineering-audit/v2",
   "status": "FAIL",
   "summary": {
@@ -8768,7 +8776,7 @@
       "hardcoded_url": 133,
       "large_file": 7,
       "long_function": 28,
-      "repeated_literal": 674
+      "repeated_literal": 675
     },
     "top_blocker_files": [
       {
@@ -8893,5 +8901,5 @@
       }
     ]
   },
-  "warning_count": 674
+  "warning_count": 675
 }
