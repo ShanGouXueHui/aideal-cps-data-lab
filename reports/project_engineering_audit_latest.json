@@ -1,6 +1,6 @@
 {
-  "active_blocker_count": 53,
-  "blocker_count": 377,
+  "active_blocker_count": 48,
+  "blocker_count": 372,
   "compatibility_blocker_count": 13,
   "files_scanned": 262,
   "findings": [
@@ -365,24 +365,6 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_ip",
-      "detail": "121.0.0.0",
-      "line": 25,
-      "path": "src/aideal_cps_data_lab/http_client.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "121.0.0.0",
-      "line": 30,
-      "path": "src/aideal_cps_data_lab/http_client.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "duplicate_implementation",
       "detail": "scripts/hz23_quarantine_unsafe_source_rows.py:16, src/aideal_cps_data_lab/hz23_gate_refresh.py:25",
       "line": 25,
@@ -390,24 +372,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": "unsafe_reason"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:8, src/aideal_cps_data_lab/hz24/queue_builder.py:19",
-      "line": 19,
-      "path": "src/aideal_cps_data_lab/hz24/queue_builder.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "load_json"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz24/repository.py:8, src/aideal_cps_data_lab/hz24/queue_builder.py:19",
-      "line": 8,
-      "path": "src/aideal_cps_data_lab/hz24/repository.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "load_json"
     },
     {
       "category": "large_file",
@@ -444,15 +408,6 @@
       "scope": "active",
       "severity": "blocker",
       "symbol": "_scalar"
-    },
-    {
-      "category": "hardcoded_ip",
-      "detail": "127.0.0.1",
-      "line": 20,
-      "path": "src/aideal_cps_data_lab/persistence/mysql_factory.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": ""
     },
     {
       "category": "long_function",
@@ -9446,23 +9401,23 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 66,
-  "generated_at": "2026-06-19T19:24:23",
+  "gate_blocker_count": 61,
+  "generated_at": "2026-06-19T19:28:00",
   "historical_blocker_count": 274,
   "schema_version": "engineering-audit/v3",
   "status": "FAIL",
   "summary": {
-    "blocker_file_count": 107,
+    "blocker_file_count": 103,
     "blocker_scope_counts": {
-      "active": 53,
+      "active": 48,
       "compatibility": 13,
       "historical": 274,
       "support": 37
     },
     "category_counts": {
-      "duplicate_implementation": 53,
+      "duplicate_implementation": 51,
       "hardcoded_absolute_path": 5,
-      "hardcoded_ip": 47,
+      "hardcoded_ip": 44,
       "hardcoded_parameter": 114,
       "hardcoded_url": 131,
       "large_file": 7,
