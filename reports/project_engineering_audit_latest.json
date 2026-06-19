@@ -2,7 +2,7 @@
   "active_blocker_count": 2,
   "blocker_count": 325,
   "compatibility_blocker_count": 0,
-  "files_scanned": 293,
+  "files_scanned": 294,
   "findings": [
     {
       "category": "duplicate_implementation",
@@ -6513,7 +6513,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'rev-parse' repeated in 4 files: scripts/hz12_check_product_all_result.sh, scripts/hz12_recover_v5_strict_title_report.sh, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/quality/offline_runner.py",
+      "detail": "'rev-parse' repeated in 5 files: scripts/hz12_check_product_all_result.sh, scripts/hz12_recover_v5_strict_title_report.sh, src/aideal_cps_data_lab/git_state.py, src/aideal_cps_data_lab/hz24/resume_gate.py, src/aideal_cps_data_lab/quality/offline_runner.py",
       "line": 0,
       "path": "scripts/hz12_check_product_all_result.sh",
       "scope": "historical",
@@ -9015,7 +9015,7 @@
     }
   ],
   "gate_blocker_count": 2,
-  "generated_at": "2026-06-19T20:37:33",
+  "generated_at": "2026-06-19T20:45:34",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "FAIL",
