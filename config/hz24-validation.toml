@@ -1,1 +1,5 @@
 schema_version = "hz24-validation/v1"
+linked_manifest_schema = "aideal-hz24-special-tab-links-manifest/v1"
+outcome_manifest_schema = "aideal-hz24-special-tab-outcomes-manifest/v1"
+required_link_fields = ["title", "item_url", "price", "commission_rate", "estimated_income", "short_url"]
+legacy_source_marker = "hz20"
