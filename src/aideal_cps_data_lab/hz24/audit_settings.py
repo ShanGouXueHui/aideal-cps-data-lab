@@ -30,7 +30,7 @@ class AuditSettings:
     def product_page_url(self, settings: HZ24Settings) -> str:
         query = f"?{self.product_page_query}" if self.product_page_query else ""
         return (
-            f"{settings.browser.item_scheme}://"
+            f"{settings.browser.page_scheme}://"
             f"{settings.browser.page_host}"
             f"{self.product_page_path}{query}"
         )
