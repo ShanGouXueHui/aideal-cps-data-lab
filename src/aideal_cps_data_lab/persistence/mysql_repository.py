@@ -9,31 +9,10 @@ from aideal_cps_data_lab.config import DataLabSettings
 from aideal_cps_data_lab.domain import CommissionProduct
 from aideal_cps_data_lab.persistence.repository import UpsertOutcome
 
-ConnectionFactory = Callable[[], Any]
+from .mysql_columns import BUSINESS_COLUMNS, business_values
+from .mysql_metrics import count_duplicates, count_products
 
-BUSINESS_COLUMNS = (
-    "title",
-    "description",
-    "item_url",
-    "promotion_url",
-    "short_url",
-    "long_url",
-    "qr_url",
-    "jd_command",
-    "image_url",
-    "category_name",
-    "shop_name",
-    "price",
-    "coupon_price",
-    "commission_rate",
-    "estimated_commission",
-    "sales_volume",
-    "coupon_info",
-    "status",
-    "link_created_at",
-    "link_expire_at",
-    "refresh_due_at",
-)
+ConnectionFactory = Callable[[], Any]
 
 SELECT_ONE = f"""
 SELECT jd_sku_id, source_payload_hash, {', '.join(BUSINESS_COLUMNS)}
@@ -86,7 +65,11 @@ INSERT INTO commission_product_history (
 
 
 class MySQLCommissionProductRepository:
-    def __init__(self, connection_factory: ConnectionFactory, settings: DataLabSettings) -> None:
+    def __init__(
+        self,
+        connection_factory: ConnectionFactory,
+        settings: DataLabSettings,
+    ) -> None:
         self._connection_factory = connection_factory
         self._settings = settings
 
@@ -99,131 +82,162 @@ class MySQLCommissionProductRepository:
     ) -> UpsertOutcome:
         self._settings.assert_write_allowed()
         rows = list(products)
-        skus = [row.jd_sku_id for row in rows]
-        if len(skus) != len(set(skus)):
-            raise ValueError("duplicate SKU in upsert batch")
-
-        inserted = updated = unchanged = 0
+        self._require_unique(rows)
+        counts = {"inserted": 0, "updated": 0, "unchanged": 0}
         connection = self._connection_factory()
         cursor = connection.cursor()
         try:
             connection.begin()
             for product in rows:
-                cursor.execute(SELECT_ONE, (product.jd_sku_id,))
-                existing = cursor.fetchone()
-                now = datetime.now()
-                checked_at = product.last_checked_at or now
-                seen_at = product.last_seen_at or checked_at
-                payload_hash = product.source_payload_hash()
-                business_values = self._business_values(product)
-
-                if existing is None:
-                    cursor.execute(
-                        INSERT_ONE,
-                        (
-                            product.jd_sku_id,
-                            *business_values,
-                            product.source_page_no,
-                            round_id,
-                            run_id,
-                            payload_hash,
-                            product.catalog_change_count,
-                            product.first_seen_at or seen_at,
-                            checked_at,
-                            seen_at,
-                        ),
-                    )
-                    inserted += 1
-                    continue
-
-                if existing.get("source_payload_hash") == payload_hash:
-                    cursor.execute(
-                        UPDATE_UNCHANGED,
-                        (
-                            product.source_page_no,
-                            round_id,
-                            run_id,
-                            checked_at,
-                            seen_at,
-                            product.jd_sku_id,
-                        ),
-                    )
-                    unchanged += 1
-                    continue
-
-                cursor.execute(
-                    UPDATE_CHANGED,
-                    (
-                        *business_values,
-                        product.source_page_no,
-                        round_id,
-                        run_id,
-                        payload_hash,
-                        checked_at,
-                        seen_at,
-                        product.jd_sku_id,
-                    ),
-                )
-                cursor.execute(
-                    INSERT_HISTORY,
-                    (
-                        product.jd_sku_id,
-                        round_id,
-                        "update",
-                        json.dumps(
-                            self._existing_business_payload(existing),
-                            ensure_ascii=False,
-                            default=str,
-                            sort_keys=True,
-                        ),
-                        json.dumps(
-                            product.business_payload(),
-                            ensure_ascii=False,
-                            default=str,
-                            sort_keys=True,
-                        ),
-                        existing.get("source_payload_hash"),
-                        payload_hash,
-                        now,
-                    ),
-                )
-                updated += 1
-
+                outcome = self._upsert_one(cursor, product, round_id, run_id)
+                counts[outcome] += 1
             connection.commit()
-            return UpsertOutcome(inserted=inserted, updated=updated, unchanged=unchanged)
         except Exception:
             connection.rollback()
             raise
         finally:
             cursor.close()
             connection.close()
+        return UpsertOutcome(**counts)
 
-    def count_by_sku(self) -> int:
-        return self._scalar("SELECT COUNT(*) AS value FROM commission_products")
+    def _upsert_one(
+        self,
+        cursor: Any,
+        product: CommissionProduct,
+        round_id: str,
+        run_id: str,
+    ) -> str:
+        cursor.execute(SELECT_ONE, (product.jd_sku_id,))
+        existing = cursor.fetchone()
+        now = datetime.now()
+        checked_at = product.last_checked_at or now
+        seen_at = product.last_seen_at or checked_at
+        payload_hash = product.source_payload_hash()
+        values = business_values(product.business_payload())
+        if existing is None:
+            self._insert(
+                cursor, product, values, round_id, run_id, payload_hash, checked_at, seen_at
+            )
+            return "inserted"
+        if existing.get("source_payload_hash") == payload_hash:
+            self._touch(cursor, product, round_id, run_id, checked_at, seen_at)
+            return "unchanged"
+        self._update_changed(
+            cursor,
+            existing,
+            product,
+            values,
+            round_id,
+            run_id,
+            payload_hash,
+            checked_at,
+            seen_at,
+            now,
+        )
+        return "updated"
 
-    def duplicate_sku_count(self) -> int:
-        return self._scalar(
-            "SELECT COUNT(*) AS value FROM ("
-            "SELECT jd_sku_id FROM commission_products GROUP BY jd_sku_id HAVING COUNT(*) > 1"
-            ") AS duplicate_rows"
+    @staticmethod
+    def _insert(
+        cursor: Any,
+        product: CommissionProduct,
+        values: tuple[Any, ...],
+        round_id: str,
+        run_id: str,
+        payload_hash: str,
+        checked_at: datetime,
+        seen_at: datetime,
+    ) -> None:
+        cursor.execute(
+            INSERT_ONE,
+            (
+                product.jd_sku_id,
+                *values,
+                product.source_page_no,
+                round_id,
+                run_id,
+                payload_hash,
+                product.catalog_change_count,
+                product.first_seen_at or seen_at,
+                checked_at,
+                seen_at,
+            ),
         )
 
-    def _scalar(self, sql: str) -> int:
-        connection = self._connection_factory()
-        cursor = connection.cursor()
-        try:
-            cursor.execute(sql)
-            row = cursor.fetchone() or {}
-            return int(row.get("value") or 0)
-        finally:
-            cursor.close()
-            connection.close()
+    @staticmethod
+    def _touch(
+        cursor: Any,
+        product: CommissionProduct,
+        round_id: str,
+        run_id: str,
+        checked_at: datetime,
+        seen_at: datetime,
+    ) -> None:
+        cursor.execute(
+            UPDATE_UNCHANGED,
+            (
+                product.source_page_no,
+                round_id,
+                run_id,
+                checked_at,
+                seen_at,
+                product.jd_sku_id,
+            ),
+        )
 
     @staticmethod
-    def _business_values(product: CommissionProduct) -> tuple[Any, ...]:
-        payload = product.business_payload()
-        return tuple(payload.get(column) for column in BUSINESS_COLUMNS)
+    def _update_changed(
+        cursor: Any,
+        existing: dict[str, Any],
+        product: CommissionProduct,
+        values: tuple[Any, ...],
+        round_id: str,
+        run_id: str,
+        payload_hash: str,
+        checked_at: datetime,
+        seen_at: datetime,
+        changed_at: datetime,
+    ) -> None:
+        cursor.execute(
+            UPDATE_CHANGED,
+            (
+                *values,
+                product.source_page_no,
+                round_id,
+                run_id,
+                payload_hash,
+                checked_at,
+                seen_at,
+                product.jd_sku_id,
+            ),
+        )
+        before = {column: existing.get(column) for column in BUSINESS_COLUMNS}
+        cursor.execute(
+            INSERT_HISTORY,
+            (
+                product.jd_sku_id,
+                round_id,
+                "update",
+                json.dumps(before, ensure_ascii=False, default=str, sort_keys=True),
+                json.dumps(
+                    product.business_payload(),
+                    ensure_ascii=False,
+                    default=str,
+                    sort_keys=True,
+                ),
+                existing.get("source_payload_hash"),
+                payload_hash,
+                changed_at,
+            ),
+        )
+
+    def count_by_sku(self) -> int:
+        return count_products(self._connection_factory)
+
+    def duplicate_sku_count(self) -> int:
+        return count_duplicates(self._connection_factory)
 
     @staticmethod
-    def _existing_business_payload(existing: dict[str, Any]) -> dict[str, Any]:
-        return {column: existing.get(column) for column in BUSINESS_COLUMNS}
+    def _require_unique(rows: list[CommissionProduct]) -> None:
+        skus = [row.jd_sku_id for row in rows]
+        if len(skus) != len(set(skus)):
+            raise ValueError("duplicate SKU in upsert batch")
