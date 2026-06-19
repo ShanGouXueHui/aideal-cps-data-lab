@@ -1,0 +1,19 @@
+schema_version = "jingfen-browser/v1"
+auth_probe_urls = [
+  "https://union.jd.com/openplatform/console/openMngApi",
+  "https://union.jd.com/",
+  "https://jingfen.jd.com/",
+  "https://prodev.m.jd.com/mall/active/2LifKZwNDLSJwL2QLhY9ub4Jv6ah/index.html"
+]
+login_start_url = "https://union.jd.com/openplatform/console/openMngApi"
+public_probe_urls = [
+  "https://jingfen.jd.com/",
+  "https://union.jd.com/",
+  "https://union.jd.com/openplatform/console/openMngApi"
+]
+profile_path = ".secrets/jingfen_profile"
+storage_path = ".secrets/jingfen_storage_state.json"
+locale = "zh-CN"
+timezone_id = "Asia/Shanghai"
+viewport_width = 1365
+viewport_height = 900
