@@ -8,14 +8,21 @@ from pathlib import Path
 
 from aideal_cps_data_lab.application import validate_candidate
 from aideal_cps_data_lab.contracts import canonical_payload_hash
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class CandidateValidationTest(unittest.TestCase):
-    def build_files(self, rows: list[dict[str, object]]) -> tuple[Path, Path, tempfile.TemporaryDirectory[str]]:
+    def build_files(
+        self,
+        rows: list[dict[str, object]],
+    ) -> tuple[Path, Path, tempfile.TemporaryDirectory[str]]:
         tmp = tempfile.TemporaryDirectory()
         root = Path(tmp.name)
         candidate = root / "candidate.jsonl"
-        text = "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows)
+        text = "".join(
+            json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n"
+            for row in rows
+        )
         candidate.write_text(text, encoding="utf-8")
         manifest = root / "manifest.json"
         manifest.write_text(
@@ -44,10 +51,10 @@ class CandidateValidationTest(unittest.TestCase):
             "source": "jd_union_datalab",
             "sku": sku,
             "title": f"商品-{sku}",
-            "item_url": f"https://item.jd.com/{sku}.html",
-            "promotion_url": "https://u.jd.com/example",
-            "short_url": "https://u.jd.com/example",
-            "image_url": "https://img.example.invalid/product.jpg",
+            "item_url": f"{FIXTURES.item_url_prefix}{sku}.html",
+            "promotion_url": FIXTURES.promotion_url,
+            "short_url": FIXTURES.promotion_url,
+            "image_url": FIXTURES.image_url,
             "price": "99.90",
             "commission_rate": commission_rate,
             "estimated_commission": "12.49",
@@ -94,7 +101,10 @@ class CandidateValidationTest(unittest.TestCase):
     def test_checksum_tamper_is_rejected(self) -> None:
         candidate, manifest, tmp = self.build_files([self.row("100")])
         self.addCleanup(tmp.cleanup)
-        candidate.write_text(candidate.read_text(encoding="utf-8") + "\n", encoding="utf-8")
+        candidate.write_text(
+            candidate.read_text(encoding="utf-8") + "\n",
+            encoding="utf-8",
+        )
         report = validate_candidate(candidate, manifest)
         self.assertFalse(report.ok)
         self.assertIn("file_checksum_mismatch", report.errors)
