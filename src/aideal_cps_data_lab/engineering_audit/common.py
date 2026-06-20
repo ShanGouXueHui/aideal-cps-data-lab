@@ -20,11 +20,17 @@ def name_has_fragment(name: str, fragments: tuple[str, ...]) -> bool:
 def iter_engineering_files(root: Path, settings: dict[str, object]) -> Iterable[Path]:
     extensions = set(str(value) for value in settings["scan_extensions"])
     excluded = set(str(value) for value in settings["excluded_directories"])
+    config_directories = set(
+        str(value) for value in settings["configuration_directories"]
+    )
     for path in root.rglob("*"):
-        if not path.is_file() or path.suffix not in extensions:
+        if not path.is_file():
             continue
         relative = path.relative_to(root)
         if any(part in excluded for part in relative.parts):
+            continue
+        is_config = bool(set(relative.parts) & config_directories)
+        if path.suffix not in extensions and not is_config:
             continue
         yield relative
 
