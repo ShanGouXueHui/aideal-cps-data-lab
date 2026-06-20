@@ -1,11 +1,10 @@
 {
-  "active_blocker_count": 43,
+  "active_blocker_count": 32,
   "active_warning_count": 256,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_ip": 1,
-    "hardcoded_url": 39,
-    "long_function": 1,
+    "hardcoded_url": 29,
     "repeated_literal": 256
   },
   "findings": [
@@ -154,109 +153,10 @@
       "symbol": ""
     },
     {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/100012345678.html",
-      "line": 14,
-      "path": "tests/test_commission_product_domain.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://u.jd.com/example",
-      "line": 15,
-      "path": "tests/test_commission_product_domain.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://u.jd.com/example",
-      "line": 16,
-      "path": "tests/test_commission_product_domain.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://img.example.invalid/product.jpg",
-      "line": 17,
-      "path": "tests/test_commission_product_domain.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://example.com/not-jd",
-      "line": 56,
-      "path": "tests/test_commission_product_domain.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
       "category": "hardcoded_ip",
       "detail": "127.0.0.1",
       "line": 27,
       "path": "tests/test_data_lab_config.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "long_function",
-      "detail": "100 lines exceeds 80",
-      "line": 14,
-      "path": "tests/test_hz23_finalize_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": "run_finalize"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 38,
-      "path": "tests/test_hz23_finalize_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://img.example.invalid/product.jpg",
-      "line": 39,
-      "path": "tests/test_hz23_finalize_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 64,
-      "path": "tests/test_hz23_finalize_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://img.example.invalid/product.jpg",
-      "line": 65,
-      "path": "tests/test_hz23_finalize_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://u.jd.com/example",
-      "line": 69,
-      "path": "tests/test_hz23_finalize_gate.py",
       "scope": "support",
       "severity": "blocker",
       "symbol": ""
@@ -2297,7 +2197,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'promoted' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py, tests/test_hz23_finalize_safety.py",
+      "detail": "'promoted' repeated in 4 files: src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23/finalize_publish.py",
       "scope": "active",
@@ -2639,7 +2539,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'100012345678' repeated in 8 files: tests/test_backfill_execution_gate.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'100012345678' repeated in 6 files: tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
       "scope": "support",
@@ -2666,7 +2566,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://u.jd.com/example' repeated in 10 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'https://u.jd.com/example' repeated in 8 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
       "scope": "support",
@@ -2675,7 +2575,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://item.jd.com/100012345678.html' repeated in 5 files: tests/test_backfill_execution_gate.py, tests/test_commission_product_domain.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_repository.py",
+      "detail": "'https://item.jd.com/100012345678.html' repeated in 4 files: tests/test_backfill_execution_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
       "scope": "support",
@@ -2684,7 +2584,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://img.example.invalid/product.jpg' repeated in 9 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'https://img.example.invalid/product.jpg' repeated in 7 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
       "scope": "support",
@@ -2693,16 +2593,16 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'2026-06-14T10:00:00' repeated in 5 files: tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'2026-06-14T10:00:00' repeated in 3 files: tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
-      "path": "tests/test_commission_product_domain.py",
+      "path": "tests/test_mysql_batch_repository_contract.py",
       "scope": "support",
       "severity": "warning",
       "symbol": ""
     }
   ],
   "full_files_scanned": 316,
-  "generated_at": "2026-06-20T08:18:53",
+  "generated_at": "2026-06-20T08:28:07",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
