@@ -13,6 +13,7 @@ from aideal_cps_data_lab.persistence.mysql_batch_repository import (
     UPDATE_CHANGED,
     BatchMySQLCommissionProductRepository,
 )
+from aideal_cps_data_lab.persistence.mysql_columns import stage_values
 
 
 class BatchRepositoryContractTest(unittest.TestCase):
@@ -37,7 +38,7 @@ class BatchRepositoryContractTest(unittest.TestCase):
     def test_stage_has_unique_sku_and_complete_placeholder_count(self) -> None:
         self.assertIn("PRIMARY KEY (jd_sku_id)", CREATE_STAGE)
         self.assertEqual(INSERT_STAGE.count("%s"), len(STAGE_COLUMNS))
-        values = BatchMySQLCommissionProductRepository._stage_values(
+        values = stage_values(
             self.product(),
             "round-1",
             "run-1",
@@ -69,7 +70,11 @@ class BatchRepositoryContractTest(unittest.TestCase):
 
     def test_batch_size_must_be_positive(self) -> None:
         with self.assertRaisesRegex(ValueError, "batch_size"):
-            BatchMySQLCommissionProductRepository(lambda: None, DataLabSettings(), batch_size=0)
+            BatchMySQLCommissionProductRepository(
+                lambda: None,
+                DataLabSettings(),
+                batch_size=0,
+            )
 
 
 if __name__ == "__main__":
