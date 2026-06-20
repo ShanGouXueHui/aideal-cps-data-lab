@@ -6,7 +6,7 @@
 
 ```text
 1. 当前 main 代码
-2. 绑定当前 main HEAD 的运行报告
+2. quality-reports 分支中绑定当前 main HEAD 的运行报告
 3. docs/project/PROJECT_HANDOFF_20260620.md
 4. docs/status/COMMERCIALIZATION_STATUS_20260620.md
 5. docs/project/CURRENT_PROJECT_CONTEXT.md
@@ -28,8 +28,8 @@
 ## 2. 当前必须读取的报告和产物
 
 ```text
-reports/project_engineering_audit_latest.json
-reports/offline_quality_latest.json
+quality-reports:reports/project_engineering_audit_latest.json
+quality-reports:reports/offline_quality_latest.json
 reports/hz23_round_latest.json
 data/export/aideal_cps_products_commercial_candidate_manifest.json
 reports/hz24_tab_overlap_analysis_latest.json
@@ -48,6 +48,8 @@ reports/hz24_collection_guard_latest.json
 
 报告使用规则：
 
+- 工程审计和 Offline Quality 必须从 `quality-reports` 分支读取；
+- main 中相同路径仅为权威指针，不是运行结果；
 - 检查 `generated_at`；
 - 检查 `git_head` 是否等于当前 main；
 - 检查 round_id、schema、checksum 和返回码；
@@ -76,12 +78,11 @@ reports/hz24_collection_guard_latest.json
 
 ### 工程治理
 
-- 最新已提交审计扫描 306 个文件，global/full gate blocker=210；
-- active/compatibility blocker=0，但全局门禁失败；
-- 最新已提交 Offline Quality 为 66 项 PASS、0 failure、0 error、`jd_live_called=false`；
-- 两份报告均只对各自 `git_head` 有效，必须在当前 main 上重跑；
-- 审计器尚未完整覆盖重复变量、模块常量、配置键和默认值多源；
-- 完成该能力并取得全局零 blocker 前，不得宣称代码问题 100% 解决。
+- PR #4 已验证 global/full 及全部 scope blocker=0；
+- 重复定义、赋值、常量、配置键、默认值多源和跨文件实现均为 0；
+- 大文件、长函数和 Python/Shell/config syntax blocker 均为 0；
+- Offline Quality 为 68 项 PASS、0 failure、0 error、`jd_live_called=false`；
+- 上述结果只有合并并在 main workflow 重跑后才构成正式 main 验收。
 
 ## 4. 环境角色
 
@@ -129,6 +130,8 @@ long_function=0
 python_shell_syntax=PASS
 offline_quality=PASS
 jd_live_called=false
+audit report ref=quality-reports
+offline report ref=quality-reports
 audit git_head=current main
 offline git_head=current main
 ```
@@ -137,7 +140,7 @@ offline git_head=current main
 
 ## 6. 冲突处理
 
-- 当前 main 和绑定当前 HEAD 的报告优先于文档；
+- 当前 main 和 quality-reports 中绑定当前 HEAD 的报告优先于文档；
 - `PROJECT_HANDOFF_20260620.md` 是本轮高密度交接入口；
 - `COMMERCIALIZATION_STATUS_20260620.md` 是当前任务状态；
 - `CURRENT_PROJECT_CONTEXT.md` 是当前事实入口；
