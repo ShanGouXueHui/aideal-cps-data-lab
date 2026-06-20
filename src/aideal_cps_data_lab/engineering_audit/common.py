@@ -9,7 +9,7 @@ URL_RE = re.compile(r"https?://[^\s'\"<>]+")
 IP_RE = re.compile(r"(?<!\d)(?:\d{1,3}\.){3}\d{1,3}(?!\d)")
 ABS_PATH_RE = re.compile(r"(?<![A-Za-z0-9_])/(?:home|etc|opt|srv|var|usr|root)/[^\s'\"]+")
 SHELL_FUNCTION_RE = re.compile(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*\(\)\s*\{")
-SHELL_ASSIGN_RE = re.compile(r"^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)=(.*)$")
+SHELL_ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=(.*)$")
 
 
 def name_has_fragment(name: str, fragments: tuple[str, ...]) -> bool:
@@ -31,4 +31,11 @@ def iter_engineering_files(root: Path, settings: dict[str, object]) -> Iterable[
 
 def is_configuration_file(path: Path, settings: dict[str, object]) -> bool:
     directories = set(str(value) for value in settings["configuration_directories"])
-    return bool(set(path.parts) & directories)
+    extensions = set(
+        str(value)
+        for value in settings.get(
+            "configuration_extensions",
+            [".json", ".yaml", ".yml", ".toml", ".ini", ".cfg"],
+        )
+    )
+    return bool(set(path.parts) & directories) or path.suffix.lower() in extensions
