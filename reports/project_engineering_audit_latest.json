@@ -1,63 +1,9 @@
 {
-  "active_blocker_count": 6,
-  "blocker_count": 329,
+  "active_blocker_count": 0,
+  "blocker_count": 323,
   "compatibility_blocker_count": 0,
-  "files_scanned": 313,
+  "files_scanned": 312,
   "findings": [
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:13, src/aideal_cps_data_lab/hz23/finalize_publish.py:15",
-      "line": 13,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_promotion.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "serialize_candidates"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:21, src/aideal_cps_data_lab/hz23/finalize_publish.py:23",
-      "line": 21,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_promotion.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "should_promote"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:28, src/aideal_cps_data_lab/hz23/finalize_publish.py:30",
-      "line": 28,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_promotion.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "previous_manifest_summary"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:13, src/aideal_cps_data_lab/hz23/finalize_publish.py:15",
-      "line": 15,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_publish.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "serialize_candidates"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:21, src/aideal_cps_data_lab/hz23/finalize_publish.py:23",
-      "line": 23,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_publish.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "should_promote"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "src/aideal_cps_data_lab/hz23/finalize_promotion.py:28, src/aideal_cps_data_lab/hz23/finalize_publish.py:30",
-      "line": 30,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_publish.py",
-      "scope": "active",
-      "severity": "blocker",
-      "symbol": "previous_manifest_summary"
-    },
     {
       "category": "hardcoded_parameter",
       "detail": "'https://union.jd.com/proManager/realTimeRankings'",
@@ -3318,7 +3264,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'round_id' repeated in 20 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'round_id' repeated in 19 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_mainline_refresh.sh",
       "scope": "active",
@@ -3660,7 +3606,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'data_sha256' repeated in 13 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'data_sha256' repeated in 12 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/state_store.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3669,7 +3615,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'row_count' repeated in 18 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_source.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'row_count' repeated in 17 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/landed_validation.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_source.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/validation_service.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3714,7 +3660,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'round_complete' repeated in 7 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'round_complete' repeated in 6 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3723,7 +3669,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'observation_ready' repeated in 13 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'observation_ready' repeated in 12 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3741,7 +3687,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'rejected' repeated in 13 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/application/backfill.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py",
+      "detail": "'rejected' repeated in 12 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/application/backfill.py, src/aideal_cps_data_lab/application/candidate_validation.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3885,7 +3831,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'candidate_integrity_ready' repeated in 9 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'candidate_integrity_ready' repeated in 8 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -4362,7 +4308,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'candidate_file' repeated in 5 files: scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz24/audit_settings.py",
+      "detail": "'candidate_file' repeated in 4 files: scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz24/audit_settings.py",
       "line": 0,
       "path": "scripts/plan_commission_mysql_initialization.py",
       "scope": "active",
@@ -4860,24 +4806,6 @@
       "detail": "'source_file' repeated in 4 files: src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/overlap_analysis.py, src/aideal_cps_data_lab/hz24/queue_builder.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23/finalize_manifest.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'data_file' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_manifest.py",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'promoted' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py",
-      "line": 0,
-      "path": "src/aideal_cps_data_lab/hz23/finalize_promotion.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -9284,28 +9212,27 @@
       "symbol": ""
     }
   ],
-  "gate_blocker_count": 6,
-  "generated_at": "2026-06-20T07:55:48",
-  "git_head": "f93937c6832daa348d46da5c88917d0fd7ec4fcf",
+  "gate_blocker_count": 0,
+  "generated_at": "2026-06-20T07:56:04",
+  "git_head": "bdd5465293bacc754e33b22a1768d6d8937ffb49",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
-  "status": "FAIL",
+  "status": "PASS",
   "summary": {
-    "blocker_file_count": 90,
+    "blocker_file_count": 88,
     "blocker_scope_counts": {
-      "active": 6,
       "historical": 285,
       "support": 38
     },
     "category_counts": {
-      "duplicate_implementation": 47,
+      "duplicate_implementation": 41,
       "hardcoded_absolute_path": 3,
       "hardcoded_ip": 43,
       "hardcoded_parameter": 111,
       "hardcoded_url": 112,
       "large_file": 4,
       "long_function": 9,
-      "repeated_literal": 702
+      "repeated_literal": 700
     },
     "top_blocker_files": [
       {
@@ -9431,5 +9358,5 @@
     ]
   },
   "support_blocker_count": 38,
-  "warning_count": 702
+  "warning_count": 700
 }
