@@ -1,6 +1,6 @@
 # 商用化状态快照 — 2026-06-20
 
-状态：当前权威进展快照。设计、环境和交互规则见 `PROJECT_MEMORY_20260620.md`；本轮归档范围见 `CHAT_ARCHIVE_20260620.md`。
+状态：当前权威任务进展。完整设计、环境和交互约束见 `docs/project/PROJECT_HANDOFF_20260620.md` 与 `PROJECT_MEMORY_20260620.md`。
 
 ## 1. 总体门禁
 
@@ -18,11 +18,11 @@ AIDEAL_CPS_SYNC_ALLOWED=false
 COMMERCIAL_ENABLED=false
 ```
 
-当前唯一优先级：先完成代码治理，再推进功能。
+当前唯一优先级：先完成代码治理，再推进任何功能。
 
 ## 2. HZ23
 
-### 最后一次已验证基线
+最后一次已验证 last-known-good：
 
 ```text
 round_id=20260615_100135
@@ -34,11 +34,7 @@ successful_probes=2
 observation_ready=true
 ```
 
-3304 条是 last-known-good 历史基线，不是当前 latest manifest。
-
-### 当前 latest 回归
-
-当前轮次：
+当前 latest 回归：
 
 ```text
 round_id=20260620_101332
@@ -47,29 +43,21 @@ commercial_segment_complete=true
 scanned_total=4017
 last_known_sku_count=3858
 successful_probes=4
-```
-
-当前 candidate manifest：
-
-```text
-row_count=0
+candidate row_count=0
 eligible_sku_count=0
 trusted_dedup_sku_count=0
 candidate_integrity_ready=false
 observation_ready=false
 gate_failures=[candidate_nonempty]
-data_sha256=empty-file SHA-256
 ```
 
-结论：当前 latest candidate 无效，不能用于 MySQL、publish 或商用同步。
+3304 条是历史 last-known-good，不是当前 latest。当前 0 行 candidate 无效，不能用于 MySQL、publish 或商用同步。
 
-代码层已增加并测试：空首选来源回退、无效 finalize 不覆盖 canonical、观测门禁、last-known-good 保护。但杭州生产机仍需只读确认：
+代码层已增加空首选来源回退、无效 finalize 不覆盖 canonical、观测门禁和 last-known-good 保护。代码治理完成后，杭州生产机仍需只读确认：
 
 - 3304 JSONL、manifest、备份和 checksum 是否仍存在；
 - systemd/cron 实际运行 commit 和 finalize 入口；
 - 是否存在绕过 canonical promotion 的旁路。
-
-恢复前禁止再次覆盖 canonical candidate，禁止初始化 MySQL。
 
 ## 3. HZ24
 
@@ -96,12 +84,12 @@ HZ24 v2 离线代码和测试已覆盖：
 - 旧 HZ21 适配器移除；
 - 脱敏报告白名单。
 
-GitHub 目前没有生产报告证明杭州已实际完成：
+GitHub 目前没有杭州生产报告证明：
 
 ```text
-5 条 sold-out 迁移
-72 条 linked 完整性和 hash 核验
-pending=144 核算
+5 条 sold-out 已迁移
+72 条 linked 完整且 hash 未变
+pending=144
 resume_gate=true
 collection_authorization=true
 ```
@@ -110,31 +98,21 @@ collection_authorization=true
 
 ## 4. 工程治理
 
-最新已发布审计报告：
+最新已提交审计：
 
 ```text
-git_head=07b8db89274addd4d85c1308bc41a89a0352abab
-generated_at=2026-06-20T13:24:06
-files_scanned=298
+files_scanned=306
 status=FAIL
 global/full gate blocker=210
 active blocker=0
 compatibility blocker=0
 historical blocker=195
 support blocker=15
-warning=635
 ```
 
-blocker 分类：
+当前 blocker 主要是 main 中剩余 HZ12-HZ21 历史 Shell 的硬编码，以及少量 support fixture。
 
-```text
-hardcoded_absolute_path=3
-hardcoded_ip=42
-hardcoded_parameter=107
-hardcoded_url=58
-```
-
-该次扫描未发现重复函数/类/方法、跨文件重复实现、大文件或长函数。但扫描器尚未完整覆盖 Python/Shell 重复变量、模块常量、配置键和默认值来源，不能宣称重复问题 100% 清零。
+当前扫描器已覆盖重复函数、类、方法、Shell 函数和跨文件函数指纹，但尚未完整覆盖 Python/Shell 重复变量、模块常量、配置键和默认值多源。因此不能宣称重复问题已 100% 解决。
 
 历史快照分支：
 
@@ -142,30 +120,31 @@ hardcoded_url=58
 history-snapshot-20260620
 ```
 
-main 仍有 54 个历史 Shell blocker 文件和 6 个 support blocker 文件。下一阶段必须：
+下一阶段必须：
 
 1. 增加 `duplicate_assignment`、`duplicate_constant_assignment`、`duplicate_config_key` 和默认值多源检测；
-2. 将剩余 HZ12-HZ21 历史 Shell 从 main 移除；
-3. 收口测试 fixture；
-4. 全局 blocker 清零；
-5. 对当前 main 重跑离线测试和工程审计。
+2. 为合法运行时状态更新建立精确规则和测试；
+3. 将剩余 HZ12-HZ21 历史 Shell 从 main 移除；
+4. 收口 support fixture 和配置默认值；
+5. 对当前 main 重跑离线测试和工程审计；
+6. 全局 blocker 清零。
 
-## 5. 离线质量与 CI Bridge
+## 5. Offline Quality 与 CI Bridge
 
-最新已发布离线报告：
+最新已提交 Offline Quality：
 
 ```text
-git_head=07b8db89274addd4d85c1308bc41a89a0352abab
+git_head=2bf6842a60205eb32916bbad5b193f26fbb9ffde
 status=PASS
-tests_run=63
+tests_run=66
 failures=0
 errors=0
 jd_live_called=false
 ```
 
-该报告已落后于当前 main。
+该报告只对上述 commit 有效，不能自动代表当前 main。
 
-已提交统一脚本：
+统一执行入口：
 
 ```text
 scripts/ops/run_ci_bridge_from_hangzhou.sh
@@ -175,11 +154,9 @@ scripts/ops/ci_bridge_report_gate.py
 scripts/ops/ci_bridge_summary.py
 ```
 
-执行路径：杭州 `cpsdata` 作为登录入口，SSH 到新加坡 `datalab`；离线验证在新加坡执行。
+执行路径：运维人员登录杭州 Data Lab `cpsdata`，再 SSH 进入新加坡 `datalab`；离线验证在新加坡执行。杭州与新加坡不交换生产数据和 Secret。
 
-脚本已增加陈旧报告保护：旧报告归档到 `run/`，只有新报告存在、HEAD 匹配、offline mode 为真、JD live 为假且全局门禁字段存在时才允许回写。
-
-尚未在服务器首次实跑，因此：
+CI Bridge 会归档旧报告，并阻止 HEAD 不匹配、非 offline、JD live 标志异常或缺少全局门禁字段的报告回写。
 
 ```text
 CI_BRIDGE_RUNTIME_VALIDATED=false
@@ -230,17 +207,17 @@ MySQL 初始化前必须满足：
 杭州 AIdeal CPS 生产：8.136.28.6 / deploy
 ```
 
-用户只需登录杭州 `cpsdata`，由仓库入口脚本 SSH 到新加坡 `datalab`。复杂操作不再以零散命令交付，必须先提交 GitHub 脚本。
+用户只需登录杭州 `cpsdata`，再 SSH 进入新加坡 `datalab` 执行仓库脚本。复杂操作不再以零散命令交付，必须先提交 GitHub 脚本。
 
 ## 8. 严格下一步
 
 1. 新对话读取权威文档、当前 main 和报告；
-2. 补齐重复变量/常量/配置键审计及测试；
+2. 补齐重复变量、常量、配置键和默认值多源审计及测试；
 3. 清理全部历史 Shell 和 support blocker；
 4. 首次运行 CI Bridge，对当前 main 生成新报告；
 5. 全局代码门禁清零；
 6. 杭州只读恢复并核验 3304 last-known-good；
-7. 修复并验证 HZ23 临时生成、门禁检查和原子晋级；
+7. 验证 HZ23 临时生成、门禁检查、原子晋级和 canonical 保护；
 8. 杭州执行 HZ24 sold-out 迁移并确认 72/5/144；
 9. 221 队列全终态后恢复剩余采集；
 10. 冻结最终候选，初始化 MySQL并做两次幂等回填；
