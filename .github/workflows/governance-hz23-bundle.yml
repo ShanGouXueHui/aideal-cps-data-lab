@@ -1,0 +1,50 @@
+name: Governance HZ23 Bundle
+
+on:
+  push:
+    branches:
+      - codex/governance-continuation
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply exact refactor
+        run: python scripts/ops/apply_hz23_default_source_refactor.py
+
+      - name: Run targeted offline checks
+        env:
+          PYTHONPATH: src
+          AIDEAL_OFFLINE_TEST: "1"
+        run: |
+          python -m unittest tests.test_engineering_audit_duplicates
+          bash -n config/hz23-service.env
+          bash -n scripts/hz23_mainline_refresh.sh
+          bash -n scripts/hz23_observation_daemon.sh
+          bash -n scripts/hz23_safe_reload_observer.sh
+          bash -n scripts/hz23_resume_nohup_conservative.sh
+          git diff --check
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: governance-hz23-patched-files
+          path: |
+            config/hz23-service.env
+            config/engineering-audit.toml
+            src/aideal_cps_data_lab/engineering_audit/service.py
+            scripts/hz23_mainline_refresh.sh
+            scripts/hz23_observation_daemon.sh
+            scripts/hz23_safe_reload_observer.sh
+            scripts/hz23_resume_nohup_conservative.sh
+            tests/test_engineering_audit_duplicates.py
+          if-no-files-found: error
