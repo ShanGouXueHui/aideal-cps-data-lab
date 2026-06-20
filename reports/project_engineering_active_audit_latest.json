@@ -404,7 +404,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'blocker_count' repeated in 3 files: scripts/engineering_scan_full.py, scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/service.py",
+      "detail": "'blocker_count' repeated in 4 files: scripts/engineering_scan_full.py, scripts/run_engineering_scan_and_publish.sh, src/aideal_cps_data_lab/engineering_audit/service.py, src/aideal_cps_data_lab/hz24/resume_gate.py",
       "line": 0,
       "path": "scripts/engineering_scan_full.py",
       "scope": "active",
@@ -2582,7 +2582,7 @@
     }
   ],
   "full_files_scanned": 298,
-  "generated_at": "2026-06-20T12:07:59",
+  "generated_at": "2026-06-20T12:09:31",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
