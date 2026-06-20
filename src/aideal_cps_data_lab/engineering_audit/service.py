@@ -139,7 +139,7 @@ def _scan_file(
 ) -> tuple[list[Finding], list[FunctionFingerprint], dict[str, set[str]], list[DefaultSource]]:
     if path.suffix == ".py":
         return scan_python(root, path, settings)
-    if path.suffix == ".sh":
+    if path.suffix in {".sh", ".env"}:
         findings, literals, defaults = scan_shell(root, path, settings)
         return findings, [], literals, defaults
     findings = _scan_generic(root, path, settings)
