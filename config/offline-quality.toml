@@ -16,17 +16,23 @@ entrypoints = [
   "scripts/hz24_repair_terminal_state.py",
   "scripts/run_offline_quality.py",
   "scripts/backfill_commission_products_mysql.py",
-  "scripts/verify_commission_mysql_post_migration.py"
+  "scripts/verify_commission_mysql_post_migration.py",
+  "scripts/ops/ci_bridge_report_gate.py",
+  "scripts/ops/ci_bridge_runner.py",
+  "scripts/ops/ci_bridge_summary.py"
 ]
 shell_entrypoints = [
   "scripts/git_publish_files_via_worktree.sh",
   "scripts/hz24_publish_terminal_repair_evidence.sh",
   "scripts/hz24_run_one_increment_batch.sh",
-  "scripts/hz24_increment_loop.sh"
+  "scripts/hz24_increment_loop.sh",
+  "scripts/ops/run_data_lab_ci_bridge.sh",
+  "scripts/ops/run_ci_bridge_from_hangzhou.sh"
 ]
 test_patterns = [
   "test_hz23_*.py",
   "test_hz24_*.py",
+  "test_ci_bridge_*.py",
   "test_candidate_validation.py",
   "test_commission_product_domain.py",
   "test_data_lab_config.py",
