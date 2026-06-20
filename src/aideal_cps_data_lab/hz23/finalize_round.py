@@ -9,9 +9,10 @@ from aideal_cps_data_lab.hz24.repository import load_json, read_jsonl
 from aideal_cps_data_lab.hz24.settings import HZ24Settings, load_settings
 
 from .finalize_candidates import build_candidates
+from .finalize_guard import persist_ready_outcome
 from .finalize_io import FinalizePaths, atomic_text, json_text, timestamp, update_catalog
 from .finalize_manifest import build_manifest, gate_state
-from .finalize_publish import persist_outcome, serialize_candidates
+from .finalize_publish import serialize_candidates
 from .finalize_source import select_source
 
 
@@ -76,7 +77,7 @@ def run_finalize(
     )
     manifest["source_row_count"] = source.source_row_count
     manifest["source_candidates_evaluated"] = list(source.evaluated)
-    return persist_outcome(paths, candidate_text, manifest)
+    return persist_ready_outcome(paths, candidate_text, manifest)
 
 
 def default_paths(round_id: str, summary: Path) -> FinalizePaths:
