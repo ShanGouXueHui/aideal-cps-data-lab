@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from aideal_cps_data_lab.application import build_backfill_plan
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class BackfillPlanTest(unittest.TestCase):
@@ -13,9 +14,9 @@ class BackfillPlanTest(unittest.TestCase):
         return {
             "sku": sku,
             "title": f"商品-{sku}",
-            "item_url": f"https://item.jd.com/{sku}.html",
-            "promotion_url": "https://u.jd.com/example",
-            "image_url": "https://img.example.invalid/product.jpg",
+            "item_url": f"{FIXTURES.item_url_prefix}{sku}.html",
+            "promotion_url": FIXTURES.promotion_url,
+            "image_url": FIXTURES.image_url,
             "price": price,
             "commission_rate": "10%",
             "estimated_commission": "9.99",
@@ -23,7 +24,12 @@ class BackfillPlanTest(unittest.TestCase):
         }
 
     def write_rows(self, rows: list[object]) -> Path:
-        tmp = tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", suffix=".jsonl", delete=False)
+        tmp = tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            suffix=".jsonl",
+            delete=False,
+        )
         with tmp:
             for row in rows:
                 if isinstance(row, str):
@@ -50,7 +56,7 @@ class BackfillPlanTest(unittest.TestCase):
 
     def test_invalid_rows_are_counted_by_reason(self) -> None:
         invalid_url = self.candidate("101")
-        invalid_url["promotion_url"] = "https://example.com/not-jd"
+        invalid_url["promotion_url"] = FIXTURES.untrusted_url
         path = self.write_rows(["not-json", invalid_url])
         self.addCleanup(path.unlink)
         plan = build_backfill_plan(path)
