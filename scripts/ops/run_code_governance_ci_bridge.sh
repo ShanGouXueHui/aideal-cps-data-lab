@@ -2,7 +2,9 @@
 # Run the complete offline code-governance gate in an isolated Git worktree.
 # This entry does not execute production collection, database initialization, or product publishing.
 
-PROJECT_DIR="${AIDEAL_PROJECT_DIR:-${HOME}/projects/aideal-cps-data-lab}"
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+. "${SCRIPT_DIR}/../lib/project_paths.sh"
+PROJECT_DIR="$(aideal_project_dir)"
 TARGET_REF="${1:-codex/complete-duplicate-audit}"
 ACTION="${2:-validate}"
 WORKTREE="${PROJECT_DIR}/run/code_governance_ci_bridge_worktree"
