@@ -404,7 +404,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(CDPATH= cd -- ' repeated in 6 files: scripts/git_publish_files_via_worktree.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "'$(CDPATH= cd -- ' repeated in 7 files: scripts/git_publish_files_via_worktree.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -413,7 +413,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' && pwd)' repeated in 7 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "' && pwd)' repeated in 8 files: scripts/git_publish_files_via_worktree.sh, scripts/hz23_install_service.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -494,7 +494,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'STATUS=FAIL' repeated in 17 files: scripts/hz23_check_commercial_execution.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "'STATUS=FAIL' repeated in 18 files: scripts/hz23_check_commercial_execution.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_nohup_start.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_publish_terminal_repair_evidence.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/hz23_check_commercial_execution.sh",
       "scope": "active",
@@ -2491,8 +2491,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 300,
-  "generated_at": "2026-06-20T13:59:24",
+  "full_files_scanned": 301,
+  "generated_at": "2026-06-20T13:59:59",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
