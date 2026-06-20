@@ -6,6 +6,7 @@ import subprocess
 from pathlib import Path
 
 from aideal_cps_data_lab.hz23.lkg_candidate_audit import build_candidate_report
+from aideal_cps_data_lab.hz23.lkg_runtime_audit import canonical_writer_references
 from aideal_cps_data_lab.hz23.lkg_settings import load_last_known_good_settings
 
 
@@ -43,6 +44,10 @@ def main() -> int:
         "tracked_worktree_clean": not bool(status),
         "tracked_change_count": len(status.splitlines()) if status else 0,
     }
+    report["canonical_writer_references"] = canonical_writer_references(
+        root,
+        settings,
+    )
     report["actions_executed"] = {
         "jd_live": False,
         "mysql": False,
