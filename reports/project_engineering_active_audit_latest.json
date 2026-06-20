@@ -1,10 +1,10 @@
 {
   "active_blocker_count": 31,
-  "active_warning_count": 257,
+  "active_warning_count": 258,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_url": 29,
-    "repeated_literal": 257
+    "repeated_literal": 258
   },
   "findings": [
     {
@@ -2277,6 +2277,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'https://' repeated in 3 files: src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/modal_parser.py, tests/test_hz24_canonical_adapter.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz24/jd_page.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'source_report' repeated in 3 files: src/aideal_cps_data_lab/hz24/legacy_sold_out.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, src/aideal_cps_data_lab/hz24/terminal_repair.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz24/legacy_sold_out.py",
@@ -2600,8 +2609,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 319,
-  "generated_at": "2026-06-20T09:17:57",
+  "full_files_scanned": 318,
+  "generated_at": "2026-06-20T09:21:32",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
