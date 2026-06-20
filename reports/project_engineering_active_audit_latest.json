@@ -1,9 +1,9 @@
 {
-  "active_blocker_count": 27,
-  "active_warning_count": 260,
+  "active_blocker_count": 23,
+  "active_warning_count": 259,
   "category_counts": {
-    "hardcoded_url": 27,
-    "repeated_literal": 260
+    "hardcoded_url": 23,
+    "repeated_literal": 259
   },
   "findings": [
     {
@@ -38,42 +38,6 @@
       "detail": "https://img.example.invalid/product.jpg",
       "line": 32,
       "path": "tests/test_backfill_execution_gate.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 16,
-      "path": "tests/test_backfill_plan.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://u.jd.com/example",
-      "line": 17,
-      "path": "tests/test_backfill_plan.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://img.example.invalid/product.jpg",
-      "line": 18,
-      "path": "tests/test_backfill_plan.py",
-      "scope": "support",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://example.com/not-jd",
-      "line": 53,
-      "path": "tests/test_backfill_plan.py",
       "scope": "support",
       "severity": "blocker",
       "symbol": ""
@@ -2546,7 +2510,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://u.jd.com/example' repeated in 8 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'https://u.jd.com/example' repeated in 7 files: tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
       "scope": "support",
@@ -2564,18 +2528,9 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'https://img.example.invalid/product.jpg' repeated in 7 files: tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "detail": "'https://img.example.invalid/product.jpg' repeated in 6 files: tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
-      "scope": "support",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'https://item.jd.com/' repeated in 3 files: tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_mysql_batch_repository_v2.py",
-      "line": 0,
-      "path": "tests/test_backfill_plan.py",
       "scope": "support",
       "severity": "warning",
       "symbol": ""
@@ -2591,7 +2546,7 @@
     }
   ],
   "full_files_scanned": 298,
-  "generated_at": "2026-06-20T12:09:57",
+  "generated_at": "2026-06-20T12:11:50",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
