@@ -3885,7 +3885,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'candidate_integrity_ready' repeated in 10 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'candidate_integrity_ready' repeated in 9 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -4869,6 +4869,15 @@
       "detail": "'data_file' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz23/finalize_manifest.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'promoted' repeated in 3 files: src/aideal_cps_data_lab/hz23/finalize_promotion.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/finalize_round.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/hz23/finalize_promotion.py",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -9276,8 +9285,8 @@
     }
   ],
   "gate_blocker_count": 6,
-  "generated_at": "2026-06-20T07:54:48",
-  "git_head": "e5ff0d47a94c78033e982872cc88a66b7ad57a99",
+  "generated_at": "2026-06-20T07:55:48",
+  "git_head": "f93937c6832daa348d46da5c88917d0fd7ec4fcf",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "FAIL",
@@ -9296,7 +9305,7 @@
       "hardcoded_url": 112,
       "large_file": 4,
       "long_function": 9,
-      "repeated_literal": 701
+      "repeated_literal": 702
     },
     "top_blocker_files": [
       {
@@ -9422,5 +9431,5 @@
     ]
   },
   "support_blocker_count": 38,
-  "warning_count": 701
+  "warning_count": 702
 }
