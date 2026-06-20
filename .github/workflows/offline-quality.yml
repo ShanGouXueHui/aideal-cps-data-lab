@@ -4,14 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - "src/**"
-      - "run/**"
-      - "scripts/**"
-      - "config/**"
-      - "tests/**"
-      - "docs/DOCUMENT_AUTHORITY.md"
-      - ".github/workflows/**"
   pull_request:
     paths:
       - "src/**"
@@ -117,7 +109,12 @@ jobs:
         run: |
           cp reports/offline_quality_latest.json /tmp/offline_quality_latest.json
           cp reports/project_engineering_audit_latest.json /tmp/project_engineering_audit_latest.json
-          git fetch origin main quality-reports || git fetch origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin \
+            "+refs/heads/main:refs/remotes/origin/main" \
+            "+refs/heads/quality-reports:refs/remotes/origin/quality-reports" \
+            || git fetch origin "+refs/heads/main:refs/remotes/origin/main"
           if git rev-parse --verify origin/quality-reports >/dev/null 2>&1; then
             git checkout -B quality-reports origin/quality-reports
             git merge --no-edit "$GITHUB_SHA"
@@ -127,8 +124,6 @@ jobs:
           mkdir -p reports
           cp /tmp/offline_quality_latest.json reports/offline_quality_latest.json
           cp /tmp/project_engineering_audit_latest.json reports/project_engineering_audit_latest.json
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f reports/offline_quality_latest.json reports/project_engineering_audit_latest.json
           git commit -m "reports: bind quality reports to main ${GITHUB_SHA::12}"
           git push origin HEAD:quality-reports
