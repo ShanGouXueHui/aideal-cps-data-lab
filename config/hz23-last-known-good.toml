@@ -1,0 +1,9 @@
+schema_version = "hz23-last-known-good/v1"
+expected_round_id = "20260615_100135"
+expected_row_count = 3304
+expected_data_sha256 = "509d5b09bc9843d2e083ecd29fa2cfc83569c4cf877ced7a13d37a1e820d457a"
+canonical_candidate = "data/export/aideal_cps_products_commercial_candidate_latest.jsonl"
+canonical_manifest = "data/export/aideal_cps_products_commercial_candidate_manifest.json"
+service_name = "aideal-hz23-observer.service"
+search_roots = ["data/export", "data/import", "backups", "reports"]
+candidate_name_fragments = ["commercial_candidate", "20260615_100135", "last_known_good"]
