@@ -4,25 +4,26 @@ import unittest
 from decimal import Decimal
 
 from aideal_cps_data_lab.domain import CommissionProduct, ProductValidationError
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class CommissionProductDomainTest(unittest.TestCase):
     def base_row(self) -> dict[str, object]:
         return {
-            "sku": "100012345678",
+            "sku": FIXTURES.sku,
             "title": "测试商品",
-            "item_url": "https://item.jd.com/100012345678.html",
-            "promotion_url": "https://u.jd.com/example",
-            "short_url": "https://u.jd.com/example",
-            "image_url": "https://img.example.invalid/product.jpg",
+            "item_url": FIXTURES.item_url,
+            "promotion_url": FIXTURES.promotion_url,
+            "short_url": FIXTURES.promotion_url,
+            "image_url": FIXTURES.image_url,
             "price": "99.90",
             "commission_rate": "12.5%",
             "estimated_commission": "12.49",
             "status": "active",
             "source_page_no": 1,
             "source_round_id": "round-a",
-            "last_checked_at": "2026-06-14T10:00:00",
-            "last_seen_at": "2026-06-14T10:00:00",
+            "last_checked_at": FIXTURES.timestamp,
+            "last_seen_at": FIXTURES.timestamp,
         }
 
     def test_decimal_and_percent_normalization(self) -> None:
@@ -53,7 +54,7 @@ class CommissionProductDomainTest(unittest.TestCase):
 
     def test_rejects_untrusted_promotion_url(self) -> None:
         row = self.base_row()
-        row["promotion_url"] = "https://example.com/not-jd"
+        row["promotion_url"] = FIXTURES.untrusted_url
         with self.assertRaisesRegex(ProductValidationError, "untrusted_promotion_url"):
             CommissionProduct.from_candidate_row(row)
 
