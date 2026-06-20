@@ -2,17 +2,18 @@ import unittest
 
 from aideal_cps_data_lab.application.landed_validation import validate_landed_rows
 from aideal_cps_data_lab.contracts import canonical_payload_hash
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class LandedValidationTest(unittest.TestCase):
     def make_row(self, title="item", round_id="round-1"):
         row = {
-            "jd_sku_id": "100012345678",
+            "jd_sku_id": FIXTURES.sku,
             "title": title,
-            "item_url": "https://item.jd.com/100012345678.html",
-            "promotion_url": "https://u.jd.com/example",
-            "short_url": "https://u.jd.com/example",
-            "image_url": "https://img.example.invalid/product.jpg",
+            "item_url": FIXTURES.item_url,
+            "promotion_url": FIXTURES.promotion_url,
+            "short_url": FIXTURES.promotion_url,
+            "image_url": FIXTURES.image_url,
             "price": "99.90",
             "commission_rate": "12.5000",
             "estimated_commission": "12.49",
