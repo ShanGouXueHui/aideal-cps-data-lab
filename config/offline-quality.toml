@@ -25,6 +25,7 @@ shell_entrypoints = [
   "scripts/hz24_increment_loop.sh"
 ]
 test_patterns = [
+  "test_hz23_*.py",
   "test_hz24_*.py",
   "test_candidate_validation.py",
   "test_commission_product_domain.py",
