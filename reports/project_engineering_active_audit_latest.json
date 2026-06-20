@@ -9,7 +9,7 @@
   "findings": [
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24",
       "line": 24,
       "path": "run/hz21_strict_card_dom_recover_page.py",
       "scope": "historical",
@@ -18,7 +18,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44, run/hz18_card_click_recover_page.py:44",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44",
       "line": 44,
       "path": "run/hz21_strict_card_dom_recover_page.py",
       "scope": "historical",
@@ -2627,8 +2627,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 302,
-  "generated_at": "2026-06-20T11:53:52",
+  "full_files_scanned": 300,
+  "generated_at": "2026-06-20T11:55:23",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
