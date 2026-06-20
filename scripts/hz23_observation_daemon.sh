@@ -8,15 +8,16 @@
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
+. config/hz23-service.env
 mkdir -p logs reports run data/state docs/ops
 
 STATE="run/hz23_observer_state.json"
 STATUS="reports/hz23_observer_status_latest.json"
 LOG="logs/hz23_observer.log"
-DAY_START="${HZ23_DAY_START:-09:30}"
-DAY_END="${HZ23_DAY_END:-21:30}"
-LOOP_MIN="${HZ23_LOOP_SLEEP_MIN:-240}"
-LOOP_MAX="${HZ23_LOOP_SLEEP_MAX:-480}"
+DAY_START="$HZ23_DAY_START"
+DAY_END="$HZ23_DAY_END"
+LOOP_MIN="$HZ23_LOOP_SLEEP_MIN"
+LOOP_MAX="$HZ23_LOOP_SLEEP_MAX"
 
 init_state() {
   if [ -f "$STATE" ]; then
