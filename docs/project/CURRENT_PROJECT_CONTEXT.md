@@ -2,13 +2,13 @@
 
 更新日期：2026-06-20
 
-状态：新对话当前事实入口。精确进展见 `COMMERCIALIZATION_STATUS_20260620.md`，长期设计和习惯见 `PROJECT_MEMORY_20260620.md`。
+状态：当前事实入口。完整交接见 `PROJECT_HANDOFF_20260620.md`，精确任务状态见 `COMMERCIALIZATION_STATUS_20260620.md`，长期约束见 `PROJECT_MEMORY_20260620.md`。
 
 ## 1. 项目边界
 
 Data Lab 负责京东联盟授权浏览器采集、商品与推广资格解析、可信短链、终态维护、质量门禁、版本化发布和未来 Data Lab MySQL。
 
-AIdeal CPS 负责微信/H5、搜索推荐、点击归因、订单和返佣。用户请求只访问 AIdeal CPS 本地 MySQL，不实时依赖 Data Lab 浏览器、SSH Tunnel 或远程数据库。
+AIdeal CPS 负责微信/H5、搜索推荐、点击归因、订单和返佣。用户请求只访问 AIdeal CPS 本地 MySQL，不实时依赖 Data Lab 浏览器、远程 MySQL 或 SSH Tunnel。
 
 ## 2. 环境角色
 
@@ -25,7 +25,7 @@ AIdeal CPS 负责微信/H5、搜索推荐、点击归因、订单和返佣。用
 
 杭州是唯一允许真实 JD、HZ23/HZ24、生产状态和 Data Lab MySQL 的环境。新加坡只运行离线编译、测试、审计和脱敏报告回写。
 
-用户从杭州 `cpsdata` 运行仓库脚本，脚本 SSH 到新加坡 `datalab`。SSH 只减少人工切换，不传输生产数据或 Secret。
+运维人员从杭州 `cpsdata` SSH 进入新加坡 `datalab`，只是统一登录入口，不传输生产数据或 Secret。
 
 ## 3. HZ23
 
@@ -40,7 +40,7 @@ successful_probes=2
 observation_ready=true
 ```
 
-当前 latest 轮次：
+当前 latest 回归：
 
 ```text
 round_id=20260620_101332
@@ -48,14 +48,7 @@ completed_pages=1..67
 scanned_total=4017
 last_known_sku_count=3858
 successful_probes=4
-```
-
-当前 latest manifest 回归：
-
-```text
-row_count=0
-eligible_sku_count=0
-trusted_dedup_sku_count=0
+candidate row_count=0
 candidate_integrity_ready=false
 observation_ready=false
 gate_failures=[candidate_nonempty]
@@ -63,7 +56,7 @@ gate_failures=[candidate_nonempty]
 
 3304 条是 last-known-good，不是当前 latest。当前 0 行产物无效，不能用于 MySQL、publish 或商用。
 
-代码已覆盖空源回退、无效 finalize 不晋级、观测门禁和 last-known-good 保护。代码治理完成后，必须在杭州只读恢复和核验 3304 JSONL、manifest、备份、checksum 及实际运行入口。
+代码已覆盖空源回退、无效 finalize 不晋级、观测门禁和 last-known-good 保护。代码治理完成后，必须在杭州只读恢复和核验 3304 JSONL、manifest、备份、checksum、实际 systemd/cron commit 和 finalize 入口，并排除旁路覆盖 canonical。
 
 ## 4. HZ24
 
@@ -80,7 +73,7 @@ gate_failures=[candidate_nonempty]
 
 V2 离线代码和测试已覆盖 linked/unavailable/pending、sold-out、幂等 upsert、原子迁移和回滚、72/5/144、linked hash、恢复授权和报告白名单。
 
-但没有生产报告证明杭州已实际完成 5 条迁移和 72/5/144 核验。
+但没有杭州生产报告证明 5 条迁移和 72/5/144 已落地。
 
 ```text
 HZ24_RUNTIME_MIGRATION_CONFIRMED=false
@@ -91,29 +84,21 @@ HZ24_RESUME_ALLOWED=false
 
 ## 5. 工程治理
 
-最新已发布审计：
+最新已提交审计报告：
 
 ```text
-git_head=07b8db89274addd4d85c1308bc41a89a0352abab
+files_scanned=306
 status=FAIL
 global/full gate blocker=210
 active blocker=0
 compatibility blocker=0
 historical blocker=195
 support blocker=15
-warning=635
 ```
 
-blocker 分类：
+当前 blocker 主要是 main 中剩余 HZ12-HZ21 历史 Shell 的硬编码，以及少量 support fixture。
 
-```text
-hardcoded_absolute_path=3
-hardcoded_ip=42
-hardcoded_parameter=107
-hardcoded_url=58
-```
-
-该次扫描未发现重复函数/类/方法、重复实现、大文件或长函数，但当前扫描器尚未完整覆盖 Python/Shell 重复变量、模块常量、配置键和默认值来源。
+当前审计器已覆盖重复函数/类/方法、Shell 函数和跨文件函数指纹，但尚未完整覆盖 Python/Shell 重复变量、模块常量、配置键和默认值多源。该能力补齐并取得零结果前，不能宣称重复问题 100% 清零。
 
 历史快照分支：
 
@@ -121,24 +106,22 @@ hardcoded_url=58
 history-snapshot-20260620
 ```
 
-main 仍有 54 个历史 Shell blocker 文件和 6 个 support blocker 文件。全局 blocker 未清零前，不推进业务功能。
+## 6. 离线验证和 CI Bridge
 
-## 6. 离线验证与统一脚本
-
-最新已发布离线报告：
+最新已提交 Offline Quality：
 
 ```text
-git_head=07b8db89274addd4d85c1308bc41a89a0352abab
+git_head=2bf6842a60205eb32916bbad5b193f26fbb9ffde
 status=PASS
-tests_run=63
+tests_run=66
 failures=0
 errors=0
 jd_live_called=false
 ```
 
-该报告已落后于当前 main。
+该报告只对上述 commit 有效，不能自动代表当前 main。
 
-已提交：
+统一入口：
 
 ```text
 scripts/ops/run_ci_bridge_from_hangzhou.sh
@@ -157,10 +140,10 @@ CURRENT_HEAD_VALIDATED=false
 
 首次服务器实跑留给新对话代码治理阶段。
 
-## 7. 编程和交互规则
+## 7. 编程与交互规则
 
 - 先修代码，后推进功能；
-- 扫描重复函数、类、方法、变量、常量、配置键和跨文件重复实现；
+- 扫描重复函数、类、方法、变量、常量、配置键、默认值和跨文件重复实现；
 - 正式验收要求全局 blocker=0；
 - 文件 >300 行、函数 >80 行、入口 >120 行必须拆分；
 - 分层：browser、application、domain、persistence、contracts、configuration、ops、tests；
@@ -194,13 +177,13 @@ v_published_commission_products
 
 ## 9. 严格下一步
 
-1. 新对话读取权威文档、当前 main 和报告；
-2. 补齐重复变量/常量/配置键审计和测试；
+1. 读取当前 main 和最新报告，确认报告是否绑定当前 HEAD；
+2. 补齐重复变量、常量、配置键和默认值多源审计及测试；
 3. 清理全部历史 Shell 和 support blocker；
-4. 首次运行 CI Bridge并回写当前 HEAD 报告；
+4. 在新加坡首次运行 CI Bridge并回写当前 HEAD 报告；
 5. 全局工程门禁清零；
 6. 杭州只读恢复和核验 3304 last-known-good；
-7. 修复并验证 HZ23 canonical promotion；
+7. 验证 HZ23 canonical promotion；
 8. 杭州执行 HZ24 sold-out 迁移并确认 72/5/144；
 9. 221 队列全终态后恢复剩余采集；
 10. 冻结最终候选后初始化 MySQL、回填和 dual-write；
