@@ -13,9 +13,10 @@
 6. docs/project/CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md
 7. docs/project/EXECUTION_TOPOLOGY.md
 8. docs/project/ENVIRONMENT_AND_WORKING_RULES.md
-9. docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
-10. docs/architecture/commission_data_mysql_v1.sql
-11. docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
+9. docs/status/CHAT_ARCHIVE_20260620.md
+10. docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
+11. docs/architecture/commission_data_mysql_v1.sql
+12. docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
 ```
 
 `COMMERCIALIZATION_STATUS_20260619.md` 及更早状态文件只作为历史快照，不再作为当前默认状态入口。
@@ -78,7 +79,7 @@ reports/hz24_collection_guard_latest.json
 - 审计器尚未完整覆盖重复变量、常量和配置键；
 - 完成该能力并取得全局零 blocker 前，不得宣称代码问题 100% 解决。
 
-## 4. 环境角色
+## 4. 环境角色与统一执行入口
 
 ```text
 杭州 Data Lab 生产：121.41.111.36 / cpsdata
@@ -91,6 +92,17 @@ reports/hz24_collection_guard_latest.json
 - 杭州运行真实采集和未来 Data Lab MySQL；
 - 新加坡只运行离线编译、测试、审计和脱敏报告回写；
 - AIdeal CPS 生产只消费发布版本。
+
+统一脚本：
+
+```text
+scripts/ops/run_ci_bridge_from_hangzhou.sh
+scripts/ops/run_data_lab_ci_bridge.sh
+scripts/ops/ci_bridge_runner.py
+scripts/ops/ci_bridge_report_gate.py
+```
+
+CI Bridge 会先归档旧报告，并阻止陈旧或与当前 HEAD 不匹配的报告回写 GitHub。
 
 ## 5. 过渡与兼容文档
 
@@ -132,6 +144,7 @@ reports/offline_quality_latest.json
 - `COMMERCIALIZATION_STATUS_20260620.md` 是当前任务状态；
 - `CURRENT_PROJECT_CONTEXT.md` 是当前事实总入口；
 - `PROJECT_MEMORY_20260620.md` 是长期设计、环境和交互记忆；
+- `CHAT_ARCHIVE_20260620.md` 记录本轮归档范围和未执行事项；
 - `EXECUTION_TOPOLOGY.md` 定义服务器角色和 SSH 操作方向；
 - `CODE_CHANGE_GUARDRAILS*` 定义强制工程门禁；
 - MySQL V1 优先于旧 rsync-only 设计；
