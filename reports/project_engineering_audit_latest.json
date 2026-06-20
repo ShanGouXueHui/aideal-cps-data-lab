@@ -1968,7 +1968,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' ] || [ ' repeated in 18 files: scripts/check_commission_mysql_release_readiness.sh, scripts/hz23_apply_data_integrity_update.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_install_service.sh, scripts/hz23_migrate_state_and_publish.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_commission_mysql_prepare_checks.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "' ] || [ ' repeated in 19 files: scripts/check_commission_mysql_release_readiness.sh, scripts/hz23_apply_data_integrity_update.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_install_service.sh, scripts/hz23_migrate_state_and_publish.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_commission_mysql_prepare_checks.sh, scripts/run_engineering_scan_and_publish.sh",
       "line": 0,
       "path": "scripts/check_commission_mysql_release_readiness.sh",
       "scope": "active",
@@ -2148,7 +2148,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$FETCH_RC' repeated in 8 files: scripts/git_publish_files_via_worktree.sh, scripts/hz12_start_product_all_full_v3.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/publish_commission_test_diagnostics.sh",
+      "detail": "'$FETCH_RC' repeated in 9 files: scripts/git_publish_files_via_worktree.sh, scripts/hz12_start_product_all_full_v3.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh",
       "line": 0,
       "path": "scripts/git_publish_files_via_worktree.sh",
       "scope": "active",
@@ -2643,6 +2643,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'$LOCAL_HEAD' repeated in 3 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/ops/run_data_lab_ci_bridge.sh",
+      "line": 0,
+      "path": "scripts/hz23_publish_commercial_status_v2.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'catalog_new' repeated in 5 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, tests/test_hz23_finalize_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
@@ -2850,7 +2859,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$REMOTE_HEAD' repeated in 4 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_safe_reload_observer.sh, scripts/publish_commission_test_diagnostics.sh",
+      "detail": "'$REMOTE_HEAD' repeated in 5 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_safe_reload_observer.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -6774,7 +6783,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "' ] && [ ' repeated in 17 files: scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_commission_data_checks_v2.sh",
+      "detail": "' ] && [ ' repeated in 18 files: scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh, scripts/hz23_check_commercial_execution.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_reconcile_runtime_git_state.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/publish_commission_test_diagnostics.sh, scripts/run_commission_data_checks_v2.sh",
       "line": 0,
       "path": "scripts/hz15_daytime_autostart_pages_40_67_no_reset_v6_strict_4000.sh",
       "scope": "historical",
@@ -7702,8 +7711,8 @@
   ],
   "full_gate_blocker_count": 210,
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T14:06:16",
-  "git_head": "51e6d85432942cd1177e31505a556a8baa226c2c",
+  "generated_at": "2026-06-20T14:06:48",
+  "git_head": "2362f9d3c5b22ec38c1560caa4c7a2c64cf87063",
   "historical_blocker_count": 195,
   "schema_version": "engineering-audit/v4",
   "status": "FAIL",
@@ -7784,7 +7793,7 @@
       "hardcoded_ip": 42,
       "hardcoded_parameter": 107,
       "hardcoded_url": 58,
-      "repeated_literal": 645
+      "repeated_literal": 646
     },
     "top_blocker_files": [
       {
@@ -7910,5 +7919,5 @@
     ]
   },
   "support_blocker_count": 15,
-  "warning_count": 645
+  "warning_count": 646
 }
