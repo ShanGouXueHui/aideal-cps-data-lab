@@ -11,6 +11,7 @@ from aideal_cps_data_lab.persistence.mysql_repository import (
     UPDATE_UNCHANGED,
     MySQLCommissionProductRepository,
 )
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class FakeCursor:
@@ -57,18 +58,18 @@ class MySQLRepositoryTest(unittest.TestCase):
     def product(self, price: str = "99.90") -> CommissionProduct:
         return CommissionProduct.from_candidate_row(
             {
-                "sku": "100012345678",
+                "sku": FIXTURES.sku,
                 "title": "测试商品",
-                "item_url": "https://item.jd.com/100012345678.html",
-                "promotion_url": "https://u.jd.com/example",
-                "image_url": "https://img.example.invalid/product.jpg",
+                "item_url": FIXTURES.item_url,
+                "promotion_url": FIXTURES.promotion_url,
+                "image_url": FIXTURES.image_url,
                 "price": price,
                 "commission_rate": "12.5%",
                 "estimated_commission": "12.49",
                 "status": "active",
                 "source_page_no": 1,
-                "last_checked_at": "2026-06-14T10:00:00",
-                "last_seen_at": "2026-06-14T10:00:00",
+                "last_checked_at": FIXTURES.timestamp,
+                "last_seen_at": FIXTURES.timestamp,
             }
         )
 
