@@ -73,22 +73,13 @@ def run_checks(root: Path, log: TextIO) -> tuple[int, int, int]:
     return compile_rc, offline_rc, audit_rc
 
 
-def publish_reports(root: Path, log: TextIO, expected_head: str) -> int:
+def confirm_main_head(root: Path, log: TextIO, expected_head: str) -> int:
     fetch_rc = run_logged(["git", "fetch", "origin", "main"], root, log)
     remote_head = git_value(root, "rev-parse", "origin/main")
     if fetch_rc != 0 or remote_head != expected_head:
         return 1
-    return run_logged(
-        [
-            "bash",
-            "scripts/git_publish_files_via_worktree.sh",
-            "reports: refresh Singapore CI bridge validation",
-            "reports/offline_quality_latest.json",
-            "reports/project_engineering_audit_latest.json",
-        ],
-        root,
-        log,
-    )
+    log.write("QUALITY_REPORT_PUBLICATION=github_actions_only\n")
+    return 0
 
 
 def run_bridge(root: Path, action: str) -> int:
@@ -122,7 +113,7 @@ def run_bridge(root: Path, action: str) -> int:
 
         publish_rc = 0
         if action == "validate-publish" and report_gate_rc == 0:
-            publish_rc = publish_reports(root, log, expected_head)
+            publish_rc = confirm_main_head(root, log, expected_head)
         elif action == "validate-publish":
             publish_rc = 1
 
@@ -134,6 +125,7 @@ def run_bridge(root: Path, action: str) -> int:
         ("AUDIT_RC", audit_rc),
         ("REPORT_GATE_RC", report_gate_rc),
         ("PUBLISH_RC", publish_rc),
+        ("PUBLISH_AUTHORITY", "github_actions_quality_reports"),
         ("LOG_FILE", log_path),
     ]
     failed = any(value != 0 for value in (
