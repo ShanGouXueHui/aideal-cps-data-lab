@@ -23,7 +23,7 @@ SETTINGS = {
     "duplicate_function_min_lines": 5,
     "repeated_literal_min_length": 8,
     "repeated_literal_min_files": 3,
-    "scan_extensions": [".py", ".sh", ".toml", ".ini", ".cfg", ".yaml", ".yml", ".json"],
+    "scan_extensions": [".py", ".sh", ".toml", ".ini", ".cfg", ".yaml", ".yml", ".json", ".env"],
     "excluded_directories": [".git", "reports", "logs", "data"],
     "configuration_directories": ["config", "configuration"],
     "configuration_extensions": [".json", ".yaml", ".yml", ".toml", ".ini", ".cfg"],
@@ -128,6 +128,16 @@ class ConfigurationKeyTests(unittest.TestCase):
     def test_json_duplicate_key_in_same_object(self):
         findings = self._scan("settings.json", '{"app":{"port":1,"port":2},"other":{"port":3}}')
         self.assertEqual(1, categories(findings).count("duplicate_config_key"))
+
+
+class EnvironmentDefaultTests(unittest.TestCase):
+    def test_environment_defaults_are_scanned(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "one.env").write_text('PORT=${PORT:-1}\n', encoding="utf-8")
+            (root / "two.env").write_text('PORT=${PORT:-2}\n', encoding="utf-8")
+            report = run_audit(root, SETTINGS)
+        self.assertEqual(1, report["duplicate_default_source_count"])
 
 
 class DefaultSourceTests(unittest.TestCase):
