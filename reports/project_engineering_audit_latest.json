@@ -1,81 +1,9 @@
 {
   "active_blocker_count": 0,
-  "blocker_count": 240,
+  "blocker_count": 231,
   "compatibility_blocker_count": 0,
-  "files_scanned": 304,
+  "files_scanned": 301,
   "findings": [
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:19228",
-      "line": 80,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 105,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:19228",
-      "line": 145,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
-      "line": 24,
-      "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "pages"
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44, run/hz18_card_click_recover_page.py:44",
-      "line": 44,
-      "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "ensure_page"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://item.jd.com/",
-      "line": 125,
-      "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "duplicate_implementation",
-      "detail": "run/hz20_mouse_click_recover_page.py:168, run/hz18_card_click_recover_page.py:136",
-      "line": 136,
-      "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "fresh_candidates"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:19228",
-      "line": 151,
-      "path": "run/hz18_card_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
     {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
@@ -87,7 +15,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24",
       "line": 24,
       "path": "run/hz20_mouse_click_recover_page.py",
       "scope": "historical",
@@ -96,7 +24,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44, run/hz18_card_click_recover_page.py:44",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44",
       "line": 44,
       "path": "run/hz20_mouse_click_recover_page.py",
       "scope": "historical",
@@ -113,15 +41,6 @@
       "symbol": ""
     },
     {
-      "category": "duplicate_implementation",
-      "detail": "run/hz20_mouse_click_recover_page.py:168, run/hz18_card_click_recover_page.py:136",
-      "line": 168,
-      "path": "run/hz20_mouse_click_recover_page.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "fresh_candidates"
-    },
-    {
       "category": "hardcoded_url",
       "detail": "http://127.0.0.1:19228",
       "line": 183,
@@ -132,7 +51,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24, run/hz18_card_click_recover_page.py:24",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:24, run/hz20_mouse_click_recover_page.py:24",
       "line": 24,
       "path": "run/hz21_strict_card_dom_recover_page.py",
       "scope": "historical",
@@ -141,7 +60,7 @@
     },
     {
       "category": "duplicate_implementation",
-      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44, run/hz18_card_click_recover_page.py:44",
+      "detail": "run/hz21_strict_card_dom_recover_page.py:44, run/hz20_mouse_click_recover_page.py:44",
       "line": 44,
       "path": "run/hz21_strict_card_dom_recover_page.py",
       "scope": "historical",
@@ -4452,7 +4371,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'%Y-%m-%d %H:%M:%S' repeated in 26 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v4.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "detail": "'%Y-%m-%d %H:%M:%S' repeated in 23 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v4.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4461,7 +4380,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'short_url' repeated in 45 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/link_service.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/validation_rules.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py",
+      "detail": "'short_url' repeated in 42 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, src/aideal_cps_data_lab/hz24/link_service.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/queue_builder.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/validation_rules.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, tests/test_backfill_execution_gate.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4470,7 +4389,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'link_created_at' repeated in 21 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v4.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "detail": "'link_created_at' repeated in 19 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v4.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4479,7 +4398,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'link_expire_at' repeated in 12 files: run/hz11_merge_multi_menu_latest.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "detail": "'link_expire_at' repeated in 10 files: run/hz11_merge_multi_menu_latest.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4488,7 +4407,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'refresh_due_at' repeated in 30 files: run/hz11_merge_multi_menu_latest.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "detail": "'refresh_due_at' repeated in 28 files: run/hz11_merge_multi_menu_latest.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4524,7 +4443,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'menu_mode' repeated in 12 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
+      "detail": "'menu_mode' repeated in 10 files: run/hz11_merge_multi_menu_latest.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
@@ -4533,7 +4452,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'__main__' repeated in 68 files: run/hz12_product_all_full_collector_v5.py, run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, run/hz24_collect_increment_links.py, run/hz24_collect_increment_links_v2.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_preflight_risk_policy.py, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_refresh_manifest_gates.py, scripts/hz23_refresh_manifest_gates_v2.py, scripts/hz23_risk_policy_guard.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_migrate_legacy_sold_out.py, scripts/hz24_repair_terminal_state.py, scripts/hz24_validate_increment_links.py, scripts/hz24_validate_increment_outcomes.py, scripts/hz24_validate_resume_gate.py, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/make_sample_export.py, scripts/plan_commission_mysql_backfill.py, scripts/plan_commission_mysql_initialization.py, scripts/probe_public_urls.py, scripts/run_offline_quality.py, scripts/validate_commercial_candidate.py, scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/validate_export_jsonl.py, scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_data_lab_settings.py, tests/test_finalize_promotion_guard.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_hz24_artifact_gate.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_canonical_adapter.py, tests/test_hz24_publish_allowlist.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_authorization.py, tests/test_hz24_resume_gate.py, tests/test_hz24_sold_out_migration.py, tests/test_hz24_terminal_state.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_initialization_gate.py, tests/test_mysql_repository.py",
+      "detail": "'__main__' repeated in 65 files: run/hz12_product_all_full_collector_v5.py, run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, run/hz22_prepare_all_product_page.py, run/hz23_finalize_round.py, run/hz23_scan_current_page.py, run/hz24_audit_product_tabs.py, run/hz24_collect_increment_links.py, run/hz24_collect_increment_links_v2.py, run/hz24_inspect_tab_pool_structure.py, scripts/backfill_commission_products_mysql.py, scripts/engineering_scan_active.py, scripts/engineering_scan_full.py, scripts/hz23_migrate_observer_state_v2.py, scripts/hz23_preflight_risk_policy.py, scripts/hz23_quarantine_unsafe_source_rows.py, scripts/hz23_refresh_manifest_gates.py, scripts/hz23_refresh_manifest_gates_v2.py, scripts/hz23_risk_policy_guard.py, scripts/hz24_analyze_tab_overlap.py, scripts/hz24_build_increment_queue.py, scripts/hz24_migrate_legacy_sold_out.py, scripts/hz24_repair_terminal_state.py, scripts/hz24_validate_increment_links.py, scripts/hz24_validate_increment_outcomes.py, scripts/hz24_validate_resume_gate.py, scripts/jingfen_auth_probe.py, scripts/jingfen_login_capture.py, scripts/make_sample_export.py, scripts/plan_commission_mysql_backfill.py, scripts/plan_commission_mysql_initialization.py, scripts/probe_public_urls.py, scripts/run_offline_quality.py, scripts/validate_commercial_candidate.py, scripts/validate_commission_mysql_ddl.py, scripts/validate_commission_mysql_migrations.py, scripts/validate_export_jsonl.py, scripts/verify_commission_mysql_payload_hashes.py, scripts/verify_commission_mysql_post_migration.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_data_lab_settings.py, tests/test_finalize_promotion_guard.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_hz24_artifact_gate.py, tests/test_hz24_atomic_repair.py, tests/test_hz24_canonical_adapter.py, tests/test_hz24_publish_allowlist.py, tests/test_hz24_refactor.py, tests/test_hz24_resume_authorization.py, tests/test_hz24_resume_gate.py, tests/test_hz24_sold_out_migration.py, tests/test_hz24_terminal_state.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_initialization_gate.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "run/hz12_product_all_full_collector_v5.py",
       "scope": "historical",
@@ -4560,7 +4479,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'known_sku_count' repeated in 18 files: run/hz14_all_product_full_collector_v2.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh",
+      "detail": "'known_sku_count' repeated in 16 files: run/hz14_all_product_full_collector_v2.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v2.py",
       "scope": "historical",
@@ -4578,7 +4497,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'known_skus' repeated in 8 files: run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
+      "detail": "'known_skus' repeated in 5 files: run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v2.py",
       "scope": "historical",
@@ -4596,7 +4515,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'fail_streak' repeated in 7 files: run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
+      "detail": "'fail_streak' repeated in 5 files: run/hz14_all_product_full_collector_v2.py, run/hz14_all_product_full_collector_v3.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v2.py",
       "scope": "historical",
@@ -4605,7 +4524,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'refresh_round' repeated in 6 files: run/hz14_all_product_full_collector_v2.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
+      "detail": "'refresh_round' repeated in 4 files: run/hz14_all_product_full_collector_v2.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_restart_v8_from_existing_latest.sh",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v2.py",
       "scope": "historical",
@@ -4650,7 +4569,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'promotion_mode' repeated in 9 files: run/hz14_all_product_full_collector_v3.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
+      "detail": "'promotion_mode' repeated in 7 files: run/hz14_all_product_full_collector_v3.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v3.py",
       "scope": "historical",
@@ -4659,7 +4578,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'source_menu' repeated in 7 files: run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py",
+      "detail": "'source_menu' repeated in 5 files: run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v3.py",
       "scope": "historical",
@@ -4668,7 +4587,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'click_failed' repeated in 6 files: run/hz14_all_product_full_collector_v3.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py, tests/test_hz24_refactor.py",
+      "detail": "'click_failed' repeated in 4 files: run/hz14_all_product_full_collector_v3.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py, tests/test_hz24_refactor.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v3.py",
       "scope": "historical",
@@ -4677,7 +4596,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'商品推广/全部商品' repeated in 6 files: run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
+      "detail": "'商品推广/全部商品' repeated in 4 files: run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v3.py",
       "scope": "historical",
@@ -4686,7 +4605,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'last_page_no' repeated in 5 files: run/hz14_all_product_full_collector_v3.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
+      "detail": "'last_page_no' repeated in 3 files: run/hz14_all_product_full_collector_v3.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
       "path": "run/hz14_all_product_full_collector_v3.py",
       "scope": "historical",
@@ -4722,387 +4641,126 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'risk_handler' repeated in 12 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh",
+      "detail": "'risk_handler' repeated in 9 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'oneKeyCount' repeated in 16 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "detail": "'oneKeyCount' repeated in 13 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'skuCount' repeated in 15 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "detail": "'skuCount' repeated in 12 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'pagerText' repeated in 9 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "detail": "'pagerText' repeated in 6 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'activePageText' repeated in 11 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz23/page_scan.py",
+      "detail": "'activePageText' repeated in 8 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz23/page_scan.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'jumpInputValue' repeated in 8 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh",
+      "detail": "'jumpInputValue' repeated in 5 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'http://127.0.0.1:19228' repeated in 15 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
+      "detail": "'http://127.0.0.1:19228' repeated in 12 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz15_rearm_daytime_supervisor_after_manual_verify.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'long_url' repeated in 31 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "detail": "'risk_before' repeated in 8 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz24/link_service.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'risk_before' repeated in 10 files: run/hz16_short_url_diag.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz24/link_service.py",
+      "detail": "'hasEmpty' repeated in 4 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'hasEmpty' repeated in 7 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz14_reset_product_all_and_probe_visible_pager.sh",
+      "detail": "\"() => document.body ? (document.body.innerText || '') : ''\" repeated in 4 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/browser_contract.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'visible_head' repeated in 3 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, scripts/hz16_run_short_url_diag_page49.sh",
+      "detail": "'run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py' repeated in 3 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "\"() => document.body ? (document.body.innerText || '') : ''\" repeated in 7 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/browser_contract.py",
+      "detail": "'not_all_product_4000' repeated in 3 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'risk_initial' repeated in 6 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/session.py",
+      "detail": "'already_on_page' repeated in 3 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
     },
     {
       "category": "repeated_literal",
-      "detail": "'exception' repeated in 5 files: run/hz16_short_url_diag.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py",
+      "detail": "'jump_failed' repeated in 3 files: run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
       "line": 0,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py' repeated in 6 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'not_all_product_4000' repeated in 6 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'jump_failed' repeated in 6 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'parse_error' repeated in 5 files: run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz16_short_url_diag.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'total_ok' repeated in 17 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_status.sh",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'total_fail' repeated in 17 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_status.sh",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'image_url' repeated in 41 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/testing/fixtures.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'item_url' repeated in 40 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/testing/fixtures.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'commission_rate' repeated in 41 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/schema.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'estimated_income' repeated in 30 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz23_finalize_gate.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'jd_command' repeated in 30 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'page_summary' repeated in 9 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz21_mainline_status.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'page_ready' repeated in 9 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'worker_name' repeated in 10 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py, src/aideal_cps_data_lab/hz24/validation_rules.py, tests/test_hz23_finalize_gate.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'link_expire_days' repeated in 6 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'refresh_after_days' repeated in 6 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'refresh_before_expiry_days' repeated in 6 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'click_result' repeated in 5 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'imageUrl' repeated in 6 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'risk_after_click' repeated in 5 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'https://item.jd.com/' repeated in 7 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_mysql_batch_repository_v2.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'already_on_page' repeated in 5 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'page_order' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'sku_source' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'modal_keys' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'fresh_initial' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'final_snapshot' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'_not_ready' repeated in 4 files: run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz17_recover_short_url_page.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'short_url_timeout' repeated in 3 files: run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
-      "line": 0,
-      "path": "run/hz18_card_click_recover_page.py",
+      "path": "run/hz19_visual_probe_failed_sku.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
@@ -5118,7 +4776,187 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'total_ok' repeated in 15 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_status.sh",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'total_fail' repeated in 15 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_mainline_safe_remaining.sh, scripts/hz21_mainline_status.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_patch_safe_locator_click_and_run.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh, scripts/hz23_status.sh",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'image_url' repeated in 39 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/testing/fixtures.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'item_url' repeated in 38 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/testing/fixtures.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'commission_rate' repeated in 39 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py, src/aideal_cps_data_lab/schema.py, tests/test_backfill_execution_gate.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_commission_product_domain.py, tests/test_hz23_finalize_gate.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'estimated_income' repeated in 28 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v4_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py, tests/test_hz23_finalize_gate.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'long_url' repeated in 28 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'jd_command' repeated in 28 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_run_v4_smoke_and_report.sh, scripts/hz12_run_v4_smoke_and_report_safe.sh, scripts/hz12_run_v5_strict_title_smoke_and_report.sh, scripts/hz12_run_v6_pagination_smoke_and_report.sh, scripts/hz12_run_v7_exact_next_smoke_and_report.sh, scripts/hz13_run_multi_channel_smoke_and_report.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_no_reset_v5_progress.sh, scripts/hz15_check_no_reset_v6_latest_segment_progress.sh, scripts/hz15_check_no_reset_v6_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/verify_commission_mysql_payload_hashes.py, src/aideal_cps_data_lab/contracts/commission_payload.py, src/aideal_cps_data_lab/domain/commission_product.py, src/aideal_cps_data_lab/hz23/finalize_candidates.py, src/aideal_cps_data_lab/hz24/modal_parser.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/persistence/mysql_columns.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'page_summary' repeated in 7 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz21_mainline_status.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, scripts/hz22_mainline_all_product.sh, scripts/hz23_mainline_refresh.sh",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'page_ready' repeated in 7 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz17_run_recover_page49_smoke.sh, scripts/hz18_run_card_click_page49_smoke.sh, scripts/hz20_run_mouse_click_page49_smoke.sh, scripts/hz21_patch_and_run_strict_card_dom_page49_smoke.sh, scripts/hz21_run_strict_card_dom_page49_smoke.sh",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'risk_initial' repeated in 3 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/session.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'worker_name' repeated in 8 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py, src/aideal_cps_data_lab/hz24/validation_rules.py, tests/test_hz23_finalize_gate.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'link_expire_days' repeated in 4 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'refresh_after_days' repeated in 4 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'refresh_before_expiry_days' repeated in 4 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'click_result' repeated in 3 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'imageUrl' repeated in 4 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/records.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'exception' repeated in 3 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'risk_after_click' repeated in 3 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/link_service.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'hz20_mouse_click' repeated in 4 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/safety.py, tests/test_hz23_finalize_gate.py",
+      "line": 0,
+      "path": "run/hz20_mouse_click_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'https://item.jd.com/' repeated in 5 files: run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, tests/test_backfill_plan.py, tests/test_candidate_validation.py, tests/test_mysql_batch_repository_v2.py",
       "line": 0,
       "path": "run/hz20_mouse_click_recover_page.py",
       "scope": "historical",
@@ -8151,18 +7989,15 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T11:52:01",
-  "git_head": "ca805d0e931f5b999030ccd8c7c600259081ef11",
-  "historical_blocker_count": 213,
+  "generated_at": "2026-06-20T11:54:52",
+  "git_head": "440e6ef77abfa1f84f11282f90e59a6626098a37",
+  "historical_blocker_count": 204,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
   "summary": {
-    "blocker_file_count": 69,
+    "blocker_file_count": 66,
     "blocker_files_by_scope": {
       "historical": [
-        "run/hz16_short_url_diag.py",
-        "run/hz17_recover_short_url_page.py",
-        "run/hz18_card_click_recover_page.py",
         "run/hz19_visual_probe_failed_sku.py",
         "run/hz20_mouse_click_recover_page.py",
         "run/hz21_strict_card_dom_recover_page.py",
@@ -8234,16 +8069,16 @@
       ]
     },
     "blocker_scope_counts": {
-      "historical": 213,
+      "historical": 204,
       "support": 27
     },
     "category_counts": {
-      "duplicate_implementation": 8,
+      "duplicate_implementation": 4,
       "hardcoded_absolute_path": 3,
       "hardcoded_ip": 42,
       "hardcoded_parameter": 107,
-      "hardcoded_url": 80,
-      "repeated_literal": 665
+      "hardcoded_url": 75,
+      "repeated_literal": 656
     },
     "top_blocker_files": [
       {
@@ -8280,14 +8115,6 @@
       },
       {
         "count": 5,
-        "path": "run/hz18_card_click_recover_page.py"
-      },
-      {
-        "count": 5,
-        "path": "run/hz20_mouse_click_recover_page.py"
-      },
-      {
-        "count": 5,
         "path": "scripts/hz14_restart_v2_after_state_fix.sh"
       },
       {
@@ -8301,6 +8128,10 @@
       {
         "count": 5,
         "path": "scripts/hz14_start_all_product_full_4000.sh"
+      },
+      {
+        "count": 4,
+        "path": "run/hz20_mouse_click_recover_page.py"
       },
       {
         "count": 4,
@@ -8365,9 +8196,13 @@
       {
         "count": 4,
         "path": "scripts/hz15_resume_pages_36_40_no_reset_v6_strict_4000.sh"
+      },
+      {
+        "count": 4,
+        "path": "scripts/hz15_resume_pages_40_67_no_reset_v6_strict_4000_overnight.sh"
       }
     ]
   },
   "support_blocker_count": 27,
-  "warning_count": 665
+  "warning_count": 656
 }
