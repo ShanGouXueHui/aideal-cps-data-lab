@@ -38,6 +38,15 @@ else
   AUDIT_RC=99
 fi
 
+PUBLISH_RC=99
+if [ "$AUDIT_RC" = "0" ] && [ -f reports/hz23_lkg_readonly_audit_latest.json ]; then
+  bash scripts/git_publish_files_via_worktree.sh \
+    "reports: publish HZ23 last-known-good readonly audit" \
+    reports/hz23_lkg_readonly_audit_latest.json \
+    > logs/hz23_lkg_readonly_publish.log 2>&1
+  PUBLISH_RC=$?
+fi
+
 read -r AUDIT_STATUS CANDIDATE_COUNT EXACT_COUNT <<< "$(python3 - <<'PY'
 import json
 from pathlib import Path
@@ -52,7 +61,7 @@ PY
 )"
 
 STATUS=PASS
-if [ "$COMPILE_RC" != "0" ] || [ "$TEST_RC" != "0" ] || [ "$AUDIT_RC" != "0" ]; then
+if [ "$COMPILE_RC" != "0" ] || [ "$TEST_RC" != "0" ] || [ "$AUDIT_RC" != "0" ] || [ "$PUBLISH_RC" != "0" ]; then
   STATUS=FAIL
 fi
 
@@ -61,6 +70,7 @@ echo "STATUS=$STATUS"
 echo "COMPILE_RC=$COMPILE_RC"
 echo "TEST_RC=$TEST_RC"
 echo "AUDIT_RC=$AUDIT_RC"
+echo "PUBLISH_RC=$PUBLISH_RC"
 echo "AUDIT_STATUS=$AUDIT_STATUS"
 echo "CANDIDATE_COUNT=$CANDIDATE_COUNT"
 echo "EXACT_MATCH_COUNT=$EXACT_COUNT"
