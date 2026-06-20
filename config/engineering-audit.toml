@@ -1,4 +1,4 @@
-schema_version = "engineering-audit/v4"
+schema_version = "engineering-audit/v5"
 large_file_line_limit = 300
 long_function_line_limit = 80
 duplicate_function_min_lines = 5
@@ -9,6 +9,7 @@ excluded_directories = [".git", ".venv", ".venv-browser", "backups", "data", "lo
 configuration_directories = ["config", "configuration"]
 ignored_function_names = ["main", "__init__", "__enter__", "__exit__"]
 hardcoded_name_fragments = ["host", "port", "url", "timeout", "interval", "sleep", "window", "selector", "service", "database", "schema"]
-historical_path_patterns = ["^(run|scripts)/hz1[1-9]_", "^(run|scripts)/hz2[01]_"]
+hardcoding_exempt_path_patterns = ["^tests/"]
+historical_path_patterns = ["^(run|scripts)/hz1[1-9]_", "^(run|scripts)/hz2[01]_" ]
 compatibility_path_patterns = ["^(run|scripts)/hz22_"]
 support_path_patterns = ["^tests/", "^docs/", "^config/", "^\\.github/", "^examples/"]
