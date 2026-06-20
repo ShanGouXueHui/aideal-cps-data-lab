@@ -10,10 +10,15 @@ import unittest
 from pathlib import Path
 
 from aideal_cps_data_lab.contracts import canonical_payload_hash
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class BackfillExecutionGateTest(unittest.TestCase):
-    def build_fixture(self, *, observation_ready: bool) -> tuple[Path, Path, Path, Path, tempfile.TemporaryDirectory[str]]:
+    def build_fixture(
+        self,
+        *,
+        observation_ready: bool,
+    ) -> tuple[Path, Path, Path, Path, tempfile.TemporaryDirectory[str]]:
         tmp = tempfile.TemporaryDirectory()
         root = Path(tmp.name)
         candidate = root / "candidate.jsonl"
@@ -24,12 +29,12 @@ class BackfillExecutionGateTest(unittest.TestCase):
         row: dict[str, object] = {
             "schema_version": "aideal-cps-product-feed/v1",
             "source": "jd_union_datalab",
-            "sku": "100012345678",
+            "sku": FIXTURES.sku,
             "title": "测试商品",
-            "item_url": "https://item.jd.com/100012345678.html",
-            "promotion_url": "https://u.jd.com/example",
-            "short_url": "https://u.jd.com/example",
-            "image_url": "https://img.example.invalid/product.jpg",
+            "item_url": FIXTURES.item_url,
+            "promotion_url": FIXTURES.promotion_url,
+            "short_url": FIXTURES.promotion_url,
+            "image_url": FIXTURES.image_url,
             "price": "99.90",
             "commission_rate": "12.5000",
             "estimated_commission": "12.49",
@@ -68,7 +73,14 @@ class BackfillExecutionGateTest(unittest.TestCase):
         )
         return candidate, manifest, status, report, tmp
 
-    def run_command(self, candidate: Path, manifest: Path, status: Path, report: Path, *extra: str) -> subprocess.CompletedProcess[str]:
+    def run_command(
+        self,
+        candidate: Path,
+        manifest: Path,
+        status: Path,
+        report: Path,
+        *extra: str,
+    ) -> subprocess.CompletedProcess[str]:
         repo_root = Path(__file__).resolve().parents[1]
         script = repo_root / "scripts" / "backfill_commission_products_mysql.py"
         env = dict(os.environ)
@@ -97,7 +109,9 @@ class BackfillExecutionGateTest(unittest.TestCase):
         )
 
     def test_dry_run_validates_without_requiring_observation_gate(self) -> None:
-        candidate, manifest, status, report, tmp = self.build_fixture(observation_ready=False)
+        candidate, manifest, status, report, tmp = self.build_fixture(
+            observation_ready=False
+        )
         self.addCleanup(tmp.cleanup)
         completed = self.run_command(candidate, manifest, status, report)
         self.assertEqual(completed.returncode, 0, completed.stderr)
@@ -107,7 +121,9 @@ class BackfillExecutionGateTest(unittest.TestCase):
         self.assertIn("observation_ready", result["gate_failures"])
 
     def test_execute_is_blocked_before_database_settings_when_observation_not_ready(self) -> None:
-        candidate, manifest, status, report, tmp = self.build_fixture(observation_ready=False)
+        candidate, manifest, status, report, tmp = self.build_fixture(
+            observation_ready=False
+        )
         self.addCleanup(tmp.cleanup)
         completed = self.run_command(
             candidate,
@@ -125,7 +141,9 @@ class BackfillExecutionGateTest(unittest.TestCase):
         self.assertIn("mysql_initialization_allowed", result["gate_failures"])
 
     def test_execute_reaches_write_feature_flag_only_after_commercial_gate(self) -> None:
-        candidate, manifest, status, report, tmp = self.build_fixture(observation_ready=True)
+        candidate, manifest, status, report, tmp = self.build_fixture(
+            observation_ready=True
+        )
         self.addCleanup(tmp.cleanup)
         completed = self.run_command(
             candidate,
