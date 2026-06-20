@@ -1,10 +1,10 @@
 {
   "active_blocker_count": 31,
-  "active_warning_count": 259,
+  "active_warning_count": 260,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_url": 29,
-    "repeated_literal": 259
+    "repeated_literal": 260
   },
   "findings": [
     {
@@ -2106,6 +2106,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'%Y%m%d_%H%M%S' repeated in 3 files: src/aideal_cps_data_lab/http_client.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/jingfen/browser_helpers.py",
+      "line": 0,
+      "path": "src/aideal_cps_data_lab/http_client.py",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'browser_page_missing' repeated in 4 files: src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/hz23/page_scan.py, src/aideal_cps_data_lab/hz24/session.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
       "line": 0,
       "path": "src/aideal_cps_data_lab/hz22/page_prepare.py",
@@ -2618,8 +2627,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 311,
-  "generated_at": "2026-06-20T11:43:47",
+  "full_files_scanned": 309,
+  "generated_at": "2026-06-20T11:46:47",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
