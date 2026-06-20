@@ -9,7 +9,7 @@
   "duplicate_default_source_count": 0,
   "duplicate_definition_count": 0,
   "duplicate_implementation_count": 0,
-  "files_scanned": 258,
+  "files_scanned": 257,
   "findings": [
     {
       "category": "repeated_literal",
@@ -67,7 +67,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(python3 - <<' repeated in 17 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_schedule_next_daytime.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_run_lkg_readonly_audit.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_increment_start_or_schedule.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_mysql_readiness_reports.sh, scripts/run_engineering_scan_and_publish.sh",
+      "detail": "'$(python3 - <<' repeated in 16 files: scripts/hz23_mainline_refresh.sh, scripts/hz23_observation_daemon.sh, scripts/hz23_quarantine_and_refresh_candidate.sh, scripts/hz23_resume_after_manual_verification.sh, scripts/hz23_resume_schedule_next_daytime.sh, scripts/hz23_revalidate_candidate_after_lineage_fix.sh, scripts/hz23_run_lkg_readonly_audit.sh, scripts/hz23_safe_reload_observer.sh, scripts/hz24_finalize_verified_special_tabs.sh, scripts/hz24_increment_loop.sh, scripts/hz24_increment_start_or_schedule.sh, scripts/hz24_run_one_increment_batch.sh, scripts/hz24_run_product_tab_audit.sh, scripts/hz24_run_tab_pool_analysis.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh, scripts/publish_mysql_readiness_reports.sh",
       "line": 0,
       "path": "scripts/hz23_mainline_refresh.sh",
       "scope": "active",
@@ -178,15 +178,6 @@
       "detail": "'TARGET_AT' repeated in 3 files: scripts/hz23_resume_schedule_next_daytime.sh, scripts/hz24_apply_structure_fix_and_schedule.sh, scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
       "line": 0,
       "path": "scripts/hz23_resume_schedule_next_daytime.sh",
-      "scope": "active",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'AUDIT_RC=$AUDIT_RC' repeated in 3 files: scripts/hz23_run_lkg_readonly_audit.sh, scripts/hz24_run_product_tab_audit.sh, scripts/run_engineering_scan_and_publish.sh",
-      "line": 0,
-      "path": "scripts/hz23_run_lkg_readonly_audit.sh",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -671,8 +662,8 @@
   ],
   "full_gate_blocker_count": 0,
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T21:03:26",
-  "git_head": "5a54a76bea1534f6ec03a518eef7e74fda1e0760",
+  "generated_at": "2026-06-20T21:03:40",
+  "git_head": "29d2684962eca5f34a2317058e4e5abcbda321e1",
   "global_blocker_count": 0,
   "historical_blocker_count": 0,
   "large_file_count": 0,
@@ -700,10 +691,10 @@
     "blocker_files_by_scope": {},
     "blocker_scope_counts": {},
     "category_counts": {
-      "repeated_literal": 73
+      "repeated_literal": 72
     },
     "top_blocker_files": []
   },
   "support_blocker_count": 0,
-  "warning_count": 73
+  "warning_count": 72
 }
