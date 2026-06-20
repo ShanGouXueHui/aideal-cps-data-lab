@@ -1,10 +1,10 @@
 {
   "active_blocker_count": 31,
-  "active_warning_count": 258,
+  "active_warning_count": 259,
   "category_counts": {
     "duplicate_implementation": 2,
     "hardcoded_url": 29,
-    "repeated_literal": 258
+    "repeated_literal": 259
   },
   "findings": [
     {
@@ -2547,6 +2547,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'raw_text' repeated in 5 files: run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/jd_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/sold_out_execution.py, tests/test_hz24_refactor.py",
+      "line": 0,
+      "path": "run/hz21_strict_card_dom_recover_page.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'100012345678' repeated in 6 files: tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_safety.py, tests/test_landed_validation.py, tests/test_mysql_batch_repository_contract.py, tests/test_mysql_batch_repository_v2.py, tests/test_mysql_repository.py",
       "line": 0,
       "path": "tests/test_backfill_execution_gate.py",
@@ -2609,8 +2618,8 @@
       "symbol": ""
     }
   ],
-  "full_files_scanned": 318,
-  "generated_at": "2026-06-20T09:21:32",
+  "full_files_scanned": 313,
+  "generated_at": "2026-06-20T11:28:52",
   "schema_version": "engineering-active-scope/v1",
   "status": "FAIL"
 }
