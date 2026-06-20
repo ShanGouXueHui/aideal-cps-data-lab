@@ -1,0 +1,1 @@
+Full audit blockers must be zero in every scope. Duplicate definitions, duplicate implementations, large files, and long functions must be zero. Offline quality must pass without live JD access.
