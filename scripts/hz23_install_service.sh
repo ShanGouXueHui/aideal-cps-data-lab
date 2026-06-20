@@ -2,7 +2,8 @@
 # Install HZ23 observer as a system service. No set -e is used.
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="${AIDEAL_PROJECT_DIR:-$(cd -- "${SCRIPT_DIR}/.." && pwd)}"
+. "${SCRIPT_DIR}/lib/project_paths.sh"
+PROJECT_DIR="$(aideal_project_dir)"
 SERVICE_CONFIG="${AIDEAL_HZ23_SERVICE_CONFIG:-${PROJECT_DIR}/config/hz23-service.env}"
 UNIT_TEMPLATE="${AIDEAL_HZ23_UNIT_TEMPLATE:-${PROJECT_DIR}/config/aideal-hz23-observer.service.template}"
 RENDERED_UNIT="${AIDEAL_HZ23_RENDERED_UNIT:-${PROJECT_DIR}/run/aideal-hz23-observer.service}"
