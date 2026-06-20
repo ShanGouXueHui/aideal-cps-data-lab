@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 324,
   "compatibility_blocker_count": 0,
-  "files_scanned": 313,
+  "files_scanned": 314,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -9267,8 +9267,8 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T07:56:39",
-  "git_head": "41483644a99ecdf57cfe41626ca713922958144d",
+  "generated_at": "2026-06-20T08:16:14",
+  "git_head": "53f45a126551d92359d282a26f00a2351d863e42",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
