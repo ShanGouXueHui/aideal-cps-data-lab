@@ -10,6 +10,7 @@ from aideal_cps_data_lab.hz23.finalize_io import FinalizePaths
 from aideal_cps_data_lab.hz23.finalize_publish import persist_outcome
 from aideal_cps_data_lab.hz23.finalize_source import select_source
 from aideal_cps_data_lab.hz24.settings import load_settings
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class HZ23SourceSelectionTests(unittest.TestCase):
@@ -22,9 +23,9 @@ class HZ23SourceSelectionTests(unittest.TestCase):
             secondary.write_text(
                 json.dumps(
                     {
-                        "sku": "100012345678",
+                        "sku": FIXTURES.sku,
                         "status": "ok",
-                        "short_url": "https://u.jd.com/example",
+                        "short_url": FIXTURES.promotion_url,
                     }
                 )
                 + "\n",
@@ -33,7 +34,7 @@ class HZ23SourceSelectionTests(unittest.TestCase):
             selected = select_source((primary, secondary), load_settings())
             self.assertEqual(secondary, selected.path)
             self.assertEqual(1, selected.source_row_count)
-            self.assertEqual({"100012345678"}, set(selected.dedup))
+            self.assertEqual({FIXTURES.sku}, set(selected.dedup))
             self.assertEqual(2, len(selected.evaluated))
 
 

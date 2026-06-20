@@ -7,6 +7,7 @@ from aideal_cps_data_lab.hz24.legacy_sold_out import (
     evidence_from_failure,
     validate_evidence,
 )
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 def sold_out_failure(sku: str = "100") -> dict:
@@ -17,7 +18,7 @@ def sold_out_failure(sku: str = "100") -> dict:
             "hit": {"cls": "card-disabled"},
             "mark": {
                 "matched": {
-                    "itemUrl": f"https://item.invalid/{sku}",
+                    "itemUrl": f"{FIXTURES.invalid_item_url}{sku}",
                     "rootText": "商品名称 已抢光 一键领链",
                 }
             },

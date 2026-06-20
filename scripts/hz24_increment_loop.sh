@@ -2,7 +2,8 @@
 # Loop safe HZ24 v2 batches after resume authorization. No set -e.
 
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-PROJECT_DIR="${AIDEAL_PROJECT_DIR:-$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)}"
+. "${SCRIPT_DIR}/lib/project_paths.sh"
+PROJECT_DIR="$(aideal_project_dir)"
 if ! cd "$PROJECT_DIR"; then
   echo "===== SUMMARY ====="
   echo "STATUS=FAIL"

@@ -20,3 +20,12 @@ class FunctionFingerprint:
     line: int
     line_count: int
     digest: str
+
+
+@dataclass(frozen=True, slots=True)
+class DefaultSource:
+    key: str
+    path: str
+    line: int
+    symbol: str
+    source_kind: str
