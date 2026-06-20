@@ -1,6 +1,6 @@
 {
-  "changed": 0,
-  "new": 60,
+  "changed": 49,
+  "new": 11,
   "ok": true,
   "page_no": 27,
   "page_state": {
@@ -11,8 +11,8 @@
   },
   "reason": null,
   "risk": [],
-  "round_id": "20260615_100135",
+  "round_id": "20260620_101332",
   "scanned": 60,
-  "ts": "2026-06-15T17:01:22",
+  "ts": "2026-06-20T12:32:07",
   "unchanged": 0
 }
