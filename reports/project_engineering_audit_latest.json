@@ -2,7 +2,7 @@
   "active_blocker_count": 0,
   "blocker_count": 313,
   "compatibility_blocker_count": 0,
-  "files_scanned": 317,
+  "files_scanned": 318,
   "findings": [
     {
       "category": "hardcoded_parameter",
@@ -3570,7 +3570,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'round_complete' repeated in 7 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py",
+      "detail": "'round_complete' repeated in 8 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/promotion_policy.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3579,7 +3579,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'observation_ready' repeated in 13 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'observation_ready' repeated in 14 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/hz23_publish_compact_status.sh, scripts/hz23_status.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_backfill.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/promotion_policy.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_backfill_execution_gate.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -3741,7 +3741,7 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'candidate_integrity_ready' repeated in 9 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_mysql_initialization_gate.py",
+      "detail": "'candidate_integrity_ready' repeated in 10 files: scripts/hz23_publish_commercial_status_v2.sh, scripts/plan_commission_mysql_initialization.py, src/aideal_cps_data_lab/application/mysql_initialization_gate.py, src/aideal_cps_data_lab/hz23/finalize_manifest.py, src/aideal_cps_data_lab/hz23/finalize_publish.py, src/aideal_cps_data_lab/hz23/promotion_policy.py, src/aideal_cps_data_lab/hz23_gate_refresh.py, tests/test_hz23_finalize_gate.py, tests/test_hz23_finalize_safety.py, tests/test_mysql_initialization_gate.py",
       "line": 0,
       "path": "scripts/hz23_publish_commercial_status_v2.sh",
       "scope": "active",
@@ -9168,8 +9168,8 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T08:29:40",
-  "git_head": "e70f4cf9f2f3bafb7525d7561416eb75999bab60",
+  "generated_at": "2026-06-20T08:31:23",
+  "git_head": "3efcf3dff4af7d4f1422148d5db29f623474ad3a",
   "historical_blocker_count": 285,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
