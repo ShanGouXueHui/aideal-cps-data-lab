@@ -44,11 +44,14 @@ def artifact_checks(
     expected_unavailable = int(config["expected_unavailable_count"])
     engineering_head = str(engineering.get("git_head") or "")
     tested_head = str(offline.get("git_head") or "")
+    engineering_gate_passed = (
+        engineering.get("status") == "PASS"
+        and int(engineering.get("blocker_count") or -1) == 0
+        and int(engineering.get("gate_blocker_count") or -1) == 0
+        and int(engineering.get("full_gate_blocker_count") or -1) == 0
+    )
     return {
-        "engineering_gate_passed": (
-            engineering.get("status") == "PASS"
-            and int(engineering.get("gate_blocker_count") or 0) == 0
-        ),
+        "engineering_gate_passed": engineering_gate_passed,
         "engineering_report_active_paths_current": active_paths_unchanged_since(
             engineering_head
         ),
