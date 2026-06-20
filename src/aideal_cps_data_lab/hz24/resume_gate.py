@@ -46,9 +46,9 @@ def artifact_checks(
     tested_head = str(offline.get("git_head") or "")
     engineering_gate_passed = (
         engineering.get("status") == "PASS"
-        and int(engineering.get("blocker_count") or -1) == 0
-        and int(engineering.get("gate_blocker_count") or -1) == 0
-        and int(engineering.get("full_gate_blocker_count") or -1) == 0
+        and int(engineering.get("blocker_count", -1)) == 0
+        and int(engineering.get("gate_blocker_count", -1)) == 0
+        and int(engineering.get("full_gate_blocker_count", -1)) == 0
     )
     return {
         "engineering_gate_passed": engineering_gate_passed,
