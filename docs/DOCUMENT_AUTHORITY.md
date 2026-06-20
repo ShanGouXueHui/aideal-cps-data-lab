@@ -1,6 +1,6 @@
 # 文档权威顺序
 
-更新日期：2026-06-19
+更新日期：2026-06-20
 
 ## 当前主线
 
@@ -10,11 +10,12 @@
 3. docs/project/CODE_CHANGE_GUARDRAILS.md
 4. docs/project/CURRENT_PROJECT_CONTEXT.md
 5. docs/status/COMMERCIALIZATION_STATUS_20260619.md
-6. docs/project/ENVIRONMENT_AND_WORKING_RULES.md
-7. docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
-8. docs/architecture/commission_data_mysql_v1.sql
-9. docs/ops/DL2_HZ23_COMMERCIAL_OBSERVATION_PLAN.md
-10. docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
+6. docs/project/EXECUTION_TOPOLOGY.md
+7. docs/project/ENVIRONMENT_AND_WORKING_RULES.md
+8. docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
+9. docs/architecture/commission_data_mysql_v1.sql
+10. docs/ops/DL2_HZ23_COMMERCIAL_OBSERVATION_PLAN.md
+11. docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
 ```
 
 最新运行报告至少包括：
@@ -33,6 +34,7 @@ reports/project_engineering_audit_latest.json
 代码和本轮报告
 > 当前项目上下文
 > 2026-06-19 商用状态快照
+> 执行拓扑
 > 工程门禁
 > MySQL V1 架构
 > HZ23 旧观察计划
@@ -77,12 +79,7 @@ docs/project/CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md
 reports/project_engineering_audit_latest.json
 ```
 
-当前全仓审计基线：
-
-```text
-files_scanned=255
-blocker_count=390
-```
+当前全仓审计基线以 `reports/project_engineering_audit_latest.json` 的最新 `git_head` 为准，不再复用旧的固定计数。
 
 大量问题位于历史实验脚本。必须先区分活跃主线与只读历史归档，再治理活跃 HZ23/HZ24/MySQL 路径。不得继续向已超阈值的大文件叠加业务逻辑。
 
@@ -91,6 +88,7 @@ blocker_count=390
 - 运行事实优先于文档假设；
 - `CURRENT_PROJECT_CONTEXT.md` 是当前项目事实总入口；
 - `COMMERCIALIZATION_STATUS_20260619.md` 是当前任务进展快照；
+- `EXECUTION_TOPOLOGY.md` 定义杭州 Data Lab 生产、新加坡 CI Bridge 和杭州 AIdeal CPS 生产的唯一角色边界；
 - `CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md` 定义有效扫描入口、报告和 CI；
 - `CODE_CHANGE_GUARDRAILS.md` 对修改前扫描、重复定义、硬编码和大文件拆分具有强制约束；
 - MySQL V1 优先于旧 rsync-only 设计；
