@@ -4,10 +4,11 @@
 # No set -e is used.
 
 cd "${HOME}/projects/aideal-cps-data-lab" || exit 1
+. config/hz23-service.env
 mkdir -p logs reports backups
 
-DAY_START="${HZ23_DAY_START:-09:30}"
-DAY_END="${HZ23_DAY_END:-21:30}"
+DAY_START="$HZ23_DAY_START"
+DAY_END="$HZ23_DAY_END"
 STAMP="$(date +%Y%m%d_%H%M%S)"
 REPORT="reports/hz23_observer_reload_latest.json"
 

@@ -18,6 +18,7 @@ on:
       - "scripts/**"
       - "config/**"
       - "tests/**"
+      - ".github/workflows/offline-quality.yml"
 
 permissions:
   contents: write
@@ -51,6 +52,10 @@ jobs:
         env:
           AIDEAL_DEPENDENCY_INSTALL_OUTCOME: ${{ steps.dependencies.outcome }}
         run: python scripts/run_offline_quality.py
+      - name: Run full engineering audit
+        id: audit
+        continue-on-error: true
+        run: python scripts/engineering_scan_full.py
       - name: Export offline quality diagnostic
         id: summary
         if: always()
@@ -92,32 +97,47 @@ jobs:
           name: offline-quality-report
           path: reports/offline_quality_latest.json
           if-no-files-found: error
-      - name: Publish main branch quality report
+      - name: Upload engineering audit report
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: combined-engineering-audit-report
+          path: reports/project_engineering_audit_latest.json
+          if-no-files-found: error
+      - name: Publish reports bound to main
         if: >-
           always() &&
+          steps.quality.outcome == 'success' &&
+          steps.audit.outcome == 'success' &&
           github.event_name == 'push' &&
-          github.ref == 'refs/heads/main' &&
-          hashFiles('reports/offline_quality_latest.json') != ''
+          github.ref == 'refs/heads/main'
         run: |
           cp reports/offline_quality_latest.json /tmp/offline_quality_latest.json
-          git fetch origin main
-          git checkout -B main origin/main
+          cp reports/project_engineering_audit_latest.json /tmp/project_engineering_audit_latest.json
+          git fetch origin main quality-reports || git fetch origin main
+          if git rev-parse --verify origin/quality-reports >/dev/null 2>&1; then
+            git checkout -B quality-reports origin/quality-reports
+            git merge --no-edit "$GITHUB_SHA"
+          else
+            git checkout -B quality-reports "$GITHUB_SHA"
+          fi
           mkdir -p reports
           cp /tmp/offline_quality_latest.json reports/offline_quality_latest.json
+          cp /tmp/project_engineering_audit_latest.json reports/project_engineering_audit_latest.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f reports/offline_quality_latest.json
-          if git diff --cached --quiet; then
-            echo "OFFLINE_REPORT_UNCHANGED=1"
-          else
-            git commit -m "reports: update offline quality baseline"
-            git push origin main
-          fi
+          git add -f reports/offline_quality_latest.json reports/project_engineering_audit_latest.json
+          git commit -m "reports: bind quality reports to main ${GITHUB_SHA::12}"
+          git push origin HEAD:quality-reports
       - name: Enforce dependency installation
         if: steps.dependencies.outcome != 'success'
         run: exit 1
       - name: Enforce offline quality result
         if: steps.quality.outcome != 'success'
+        run: exit 1
+      - name: Enforce engineering audit result
+        if: steps.audit.outcome != 'success'
         run: exit 1
 
   offline-diagnostic:

@@ -10,6 +10,7 @@
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
+. config/hz23-service.env
 mkdir -p logs reports docs/ops run data/import data/state data/history data/export
 
 LOCK_FILE="run/hz23_mainline.lock"
@@ -25,14 +26,14 @@ PAGE_START="${HZ23_PAGE_START:-1}"
 PAGE_END="${HZ23_PAGE_END:-67}"
 ROUND_PAGE_START="${HZ23_ROUND_PAGE_START:-$PAGE_START}"
 RESUME="${HZ23_RESUME:-0}"
-ITEM_MIN="${HZ23_ITEM_SLEEP_MIN:-3}"
-ITEM_MAX="${HZ23_ITEM_SLEEP_MAX:-7}"
-PAGE_MIN="${HZ23_PAGE_SLEEP_MIN:-90}"
-PAGE_MAX="${HZ23_PAGE_SLEEP_MAX:-210}"
-LIMIT="${HZ23_LIMIT:-25}"
+ITEM_MIN="$HZ23_ITEM_SLEEP_MIN"
+ITEM_MAX="$HZ23_ITEM_SLEEP_MAX"
+PAGE_MIN="$HZ23_PAGE_SLEEP_MIN"
+PAGE_MAX="$HZ23_PAGE_SLEEP_MAX"
+LIMIT="$HZ23_LIMIT"
 ROUND_ID="${HZ23_ROUND_ID:-$(date +%Y%m%d_%H%M%S)}"
-DAY_START="${HZ23_DAY_START:-09:30}"
-DAY_END="${HZ23_DAY_END:-21:30}"
+DAY_START="$HZ23_DAY_START"
+DAY_END="$HZ23_DAY_END"
 ROWS="reports/hz23_round_${ROUND_ID}_rows.jsonl"
 SUMMARY="reports/hz23_round_${ROUND_ID}_latest.json"
 LATEST_SUMMARY="reports/hz23_round_latest.json"

@@ -15,6 +15,7 @@ from aideal_cps_data_lab.persistence.mysql_batch_repository_v2 import (
     CLEAR_STAGE,
     TransactionSafeBatchMySQLCommissionProductRepository,
 )
+from aideal_cps_data_lab.testing import FIXTURES
 
 
 class FakeCursor:
@@ -91,16 +92,16 @@ class TransactionSafeBatchRepositoryTest(unittest.TestCase):
             {
                 "sku": sku,
                 "title": f"商品-{sku}",
-                "item_url": f"https://item.jd.com/{sku}.html",
-                "promotion_url": "https://u.jd.com/example",
-                "image_url": "https://img.example.invalid/product.jpg",
+                "item_url": f"{FIXTURES.item_url_prefix}{sku}.html",
+                "promotion_url": FIXTURES.promotion_url,
+                "image_url": FIXTURES.image_url,
                 "price": "99.90",
                 "commission_rate": "12.5%",
                 "estimated_commission": "12.49",
                 "status": "active",
                 "source_page_no": 1,
-                "last_checked_at": "2026-06-14T10:00:00",
-                "last_seen_at": "2026-06-14T10:00:00",
+                "last_checked_at": FIXTURES.timestamp,
+                "last_seen_at": FIXTURES.timestamp,
             }
         )
 
@@ -151,7 +152,7 @@ class TransactionSafeBatchRepositoryTest(unittest.TestCase):
         )
         with self.assertRaisesRegex(RuntimeError, "published_product_change"):
             self.repository(connection).upsert_many(
-                [self.product("100012345678")],
+                [self.product(FIXTURES.sku)],
                 round_id="round-2",
                 run_id="run-2",
             )
@@ -171,7 +172,7 @@ class TransactionSafeBatchRepositoryTest(unittest.TestCase):
             db_write_enabled=True,
         )
         repository = TransactionSafeBatchMySQLCommissionProductRepository(factory, settings)
-        product = self.product("100012345678")
+        product = self.product(FIXTURES.sku)
         with self.assertRaisesRegex(ValueError, "duplicate SKU"):
             repository.upsert_many([product, product], round_id="r", run_id="x")
         self.assertFalse(called)
