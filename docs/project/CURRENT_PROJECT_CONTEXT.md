@@ -1,215 +1,224 @@
 # AIdeal CPS Data Lab 当前项目上下文
 
-更新日期：2026-06-19
+更新日期：2026-06-20
 
-状态：当前主线权威上下文。新对话必须先读本文，再读本文引用的专项文档和最新 GitHub 报告。
+状态：新对话必须优先读取的当前事实入口。长期设计和交互习惯见 `PROJECT_MEMORY_20260620.md`，精确任务状态见 `COMMERCIALIZATION_STATUS_20260620.md`。
 
-## 1. 项目目标与边界
+## 1. 项目目标与系统边界
 
-AIdeal CPS Data Lab 负责从京东联盟授权页面采集可推广商品，解析 SKU、标题、图片、价格、佣金和商品状态，生成并验证 `https://u.jd.com/...` 推广短链，持续维护可信佣金商品主数据，并向 AIdeal CPS 商用微信导购系统提供版本化、可审计的数据。
+AIdeal CPS Data Lab 负责京东联盟授权浏览器采集、商品与推广资格解析、可信推广短链生成、终态维护、质量门禁、版本化发布和未来 Data Lab MySQL。
 
-Data Lab 不面向终端用户。终端用户访问、搜索、推荐、H5 展示、点击归因、订单和返佣由 `ShanGouXueHui/aideal-cps` 负责。
+AIdeal CPS 负责微信/H5、搜索推荐、点击归因、订单和返佣。用户请求只访问 AIdeal CPS 本地 MySQL，不实时依赖 Data Lab 浏览器、SSH Tunnel 或远程数据库。
 
-用户请求链路不得实时依赖 Data Lab 浏览器、SSH Tunnel 或远程数据库。AIdeal CPS 只读取自己的本地 MySQL；Data Lab 通过短生命周期 SSH Tunnel 定时同步已发布版本。
+## 2. 环境角色
 
-## 2. HZ23“全部商品”商用观察已通过
-
-### 2.1 已验证主链路
-
-已经解决并稳定验证：
-
-1. 自动进入京东联盟商品推广页面；
-2. 精确选择“全部商品”；
-3. 确认展示池为“共 4000 条”；
-4. 使用正确分页器跳转 1-67 页；
-5. 按 SKU 精确定位真实商品卡片；
-6. 使用真实 mouse/pointer 事件点击“一键领链”；
-7. 获取并验证 `https://u.jd.com/...` 推广短链；
-8. SKU 去重、逐页断点、原子落盘；
-9. 遇到真实京东验证页安全停止，不绕过验证；
-10. 手工验证后可从同一 round 断点继续，不重扫已完成页。
-
-### 2.2 完整轮次事实
-
-权威报告：
+### 杭州 Data Lab 生产
 
 ```text
-reports/hz23_round_latest.json
+121.41.111.36 / cpsdata
+/home/cpsdata/projects/aideal-cps-data-lab
+```
+
+唯一允许真实 JD 登录、浏览器 Profile、HZ23/HZ24 采集、生产状态写入和 Data Lab MySQL 的环境。
+
+### 新加坡 CI Bridge
+
+```text
+43.106.55.255 / datalab
+/home/datalab/projects/aideal-cps-data-lab
+```
+
+只替代 GitHub Actions 执行离线编译、测试、工程审计和脱敏报告回写。不得保存 Cookie/Profile、运行真实采集或初始化生产 MySQL。
+
+新加坡原有 `cpsdev` 服务其他开发项目；Data Lab 使用隔离用户 `datalab`。
+
+### 杭州 AIdeal CPS 生产
+
+```text
+8.136.28.6 / deploy
+/home/deploy/projects/aideal-cps
+MySQL=aideal_cps
+```
+
+它是消费端生产，不承担京东联盟采集。
+
+### 统一运维入口
+
+用户可以只登录杭州 `cpsdata`，再 SSH 进入新加坡 `datalab`。SSH 只用于进入离线验证 Shell，不传输生产数据或 Secret。
+
+## 3. HZ23 当前事实
+
+### 3.1 最后一次已验证基线
+
+2026-06-15 已验证：
+
+```text
 round_id=20260615_100135
-commercial_segment_complete=true
 completed_pages=1..67
-unfinished_pages=[]
-stop_page=null
-stop_reason=null
-scanned_total=4020
-last_known_sku_count=3357
-```
-
-`scanned_total=4020` 是 67 页卡片位扫描总和，不是 4020 个唯一 SKU。完整轮次实际可见唯一 SKU 为 3665，catalog index 为 3698。
-
-### 2.3 商用候选事实
-
-权威 manifest：
-
-```text
-data/export/aideal_cps_products_commercial_candidate_manifest.json
-row_count=3304
-eligible_sku_count=3304
+candidate_rows=3304
 duplicate_sku_count=0
-candidate_integrity_ready=true
+payload_hash_mismatch=0
 successful_probes=2
-observation_hours=68.88
 observation_ready=true
-gate_failures=[]
-commercial_enabled=false
 ```
 
-准确口径：
+这 3304 条是 last-known-good 历史基线，不是当前 latest manifest 的状态。
+
+### 3.2 当前 latest 发生回归
+
+当前轮次：
 
 ```text
-京东“全部商品”展示池：4000 条
-完整轮次可见唯一 SKU：3665
-catalog index SKU：3698
-已有可信推广链接 SKU：3357
-当前通过全部商用候选门禁：3304
+round_id=20260620_101332
+completed_pages=1..67
+commercial_segment_complete=true
+scanned_total=4017
+last_known_sku_count=3858
+successful_probes=4
 ```
 
-不得把 4000 条展示池、4020 个扫描卡片位、3698 个 catalog SKU 或 3357 个可信链接 SKU 混写成 3304 条可发布候选。
-
-### 2.4 HZ20 历史污染处理
-
-源 JSONL 中曾发现 10 条 HZ20 历史记录。已完成备份、隔离和原子清理：
+但当前 candidate manifest：
 
 ```text
-unsafe_hz20=0
-candidate_validation_ok=true
-candidate_integrity_ready=true
+row_count=0
+eligible_sku_count=0
+trusted_dedup_sku_count=0
+candidate_integrity_ready=false
+observation_ready=false
+gate_failures=[candidate_nonempty]
+data_sha256=empty-file SHA-256
 ```
 
-HZ20 记录不得重新进入可信池或 MySQL 回填。
+因此当前 latest candidate 无效。3304 条基线必须从杭州生产机的 last-known-good JSONL/manifest/备份中只读恢复并重新校验，不能从当前 latest manifest 推断。
 
-## 3. HZ24 专题 Tab 扩展
+在恢复前：
 
-页面已确认 6 个并列 Tab：
+- 禁止 MySQL 回填；
+- 禁止发布；
+- 禁止将 0 行 latest 当作新基线；
+- 禁止再次运行可能覆盖 canonical candidate 的任务。
+
+## 4. HZ24 当前事实
 
 ```text
-超补爆品
-限量高佣
-秒杀专区
-定向高佣
-粉丝爱买
-全部商品
+专题 Tab membership=250
+专题去重后 SKU=239
+与已验证候选/可信链接重叠=18
+真实增量队列=221
+旧采集 linked=72
+明确 sold-out/card-disabled=5
+旧 pending=149
+预计可行动 pending=144
 ```
 
-5 个专题 Tab 均为滚动稳定后的单页精选池，每个 50 个 SKU，无分页组件。
+HZ24 v2 离线代码和测试已经覆盖：
 
-权威测重报告：
+- linked/unavailable/pending 互斥状态；
+- sold-out 和 not-promotable 终态；
+- 原子 JSONL upsert 和回滚；
+- 72/5/144 精确核算；
+- linked hash 保持；
+- 恢复授权和未授权不启动；
+- 脱敏报告白名单。
+
+但 GitHub 没有生产报告证明杭州已实际完成 5 条 sold-out 迁移、72 条 linked hash 核验和 144 pending 核算。
 
 ```text
-reports/hz24_tab_overlap_analysis_latest.json
-analysis_ready=true
-special_tab_membership_count=250
-special_tab_union_sku_count=239
-cross_tab_duplicate_membership_count=11
-overlap_with_candidate_count=18
-increment_vs_candidate_count=221
-promotion_link_required_count=221
+HZ24 v2 code ready=true
+HZ24 runtime migration confirmed=false
+HZ24 resume allowed=false
 ```
 
-去重口径：
+HZ24 继续暂停，不得启动旧采集器。
 
-1. 先对 5 个专题 Tab 按 SKU 全局去重：250 个成员 -> 239 个唯一 SKU；
-2. 再排除当前 3304 条候选及已有可信推广链接：排除 18 个；
-3. 最终冻结待领链队列：221 个 SKU。
+## 5. 工程治理
 
-### 3.1 当前增量采集进展
-
-权威报告：
+最新已发布审计：
 
 ```text
-reports/hz24_increment_collection_latest.json
-queue_count=221
-success_count=72
-pending_count=149
-stop_reason=item_fail_fuse
-risk=[]
+git_head=07b8db89274addd4d85c1308bc41a89a0352abab
+files_scanned=298
+status=FAIL
+global/full gate blocker=210
+active blocker=0
+compatibility blocker=0
+historical blocker=195
+support blocker=15
+warning=635
 ```
 
-本次停止不是京东验证，也不是重复抓取。连续 5 个商品卡片显示“已抢光”，存在 `card-disabled` 遮罩，旧采集器将其错误计为普通点击失败并触发熔断。
-
-当前必须保留的事实：
+blocker 当前全部属于历史 Shell 硬编码和测试 fixture：
 
 ```text
-已成功生成并落盘：72
-明确已抢光样本：5
-旧报告 pending_count：149
+hardcoded_absolute_path=3
+hardcoded_ip=42
+hardcoded_parameter=107
+hardcoded_url=58
 ```
 
-正确的目标状态模型应拆分为：
+该报告未发现重复函数/类/方法、跨文件重复实现、超长文件或超长函数，但审计器尚未完整覆盖 Python/Shell 同作用域重复变量、模块常量和配置赋值。因此不能宣称“重复定义 100% 清零”。
+
+当前主线任务：
+
+1. 扩展审计器，覆盖重复变量/常量/配置键；
+2. 清理 main 中剩余 HZ12-HZ21 历史 Shell，历史只留 `history-snapshot-20260620`；
+3. 收口测试 fixture；
+4. 全局 blocker 清零；
+5. 新加坡对当前 main 重新跑 Offline Quality 和 Engineering Audit；
+6. 报告 `git_head` 必须等于当前 main。
+
+在全局代码门禁通过前，不推进业务功能。
+
+## 6. 离线测试
+
+最新已发布离线报告：
 
 ```text
-linked
-unavailable_sold_out / unavailable_off_shelf / unavailable_not_promotable
-pending
+git_head=07b8db89274addd4d85c1308bc41a89a0352abab
+status=PASS
+tests_run=63
+failures=0
+errors=0
+jd_live_called=false
 ```
 
-已抢光商品不得继续反复点击，不得伪装为成功推广商品，也不得进入商用候选。下一步需要完成并验证 HZ24 v2 分类、迁移这 5 条失败记录为 unavailable 终态、保留 72 条成功结果，再继续处理约 144 条可行动 pending。
+该结果证明当时 commit 通过，但已落后于当前 main。必须在新加坡 CI Bridge 重跑后才能作为当前门禁。
 
-HZ24 数据在完整校验前保持隔离，不直接修改 HZ23 的 3304 条商用基线。
+## 7. 编程规范
 
-## 4. 工程审计与代码治理
+固定要求：
 
-用户新增强制规则：
+- 修改前扫描重复函数、类、方法、变量、常量、配置键和跨文件重复实现；
+- 正式验收要求全局 blocker=0，不只看 active scope；
+- 分层：browser、application、domain、persistence、contracts、configuration、ops、tests；
+- 配置与环境分离，默认值只有一个来源；
+- Python/Shell 文件 >300 行先拆分；
+- 函数 >80 行先拆分；
+- 入口 >120 行收敛为薄入口；
+- main 是唯一正式主线；
+- 历史证据保留在只读快照分支，不留在 main 执行路径；
+- 自动测试禁止 JD live；
+- Secret、Cookie、Profile、Token、私钥、数据库密码不进入 GitHub。
 
-1. 修改任何文件前必须扫描重复定义、相邻模块已有实现和硬编码；
-2. 环境地址、路径、端口、URL、Tab、selector、阈值、等待时间、服务名和数据库名不得散落硬编码；
-3. 大文件必须先分层拆分，禁止继续叠加；
-4. Python/Shell 单文件超过 300 行、单函数超过 80 行时必须治理；
-5. 正式代码只维护 `main` 一个主流分支。
+## 8. 执行与交互规则
 
-权威规则：
+- 使用中文，职业化、直接、结构化；
+- 助手直接读取和修改 GitHub；
+- 代码、长脚本和复杂命令上传为仓库文件，不在对话中打印；
+- 用户只执行仓库内单一 `.sh` 入口；
+- 用户从杭州 `cpsdata` SSH 进入新加坡 `datalab` 运行离线验证；
+- 日志写入 `logs/`、`reports/`、`docs/debug/`；
+- 用户只返回紧凑 Summary，助手直接从 GitHub读取详细报告；
+- GitHub 写入后必须二次确认；
+- 不使用 Codex CLI；
+- Linux 脚本不用 `set -e`，不用 `|| exit 1`。
 
-```text
-docs/project/CODE_CHANGE_GUARDRAILS.md
-docs/project/CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md
-```
-
-全仓基线审计已生成：
-
-```text
-reports/project_engineering_audit_latest.json
-files_scanned=255
-blocker_count=390
-```
-
-审计发现包括重复定义/重复实现、硬编码、大文件和长函数。大量问题位于 HZ11-HZ22 历史实验脚本，但在完成“当前活跃主线 / 只读历史归档”分类前，不得简单忽略或删除。
-
-当前工程优先级：
-
-```text
-冻结新增业务逻辑
--> 标记活跃运行路径和历史归档路径
--> 修复活跃 HZ23/HZ24/MySQL 路径 blocker
--> 公共能力抽取到共享模块
--> 配置统一收口
--> 大文件拆分
--> 全量复扫
--> blocker 清零或形成经批准的历史归档排除清单
-```
-
-`project_directory_missing` 已确认来自旧命令依赖固定服务器目录。后续工程扫描使用仓库根目录自动解析或 GitHub Actions，不再依赖用户当前 Shell 路径。
-
-## 5. Data Lab MySQL 商用架构
+## 9. MySQL 状态
 
 目标数据库：
 
 ```text
 aideal_cps_data_lab
-```
-
-固定对象：
-
-```text
 commission_products
 commission_refresh_runs
 commission_product_history
@@ -217,126 +226,66 @@ commission_publish_versions
 v_published_commission_products
 ```
 
-网络边界：
-
-- MySQL 仅监听 Data Lab `127.0.0.1:3306`；
-- 不开放公网 3306；
-- AIdeal CPS 同步任务临时建立 SSH Tunnel：本地 `127.0.0.1:13306` -> Data Lab `127.0.0.1:3306`；
-- 使用只读数据库用户；
-- 同步完成立即关闭 Tunnel；
-- Secret、密码和私钥不进入 GitHub。
-
-已完成代码准备：DDL/migration、Repository、事务安全 staging V2、幂等回填、候选校验、落库后结构和逐行 hash 验证、AIdeal CPS 预检设计。实际 Data Lab MySQL 尚未初始化，3304 条候选尚未正式回填。
-
-所有开关继续保持：
+已完成设计和较多代码准备，但尚未执行：
 
 ```text
-DATA_LAB_DB_WRITE_ENABLED=false
-DATA_LAB_DB_DUAL_WRITE_ENABLED=false
-DATA_LAB_PUBLISH_ENABLED=false
-DATA_LAB_SYNC_ENABLED=false
+MySQL 初始化
+有效候选回填
+二次幂等回填
+dual-write
+7 天稳定运行
+publish version
+AIdeal CPS dry-run/灰度/正式同步
 ```
 
-## 6. 一周稳定运行与商用切换原则
+所有写入、发布和同步开关保持 false。
 
-目标顺序：
+## 10. 严格下一步顺序
 
-1. 工程活跃主线 blocker 处理完成；
-2. HZ24 增量采集完成并通过 linked/unavailable/pending 完整性校验；
-3. 冻结可回填候选版本；
-4. 初始化 Data Lab MySQL；
-5. 回填候选并执行二次幂等回填；
-6. 校验行数、SKU、推广链接、价格、佣金、hash 和 round lineage；
-7. 开启 JSONL/MySQL dual-write，但 publish/sync 继续关闭；
-8. 连续稳定运行 7 天；
-9. 任意未解释差异、重复、丢失、风控误写或回滚失败，稳定期重新计时；
-10. 第 8 天生成正式 publish version；
-11. AIdeal CPS dry-run 同步到本地 MySQL；
-12. 灰度后正式商用。
+1. 完成文档和新对话归档；
+2. 提交新加坡 CI Bridge 单一验证脚本；
+3. 增加重复变量/常量/配置键审计；
+4. 清理全部历史 Shell 和 support blocker；
+5. 当前 main 全局工程审计和离线测试通过；
+6. 杭州只读恢复并验证 3304 last-known-good；
+7. 修复并验证 HZ23 canonical promotion 链；
+8. 杭州执行 HZ24 sold-out 迁移并确认 72/5/144；
+9. 221 队列全终态完成后再恢复剩余采集；
+10. 冻结最终候选后初始化 MySQL；
+11. dual-write 稳定 7 天；
+12. publish version；
+13. AIdeal CPS dry-run、灰度、正式商用。
 
-AIdeal CPS 不直接在用户请求中查询 Data Lab MySQL。商用数据从 `v_published_commission_products` 版本化同步到 AIdeal CPS 本地数据库。
-
-## 7. 环境事实
-
-### Data Lab
+## 11. 当前门禁
 
 ```text
-服务器：121.41.111.36
-用户：cpsdata
-目录：/home/cpsdata/projects/aideal-cps-data-lab
-GitHub：ShanGouXueHui/aideal-cps-data-lab
-分支：main
-Chrome CDP：127.0.0.1:19228
-systemd：aideal-hz23-observer.service
-noVNC：http://121.41.111.36:18772/vnc.html?autoconnect=true&resize=scale
+CODE_CLEANUP_COMPLETE=false
+CURRENT_HEAD_VALIDATED=false
+HZ23_LKG_CANDIDATE_CONFIRMED=false
+HZ24_RUNTIME_MIGRATION_CONFIRMED=false
+HZ24_RESUME_ALLOWED=false
+MYSQL_INITIALIZATION_ALLOWED=false
+PUBLISH_ALLOWED=false
+AIDEAL_CPS_SYNC_ALLOWED=false
+COMMERCIAL_ENABLED=false
 ```
 
-### AIdeal CPS 生产
-
-```text
-服务器：8.136.28.6
-用户：deploy
-目录：/home/deploy/projects/aideal-cps
-GitHub：ShanGouXueHui/aideal-cps
-分支：main
-MySQL：aideal_cps
-systemd：aideal.service
-```
-
-### 新加坡开发环境
-
-```text
-服务器：43.106.55.255
-用户：cpsdev
-角色：开发环境
-```
-
-杭州 `8.136.28.6` 是 AIdeal CPS 生产环境；新加坡机器不能与生产角色混淆。
-
-## 8. 工作与交互规则
-
-- 使用中文，职业化、直接、结构化；
-- 优先直接读取和修改 GitHub，不依赖聊天短期上下文；
-- 用户要求代码和长命令不要打印在对话中，工程修改直接通过 GitHub 完成；
-- 每次 GitHub 写入后必须 `fetch_file`、`fetch_commit` 或服务器 `git log` 二次确认；
-- 日志和详细结果写入 `logs/`、`reports/`、`docs/debug/`，用户只返回紧凑 Summary；
-- 不使用 Codex CLI，除非用户重新明确要求；
-- Linux 命令不使用 `set -e`，也不要用会退出登录 Shell 的 `|| exit 1`；
-- 自动化测试禁止调用 JD live；
-- 允许必要时手工完成京东登录/验证，但账号密码、Cookie、Profile 和 Secret 不进入 GitHub；
-- 不用话术掩盖工程问题，价格、佣金、推广链接和一致性必须由代码、约束和报告验证。
-
-## 9. 当前下一步
-
-严格按顺序：
-
-1. 保持 HZ24 增量采集暂停，保留 72 条成功结果；
-2. 从全仓工程审计报告中区分活跃主线与历史实验脚本；
-3. 修复活跃主线重复定义、硬编码、大文件和长函数；
-4. 完成 HZ24 v2 unavailable 分类及迁移测试；
-5. 恢复单账号串行增量采集，只处理未完成且仍可推广的 SKU；
-6. 完成 HZ24 全队列终态校验并生成独立候选版本；
-7. 初始化 Data Lab MySQL，回填最终候选；
-8. 开启 dual-write 并执行 7 天稳定运行；
-9. 生成 publish version；
-10. AIdeal CPS dry-run、灰度和正式商用。
-
-## 10. 权威文档和报告
+## 12. 权威入口
 
 ```text
 docs/DOCUMENT_AUTHORITY.md
 docs/project/CURRENT_PROJECT_CONTEXT.md
+docs/project/PROJECT_MEMORY_20260620.md
+docs/status/COMMERCIALIZATION_STATUS_20260620.md
+docs/project/EXECUTION_TOPOLOGY.md
 docs/project/ENVIRONMENT_AND_WORKING_RULES.md
 docs/project/CODE_CHANGE_GUARDRAILS.md
 docs/project/CODE_CHANGE_GUARDRAILS_IMPLEMENTATION.md
-docs/status/COMMERCIALIZATION_STATUS_20260619.md
-docs/architecture/COMMISSION_DATA_MYSQL_SYNC_V1.md
 docs/project/NEXT_CHAT_HANDOFF_PROMPT.md
+reports/project_engineering_audit_latest.json
+reports/offline_quality_latest.json
 reports/hz23_round_latest.json
 data/export/aideal_cps_products_commercial_candidate_manifest.json
-reports/hz24_tab_overlap_analysis_latest.json
-reports/hz24_increment_collection_latest.json
-reports/project_engineering_audit_latest.json
 ```
 
-发生冲突时：最新可验证代码与运行报告 > 本文 > 专项架构/计划文档 > 旧实验文档。
+冲突时：当前 main 代码与绑定当前 HEAD 的报告 > 2026-06-20 状态 > 本文 > 长期记忆 > 专项设计 > 旧状态快照。
