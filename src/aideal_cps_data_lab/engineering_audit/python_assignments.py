@@ -7,9 +7,7 @@ from pathlib import Path
 from .default_sources import is_default_name
 from .models import Finding
 
-_CONFIG_TOKENS = {"config", "configs", "setting", "settings", "option", "options", "param", "params"}
 _SCOPE_NODES = (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
-_ASSIGNMENT_NODES = (ast.Assign, ast.AnnAssign)
 
 
 def _target_names(target: ast.AST) -> tuple[str, ...]:
@@ -32,24 +30,6 @@ def _assigned_names(node: ast.stmt) -> tuple[str, ...]:
     if isinstance(node, ast.AnnAssign) and node.value is not None:
         return _target_names(node.target)
     return ()
-
-
-def _name_tokens(name: str) -> set[str]:
-    return {part for part in name.lower().split("_") if part}
-
-
-def _is_config_name(name: str) -> bool:
-    return bool(_name_tokens(name) & _CONFIG_TOKENS)
-
-
-def _assignment_category(name: str, scope_kind: str) -> str | None:
-    if is_default_name(name):
-        return "duplicate_default_source"
-    if name.isupper():
-        return "duplicate_constant_assignment"
-    if scope_kind in {"module", "class"} or _is_config_name(name):
-        return "duplicate_assignment"
-    return None
 
 
 class _ScopeAssignmentVisitor(ast.NodeVisitor):
@@ -88,27 +68,33 @@ def _scope_assignments(body: list[ast.stmt]) -> dict[str, list[int]]:
     return visitor.assignments
 
 
+def _assignment_category(name: str) -> str:
+    if is_default_name(name):
+        return "duplicate_default_source"
+    if name.isupper():
+        return "duplicate_constant_assignment"
+    return "duplicate_assignment"
+
+
 def _duplicate_assignments(
     body: list[ast.stmt],
     path: Path,
     scope_name: str,
     scope_kind: str,
 ) -> list[Finding]:
-    assignments = _scope_assignments(body)
     findings: list[Finding] = []
-    for name, lines in assignments.items():
-        category = _assignment_category(name, scope_kind)
-        if category is None or len(lines) < 2:
+    for name, lines in _scope_assignments(body).items():
+        if len(lines) < 2:
             continue
         for line in lines[1:]:
             findings.append(
                 Finding(
                     "blocker",
-                    category,
+                    _assignment_category(name),
                     str(path),
                     line,
                     f"{scope_name}.{name}",
-                    f"same {scope_kind} scope assigns {name!r} {len(lines)} times",
+                    f"same {scope_kind} scope declares {name!r} {len(lines)} times",
                 )
             )
     return findings
@@ -147,29 +133,23 @@ def _duplicate_dict_keys(tree: ast.Module, path: Path) -> list[Finding]:
     return findings
 
 
-def _scan_scopes(
+def _class_findings(
     body: list[ast.stmt],
     path: Path,
     scope_name: str,
-    scope_kind: str,
 ) -> list[Finding]:
-    findings = _duplicate_assignments(body, path, scope_name, scope_kind)
+    findings: list[Finding] = []
     for node in body:
-        if not isinstance(node, _SCOPE_NODES):
+        if not isinstance(node, ast.ClassDef):
             continue
-        nested_kind = "class" if isinstance(node, ast.ClassDef) else "function"
-        findings.extend(
-            _scan_scopes(
-                node.body,
-                path,
-                f"{scope_name}.{node.name}",
-                nested_kind,
-            )
-        )
+        class_name = f"{scope_name}.{node.name}"
+        findings.extend(_duplicate_assignments(node.body, path, class_name, "class"))
+        findings.extend(_class_findings(node.body, path, class_name))
     return findings
 
 
 def assignment_findings(tree: ast.Module, path: Path) -> list[Finding]:
-    findings = _scan_scopes(tree.body, path, "module", "module")
+    findings = _duplicate_assignments(tree.body, path, "module", "module")
+    findings.extend(_class_findings(tree.body, path, "module"))
     findings.extend(_duplicate_dict_keys(tree, path))
     return findings

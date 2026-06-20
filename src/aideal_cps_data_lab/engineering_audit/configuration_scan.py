@@ -15,10 +15,18 @@ _TOML_SECTION_RE = re.compile(r"^\s*\[\[?\s*([^\]]+?)\s*\]\]?\s*(?:#.*)?$")
 _TOML_KEY_RE = re.compile(r"^\s*([A-Za-z0-9_.-]+)\s*=")
 _INI_SECTION_RE = re.compile(r"^\s*\[([^\]]+)\]\s*(?:[;#].*)?$")
 _INI_KEY_RE = re.compile(r"^\s*([^#;\s][^:=]*?)\s*[:=]")
-_YAML_KEY_RE = re.compile(r"^(\s*)(?:-\s+)?(?:['\"]([^'\"]+)['\"]|([^:#][^:]*?))\s*:\s*(?:[^|>].*)?$")
+_YAML_KEY_RE = re.compile(
+    r"^(\s*)(-\s+)?(?:['\"]([^'\"]+)['\"]|([^:#][^:]*?))\s*:\s*(?:[^|>].*)?$"
+)
 
 
-def _finding(path: Path, line: int, symbol: str, detail: str, category: str = "duplicate_config_key") -> Finding:
+def _finding(
+    path: Path,
+    line: int,
+    symbol: str,
+    detail: str,
+    category: str = "duplicate_config_key",
+) -> Finding:
     return Finding("blocker", category, str(path), line, symbol, detail)
 
 
@@ -95,10 +103,17 @@ def _scan_ini(text: str, path: Path) -> tuple[list[Finding], list[DefaultSource]
     return findings, defaults
 
 
+def _yaml_parent(scopes: list[tuple[int, str]], indent: int) -> str:
+    while scopes[-1][0] >= indent:
+        scopes.pop()
+    return scopes[-1][1]
+
+
 def _scan_yaml(text: str, path: Path) -> tuple[list[Finding], list[DefaultSource]]:
     findings: list[Finding] = []
     defaults: list[DefaultSource] = []
     scopes: list[tuple[int, str]] = [(-1, "")]
+    sequence_counts: dict[tuple[int, str], int] = defaultdict(int)
     seen: dict[tuple[str, str], int] = {}
     for line_number, raw in enumerate(text.splitlines(), start=1):
         if not raw.strip() or raw.lstrip().startswith("#"):
@@ -107,10 +122,17 @@ def _scan_yaml(text: str, path: Path) -> tuple[list[Finding], list[DefaultSource
         if not match:
             continue
         indent = len(match.group(1).replace("\t", "    "))
-        key = (match.group(2) or match.group(3) or "").strip()
-        while scopes[-1][0] >= indent:
-            scopes.pop()
-        section = scopes[-1][1]
+        is_sequence_item = bool(match.group(2))
+        key = (match.group(3) or match.group(4) or "").strip()
+        parent = _yaml_parent(scopes, indent)
+        if is_sequence_item:
+            sequence_key = (indent, parent)
+            index = sequence_counts[sequence_key]
+            sequence_counts[sequence_key] += 1
+            section = f"{parent}[{index}]" if parent else f"[{index}]"
+            scopes.append((indent, section))
+        else:
+            section = parent
         _record_key(seen, findings, path, section, key, line_number)
         source = config_default_source(section, key, path, line_number)
         if source:
@@ -144,7 +166,14 @@ def _scan_json(text: str, path: Path) -> tuple[list[Finding], list[DefaultSource
             for key, child in value:
                 normalized = key.casefold()
                 if normalized in seen:
-                    findings.append(_finding(path, 1, f"{section}.{key}" if section else key, f"JSON object repeats key {key!r}"))
+                    findings.append(
+                        _finding(
+                            path,
+                            1,
+                            f"{section}.{key}" if section else key,
+                            f"JSON object repeats key {key!r}",
+                        )
+                    )
                 seen.add(normalized)
                 source = config_default_source(section, key, path, 1)
                 if source:
@@ -169,7 +198,10 @@ _SCANNERS: dict[str, Callable[[str, Path], tuple[list[Finding], list[DefaultSour
 }
 
 
-def scan_configuration(root: Path, path: Path) -> tuple[list[Finding], list[DefaultSource]]:
+def scan_configuration(
+    root: Path,
+    path: Path,
+) -> tuple[list[Finding], list[DefaultSource]]:
     scanner = _SCANNERS.get(path.suffix.lower())
     if scanner is None:
         return [], []

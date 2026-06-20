@@ -29,11 +29,7 @@ def _assigned_names(node: ast.stmt) -> tuple[str, ...]:
         targets = [node.target]
     else:
         return ()
-    names: list[str] = []
-    for target in targets:
-        if isinstance(target, ast.Name):
-            names.append(target.id)
-    return tuple(names)
+    return tuple(target.id for target in targets if isinstance(target, ast.Name))
 
 
 def _call_name(node: ast.Call) -> str:
@@ -60,12 +56,22 @@ def _constant_string(node: ast.AST | None) -> str | None:
 
 def python_default_sources(tree: ast.Module, path: Path) -> list[DefaultSource]:
     sources: list[DefaultSource] = []
+    path_key = path.as_posix().casefold()
     for node in tree.body:
         if not isinstance(node, (ast.Assign, ast.AnnAssign)):
             continue
         for name in _assigned_names(node):
             if is_default_name(name):
-                sources.append(DefaultSource(name.lower(), str(path), int(node.lineno), name, "python_assignment"))
+                key = f"python:{path_key}:{name.casefold()}"
+                sources.append(
+                    DefaultSource(
+                        key,
+                        str(path),
+                        int(node.lineno),
+                        name,
+                        "python_assignment",
+                    )
+                )
 
     for node in ast.walk(tree):
         if not isinstance(node, ast.Call):
@@ -75,14 +81,37 @@ def python_default_sources(tree: ast.Module, path: Path) -> list[DefaultSource]:
             key = _constant_string(node.args[0]) if node.args else None
             default = node.args[1] if len(node.args) > 1 else None
             if key and _literal_present(default):
-                sources.append(DefaultSource(f"env:{key}", str(path), int(node.lineno), key, "python_env_default"))
+                sources.append(
+                    DefaultSource(
+                        f"env:{key}",
+                        str(path),
+                        int(node.lineno),
+                        key,
+                        "python_env_default",
+                    )
+                )
             continue
         if name.endswith("add_argument"):
-            default = next((item.value for item in node.keywords if item.arg == "default"), None)
-            option = next((_constant_string(arg) for arg in node.args if _constant_string(arg)), None)
+            default = next(
+                (item.value for item in node.keywords if item.arg == "default"),
+                None,
+            )
+            option = next(
+                (_constant_string(arg) for arg in node.args if _constant_string(arg)),
+                None,
+            )
             if option and _literal_present(default):
                 canonical = option.lstrip("-").replace("-", "_")
-                sources.append(DefaultSource(f"arg:{canonical}", str(path), int(node.lineno), option, "python_argument_default"))
+                key = f"arg:{path_key}:{canonical}"
+                sources.append(
+                    DefaultSource(
+                        key,
+                        str(path),
+                        int(node.lineno),
+                        option,
+                        "python_argument_default",
+                    )
+                )
     return sources
 
 
@@ -92,22 +121,43 @@ def shell_default_sources(lines: list[str], path: Path) -> list[DefaultSource]:
         if line.lstrip().startswith("#"):
             continue
         for name in _SHELL_DEFAULT_RE.findall(line):
-            sources.append(DefaultSource(f"env:{name}", str(path), line_number, name, "shell_parameter_default"))
+            sources.append(
+                DefaultSource(
+                    f"env:{name}",
+                    str(path),
+                    line_number,
+                    name,
+                    "shell_parameter_default",
+                )
+            )
     return sources
 
 
-def config_default_source(section: str, key: str, path: Path, line: int) -> DefaultSource | None:
+def config_default_source(
+    section: str,
+    key: str,
+    path: Path,
+    line: int,
+) -> DefaultSource | None:
     normalized_section = section.strip().lower()
     normalized_key = key.strip().lower()
     if not _CONFIG_KEY_RE.fullmatch(normalized_key):
         return None
     if normalized_section in {"default", "defaults"} or is_default_name(normalized_key):
         canonical = f"config:{normalized_section}:{normalized_key}"
-        return DefaultSource(canonical, str(path), line, key, "configuration_default")
+        return DefaultSource(
+            canonical,
+            str(path),
+            line,
+            key,
+            "configuration_default",
+        )
     return None
 
 
-def duplicate_default_source_findings(sources: list[DefaultSource]) -> list[Finding]:
+def duplicate_default_source_findings(
+    sources: list[DefaultSource],
+) -> list[Finding]:
     groups: dict[str, list[DefaultSource]] = defaultdict(list)
     for source in sources:
         groups[source.key].append(source)
@@ -117,7 +167,9 @@ def duplicate_default_source_findings(sources: list[DefaultSource]) -> list[Find
             continue
         ordered = sorted(group, key=lambda item: (item.path, item.line, item.symbol))
         authority = ordered[0]
-        detail = ", ".join(f"{item.path}:{item.line} ({item.source_kind})" for item in ordered)
+        detail = ", ".join(
+            f"{item.path}:{item.line} ({item.source_kind})" for item in ordered
+        )
         for item in ordered[1:]:
             findings.append(
                 Finding(
