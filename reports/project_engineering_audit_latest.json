@@ -1,54 +1,9 @@
 {
   "active_blocker_count": 0,
-  "blocker_count": 312,
+  "blocker_count": 307,
   "compatibility_blocker_count": 0,
-  "files_scanned": 321,
+  "files_scanned": 320,
   "findings": [
-    {
-      "category": "hardcoded_parameter",
-      "detail": "'https://union.jd.com/proManager/realTimeRankings'",
-      "line": 9,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "URL"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "https://union.jd.com/proManager/realTimeRankings",
-      "line": 9,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
-    {
-      "category": "hardcoded_parameter",
-      "detail": "19229",
-      "line": 10,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "PORT"
-    },
-    {
-      "category": "long_function",
-      "detail": "104 lines exceeds 80",
-      "line": 68,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": "dom_snapshot"
-    },
-    {
-      "category": "hardcoded_url",
-      "detail": "http://127.0.0.1:",
-      "line": 174,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "blocker",
-      "symbol": ""
-    },
     {
       "category": "large_file",
       "detail": "1478 lines exceeds 300",
@@ -5082,45 +5037,9 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'union.jd.com' repeated in 24 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
+      "detail": "'%Y-%m-%d %H:%M:%S' repeated in 30 files: run/hz11_merge_multi_menu_latest.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v4.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
       "line": 0,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'domcontentloaded' repeated in 30 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
-      "line": 0,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'%Y-%m-%d %H:%M:%S' repeated in 31 files: run/hz11_high_commission_probe.py, run/hz11_merge_multi_menu_latest.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v4.py, run/hz16_short_url_diag.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz19_visual_probe_failed_sku.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, scripts/hz12_check_product_all_result.sh, scripts/hz12_check_v7_full_progress.sh, scripts/hz12_check_v8_full_progress.sh, scripts/hz12_recover_v5_strict_title_report.sh, scripts/hz12_restart_v8_from_existing_latest.sh, scripts/hz14_check_full_progress.sh, scripts/hz14_check_v2_full_progress.sh, scripts/hz14_check_v4_full_progress.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz15_check_jump_pages_progress.sh, scripts/hz15_check_resume_progress.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_publish_runtime_summary_to_github.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py",
-      "line": 0,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'one_key_count' repeated in 4 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
-      "line": 0,
-      "path": "run/hz11_high_commission_probe.py",
-      "scope": "historical",
-      "severity": "warning",
-      "symbol": ""
-    },
-    {
-      "category": "repeated_literal",
-      "detail": "'http://127.0.0.1:' repeated in 10 files: run/hz11_high_commission_probe.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py",
-      "line": 0,
-      "path": "run/hz11_high_commission_probe.py",
+      "path": "run/hz11_merge_multi_menu_latest.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
@@ -5193,6 +5112,24 @@
       "detail": "'menu_mode' repeated in 16 files: run/hz11_merge_multi_menu_latest.py, run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v3.py, run/hz14_all_product_full_collector_v4.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz23/quarantine_service.py, src/aideal_cps_data_lab/hz23/safety.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py, src/aideal_cps_data_lab/hz24/validation_rules.py",
       "line": 0,
       "path": "run/hz11_merge_multi_menu_latest.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'union.jd.com' repeated in 23 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_by_4000_pager_then_run.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh",
+      "line": 0,
+      "path": "run/hz11_rank_worker.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'domcontentloaded' repeated in 29 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, scripts/hz12_probe_product_all_next_text_click.sh, scripts/hz12_probe_product_all_pager_dom.sh, scripts/hz12_probe_product_all_scroll_and_pager_v2.sh, scripts/hz13_probe_product_all_categories.sh, scripts/hz13_resize_primary_browser_and_probe_pager.sh, scripts/hz14_probe_direct_pageno_navigation.sh, scripts/hz14_probe_element_ui_pager_locator.sh, scripts/hz14_probe_jump_input_navigation.sh, scripts/hz14_probe_page_number_buttons.sh, scripts/hz14_probe_textnode_page_number_click.sh, scripts/hz14_probe_visible_next_page_number.sh, scripts/hz14_recover_and_slow_pager_probe.sh, scripts/hz14_reset_product_all_and_probe_visible_pager.sh, scripts/hz15_probe_jump_to_page_30_60.sh, scripts/hz15_rearm_auto_prepare_all_product_then_supervisor.sh, scripts/hz21_prepare_page49_then_run_safe_locator.sh, scripts/hz21_run_safe_pages_50_52.sh, scripts/hz21_run_safe_pages_53_57.sh, src/aideal_cps_data_lab/hz22/page_prepare.py, src/aideal_cps_data_lab/jingfen/auth_probe.py, src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "line": 0,
+      "path": "run/hz11_rank_worker.py",
       "scope": "historical",
       "severity": "warning",
       "symbol": ""
@@ -5460,6 +5397,15 @@
     },
     {
       "category": "repeated_literal",
+      "detail": "'one_key_count' repeated in 3 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, src/aideal_cps_data_lab/hz24/structure_inspection.py",
+      "line": 0,
+      "path": "run/hz11_rank_worker.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
       "detail": "'link_expire_days' repeated in 8 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py, src/aideal_cps_data_lab/hz24/records.py, src/aideal_cps_data_lab/hz24/settings_sections.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
@@ -5551,6 +5497,15 @@
     {
       "category": "repeated_literal",
       "detail": "'last_page_no' repeated in 17 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz12_product_all_full_collector_v4.py, run/hz12_product_all_full_collector_v6.py, run/hz12_product_all_full_collector_v7.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz14_all_product_full_collector_v3.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py, run/hz17_recover_short_url_page.py, run/hz18_card_click_recover_page.py, run/hz20_mouse_click_recover_page.py, run/hz21_strict_card_dom_recover_page.py",
+      "line": 0,
+      "path": "run/hz11_rank_worker.py",
+      "scope": "historical",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'http://127.0.0.1:' repeated in 9 files: run/hz11_rank_worker.py, run/hz12_product_all_full_collector.py, run/hz13_multi_channel_collector.py, run/hz14_all_product_full_collector.py, run/hz15_jump_pages_collector.py, run/hz15_jump_pages_collector_v3_no_reset.py, run/hz15_jump_pages_collector_v4_no_reset.py, run/hz15_jump_pages_collector_v5_no_reset.py, run/hz15_jump_pages_collector_v6_no_reset_strict_4000.py",
       "line": 0,
       "path": "run/hz11_rank_worker.py",
       "scope": "historical",
@@ -9168,16 +9123,15 @@
     }
   ],
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T09:11:37",
-  "git_head": "0bf2a2428fa8d0a97ebb46ebfdd4ba2db2cb6a39",
-  "historical_blocker_count": 285,
+  "generated_at": "2026-06-20T09:17:14",
+  "git_head": "0f7255a68fded0b27772f20c8633b911379d9495",
+  "historical_blocker_count": 280,
   "schema_version": "engineering-audit/v4",
   "status": "PASS",
   "summary": {
-    "blocker_file_count": 86,
+    "blocker_file_count": 85,
     "blocker_files_by_scope": {
       "historical": [
-        "run/hz11_high_commission_probe.py",
         "run/hz11_rank_worker.py",
         "run/hz12_product_all_full_collector.py",
         "run/hz12_product_all_full_collector_v2.py",
@@ -9268,17 +9222,17 @@
       ]
     },
     "blocker_scope_counts": {
-      "historical": 285,
+      "historical": 280,
       "support": 27
     },
     "category_counts": {
       "duplicate_implementation": 41,
       "hardcoded_absolute_path": 3,
       "hardcoded_ip": 42,
-      "hardcoded_parameter": 111,
-      "hardcoded_url": 103,
+      "hardcoded_parameter": 109,
+      "hardcoded_url": 101,
       "large_file": 4,
-      "long_function": 8,
+      "long_function": 7,
       "repeated_literal": 706
     },
     "top_blocker_files": [
@@ -9325,10 +9279,6 @@
       {
         "count": 6,
         "path": "scripts/hz13_run_multi_channel_smoke_and_report.sh"
-      },
-      {
-        "count": 5,
-        "path": "run/hz11_high_commission_probe.py"
       },
       {
         "count": 5,
@@ -9401,6 +9351,10 @@
       {
         "count": 4,
         "path": "scripts/hz15_resume_pages_11_20_no_reset_v5.sh"
+      },
+      {
+        "count": 4,
+        "path": "scripts/hz15_resume_pages_11_20_no_reset_v6_strict_4000.sh"
       }
     ]
   },
