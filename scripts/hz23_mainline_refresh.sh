@@ -3,7 +3,8 @@
 # - Daytime only: 09:30-21:30 server-local.
 # - Explicit 商品推广/全部商品 preparation.
 # - Full card scan updates last_checked/last_seen and records field changes.
-# - HZ21 only generates links for newly discovered SKUs.
+# - HZ21 generates links for newly discovered SKUs when the controlled collector is available.
+# - Missing/not-mainlined HZ21 collector is recorded as collect_unavailable and does not block scan observation.
 # - Strong JD verification signals stop safely with checkpoint.
 # - HZ23_RESUME=1 preserves successful rows from the same round.
 # No set -e is used.
@@ -181,10 +182,15 @@ page=int(sys.argv[1]); rc=int(sys.argv[2]); scan_path=Path(sys.argv[3]); out=Pat
 collect_path=Path('reports/hz21_strict_card_dom_recover_latest.json')
 collect=json.loads(collect_path.read_text(encoding='utf-8')) if collect_path.exists() else {}
 scan=json.loads(scan_path.read_text(encoding='utf-8')) if scan_path.exists() else {}
+reason=collect.get('reason')
+soft_reasons={'runtime_collector_missing','hz21_collector_not_mainlined'}
+collect_ok=bool(collect.get('ok'))
+collect_unavailable=(rc != 0 and str(reason or '') in soft_reasons)
 row={
- 'page':page,'rc':rc,'ok':bool(collect.get('ok')) and bool(scan.get('ok')),
- 'reason':collect.get('reason'),'scan_ok':scan.get('ok'),'scanned':scan.get('scanned',0),
+ 'page':page,'rc':rc,'ok':bool(scan.get('ok')) and (collect_ok or collect_unavailable),
+ 'reason':reason,'scan_ok':scan.get('ok'),'scanned':scan.get('scanned',0),
  'new_catalog':scan.get('new',0),'changed_catalog':scan.get('changed',0),'unchanged_catalog':scan.get('unchanged',0),
+ 'collect_ok':collect_ok,'collect_unavailable':collect_unavailable,
  'total_ok':collect.get('total_ok',0),'total_fail':collect.get('total_fail',0),
  'known_sku_count':collect.get('known_sku_count'),
  'page_summary':(collect.get('page_summary') or {}).get(str(page))
@@ -203,11 +209,24 @@ except Exception:
     print('collector_report_error')
 PY
 )"
-  if [ "$COLLECT_RC" != "0" ] || echo "$RESULT_REASON" | grep -q '^risk_'; then
+  if echo "$RESULT_REASON" | grep -q '^risk_'; then
     STOP_PAGE="$PAGE_NO"
-    STOP_REASON="${RESULT_REASON:-collector_failed}"
+    STOP_REASON="$RESULT_REASON"
     RUN_RC="$COLLECT_RC"
     break
+  fi
+  if [ "$COLLECT_RC" != "0" ]; then
+    case "$RESULT_REASON" in
+      runtime_collector_missing|hz21_collector_not_mainlined)
+        echo "HZ23_COLLECT_SOFT_FAIL PAGE=$PAGE_NO REASON=$RESULT_REASON"
+        ;;
+      *)
+        STOP_PAGE="$PAGE_NO"
+        STOP_REASON="${RESULT_REASON:-collector_failed}"
+        RUN_RC="$COLLECT_RC"
+        break
+        ;;
+    esac
   fi
 
   if [ "$PAGE_NO" -lt "$PAGE_END" ]; then
@@ -245,6 +264,7 @@ out={
  'total_ok':sum(int(r.get('total_ok') or 0) for r in rows),'total_fail':sum(int(r.get('total_fail') or 0) for r in rows),
  'scanned_total':sum(int(r.get('scanned') or 0) for r in rows),'catalog_new':sum(int(r.get('new_catalog') or 0) for r in rows),
  'catalog_changed':sum(int(r.get('changed_catalog') or 0) for r in rows),'catalog_unchanged':sum(int(r.get('unchanged_catalog') or 0) for r in rows),
+ 'collect_unavailable_pages':[r.get('page') for r in rows if r.get('collect_unavailable') is True],
  'last_known_sku_count':known[-1] if known else None,'stop_page':int(stop_page) if stop_page else None,'stop_reason':stop_reason,
  'commercial_segment_complete':len(unfinished)==0 and not stop_reason,'duration_seconds':previous+max(0,end_epoch-start_epoch),
  'resumed':previous>0
