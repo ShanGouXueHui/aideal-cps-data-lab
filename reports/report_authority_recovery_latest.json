@@ -1,0 +1,12 @@
+{
+  "cron_changed": false,
+  "generated_at": "20260621_073021",
+  "git_head_after_stop": "1c2365d96387ba0057dd51a47de12073236d3762",
+  "git_head_before": "1c2365d96387ba0057dd51a47de12073236d3762",
+  "main_publish_forbidden": true,
+  "processes_killed": 0,
+  "runtime_evidence_target": "runtime-evidence",
+  "runtime_user": "datalab",
+  "schema_version": "report-authority-recovery/v1",
+  "systemd_units_stopped": 0
+}
