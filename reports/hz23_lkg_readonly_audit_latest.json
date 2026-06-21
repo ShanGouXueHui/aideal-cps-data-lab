@@ -1,0 +1,80 @@
+{
+  "actions_executed": {
+    "business_publish": false,
+    "candidate_restore": false,
+    "finalize": false,
+    "jd_live": false,
+    "mysql": false
+  },
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "duplicate_sku_count": 0,
+      "invalid_row_count": 0,
+      "non_numeric_sku_count": 0,
+      "path": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
+      "row_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "unique_sku_count": 0
+    },
+    {
+      "duplicate_sku_count": 66,
+      "invalid_row_count": 0,
+      "non_numeric_sku_count": 67,
+      "path": "reports/hz23_round_20260615_100135_rows.jsonl",
+      "row_count": 67,
+      "sha256": "6cdfd92d7736e4b10d872e958130ffbd7e05017b96437ff4f33759ca7213ca3e",
+      "size_bytes": 41089,
+      "unique_sku_count": 1
+    }
+  ],
+  "canonical_manifest": {
+    "candidate_integrity_ready": false,
+    "data_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate_failures": [
+      "candidate_nonempty"
+    ],
+    "observation_ready": false,
+    "path": "data/export/aideal_cps_products_commercial_candidate_manifest.json",
+    "present": true,
+    "round_id": "20260620_101332",
+    "row_count": 0,
+    "valid_json": true
+  },
+  "canonical_writer_references": [
+    "scripts/hz23_check_commercial_execution.sh",
+    "scripts/hz23_mainline_refresh.sh",
+    "scripts/hz23_observation_daemon.sh",
+    "scripts/hz23_publish_commercial_status_v2.sh",
+    "scripts/hz23_publish_compact_status.sh",
+    "scripts/hz23_quarantine_and_refresh_candidate.sh",
+    "scripts/hz23_revalidate_candidate_after_lineage_fix.sh",
+    "scripts/hz23_status.sh",
+    "scripts/plan_commission_mysql_initialization.py",
+    "scripts/run_commission_data_checks_v2.sh",
+    "scripts/validate_commercial_candidate.py",
+    "scripts/verify_commission_mysql_payload_hashes.py",
+    "src/aideal_cps_data_lab/application/mysql_backfill.py",
+    "src/aideal_cps_data_lab/hz23/finalize_round.py",
+    "src/aideal_cps_data_lab/hz23_gate_refresh.py",
+    "src/aideal_cps_data_lab/hz24/overlap_analysis.py",
+    "src/aideal_cps_data_lab/hz24/queue_builder.py"
+  ],
+  "exact_match_count": 0,
+  "expected": {
+    "data_sha256": "509d5b09bc9843d2e083ecd29fa2cfc83569c4cf877ced7a13d37a1e820d457a",
+    "round_id": "20260615_100135",
+    "row_count": 3304
+  },
+  "generated_at": "2026-06-21T16:01:15",
+  "git": {
+    "branch": "main",
+    "head": "d4f0ba5a77edb5a886cd488cdd443d35c61838f5",
+    "tracked_change_count": 0,
+    "tracked_worktree_clean": true
+  },
+  "read_only": true,
+  "schema_version": "hz23-last-known-good/v1",
+  "status": "FOUND_CANDIDATE_MISMATCH"
+}
