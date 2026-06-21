@@ -1,0 +1,27 @@
+{
+  "blocked_actions": {
+    "aideal_cps_sync": true,
+    "business_publish": true,
+    "hz24_resume": true,
+    "mysql_initialization": true
+  },
+  "decision": "HZ23_LKG_3304_NOT_RECOVERABLE_FROM_CURRENT_DISK",
+  "evidence": {
+    "archive_exact_match_count": 0,
+    "archive_locator": "reports/hz23_lkg_archive_locator_latest.json",
+    "archive_scanned": 0,
+    "plain_jsonl_exact_match_count": 0,
+    "plain_jsonl_locator": "reports/hz23_lkg_locator_latest.json",
+    "plain_jsonl_scanned": 253,
+    "readonly_audit": "reports/hz23_lkg_readonly_audit_latest.json"
+  },
+  "expected": {
+    "data_sha256": "509d5b09bc9843d2e083ecd29fa2cfc83569c4cf877ced7a13d37a1e820d457a",
+    "round_id": "20260615_100135",
+    "row_count": 3304
+  },
+  "generated_at": "2026-06-21T09:27:18Z",
+  "hz23_lkg_candidate_confirmed": false,
+  "next_route": "generate_new_hz23_candidate_and_revalidate",
+  "schema_version": "hz23-lkg-recovery-decision/v1"
+}
