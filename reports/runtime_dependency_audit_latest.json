@@ -1,173 +1,13 @@
 {
-  "generated_at": "2026-06-21T16:22:41Z",
-  "git_head": "8a3d89fedb38c4faee1afa3d4399ef36d06683cf",
-  "missing_reference_count": 20,
-  "missing_references": [
-    {
-      "line": 9,
-      "source": "scripts/hz21_run_strong_risk_collector.sh",
-      "target": "run/.hz21_strong_risk_runtime.py",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "TMP=\"run/.hz21_strong_risk_runtime.py\""
-    },
-    {
-      "line": 38,
-      "source": "scripts/hz21_run_strong_risk_collector.sh",
-      "target": "run/.hz21_strong_risk_runtime.py",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "Path('run/.hz21_strong_risk_runtime.py').write_text(src, encoding='utf-8')"
-    },
-    {
-      "line": 7,
-      "source": "scripts/hz23_resume_nohup_runner.sh",
-      "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
-    },
-    {
-      "line": 7,
-      "source": "scripts/hz23_resume_nohup_start.sh",
-      "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
-    },
-    {
-      "line": 6,
-      "source": "scripts/hz23_resume_nohup_status.sh",
-      "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
-    },
-    {
-      "line": 8,
-      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
-      "target": "run/hz23_resume_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=\"run/hz23_resume_schedule.pid\""
-    },
-    {
-      "line": 11,
-      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
-      "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "RUNNER_PID_FILE=\"run/hz23_resume_nohup.pid\""
-    },
-    {
-      "line": 62,
-      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
-      "target": "run/hz23_resume_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "rm -f run/hz23_resume_schedule.pid"
-    },
-    {
-      "line": 47,
-      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
-      "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "SCHEDULER_PID=\"$(cat run/hz24_tab_pool_schedule.pid 2>/dev/null || true)\""
-    },
-    {
-      "line": 4,
-      "source": "scripts/hz24_increment_nohup_runner.sh",
-      "target": "run/hz24_increment_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=run/hz24_increment_nohup.pid"
-    },
-    {
-      "line": 4,
-      "source": "scripts/hz24_increment_start_or_schedule.sh",
-      "target": "run/hz24_increment_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=run/hz24_increment_nohup.pid"
-    },
-    {
-      "line": 16,
-      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
-      "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "PID_FILE=\"run/hz24_tab_pool_schedule.pid\""
-    },
-    {
-      "line": 60,
-      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
-      "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "rm -f run/hz24_tab_pool_schedule.pid"
-    },
-    {
-      "line": 10,
-      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
-      "target": "run/code_governance_ci_bridge_worktree",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "WORKTREE=\"${PROJECT_DIR}/run/code_governance_ci_bridge_worktree\""
-    },
-    {
-      "line": 11,
-      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
-      "target": "run/ci_bridge_latest.env",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "SUMMARY_SOURCE=\"${WORKTREE}/run/ci_bridge_latest.env\""
-    },
-    {
-      "line": 12,
-      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
-      "target": "run/code_governance_ci_bridge_latest.env",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "SUMMARY_TARGET=\"${PROJECT_DIR}/run/code_governance_ci_bridge_latest.env\""
-    },
-    {
-      "line": 18,
-      "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
-      "target": "run/hz23_manifest_for_validation.json",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "VALIDATION_MANIFEST = Path(\"run/hz23_manifest_for_validation.json\")"
-    },
-    {
-      "line": 28,
-      "source": "src/aideal_cps_data_lab/hz24/terminal_repair.py",
-      "target": "run/v1",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "\"schema_version\": \"aideal-hz24-terminal-repair-run/v1\","
-    },
-    {
-      "line": 100,
-      "source": "src/aideal_cps_data_lab/quality/offline_runner.py",
-      "target": "run/jd_live_called.flag",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "live_marker = Path(\"run/jd_live_called.flag\")"
-    },
-    {
-      "line": 56,
-      "source": "tests/test_ci_bridge_reports.py",
-      "target": "run/ci_bridge_previous_stamp/offline_quality_latest.json",
-      "target_exists": false,
-      "target_status": "missing",
-      "text": "(root / \"run/ci_bridge_previous_stamp/offline_quality_latest.json\").exists()"
-    }
-  ],
+  "generated_at": "2026-06-21T16:24:43Z",
+  "git_head": "a9823153986f57fc5f80380a103f720ce9cb511f",
+  "missing_reference_count": 0,
+  "missing_references": [],
   "read_only": true,
   "reference_count": 86,
   "references": [
     {
+      "blocker": false,
       "line": 3,
       "source": "config/engineering-active-scope.toml",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -176,6 +16,7 @@
       "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
     },
     {
+      "blocker": false,
       "line": 3,
       "source": "config/engineering-active-scope.toml",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -184,6 +25,7 @@
       "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
     },
     {
+      "blocker": false,
       "line": 3,
       "source": "config/engineering-active-scope.toml",
       "target": "run/hz23_scan_current_page.py",
@@ -192,6 +34,7 @@
       "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
     },
     {
+      "blocker": false,
       "line": 3,
       "source": "config/engineering-active-scope.toml",
       "target": "run/hz23_finalize_round.py",
@@ -200,14 +43,16 @@
       "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
     },
     {
+      "blocker": false,
       "line": 4,
       "source": "config/engineering-active-scope.toml",
       "target": "run/hz24_",
       "target_exists": true,
-      "target_status": "dynamic_or_prefix_reference",
+      "target_status": "generated_runtime_artifact",
       "text": "active_run_prefixes = [\"run/hz24_\"]"
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "config/hz24-contracts.toml",
       "target": "run/hz24_increment_collection_state.json",
@@ -216,6 +61,7 @@
       "text": "state_file = \"run/hz24_increment_collection_state.json\""
     },
     {
+      "blocker": false,
       "line": 4,
       "source": "config/offline-quality.toml",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -224,6 +70,7 @@
       "text": "\"run/hz22_prepare_all_product_page.py\","
     },
     {
+      "blocker": false,
       "line": 5,
       "source": "config/offline-quality.toml",
       "target": "run/hz23_scan_current_page.py",
@@ -232,6 +79,7 @@
       "text": "\"run/hz23_scan_current_page.py\","
     },
     {
+      "blocker": false,
       "line": 6,
       "source": "config/offline-quality.toml",
       "target": "run/hz23_finalize_round.py",
@@ -240,6 +88,7 @@
       "text": "\"run/hz23_finalize_round.py\","
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "config/offline-quality.toml",
       "target": "run/hz24_collect_increment_links_v2.py",
@@ -248,6 +97,7 @@
       "text": "\"run/hz24_collect_increment_links_v2.py\","
     },
     {
+      "blocker": false,
       "line": 8,
       "source": "config/offline-quality.toml",
       "target": "run/hz24_audit_product_tabs.py",
@@ -256,6 +106,7 @@
       "text": "\"run/hz24_audit_product_tabs.py\","
     },
     {
+      "blocker": false,
       "line": 8,
       "source": "scripts/hz21_run_strong_risk_collector.sh",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -264,14 +115,16 @@
       "text": "SOURCE=\"run/hz21_strict_card_dom_recover_page.py\""
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz21_run_strong_risk_collector.sh",
       "target": "run/.hz21_strong_risk_runtime.py",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "TMP=\"run/.hz21_strong_risk_runtime.py\""
     },
     {
+      "blocker": false,
       "line": 23,
       "source": "scripts/hz21_run_strong_risk_collector.sh",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -280,6 +133,7 @@
       "text": "'source': 'run/hz21_strict_card_dom_recover_page.py',"
     },
     {
+      "blocker": false,
       "line": 35,
       "source": "scripts/hz21_run_strong_risk_collector.sh",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -288,22 +142,25 @@
       "text": "src=Path('run/hz21_strict_card_dom_recover_page.py').read_text(encoding='utf-8')"
     },
     {
+      "blocker": false,
       "line": 38,
       "source": "scripts/hz21_run_strong_risk_collector.sh",
       "target": "run/.hz21_strong_risk_runtime.py",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "Path('run/.hz21_strong_risk_runtime.py').write_text(src, encoding='utf-8')"
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz23_install_service.sh",
       "target": "run/aideal-hz23-observer.service}",
       "target_exists": true,
-      "target_status": "dynamic_or_prefix_reference",
+      "target_status": "generated_runtime_artifact",
       "text": "RENDERED_UNIT=\"${AIDEAL_HZ23_RENDERED_UNIT:-${PROJECT_DIR}/run/aideal-hz23-observer.service}\""
     },
     {
+      "blocker": false,
       "line": 31,
       "source": "scripts/hz23_install_service.sh",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -312,6 +169,7 @@
       "text": "run/hz22_prepare_all_product_page.py \\"
     },
     {
+      "blocker": false,
       "line": 32,
       "source": "scripts/hz23_install_service.sh",
       "target": "run/hz23_scan_current_page.py",
@@ -320,6 +178,7 @@
       "text": "run/hz23_scan_current_page.py \\"
     },
     {
+      "blocker": false,
       "line": 33,
       "source": "scripts/hz23_install_service.sh",
       "target": "run/hz23_finalize_round.py",
@@ -328,6 +187,7 @@
       "text": "run/hz23_finalize_round.py"
     },
     {
+      "blocker": false,
       "line": 16,
       "source": "scripts/hz23_mainline_refresh.sh",
       "target": "run/hz23_mainline.lock",
@@ -336,6 +196,7 @@
       "text": "LOCK_FILE=\"run/hz23_mainline.lock\""
     },
     {
+      "blocker": false,
       "line": 109,
       "source": "scripts/hz23_mainline_refresh.sh",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -344,6 +205,7 @@
       "text": ".venv-browser/bin/python run/hz22_prepare_all_product_page.py \"$PAGE_NO\" \"$PREP\""
     },
     {
+      "blocker": false,
       "line": 147,
       "source": "scripts/hz23_mainline_refresh.sh",
       "target": "run/hz23_scan_current_page.py",
@@ -352,6 +214,7 @@
       "text": ".venv-browser/bin/python run/hz23_scan_current_page.py \"$PAGE_NO\" \"$ROUND_ID\" \"$SCAN\""
     },
     {
+      "blocker": false,
       "line": 268,
       "source": "scripts/hz23_mainline_refresh.sh",
       "target": "run/hz23_finalize_round.py",
@@ -360,6 +223,7 @@
       "text": ".venv-browser/bin/python run/hz23_finalize_round.py \"$ROUND_ID\" \"$SUMMARY\""
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "scripts/hz23_migrate_observer_state_v2.py",
       "target": "run/hz23_observer_state.json",
@@ -368,6 +232,7 @@
       "text": "STATE = Path(\"run/hz23_observer_state.json\")"
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz23_migrate_state_and_publish.sh",
       "target": "run/hz23_observer_state.json",
@@ -376,6 +241,7 @@
       "text": "if [ -f run/hz23_observer_state.json ]; then"
     },
     {
+      "blocker": false,
       "line": 10,
       "source": "scripts/hz23_migrate_state_and_publish.sh",
       "target": "run/hz23_observer_state.json",
@@ -384,6 +250,7 @@
       "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state.${STAMP}.json\""
     },
     {
+      "blocker": false,
       "line": 14,
       "source": "scripts/hz23_observation_daemon.sh",
       "target": "run/hz23_observer_state.json",
@@ -392,6 +259,7 @@
       "text": "STATE=\"run/hz23_observer_state.json\""
     },
     {
+      "blocker": false,
       "line": 174,
       "source": "scripts/hz23_observation_daemon.sh",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -400,6 +268,7 @@
       "text": ".venv-browser/bin/python run/hz22_prepare_all_product_page.py \"$PAGE\" \"$PREP\" >> \"$LOG\" 2>&1"
     },
     {
+      "blocker": false,
       "line": 177,
       "source": "scripts/hz23_observation_daemon.sh",
       "target": "run/hz23_scan_current_page.py",
@@ -408,6 +277,7 @@
       "text": ".venv-browser/bin/python run/hz23_scan_current_page.py \"$PAGE\" \"$ROUND\" \"$SCAN\" >> \"$LOG\" 2>&1"
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz23_preflight_risk_policy.py",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -416,6 +286,7 @@
       "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
     },
     {
+      "blocker": false,
       "line": 47,
       "source": "scripts/hz23_publish_commercial_status_v2.sh",
       "target": "run/hz23_observer_state.json",
@@ -424,6 +295,7 @@
       "text": "state = load(\"run/hz23_observer_state.json\")"
     },
     {
+      "blocker": false,
       "line": 43,
       "source": "scripts/hz23_publish_compact_status.sh",
       "target": "run/hz23_observer_state.json",
@@ -432,6 +304,7 @@
       "text": "state_path = \"run/hz23_observer_state.json\""
     },
     {
+      "blocker": false,
       "line": 63,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz23_observer_state.json",
@@ -440,6 +313,7 @@
       "text": "if [ -f run/hz23_observer_state.json ]; then"
     },
     {
+      "blocker": false,
       "line": 64,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz23_observer_state.json",
@@ -448,6 +322,7 @@
       "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state_before_resume_${STAMP}.json\""
     },
     {
+      "blocker": false,
       "line": 72,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz22_prepare_all_product_page.py",
@@ -456,6 +331,7 @@
       "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
     },
     {
+      "blocker": false,
       "line": 72,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz23_scan_current_page.py",
@@ -464,6 +340,7 @@
       "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
     },
     {
+      "blocker": false,
       "line": 72,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz23_finalize_round.py",
@@ -472,6 +349,7 @@
       "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
     },
     {
+      "blocker": false,
       "line": 105,
       "source": "scripts/hz23_resume_after_manual_verification.sh",
       "target": "run/hz23_observer_state.json",
@@ -480,14 +358,16 @@
       "text": "p=Path('run/hz23_observer_state.json')"
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "scripts/hz23_resume_nohup_runner.sh",
       "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
     },
     {
+      "blocker": false,
       "line": 8,
       "source": "scripts/hz23_resume_nohup_runner.sh",
       "target": "run/hz23_resume_nohup.state",
@@ -496,22 +376,25 @@
       "text": "STATE_FILE=\"run/hz23_resume_nohup.state\""
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "scripts/hz23_resume_nohup_start.sh",
       "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
     },
     {
+      "blocker": false,
       "line": 6,
       "source": "scripts/hz23_resume_nohup_status.sh",
       "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
     },
     {
+      "blocker": false,
       "line": 7,
       "source": "scripts/hz23_resume_nohup_status.sh",
       "target": "run/hz23_resume_nohup.state",
@@ -520,14 +403,16 @@
       "text": "STATE_FILE=\"run/hz23_resume_nohup.state\""
     },
     {
+      "blocker": false,
       "line": 8,
       "source": "scripts/hz23_resume_schedule_next_daytime.sh",
       "target": "run/hz23_resume_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=\"run/hz23_resume_schedule.pid\""
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz23_resume_schedule_next_daytime.sh",
       "target": "run/hz23_resume_schedule.state",
@@ -536,14 +421,16 @@
       "text": "STATE_FILE=\"run/hz23_resume_schedule.state\""
     },
     {
+      "blocker": false,
       "line": 11,
       "source": "scripts/hz23_resume_schedule_next_daytime.sh",
       "target": "run/hz23_resume_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "RUNNER_PID_FILE=\"run/hz23_resume_nohup.pid\""
     },
     {
+      "blocker": false,
       "line": 61,
       "source": "scripts/hz23_resume_schedule_next_daytime.sh",
       "target": "run/hz23_resume_schedule.state",
@@ -552,14 +439,16 @@
       "text": "} > run/hz23_resume_schedule.state"
     },
     {
+      "blocker": false,
       "line": 62,
       "source": "scripts/hz23_resume_schedule_next_daytime.sh",
       "target": "run/hz23_resume_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "rm -f run/hz23_resume_schedule.pid"
     },
     {
+      "blocker": false,
       "line": 9,
       "source": "scripts/hz23_risk_policy_guard.py",
       "target": "run/hz21_strict_card_dom_recover_page.py",
@@ -568,6 +457,7 @@
       "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
     },
     {
+      "blocker": false,
       "line": 33,
       "source": "scripts/hz23_safe_reload_observer.sh",
       "target": "run/hz23_observer_state.json",
@@ -576,6 +466,7 @@
       "text": "if [ -f run/hz23_observer_state.json ]; then"
     },
     {
+      "blocker": false,
       "line": 34,
       "source": "scripts/hz23_safe_reload_observer.sh",
       "target": "run/hz23_observer_state.json",
@@ -584,6 +475,7 @@
       "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state.reload.${STAMP}.json\""
     },
     {
+      "blocker": false,
       "line": 45,
       "source": "scripts/hz23_safe_reload_observer.sh",
       "target": "run/hz23_finalize_round.py",
@@ -592,6 +484,7 @@
       "text": "run/hz23_finalize_round.py \\"
     },
     {
+      "blocker": false,
       "line": 13,
       "source": "scripts/hz23_status.sh",
       "target": "run/hz23_observer_state.json",
@@ -600,6 +493,7 @@
       "text": "for name in ['run/hz23_observer_state.json','reports/hz23_observer_status_latest.json','reports/hz23_round_latest.json','data/export/aideal_cps_products_commercial_candidate_manifest.json']:"
     },
     {
+      "blocker": false,
       "line": 31,
       "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
       "target": "run/hz24_inspect_tab_pool_structure.py",
@@ -608,14 +502,16 @@
       "text": "run/hz24_inspect_tab_pool_structure.py \\"
     },
     {
+      "blocker": false,
       "line": 47,
       "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
       "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "SCHEDULER_PID=\"$(cat run/hz24_tab_pool_schedule.pid 2>/dev/null || true)\""
     },
     {
+      "blocker": false,
       "line": 48,
       "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
       "target": "run/hz24_tab_pool_schedule.state",
@@ -624,6 +520,7 @@
       "text": "TARGET_AT=\"$(awk -F= '$1==\"TARGET_AT\"{print substr($0,index($0,\"=\")+1)}' run/hz24_tab_pool_schedule.state 2>/dev/null | tail -n 1)\""
     },
     {
+      "blocker": false,
       "line": 49,
       "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
       "target": "run/hz24_tab_pool_schedule.state",
@@ -632,6 +529,7 @@
       "text": "SCHEDULE_STATE=\"$(awk -F= '$1==\"STATE\"{print substr($0,index($0,\"=\")+1)}' run/hz24_tab_pool_schedule.state 2>/dev/null | tail -n 1)\""
     },
     {
+      "blocker": false,
       "line": 26,
       "source": "scripts/hz24_increment_loop.sh",
       "target": "run/hz24_increment_loop.lock",
@@ -640,14 +538,16 @@
       "text": "exec 9>run/hz24_increment_loop.lock"
     },
     {
+      "blocker": false,
       "line": 4,
       "source": "scripts/hz24_increment_nohup_runner.sh",
       "target": "run/hz24_increment_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=run/hz24_increment_nohup.pid"
     },
     {
+      "blocker": false,
       "line": 5,
       "source": "scripts/hz24_increment_nohup_runner.sh",
       "target": "run/hz24_increment_nohup.state",
@@ -656,14 +556,16 @@
       "text": "STATE_FILE=run/hz24_increment_nohup.state"
     },
     {
+      "blocker": false,
       "line": 4,
       "source": "scripts/hz24_increment_start_or_schedule.sh",
       "target": "run/hz24_increment_nohup.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=run/hz24_increment_nohup.pid"
     },
     {
+      "blocker": false,
       "line": 5,
       "source": "scripts/hz24_increment_start_or_schedule.sh",
       "target": "run/hz24_increment_nohup.state",
@@ -672,6 +574,7 @@
       "text": "STATE_FILE=run/hz24_increment_nohup.state"
     },
     {
+      "blocker": false,
       "line": 48,
       "source": "scripts/hz24_run_one_increment_batch.sh",
       "target": "run/hz24_collect_increment_links_v2.py",
@@ -680,6 +583,7 @@
       "text": ".venv-browser/bin/python run/hz24_collect_increment_links_v2.py \\"
     },
     {
+      "blocker": false,
       "line": 26,
       "source": "scripts/hz24_run_product_tab_audit.sh",
       "target": "run/hz24_audit_product_tabs.py",
@@ -688,6 +592,7 @@
       "text": ".venv-browser/bin/python -m py_compile run/hz24_audit_product_tabs.py > logs/hz24_tab_compile.log 2>&1"
     },
     {
+      "blocker": false,
       "line": 33,
       "source": "scripts/hz24_run_product_tab_audit.sh",
       "target": "run/hz24_audit_product_tabs.py",
@@ -696,6 +601,7 @@
       "text": ".venv-browser/bin/python run/hz24_audit_product_tabs.py > logs/hz24_tab_audit.log 2>&1"
     },
     {
+      "blocker": false,
       "line": 36,
       "source": "scripts/hz24_run_tab_pool_analysis.sh",
       "target": "run/hz24_inspect_tab_pool_structure.py",
@@ -704,6 +610,7 @@
       "text": "run/hz24_inspect_tab_pool_structure.py \\"
     },
     {
+      "blocker": false,
       "line": 50,
       "source": "scripts/hz24_run_tab_pool_analysis.sh",
       "target": "run/hz24_inspect_tab_pool_structure.py",
@@ -712,14 +619,16 @@
       "text": ".venv-browser/bin/python run/hz24_inspect_tab_pool_structure.py \\"
     },
     {
+      "blocker": false,
       "line": 16,
       "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
       "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "PID_FILE=\"run/hz24_tab_pool_schedule.pid\""
     },
     {
+      "blocker": false,
       "line": 17,
       "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
       "target": "run/hz24_tab_pool_schedule.state",
@@ -728,6 +637,7 @@
       "text": "STATE_FILE=\"run/hz24_tab_pool_schedule.state\""
     },
     {
+      "blocker": false,
       "line": 59,
       "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
       "target": "run/hz24_tab_pool_schedule.state",
@@ -736,46 +646,52 @@
       "text": "} > run/hz24_tab_pool_schedule.state"
     },
     {
+      "blocker": false,
       "line": 60,
       "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
       "target": "run/hz24_tab_pool_schedule.pid",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "rm -f run/hz24_tab_pool_schedule.pid"
     },
     {
+      "blocker": false,
       "line": 10,
       "source": "scripts/ops/run_code_governance_ci_bridge.sh",
       "target": "run/code_governance_ci_bridge_worktree",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "WORKTREE=\"${PROJECT_DIR}/run/code_governance_ci_bridge_worktree\""
     },
     {
+      "blocker": false,
       "line": 11,
       "source": "scripts/ops/run_code_governance_ci_bridge.sh",
       "target": "run/ci_bridge_latest.env",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "SUMMARY_SOURCE=\"${WORKTREE}/run/ci_bridge_latest.env\""
     },
     {
+      "blocker": false,
       "line": 12,
       "source": "scripts/ops/run_code_governance_ci_bridge.sh",
       "target": "run/code_governance_ci_bridge_latest.env",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "SUMMARY_TARGET=\"${PROJECT_DIR}/run/code_governance_ci_bridge_latest.env\""
     },
     {
+      "blocker": false,
       "line": 39,
       "source": "scripts/probe_public_urls.py",
       "target": "run/jd_portal_public_probe_{utc_stamp",
       "target_exists": true,
-      "target_status": "dynamic_or_prefix_reference",
+      "target_status": "generated_runtime_artifact",
       "text": "outdir = Path(args.outdir or f\"run/jd_portal_public_probe_{utc_stamp()}\")"
     },
     {
+      "blocker": false,
       "line": 18,
       "source": "scripts/run_commission_data_checks_v2.sh",
       "target": "run/hz23_finalize_round.py",
@@ -784,6 +700,7 @@
       "text": "run/hz23_finalize_round.py \\"
     },
     {
+      "blocker": false,
       "line": 88,
       "source": "src/aideal_cps_data_lab/hz23/finalize_round.py",
       "target": "run/hz23_observer_state.json",
@@ -792,6 +709,7 @@
       "text": "observer_state=Path(\"run/hz23_observer_state.json\"),"
     },
     {
+      "blocker": false,
       "line": 15,
       "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
       "target": "run/hz23_observer_state.json",
@@ -800,54 +718,61 @@
       "text": "STATE = Path(\"run/hz23_observer_state.json\")"
     },
     {
+      "blocker": false,
       "line": 18,
       "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
       "target": "run/hz23_manifest_for_validation.json",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "VALIDATION_MANIFEST = Path(\"run/hz23_manifest_for_validation.json\")"
     },
     {
+      "blocker": false,
       "line": 28,
       "source": "src/aideal_cps_data_lab/hz24/terminal_repair.py",
       "target": "run/v1",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "\"schema_version\": \"aideal-hz24-terminal-repair-run/v1\","
     },
     {
+      "blocker": false,
       "line": 145,
       "source": "src/aideal_cps_data_lab/jingfen/auth_probe.py",
       "target": "run/jingfen_auth_probe_{now_tag",
       "target_exists": true,
-      "target_status": "dynamic_or_prefix_reference",
+      "target_status": "generated_runtime_artifact",
       "text": "outdir=Path(args.outdir or f\"run/jingfen_auth_probe_{now_tag()}\"),"
     },
     {
+      "blocker": false,
       "line": 165,
       "source": "src/aideal_cps_data_lab/jingfen/login_capture.py",
       "target": "run/jingfen_login_capture_{now_tag",
       "target_exists": true,
-      "target_status": "dynamic_or_prefix_reference",
+      "target_status": "generated_runtime_artifact",
       "text": "outdir=Path(args.outdir or f\"run/jingfen_login_capture_{now_tag()}\"),"
     },
     {
+      "blocker": false,
       "line": 100,
       "source": "src/aideal_cps_data_lab/quality/offline_runner.py",
       "target": "run/jd_live_called.flag",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "live_marker = Path(\"run/jd_live_called.flag\")"
     },
     {
+      "blocker": false,
       "line": 56,
       "source": "tests/test_ci_bridge_reports.py",
       "target": "run/ci_bridge_previous_stamp/offline_quality_latest.json",
-      "target_exists": false,
-      "target_status": "missing",
+      "target_exists": true,
+      "target_status": "generated_runtime_artifact",
       "text": "(root / \"run/ci_bridge_previous_stamp/offline_quality_latest.json\").exists()"
     },
     {
+      "blocker": false,
       "line": 87,
       "source": "tests/test_hz23_finalize_gate.py",
       "target": "run/hz23_observer_state.json",
@@ -863,6 +788,6 @@
     "config",
     "migrations"
   ],
-  "schema_version": "runtime-dependency-audit/v2",
-  "status": "FAIL"
+  "schema_version": "runtime-dependency-audit/v3",
+  "status": "PASS"
 }
