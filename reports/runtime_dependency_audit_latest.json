@@ -1,0 +1,2526 @@
+{
+  "generated_at": "2026-06-21T16:17:40Z",
+  "git_head": "720271949ae5b8276579dbf4daef4f53fac10231",
+  "missing_reference_count": 121,
+  "missing_references": [
+    {
+      "line": 9,
+      "source": ".github/workflows/hz24-static-report.yml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "- \"run/hz24_*.py\""
+    },
+    {
+      "line": 9,
+      "source": ".github/workflows/hz24-static.yml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "- \"run/hz24_*.py\""
+    },
+    {
+      "line": 19,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "Path(\"run/hz9_STOP_REQUIRED.json\").write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True), encoding=\"utf-8\")"
+    },
+    {
+      "line": 50,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/hz9_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/hz9_STOP_REQUIRED.json || true"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 23,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(\"run/hz9_STOP_REQUIRED.json\")"
+    },
+    {
+      "line": 26,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_union_guarded_report_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz9_union_guarded_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 3,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
+    },
+    {
+      "line": 4,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "active_run_prefixes = [\"run/hz24_\"]"
+    },
+    {
+      "line": 191,
+      "source": "docs/DL2_COMMERCIAL_ARCHITECTURE.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "8. **Rollback gate**：批次可按 source run/round 撤销或恢复，不依赖手工 SQL 猜测。"
+    },
+    {
+      "line": 160,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "run/hz9_STOP_REQUIRED.json"
+    },
+    {
+      "line": 202,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json` 是否出现。"
+    },
+    {
+      "line": 214,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/hz9_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 215,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/hz9_STOP_REQUIRED.json | python3 -m json.tool"
+    },
+    {
+      "line": 314,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "run/hz9_STOP_REQUIRED.json"
+    },
+    {
+      "line": 444,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 448,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 70,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2p_public_manual_dom_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2p_public_manual_dom_extract_*/public_manual_dom_product_cards.jsonl`"
+    },
+    {
+      "line": 92,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2r3_frame_aware_public_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2r3_frame_aware_public_extract_*/public_frame_raw_products.jsonl`"
+    },
+    {
+      "line": 93,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2r3_frame_aware_public_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2r3_frame_aware_public_extract_*/public_frame_extract_report.json`"
+    },
+    {
+      "line": 134,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2s_public_products_repair_report_",
+      "target_exists": false,
+      "text": "- `run/dl2s_public_products_repair_report_*.json`"
+    },
+    {
+      "line": 158,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2t_wechat_ready_product_pool_report_",
+      "target_exists": false,
+      "text": "- `run/dl2t_wechat_ready_product_pool_report_*.json`"
+    },
+    {
+      "line": 238,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2x_visible_onekey_link_extract_report_",
+      "target_exists": false,
+      "text": "- `run/dl2x_visible_onekey_link_extract_report_*.json`"
+    },
+    {
+      "line": 254,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.py",
+      "target_exists": false,
+      "text": "- `run/dl2y_union_guarded_daemon.py`"
+    },
+    {
+      "line": 255,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.lock",
+      "target_exists": false,
+      "text": "- lock：`run/dl2y_union_guarded_daemon.lock`"
+    },
+    {
+      "line": 256,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "- state：`run/dl2y_union_guarded_state.json`"
+    },
+    {
+      "line": 257,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "- report latest：`run/dl2y_union_guarded_report_latest.json`"
+    },
+    {
+      "line": 258,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- stop required：`run/dl2y_STOP_REQUIRED.json`"
+    },
+    {
+      "line": 282,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2z_guard_watchdog.sh",
+      "target_exists": false,
+      "text": "- watchdog 脚本：`run/dl2z_guard_watchdog.sh`"
+    },
+    {
+      "line": 357,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 358,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_STOP_REQUIRED.json | python3 -m json.tool"
+    },
+    {
+      "line": 363,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_union_guarded_state.json ]; then"
+    },
+    {
+      "line": 364,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_union_guarded_state.json | python3 -m json.tool"
+    },
+    {
+      "line": 367,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_union_guarded_report_latest.json ]; then"
+    },
+    {
+      "line": 368,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_union_guarded_report_latest.json | python3 -m json.tool | head -n 160"
+    },
+    {
+      "line": 379,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2z_guard_watchdog.sh",
+      "target_exists": false,
+      "text": "pkill -f \"run/dl2z_guard_watchdog.sh\" 2>/dev/null || true"
+    },
+    {
+      "line": 380,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.py",
+      "target_exists": false,
+      "text": "pkill -f \"python.*run/dl2y_union_guarded_daemon.py\" 2>/dev/null || true"
+    },
+    {
+      "line": 546,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 550,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 116,
+      "source": "docs/ENGINEERING_STANDARDS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 日志字段至少包括：timestamp、run/round、worker、event、tab、sku、outcome、reason。"
+    },
+    {
+      "line": 228,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/import",
+      "target_exists": false,
+      "text": "- 动作：停止后续批次；保留 dry-run/import report；按 source run/round 回滚或修复，不手工临时 SQL 补数据。"
+    },
+    {
+      "line": 228,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 动作：停止后续批次；保留 dry-run/import report；按 source run/round 回滚或修复，不手工临时 SQL 补数据。"
+    },
+    {
+      "line": 234,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 数据库备份：由受控备份机制负责，导入前后记录批次边界、source run/round 和 payload hash。"
+    },
+    {
+      "line": 236,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 恢复必须从明确的 queue hash、record hash、published version、source run/round 和 checkpoint 开始。"
+    },
+    {
+      "line": 157,
+      "source": "docs/NEXT_DIALOG_HANDOFF.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "阶段顺序：Phase A 静态基线 → Phase B 2–3 SKU 授权 smoke → Phase C 完成 221 SKU accounting → Phase D validation pass → Phase E 选定一条 canonical delivery path 并完成 dry-run/landed validation/回滚 → Phase F 稳定运行一周并显式批准商用 → Phase G refresh queue、监控与 HZ11–HZ23 遗留脚"
+    },
+    {
+      "line": 87,
+      "source": "docs/NEXT_DIALOG_HANDOFF_V2.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "- 当前没有完整 HZ24 validation pass，也没有生产 importer dry-run/landed validation 证据。"
+    },
+    {
+      "line": 130,
+      "source": "docs/NEXT_DIALOG_HANDOFF_V2.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "阶段顺序固定为：Phase A 静态基线 → Phase B 2–3 SKU 授权 smoke → Phase C 221 SKU accounting → Phase D validation pass → Phase E 生产 dry-run/landed validation → Phase F 通用商用运行和历史脚本退役。"
+    },
+    {
+      "line": 59,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 63,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 86,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz21_",
+      "target_exists": false,
+      "text": "run/hz21_*"
+    },
+    {
+      "line": 87,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz22_",
+      "target_exists": false,
+      "text": "run/hz22_*"
+    },
+    {
+      "line": 97,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "run/hz11_* ... run/hz20_*"
+    },
+    {
+      "line": 97,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz20_",
+      "target_exists": false,
+      "text": "run/hz11_* ... run/hz20_*"
+    },
+    {
+      "line": 157,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json`"
+    },
+    {
+      "line": 170,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- 连续失败 3 次或出现验证码/风控/登录失效，写 `run/hz9_STOP_REQUIRED.json` 并停止。"
+    },
+    {
+      "line": 191,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json` 是否出现。"
+    },
+    {
+      "line": 311,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz11_rank_worker.py",
+      "target_exists": false,
+      "text": "- run/hz11_rank_worker.py"
+    },
+    {
+      "line": 313,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz11_high_commission_probe.py",
+      "target_exists": false,
+      "text": "- run/hz11_high_commission_probe.py"
+    },
+    {
+      "line": 451,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 455,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 8,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "SOURCE=\"run/hz21_strict_card_dom_recover_page.py\""
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/.hz21_strong_risk_runtime.py",
+      "target_exists": false,
+      "text": "TMP=\"run/.hz21_strong_risk_runtime.py\""
+    },
+    {
+      "line": 23,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "'source': 'run/hz21_strict_card_dom_recover_page.py',"
+    },
+    {
+      "line": 35,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "src=Path('run/hz21_strict_card_dom_recover_page.py').read_text(encoding='utf-8')"
+    },
+    {
+      "line": 38,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/.hz21_strong_risk_runtime.py",
+      "target_exists": false,
+      "text": "Path('run/.hz21_strong_risk_runtime.py').write_text(src, encoding='utf-8')"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_install_service.sh",
+      "target": "run/aideal-hz23-observer.service",
+      "target_exists": false,
+      "text": "RENDERED_UNIT=\"${AIDEAL_HZ23_RENDERED_UNIT:-${PROJECT_DIR}/run/aideal-hz23-observer.service}\""
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_preflight_risk_policy.py",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_resume_nohup_runner.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_resume_nohup_start.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 6,
+      "source": "scripts/hz23_resume_nohup_status.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 8,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_schedule.pid\""
+    },
+    {
+      "line": 11,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "RUNNER_PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 62,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.pid",
+      "target_exists": false,
+      "text": "rm -f run/hz23_resume_schedule.pid"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_risk_policy_guard.py",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
+    },
+    {
+      "line": 47,
+      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "SCHEDULER_PID=\"$(cat run/hz24_tab_pool_schedule.pid 2>/dev/null || true)\""
+    },
+    {
+      "line": 4,
+      "source": "scripts/hz24_increment_nohup_runner.sh",
+      "target": "run/hz24_increment_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=run/hz24_increment_nohup.pid"
+    },
+    {
+      "line": 4,
+      "source": "scripts/hz24_increment_start_or_schedule.sh",
+      "target": "run/hz24_increment_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=run/hz24_increment_nohup.pid"
+    },
+    {
+      "line": 16,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz24_tab_pool_schedule.pid\""
+    },
+    {
+      "line": 60,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "rm -f run/hz24_tab_pool_schedule.pid"
+    },
+    {
+      "line": 10,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/code_governance_ci_bridge_worktree",
+      "target_exists": false,
+      "text": "WORKTREE=\"${PROJECT_DIR}/run/code_governance_ci_bridge_worktree\""
+    },
+    {
+      "line": 11,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/ci_bridge_latest.env",
+      "target_exists": false,
+      "text": "SUMMARY_SOURCE=\"${WORKTREE}/run/ci_bridge_latest.env\""
+    },
+    {
+      "line": 12,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/code_governance_ci_bridge_latest.env",
+      "target_exists": false,
+      "text": "SUMMARY_TARGET=\"${PROJECT_DIR}/run/code_governance_ci_bridge_latest.env\""
+    },
+    {
+      "line": 39,
+      "source": "scripts/probe_public_urls.py",
+      "target": "run/jd_portal_public_probe_",
+      "target_exists": false,
+      "text": "outdir = Path(args.outdir or f\"run/jd_portal_public_probe_{utc_stamp()}\")"
+    },
+    {
+      "line": 18,
+      "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
+      "target": "run/hz23_manifest_for_validation.json",
+      "target_exists": false,
+      "text": "VALIDATION_MANIFEST = Path(\"run/hz23_manifest_for_validation.json\")"
+    },
+    {
+      "line": 28,
+      "source": "src/aideal_cps_data_lab/hz24/terminal_repair.py",
+      "target": "run/v1",
+      "target_exists": false,
+      "text": "\"schema_version\": \"aideal-hz24-terminal-repair-run/v1\","
+    },
+    {
+      "line": 145,
+      "source": "src/aideal_cps_data_lab/jingfen/auth_probe.py",
+      "target": "run/jingfen_auth_probe_",
+      "target_exists": false,
+      "text": "outdir=Path(args.outdir or f\"run/jingfen_auth_probe_{now_tag()}\"),"
+    },
+    {
+      "line": 165,
+      "source": "src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "target": "run/jingfen_login_capture_",
+      "target_exists": false,
+      "text": "outdir=Path(args.outdir or f\"run/jingfen_login_capture_{now_tag()}\"),"
+    },
+    {
+      "line": 100,
+      "source": "src/aideal_cps_data_lab/quality/offline_runner.py",
+      "target": "run/jd_live_called.flag",
+      "target_exists": false,
+      "text": "live_marker = Path(\"run/jd_live_called.flag\")"
+    },
+    {
+      "line": 56,
+      "source": "tests/test_ci_bridge_reports.py",
+      "target": "run/ci_bridge_previous_stamp/offline_quality_latest.json",
+      "target_exists": false,
+      "text": "(root / \"run/ci_bridge_previous_stamp/offline_quality_latest.json\").exists()"
+    }
+  ],
+  "read_only": true,
+  "reference_count": 238,
+  "references": [
+    {
+      "line": 9,
+      "source": ".github/workflows/hz24-static-report.yml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "- \"run/hz24_*.py\""
+    },
+    {
+      "line": 33,
+      "source": ".github/workflows/hz24-static-report.yml",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "PYTHONPATH=src python -m py_compile run/hz24_collect_increment_links.py run/hz24_collect_increment_links_v2.py scripts/hz24_validate_increment_links.py scripts/hz24_validate_increment_outcomes.py src/aideal_cps_data_lab/hz24/*.py"
+    },
+    {
+      "line": 33,
+      "source": ".github/workflows/hz24-static-report.yml",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "PYTHONPATH=src python -m py_compile run/hz24_collect_increment_links.py run/hz24_collect_increment_links_v2.py scripts/hz24_validate_increment_links.py scripts/hz24_validate_increment_outcomes.py src/aideal_cps_data_lab/hz24/*.py"
+    },
+    {
+      "line": 9,
+      "source": ".github/workflows/hz24-static.yml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "- \"run/hz24_*.py\""
+    },
+    {
+      "line": 32,
+      "source": ".github/workflows/hz24-static.yml",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "run/hz24_collect_increment_links.py \\"
+    },
+    {
+      "line": 33,
+      "source": ".github/workflows/hz24-static.yml",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "run/hz24_collect_increment_links_v2.py \\"
+    },
+    {
+      "line": 52,
+      "source": "README.md",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links.py`"
+    },
+    {
+      "line": 19,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "Path(\"run/hz9_STOP_REQUIRED.json\").write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True), encoding=\"utf-8\")"
+    },
+    {
+      "line": 35,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_daemon.lock",
+      "target_exists": true,
+      "text": "nohup bash -c \"flock -n run/hz9_union_guarded_daemon.lock $PY run/hz9_union_guarded_daemon.py\" > \"$RUN_LOG\" 2>&1 &"
+    },
+    {
+      "line": 35,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "nohup bash -c \"flock -n run/hz9_union_guarded_daemon.lock $PY run/hz9_union_guarded_daemon.py\" > \"$RUN_LOG\" 2>&1 &"
+    },
+    {
+      "line": 36,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_daemon.pid",
+      "target_exists": true,
+      "text": "echo \"$!\" > run/hz9_union_guarded_daemon.pid"
+    },
+    {
+      "line": 50,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/hz9_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/hz9_STOP_REQUIRED.json || true"
+    },
+    {
+      "line": 64,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "if ! pgrep -f \"python.*run/hz9_union_guarded_daemon.py\" >/dev/null 2>&1; then"
+    },
+    {
+      "line": 79,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "pkill -f \"python.*run/hz9_union_guarded_daemon.py\" 2>/dev/null || true"
+    },
+    {
+      "line": 85,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "[ -f run/hz9_union_guarded_state.json ] && python3 -m json.tool run/hz9_union_guarded_state.json | head -n 80 || true"
+    },
+    {
+      "line": 85,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "[ -f run/hz9_union_guarded_state.json ] && python3 -m json.tool run/hz9_union_guarded_state.json | head -n 80 || true"
+    },
+    {
+      "line": 86,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "[ -f run/hz9_union_guarded_report_latest.json ] && python3 -m json.tool run/hz9_union_guarded_report_latest.json | head -n 80 || true"
+    },
+    {
+      "line": 86,
+      "source": "backups/hz10_guard_watchdog_20260510_175437.sh",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "[ -f run/hz9_union_guarded_report_latest.json ] && python3 -m json.tool run/hz9_union_guarded_report_latest.json | head -n 80 || true"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 39,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STATE_PATH = Path(os.environ.get(\"HZ11_STATE_PATH\", f\"run/hz11_{WORKER_NAME}_state.json\"))"
+    },
+    {
+      "line": 40,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(os.environ.get(\"HZ11_STOP_PATH\", f\"run/hz11_{WORKER_NAME}_STOP_REQUIRED.json\"))"
+    },
+    {
+      "line": 43,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 44,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "LATEST_REPORT = Path(f\"run/hz11_{WORKER_NAME}_report_latest.json\")"
+    },
+    {
+      "line": 52,
+      "source": "backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "HZ9_PATH = Path(\"run/hz9_union_guarded_daemon.py\")"
+    },
+    {
+      "line": 22,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "STATE_PATH = Path(\"run/hz9_union_guarded_state.json\")"
+    },
+    {
+      "line": 23,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "STOP_PATH = Path(\"run/hz9_STOP_REQUIRED.json\")"
+    },
+    {
+      "line": 26,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_union_guarded_report_",
+      "target_exists": false,
+      "text": "REPORT = Path(f\"run/hz9_union_guarded_report_{RUN_ID}.json\")"
+    },
+    {
+      "line": 27,
+      "source": "backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "LATEST_REPORT = Path(\"run/hz9_union_guarded_report_latest.json\")"
+    },
+    {
+      "line": 3,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
+    },
+    {
+      "line": 3,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
+    },
+    {
+      "line": 3,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
+    },
+    {
+      "line": 3,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "active_run_files = [\"run/hz21_strict_card_dom_recover_page.py\", \"run/hz22_prepare_all_product_page.py\", \"run/hz23_scan_current_page.py\", \"run/hz23_finalize_round.py\"]"
+    },
+    {
+      "line": 4,
+      "source": "config/engineering-active-scope.toml",
+      "target": "run/hz24_",
+      "target_exists": false,
+      "text": "active_run_prefixes = [\"run/hz24_\"]"
+    },
+    {
+      "line": 7,
+      "source": "config/hz24-contracts.toml",
+      "target": "run/hz24_increment_collection_state.json",
+      "target_exists": true,
+      "text": "state_file = \"run/hz24_increment_collection_state.json\""
+    },
+    {
+      "line": 4,
+      "source": "config/offline-quality.toml",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": "\"run/hz22_prepare_all_product_page.py\","
+    },
+    {
+      "line": 5,
+      "source": "config/offline-quality.toml",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": "\"run/hz23_scan_current_page.py\","
+    },
+    {
+      "line": 6,
+      "source": "config/offline-quality.toml",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "\"run/hz23_finalize_round.py\","
+    },
+    {
+      "line": 7,
+      "source": "config/offline-quality.toml",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "\"run/hz24_collect_increment_links_v2.py\","
+    },
+    {
+      "line": 8,
+      "source": "config/offline-quality.toml",
+      "target": "run/hz24_audit_product_tabs.py",
+      "target_exists": true,
+      "text": "\"run/hz24_audit_product_tabs.py\","
+    },
+    {
+      "line": 125,
+      "source": "docs/CONVERSATION_ARCHIVE_2026-06-19.md",
+      "target": "run/hz24_increment_collection_state.json",
+      "target_exists": true,
+      "text": "- state：`run/hz24_increment_collection_state.json`"
+    },
+    {
+      "line": 83,
+      "source": "docs/CURRENT_PROGRESS.md",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links.py` 为 canonical collector 入口。"
+    },
+    {
+      "line": 84,
+      "source": "docs/CURRENT_PROGRESS.md",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links_v2.py` 仅委托同一 application service，不是第二套主实现。"
+    },
+    {
+      "line": 38,
+      "source": "docs/DL2_COMMERCIAL_ARCHITECTURE.md",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links.py`"
+    },
+    {
+      "line": 39,
+      "source": "docs/DL2_COMMERCIAL_ARCHITECTURE.md",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links_v2.py`"
+    },
+    {
+      "line": 191,
+      "source": "docs/DL2_COMMERCIAL_ARCHITECTURE.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "8. **Rollback gate**：批次可按 source run/round 撤销或恢复，不依赖手工 SQL 猜测。"
+    },
+    {
+      "line": 141,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "run/hz9_union_guarded_daemon.py"
+    },
+    {
+      "line": 142,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz10_guard_watchdog.sh",
+      "target_exists": true,
+      "text": "run/hz10_guard_watchdog.sh"
+    },
+    {
+      "line": 158,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "run/hz9_union_guarded_state.json"
+    },
+    {
+      "line": 159,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "run/hz9_union_guarded_report_latest.json"
+    },
+    {
+      "line": 160,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "run/hz9_STOP_REQUIRED.json"
+    },
+    {
+      "line": 202,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json` 是否出现。"
+    },
+    {
+      "line": 203,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "- `run/hz9_union_guarded_state.json` 中 `day_ok_count` 是否增长。"
+    },
+    {
+      "line": 214,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/hz9_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 215,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/hz9_STOP_REQUIRED.json | python3 -m json.tool"
+    },
+    {
+      "line": 220,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "if [ -f run/hz9_union_guarded_state.json ]; then"
+    },
+    {
+      "line": 221,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "cat run/hz9_union_guarded_state.json | python3 -m json.tool"
+    },
+    {
+      "line": 226,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "if [ -f run/hz9_union_guarded_report_latest.json ]; then"
+    },
+    {
+      "line": 227,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "cat run/hz9_union_guarded_report_latest.json | python3 -m json.tool | head -n 160"
+    },
+    {
+      "line": 314,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "run/hz9_STOP_REQUIRED.json"
+    },
+    {
+      "line": 323,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz10_guard_watchdog.sh",
+      "target_exists": true,
+      "text": "pkill -f \"run/hz10_guard_watchdog.sh\" 2>/dev/null || true"
+    },
+    {
+      "line": 324,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "pkill -f \"python.*run/hz9_union_guarded_daemon.py\" 2>/dev/null || true"
+    },
+    {
+      "line": 444,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 446,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_full_state.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_state.json"
+    },
+    {
+      "line": 447,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_full_report_latest.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_report_latest.json"
+    },
+    {
+      "line": 448,
+      "source": "docs/DL2_DATA_COLLECTION_HANDOFF_PROMPT.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 70,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2p_public_manual_dom_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2p_public_manual_dom_extract_*/public_manual_dom_product_cards.jsonl`"
+    },
+    {
+      "line": 92,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2r3_frame_aware_public_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2r3_frame_aware_public_extract_*/public_frame_raw_products.jsonl`"
+    },
+    {
+      "line": 93,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2r3_frame_aware_public_extract_",
+      "target_exists": false,
+      "text": "- `run/dl2r3_frame_aware_public_extract_*/public_frame_extract_report.json`"
+    },
+    {
+      "line": 134,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2s_public_products_repair_report_",
+      "target_exists": false,
+      "text": "- `run/dl2s_public_products_repair_report_*.json`"
+    },
+    {
+      "line": 158,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2t_wechat_ready_product_pool_report_",
+      "target_exists": false,
+      "text": "- `run/dl2t_wechat_ready_product_pool_report_*.json`"
+    },
+    {
+      "line": 238,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2x_visible_onekey_link_extract_report_",
+      "target_exists": false,
+      "text": "- `run/dl2x_visible_onekey_link_extract_report_*.json`"
+    },
+    {
+      "line": 254,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.py",
+      "target_exists": false,
+      "text": "- `run/dl2y_union_guarded_daemon.py`"
+    },
+    {
+      "line": 255,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.lock",
+      "target_exists": false,
+      "text": "- lock：`run/dl2y_union_guarded_daemon.lock`"
+    },
+    {
+      "line": 256,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "- state：`run/dl2y_union_guarded_state.json`"
+    },
+    {
+      "line": 257,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "- report latest：`run/dl2y_union_guarded_report_latest.json`"
+    },
+    {
+      "line": 258,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- stop required：`run/dl2y_STOP_REQUIRED.json`"
+    },
+    {
+      "line": 282,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2z_guard_watchdog.sh",
+      "target_exists": false,
+      "text": "- watchdog 脚本：`run/dl2z_guard_watchdog.sh`"
+    },
+    {
+      "line": 357,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_STOP_REQUIRED.json ]; then"
+    },
+    {
+      "line": 358,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_STOP_REQUIRED.json | python3 -m json.tool"
+    },
+    {
+      "line": 363,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_union_guarded_state.json ]; then"
+    },
+    {
+      "line": 364,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_state.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_union_guarded_state.json | python3 -m json.tool"
+    },
+    {
+      "line": 367,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "if [ -f run/dl2y_union_guarded_report_latest.json ]; then"
+    },
+    {
+      "line": 368,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_report_latest.json",
+      "target_exists": false,
+      "text": "cat run/dl2y_union_guarded_report_latest.json | python3 -m json.tool | head -n 160"
+    },
+    {
+      "line": 379,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2z_guard_watchdog.sh",
+      "target_exists": false,
+      "text": "pkill -f \"run/dl2z_guard_watchdog.sh\" 2>/dev/null || true"
+    },
+    {
+      "line": 380,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/dl2y_union_guarded_daemon.py",
+      "target_exists": false,
+      "text": "pkill -f \"python.*run/dl2y_union_guarded_daemon.py\" 2>/dev/null || true"
+    },
+    {
+      "line": 487,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz11_multi_menu_merge_report_latest.json",
+      "target_exists": true,
+      "text": "- run/hz11_multi_menu_merge_report_latest.json"
+    },
+    {
+      "line": 546,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 548,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_full_state.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_state.json"
+    },
+    {
+      "line": 549,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_full_report_latest.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_report_latest.json"
+    },
+    {
+      "line": 550,
+      "source": "docs/DL2_JD_UNION_COLLECTION_DESIGN.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 116,
+      "source": "docs/ENGINEERING_STANDARDS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 日志字段至少包括：timestamp、run/round、worker、event、tab、sku、outcome、reason。"
+    },
+    {
+      "line": 228,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/import",
+      "target_exists": false,
+      "text": "- 动作：停止后续批次；保留 dry-run/import report；按 source run/round 回滚或修复，不手工临时 SQL 补数据。"
+    },
+    {
+      "line": 228,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 动作：停止后续批次；保留 dry-run/import report；按 source run/round 回滚或修复，不手工临时 SQL 补数据。"
+    },
+    {
+      "line": 234,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 数据库备份：由受控备份机制负责，导入前后记录批次边界、source run/round 和 payload hash。"
+    },
+    {
+      "line": 236,
+      "source": "docs/ENVIRONMENT_AND_OPERATIONS.md",
+      "target": "run/round",
+      "target_exists": false,
+      "text": "- 恢复必须从明确的 queue hash、record hash、published version、source run/round 和 checkpoint 开始。"
+    },
+    {
+      "line": 157,
+      "source": "docs/NEXT_DIALOG_HANDOFF.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "阶段顺序：Phase A 静态基线 → Phase B 2–3 SKU 授权 smoke → Phase C 完成 221 SKU accounting → Phase D validation pass → Phase E 选定一条 canonical delivery path 并完成 dry-run/landed validation/回滚 → Phase F 稳定运行一周并显式批准商用 → Phase G refresh queue、监控与 HZ11–HZ23 遗留脚"
+    },
+    {
+      "line": 87,
+      "source": "docs/NEXT_DIALOG_HANDOFF_V2.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "- 当前没有完整 HZ24 validation pass，也没有生产 importer dry-run/landed validation 证据。"
+    },
+    {
+      "line": 130,
+      "source": "docs/NEXT_DIALOG_HANDOFF_V2.md",
+      "target": "run/landed",
+      "target_exists": false,
+      "text": "阶段顺序固定为：Phase A 静态基线 → Phase B 2–3 SKU 授权 smoke → Phase C 221 SKU accounting → Phase D validation pass → Phase E 生产 dry-run/landed validation → Phase F 通用商用运行和历史脚本退役。"
+    },
+    {
+      "line": 58,
+      "source": "docs/SESSION_ARCHIVE_2026-06-19.md",
+      "target": "run/hz24_collect_increment_links.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links.py`"
+    },
+    {
+      "line": 59,
+      "source": "docs/SESSION_ARCHIVE_2026-06-19.md",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "- `run/hz24_collect_increment_links_v2.py`"
+    },
+    {
+      "line": 59,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 61,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_full_state.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_state.json"
+    },
+    {
+      "line": 62,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_full_report_latest.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_report_latest.json"
+    },
+    {
+      "line": 63,
+      "source": "docs/ops/DL2_HZ12_PRODUCT_ALL_OFFICIAL_PLAN.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 349,
+      "source": "docs/ops/DL2_HZ15_RUNTIME_SUMMARY.md",
+      "target": "run/hz15_daytime_autostart_supervisor_40_67.sh",
+      "target_exists": true,
+      "text": "276340 bash run/hz15_daytime_autostart_supervisor_40_67.sh"
+    },
+    {
+      "line": 21,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "run/hz23_finalize_round.py"
+    },
+    {
+      "line": 30,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": "run/hz24_collect_increment_links_v2.py"
+    },
+    {
+      "line": 86,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz21_",
+      "target_exists": false,
+      "text": "run/hz21_*"
+    },
+    {
+      "line": 87,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz22_",
+      "target_exists": false,
+      "text": "run/hz22_*"
+    },
+    {
+      "line": 97,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz11_",
+      "target_exists": false,
+      "text": "run/hz11_* ... run/hz20_*"
+    },
+    {
+      "line": 97,
+      "source": "docs/project/ACTIVE_MAINLINE_CLASSIFICATION.md",
+      "target": "run/hz20_",
+      "target_exists": false,
+      "text": "run/hz11_* ... run/hz20_*"
+    },
+    {
+      "line": 138,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "- `run/hz9_union_guarded_daemon.py`"
+    },
+    {
+      "line": 139,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz10_guard_watchdog.sh",
+      "target_exists": true,
+      "text": "- `run/hz10_guard_watchdog.sh`"
+    },
+    {
+      "line": 155,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "- `run/hz9_union_guarded_state.json`"
+    },
+    {
+      "line": 156,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_union_guarded_report_latest.json",
+      "target_exists": true,
+      "text": "- `run/hz9_union_guarded_report_latest.json`"
+    },
+    {
+      "line": 157,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json`"
+    },
+    {
+      "line": 170,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- 连续失败 3 次或出现验证码/风控/登录失效，写 `run/hz9_STOP_REQUIRED.json` 并停止。"
+    },
+    {
+      "line": 191,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- `run/hz9_STOP_REQUIRED.json` 是否出现。"
+    },
+    {
+      "line": 192,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_union_guarded_state.json",
+      "target_exists": true,
+      "text": "- `run/hz9_union_guarded_state.json` 中 `day_ok_count` 是否增长。"
+    },
+    {
+      "line": 200,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz9_union_guarded_daemon.py",
+      "target_exists": true,
+      "text": "- 把临时 `run/hz9_union_guarded_daemon.py` 整理到 `scripts/collect_jd_union_visible_links.py`。"
+    },
+    {
+      "line": 201,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz10_guard_watchdog.sh",
+      "target_exists": true,
+      "text": "- 把 `run/hz10_guard_watchdog.sh` 整理到 `scripts/run_jd_union_guard_watchdog.sh`。"
+    },
+    {
+      "line": 311,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz11_rank_worker.py",
+      "target_exists": false,
+      "text": "- run/hz11_rank_worker.py"
+    },
+    {
+      "line": 312,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz11_merge_multi_menu_latest.py",
+      "target_exists": true,
+      "text": "- run/hz11_merge_multi_menu_latest.py"
+    },
+    {
+      "line": 313,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz11_high_commission_probe.py",
+      "target_exists": false,
+      "text": "- run/hz11_high_commission_probe.py"
+    },
+    {
+      "line": 451,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_full_collector.py",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_full_collector.py"
+    },
+    {
+      "line": 453,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_full_state.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_state.json"
+    },
+    {
+      "line": 454,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_full_report_latest.json",
+      "target_exists": true,
+      "text": "- run/hz12_product_all_full_report_latest.json"
+    },
+    {
+      "line": 455,
+      "source": "memory/DL2_DATA_COLLECTION_MEMORY.md",
+      "target": "run/hz12_product_all_STOP_REQUIRED.json",
+      "target_exists": false,
+      "text": "- run/hz12_product_all_STOP_REQUIRED.json"
+    },
+    {
+      "line": 8,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "SOURCE=\"run/hz21_strict_card_dom_recover_page.py\""
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/.hz21_strong_risk_runtime.py",
+      "target_exists": false,
+      "text": "TMP=\"run/.hz21_strong_risk_runtime.py\""
+    },
+    {
+      "line": 23,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "'source': 'run/hz21_strict_card_dom_recover_page.py',"
+    },
+    {
+      "line": 35,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "src=Path('run/hz21_strict_card_dom_recover_page.py').read_text(encoding='utf-8')"
+    },
+    {
+      "line": 38,
+      "source": "scripts/hz21_run_strong_risk_collector.sh",
+      "target": "run/.hz21_strong_risk_runtime.py",
+      "target_exists": false,
+      "text": "Path('run/.hz21_strong_risk_runtime.py').write_text(src, encoding='utf-8')"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_install_service.sh",
+      "target": "run/aideal-hz23-observer.service",
+      "target_exists": false,
+      "text": "RENDERED_UNIT=\"${AIDEAL_HZ23_RENDERED_UNIT:-${PROJECT_DIR}/run/aideal-hz23-observer.service}\""
+    },
+    {
+      "line": 31,
+      "source": "scripts/hz23_install_service.sh",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": "run/hz22_prepare_all_product_page.py \\"
+    },
+    {
+      "line": 32,
+      "source": "scripts/hz23_install_service.sh",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": "run/hz23_scan_current_page.py \\"
+    },
+    {
+      "line": 33,
+      "source": "scripts/hz23_install_service.sh",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "run/hz23_finalize_round.py"
+    },
+    {
+      "line": 16,
+      "source": "scripts/hz23_mainline_refresh.sh",
+      "target": "run/hz23_mainline.lock",
+      "target_exists": true,
+      "text": "LOCK_FILE=\"run/hz23_mainline.lock\""
+    },
+    {
+      "line": 109,
+      "source": "scripts/hz23_mainline_refresh.sh",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz22_prepare_all_product_page.py \"$PAGE_NO\" \"$PREP\""
+    },
+    {
+      "line": 147,
+      "source": "scripts/hz23_mainline_refresh.sh",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz23_scan_current_page.py \"$PAGE_NO\" \"$ROUND_ID\" \"$SCAN\""
+    },
+    {
+      "line": 268,
+      "source": "scripts/hz23_mainline_refresh.sh",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz23_finalize_round.py \"$ROUND_ID\" \"$SUMMARY\""
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_migrate_observer_state_v2.py",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "STATE = Path(\"run/hz23_observer_state.json\")"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_migrate_state_and_publish.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "if [ -f run/hz23_observer_state.json ]; then"
+    },
+    {
+      "line": 10,
+      "source": "scripts/hz23_migrate_state_and_publish.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state.${STAMP}.json\""
+    },
+    {
+      "line": 14,
+      "source": "scripts/hz23_observation_daemon.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "STATE=\"run/hz23_observer_state.json\""
+    },
+    {
+      "line": 174,
+      "source": "scripts/hz23_observation_daemon.sh",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz22_prepare_all_product_page.py \"$PAGE\" \"$PREP\" >> \"$LOG\" 2>&1"
+    },
+    {
+      "line": 177,
+      "source": "scripts/hz23_observation_daemon.sh",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz23_scan_current_page.py \"$PAGE\" \"$ROUND\" \"$SCAN\" >> \"$LOG\" 2>&1"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_preflight_risk_policy.py",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
+    },
+    {
+      "line": 47,
+      "source": "scripts/hz23_publish_commercial_status_v2.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "state = load(\"run/hz23_observer_state.json\")"
+    },
+    {
+      "line": 43,
+      "source": "scripts/hz23_publish_compact_status.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "state_path = \"run/hz23_observer_state.json\""
+    },
+    {
+      "line": 63,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "if [ -f run/hz23_observer_state.json ]; then"
+    },
+    {
+      "line": 64,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state_before_resume_${STAMP}.json\""
+    },
+    {
+      "line": 72,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz22_prepare_all_product_page.py",
+      "target_exists": true,
+      "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
+    },
+    {
+      "line": 72,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz23_scan_current_page.py",
+      "target_exists": true,
+      "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
+    },
+    {
+      "line": 72,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "python3 -m py_compile run/hz22_prepare_all_product_page.py run/hz23_scan_current_page.py run/hz23_finalize_round.py > logs/hz23_resume_python_check.log 2>&1"
+    },
+    {
+      "line": 105,
+      "source": "scripts/hz23_resume_after_manual_verification.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "p=Path('run/hz23_observer_state.json')"
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_resume_nohup_runner.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 8,
+      "source": "scripts/hz23_resume_nohup_runner.sh",
+      "target": "run/hz23_resume_nohup.state",
+      "target_exists": true,
+      "text": "STATE_FILE=\"run/hz23_resume_nohup.state\""
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_resume_nohup_start.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 6,
+      "source": "scripts/hz23_resume_nohup_status.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 7,
+      "source": "scripts/hz23_resume_nohup_status.sh",
+      "target": "run/hz23_resume_nohup.state",
+      "target_exists": true,
+      "text": "STATE_FILE=\"run/hz23_resume_nohup.state\""
+    },
+    {
+      "line": 8,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz23_resume_schedule.pid\""
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.state",
+      "target_exists": true,
+      "text": "STATE_FILE=\"run/hz23_resume_schedule.state\""
+    },
+    {
+      "line": 11,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_nohup.pid",
+      "target_exists": false,
+      "text": "RUNNER_PID_FILE=\"run/hz23_resume_nohup.pid\""
+    },
+    {
+      "line": 61,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.state",
+      "target_exists": true,
+      "text": "} > run/hz23_resume_schedule.state"
+    },
+    {
+      "line": 62,
+      "source": "scripts/hz23_resume_schedule_next_daytime.sh",
+      "target": "run/hz23_resume_schedule.pid",
+      "target_exists": false,
+      "text": "rm -f run/hz23_resume_schedule.pid"
+    },
+    {
+      "line": 9,
+      "source": "scripts/hz23_risk_policy_guard.py",
+      "target": "run/hz21_strict_card_dom_recover_page.py",
+      "target_exists": false,
+      "text": "TARGET = Path(\"run/hz21_strict_card_dom_recover_page.py\")"
+    },
+    {
+      "line": 33,
+      "source": "scripts/hz23_safe_reload_observer.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "if [ -f run/hz23_observer_state.json ]; then"
+    },
+    {
+      "line": 34,
+      "source": "scripts/hz23_safe_reload_observer.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "cp -a run/hz23_observer_state.json \"backups/hz23_observer_state.reload.${STAMP}.json\""
+    },
+    {
+      "line": 45,
+      "source": "scripts/hz23_safe_reload_observer.sh",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "run/hz23_finalize_round.py \\"
+    },
+    {
+      "line": 13,
+      "source": "scripts/hz23_status.sh",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "for name in ['run/hz23_observer_state.json','reports/hz23_observer_status_latest.json','reports/hz23_round_latest.json','data/export/aideal_cps_products_commercial_candidate_manifest.json']:"
+    },
+    {
+      "line": 31,
+      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
+      "target": "run/hz24_inspect_tab_pool_structure.py",
+      "target_exists": true,
+      "text": "run/hz24_inspect_tab_pool_structure.py \\"
+    },
+    {
+      "line": 47,
+      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "SCHEDULER_PID=\"$(cat run/hz24_tab_pool_schedule.pid 2>/dev/null || true)\""
+    },
+    {
+      "line": 48,
+      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
+      "target": "run/hz24_tab_pool_schedule.state",
+      "target_exists": true,
+      "text": "TARGET_AT=\"$(awk -F= '$1==\"TARGET_AT\"{print substr($0,index($0,\"=\")+1)}' run/hz24_tab_pool_schedule.state 2>/dev/null | tail -n 1)\""
+    },
+    {
+      "line": 49,
+      "source": "scripts/hz24_apply_structure_fix_and_schedule.sh",
+      "target": "run/hz24_tab_pool_schedule.state",
+      "target_exists": true,
+      "text": "SCHEDULE_STATE=\"$(awk -F= '$1==\"STATE\"{print substr($0,index($0,\"=\")+1)}' run/hz24_tab_pool_schedule.state 2>/dev/null | tail -n 1)\""
+    },
+    {
+      "line": 26,
+      "source": "scripts/hz24_increment_loop.sh",
+      "target": "run/hz24_increment_loop.lock",
+      "target_exists": true,
+      "text": "exec 9>run/hz24_increment_loop.lock"
+    },
+    {
+      "line": 4,
+      "source": "scripts/hz24_increment_nohup_runner.sh",
+      "target": "run/hz24_increment_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=run/hz24_increment_nohup.pid"
+    },
+    {
+      "line": 5,
+      "source": "scripts/hz24_increment_nohup_runner.sh",
+      "target": "run/hz24_increment_nohup.state",
+      "target_exists": true,
+      "text": "STATE_FILE=run/hz24_increment_nohup.state"
+    },
+    {
+      "line": 4,
+      "source": "scripts/hz24_increment_start_or_schedule.sh",
+      "target": "run/hz24_increment_nohup.pid",
+      "target_exists": false,
+      "text": "PID_FILE=run/hz24_increment_nohup.pid"
+    },
+    {
+      "line": 5,
+      "source": "scripts/hz24_increment_start_or_schedule.sh",
+      "target": "run/hz24_increment_nohup.state",
+      "target_exists": true,
+      "text": "STATE_FILE=run/hz24_increment_nohup.state"
+    },
+    {
+      "line": 48,
+      "source": "scripts/hz24_run_one_increment_batch.sh",
+      "target": "run/hz24_collect_increment_links_v2.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz24_collect_increment_links_v2.py \\"
+    },
+    {
+      "line": 26,
+      "source": "scripts/hz24_run_product_tab_audit.sh",
+      "target": "run/hz24_audit_product_tabs.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python -m py_compile run/hz24_audit_product_tabs.py > logs/hz24_tab_compile.log 2>&1"
+    },
+    {
+      "line": 33,
+      "source": "scripts/hz24_run_product_tab_audit.sh",
+      "target": "run/hz24_audit_product_tabs.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz24_audit_product_tabs.py > logs/hz24_tab_audit.log 2>&1"
+    },
+    {
+      "line": 36,
+      "source": "scripts/hz24_run_tab_pool_analysis.sh",
+      "target": "run/hz24_inspect_tab_pool_structure.py",
+      "target_exists": true,
+      "text": "run/hz24_inspect_tab_pool_structure.py \\"
+    },
+    {
+      "line": 50,
+      "source": "scripts/hz24_run_tab_pool_analysis.sh",
+      "target": "run/hz24_inspect_tab_pool_structure.py",
+      "target_exists": true,
+      "text": ".venv-browser/bin/python run/hz24_inspect_tab_pool_structure.py \\"
+    },
+    {
+      "line": 16,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "PID_FILE=\"run/hz24_tab_pool_schedule.pid\""
+    },
+    {
+      "line": 17,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.state",
+      "target_exists": true,
+      "text": "STATE_FILE=\"run/hz24_tab_pool_schedule.state\""
+    },
+    {
+      "line": 59,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.state",
+      "target_exists": true,
+      "text": "} > run/hz24_tab_pool_schedule.state"
+    },
+    {
+      "line": 60,
+      "source": "scripts/hz24_schedule_tab_pool_analysis_next_daytime.sh",
+      "target": "run/hz24_tab_pool_schedule.pid",
+      "target_exists": false,
+      "text": "rm -f run/hz24_tab_pool_schedule.pid"
+    },
+    {
+      "line": 10,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/code_governance_ci_bridge_worktree",
+      "target_exists": false,
+      "text": "WORKTREE=\"${PROJECT_DIR}/run/code_governance_ci_bridge_worktree\""
+    },
+    {
+      "line": 11,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/ci_bridge_latest.env",
+      "target_exists": false,
+      "text": "SUMMARY_SOURCE=\"${WORKTREE}/run/ci_bridge_latest.env\""
+    },
+    {
+      "line": 12,
+      "source": "scripts/ops/run_code_governance_ci_bridge.sh",
+      "target": "run/code_governance_ci_bridge_latest.env",
+      "target_exists": false,
+      "text": "SUMMARY_TARGET=\"${PROJECT_DIR}/run/code_governance_ci_bridge_latest.env\""
+    },
+    {
+      "line": 39,
+      "source": "scripts/probe_public_urls.py",
+      "target": "run/jd_portal_public_probe_",
+      "target_exists": false,
+      "text": "outdir = Path(args.outdir or f\"run/jd_portal_public_probe_{utc_stamp()}\")"
+    },
+    {
+      "line": 18,
+      "source": "scripts/run_commission_data_checks_v2.sh",
+      "target": "run/hz23_finalize_round.py",
+      "target_exists": true,
+      "text": "run/hz23_finalize_round.py \\"
+    },
+    {
+      "line": 88,
+      "source": "src/aideal_cps_data_lab/hz23/finalize_round.py",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "observer_state=Path(\"run/hz23_observer_state.json\"),"
+    },
+    {
+      "line": 15,
+      "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "STATE = Path(\"run/hz23_observer_state.json\")"
+    },
+    {
+      "line": 18,
+      "source": "src/aideal_cps_data_lab/hz23_gate_refresh.py",
+      "target": "run/hz23_manifest_for_validation.json",
+      "target_exists": false,
+      "text": "VALIDATION_MANIFEST = Path(\"run/hz23_manifest_for_validation.json\")"
+    },
+    {
+      "line": 28,
+      "source": "src/aideal_cps_data_lab/hz24/terminal_repair.py",
+      "target": "run/v1",
+      "target_exists": false,
+      "text": "\"schema_version\": \"aideal-hz24-terminal-repair-run/v1\","
+    },
+    {
+      "line": 145,
+      "source": "src/aideal_cps_data_lab/jingfen/auth_probe.py",
+      "target": "run/jingfen_auth_probe_",
+      "target_exists": false,
+      "text": "outdir=Path(args.outdir or f\"run/jingfen_auth_probe_{now_tag()}\"),"
+    },
+    {
+      "line": 165,
+      "source": "src/aideal_cps_data_lab/jingfen/login_capture.py",
+      "target": "run/jingfen_login_capture_",
+      "target_exists": false,
+      "text": "outdir=Path(args.outdir or f\"run/jingfen_login_capture_{now_tag()}\"),"
+    },
+    {
+      "line": 100,
+      "source": "src/aideal_cps_data_lab/quality/offline_runner.py",
+      "target": "run/jd_live_called.flag",
+      "target_exists": false,
+      "text": "live_marker = Path(\"run/jd_live_called.flag\")"
+    },
+    {
+      "line": 56,
+      "source": "tests/test_ci_bridge_reports.py",
+      "target": "run/ci_bridge_previous_stamp/offline_quality_latest.json",
+      "target_exists": false,
+      "text": "(root / \"run/ci_bridge_previous_stamp/offline_quality_latest.json\").exists()"
+    },
+    {
+      "line": 87,
+      "source": "tests/test_hz23_finalize_gate.py",
+      "target": "run/hz23_observer_state.json",
+      "target_exists": true,
+      "text": "root / \"run/hz23_observer_state.json\","
+    }
+  ],
+  "schema_version": "runtime-dependency-audit/v1",
+  "status": "FAIL"
+}
