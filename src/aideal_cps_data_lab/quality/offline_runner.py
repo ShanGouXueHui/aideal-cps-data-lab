@@ -6,7 +6,7 @@ import json
 import os
 import py_compile
 import subprocess
-import tomllib
+import tomli
 import traceback
 import unittest
 from datetime import datetime
@@ -20,7 +20,7 @@ config_path = Path("config/offline-quality.toml")
 
 def load_config(path: Path = config_path) -> dict[str, Any]:
     with path.open("rb") as stream:
-        return tomllib.load(stream)
+        return tomli.load(stream)
 
 
 def git_head() -> str:

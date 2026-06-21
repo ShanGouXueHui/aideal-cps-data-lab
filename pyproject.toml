@@ -3,7 +3,9 @@ name = "aideal-cps-data-lab"
 version = "0.1.0"
 description = "Authorized JD/Jingfen portal data collection and normalization lab for AIdeal CPS."
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+  "tomli>=2.0.1,<3"
+]
 
 [project.optional-dependencies]
 browser = [

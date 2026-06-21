@@ -90,6 +90,12 @@ bash scripts/git_publish_files_via_worktree.sh \
   "reports: update runtime evidence authority recovery" \
   reports/report_authority_recovery_latest.json
 PUBLISH_RC=$?
+if [ "$PUBLISH_RC" != "0" ]; then
+  echo "===== RUNTIME EVIDENCE PUBLISH LOG TAIL ====="
+  tail -n 80 logs/git_publish_fetch.log 2>/dev/null
+  tail -n 80 logs/git_publish_worktree.log 2>/dev/null
+  tail -n 80 logs/git_publish_push.log 2>/dev/null
+fi
 
 bash scripts/ops/run_data_lab_ci_bridge.sh validate-publish
 CI_RC=$?
