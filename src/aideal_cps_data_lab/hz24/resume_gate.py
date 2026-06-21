@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-import tomllib
+import tomli
 from pathlib import Path
 from typing import Any
 
@@ -24,7 +24,7 @@ config_path = Path("config/hz24-resume-gate.toml")
 
 def load_gate_config(path: Path = config_path) -> dict[str, Any]:
     with path.open("rb") as stream:
-        return tomllib.load(stream)
+        return tomli.load(stream)
 
 
 def issue_count(issues: dict[str, list[str]]) -> int:
@@ -178,33 +178,25 @@ def validate_datasets(
 
 def run_resume_gate(
     settings: HZ24Settings | None = None,
-    path: Path = config_path,
-) -> int:
+    config: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     settings = settings or load_settings()
-    config = load_gate_config(path)
+    config = config or load_gate_config()
     engineering = load_json(Path(str(config["engineering_report"])))
     offline = load_json(Path(str(config["offline_quality_report"])))
     migration = load_json(Path(str(config["sold_out_migration_report"])))
-    artifacts = artifact_checks(config, engineering, offline, migration)
-    try:
-        datasets, counts, details = validate_datasets(settings, config)
-    except Exception as error:
-        datasets = {"dataset_validation_completed": False}
-        counts = {}
-        details = {"dataset_error": repr(error)}
-    checks = {**artifacts, **datasets}
-    result = {
-        "schema_version": str(config["schema_version"]),
+    artifact = artifact_checks(config, engineering, offline, migration)
+    dataset, counts, details = validate_datasets(settings, config)
+    checks = {**artifact, **dataset}
+    return {
+        "schema_version": "hz24-resume-gate/v1",
         "git_head": current_git_head(),
-        "engineering_git_head": engineering.get("git_head"),
-        "tested_git_head": offline.get("git_head"),
+        "ok": all(checks.values()),
         "checks": checks,
-        "failures": [name for name, passed in checks.items() if not passed],
         "counts": counts,
         "details": details,
-        "resume_allowed": all(checks.values()),
-        "collection_started": False,
     }
-    atomic_json(Path(str(config["resume_report"])), result)
-    print(json.dumps(result, ensure_ascii=False, sort_keys=True))
-    return 0 if result["resume_allowed"] else 1
+
+
+def write_resume_report(report: dict[str, Any], path: Path) -> None:
+    atomic_json(path, report)
