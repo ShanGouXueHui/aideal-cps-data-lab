@@ -23,6 +23,8 @@ SKIP_DIRS = {
 }
 SCAN_ROOTS = ("scripts", "src", "tests", "config", "migrations")
 RUN_REF_RE = re.compile(r"(?P<quote>['\"]?)(run/[A-Za-z0-9_./{}-]+)(?P=quote)")
+SOURCE_SUFFIXES = {".py", ".sh"}
+GENERATED_SUFFIXES = {".json", ".env", ".flag", ".lock", ".pid", ".log"}
 
 
 def git_head() -> str:
@@ -55,12 +57,30 @@ def iter_files() -> list[Path]:
     return sorted(files)
 
 
-def target_status(target: str) -> tuple[bool, str]:
+def is_generated_runtime_artifact(target: str) -> bool:
+    path = Path(target)
+    name = path.name
+    suffix = path.suffix
+    if name.startswith("."):
+        return True
+    if suffix in GENERATED_SUFFIXES:
+        return True
+    if suffix == "" and ("worktree" in name or name.startswith("v")):
+        return True
     if "{" in target or "}" in target or target.endswith("_"):
-        return True, "dynamic_or_prefix_reference"
+        return True
+    return False
+
+
+def target_status(target: str) -> tuple[bool, str, bool]:
     if (ROOT / target).exists():
-        return True, "present"
-    return False, "missing"
+        return True, "present", False
+    if is_generated_runtime_artifact(target):
+        return True, "generated_runtime_artifact", False
+    suffix = Path(target).suffix
+    if suffix in SOURCE_SUFFIXES:
+        return False, "missing_source_entrypoint", True
+    return True, "non_source_runtime_reference", False
 
 
 def main() -> int:
@@ -73,7 +93,7 @@ def main() -> int:
         for line_no, line in enumerate(lines, start=1):
             for match in RUN_REF_RE.finditer(line):
                 target = match.group(2)
-                exists, status = target_status(target)
+                exists, status, blocker = target_status(target)
                 references.append(
                     {
                         "source": str(path.relative_to(ROOT)),
@@ -81,12 +101,13 @@ def main() -> int:
                         "target": target,
                         "target_exists": exists,
                         "target_status": status,
+                        "blocker": blocker,
                         "text": line.strip()[:240],
                     }
                 )
-    missing = [item for item in references if item["target_status"] == "missing"]
+    missing = [item for item in references if item["blocker"] is True]
     payload = {
-        "schema_version": "runtime-dependency-audit/v2",
+        "schema_version": "runtime-dependency-audit/v3",
         "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
         "git_head": git_head(),
         "read_only": True,
