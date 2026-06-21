@@ -1,0 +1,781 @@
+{
+  "generated_at": "2026-06-21T16:27:22Z",
+  "git_head": "306b22ae119855e412599fa2824401a7ae14f8bf",
+  "match_count": 31,
+  "matches": [
+    {
+      "content_hits": [
+        "一键领链",
+        "short_url_timeout",
+        "known_sku_count",
+        "hz21_exact_sku_locator_safe_mouse_click",
+        "所属网站",
+        "推广位"
+      ],
+      "first_lines": [
+        "{",
+        "  \"final\": {",
+        "    \"activePageText\": \"67\",",
+        "    \"has4000\": true,",
+        "    \"hasEmpty\": false,",
+        "    \"jumpInputValue\": \"67\",",
+        "    \"oneKeyCount\": 60,",
+        "    \"pagerText\": \"共 4000 条 1626364656667 前往页\","
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": true,
+      "has_promotion_slot_text": true,
+      "has_short_url_timeout": true,
+      "line_count": 959,
+      "name_hit": true,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/reports/hz21_strict_card_dom_recover_latest.json",
+      "sha256": "505ffd03a8f5c2e04f65aff4c84fc5321dd3cd5fa228bc2d3b88d0191a7ba928",
+      "size_bytes": 26949
+    },
+    {
+      "content_hits": [
+        "HZ21_PAGE_SEQUENCE"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import json",
+        "import os",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "",
+        "REPORT = Path(\"reports/hz21_strict_card_dom_recover_latest.json\")"
+      ],
+      "has_hz21_page_sequence": true,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 31,
+      "name_hit": true,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz21/strict_card_dom_recover.py",
+      "sha256": "e85e4ae5f53b3169e839cb8696495e358fb7acacf2cec931b482ec38d092cd41",
+      "size_bytes": 946
+    },
+    {
+      "content_hits": [],
+      "first_lines": [
+        "#!/usr/bin/env python3",
+        "from __future__ import annotations",
+        "",
+        "from aideal_cps_data_lab.hz21.strict_card_dom_recover import main",
+        "",
+        "if __name__ == \"__main__\":",
+        "    raise SystemExit(main())"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 7,
+      "name_hit": true,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz21_strict_card_dom_recover_page.py",
+      "sha256": "e09d54e5c2d76a3d534eef9a1c1752c760df739695669dc7031a3d1fb8dca4c0",
+      "size_bytes": 182
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "short_url_timeout",
+        "HZ21_PAGE_SEQUENCE",
+        "known_sku_count",
+        "hz21_exact_sku_locator_safe_mouse_click",
+        "所属网站",
+        "推广位"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import hashlib",
+        "import json",
+        "import subprocess",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        ""
+      ],
+      "has_hz21_page_sequence": true,
+      "has_media_site_text": true,
+      "has_promotion_slot_text": true,
+      "has_short_url_timeout": true,
+      "line_count": 106,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/scripts/ops/locate_hz21_collector_sources.py",
+      "sha256": "90af4db936b8feede8bdc7d336da7b033424127a6227a1cebf6810ebe3d0c27d",
+      "size_bytes": 3533
+    },
+    {
+      "content_hits": [
+        "short_url_timeout",
+        "HZ21_PAGE_SEQUENCE",
+        "known_sku_count",
+        "所属网站",
+        "推广位"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import hashlib",
+        "import json",
+        "import subprocess",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        ""
+      ],
+      "has_hz21_page_sequence": true,
+      "has_media_site_text": true,
+      "has_promotion_slot_text": true,
+      "has_short_url_timeout": true,
+      "line_count": 92,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/scripts/ops/inspect_hz21_runtime.py",
+      "sha256": "480e3f7fa0d356d47162a53c36b54f2dc9467bb03af1508ffaaac0c8d7621372",
+      "size_bytes": 3041
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 643,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hc_parser_20260510_190118.py",
+      "sha256": "57b016e82921972d7e06fd9c286cdd945d253c339635d74f076e7b2d8e12df73",
+      "size_bytes": 22597
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1006,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11e_click_20260510_191812.py",
+      "sha256": "75eecefaa83f80b53ec649b7715c09a6df2211ec7f2ed18e3e0410a37f643930",
+      "size_bytes": 35459
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1073,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11f_modal_sku_20260510_192147.py",
+      "sha256": "ac88d0c9c58125ca751ea5fcdc4e2afbbdbc388e0181674df549c4b459e65e64",
+      "size_bytes": 37563
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1180,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11j_rank_api_sku_20260511_014829.py",
+      "sha256": "8a9a8e120e535cdfaa41dd10150005b918a5b67404932ac0d7008ec02890519f",
+      "size_bytes": 41601
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1329,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11m_hc_pagination_20260511_023906.py",
+      "sha256": "c0f442b9cb711d2b0585e7c6ef18ff2dbf2b14660c71bc97d84a317e98ee6f9c",
+      "size_bytes": 47158
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1467,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11n_numeric_sku_gate_20260511_025503.py",
+      "sha256": "3d64a74a1eac0fc10f94254a0f375898c4846ebe7835045b399b7876d9f91d67",
+      "size_bytes": 52234
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 1467,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_hz11o_20260511_030914.py",
+      "sha256": "3d64a74a1eac0fc10f94254a0f375898c4846ebe7835045b399b7876d9f91d67",
+      "size_bytes": 52234
+    },
+    {
+      "content_hits": [
+        "一键领链",
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "import os",
+        "import json",
+        "import time",
+        "import shutil",
+        "import random",
+        "import importlib.util",
+        "from pathlib import Path",
+        "from datetime import datetime, timedelta"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 629,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz11_rank_worker_before_patch_20260510_184633.py",
+      "sha256": "7d19d2bea3daf3288b715a0dc091a4dd1e23932d7d1e000432c5c9bd958c25f5",
+      "size_bytes": 21955
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import json",
+        "import os",
+        "import random",
+        "import re",
+        "import shutil",
+        "import time"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 378,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/backups/hz9_union_guarded_daemon_20260510_175437.py",
+      "sha256": "3a3ade2e4f18a99dfa65a22c2768be691e9b7018bd78372087d6a75937873907",
+      "size_bytes": 16064
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "import json",
+        "import re",
+        "import time",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from urllib.parse import urlparse, parse_qs",
+        "",
+        "from playwright.sync_api import sync_playwright"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 267,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz11g_high_commission_network_probe.py",
+      "sha256": "1b8df53a989ee81f8f5bc74089544efc9eed231ddcfbd7791295830014de5c9f",
+      "size_bytes": 8788
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "import json",
+        "import re",
+        "import time",
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "from urllib.parse import urlparse, parse_qs, unquote",
+        "",
+        "from playwright.sync_api import sync_playwright"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 472,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz11h_high_commission_data_source_probe.py",
+      "sha256": "2bb9d9a75c0038b8bf5ee2c9b09d745d791ef7734bd14ba97b57e655bfbc65be",
+      "size_bytes": 17164
+    },
+    {
+      "content_hits": [
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "#!/usr/bin/env python3",
+        "\"\"\"HZ14 all-product collector v2.",
+        "",
+        "Fix over v1:",
+        "- HZ14 v1 reused the HZ12 collect_one helper, which expects HZ12-style",
+        "  state keys such as round_seen_skus. v1 did not initialize those keys,",
+        "  causing KeyError('round_seen_skus') before rows could be written.",
+        "- v2 monkey-patches HZ14 v1 load_state/save_state to always maintain the"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 87,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz14_all_product_full_collector_v2.py",
+      "sha256": "9e3e790b64202ee045ac5848909fa766f361488744860f9fd03c715b32088d45",
+      "size_bytes": 2702
+    },
+    {
+      "content_hits": [
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "#!/usr/bin/env python3",
+        "\"\"\"HZ14 all-product collector v3.",
+        "",
+        "Fix over v2:",
+        "- v2 confirmed pagination and commercial row quality, but stopped the whole job after",
+        "  three consecutive RuntimeError('short_url_not_found') on one problematic SKU.",
+        "- v3 treats short_url_not_found as a per-SKU skip, records it in state.skipped_skus,",
+        "  closes any modal, resets fail_streak, and continues with the next product."
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 134,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz14_all_product_full_collector_v3.py",
+      "sha256": "04db9f346db183730743b2da3d0f659b8b74b698c8fb816de2c5834f22de083d",
+      "size_bytes": 5420
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from playwright.sync_api import sync_playwright",
+        "import sys, json",
+        "",
+        "cdp_port = sys.argv[1]",
+        "",
+        "with sync_playwright() as p:",
+        "    browser = p.chromium.connect_over_cdp(f\"http://127.0.0.1:{cdp_port}\")",
+        "    pages = [pg for ctx in browser.contexts for pg in ctx.pages]"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 41,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz7_current_page_check.py",
+      "sha256": "d5f9c9309e6a9756c42fc4ce849f684acf2692c9dd8161031e2a24bb5b55865b",
+      "size_bytes": 1709
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from pathlib import Path",
+        "from playwright.sync_api import sync_playwright",
+        "import json, re, sys, time, shutil",
+        "",
+        "cdp_port = sys.argv[1]",
+        "out = Path(sys.argv[2])",
+        "latest = Path(sys.argv[3])",
+        ""
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 157,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz8_first_onekey_link.py",
+      "sha256": "36e1c7c96c225386199c34e8f66acd767b363e215ef969dabad31b1490218256",
+      "size_bytes": 6213
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from pathlib import Path",
+        "from playwright.sync_api import sync_playwright",
+        "import json, re, sys, time, shutil",
+        "",
+        "cdp_port = sys.argv[1]",
+        "out = Path(sys.argv[2])",
+        "latest = Path(sys.argv[3])",
+        ""
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 142,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz8b_first_onekey_link.py",
+      "sha256": "7689f067b455501bb955ba9bf661c1afed9927d8dff9233bf159cd6926bf26d4",
+      "size_bytes": 6276
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from pathlib import Path",
+        "from datetime import datetime",
+        "import json",
+        "import os",
+        "import random",
+        "import re",
+        "import shutil",
+        "import time"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 378,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/run/hz9_union_guarded_daemon.py",
+      "sha256": "3a3ade2e4f18a99dfa65a22c2768be691e9b7018bd78372087d6a75937873907",
+      "size_bytes": 16064
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import argparse",
+        "import json",
+        "import time",
+        "from datetime import datetime",
+        "from pathlib import Path",
+        "from typing import Any, Callable"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 226,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz22/page_prepare.py",
+      "sha256": "dbf5af6605c9ad9bd8c487a34e79687d11a4ca8d1a7ec947fb4c188df101d566",
+      "size_bytes": 7532
+    },
+    {
+      "content_hits": [
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "from pathlib import Path",
+        "from typing import Any",
+        "",
+        "from aideal_cps_data_lab.application.candidate_validation import (",
+        "    expected_feed_schema,",
+        "    expected_manifest_schema,"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 154,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz23/finalize_manifest.py",
+      "sha256": "2a53dae49ceeeb22d27f3fcd22d9a00d445afc5640afdcd5381da01bedee80ea",
+      "size_bytes": 5344
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "",
+        "ONE_KEY_TEXT = \"一键领链\"",
+        "PRICE_TEXT = \"到手价\"",
+        "COMMISSION_TEXT = \"佣金\"",
+        "PRICE_PATTERN = r\"到手价\\s*[￥¥]\\s*([0-9]+(?:\\.[0-9]+)?)\"",
+        "COMMISSION_RATE_PATTERN = r\"佣金比例\\s*([0-9]+(?:\\.[0-9]+)?%)\""
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 72,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/browser_contract.py",
+      "sha256": "4a3f3dc276fc04714059d20bb213e66ca17728de3600246487c19801efff2e6c",
+      "size_bytes": 2524
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "from typing import Any",
+        "",
+        "ONE_KEY_TEXT = \"一键领链\"",
+        "",
+        "",
+        "def _visible(locator) -> list[Any]:"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 90,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/card_actions.py",
+      "sha256": "2cbfa71303d21f980ce145ecbe307125f8ba9873fb2cba7d68119bc21f3199e7",
+      "size_bytes": 2934
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "from typing import Any",
+        "",
+        "",
+        "SNAPSHOT_SCRIPT = \"\"\"",
+        "() => {",
+        "  const normalize = value => String(value || '').replace(/\\s+/g, ' ').trim();"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 108,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/inspection_dom.py",
+      "sha256": "5c6d1d323e00c0fd16ace942d61f6fb29ffa7a9ae06d22920a88dcd1ec7f0a22",
+      "size_bytes": 3659
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import re",
+        "from datetime import datetime, timedelta",
+        "from typing import Any",
+        "from urllib.parse import urlparse",
+        "",
+        "from .browser_contract import ("
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 179,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/jd_page.py",
+      "sha256": "d4a92f8a7b9f51141a5707397e6f9d899e8abeae3d1d05eef24cc2cd041de66d",
+      "size_bytes": 5925
+    },
+    {
+      "content_hits": [
+        "known_sku_count"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import json",
+        "import os",
+        "import subprocess",
+        "import sys",
+        "import tempfile",
+        "import unittest"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 158,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/tests/test_hz23_finalize_gate.py",
+      "sha256": "7ace2023ab8f6f36a191770f5103c4267797ff9bb42f7d679b06d390b6a87d0f",
+      "size_bytes": 6053
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import json",
+        "import tempfile",
+        "import unittest",
+        "from pathlib import Path",
+        "",
+        "from aideal_cps_data_lab.hz24.batch import BatchState"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 77,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/tests/test_hz24_refactor.py",
+      "sha256": "b03e2fbc37ba07ae0bedb486d6dba6c50d81673de9180048148133e2b690e70a",
+      "size_bytes": 2813
+    },
+    {
+      "content_hits": [
+        "一键领链"
+      ],
+      "first_lines": [
+        "from __future__ import annotations",
+        "",
+        "import unittest",
+        "",
+        "from aideal_cps_data_lab.hz24.legacy_sold_out import (",
+        "    collect_evidence,",
+        "    evidence_from_failure,",
+        "    validate_evidence,"
+      ],
+      "has_hz21_page_sequence": false,
+      "has_media_site_text": false,
+      "has_promotion_slot_text": false,
+      "has_short_url_timeout": false,
+      "line_count": 66,
+      "name_hit": false,
+      "path": "/home/cpsdata/projects/aideal-cps-data-lab/tests/test_hz24_sold_out_migration.py",
+      "sha256": "e7104bda2959542761499dd7dabd778aedc334b67e017149a89f33d92157f352",
+      "size_bytes": 1939
+    }
+  ],
+  "read_only": true,
+  "roots": [
+    "/home/cpsdata/projects/aideal-cps-data-lab",
+    "/home/cpsdata",
+    "/home/cpsdata/projects",
+    "/home/cpsdata/backups"
+  ],
+  "scanned_file_count": 190084,
+  "schema_version": "hz21-collector-source-locator/v1",
+  "status": "FOUND"
+}
