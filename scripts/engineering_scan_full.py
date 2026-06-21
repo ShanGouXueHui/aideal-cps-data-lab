@@ -13,9 +13,6 @@ from aideal_cps_data_lab.git_state import current_git_head
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     settings = load_limits()
-    settings["excluded_directories"] = [
-        value for value in settings["excluded_directories"] if value != "run"
-    ]
     settings["scan_extensions"] = sorted(
         set(settings["scan_extensions"])
         | {".js", ".jsx", ".ts", ".tsx", ".html", ".css", ".scss", ".vue"}
