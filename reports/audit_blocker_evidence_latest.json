@@ -1,0 +1,57 @@
+{
+  "blocker_count": 4,
+  "blockers": [
+    {
+      "category": "large_file",
+      "detail": "718 lines exceeds 300",
+      "line": 1,
+      "path": "run/ci_bridge_previous_20260621_152217/project_engineering_audit_latest.json",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": ""
+    },
+    {
+      "category": "large_file",
+      "detail": "718 lines exceeds 300",
+      "line": 1,
+      "path": "run/ci_bridge_previous_20260621_153033/project_engineering_audit_latest.json",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": ""
+    },
+    {
+      "category": "large_file",
+      "detail": "718 lines exceeds 300",
+      "line": 1,
+      "path": "run/ci_bridge_previous_20260621_154248/project_engineering_audit_latest.json",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": ""
+    },
+    {
+      "category": "large_file",
+      "detail": "718 lines exceeds 300",
+      "line": 1,
+      "path": "run/ci_bridge_previous_20260621_154707/project_engineering_audit_latest.json",
+      "scope": "active",
+      "severity": "blocker",
+      "symbol": ""
+    }
+  ],
+  "git_head": "c8b07f41c060ccce4a580087060e44a9825f491a",
+  "quality_gate_counts": {
+    "config_syntax": 0,
+    "duplicate_assignment": 0,
+    "duplicate_config_key": 0,
+    "duplicate_constant_assignment": 0,
+    "duplicate_default_source": 0,
+    "duplicate_definition": 0,
+    "duplicate_implementation": 0,
+    "large_file": 4,
+    "long_function": 0,
+    "python_syntax": 0,
+    "shell_syntax": 0
+  },
+  "schema_version": "audit-blocker-evidence/v1",
+  "status": "FAIL"
+}
