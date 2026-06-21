@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -32,7 +32,7 @@ class RepairSnapshot:
 
 def load_repair_config(path: Path = repair_config_path) -> dict[str, Any]:
     with path.open("rb") as stream:
-        return tomllib.load(stream)
+        return tomli.load(stream)
 
 
 def _issue_count(issues: dict[str, list[str]]) -> int:
