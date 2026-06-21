@@ -1,0 +1,17 @@
+{
+  "exact_match_count": 0,
+  "expected": {
+    "row_count": 3304,
+    "sha256": "509d5b09bc9843d2e083ecd29fa2cfc83569c4cf877ced7a13d37a1e820d457a"
+  },
+  "generated_at": "2026-06-21T17:21:58",
+  "match_count": 0,
+  "matches": [],
+  "read_only": true,
+  "roots": [
+    "/home/cpsdata"
+  ],
+  "scanned_archive_count": 0,
+  "schema_version": "hz23-lkg-archive-locator/v1",
+  "status": "NOT_FOUND_EXACT"
+}
