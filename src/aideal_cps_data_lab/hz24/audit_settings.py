@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -39,7 +39,7 @@ class AuditSettings:
 def load_audit_settings(settings: HZ24Settings) -> AuditSettings:
     path = settings.root / "config/hz24-audit.toml"
     with path.open("rb") as stream:
-        data = tomllib.load(stream)
+        data = tomli.load(stream)
     root = settings.root
     return AuditSettings(
         structure_schema=str(data["structure_schema"]),

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -21,7 +21,7 @@ class TestFixtures:
 def load_test_fixtures() -> TestFixtures:
     root = Path(__file__).resolve().parents[3]
     with (root / "config/test-fixtures.toml").open("rb") as stream:
-        payload = tomllib.load(stream)
+        payload = tomli.load(stream)
     return TestFixtures(
         sku=str(payload["sku"]),
         item_url=str(payload["item_url"]),

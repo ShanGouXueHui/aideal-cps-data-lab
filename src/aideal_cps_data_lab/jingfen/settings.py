@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -22,7 +22,7 @@ def load_jingfen_settings(root: Path | None = None) -> JingfenSettings:
     root = root or Path.cwd()
     path = root / "config/jingfen.toml"
     with path.open("rb") as stream:
-        data = tomllib.load(stream)
+        data = tomli.load(stream)
     return JingfenSettings(
         auth_probe_urls=tuple(str(value) for value in data["auth_probe_urls"]),
         login_start_url=str(data["login_start_url"]),

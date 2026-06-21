@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 
 from .settings import HZ24Settings
@@ -19,7 +19,7 @@ def load_validation_config(
 ) -> ValidationConfig:
     path = settings.root / "config/hz24-validation.toml"
     with path.open("rb") as stream:
-        data = tomllib.load(stream)
+        data = tomli.load(stream)
     return ValidationConfig(
         linked_manifest_schema=str(data["linked_manifest_schema"]),
         outcome_manifest_schema=str(data["outcome_manifest_schema"]),

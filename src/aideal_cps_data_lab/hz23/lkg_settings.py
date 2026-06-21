@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import tomllib
+import tomli
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -20,7 +20,7 @@ class LastKnownGoodSettings:
 
 def load_last_known_good_settings(path: Path) -> LastKnownGoodSettings:
     with path.open("rb") as stream:
-        data = tomllib.load(stream)
+        data = tomli.load(stream)
     return LastKnownGoodSettings(
         schema_version=str(data["schema_version"]),
         expected_round_id=str(data["expected_round_id"]),
