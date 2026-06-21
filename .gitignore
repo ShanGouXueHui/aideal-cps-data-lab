@@ -24,6 +24,7 @@ __pycache__/
 .playwright/
 playwright/.auth/
 .auth/
+*.egg-info/
 *.jpeg
 *.webp
 reports/hz23_observer_status_latest.json
