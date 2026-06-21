@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Publish selected non-secret runtime evidence from an isolated worktree.
-# Default target branch is runtime-evidence. This script must never push main.
-# No set -e is used.
+# Publish selected non-secret runtime evidence. Default branch: runtime-evidence.
 
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 PROJECT_DIR="${AIDEAL_PROJECT_DIR:-$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)}"
