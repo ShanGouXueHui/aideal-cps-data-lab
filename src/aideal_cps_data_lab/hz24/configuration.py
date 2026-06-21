@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-import tomllib
+import tomli
 from pathlib import Path
 
 from .settings_models import HZ24Settings
@@ -10,7 +10,7 @@ from .settings_sections import browser_settings, collection_settings, contract_s
 
 def _read(path: Path) -> dict[str, object]:
     with path.open("rb") as stream:
-        return tomllib.load(stream)
+        return tomli.load(stream)
 
 
 def load_settings() -> HZ24Settings:
