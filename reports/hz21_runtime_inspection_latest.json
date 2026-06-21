@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-06-21T16:01:43Z",
+  "git_head": "d078c8d4fcd9579dc382495c120eacf240453865",
+  "read_only": true,
+  "schema_version": "hz21-runtime-inspection/v1",
+  "target": "run/hz21_strict_card_dom_recover_page.py",
+  "target_exists": false
+}
