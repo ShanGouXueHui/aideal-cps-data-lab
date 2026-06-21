@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
-# Publish selected non-secret runtime artifacts from an isolated worktree.
-# Usage: git_publish_files_via_worktree.sh "commit message" path [path ...]
+# Publish selected non-secret runtime evidence from an isolated worktree.
+# Default target branch is runtime-evidence. This script must never push main.
 # No set -e is used.
 
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 PROJECT_DIR="${AIDEAL_PROJECT_DIR:-$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)}"
+TARGET_BRANCH="${AIDEAL_RUNTIME_EVIDENCE_BRANCH:-runtime-evidence}"
 
 if ! cd "$PROJECT_DIR"; then
   echo "PUBLISH_ERROR=project_directory_unavailable"
   exit 1
 fi
+
+case "$TARGET_BRANCH" in
+  ""|main|master|*/main|*/master)
+    echo "PUBLISH_ERROR=main_publish_forbidden:$TARGET_BRANCH"
+    exit 2
+    ;;
+esac
 
 MESSAGE="${1:-}"
 if [ "$#" -gt 0 ]; then
@@ -24,17 +32,13 @@ FILES=()
 for path in "$@"; do
   case "$path" in
     /*|*".."*|*.jsonl|.secrets/*|run/*|logs/*|*.env|*.pem|*.key)
-      echo "PUBLISH_ERROR=unsafe_path:$path"
-      exit 2
-      ;;
+      echo "PUBLISH_ERROR=unsafe_path:$path"; exit 2 ;;
   esac
   case "$path" in
-    reports/*.json|data/export/*.json)
-      ;;
-    *)
-      echo "PUBLISH_ERROR=path_not_allowlisted:$path"
-      exit 2
-      ;;
+    reports/project_engineering_audit_latest.json|reports/offline_quality_latest.json)
+      echo "PUBLISH_ERROR=quality_report_forbidden:$path"; exit 2 ;;
+    reports/*.json|data/export/*.json) ;;
+    *) echo "PUBLISH_ERROR=path_not_allowlisted:$path"; exit 2 ;;
   esac
   if [ -f "$path" ]; then
     FILES+=("$path")
@@ -47,24 +51,32 @@ if [ "${#FILES[@]}" -eq 0 ]; then
 fi
 
 mkdir -p run logs
-WORKTREE="$(mktemp -d "${TMPDIR:-/tmp}/aideal-git-publish.XXXXXX")"
-cleanup() {
+WORKTREE="$(mktemp -d "${TMPDIR:-/tmp}/aideal-runtime-evidence.XXXXXX")"
+aideal_runtime_evidence_cleanup() {
   git worktree remove --force "$WORKTREE" >/dev/null 2>&1
-  rm -rf "$WORKTREE" >/dev/null 2>&1
+  rmdir "$WORKTREE" >/dev/null 2>&1
   git worktree prune >/dev/null 2>&1
   return 0
 }
-trap cleanup EXIT
+trap aideal_runtime_evidence_cleanup EXIT
 
-GIT_TERMINAL_PROMPT=0 git fetch origin main \
+GIT_TERMINAL_PROMPT=0 git fetch origin main "$TARGET_BRANCH" \
   > logs/git_publish_fetch.log 2>&1
 FETCH_RC=$?
-if [ "$FETCH_RC" != "0" ]; then
-  echo "PUBLISH_ERROR=fetch_failed"
-  exit 1
+if [ "$FETCH_RC" = "0" ]; then
+  WORKTREE_BASE="origin/$TARGET_BRANCH"
+else
+  GIT_TERMINAL_PROMPT=0 git fetch origin main \
+    > logs/git_publish_fetch.log 2>&1
+  FETCH_MAIN_RC=$?
+  if [ "$FETCH_MAIN_RC" != "0" ]; then
+    echo "PUBLISH_ERROR=fetch_failed"
+    exit 1
+  fi
+  WORKTREE_BASE="origin/main"
 fi
 
-git worktree add --detach "$WORKTREE" origin/main \
+git worktree add --detach "$WORKTREE" "$WORKTREE_BASE" \
   > logs/git_publish_worktree.log 2>&1
 WORKTREE_RC=$?
 if [ "$WORKTREE_RC" != "0" ]; then
@@ -94,29 +106,15 @@ if [ "$COMMIT_RC" != "0" ]; then
   exit 1
 fi
 
-PUSH_RC=1
-for attempt in 1 2 3; do
-  GIT_TERMINAL_PROMPT=0 git push origin HEAD:main \
-    > "$PROJECT_DIR/logs/git_publish_push.log" 2>&1
-  PUSH_RC=$?
-  if [ "$PUSH_RC" = "0" ]; then
-    break
-  fi
-  GIT_TERMINAL_PROMPT=0 git fetch origin main \
-    >> "$PROJECT_DIR/logs/git_publish_push.log" 2>&1
-  git rebase origin/main \
-    >> "$PROJECT_DIR/logs/git_publish_push.log" 2>&1
-  REBASE_RC=$?
-  if [ "$REBASE_RC" != "0" ]; then
-    break
-  fi
-done
-
+GIT_TERMINAL_PROMPT=0 git push origin HEAD:"$TARGET_BRANCH" \
+  > "$PROJECT_DIR/logs/git_publish_push.log" 2>&1
+PUSH_RC=$?
 if [ "$PUSH_RC" != "0" ]; then
   echo "PUBLISH_ERROR=push_failed"
   exit 1
 fi
 
 echo "PUBLISH_STATUS=committed"
+echo "PUBLISHED_BRANCH=$TARGET_BRANCH"
 echo "PUBLISHED_HEAD=$(git rev-parse HEAD)"
 exit 0
