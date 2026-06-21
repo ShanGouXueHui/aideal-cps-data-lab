@@ -1,11 +1,5 @@
 {
   "active_blocker_count": 0,
-  "artifact": {
-    "artifact_digest": "sha256:a7c956189bedd079ce6f06c60cae9c611031e58ec03bf2657f0dd7d29b6a5ee6",
-    "artifact_id": 7768968773,
-    "artifact_name": "combined-engineering-audit-report",
-    "workflow_run_id": 27884133792
-  },
   "blocker_count": 0,
   "compatibility_blocker_count": 0,
   "config_syntax_count": 0,
@@ -15,12 +9,12 @@
   "duplicate_default_source_count": 0,
   "duplicate_definition_count": 0,
   "duplicate_implementation_count": 0,
-  "files_scanned": 258,
+  "files_scanned": 251,
   "findings_omitted_from_summary": true,
   "full_gate_blocker_count": 0,
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-20T21:17:15",
-  "git_head": "33cd3ec9174ac772f3874ab88c83189e548f9990",
+  "generated_at": "2026-06-21T15:50:57",
+  "git_head": "7ab447012513d99df6ef431ac428f51825334ee2",
   "global_blocker_count": 0,
   "historical_blocker_count": 0,
   "large_file_count": 0,
@@ -45,20 +39,18 @@
   "status": "PASS",
   "support_blocker_count": 0,
   "validation_provenance": {
-    "base_git_head": "b5ebdbff418c97f12cb6f918bb8a1f9af5bdc1cf",
-    "changed_path": "tests/test_quality_report_pointers.py",
-    "final_git_head": "33cd3ec9174ac772f3874ab88c83189e548f9990",
-    "pr_number": 11,
-    "source_git_head": "e2de4904fd378ff8cf817ea109d7ebb6f7701f3f",
-    "tree_equivalence": "verified_identical_single-file_diff"
+    "source": "runtime-evidence",
+    "source_path": "reports/ci_bridge_evidence_latest.json",
+    "source_git_head": "7ab447012513d99df6ef431ac428f51825334ee2",
+    "source_evidence_commit": "c6398d03dfd9a2bfa786ab8ca6777c527e522a32"
   },
-  "warning_count": 72,
+  "warning_count": 71,
   "warning_summary": {
     "blocker_file_count": 0,
     "blocker_files_by_scope": {},
     "blocker_scope_counts": {},
     "category_counts": {
-      "repeated_literal": 72
+      "repeated_literal": 71
     },
     "top_blocker_files": []
   }
