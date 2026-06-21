@@ -7,12 +7,13 @@
 # - Missing/not-mainlined HZ21 collector is recorded as collect_unavailable and does not block scan observation.
 # - Strong JD verification signals stop safely with checkpoint.
 # - HZ23_RESUME=1 preserves successful rows from the same round.
+# - Runtime evidence publishing uses JSON-only files accepted by scripts/git_publish_files_via_worktree.sh.
 # No set -e is used.
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
 . config/hz23-service.env
-mkdir -p logs reports docs/ops run data/import data/state data/history data/export
+mkdir -p logs reports run data/import data/state data/history data/export
 
 LOCK_FILE="run/hz23_mainline.lock"
 exec 9>"$LOCK_FILE"
@@ -38,7 +39,6 @@ DAY_END="$HZ23_DAY_END"
 ROWS="reports/hz23_round_${ROUND_ID}_rows.jsonl"
 SUMMARY="reports/hz23_round_${ROUND_ID}_latest.json"
 LATEST_SUMMARY="reports/hz23_round_latest.json"
-MD="docs/ops/DL2_HZ23_ROUND_${ROUND_ID}.md"
 RESUME_SUMMARY="${HZ23_RESUME_SUMMARY:-$LATEST_SUMMARY}"
 PREVIOUS_DURATION_SECONDS=0
 
@@ -241,13 +241,13 @@ PY
 done
 
 END_EPOCH="$(date +%s)"
-python3 - "$ROUND_PAGE_START" "$PAGE_END" "$ROWS" "$SUMMARY" "$LATEST_SUMMARY" "$MD" "$STOP_PAGE" "$STOP_REASON" "$ROUND_ID" "$START_EPOCH" "$END_EPOCH" "$PREVIOUS_DURATION_SECONDS" <<'PY'
+python3 - "$ROUND_PAGE_START" "$PAGE_END" "$ROWS" "$SUMMARY" "$LATEST_SUMMARY" "$STOP_PAGE" "$STOP_REASON" "$ROUND_ID" "$START_EPOCH" "$END_EPOCH" "$PREVIOUS_DURATION_SECONDS" <<'PY'
 import json,sys
 from pathlib import Path
 start,end=int(sys.argv[1]),int(sys.argv[2])
-rows_path,summary,latest,md=map(Path,sys.argv[3:7])
-stop_page=sys.argv[7] or None; stop_reason=sys.argv[8] or None; round_id=sys.argv[9]
-start_epoch,end_epoch=int(sys.argv[10]),int(sys.argv[11]); previous=int(sys.argv[12])
+rows_path,summary,latest=map(Path,sys.argv[3:6])
+stop_page=sys.argv[6] or None; stop_reason=sys.argv[7] or None; round_id=sys.argv[8]
+start_epoch,end_epoch=int(sys.argv[9]),int(sys.argv[10]); previous=int(sys.argv[11])
 rows=[]
 if rows_path.exists():
     rows=[json.loads(x) for x in rows_path.read_text(encoding='utf-8').splitlines() if x.strip()]
@@ -270,8 +270,8 @@ out={
  'resumed':previous>0
 }
 text=json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)
-summary.write_text(text,encoding='utf-8'); latest.write_text(text,encoding='utf-8')
-md.write_text('# DL2 HZ23 Observation Round\n\n```json\n'+text+'\n```\n',encoding='utf-8')
+summary.write_text(text,encoding='utf-8')
+latest.write_text(text,encoding='utf-8')
 print(json.dumps(out,ensure_ascii=False,sort_keys=True))
 PY
 
@@ -288,12 +288,12 @@ if [ "$COMPLETE" = "true" ]; then
   .venv-browser/bin/python run/hz23_finalize_round.py "$ROUND_ID" "$SUMMARY"
 fi
 
-PUBLISH_FILES=("$SUMMARY" "$LATEST_SUMMARY" "$MD")
+PUBLISH_FILES=("$SUMMARY" "$LATEST_SUMMARY")
 for f in reports/hz23_prepare_page*_latest.json reports/hz23_scan_page*_latest.json reports/hz23_collect_page_*_latest.json reports/hz21_strict_card_dom_recover_latest.json data/export/aideal_cps_products_commercial_candidate_manifest.json; do
   [ -f "$f" ] && PUBLISH_FILES+=("$f")
 done
 bash scripts/git_publish_files_via_worktree.sh \
-  "docs: publish HZ23 observation round ${ROUND_ID}" \
+  "reports: publish HZ23 observation round ${ROUND_ID}" \
   "${PUBLISH_FILES[@]}" \
   > logs/hz23_round_publish.log 2>&1
 PUBLISH_RC=$?
