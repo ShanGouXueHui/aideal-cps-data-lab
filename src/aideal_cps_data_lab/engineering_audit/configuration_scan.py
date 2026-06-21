@@ -3,7 +3,7 @@ from __future__ import annotations
 import configparser
 import json
 import re
-import tomllib
+import tomli
 from collections import defaultdict
 from pathlib import Path
 from typing import Callable
@@ -71,8 +71,8 @@ def _scan_toml(text: str, path: Path) -> tuple[list[Finding], list[DefaultSource
         if source:
             defaults.append(source)
     try:
-        tomllib.loads(text)
-    except (tomllib.TOMLDecodeError, ValueError) as exc:
+        tomli.loads(text)
+    except (tomli.TOMLDecodeError, ValueError) as exc:
         findings.append(_finding(path, 1, "", str(exc), "config_syntax"))
     return findings, defaults
 
