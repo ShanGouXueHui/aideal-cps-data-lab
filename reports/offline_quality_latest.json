@@ -1,10 +1,4 @@
 {
-  "artifact": {
-    "artifact_digest": "sha256:68c12521cb479cafb864826ff89cc89ade805aa6c832794e04f1bfbe6e9e503d",
-    "artifact_id": 7768968632,
-    "artifact_name": "offline-quality-report",
-    "workflow_run_id": 27884133792
-  },
   "checks": {
     "compile_ok": true,
     "dependency_install_ok": true,
@@ -14,8 +8,8 @@
     "tests_ok": true
   },
   "compile_failures": [],
-  "generated_at": "2026-06-20T21:17:15",
-  "git_head": "33cd3ec9174ac772f3874ab88c83189e548f9990",
+  "generated_at": "2026-06-21T15:50:57",
+  "git_head": "7ab447012513d99df6ef431ac428f51825334ee2",
   "jd_live_called": false,
   "offline_mode": true,
   "runner_error": "",
@@ -27,11 +21,9 @@
   "test_skipped_count": 0,
   "tests_run": 69,
   "validation_provenance": {
-    "base_git_head": "b5ebdbff418c97f12cb6f918bb8a1f9af5bdc1cf",
-    "changed_path": "tests/test_quality_report_pointers.py",
-    "final_git_head": "33cd3ec9174ac772f3874ab88c83189e548f9990",
-    "pr_number": 11,
-    "source_git_head": "e2de4904fd378ff8cf817ea109d7ebb6f7701f3f",
-    "tree_equivalence": "verified_identical_single-file_diff"
+    "source": "runtime-evidence",
+    "source_path": "reports/ci_bridge_evidence_latest.json",
+    "source_git_head": "7ab447012513d99df6ef431ac428f51825334ee2",
+    "source_evidence_commit": "c6398d03dfd9a2bfa786ab8ca6777c527e522a32"
   }
 }
