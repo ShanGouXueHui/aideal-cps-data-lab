@@ -8,14 +8,39 @@ from pathlib import Path
 
 ROOT = Path.cwd()
 OUTPUT = ROOT / "reports" / "runtime_dependency_audit_latest.json"
-TEXT_EXTENSIONS = {".py", ".sh", ".toml", ".yaml", ".yml", ".json", ".md"}
-SKIP_DIRS = {".git", ".venv", ".venv-browser", "logs", "run", "data", "reports", "__pycache__"}
-RUN_REF_RE = re.compile(r"(?P<quote>['\"]?)(run/[A-Za-z0-9_./-]+)(?P=quote)")
+TEXT_EXTENSIONS = {".py", ".sh", ".toml", ".yaml", ".yml", ".json"}
+SKIP_DIRS = {
+    ".git",
+    ".github",
+    ".venv",
+    ".venv-browser",
+    "__pycache__",
+    "backups",
+    "data",
+    "docs",
+    "logs",
+    "reports",
+}
+SCAN_ROOTS = ("scripts", "src", "tests", "config", "migrations")
+RUN_REF_RE = re.compile(r"(?P<quote>['\"]?)(run/[A-Za-z0-9_./{}-]+)(?P=quote)")
 
 
 def git_head() -> str:
-    result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False)
+    result = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
     return result.stdout.strip() if result.returncode == 0 else ""
+
+
+def is_scan_target(path: Path) -> bool:
+    relative = path.relative_to(ROOT)
+    if set(relative.parts) & SKIP_DIRS:
+        return False
+    return bool(relative.parts and relative.parts[0] in SCAN_ROOTS)
 
 
 def iter_files() -> list[Path]:
@@ -23,11 +48,19 @@ def iter_files() -> list[Path]:
     for path in ROOT.rglob("*"):
         if not path.is_file():
             continue
-        if set(path.relative_to(ROOT).parts) & SKIP_DIRS:
+        if not is_scan_target(path):
             continue
         if path.suffix in TEXT_EXTENSIONS:
             files.append(path)
     return sorted(files)
+
+
+def target_status(target: str) -> tuple[bool, str]:
+    if "{" in target or "}" in target or target.endswith("_"):
+        return True, "dynamic_or_prefix_reference"
+    if (ROOT / target).exists():
+        return True, "present"
+    return False, "missing"
 
 
 def main() -> int:
@@ -40,21 +73,24 @@ def main() -> int:
         for line_no, line in enumerate(lines, start=1):
             for match in RUN_REF_RE.finditer(line):
                 target = match.group(2)
+                exists, status = target_status(target)
                 references.append(
                     {
                         "source": str(path.relative_to(ROOT)),
                         "line": line_no,
                         "target": target,
-                        "target_exists": (ROOT / target).exists(),
+                        "target_exists": exists,
+                        "target_status": status,
                         "text": line.strip()[:240],
                     }
                 )
-    missing = [item for item in references if not item["target_exists"]]
+    missing = [item for item in references if item["target_status"] == "missing"]
     payload = {
-        "schema_version": "runtime-dependency-audit/v1",
+        "schema_version": "runtime-dependency-audit/v2",
         "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
         "git_head": git_head(),
         "read_only": True,
+        "scan_roots": list(SCAN_ROOTS),
         "reference_count": len(references),
         "missing_reference_count": len(missing),
         "status": "PASS" if not missing else "FAIL",
@@ -62,7 +98,10 @@ def main() -> int:
         "missing_references": missing,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    OUTPUT.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     print("STATUS=" + payload["status"])
     print("REFERENCE_COUNT=" + str(len(references)))
     print("MISSING_REFERENCE_COUNT=" + str(len(missing)))
