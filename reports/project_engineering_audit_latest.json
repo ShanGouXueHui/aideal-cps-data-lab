@@ -9,7 +9,7 @@
   "duplicate_default_source_count": 0,
   "duplicate_definition_count": 0,
   "duplicate_implementation_count": 0,
-  "files_scanned": 259,
+  "files_scanned": 260,
   "findings": [
     {
       "category": "repeated_literal",
@@ -220,9 +220,18 @@
     },
     {
       "category": "repeated_literal",
-      "detail": "'$(id -un)' repeated in 3 files: scripts/ops/recover_report_authority_on_sg.sh, scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh",
+      "detail": "'$(id -un)' repeated in 4 files: scripts/ops/recover_report_authority_on_sg.sh, scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/ops/run_report_authority_recovery_from_hangzhou.sh",
       "line": 0,
       "path": "scripts/ops/recover_report_authority_on_sg.sh",
+      "scope": "active",
+      "severity": "warning",
+      "symbol": ""
+    },
+    {
+      "category": "repeated_literal",
+      "detail": "'$PROJECT_DIR/config/ci-bridge.env' repeated in 3 files: scripts/ops/run_ci_bridge_from_hangzhou.sh, scripts/ops/run_data_lab_ci_bridge.sh, scripts/ops/run_report_authority_recovery_from_hangzhou.sh",
+      "line": 0,
+      "path": "scripts/ops/run_ci_bridge_from_hangzhou.sh",
       "scope": "active",
       "severity": "warning",
       "symbol": ""
@@ -671,8 +680,8 @@
   ],
   "full_gate_blocker_count": 0,
   "gate_blocker_count": 0,
-  "generated_at": "2026-06-21T07:03:51",
-  "git_head": "de8af39196c342a94191e84451ebcf80085fa458",
+  "generated_at": "2026-06-21T07:04:05",
+  "git_head": "459f19361263ec652e6465ce81198023111bf549",
   "global_blocker_count": 0,
   "historical_blocker_count": 0,
   "large_file_count": 0,
@@ -700,10 +709,10 @@
     "blocker_files_by_scope": {},
     "blocker_scope_counts": {},
     "category_counts": {
-      "repeated_literal": 73
+      "repeated_literal": 74
     },
     "top_blocker_files": []
   },
   "support_blocker_count": 0,
-  "warning_count": 73
+  "warning_count": 74
 }
