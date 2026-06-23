@@ -79,23 +79,43 @@ report git_head=current main
 
 非敏感共享参数进入版本化配置；环境差异进入环境变量；Secret 进入服务器 Secret。密码、Token、Cookie、Profile、私钥和数据库密码不得进入 GitHub。
 
-## 交互习惯
+## 2026-06-24 HZ23 observation 检查点记忆
 
-- 中文、职业化、直接、结构化。
-- 优先直接读取、修改和确认 GitHub。
-- 长代码、复杂脚本和文档直接上传 GitHub。
-- 用户只执行仓库内审核过的单一 `.sh` 入口。
-- 日志写入 `logs/`、`reports/` 或 `docs/debug/`，用户只返回 Summary。
-- 每次 GitHub 写入后二次确认。
-- 不使用 Codex CLI。
-- Shell 不使用 `set -e`。
-- 自动测试禁止 JD live。
+### 已确认状态
 
-## 当前长期记忆
+- HZ23 smoke-now 已通过：`RUN_RC=0`、`PUBLISH_RC=0`、`DEPENDENCY_INSTALL_RC=0`、`DEPENDENCY_VERIFY_RC=0`。
+- 已解除的低级问题：`PYTHONPATH` 缺失、`.venv-browser` 缺 `tomli`、旧 PREP/SCAN/COLLECT 报告误读、JSON-only runtime evidence 发布路径。
+- 京东风控曾出现 `risk_before` / `risk_after_jump`，人工验证后 page 1 smoke 已恢复正常：`risk=[]`、`has4000=true`、`oneKeyCount=60`、`skuCount=60`。
+- HZ21 collector 仍是受控 fail-closed：`reason=hz21_collector_not_mainlined`，因此 HZ23 现阶段只允许 observation scan，不得声明短链采集成功。
+- 旧后台进程已清理，仅保留当前有效 observation scheduler。
 
-- 代码治理逻辑已经清零，正式验收仍因报告绑定未闭环。
-- 新加坡可能存在旧任务继续把工程审计提交到 main。
-- 必须先停止旧任务并建立 `runtime-evidence`，再执行 HZ23 只读盘点。
-- HZ23 last-known-good 为 3304 行，当前 latest 为 0 行无效。
-- HZ24 72/5/144 无生产落地证据。
-- MySQL、publish 和 AIdeal CPS 同步均未开始。
+### 当前有效后台任务
+
+- 服务器：杭州 `cpsdata`，路径 `/home/cpsdata/projects/aideal-cps-data-lab`。
+- 当前有效任务：`scripts/ops/schedule_hz23_observation_daytime.sh`。
+- PID 文件：`run/hz23_observation_daytime_scheduler.pid`。
+- 记录过的有效 PID：`424144`；其子进程 sleep：`424147`。
+- 目标时间：`2026-06-24T09:35:00` 杭州服务器本地时间。
+- 范围：`PAGE_START=1`、`PAGE_END=67`。
+- 自动结果报告：`runtime-evidence:reports/hz23_observation_auto_latest.json`。
+- 自动运行摘要：`runtime-evidence:reports/hz23_round_<ROUND_ID>_latest.json` 与 `runtime-evidence:reports/hz23_round_latest.json`。
+
+### 明天/下次续接时优先检查
+
+1. 先读取 `runtime-evidence:reports/hz23_observation_auto_latest.json`，不要先让用户重跑。
+2. 判断 `status` 是否仍为 `SCHEDULED`；若仍是 scheduled，再让用户只读检查 PID 和 scheduler log。
+3. 若已完成，检查：`run_rc`、`summary.stop_reason`、`summary.stop_page`、`summary.completed_pages`、`summary.unfinished_pages`、`summary.scanned_total`、`summary.collect_unavailable_pages`。
+4. 若 `run_rc=0` 且 `unfinished_pages=[]`，说明 HZ23 observation 1-67 完成；下一步只允许做数据质量验证和候选/manifest 检查。
+5. 若 `stop_reason=outside_daytime`，用同一 `ROUND_ID`、`HZ23_RESUME=1` 续跑；不要从头覆盖。
+6. 若 `stop_reason` 为 `risk_*`、`risk_before`、`risk_after_jump`，先处理京东人工验证/风控冷却，不要继续自动重试。
+7. 若 `stop_reason=prep_entry_failed`、`scan_entry_failed`、`collector_report_error`，先读取对应 log_tail 和 page report，不要推断。
+8. 若完成但 `collect_unavailable_pages` 覆盖大量页面，这是预期，因为 HZ21 仍未主线化；不得升级为商用发布依据。
+9. 禁止继续旧 HZ23 LKG 3304 恢复路线；旧 3304 已判定当前磁盘不可恢复。
+10. 在新 HZ23 observation 与候选质量门禁未通过前，仍禁止 HZ24、MySQL 初始化、business publish、AIdeal CPS 同步。
+
+### 严禁事项
+
+- 不得把 runtime evidence 提交到 `main`。
+- 不得用 seen/import 文件拼凑旧 3304。
+- 不得因 smoke 或 observation 通过就启用 HZ24/MySQL/publish/AIdeal CPS。
+- 不得忽略 `collect_unavailable_pages`；短链采集未主线化前，observation 只能证明页面扫描能力。
