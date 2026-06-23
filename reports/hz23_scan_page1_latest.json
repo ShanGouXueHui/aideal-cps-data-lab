@@ -1,6 +1,6 @@
 {
-  "changed": 0,
-  "new": 0,
+  "changed": 21,
+  "new": 34,
   "ok": true,
   "page_no": 1,
   "page_state": {
@@ -11,8 +11,8 @@
   },
   "reason": null,
   "risk": [],
-  "round_id": "20260620_101332",
+  "round_id": "smoke_now_20260624_023111",
   "scanned": 60,
-  "ts": "2026-06-20T10:13:33",
-  "unchanged": 60
+  "ts": "2026-06-24T02:31:12",
+  "unchanged": 5
 }

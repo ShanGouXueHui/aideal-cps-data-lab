@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T18:27:21Z",
-  "log_path": "logs/hz23_smoke_now_20260624_022720.log",
+  "generated_at": "2026-06-23T18:31:13Z",
+  "log_path": "logs/hz23_smoke_now_20260624_023111.log",
   "log_tail": [
     "===== HZ23 smoke-now preflight imports =====",
     "IMPORT_OK aideal_cps_data_lab.hz22.page_prepare",
@@ -8,54 +8,64 @@
     "IMPORT_OK aideal_cps_data_lab.hz21.strict_card_dom_recover",
     "PREFLIGHT_RC=0",
     "===== HZ23 prepare page 1 =====",
-    "{\"event\": \"HZ22_PREP_DONE\", \"page\": 1, \"ok\": false, \"reason\": \"risk_before\", \"after\": null}",
-    "PREP_RC=1",
-    "{\"catalog_changed\": 0, \"catalog_new\": 0, \"catalog_unchanged\": 0, \"collect_unavailable_pages\": [], \"commercial_segment_complete\": false, \"completed_pages\": [], \"last_known_sku_count\": null, \"pages\": [1], \"round_id\": \"smoke_now_20260624_022720\", \"rows\": [{\"changed_catalog\": 0, \"collect_ok\": false, \"collect_unavailable\": false, \"known_sku_count\": null, \"new_catalog\": 0, \"ok\": false, \"page\": 1, \"prep_ok\": false, \"prep_reason\": \"risk_before\", \"rc\": 1, \"reason\": null, \"scan_ok\": null, \"scanned\": 0, \"total_fail\": 0, \"total_ok\": 0, \"unchanged_catalog\": 0}], \"scanned_total\": 0, \"stop_page\": 1, \"stop_reason\": \"prep_entry_failed\", \"total_fail\": 0, \"total_ok\": 0, \"unfinished_pages\": [1]}",
-    "FINAL_RC=1"
+    "{\"event\": \"HZ22_PREP_DONE\", \"page\": 1, \"ok\": true, \"reason\": \"safe_all_product_4000_page\", \"after\": {\"url\": \"https://union.jd.com/proManager/index?pageNo=1\", \"title\": \"京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！\", \"has4000\": true, \"oneKeyCount\": 60, \"skuCount\": 60, \"pagerText\": \"共 4000 条 12345667 前往页\", \"activePageText\": \"1\", \"jumpInputValue\": \"1\", \"skus\": [\"10144035423947\", \"10152912220062\", \"69542791298\", \"10217741926479\", \"10094985581639\", \"10214970196095\", \"10202807927297\", \"15272908\", \"10199077863294\", \"14901758\", \"13698838\", \"10156241232592\"], \"pagers\": [{\"index\": 0, \"text\": \"共 4000 条 12345667 前往页\", \"active\": \"1\", \"input\": \"1\"}], \"risk\": []}}",
+    "PREP_RC=0",
+    "PREP_OK=true PREP_REASON=safe_all_product_4000_page",
+    "===== HZ23 scan page 1 =====",
+    "{\"changed\": 21, \"event\": \"HZ23_SCAN_DONE\", \"new\": 34, \"ok\": true, \"page_no\": 1, \"page_state\": {\"activePageText\": \"1\", \"has4000\": true, \"title\": \"京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！\", \"url\": \"https://union.jd.com/proManager/index?pageNo=1\"}, \"reason\": null, \"risk\": [], \"round_id\": \"smoke_now_20260624_023111\", \"scanned\": 60, \"ts\": \"2026-06-24T02:31:12\", \"unchanged\": 5}",
+    "SCAN_RC=0",
+    "SCAN_OK=true",
+    "===== HZ23 collect new SKUs page 1 =====",
+    "{\"controlled_entrypoint\": true, \"generated_at\": \"2026-06-23T18:31:13Z\", \"limit\": \"25\", \"ok\": false, \"page_sequence\": \"1\", \"reason\": \"hz21_collector_not_mainlined\", \"remediation\": \"mainline_hz21_browser_collector_before_hz23_new_candidate_generation\"}",
+    "COLLECT_RC=66",
+    "{\"catalog_changed\": 21, \"catalog_new\": 34, \"catalog_unchanged\": 5, \"collect_unavailable_pages\": [1], \"commercial_segment_complete\": true, \"completed_pages\": [1], \"last_known_sku_count\": null, \"pages\": [1], \"round_id\": \"smoke_now_20260624_023111\", \"rows\": [{\"changed_catalog\": 21, \"collect_ok\": false, \"collect_unavailable\": true, \"known_sku_count\": null, \"new_catalog\": 34, \"ok\": true, \"page\": 1, \"prep_ok\": true, \"prep_reason\": \"safe_all_product_4000_page\", \"rc\": 0, \"reason\": \"hz21_collector_not_mainlined\", \"scan_ok\": true, \"scanned\": 60, \"total_fail\": 0, \"total_ok\": 0, \"unchanged_catalog\": 5}], \"scanned_total\": 60, \"stop_page\": null, \"stop_reason\": null, \"total_fail\": 0, \"total_ok\": 0, \"unfinished_pages\": []}",
+    "FINAL_RC=0"
   ],
-  "round_id": "smoke_now_20260624_022720",
-  "run_rc": 1,
+  "round_id": "smoke_now_20260624_023111",
+  "run_rc": 0,
   "schema_version": "hz23-smoke-now/v1",
   "summary": {
-    "catalog_changed": 0,
-    "catalog_new": 0,
-    "catalog_unchanged": 0,
-    "collect_unavailable_pages": [],
-    "commercial_segment_complete": false,
-    "completed_pages": [],
+    "catalog_changed": 21,
+    "catalog_new": 34,
+    "catalog_unchanged": 5,
+    "collect_unavailable_pages": [
+      1
+    ],
+    "commercial_segment_complete": true,
+    "completed_pages": [
+      1
+    ],
     "last_known_sku_count": null,
     "pages": [
       1
     ],
-    "round_id": "smoke_now_20260624_022720",
+    "round_id": "smoke_now_20260624_023111",
     "rows": [
       {
-        "changed_catalog": 0,
+        "changed_catalog": 21,
         "collect_ok": false,
-        "collect_unavailable": false,
+        "collect_unavailable": true,
         "known_sku_count": null,
-        "new_catalog": 0,
-        "ok": false,
+        "new_catalog": 34,
+        "ok": true,
         "page": 1,
-        "prep_ok": false,
-        "prep_reason": "risk_before",
-        "rc": 1,
-        "reason": null,
-        "scan_ok": null,
-        "scanned": 0,
+        "prep_ok": true,
+        "prep_reason": "safe_all_product_4000_page",
+        "rc": 0,
+        "reason": "hz21_collector_not_mainlined",
+        "scan_ok": true,
+        "scanned": 60,
         "total_fail": 0,
         "total_ok": 0,
-        "unchanged_catalog": 0
+        "unchanged_catalog": 5
       }
     ],
-    "scanned_total": 0,
-    "stop_page": 1,
-    "stop_reason": "prep_entry_failed",
+    "scanned_total": 60,
+    "stop_page": null,
+    "stop_reason": null,
     "total_fail": 0,
     "total_ok": 0,
-    "unfinished_pages": [
-      1
-    ]
+    "unfinished_pages": []
   },
-  "summary_path": "reports/hz23_round_smoke_now_20260624_022720_latest.json"
+  "summary_path": "reports/hz23_round_smoke_now_20260624_023111_latest.json"
 }
