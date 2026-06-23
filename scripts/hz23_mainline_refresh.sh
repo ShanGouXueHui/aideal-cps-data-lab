@@ -12,6 +12,7 @@
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
+export PYTHONPATH="${PROJECT_DIR}/src:${PYTHONPATH:-}"
 . config/hz23-service.env
 mkdir -p logs reports run data/import data/state data/history data/export
 
@@ -94,6 +95,15 @@ print('true' if sh*60+sm <= cur < eh*60+em else 'false')
 PY
 }
 
+append_failed_row() {
+  python3 - "$1" "$2" "$ROWS" <<'PY'
+import json,sys
+from pathlib import Path
+row={'page':int(sys.argv[1]),'ok':False,'reason':sys.argv[2],'scan_ok':False,'total_ok':0,'total_fail':0,'known_sku_count':None}
+Path(sys.argv[3]).open('a',encoding='utf-8').write(json.dumps(row,ensure_ascii=False,sort_keys=True)+'\n')
+PY
+}
+
 for PAGE_NO in $(seq "$PAGE_START" "$PAGE_END"); do
   if [ "$(inside_daytime)" != "true" ]; then
     STOP_PAGE="$PAGE_NO"
@@ -105,10 +115,19 @@ for PAGE_NO in $(seq "$PAGE_START" "$PAGE_END"); do
 
   PREP="reports/hz23_prepare_page${PAGE_NO}_latest.json"
   SCAN="reports/hz23_scan_page${PAGE_NO}_latest.json"
+  COLLECT="reports/hz23_collect_page_${PAGE_NO}_latest.json"
+  rm -f "$PREP" "$SCAN" "$COLLECT" reports/hz21_strict_card_dom_recover_latest.json
 
   echo "===== HZ23 prepare page ${PAGE_NO} ====="
   .venv-browser/bin/python run/hz22_prepare_all_product_page.py "$PAGE_NO" "$PREP"
   PREP_RC=$?
+  if [ "$PREP_RC" != "0" ]; then
+    STOP_PAGE="$PAGE_NO"
+    STOP_REASON="prep_entry_failed"
+    RUN_RC="$PREP_RC"
+    append_failed_row "$PAGE_NO" "$STOP_REASON"
+    break
+  fi
   PREP_OK="$(python3 - "$PREP" <<'PY'
 import json,sys
 from pathlib import Path
@@ -135,18 +154,20 @@ PY
     STOP_PAGE="$PAGE_NO"
     STOP_REASON="$PREP_REASON"
     RUN_RC=99
-    python3 - "$PAGE_NO" "$PREP_REASON" "$ROWS" <<'PY'
-import json,sys
-from pathlib import Path
-row={'page':int(sys.argv[1]),'ok':False,'reason':sys.argv[2],'scan_ok':False,'total_ok':0,'total_fail':0,'known_sku_count':None}
-Path(sys.argv[3]).open('a',encoding='utf-8').write(json.dumps(row,ensure_ascii=False,sort_keys=True)+'\n')
-PY
+    append_failed_row "$PAGE_NO" "$STOP_REASON"
     break
   fi
 
   echo "===== HZ23 scan page ${PAGE_NO} ====="
   .venv-browser/bin/python run/hz23_scan_current_page.py "$PAGE_NO" "$ROUND_ID" "$SCAN"
   SCAN_RC=$?
+  if [ "$SCAN_RC" != "0" ]; then
+    STOP_PAGE="$PAGE_NO"
+    STOP_REASON="scan_entry_failed"
+    RUN_RC="$SCAN_RC"
+    append_failed_row "$PAGE_NO" "$STOP_REASON"
+    break
+  fi
   SCAN_OK="$(python3 - "$SCAN" <<'PY'
 import json,sys
 from pathlib import Path
@@ -160,7 +181,8 @@ PY
   if [ "$SCAN_OK" != "true" ]; then
     STOP_PAGE="$PAGE_NO"
     STOP_REASON="scan_failed"
-    RUN_RC="$SCAN_RC"
+    RUN_RC=98
+    append_failed_row "$PAGE_NO" "$STOP_REASON"
     break
   fi
 
@@ -173,7 +195,7 @@ PY
   HZ21_ITEM_SLEEP_MAX="$ITEM_MAX" \
   bash scripts/hz21_run_strong_risk_collector.sh
   COLLECT_RC=$?
-  cp reports/hz21_strict_card_dom_recover_latest.json "reports/hz23_collect_page_${PAGE_NO}_latest.json" 2>/dev/null || true
+  cp reports/hz21_strict_card_dom_recover_latest.json "$COLLECT" 2>/dev/null || true
 
   python3 - "$PAGE_NO" "$COLLECT_RC" "$SCAN" "$ROWS" <<'PY'
 import json,sys
