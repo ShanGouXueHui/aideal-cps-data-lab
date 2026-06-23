@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-06-23T18:18:31Z",
+  "log_path": "logs/hz23_smoke_now_20260624_021831.log",
+  "log_tail": [
+    "===== HZ23 smoke-now preflight imports =====",
+    "Traceback (most recent call last):",
+    "  File \"<stdin>\", line 8, in <module>",
+    "  File \"/usr/lib/python3.10/importlib/__init__.py\", line 126, in import_module",
+    "    return _bootstrap._gcd_import(name[level:], package, level)",
+    "  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import",
+    "  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load",
+    "  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked",
+    "  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked",
+    "  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module",
+    "  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz22/page_prepare.py\", line 12, in <module>",
+    "    from aideal_cps_data_lab.hz24.jd_page import JDPageAdapter",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/jd_page.py\", line 18, in <module>",
+    "    from .settings import HZ24Settings",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/settings.py\", line 3, in <module>",
+    "    from .configuration import load_settings",
+    "  File \"/home/cpsdata/projects/aideal-cps-data-lab/src/aideal_cps_data_lab/hz24/configuration.py\", line 4, in <module>",
+    "    import tomli",
+    "ModuleNotFoundError: No module named 'tomli'",
+    "PREFLIGHT_RC=1",
+    "{\"catalog_changed\": 0, \"catalog_new\": 0, \"catalog_unchanged\": 0, \"collect_unavailable_pages\": [], \"commercial_segment_complete\": false, \"completed_pages\": [], \"last_known_sku_count\": null, \"pages\": [1], \"round_id\": \"smoke_now_20260624_021831\", \"rows\": [{\"changed_catalog\": 0, \"collect_ok\": false, \"collect_unavailable\": false, \"known_sku_count\": null, \"new_catalog\": 0, \"ok\": false, \"page\": 1, \"prep_ok\": null, \"prep_reason\": null, \"rc\": 1, \"reason\": null, \"scan_ok\": null, \"scanned\": 0, \"total_fail\": 0, \"total_ok\": 0, \"unchanged_catalog\": 0}], \"scanned_total\": 0, \"stop_page\": null, \"stop_reason\": \"preflight_import_failed\", \"total_fail\": 0, \"total_ok\": 0, \"unfinished_pages\": [1]}",
+    "FINAL_RC=1"
+  ],
+  "round_id": "smoke_now_20260624_021831",
+  "run_rc": 1,
+  "schema_version": "hz23-smoke-now/v1",
+  "summary": {
+    "catalog_changed": 0,
+    "catalog_new": 0,
+    "catalog_unchanged": 0,
+    "collect_unavailable_pages": [],
+    "commercial_segment_complete": false,
+    "completed_pages": [],
+    "last_known_sku_count": null,
+    "pages": [
+      1
+    ],
+    "round_id": "smoke_now_20260624_021831",
+    "rows": [
+      {
+        "changed_catalog": 0,
+        "collect_ok": false,
+        "collect_unavailable": false,
+        "known_sku_count": null,
+        "new_catalog": 0,
+        "ok": false,
+        "page": 1,
+        "prep_ok": null,
+        "prep_reason": null,
+        "rc": 1,
+        "reason": null,
+        "scan_ok": null,
+        "scanned": 0,
+        "total_fail": 0,
+        "total_ok": 0,
+        "unchanged_catalog": 0
+      }
+    ],
+    "scanned_total": 0,
+    "stop_page": null,
+    "stop_reason": "preflight_import_failed",
+    "total_fail": 0,
+    "total_ok": 0,
+    "unfinished_pages": [
+      1
+    ]
+  },
+  "summary_path": "reports/hz23_round_smoke_now_20260624_021831_latest.json"
+}
