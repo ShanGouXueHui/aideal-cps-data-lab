@@ -1,0 +1,10 @@
+{
+  "delay_seconds": 25158,
+  "generated_at": "2026-06-23T18:35:41Z",
+  "page_end": 67,
+  "page_start": 1,
+  "pid": 424144,
+  "schema_version": "hz23-observation-auto/v1",
+  "status": "SCHEDULED",
+  "target_time": "2026-06-24T09:35:00"
+}
