@@ -80,7 +80,7 @@
     66,
     67
   ],
-  "resumed": false,
+  "resumed": true,
   "round_id": "hz23_obs_20260624_093503",
   "rows": [
     {
@@ -99,20 +99,11 @@
       "total_fail": 0,
       "total_ok": 0,
       "unchanged_catalog": 60
-    },
-    {
-      "known_sku_count": null,
-      "ok": false,
-      "page": 2,
-      "reason": "prep_entry_failed",
-      "scan_ok": false,
-      "total_fail": 0,
-      "total_ok": 0
     }
   ],
   "scanned_total": 60,
   "stop_page": 2,
-  "stop_reason": "prep_entry_failed",
+  "stop_reason": "outside_daytime",
   "total_fail": 0,
   "total_ok": 0,
   "unfinished_pages": [
