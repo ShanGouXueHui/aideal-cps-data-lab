@@ -1,0 +1,13 @@
+{
+  "delay_seconds": 23816,
+  "generated_at": "2026-06-24T18:58:03Z",
+  "page_end": 67,
+  "page_start": 2,
+  "pid": 433998,
+  "resume_summary": "reports/hz23_round_hz23_obs_20260624_093503_latest.json",
+  "round_id": "hz23_obs_20260624_093503",
+  "round_page_start": 1,
+  "schema_version": "hz23-observation-resume-auto/v1",
+  "status": "SCHEDULED",
+  "target_time": "2026-06-25T09:35:00"
+}
