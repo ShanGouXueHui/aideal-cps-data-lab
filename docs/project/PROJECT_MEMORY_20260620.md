@@ -92,26 +92,33 @@ report git_head=current main
 ### 当前有效后台任务
 
 - 服务器：杭州 `cpsdata`，路径 `/home/cpsdata/projects/aideal-cps-data-lab`。
-- 当前有效任务：`scripts/ops/schedule_hz23_observation_daytime.sh`。
-- PID 文件：`run/hz23_observation_daytime_scheduler.pid`。
-- 记录过的有效 PID：`424144`；其子进程 sleep：`424147`。
-- 目标时间：`2026-06-24T09:35:00` 杭州服务器本地时间。
-- 范围：`PAGE_START=1`、`PAGE_END=67`。
-- 自动结果报告：`runtime-evidence:reports/hz23_observation_auto_latest.json`。
-- 自动运行摘要：`runtime-evidence:reports/hz23_round_<ROUND_ID>_latest.json` 与 `runtime-evidence:reports/hz23_round_latest.json`。
+- 当前有效任务：`scripts/ops/schedule_hz23_observation_resume_daytime.sh`。
+- PID 文件：`run/hz23_observation_resume_daytime_scheduler.pid`。
+- 记录过的有效 PID：`433998`；其子进程 sleep：`434003`。
+- 目标时间：`2026-06-25T09:35:00` 杭州服务器本地时间。
+- 范围：`ROUND_ID=hz23_obs_20260624_093503`，`PAGE_START=2`、`PAGE_END=67`，`HZ23_ROUND_PAGE_START=1`。
+- 自动结果报告：`runtime-evidence:reports/hz23_observation_resume_auto_latest.json`。
+- 自动运行摘要：`runtime-evidence:reports/hz23_round_hz23_obs_20260624_093503_latest.json` 与 `runtime-evidence:reports/hz23_round_latest.json`。
 
-### 明天/下次续接时优先检查
+### 下次续接时优先检查
 
-1. 先读取 `runtime-evidence:reports/hz23_observation_auto_latest.json`，不要先让用户重跑。
+1. 先读取 `runtime-evidence:reports/hz23_observation_resume_auto_latest.json`，不要先让用户重跑。
 2. 判断 `status` 是否仍为 `SCHEDULED`；若仍是 scheduled，再让用户只读检查 PID 和 scheduler log。
 3. 若已完成，检查：`run_rc`、`summary.stop_reason`、`summary.stop_page`、`summary.completed_pages`、`summary.unfinished_pages`、`summary.scanned_total`、`summary.collect_unavailable_pages`。
-4. 若 `run_rc=0` 且 `unfinished_pages=[]`，说明 HZ23 observation 1-67 完成；下一步只允许做数据质量验证和候选/manifest 检查。
+4. 若 `run_rc=0` 且 `unfinished_pages=[]`，说明 HZ23 observation 1-67 已经通过续跑补齐；下一步只允许做数据质量验证和候选/manifest 检查。
 5. 若 `stop_reason=outside_daytime`，用同一 `ROUND_ID`、`HZ23_RESUME=1` 续跑；不要从头覆盖。
 6. 若 `stop_reason` 为 `risk_*`、`risk_before`、`risk_after_jump`，先处理京东人工验证/风控冷却，不要继续自动重试。
 7. 若 `stop_reason=prep_entry_failed`、`scan_entry_failed`、`collector_report_error`，先读取对应 log_tail 和 page report，不要推断。
 8. 若完成但 `collect_unavailable_pages` 覆盖大量页面，这是预期，因为 HZ21 仍未主线化；不得升级为商用发布依据。
 9. 禁止继续旧 HZ23 LKG 3304 恢复路线；旧 3304 已判定当前磁盘不可恢复。
 10. 在新 HZ23 observation 与候选质量门禁未通过前，仍禁止 HZ24、MySQL 初始化、business publish、AIdeal CPS 同步。
+
+### Daemon 启动规则
+
+- 若 `runtime-evidence:reports/hz23_observation_resume_auto_latest.json` 显示 `run_rc=0` 且 `summary.unfinished_pages=[]`，才允许进入 HZ23 守护进程启动准备。
+- 不得直接恢复旧 `scripts/hz23_observation_daemon.sh`。旧脚本存在把 probe 报告、state、status 直接 `git push origin HEAD:main` 的行为，违反运行报告不得提交 `main` 的规则。
+- 通过后应启动新的受控 daemon：单实例 PID/lock、只在白天调用 JD、风险即停、runtime evidence JSON-only 发布、不得写 reports 到 `main`、不得启动 HZ24/MySQL/publish/AIdeal CPS。
+- 启动前必须再次检查后台进程，确保只存在一个 HZ23 daemon 或 scheduler，不允许旧 daemon 与新 daemon 并发。
 
 ### 严禁事项
 
