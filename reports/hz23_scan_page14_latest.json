@@ -1,6 +1,6 @@
 {
-  "changed": 55,
-  "new": 5,
+  "changed": 45,
+  "new": 15,
   "ok": true,
   "page_no": 14,
   "page_state": {
@@ -11,8 +11,8 @@
   },
   "reason": null,
   "risk": [],
-  "round_id": "hz23_obs_20260624_093503",
+  "round_id": "20260620_101332",
   "scanned": 60,
-  "ts": "2026-06-25T10:07:12",
+  "ts": "2026-06-20T11:18:55",
   "unchanged": 0
 }

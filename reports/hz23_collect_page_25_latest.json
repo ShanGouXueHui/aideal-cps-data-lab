@@ -1,9 +1,673 @@
 {
-  "controlled_entrypoint": true,
-  "generated_at": "2026-06-25T02:37:37Z",
-  "limit": "25",
-  "ok": false,
-  "page_sequence": "25",
-  "reason": "hz21_collector_not_mainlined",
-  "remediation": "mainline_hz21_browser_collector_before_hz23_new_candidate_generation"
+  "final": {
+    "activePageText": "25",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "25",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1232425262767 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=25"
+  },
+  "initial": {
+    "activePageText": "25",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "25",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1232425262767 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=25"
+  },
+  "known_sku_count": 3733,
+  "limit": 25,
+  "ok": true,
+  "page_ready": {
+    "25": {
+      "info": {
+        "activePageText": "25",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "25",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1232425262767 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "10162929579344",
+          "100269582218",
+          "100126782352",
+          "100003717961",
+          "10180655053950",
+          "100310059024",
+          "100192638634",
+          "100148486110",
+          "100013774129",
+          "100220347797",
+          "100026419748",
+          "100284048178",
+          "100074021699",
+          "100021305016",
+          "10208291964140",
+          "100208431213",
+          "100118612682",
+          "100097771088",
+          "100338088590",
+          "100109271738",
+          "100030517333",
+          "100280739864",
+          "10109787473813",
+          "10029720674788",
+          "100112746849",
+          "100008100460",
+          "100004849092",
+          "100003020756",
+          "11820679",
+          "100116328855",
+          "100020344692",
+          "4423690",
+          "414286",
+          "10221801641988",
+          "100147308724",
+          "8525234",
+          "100006255514",
+          "13981394",
+          "10074401444482",
+          "100018938026",
+          "10194705908921",
+          "100229733995",
+          "4325725",
+          "100279688416",
+          "100183132728",
+          "100065078893",
+          "100251723038",
+          "10205968199366",
+          "10033335743991",
+          "100164768797",
+          "100355108458",
+          "100007247959",
+          "100266500573",
+          "100018066378",
+          "910219",
+          "100027431448",
+          "100007421773",
+          "10100702011745",
+          "100086218214",
+          "100013045802"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=25"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "page_summary": {
+    "25": {
+      "fail": 0,
+      "final_snapshot": {
+        "activePageText": "25",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "25",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1232425262767 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=25"
+      },
+      "fresh_initial": 10,
+      "ok": 10
+    }
+  },
+  "pages": [
+    25
+  ],
+  "quarantine": {
+    "removed_count": 10,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 3723
+  },
+  "results": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100126782352.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 12.22\n|\n佣金比例35%\n\n戴·可·思婴幼儿泡泡洗手液两瓶装 植物泡沫洗手液300ml*2 温和清洁\n\n到手价￥34.9\n\n自营\n定向\n京配\n戴·可·思（Dexter）母婴京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100126782352",
+        "token": "hz21_100126782352_1781929349720"
+      },
+      "ok": true,
+      "order": 0,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/V6fKdDP",
+      "sku": "100126782352"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 1694,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 1673
+          },
+          "itemUrl": "https://item.jd.com/10208291964140.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1605,
+            "y": 1293
+          },
+          "rootText": "预估收益 ￥ 45.61\n|\n佣金比例15%\n\n佩伦纳代购赛罗奥特曼 LDCX豪华声光奥特英雄100cm15周年版 100cm赛罗-15周年限定款\n\n到手价￥304.05￥341.05\n13+ 好评\n\n券\n佩伦纳智能玩具旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10208291964140",
+        "token": "hz21_10208291964140_1781929357613"
+      },
+      "ok": true,
+      "order": 1,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VDfnT6h",
+      "sku": "10208291964140"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 1329,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 1308
+          },
+          "itemUrl": "https://item.jd.com/100118612682.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 581.25,
+            "y": 903
+          },
+          "rootText": "预估收益 ￥ 4.72\n|\n佣金比例6.4%\n\n觅菓（miguo）当季新货富硒鲍鱼果仁A+级去皮巴西坚果鲍鱼果仁健康268g\n\n到手价￥73.74\n1.0万+ 好评\n\n限量高佣\n自营\n超级补贴\n定向\n京配\n剩余99件\n觅菓（miguo）京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100118612682",
+        "token": "hz21_100118612682_1781929368248"
+      },
+      "ok": true,
+      "order": 2,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VGfKQhS",
+      "sku": "100118612682"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 821,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 800
+          },
+          "itemUrl": "https://item.jd.com/100338088590.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1263.75,
+            "y": 420
+          },
+          "rootText": "预估收益 ￥ 16.35\n|\n佣金比例15%\n\n秋田满满宝宝0蔗糖酸奶60g*25袋礼盒装 婴幼儿标准酸奶儿童常温酸奶 6月+\n\n到手价￥109\n2000+ 好评\n\n超补爆品|优选\n自营\n超级补贴\n定向\n京配\n秋田满满京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100338088590",
+        "token": "hz21_100338088590_1781929376039"
+      },
+      "ok": true,
+      "order": 3,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VrfaOUZ",
+      "sku": "100338088590"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100109271738.html",
+          "rootRect": {
+            "h": 458,
+            "w": 240,
+            "x": 1605,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 7.65\n|\n佣金比例4%\n\n小熊（Bear）电炖盅电炖锅隔水炖家用4人用煲汤炖汤锅燕窝炖盅4.1L炖蒸煮一体微压电炖锅DDZ-J25G2\n\n到手价￥191.2￥234.94\n20万+ 好评\n\n自营\n超级补贴\n京配\n促销\n购新国补最高15%\n小熊京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100109271738",
+        "token": "hz21_100109271738_1781929384559"
+      },
+      "ok": true,
+      "order": 4,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/Vgf8PZN",
+      "sku": "100109271738"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1304,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1283
+          },
+          "itemUrl": "https://item.jd.com/100030517333.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 903
+          },
+          "rootText": "佣金比例提升1%\n进行中\n\n预估收益 ￥ 19.04\n|\n佣金比例7.5%\n\n五个女博士 花少同款鱼胶原蛋白肽维C饮经典肽1.0弹性蛋白肽百香果味3盒30瓶\n\n到手价￥224￥300\n1.0万+ 好评\n\n自营\n定向\n奖励\n京配\n促销\n五个女博士京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100030517333",
+        "token": "hz21_100030517333_1781929394998"
+      },
+      "ok": true,
+      "order": 5,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VafsGir",
+      "sku": "100030517333"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100280739864.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 8.10\n|\n佣金比例11%\n\nSHUKIKU星星屋迷你包儿童防泼水斜挎包可爱手提小包包 香草芭乐 s+\n\n到手价￥73.6￥92\n100+ 好评\n\n自营\n京配\nSHUKIKU京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100280739864",
+        "token": "hz21_100280739864_1781929404042"
+      },
+      "ok": true,
+      "order": 6,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VafbJWJ",
+      "sku": "100280739864"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/10029720674788.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 17.25\n|\n佣金比例25%\n\n颐莲（RELLET）张凌赫代言玻尿酸补水喷雾300ml*2瓶保湿爽肤水化妆水D\n\n到手价￥69￥99\n1.0万+ 好评\n\n定向\n券\n颐莲旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "10029720674788",
+        "token": "hz21_10029720674788_1781929411829"
+      },
+      "ok": true,
+      "order": 7,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VgfI9NA",
+      "sku": "10029720674788"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1044.6875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1098.09375,
+            "cy": 1279,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1044.6875,
+            "y": 1258
+          },
+          "itemUrl": "https://item.jd.com/100003020756.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 922.5,
+            "y": 878
+          },
+          "rootText": "预估收益 ￥ 4.73\n|\n佣金比例3.5%\n\n可靠（COCO）吸收宝成人拉拉裤L90片（臀围95-120cm）内裤型纸尿裤尿不湿\n\n到手价￥135.1￥194.1\n20万+ 好评\n\n自营\n定向\n京配\n促销\n可靠京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1098.09375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100003020756",
+        "token": "hz21_100003020756_1781929422057"
+      },
+      "ok": true,
+      "order": 8,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/Vrfspg9",
+      "sku": "100003020756"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/11820679.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 3.97\n|\n佣金比例16%\n\n儿童健康讲记 精神健康讲记 养正育儿 经典中医启蒙 李辛中医三部曲 回到本源 四部曲 中医养生保健 儿童保健心理健康教育\n\n到手价￥24.8\n1.0万+ 好评\n\n自营\n定向\n京配\n立品图书京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "11820679",
+        "token": "hz21_11820679_1781929429745"
+      },
+      "ok": true,
+      "order": 9,
+      "page_no": 25,
+      "short_url": "https://u.jd.com/VOfsXjW",
+      "sku": "11820679"
+    }
+  ],
+  "total_fail": 0,
+  "total_ok": 10,
+  "ts": "2026-06-20 12:22:13",
+  "wait": 10
 }
