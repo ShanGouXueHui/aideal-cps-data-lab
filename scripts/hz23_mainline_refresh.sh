@@ -8,6 +8,7 @@
 # - Strong JD verification signals stop safely with checkpoint.
 # - HZ23_RESUME=1 preserves successful rows from the same round.
 # - Runtime evidence publishing uses JSON-only files accepted by scripts/git_publish_files_via_worktree.sh.
+# - Page switching uses random sleeps, plus a longer randomized pause every 10-15 successful pages by default.
 # No set -e is used.
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
@@ -33,6 +34,11 @@ ITEM_MIN="$HZ23_ITEM_SLEEP_MIN"
 ITEM_MAX="$HZ23_ITEM_SLEEP_MAX"
 PAGE_MIN="$HZ23_PAGE_SLEEP_MIN"
 PAGE_MAX="$HZ23_PAGE_SLEEP_MAX"
+LONG_PAUSE_INTERVAL_MIN="${HZ23_LONG_PAUSE_INTERVAL_MIN:-10}"
+LONG_PAUSE_INTERVAL_MAX="${HZ23_LONG_PAUSE_INTERVAL_MAX:-15}"
+LONG_PAUSE_MIN="${HZ23_LONG_PAGE_SLEEP_MIN:-600}"
+LONG_PAUSE_MAX="${HZ23_LONG_PAGE_SLEEP_MAX:-1200}"
+LONG_PAUSE_PROGRESS=0
 LIMIT="$HZ23_LIMIT"
 ROUND_ID="${HZ23_ROUND_ID:-$(date +%Y%m%d_%H%M%S)}"
 DAY_START="$HZ23_DAY_START"
@@ -42,6 +48,29 @@ SUMMARY="reports/hz23_round_${ROUND_ID}_latest.json"
 LATEST_SUMMARY="reports/hz23_round_latest.json"
 RESUME_SUMMARY="${HZ23_RESUME_SUMMARY:-$LATEST_SUMMARY}"
 PREVIOUS_DURATION_SECONDS=0
+
+random_float() {
+  python3 - "$1" "$2" <<'PY'
+import random, sys
+lo=float(sys.argv[1]); hi=float(sys.argv[2])
+if hi < lo:
+    lo, hi = hi, lo
+print(round(random.uniform(lo, hi), 2))
+PY
+}
+
+random_int() {
+  python3 - "$1" "$2" <<'PY'
+import random, sys
+lo=int(float(sys.argv[1])); hi=int(float(sys.argv[2]))
+if hi < lo:
+    lo, hi = hi, lo
+print(random.randint(lo, hi))
+PY
+}
+
+LONG_PAUSE_NEXT_AFTER="$(random_int "$LONG_PAUSE_INTERVAL_MIN" "$LONG_PAUSE_INTERVAL_MAX")"
+echo "HZ23_SLEEP_CONFIG PAGE_MIN=$PAGE_MIN PAGE_MAX=$PAGE_MAX LONG_INTERVAL=${LONG_PAUSE_INTERVAL_MIN}-${LONG_PAUSE_INTERVAL_MAX} LONG_SLEEP=${LONG_PAUSE_MIN}-${LONG_PAUSE_MAX} NEXT_LONG_AFTER=$LONG_PAUSE_NEXT_AFTER"
 
 if [ "$RESUME" = "1" ]; then
   if [ ! -f "$RESUME_SUMMARY" ]; then
@@ -252,13 +281,19 @@ PY
   fi
 
   if [ "$PAGE_NO" -lt "$PAGE_END" ]; then
-    SLEEP_S="$(python3 - "$PAGE_MIN" "$PAGE_MAX" <<'PY'
-import random,sys
-print(round(random.uniform(float(sys.argv[1]),float(sys.argv[2])),2))
-PY
-)"
-    echo "HZ23_PAGE_SLEEP PAGE=$PAGE_NO SECONDS=$SLEEP_S"
-    sleep "$SLEEP_S"
+    LONG_PAUSE_PROGRESS=$((LONG_PAUSE_PROGRESS + 1))
+    if [ "$LONG_PAUSE_PROGRESS" -ge "$LONG_PAUSE_NEXT_AFTER" ]; then
+      SLEEP_S="$(random_float "$LONG_PAUSE_MIN" "$LONG_PAUSE_MAX")"
+      echo "HZ23_PAGE_LONG_SLEEP PAGE=$PAGE_NO SECONDS=$SLEEP_S AFTER_PAGES=$LONG_PAUSE_PROGRESS NEXT_INTERVAL_RANGE=${LONG_PAUSE_INTERVAL_MIN}-${LONG_PAUSE_INTERVAL_MAX}"
+      sleep "$SLEEP_S"
+      LONG_PAUSE_PROGRESS=0
+      LONG_PAUSE_NEXT_AFTER="$(random_int "$LONG_PAUSE_INTERVAL_MIN" "$LONG_PAUSE_INTERVAL_MAX")"
+      echo "HZ23_NEXT_LONG_SLEEP_AFTER PAGES=$LONG_PAUSE_NEXT_AFTER"
+    else
+      SLEEP_S="$(random_float "$PAGE_MIN" "$PAGE_MAX")"
+      echo "HZ23_PAGE_SLEEP PAGE=$PAGE_NO SECONDS=$SLEEP_S LONG_PROGRESS=$LONG_PAUSE_PROGRESS LONG_NEXT_AFTER=$LONG_PAUSE_NEXT_AFTER"
+      sleep "$SLEEP_S"
+    fi
   fi
 done
 
