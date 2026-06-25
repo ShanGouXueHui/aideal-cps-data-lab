@@ -1,36 +1,19 @@
 {
   "after": {
-    "activePageText": "29",
-    "has4000": true,
-    "jumpInputValue": "29",
-    "oneKeyCount": 60,
-    "pagerText": "共 4000 条 1272829303167 前往页",
-    "pagers": [
-      {
-        "active": "29",
-        "i": 0,
-        "input": "29",
-        "text": "共 4000 条 1272829303167 前往页"
-      }
+    "activePageText": null,
+    "has4000": false,
+    "jumpInputValue": null,
+    "oneKeyCount": 0,
+    "pagerText": "",
+    "pagers": [],
+    "risk": [
+      "risk_handler",
+      "快速验证"
     ],
-    "risk": [],
-    "skuCount": 60,
-    "skus": [
-      "100025160883",
-      "100026357642",
-      "100010543253",
-      "100061890539",
-      "100077602085",
-      "100044025839",
-      "67465479776",
-      "13701788",
-      "10225140094868",
-      "100216954810",
-      "100057284518",
-      "100259860118"
-    ],
-    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
-    "url": "https://union.jd.com/proManager/index?pageNo=29"
+    "skuCount": 0,
+    "skus": [],
+    "title": "京东验证",
+    "url": "https://cfe.m.jd.com/privatedomain/risk_handler/03101900/?returnurl=https%3A%2F%2Funion.jd.com%2FproManager%2Findex%3FpageNo%3D29&rqhost=https%3A%2F%2Fapi.m.jd.com&rpid=rp-105272779-10443-1782355633419&evtype=2&evapi=color_unionSearchGoods&source=1&forceCurrentView=1&evsid=AASWz-Ccn-fmDu0QbI5tPvKhdZWQJCvSObHTkrcfGtPpQh3RtYFNGbP2_meuUbya2tduNLTz"
   },
   "after_all_product": {
     "activePageText": "28",
@@ -41,7 +24,7 @@
     "pagers": [
       {
         "active": "28",
-        "i": 0,
+        "index": 0,
         "input": "28",
         "text": "共 4000 条 1262728293067 前往页"
       }
@@ -49,18 +32,18 @@
     "risk": [],
     "skuCount": 60,
     "skus": [
-      "100002868435",
-      "14401566",
-      "100039298329",
-      "100021416603",
-      "7046724",
-      "11757830",
-      "10164786510872",
-      "10057131057",
-      "10044954804360",
-      "100082995037",
-      "100303971690",
-      "100260199316"
+      "100105664744",
+      "10220513705613",
+      "100162469034",
+      "100096946703",
+      "100078056724",
+      "100036305847",
+      "13334637",
+      "12765388",
+      "100236664901",
+      "20978353528",
+      "10117991948846",
+      "5328994"
     ],
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
     "url": "https://union.jd.com/proManager/index?pageNo=28"
@@ -74,7 +57,7 @@
     "pagers": [
       {
         "active": "28",
-        "i": 0,
+        "index": 0,
         "input": "28",
         "text": "共 4000 条 1262728293067 前往页"
       }
@@ -82,18 +65,18 @@
     "risk": [],
     "skuCount": 60,
     "skus": [
-      "100002868435",
-      "14401566",
-      "100039298329",
-      "100021416603",
-      "7046724",
-      "11757830",
-      "10164786510872",
-      "10057131057",
-      "10044954804360",
-      "100082995037",
-      "100303971690",
-      "100260199316"
+      "100105664744",
+      "10220513705613",
+      "100162469034",
+      "100096946703",
+      "100078056724",
+      "100036305847",
+      "13334637",
+      "12765388",
+      "100236664901",
+      "20978353528",
+      "10117991948846",
+      "5328994"
     ],
     "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
     "url": "https://union.jd.com/proManager/index?pageNo=28"
@@ -102,8 +85,8 @@
     "method": "4000_pager_locator_fill_enter",
     "ok": true
   },
-  "ok": true,
-  "reason": "safe_all_product_4000_page",
+  "ok": false,
+  "reason": "risk_after_jump",
   "target_page": 29,
-  "ts": "2026-06-20 12:41:53"
+  "ts": "2026-06-25 10:47:12"
 }
