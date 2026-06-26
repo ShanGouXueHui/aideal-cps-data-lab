@@ -688,20 +688,11 @@
       "total_fail": 0,
       "total_ok": 0,
       "unchanged_catalog": 7
-    },
-    {
-      "known_sku_count": null,
-      "ok": false,
-      "page": 33,
-      "reason": "prep_entry_failed",
-      "scan_ok": false,
-      "total_fail": 0,
-      "total_ok": 0
     }
   ],
   "scanned_total": 1920,
   "stop_page": 33,
-  "stop_reason": "prep_entry_failed",
+  "stop_reason": "outside_daytime",
   "total_fail": 0,
   "total_ok": 0,
   "unfinished_pages": [
