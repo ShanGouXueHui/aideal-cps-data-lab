@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Start the formal HZ23 supervisor as the only background controller.
-# It cleans legacy HZ23 daemon/scheduler processes before launching.
+# It force-cleans legacy HZ23 daemon/scheduler and active foreground HZ23 browser jobs before launching.
 # No set -e is used.
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
@@ -11,6 +11,7 @@ ROUND_ID="${HZ23_ROUND_ID:-hz23_obs_20260624_093503}"
 PAGE_END="${HZ23_PAGE_END:-67}"
 PID_FILE="run/hz23_formal_supervisor.pid"
 LOG="logs/hz23_formal_supervisor.nohup.log"
+CLEAN_RE='scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now|hz23_mainline_refresh.sh|run/hz22_prepare_all_product_page.py|run/hz23_scan_current_page.py|scripts/hz21_run_strong_risk_collector.sh'
 
 if [ -f "$PID_FILE" ]; then
   OLD_PID="$(cat "$PID_FILE" 2>/dev/null || true)"
@@ -25,9 +26,13 @@ if [ -f "$PID_FILE" ]; then
   rm -f "$PID_FILE"
 fi
 
-echo "===== CLEAN LEGACY HZ23 BACKGROUNDS ====="
-ps -eo pid=,ppid=,cmd= | grep -E 'scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now' | grep -v grep | while read -r pid ppid cmd; do
+echo "===== FORCE CLEAN HZ23 CONTROLLERS ====="
+ps -eo pid=,ppid=,cmd= | grep -E "$CLEAN_RE" | grep -v grep | while read -r pid ppid cmd; do
   [ -z "$pid" ] && continue
+  case "$cmd" in
+    *hz23_formal_supervisor.sh*) continue ;;
+    *start_hz23_formal_supervisor.sh*) continue ;;
+  esac
   echo "TERM $pid $cmd"
   kill -TERM "$pid" 2>/dev/null || true
   for c in $(pgrep -P "$pid" 2>/dev/null); do
@@ -36,8 +41,12 @@ ps -eo pid=,ppid=,cmd= | grep -E 'scripts/hz23_observation_daemon.sh|schedule_hz
   done
 done
 sleep 2
-ps -eo pid=,ppid=,cmd= | grep -E 'scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now' | grep -v grep | while read -r pid ppid cmd; do
+ps -eo pid=,ppid=,cmd= | grep -E "$CLEAN_RE" | grep -v grep | while read -r pid ppid cmd; do
   [ -z "$pid" ] && continue
+  case "$cmd" in
+    *hz23_formal_supervisor.sh*) continue ;;
+    *start_hz23_formal_supervisor.sh*) continue ;;
+  esac
   echo "KILL $pid $cmd"
   kill -KILL "$pid" 2>/dev/null || true
   for c in $(pgrep -P "$pid" 2>/dev/null); do
@@ -77,4 +86,4 @@ echo "PID_FILE=$PID_FILE"
 echo "LOG=$LOG"
 echo "RUNTIME_EVIDENCE_HEAD=$PUBLISH_HEAD"
 echo "===== HZ23 PROCESSES ====="
-ps -eo pid,ppid,stat,lstart,cmd | grep -E 'hz23_formal_supervisor|hz23_observation_daemon|schedule_hz23|sleep [0-9]+' | grep -v grep || true
+ps -eo pid,ppid,stat,lstart,cmd | grep -E 'hz23_formal_supervisor|hz23_observation_daemon|schedule_hz23|hz23_mainline_refresh|hz22_prepare|hz23_scan|hz21_run|sleep [0-9]+' | grep -v grep || true
