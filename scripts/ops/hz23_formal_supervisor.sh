@@ -63,7 +63,7 @@ start,end=sys.argv[1],sys.argv[2]
 now=datetime.now()
 cur=now.hour*60+now.minute
 sh,sm=map(int,start.split(':'))
-eh,em=map(int(end.split(':')[0]), int(end.split(':')[1])) if False else map(int,end.split(':'))
+eh,em=map(int,end.split(':'))
 print('true' if sh*60+sm <= cur < eh*60+em else 'false')
 PY
 }
