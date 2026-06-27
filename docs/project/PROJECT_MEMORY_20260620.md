@@ -1,13 +1,13 @@
 # AIdeal CPS Data Lab 项目记忆与长期约束
 
-更新日期：2026-06-20
+更新日期：2026-06-27
 
 ## 项目与仓库
 
 - Data Lab：`ShanGouXueHui/aideal-cps-data-lab`。
 - AIdeal CPS：`ShanGouXueHui/aideal-cps`。
 - 正式代码只有一个 `main`。
-- 历史实验只保留在 Git 历史或只读快照。
+- 历史实验只保留在 Git 历史或 archive 说明，不得保留为生产可执行入口。
 - 证据分支不是第二代码主线。
 
 Data Lab 负责京东联盟授权采集、商品和推广资格、可信短链、终态、质量门禁、源数据和版本化发布。AIdeal CPS 负责终端用户、搜索推荐、归因、订单和返佣。
@@ -39,7 +39,7 @@ domain                  SKU、商品、链接、终态规则
 persistence/repository  JSONL/MySQL、事务、原子写入
 contracts/schema         schema、枚举、跨系统合同
 configuration            typed settings、配置加载
-ops                       systemd、部署、备份、验证入口
+ops                       supervisor、systemd、部署、备份、验证入口
 tests                     fixture、单元测试、禁止 JD live
 ```
 
@@ -63,8 +63,6 @@ jd_live_called=false
 report git_head=current main
 ```
 
-当前扫描器已经完整覆盖重复函数、变量、常量、配置键、默认值多源和跨文件实现。
-
 阈值：Python/Shell 单文件 300 行、函数 80 行、运行入口 120 行。超过阈值必须先拆分。
 
 ## 报告架构
@@ -79,50 +77,104 @@ report git_head=current main
 
 非敏感共享参数进入版本化配置；环境差异进入环境变量；Secret 进入服务器 Secret。密码、Token、Cookie、Profile、私钥和数据库密码不得进入 GitHub。
 
-## 2026-06-24 HZ23 observation 检查点记忆
+## 2026-06-27 HZ23 formal supervisor 记忆
 
-### 已确认状态
+### 当前权威状态
 
-- HZ23 smoke-now 已通过：`RUN_RC=0`、`PUBLISH_RC=0`、`DEPENDENCY_INSTALL_RC=0`、`DEPENDENCY_VERIFY_RC=0`。
-- 已解除的低级问题：`PYTHONPATH` 缺失、`.venv-browser` 缺 `tomli`、旧 PREP/SCAN/COLLECT 报告误读、JSON-only runtime evidence 发布路径。
-- 京东风控曾出现 `risk_before` / `risk_after_jump`，人工验证后 page 1 smoke 已恢复正常：`risk=[]`、`has4000=true`、`oneKeyCount=60`、`skuCount=60`。
-- HZ21 collector 仍是受控 fail-closed：`reason=hz21_collector_not_mainlined`，因此 HZ23 现阶段只允许 observation scan，不得声明短链采集成功。
-- 旧后台进程已清理，仅保留当前有效 observation scheduler。
+- 当前 HZ23 observation round：`hz23_obs_20260624_093503`。
+- 当前已完成：page 1-42。
+- 当前第一未完成页：page 43。
+- 当前 scanned_total：2520。
+- 当前状态：`MODE=paused_for_manual_verification`，`EXTRA=next_page=43 probe=failed`。
+- 当前正式控制器：`scripts/ops/hz23_formal_supervisor.sh`。
+- 当前 PID 文件：`run/hz23_formal_supervisor.pid`。
+- 当前 compact summary：`runtime-evidence:reports/hz23_formal_summary_latest.json`。
+- 当前 supervisor status：`runtime-evidence:reports/hz23_formal_supervisor_status_latest.json`。
+- 当前 rolling progress：`runtime-evidence:reports/hz23_formal_progress_latest.json`。
+- 当前 resume report：`runtime-evidence:reports/hz23_observation_resume_auto_latest.json`。
 
-### 当前有效后台任务
+### 正式 HZ23 生产入口
 
-- 服务器：杭州 `cpsdata`，路径 `/home/cpsdata/projects/aideal-cps-data-lab`。
-- 当前有效任务：`scripts/ops/schedule_hz23_observation_resume_daytime.sh`。
-- PID 文件：`run/hz23_observation_resume_daytime_scheduler.pid`。
-- 记录过的有效 PID：`433998`；其子进程 sleep：`434003`。
-- 目标时间：`2026-06-25T09:35:00` 杭州服务器本地时间。
-- 范围：`ROUND_ID=hz23_obs_20260624_093503`，`PAGE_START=2`、`PAGE_END=67`，`HZ23_ROUND_PAGE_START=1`。
-- 自动结果报告：`runtime-evidence:reports/hz23_observation_resume_auto_latest.json`。
-- 自动运行摘要：`runtime-evidence:reports/hz23_round_hz23_obs_20260624_093503_latest.json` 与 `runtime-evidence:reports/hz23_round_latest.json`。
+只允许以下入口存在并被使用：
+
+```text
+scripts/ops/start_hz23_formal_supervisor.sh
+scripts/ops/restart_hz23_formal_supervisor.sh
+scripts/ops/hz23_formal_supervisor.sh
+scripts/ops/hz23_formal_progress_publisher.sh
+scripts/ops/hz23_formal_summary.sh
+scripts/ops/check_hz23_formal_entrypoints.sh
+```
+
+### 已删除的旧生产入口
+
+以下文件已从生产路径删除，不得恢复到 `scripts/` 或 `scripts/ops/`：
+
+```text
+scripts/hz23_observation_daemon.sh
+scripts/ops/schedule_hz23_observation_daytime.sh
+scripts/ops/schedule_hz23_observation_resume_daytime.sh
+scripts/ops/run_hz23_smoke_now.sh
+scripts/ops/run_hz23_smoke_now_with_deps.sh
+```
+
+旧代码只允许通过 `archive/legacy/README.md` 的历史 commit/blob sha 追溯，不得作为兼容分支或备用入口保留。
+
+### Formal supervisor 行为
+
+- 单实例：`flock` + PID 文件。
+- 启动/重启时强制清理旧 daemon、旧 scheduler、旧 smoke、前台 HZ23 mainline/prepare/scan/hz21_run。
+- 只从 runtime-evidence 的 current summary 计算 first unfinished page。
+- 若探测通过，则自动从 first unfinished page resume。
+- 若检测到 JD 验证/风控，则暂停；白天每 1 小时轻量探测一次，夜间每 3 小时心跳但不碰 JD 页面。
+- 不做自动验证码破解、不做多账号/多浏览器规避验证。
+- 运行中滚动上传 latest-only progress，不无限增长。
+- 完整运行结果上传 runtime-evidence，不写 main。
+
+### 用户交互规则
+
+- 中文、职业化、直接、结构化。
+- 不使用 Codex CLI。
+- Linux 命令不要使用 `set -e`。
+- 聊天里不要打印长命令、长日志、长 JSON；长脚本和长文档直接写 GitHub。
+- 用户只执行短入口命令并贴 summary。
+- 日志和证据从 GitHub/runtime-evidence 查；用户可只发 `RUNTIME_EVIDENCE_HEAD` 或 compact summary。
+- 不要让用户贴 120 行以上日志。
+- 不要重复问已经给出的仓库、分支、路径和 round_id。
+
+### 当前硬门禁仍然关闭
+
+```text
+HZ23_LKG_CANDIDATE_CONFIRMED=false
+HZ24_RUNTIME_MIGRATION_CONFIRMED=false
+HZ24_RESUME_ALLOWED=false
+MYSQL_INITIALIZATION_ALLOWED=false
+DUAL_WRITE_ALLOWED=false
+PUBLISH_ALLOWED=false
+AIDEAL_CPS_SYNC_ALLOWED=false
+COMMERCIAL_ENABLED=false
+```
+
+未完成 page 1-67 前，禁止 HZ24、MySQL 初始化、dual-write、publish、AIdeal CPS 同步。
 
 ### 下次续接时优先检查
 
-1. 先读取 `runtime-evidence:reports/hz23_observation_resume_auto_latest.json`，不要先让用户重跑。
-2. 判断 `status` 是否仍为 `SCHEDULED`；若仍是 scheduled，再让用户只读检查 PID 和 scheduler log。
-3. 若已完成，检查：`run_rc`、`summary.stop_reason`、`summary.stop_page`、`summary.completed_pages`、`summary.unfinished_pages`、`summary.scanned_total`、`summary.collect_unavailable_pages`。
-4. 若 `run_rc=0` 且 `unfinished_pages=[]`，说明 HZ23 observation 1-67 已经通过续跑补齐；下一步只允许做数据质量验证和候选/manifest 检查。
-5. 若 `stop_reason=outside_daytime`，用同一 `ROUND_ID`、`HZ23_RESUME=1` 续跑；不要从头覆盖。
-6. 若 `stop_reason` 为 `risk_*`、`risk_before`、`risk_after_jump`，先处理京东人工验证/风控冷却，不要继续自动重试。
-7. 若 `stop_reason=prep_entry_failed`、`scan_entry_failed`、`collector_report_error`，先读取对应 log_tail 和 page report，不要推断。
-8. 若完成但 `collect_unavailable_pages` 覆盖大量页面，这是预期，因为 HZ21 仍未主线化；不得升级为商用发布依据。
-9. 禁止继续旧 HZ23 LKG 3304 恢复路线；旧 3304 已判定当前磁盘不可恢复。
-10. 在新 HZ23 observation 与候选质量门禁未通过前，仍禁止 HZ24、MySQL 初始化、business publish、AIdeal CPS 同步。
-
-### Daemon 启动规则
-
-- 若 `runtime-evidence:reports/hz23_observation_resume_auto_latest.json` 显示 `run_rc=0` 且 `summary.unfinished_pages=[]`，才允许进入 HZ23 守护进程启动准备。
-- 不得直接恢复旧 `scripts/hz23_observation_daemon.sh`。旧脚本存在把 probe 报告、state、status 直接 `git push origin HEAD:main` 的行为，违反运行报告不得提交 `main` 的规则。
-- 通过后应启动新的受控 daemon：单实例 PID/lock、只在白天调用 JD、风险即停、runtime evidence JSON-only 发布、不得写 reports 到 `main`、不得启动 HZ24/MySQL/publish/AIdeal CPS。
-- 启动前必须再次检查后台进程，确保只存在一个 HZ23 daemon 或 scheduler，不允许旧 daemon 与新 daemon 并发。
+1. 先读取 `runtime-evidence:reports/hz23_formal_summary_latest.json`，不要先让用户重跑。
+2. 若 summary 不够，再读 `runtime-evidence:reports/hz23_formal_supervisor_status_latest.json` 和 `runtime-evidence:reports/hz23_formal_progress_latest.json`。
+3. 若 `MODE=paused_for_manual_verification` 且 `UNFINISHED_FIRST=43`，说明仍等人工验证或下一次定时探测。
+4. 若 `MODE=running`，说明正在自动续跑；不要启动第二个任务。
+5. 若 `COMPLETE=True` 或 `commercial_segment_complete=true` 且 `unfinished_pages=[]`，才进入下一阶段候选质量门禁。
+6. 若 `risk_after_jump` / `risk_handler` / `京东验证` 出现，不要规避验证；人工验证后由 supervisor 自动续跑或重启 supervisor 触发立即探测。
+7. 若入口自检需要确认，运行 `bash scripts/ops/check_hz23_formal_entrypoints.sh`，目标 `CHECK_RC=0`。
+8. HZ21 collector 仍未主线化，`collect_unavailable_pages` 大量存在是预期；observation scan 仍不等于短链采集成功。
 
 ### 严禁事项
 
 - 不得把 runtime evidence 提交到 `main`。
+- 不得恢复已删除旧入口。
+- 不得保留兼容旧路径、旧分支、旧 scheduler。
+- 不得多账号/多浏览器并发规避 JD 验证。
+- 不得做验证码自动破解。
 - 不得用 seen/import 文件拼凑旧 3304。
-- 不得因 smoke 或 observation 通过就启用 HZ24/MySQL/publish/AIdeal CPS。
+- 不得因 smoke 或 observation 部分成功就启用 HZ24/MySQL/publish/AIdeal CPS。
 - 不得忽略 `collect_unavailable_pages`；短链采集未主线化前，observation 只能证明页面扫描能力。
