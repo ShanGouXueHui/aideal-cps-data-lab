@@ -9,6 +9,7 @@
 # - During pause, run only a lightweight daytime probe every N seconds to detect whether
 #   manual verification has restored access; no automatic verification bypass is attempted.
 # - Runtime reports are JSON-only and published to runtime-evidence via git_publish_files_via_worktree.sh.
+# - Rolling progress is latest-only: reports/hz23_formal_progress_latest.json.
 # - No HZ24/MySQL/publish/AIdeal CPS sync is started here.
 # No set -e is used.
 
@@ -26,6 +27,7 @@ DAY_END="${HZ23_DAY_END:-21:30}"
 DAY_PROBE_INTERVAL_SECONDS="${HZ23_VERIFY_DAY_PROBE_INTERVAL_SECONDS:-3600}"
 NIGHT_HEARTBEAT_INTERVAL_SECONDS="${HZ23_VERIFY_NIGHT_HEARTBEAT_INTERVAL_SECONDS:-10800}"
 IDLE_INTERVAL_SECONDS="${HZ23_SUPERVISOR_IDLE_INTERVAL_SECONDS:-600}"
+PROGRESS_PUBLISH_INTERVAL_SECONDS="${HZ23_PROGRESS_PUBLISH_INTERVAL_SECONDS:-300}"
 MAX_RUNS="${HZ23_SUPERVISOR_MAX_RUNS:-0}"
 
 LOCK_FILE="run/hz23_formal_supervisor.lock"
@@ -61,7 +63,7 @@ start,end=sys.argv[1],sys.argv[2]
 now=datetime.now()
 cur=now.hour*60+now.minute
 sh,sm=map(int,start.split(':'))
-eh,em=map(int,end.split(':'))
+eh,em=map(int(end.split(':')[0]), int(end.split(':')[1])) if False else map(int,end.split(':'))
 print('true' if sh*60+sm <= cur < eh*60+em else 'false')
 PY
 }
@@ -74,11 +76,14 @@ safe_sleep() {
 
 cleanup_legacy_backgrounds() {
   CURRENT="$$"
-  ps -eo pid=,ppid=,cmd= | grep -E 'scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now' | grep -v grep | while read -r pid ppid cmd; do
+  CLEAN_RE='scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now|hz23_mainline_refresh.sh|run/hz22_prepare_all_product_page.py|run/hz23_scan_current_page.py|scripts/hz21_run_strong_risk_collector.sh'
+  ps -eo pid=,ppid=,cmd= | grep -E "$CLEAN_RE" | grep -v grep | while read -r pid ppid cmd; do
     [ -z "$pid" ] && continue
     [ "$pid" = "$CURRENT" ] && continue
     case "$cmd" in
       *hz23_formal_supervisor.sh*) continue ;;
+      *start_hz23_formal_supervisor.sh*) continue ;;
+      *hz23_formal_progress_publisher.sh*) continue ;;
     esac
     log_msg "HZ23_CLEANUP_LEGACY pid=$pid ppid=$ppid cmd=$cmd"
     kill -TERM "$pid" 2>/dev/null || true
@@ -88,11 +93,13 @@ cleanup_legacy_backgrounds() {
     done
   done
   sleep 2
-  ps -eo pid=,ppid=,cmd= | grep -E 'scripts/hz23_observation_daemon.sh|schedule_hz23_observation_daytime.sh|schedule_hz23_observation_resume_daytime.sh|run_hz23_smoke_now' | grep -v grep | while read -r pid ppid cmd; do
+  ps -eo pid=,ppid=,cmd= | grep -E "$CLEAN_RE" | grep -v grep | while read -r pid ppid cmd; do
     [ -z "$pid" ] && continue
     [ "$pid" = "$CURRENT" ] && continue
     case "$cmd" in
       *hz23_formal_supervisor.sh*) continue ;;
+      *start_hz23_formal_supervisor.sh*) continue ;;
+      *hz23_formal_progress_publisher.sh*) continue ;;
     esac
     kill -KILL "$pid" 2>/dev/null || true
     for c in $(pgrep -P "$pid" 2>/dev/null); do
@@ -130,22 +137,6 @@ try:
     print(0)
 except Exception:
     print(-1)
-PY
-}
-
-summary_field() {
-  python3 - "$RESUME_SUMMARY" "$1" <<'PY'
-import json, sys
-from pathlib import Path
-try:
-    x=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
-    v=x.get(sys.argv[2])
-    if isinstance(v, (dict, list)):
-        print(json.dumps(v, ensure_ascii=False, sort_keys=True))
-    else:
-        print('' if v is None else v)
-except Exception:
-    print('')
 PY
 }
 
@@ -336,8 +327,20 @@ run_resume_once() {
   HZ23_ROUND_PAGE_START="$ROUND_PAGE_START" \
   HZ23_PAGE_START="$page_start" \
   HZ23_PAGE_END="$PAGE_END" \
-  bash scripts/hz23_mainline_refresh.sh > "$RUN_LOG" 2>&1
+  bash scripts/hz23_mainline_refresh.sh > "$RUN_LOG" 2>&1 &
+  RUN_PID=$!
+
+  HZ23_ROUND_ID="$ROUND_ID" \
+  HZ23_PROGRESS_RUN_LOG="$RUN_LOG" \
+  HZ23_PROGRESS_TARGET_PID="$RUN_PID" \
+  HZ23_PROGRESS_PUBLISH_INTERVAL_SECONDS="$PROGRESS_PUBLISH_INTERVAL_SECONDS" \
+  bash scripts/ops/hz23_formal_progress_publisher.sh >/dev/null 2>&1 &
+  PROGRESS_PID=$!
+
+  wait "$RUN_PID"
   rc=$?
+  kill -TERM "$PROGRESS_PID" 2>/dev/null || true
+  wait "$PROGRESS_PID" 2>/dev/null || true
 
   read -r outcome stop_page stop_reason <<< "$(classify_run_outcome)"
   log_msg "HZ23_FORMAL_RUN_DONE round=$ROUND_ID rc=$rc outcome=$outcome stop_page=$stop_page stop_reason=$stop_reason"
@@ -352,7 +355,7 @@ trap 'log_msg "HZ23_FORMAL_SUPERVISOR_STOP signal"; rm -f "$PID_FILE"; exit 0' I
 cleanup_legacy_backgrounds
 write_state "starting" "round=$ROUND_ID"
 publish_status
-log_msg "HZ23_FORMAL_SUPERVISOR_START pid=$$ round=$ROUND_ID page_end=$PAGE_END day_window=$DAY_START-$DAY_END"
+log_msg "HZ23_FORMAL_SUPERVISOR_START pid=$$ round=$ROUND_ID page_end=$PAGE_END day_window=$DAY_START-$DAY_END progress_interval=$PROGRESS_PUBLISH_INTERVAL_SECONDS"
 
 RUN_COUNT=0
 while true; do
