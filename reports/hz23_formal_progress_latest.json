@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-28T13:25:20Z",
+  "log_tail": [
+    "HZ23_SLEEP_CONFIG PAGE_MIN=90 PAGE_MAX=210 LONG_INTERVAL=10-15 LONG_SLEEP=600-1200 NEXT_LONG_AFTER=10"
+  ],
+  "round_id": "hz23_obs_20260624_093503",
+  "run_log": "logs/hz23_hz23_obs_20260624_093503_formal_resume_20260628_212520.log",
+  "schema_version": "hz23-formal-progress/v1",
+  "summary_digest": {
+    "catalog_changed": 1805,
+    "catalog_new": 562,
+    "catalog_unchanged": 153,
+    "commercial_segment_complete": false,
+    "completed_count": 42,
+    "last_completed_page": 42,
+    "scanned_total": 2520,
+    "stop_page": 43,
+    "stop_reason": "prep_entry_failed",
+    "unfinished_first_10": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ]
+  },
+  "summary_path": "reports/hz23_round_hz23_obs_20260624_093503_latest.json",
+  "target_alive": true,
+  "target_pid": 478260
+}
