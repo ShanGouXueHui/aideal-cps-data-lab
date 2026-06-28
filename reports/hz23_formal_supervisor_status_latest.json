@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T11:07:08Z",
+  "generated_at": "2026-06-28T12:08:24Z",
   "resume_report_digest": {
     "generated_at": "2026-06-27T01:57:33Z",
     "log_path": "logs/hz23_hz23_obs_20260624_093503_resume_20260627_093503.log",
@@ -13,7 +13,7 @@
     "pid": 465713,
     "round_id": "hz23_obs_20260624_093503",
     "schema_version": "hz23-formal-supervisor-state/v1",
-    "updated_at": "2026-06-27T11:07:08Z"
+    "updated_at": "2026-06-28T12:08:24Z"
   },
   "summary": {
     "catalog_changed": 1805,
