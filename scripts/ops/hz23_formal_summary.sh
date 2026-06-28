@@ -40,7 +40,12 @@ summary=status.get('summary') or {}
 progress_digest=progress.get('summary_digest') or {}
 completed=summary.get('completed_pages') or []
 unfinished=summary.get('unfinished_pages') or []
-if progress_digest:
+use_progress_digest=bool(
+    progress_digest
+    and state.get('mode') == 'running'
+    and progress.get('target_alive') is True
+)
+if use_progress_digest:
     completed_count=progress_digest.get('completed_count')
     last_completed=progress_digest.get('last_completed_page')
     unfinished_first_10=progress_digest.get('unfinished_first_10') or []
@@ -48,6 +53,7 @@ if progress_digest:
     stop_page=progress_digest.get('stop_page')
     stop_reason=progress_digest.get('stop_reason')
     complete=progress_digest.get('commercial_segment_complete')
+    summary_source='progress_digest'
 else:
     completed_count=len(completed)
     last_completed=max(completed) if completed else None
@@ -56,6 +62,7 @@ else:
     stop_page=summary.get('stop_page')
     stop_reason=summary.get('stop_reason')
     complete=summary.get('commercial_segment_complete')
+    summary_source='status_summary'
 pid=None
 alive=False
 if pid_file.exists():
@@ -72,6 +79,7 @@ payload={
   'alive':alive,
   'mode':state.get('mode'),
   'extra':state.get('extra'),
+  'summary_source':summary_source,
   'status_generated_at':status.get('generated_at'),
   'progress_generated_at':progress.get('generated_at'),
   'resume_generated_at':resume.get('generated_at'),
@@ -107,6 +115,7 @@ print(f"PID={pid}")
 print(f"ALIVE={str(alive).lower()}")
 print(f"MODE={payload.get('mode')}")
 print(f"EXTRA={payload.get('extra')}")
+print(f"SUMMARY_SOURCE={summary_source}")
 print(f"LAST_COMPLETED_PAGE={last_completed}")
 print(f"COMPLETED_COUNT={completed_count}")
 print(f"UNFINISHED_FIRST={unfinished_first_10[0] if unfinished_first_10 else None}")
