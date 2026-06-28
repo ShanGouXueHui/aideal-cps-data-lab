@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T13:07:12Z",
+  "generated_at": "2026-06-28T13:25:20Z",
   "resume_report_digest": {
     "generated_at": "2026-06-27T01:57:33Z",
     "log_path": "logs/hz23_hz23_obs_20260624_093503_resume_20260627_093503.log",
@@ -8,12 +8,12 @@
   },
   "schema_version": "hz23-formal-supervisor-status/v1",
   "state": {
-    "extra": "next_page=43 probe=failed",
-    "mode": "paused_for_manual_verification",
-    "pid": 476659,
+    "extra": "page_start=43",
+    "mode": "running",
+    "pid": 478168,
     "round_id": "hz23_obs_20260624_093503",
     "schema_version": "hz23-formal-supervisor-state/v1",
-    "updated_at": "2026-06-28T13:07:12Z"
+    "updated_at": "2026-06-28T13:25:20Z"
   },
   "summary": {
     "catalog_changed": 1805,
