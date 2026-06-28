@@ -1,7 +1,7 @@
 {
   "alive": true,
   "commercial_segment_complete": false,
-  "completed_count": 32,
+  "completed_count": 44,
   "details": {
     "progress": {
       "generated_at": "2026-06-28T13:30:28Z",
@@ -72,7 +72,7 @@
     },
     "resume_path": "reports/hz23_observation_resume_auto_latest.json",
     "status": {
-      "generated_at": "2026-06-28T13:31:13Z",
+      "generated_at": "2026-06-28T13:41:17Z",
       "resume_report_digest": {
         "generated_at": "2026-06-28T13:31:13Z",
         "log_path": "logs/hz23_hz23_obs_20260624_093503_formal_resume_20260628_212520.log",
@@ -81,12 +81,12 @@
       },
       "schema_version": "hz23-formal-supervisor-status/v1",
       "state": {
-        "extra": "stop_page=45 stop_reason=outside_daytime rc=88",
-        "mode": "stopped_non_risk",
+        "extra": "next_page=45 no_jd_probe=true",
+        "mode": "night_wait",
         "pid": 478168,
         "round_id": "hz23_obs_20260624_093503",
         "schema_version": "hz23-formal-supervisor-state/v1",
-        "updated_at": "2026-06-28T13:31:13Z"
+        "updated_at": "2026-06-28T13:41:17Z"
       },
       "summary": {
         "catalog_changed": 1847,
@@ -1042,29 +1042,30 @@
     },
     "status_path": "reports/hz23_formal_supervisor_status_latest.json"
   },
-  "extra": "stop_page=45 stop_reason=outside_daytime rc=88",
-  "generated_at": "2026-06-28T13:34:55Z",
-  "last_completed_page": 32,
-  "mode": "stopped_non_risk",
+  "extra": "next_page=45 no_jd_probe=true",
+  "generated_at": "2026-06-28T14:54:24Z",
+  "last_completed_page": 44,
+  "mode": "night_wait",
   "pid": 478168,
   "progress_generated_at": "2026-06-28T13:30:28Z",
   "resume_generated_at": "2026-06-28T13:31:13Z",
   "round_id": "hz23_obs_20260624_093503",
-  "scanned_total": 1920,
+  "scanned_total": 2640,
   "schema_version": "hz23-formal-summary/v1",
-  "status_generated_at": "2026-06-28T13:31:13Z",
-  "stop_page": 33,
+  "status_generated_at": "2026-06-28T13:41:17Z",
+  "stop_page": 45,
   "stop_reason": "outside_daytime",
+  "summary_source": "status_summary",
   "unfinished_first_10": [
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
-    40,
-    41,
-    42
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54
   ]
 }

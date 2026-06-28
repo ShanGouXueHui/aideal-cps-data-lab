@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T13:31:13Z",
+  "generated_at": "2026-06-28T13:41:17Z",
   "resume_report_digest": {
     "generated_at": "2026-06-28T13:31:13Z",
     "log_path": "logs/hz23_hz23_obs_20260624_093503_formal_resume_20260628_212520.log",
@@ -8,12 +8,12 @@
   },
   "schema_version": "hz23-formal-supervisor-status/v1",
   "state": {
-    "extra": "stop_page=45 stop_reason=outside_daytime rc=88",
-    "mode": "stopped_non_risk",
+    "extra": "next_page=45 no_jd_probe=true",
+    "mode": "night_wait",
     "pid": 478168,
     "round_id": "hz23_obs_20260624_093503",
     "schema_version": "hz23-formal-supervisor-state/v1",
-    "updated_at": "2026-06-28T13:31:13Z"
+    "updated_at": "2026-06-28T13:41:17Z"
   },
   "summary": {
     "catalog_changed": 1847,
