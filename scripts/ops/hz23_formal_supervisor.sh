@@ -377,7 +377,7 @@ while true; do
   fi
 
   if [ "$(inside_daytime)" = "true" ]; then
-    probe_ok="$(probe_manual_verified "$next_page")"
+    probe_ok="$(probe_manual_verified "$next_page" | tail -n 1)"
     if [ "$probe_ok" = "true" ]; then
       RUN_COUNT=$((RUN_COUNT + 1))
       run_resume_once
