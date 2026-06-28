@@ -1,9 +1,959 @@
 {
-  "controlled_entrypoint": true,
-  "generated_at": "2026-06-27T01:42:16Z",
-  "limit": "25",
-  "ok": false,
-  "page_sequence": "36",
-  "reason": "hz21_collector_not_mainlined",
-  "remediation": "mainline_hz21_browser_collector_before_hz23_new_candidate_generation"
+  "final": {
+    "activePageText": "36",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "36",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1343536373867 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=36"
+  },
+  "initial": {
+    "activePageText": "36",
+    "has4000": true,
+    "hasEmpty": false,
+    "jumpInputValue": "36",
+    "oneKeyCount": 60,
+    "pagerText": "共 4000 条 1343536373867 前往页",
+    "risk": [],
+    "skuCount": 60,
+    "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+    "url": "https://union.jd.com/proManager/index?pageNo=36"
+  },
+  "known_sku_count": 3857,
+  "limit": 25,
+  "ok": true,
+  "page_ready": {
+    "36": {
+      "info": {
+        "activePageText": "36",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "36",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1343536373867 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "skus": [
+          "100059350371",
+          "10190403075012",
+          "100017578766",
+          "67343893905",
+          "100004312276",
+          "100103545455",
+          "100031500104",
+          "100303040234",
+          "100245994803",
+          "100178166318",
+          "100326135856",
+          "100253539521",
+          "100199956027",
+          "100025434784",
+          "5832821",
+          "100016789266",
+          "100096172545",
+          "508411",
+          "14174694",
+          "10164676521767",
+          "100089698522",
+          "100354446372",
+          "100292217182",
+          "100093727701",
+          "1025000658",
+          "100288752808",
+          "217210",
+          "100164016614",
+          "100097473644",
+          "100059424811",
+          "12714651",
+          "1119471",
+          "10203769853351",
+          "100077328663",
+          "10174610574157",
+          "10120644831852",
+          "12546023",
+          "100049503892",
+          "100048947167",
+          "10217896198779",
+          "100065929671",
+          "100205360416",
+          "10105696129919",
+          "2193414",
+          "100092434467",
+          "100066937925",
+          "10138410223377",
+          "100189210246",
+          "100102864707",
+          "100016117498",
+          "100257845658",
+          "100054726200",
+          "10181970627384",
+          "100148338470",
+          "100086159214",
+          "100061894607",
+          "10070249368481",
+          "100182404104",
+          "100078056724",
+          "100006665590"
+        ],
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=36"
+      },
+      "mode": "already_on_page",
+      "ok": true
+    }
+  },
+  "page_summary": {
+    "36": {
+      "fail": 6,
+      "final_snapshot": {
+        "activePageText": "36",
+        "has4000": true,
+        "hasEmpty": false,
+        "jumpInputValue": "36",
+        "oneKeyCount": 60,
+        "pagerText": "共 4000 条 1343536373867 前往页",
+        "risk": [],
+        "skuCount": 60,
+        "title": "京东联盟 - 网络赚钱，流量变现，专业电商CPS联盟平台！",
+        "url": "https://union.jd.com/proManager/index?pageNo=36"
+      },
+      "fresh_initial": 20,
+      "ok": 0
+    }
+  },
+  "pages": [
+    36
+  ],
+  "quarantine": {
+    "removed_count": 10,
+    "removed_sample": [
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtnNOf",
+        "sku": "100016509578",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tnUSO",
+        "sku": "100064061547",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtYHfs",
+        "sku": "100134554977",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VatQCap",
+        "sku": "100152084723",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDt1cKA",
+        "sku": "100283885018",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VDtZXH5",
+        "sku": "10217890622092",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/V6tbLfh",
+        "sku": "15339734",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VgtyX6T",
+        "sku": "19593175106",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VGtTZE5",
+        "sku": "294574",
+        "worker_name": "hz20_mouse_click"
+      },
+      {
+        "menu_mode": "hz20_mouse_click_recovery",
+        "short_url": "https://u.jd.com/VOtTrNW",
+        "sku": "7168012",
+        "worker_name": "hz20_mouse_click"
+      }
+    ],
+    "rows_after": 3857
+  },
+  "results": [
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/10190403075012.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 97.17\n|\n佣金比例5.4%\n\nJOYFACE【畅销单品】觉飞心愿2Mini内衣洗衣机洗烘一体全自动小型家用内裤清洗机 套装版(蓝色+粉色洗涤袋）洗烘一体\n\n到手价￥1799.45￥2267\n1000+ 好评\n\n定向\n券\n购新国补最高15%\n觉飞（JOYFACE）旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "10190403075012",
+        "token": "hz21_10190403075012_1781932851248"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 0,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "10190403075012"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 777
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 798,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 777
+          },
+          "itemUrl": "https://item.jd.com/67343893905.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 15.84\n|\n佣金比例12%\n\n瑞皮乌龟灯晒背灯爬虫灯罩UVA+UVB陶瓷加热灯爬宠乌龟晒背灯 双灯罩\n\n到手价￥132￥156\n41+ 好评\n\n新派宠物旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 798.0
+        },
+        "ok": true,
+        "sku": "67343893905",
+        "token": "hz21_67343893905_1781932871099"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 1,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "67343893905"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1727.1875,
+          "y": 807
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1780.59375,
+            "cy": 828,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1727.1875,
+            "y": 807
+          },
+          "itemUrl": "https://item.jd.com/100004312276.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1605,
+            "y": 427
+          },
+          "rootText": "预估收益 ￥ 69.95\n|\n佣金比例5%\n\n京润珍珠韵华925银淡水无核珍珠项链百搭通勤项链送妈妈实用礼物\n\n到手价￥1399￥1764\n5000+ 好评\n\n自营\n京配\n券\n京润珍珠珠宝京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1780.59375,
+          "y": 828.0
+        },
+        "ok": true,
+        "sku": "100004312276",
+        "token": "hz21_100004312276_1781932890761"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 2,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "100004312276"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 362.1875,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 415.59375,
+            "cy": 1261,
+            "h": 42,
+            "w": 106.8125,
+            "x": 362.1875,
+            "y": 1240
+          },
+          "itemUrl": "https://item.jd.com/100103545455.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 240,
+            "y": 860
+          },
+          "rootText": "预估收益 ￥ 1.58\n|\n佣金比例5%\n\n博世（BOSCH）空气滤芯滤清器3666大众朗逸宝来速腾迈腾途观L帕萨特奥迪A3Q3Q2L\n\n到手价￥31.5￥63\n5000+ 好评\n\n自营\n定向\n京配\n券\n博世汽车配件京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 415.59375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100103545455",
+        "token": "hz21_100103545455_1781932908924"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 3,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "100103545455"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 703.4375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 756.84375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 703.4375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100031500104.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 581.25,
+            "y": 445
+          },
+          "rootText": "此商品正在参加奖励活动\n进行中\n\n预估收益 ￥ 3.98\n|\n佣金比例20%\n\n得力（deli）强力双面布基胶带 加厚网格防风 45mm*20m 地毯无痕固定婚庆春联粘贴 墙面隐形粘接 1卷 30804\n\n到手价￥19.9\n2.0万+ 好评\n\n自营\n定向\n奖励\n京配\n得力京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 756.84375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100031500104",
+        "token": "hz21_100031500104_1781932925116"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 4,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "100031500104"
+    },
+    {
+      "click": {
+        "box": {
+          "height": 42,
+          "width": 106.8125,
+          "x": 1385.9375,
+          "y": 825
+        },
+        "hit": {
+          "cls": "",
+          "ok": true,
+          "tag": "SPAN",
+          "text": "一键领链"
+        },
+        "matched": {
+          "buttonRect": {
+            "cx": 1439.34375,
+            "cy": 846,
+            "h": 42,
+            "w": 106.8125,
+            "x": 1385.9375,
+            "y": 825
+          },
+          "itemUrl": "https://item.jd.com/100245994803.html",
+          "rootRect": {
+            "h": 433,
+            "w": 240,
+            "x": 1263.75,
+            "y": 445
+          },
+          "rootText": "预估收益 ￥ 124.95\n|\n佣金比例5%\n\n科大讯飞AI翻译耳机 翻译会议耳机 同声传译神器 通话实时会议 随身出国 蓝牙降噪\n\n到手价￥2499\n500+ 好评\n\n自营\n定向\n京配\n科大讯飞京东自营旗舰店\n我要推广\n一键领链"
+        },
+        "method": "hz21_exact_sku_locator_safe_mouse_click",
+        "mouse_click": {
+          "x": 1439.34375,
+          "y": 846.0
+        },
+        "ok": true,
+        "sku": "100245994803",
+        "token": "hz21_100245994803_1781932942836"
+      },
+      "dom": {
+        "bodyHasShort": false,
+        "nodes": [
+          {
+            "cls": "el-dialog",
+            "i": 0,
+            "rect": {
+              "h": 404,
+              "w": 660,
+              "x": 630,
+              "y": 240
+            },
+            "text": "生成推广链接推广类型网站推广APP推广导购媒体推广流量媒体推广所属网站\n          无数据\n        新增网站领取代码类型静态链接将为您生成一段js脚本，放到html文件中，正常访问浏览器进行渲染即可播放智能图文 智能图文投放推广位选择推广位新增推广位推广位名称获取推广链接",
+            "visible": true
+          },
+          {
+            "cls": "el-dialog",
+            "i": 1,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "加入定向计划",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 2,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "奖励活动列表",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 3,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "选择普通分组加入取消",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 4,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我知道了 已获取权益，继续推广",
+            "visible": false
+          },
+          {
+            "cls": "el-dialog",
+            "i": 5,
+            "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+            },
+            "text": "我的授权Key",
+            "visible": false
+          }
+        ],
+        "risk": []
+      },
+      "modal_keys": [],
+      "ok": false,
+      "order": 5,
+      "page_no": 36,
+      "reason": "short_url_timeout",
+      "sku": "100245994803"
+    }
+  ],
+  "total_fail": 6,
+  "total_ok": 0,
+  "ts": "2026-06-20 13:20:33",
+  "wait": 10
 }

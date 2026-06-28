@@ -1,7 +1,7 @@
 {
-  "catalog_changed": 1805,
-  "catalog_new": 562,
-  "catalog_unchanged": 153,
+  "catalog_changed": 1847,
+  "catalog_new": 588,
+  "catalog_unchanged": 205,
   "collect_unavailable_pages": [
     1,
     2,
@@ -44,7 +44,9 @@
     39,
     40,
     41,
-    42
+    42,
+    43,
+    44
   ],
   "commercial_segment_complete": false,
   "completed_pages": [
@@ -89,9 +91,11 @@
     39,
     40,
     41,
-    42
+    42,
+    43,
+    44
   ],
-  "duration_seconds": 6468,
+  "duration_seconds": 6811,
   "last_known_sku_count": null,
   "pages": [
     1,
@@ -880,23 +884,46 @@
       "unchanged_catalog": 2
     },
     {
+      "changed_catalog": 15,
+      "collect_ok": false,
+      "collect_unavailable": true,
       "known_sku_count": null,
-      "ok": false,
+      "new_catalog": 0,
+      "ok": true,
       "page": 43,
-      "reason": "prep_entry_failed",
-      "scan_ok": false,
+      "page_summary": null,
+      "rc": 66,
+      "reason": "hz21_collector_not_mainlined",
+      "scan_ok": true,
+      "scanned": 60,
       "total_fail": 0,
-      "total_ok": 0
+      "total_ok": 0,
+      "unchanged_catalog": 45
+    },
+    {
+      "changed_catalog": 27,
+      "collect_ok": false,
+      "collect_unavailable": true,
+      "known_sku_count": null,
+      "new_catalog": 26,
+      "ok": true,
+      "page": 44,
+      "page_summary": null,
+      "rc": 66,
+      "reason": "hz21_collector_not_mainlined",
+      "scan_ok": true,
+      "scanned": 60,
+      "total_fail": 0,
+      "total_ok": 0,
+      "unchanged_catalog": 7
     }
   ],
-  "scanned_total": 2520,
-  "stop_page": 43,
-  "stop_reason": "prep_entry_failed",
+  "scanned_total": 2640,
+  "stop_page": 45,
+  "stop_reason": "outside_daytime",
   "total_fail": 0,
   "total_ok": 0,
   "unfinished_pages": [
-    43,
-    44,
     45,
     46,
     47,
