@@ -1124,7 +1124,7 @@
     "status_path": "reports/hz23_formal_supervisor_status_latest.json"
   },
   "extra": "next_page=49 no_jd_probe=true",
-  "generated_at": "2026-06-30T17:32:05Z",
+  "generated_at": "2026-06-30T17:36:30Z",
   "last_completed_page": 48,
   "mode": "night_wait",
   "pid": 478168,
