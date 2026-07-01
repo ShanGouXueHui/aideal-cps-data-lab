@@ -17,14 +17,23 @@ CANDIDATE="reports/hz23_candidate_feed_gate_latest.json"
 
 FETCH_TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 git fetch origin main runtime-evidence >/dev/null 2>&1 || true
-git checkout origin/runtime-evidence -- "$SUMMARY" "$STATUS" "$PROGRESS" "$RESUME" "$QUALITY" "$HZ21" "$CANDIDATE" >/dev/null 2>&1
-CHECKOUT_RC=$?
+CHECKOUT_RC=0
+MISSING_REPORTS=""
+for f in "$SUMMARY" "$STATUS" "$PROGRESS" "$RESUME" "$QUALITY" "$HZ21" "$CANDIDATE"; do
+  git checkout origin/runtime-evidence -- "$f" >/dev/null 2>&1
+  RC=$?
+  if [ "$RC" != "0" ]; then
+    CHECKOUT_RC=1
+    MISSING_REPORTS="$MISSING_REPORTS $f"
+  fi
+done
 
 echo "===== AIDEAL DATA LAB RUNTIME STATUS ====="
 echo "GENERATED_AT=$FETCH_TS"
 echo "MAIN_HEAD=$(git rev-parse --short origin/main 2>/dev/null)"
 echo "RUNTIME_EVIDENCE_HEAD=$(git rev-parse --short origin/runtime-evidence 2>/dev/null)"
 echo "CHECKOUT_RC=$CHECKOUT_RC"
+echo "MISSING_REPORTS=${MISSING_REPORTS# }"
 
 python3 - "$SUMMARY" "$STATUS" "$RESUME" "$QUALITY" "$HZ21" "$CANDIDATE" <<'PY'
 import json, sys
