@@ -2,12 +2,12 @@
   "candidate_path": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
   "duplicate_sku_count": 0,
   "errors": {},
-  "file_sha256": "21b1e9b1a5376e7352bc298fa1819c1ec7c23e44b7df5822cad2e8b243b014ce",
+  "file_sha256": "5bcb103a7899ee77981302a09011ae6feea52ff2ca1a2eba1fd0b95b5a72a5d1",
   "invalid_row_count": 0,
   "manifest_path": "data/export/aideal_cps_products_commercial_candidate_manifest.json",
   "ok": true,
   "payload_hash_mismatch_count": 0,
-  "row_count": 1,
+  "row_count": 2405,
   "samples": [],
-  "unique_sku_count": 1
+  "unique_sku_count": 2405
 }

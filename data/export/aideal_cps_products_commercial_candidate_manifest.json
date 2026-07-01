@@ -79,9 +79,9 @@
     67
   ],
   "data_file": "aideal_cps_products_commercial_candidate_latest.jsonl",
-  "data_sha256": "21b1e9b1a5376e7352bc298fa1819c1ec7c23e44b7df5822cad2e8b243b014ce",
+  "data_sha256": "5bcb103a7899ee77981302a09011ae6feea52ff2ca1a2eba1fd0b95b5a72a5d1",
   "duplicate_sku_count": 0,
-  "eligible_sku_count": 1,
+  "eligible_sku_count": 2405,
   "feed_schema_version": "aideal-cps-product-feed/v1",
   "feed_status": "candidate",
   "gate_checks": {
@@ -100,11 +100,11 @@
     "untrusted_promotion_url_zero": true
   },
   "gate_failures": [],
-  "generated_at": "2026-07-02T03:58:11",
+  "generated_at": "2026-07-02T04:10:16",
   "last_known_sku_count": null,
   "minimum_observation_hours": 48.0,
   "minimum_successful_probes": 2,
-  "observation_hours": 436.39,
+  "observation_hours": 436.6,
   "observation_ready": true,
   "previous_manifest": {
     "candidate_integrity_ready": false,
@@ -117,35 +117,35 @@
   "promoted": true,
   "promotion_status": "promoted",
   "rejected": {
-    "inactive": 0,
-    "missing_image_url": 0,
+    "inactive": 1406,
+    "missing_image_url": 1,
     "missing_item_url": 0,
     "missing_price": 0,
     "missing_promotion_url": 0,
-    "missing_title": 0,
+    "missing_title": 47,
     "unsafe_hz20": 0,
     "untrusted_promotion_url": 0
   },
   "round_complete": true,
   "round_id": "hz23_obs_20260624_093503",
   "round_seen_sku_count": 3573,
-  "row_count": 1,
+  "row_count": 2405,
   "scanned_total": 4019,
   "schema_version": "aideal-cps-product-feed-manifest/v1",
   "source_candidates_evaluated": [
     {
       "path": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
       "present": true,
-      "row_count": 1,
-      "trusted_sku_count": 1
+      "row_count": 3858,
+      "trusted_sku_count": 3858
     }
   ],
   "source_duplicate_sku_count": 0,
   "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
-  "source_row_count": 1,
+  "source_row_count": 3858,
   "stop_page": null,
   "stop_reason": null,
   "successful_probes": 6,
-  "trusted_dedup_sku_count": 1,
+  "trusted_dedup_sku_count": 3858,
   "unfinished_pages": []
 }
