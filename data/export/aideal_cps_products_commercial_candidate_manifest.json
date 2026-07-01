@@ -1,10 +1,12 @@
 {
   "candidate_file": "data/export/aideal_cps_products_commercial_candidate_latest.jsonl",
-  "candidate_integrity_ready": false,
-  "catalog_changed": 2172,
-  "catalog_index_sku_count": 5510,
-  "catalog_new": 1750,
-  "catalog_unchanged": 95,
+  "candidate_integrity_ready": true,
+  "canonical_candidate_preserved": false,
+  "canonical_manifest_preserved": false,
+  "catalog_changed": 2383,
+  "catalog_index_sku_count": 7021,
+  "catalog_new": 1399,
+  "catalog_unchanged": 237,
   "commercial_enabled": false,
   "commercial_segment_complete": true,
   "completed_pages": [
@@ -77,15 +79,15 @@
     67
   ],
   "data_file": "aideal_cps_products_commercial_candidate_latest.jsonl",
-  "data_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "data_sha256": "21b1e9b1a5376e7352bc298fa1819c1ec7c23e44b7df5822cad2e8b243b014ce",
   "duplicate_sku_count": 0,
-  "eligible_sku_count": 0,
+  "eligible_sku_count": 1,
   "feed_schema_version": "aideal-cps-product-feed/v1",
   "feed_status": "candidate",
   "gate_checks": {
     "all_pages_completed": true,
     "candidate_duplicate_sku_zero": true,
-    "candidate_nonempty": false,
+    "candidate_nonempty": true,
     "checksum_valid": true,
     "commercial_segment_complete": true,
     "observation_hours_minimum": true,
@@ -97,15 +99,23 @@
     "unsafe_hz20_zero": true,
     "untrusted_promotion_url_zero": true
   },
-  "gate_failures": [
-    "candidate_nonempty"
-  ],
-  "generated_at": "2026-06-20T15:43:45",
-  "last_known_sku_count": 3858,
+  "gate_failures": [],
+  "generated_at": "2026-07-02T03:40:16",
+  "last_known_sku_count": null,
   "minimum_observation_hours": 48.0,
   "minimum_successful_probes": 2,
-  "observation_hours": 160.15,
-  "observation_ready": false,
+  "observation_hours": 436.1,
+  "observation_ready": true,
+  "previous_manifest": {
+    "candidate_integrity_ready": false,
+    "data_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "observation_ready": false,
+    "present": true,
+    "round_id": "20260620_101332",
+    "row_count": 0
+  },
+  "promoted": true,
+  "promotion_status": "promoted",
   "rejected": {
     "inactive": 0,
     "missing_image_url": 0,
@@ -117,16 +127,25 @@
     "untrusted_promotion_url": 0
   },
   "round_complete": true,
-  "round_id": "20260620_101332",
-  "round_seen_sku_count": 3840,
-  "row_count": 0,
-  "scanned_total": 4017,
+  "round_id": "hz23_obs_20260624_093503",
+  "round_seen_sku_count": 3573,
+  "row_count": 1,
+  "scanned_total": 4019,
   "schema_version": "aideal-cps-product-feed-manifest/v1",
+  "source_candidates_evaluated": [
+    {
+      "path": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+      "present": true,
+      "row_count": 1,
+      "trusted_sku_count": 1
+    }
+  ],
   "source_duplicate_sku_count": 0,
   "source_file": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+  "source_row_count": 1,
   "stop_page": null,
   "stop_reason": null,
-  "successful_probes": 4,
-  "trusted_dedup_sku_count": 0,
+  "successful_probes": 6,
+  "trusted_dedup_sku_count": 1,
   "unfinished_pages": []
 }
