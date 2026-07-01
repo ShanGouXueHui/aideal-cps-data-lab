@@ -1,0 +1,75 @@
+{
+  "candidate": {
+    "gate_failures": [],
+    "gate_pass": true,
+    "rows": 1,
+    "sample_skus": [
+      "100003427923"
+    ],
+    "validation_ok": true
+  },
+  "commercial_ready": false,
+  "contract_failures": [],
+  "contract_ready": true,
+  "diagnostics_generated_at": "2026-07-01T19:40:33Z",
+  "generated_at": "2026-07-01T19:52:54Z",
+  "hz21": {
+    "hard_failures": [],
+    "ready": true
+  },
+  "hz23": {
+    "complete": true,
+    "completed_count": 67,
+    "quality_pass": true,
+    "quality_warnings": [
+      "scanned_total_or_page_count_not_exact",
+      "collect_unavailable_expected_until_hz21_mainlined"
+    ],
+    "scan_anomalies": [
+      {
+        "page": 63,
+        "scanned": 59
+      }
+    ],
+    "scanned_total": 4019
+  },
+  "round_id": "hz23_obs_20260624_093503",
+  "scale_failures": [
+    "candidate_rows_below_minimum",
+    "trusted_source_rows_below_minimum"
+  ],
+  "schema_version": "commercial-readiness-gate/v1",
+  "source": {
+    "source_a": {
+      "exists": true,
+      "path": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
+      "rows": 1,
+      "sample_skus": [
+        "100003427923"
+      ],
+      "status_ok_rows": 1,
+      "trusted_short_url_rows": 1
+    },
+    "source_b": {
+      "exists": true,
+      "path": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
+      "rows": 1,
+      "sample_skus": [
+        "100003427923"
+      ],
+      "status_ok_rows": 1,
+      "trusted_short_url_rows": 1
+    },
+    "source_row_max": 1,
+    "trusted_source_row_max": 1
+  },
+  "thresholds": {
+    "min_candidate_rows": 100,
+    "min_source_rows": 100
+  },
+  "warnings": [
+    "single_sku_smoke_only",
+    "source_link_rows_single_object_only",
+    "hz23_scan_anomalies_present"
+  ]
+}
