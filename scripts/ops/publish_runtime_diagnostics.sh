@@ -5,6 +5,7 @@
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
 cd "$PROJECT_DIR" || exit 1
+export PYTHONPATH="${PROJECT_DIR}/src:${PYTHONPATH:-}"
 mkdir -p logs reports run data/import data/export
 
 REPORT="reports/runtime_diagnostics_latest.json"
@@ -18,6 +19,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
+
+from aideal_cps_data_lab.hz24.repository import read_jsonl
 
 report=Path(sys.argv[1])
 tail_lines=int(sys.argv[2])
@@ -61,6 +64,11 @@ def read_json(path: Path):
     except Exception as exc:
         return {'parse_error':repr(exc)}
 
+def raw_line_count(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return sum(1 for line in path.read_text(encoding='utf-8', errors='replace').splitlines() if line.strip())
+
 def jsonl_diag(path: Path):
     out={'path':str(path),'exists':path.exists(),'bytes':0,'sha256':None,'nonblank_lines':0,'valid_json_objects':0,'status_ok_rows':0,'trusted_short_url_rows':0,'first_records':[]}
     if not path.exists():
@@ -68,26 +76,25 @@ def jsonl_diag(path: Path):
     raw=path.read_bytes()
     out['bytes']=len(raw)
     out['sha256']=sha256_bytes(raw)
-    lines=raw.decode('utf-8', errors='replace').splitlines()
-    for idx,line in enumerate(lines, start=1):
-        if not line.strip():
-            continue
-        out['nonblank_lines'] += 1
-        rec={'line':idx,'raw_prefix':line[:300]}
-        try:
-            value=json.loads(line)
-            if isinstance(value, dict):
-                out['valid_json_objects'] += 1
-                keys=sorted(value.keys())[:40]
-                rec={'line':idx,'keys':keys,'sku':value.get('sku'),'status':value.get('status'),'has_short_url':bool(value.get('short_url')),'short_url_host':urlparse(str(value.get('short_url') or '')).hostname,'title_present':bool(value.get('title')),'price_present':bool(value.get('price'))}
-                if value.get('status') == 'ok':
-                    out['status_ok_rows'] += 1
-                if urlparse(str(value.get('short_url') or '')).hostname == 'u.jd.com':
-                    out['trusted_short_url_rows'] += 1
-        except Exception as exc:
-            rec['json_error']=repr(exc)
+    out['nonblank_lines']=raw_line_count(path)
+    rows=read_jsonl(path)
+    out['valid_json_objects']=len(rows)
+    for idx,value in enumerate(rows, start=1):
+        if value.get('status') == 'ok':
+            out['status_ok_rows'] += 1
+        if urlparse(str(value.get('short_url') or '')).hostname == 'u.jd.com':
+            out['trusted_short_url_rows'] += 1
         if len(out['first_records']) < 5:
-            out['first_records'].append(rec)
+            out['first_records'].append({
+                'index':idx,
+                'keys':sorted(value.keys())[:40],
+                'sku':value.get('sku'),
+                'status':value.get('status'),
+                'has_short_url':bool(value.get('short_url')),
+                'short_url_host':urlparse(str(value.get('short_url') or '')).hostname,
+                'title_present':bool(value.get('title')),
+                'price_present':bool(value.get('price')),
+            })
     return out
 
 logs={}
@@ -104,7 +111,7 @@ for p in json_paths:
 sources={p:jsonl_diag(Path(p)) for p in source_paths}
 
 payload={
-  'schema_version':'runtime-diagnostics/v1',
+  'schema_version':'runtime-diagnostics/v2',
   'generated_at':datetime.utcnow().isoformat(timespec='seconds')+'Z',
   'tail_lines':tail_lines,
   'cwd':os.getcwd(),
