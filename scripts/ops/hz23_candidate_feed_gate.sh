@@ -153,7 +153,7 @@ GATE_RC=$?
 
 bash scripts/git_publish_files_via_worktree.sh \
   "reports: publish HZ23 candidate feed gate" \
-  "$CANDIDATE" "$MANIFEST" "$VALIDATION" "$GATE" \
+  "$VALIDATION" "$GATE" "$MANIFEST" \
   > logs/hz23_candidate_feed_gate_publish.log 2>&1
 PUBLISH_RC=$?
 git fetch origin runtime-evidence >/dev/null 2>&1 || true
