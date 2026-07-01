@@ -21,8 +21,14 @@ def _append_object(rows: list[dict[str, Any]], value: Any) -> None:
 
 def _skip_legacy_separators(text: str, index: int) -> int:
     length = len(text)
-    while index < length and (text[index].isspace() or text[index] == ","):
-        index += 1
+    while index < length:
+        if text[index].isspace() or text[index] == ",":
+            index += 1
+            continue
+        if text[index] == "\\" and index + 1 < length and text[index + 1] in {"n", "r", "t"}:
+            index += 2
+            continue
+        break
     return index
 
 
@@ -30,9 +36,10 @@ def _read_json_objects_from_text(text: str) -> list[dict[str, Any]]:
     """Read one JSON object, JSONL, or legacy concatenated object streams.
 
     Some historical collector outputs were written as many JSON objects appended to
-    one physical line.  The old variants include `{...}{...}` and `{...},{...}`.
-    The commercial finalizer must treat those formats as valid input instead of
-    silently dropping every row.
+    one physical line.  The old variants include `{...}{...}`, `{...},{...}` and
+    `{...}\\n{...}` where the separator is the literal two-character string
+    backslash+n instead of a real newline.  The commercial finalizer must treat
+    those formats as valid input instead of silently dropping every row.
     """
 
     rows: list[dict[str, Any]] = []
