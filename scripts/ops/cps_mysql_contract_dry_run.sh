@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CPS/MySQL contract dry-run for commercial candidate feed.
-# Generates DDL and upsert preview, validates all candidate rows, but never connects to MySQL.
+# Generates DDL and upsert preview locally, embeds them in JSON report, validates all candidate rows, but never connects to MySQL.
 # No set -e is used.
 
 PROJECT_DIR="${HOME}/projects/aideal-cps-data-lab"
@@ -145,7 +145,8 @@ for payload in products[:5]:
         f"INSERT INTO aideal_cps_commission_products ({', '.join(columns)}) VALUES ({values})\n"
         f"ON DUPLICATE KEY UPDATE {updates};"
     )
-preview_path.write_text('\n\n'.join(preview)+'\n', encoding='utf-8')
+preview_sql='\n\n'.join(preview)+'\n'
+preview_path.write_text(preview_sql, encoding='utf-8')
 
 failures=[]
 warnings=[]
@@ -165,7 +166,7 @@ if manifest.get('row_count') != len(rows):
     warnings.append('manifest_row_count_differs')
 
 payload={
-  'schema_version':'cps-mysql-contract-dry-run/v1',
+  'schema_version':'cps-mysql-contract-dry-run/v2',
   'generated_at':datetime.utcnow().isoformat(timespec='seconds')+'Z',
   'ok':not failures,
   'failures':failures,
@@ -174,6 +175,8 @@ payload={
   'manifest_path':str(manifest_path),
   'ddl_path':str(ddl_path),
   'upsert_preview_path':str(preview_path),
+  'ddl_sql':DDL_SQL,
+  'upsert_preview_sql':preview_sql,
   'thresholds':{'min_rows':min_rows},
   'counts':{
     'candidate_rows':len(rows),
@@ -214,7 +217,7 @@ DRY_RUN_RC=$?
 
 bash scripts/git_publish_files_via_worktree.sh \
   "reports: publish CPS MySQL contract dry run" \
-  "$REPORT" "$DDL" "$UPSERT_PREVIEW" \
+  "$REPORT" \
   > logs/cps_mysql_contract_dry_run_publish.log 2>&1
 PUBLISH_RC=$?
 git fetch origin runtime-evidence >/dev/null 2>&1 || true
