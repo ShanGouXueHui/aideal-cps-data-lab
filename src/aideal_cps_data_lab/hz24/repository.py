@@ -19,12 +19,20 @@ def _append_object(rows: list[dict[str, Any]], value: Any) -> None:
         rows.append(value)
 
 
+def _skip_legacy_separators(text: str, index: int) -> int:
+    length = len(text)
+    while index < length and (text[index].isspace() or text[index] == ","):
+        index += 1
+    return index
+
+
 def _read_json_objects_from_text(text: str) -> list[dict[str, Any]]:
-    """Read one JSON object, JSONL, or concatenated JSON objects.
+    """Read one JSON object, JSONL, or legacy concatenated object streams.
 
     Some historical collector outputs were written as many JSON objects appended to
-    one physical line without newline delimiters.  The commercial finalizer must
-    treat that format as valid input instead of silently dropping every row.
+    one physical line.  The old variants include `{...}{...}` and `{...},{...}`.
+    The commercial finalizer must treat those formats as valid input instead of
+    silently dropping every row.
     """
 
     rows: list[dict[str, Any]] = []
@@ -32,8 +40,7 @@ def _read_json_objects_from_text(text: str) -> list[dict[str, Any]]:
     index = 0
     length = len(text)
     while index < length:
-        while index < length and text[index].isspace():
-            index += 1
+        index = _skip_legacy_separators(text, index)
         if index >= length:
             break
         try:
@@ -60,7 +67,11 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
         except Exception:
             rows.extend(_read_json_objects_from_text(line))
             continue
-        _append_object(rows, value)
+        if isinstance(value, list):
+            for item in value:
+                _append_object(rows, item)
+        else:
+            _append_object(rows, value)
     if not rows and text.strip():
         rows.extend(_read_json_objects_from_text(text))
     return rows
