@@ -2,17 +2,26 @@
   "candidate": {
     "gate_failures": [],
     "gate_pass": true,
-    "rows": 1,
+    "rows": 2405,
     "sample_skus": [
-      "100003427923"
+      "100000002065",
+      "100000181988",
+      "100000331461",
+      "100000333895",
+      "100000349380",
+      "100000424178",
+      "100000561346",
+      "100000725208",
+      "100001121132",
+      "100001473103"
     ],
     "validation_ok": true
   },
-  "commercial_ready": false,
+  "commercial_ready": true,
   "contract_failures": [],
   "contract_ready": true,
-  "diagnostics_generated_at": "2026-07-01T19:58:24Z",
-  "generated_at": "2026-07-01T19:58:40Z",
+  "diagnostics_generated_at": "2026-07-01T20:10:30Z",
+  "generated_at": "2026-07-01T20:10:45Z",
   "hz21": {
     "hard_failures": [],
     "ready": true
@@ -34,42 +43,55 @@
     "scanned_total": 4019
   },
   "round_id": "hz23_obs_20260624_093503",
-  "scale_failures": [
-    "candidate_rows_below_minimum",
-    "trusted_source_rows_below_minimum"
-  ],
+  "scale_failures": [],
   "schema_version": "commercial-readiness-gate/v1",
   "source": {
     "source_a": {
       "exists": true,
       "path": "data/import/hz_jd_union_all_product_full_links_latest.jsonl",
-      "rows": 1,
+      "rows": 3858,
       "sample_skus": [
-        "100003427923"
+        "100003427923",
+        "100006061653",
+        "100006970555",
+        "100010958780",
+        "100011878656",
+        "100011927270",
+        "100013418440",
+        "100013872183",
+        "100013875646",
+        "100018967765"
       ],
-      "status_ok_rows": 1,
-      "trusted_short_url_rows": 1
+      "status_ok_rows": 3858,
+      "trusted_short_url_rows": 3858
     },
     "source_b": {
       "exists": true,
       "path": "data/import/hz_jd_union_product_all_full_links_latest.jsonl",
-      "rows": 1,
+      "rows": 3858,
       "sample_skus": [
-        "100003427923"
+        "100003427923",
+        "100006061653",
+        "100006970555",
+        "100010958780",
+        "100011878656",
+        "100011927270",
+        "100013418440",
+        "100013872183",
+        "100013875646",
+        "100018967765"
       ],
-      "status_ok_rows": 1,
-      "trusted_short_url_rows": 1
+      "status_ok_rows": 3858,
+      "trusted_short_url_rows": 3858
     },
-    "source_row_max": 1,
-    "trusted_source_row_max": 1
+    "source_row_max": 3858,
+    "trusted_source_row_max": 3858
   },
   "thresholds": {
     "min_candidate_rows": 100,
     "min_source_rows": 100
   },
   "warnings": [
-    "single_sku_smoke_only",
-    "source_link_rows_single_object_only",
     "hz23_scan_anomalies_present"
   ]
 }
