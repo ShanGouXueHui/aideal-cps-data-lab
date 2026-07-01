@@ -11,8 +11,8 @@
   "commercial_ready": false,
   "contract_failures": [],
   "contract_ready": true,
-  "diagnostics_generated_at": "2026-07-01T19:40:33Z",
-  "generated_at": "2026-07-01T19:52:54Z",
+  "diagnostics_generated_at": "2026-07-01T19:58:24Z",
+  "generated_at": "2026-07-01T19:58:40Z",
   "hz21": {
     "hard_failures": [],
     "ready": true
