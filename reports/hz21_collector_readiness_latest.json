@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "python_exists": true,
+    "runtime_source_exists": true,
+    "runtime_source_py_compile_ok": true,
+    "wrapper_exists": true
+  },
+  "generated_at": "2026-07-01T19:19:59Z",
+  "hard_failures": [],
+  "paths": {
+    "latest_report": "reports/hz21_strict_card_dom_recover_latest.json",
+    "python": ".venv-browser/bin/python",
+    "runtime_source": "run/hz21_strict_card_dom_recover_page.py",
+    "wrapper": "scripts/hz21_run_strong_risk_collector.sh"
+  },
+  "ready": true,
+  "schema_version": "hz21-collector-readiness/v1",
+  "values": {
+    "latest_report_generated_at": null,
+    "latest_report_ok": true,
+    "latest_report_reason": null,
+    "py_compile_rc": 0,
+    "py_compile_stderr_tail": "",
+    "runtime_source_bytes": 182,
+    "runtime_source_sha256": "e09d54e5c2d76a3d534eef9a1c1752c760df739695669dc7031a3d1fb8dca4c0"
+  }
+}
