@@ -1,9 +1,9 @@
 {
   "controlled_entrypoint": true,
-  "generated_at": "2026-06-28T13:28:24Z",
+  "generated_at": "2026-07-01T02:59:21Z",
   "limit": "25",
   "ok": false,
-  "page_sequence": "44",
+  "page_sequence": "67",
   "reason": "hz21_collector_not_mainlined",
   "remediation": "mainline_hz21_browser_collector_before_hz23_new_candidate_generation"
 }
