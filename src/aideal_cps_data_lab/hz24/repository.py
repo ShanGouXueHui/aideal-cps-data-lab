@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from json import JSONDecoder
 from pathlib import Path
 from typing import Any
 
@@ -13,19 +14,55 @@ def load_json(path: Path) -> dict[str, Any]:
     return value if isinstance(value, dict) else {}
 
 
+def _append_object(rows: list[dict[str, Any]], value: Any) -> None:
+    if isinstance(value, dict):
+        rows.append(value)
+
+
+def _read_json_objects_from_text(text: str) -> list[dict[str, Any]]:
+    """Read one JSON object, JSONL, or concatenated JSON objects.
+
+    Some historical collector outputs were written as many JSON objects appended to
+    one physical line without newline delimiters.  The commercial finalizer must
+    treat that format as valid input instead of silently dropping every row.
+    """
+
+    rows: list[dict[str, Any]] = []
+    decoder = JSONDecoder()
+    index = 0
+    length = len(text)
+    while index < length:
+        while index < length and text[index].isspace():
+            index += 1
+        if index >= length:
+            break
+        try:
+            value, end = decoder.raw_decode(text, index)
+        except Exception:
+            break
+        _append_object(rows, value)
+        if end <= index:
+            break
+        index = end
+    return rows
+
+
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     if not path.exists():
         return rows
-    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for line in text.splitlines():
         if not line.strip():
             continue
         try:
             value = json.loads(line)
         except Exception:
+            rows.extend(_read_json_objects_from_text(line))
             continue
-        if isinstance(value, dict):
-            rows.append(value)
+        _append_object(rows, value)
+    if not rows and text.strip():
+        rows.extend(_read_json_objects_from_text(text))
     return rows
 
 
