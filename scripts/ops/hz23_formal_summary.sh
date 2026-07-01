@@ -13,7 +13,11 @@ RESUME="reports/hz23_observation_resume_auto_latest.json"
 SUMMARY_REPORT="reports/hz23_formal_summary_latest.json"
 PID_FILE="run/hz23_formal_supervisor.pid"
 
-python3 - "$ROUND_ID" "$STATUS" "$PROGRESS" "$RESUME" "$SUMMARY_REPORT" "$PID_FILE" <<'PY'
+git fetch origin runtime-evidence >/dev/null 2>&1 || true
+git checkout origin/runtime-evidence -- "$STATUS" "$PROGRESS" "$RESUME" >/dev/null 2>&1
+CHECKOUT_RC=$?
+
+python3 - "$ROUND_ID" "$STATUS" "$PROGRESS" "$RESUME" "$SUMMARY_REPORT" "$PID_FILE" "$CHECKOUT_RC" <<'PY'
 import json, os, sys
 from datetime import datetime
 from pathlib import Path
@@ -23,6 +27,7 @@ progress_path=Path(sys.argv[3])
 resume_path=Path(sys.argv[4])
 summary_report=Path(sys.argv[5])
 pid_file=Path(sys.argv[6])
+checkout_rc=int(sys.argv[7])
 
 def read_json(path):
     if not path.exists():
@@ -40,6 +45,10 @@ summary=status.get('summary') or {}
 progress_digest=progress.get('summary_digest') or {}
 completed=summary.get('completed_pages') or []
 unfinished=summary.get('unfinished_pages') or []
+missing_inputs=[]
+for name, path, value in (('status', status_path, status), ('resume', resume_path, resume)):
+    if not path.exists() or not value:
+        missing_inputs.append(name)
 use_progress_digest=bool(
     progress_digest
     and state.get('mode') == 'running'
@@ -72,7 +81,7 @@ if pid_file.exists():
         alive=os.path.exists(f'/proc/{pid}')
 
 payload={
-  'schema_version':'hz23-formal-summary/v1',
+  'schema_version':'hz23-formal-summary/v2',
   'generated_at':datetime.utcnow().isoformat(timespec='seconds')+'Z',
   'round_id':round_id,
   'pid':pid,
@@ -80,6 +89,8 @@ payload={
   'mode':state.get('mode'),
   'extra':state.get('extra'),
   'summary_source':summary_source,
+  'checkout_rc':checkout_rc,
+  'missing_inputs':missing_inputs,
   'status_generated_at':status.get('generated_at'),
   'progress_generated_at':progress.get('generated_at'),
   'resume_generated_at':resume.get('generated_at'),
@@ -116,12 +127,15 @@ print(f"ALIVE={str(alive).lower()}")
 print(f"MODE={payload.get('mode')}")
 print(f"EXTRA={payload.get('extra')}")
 print(f"SUMMARY_SOURCE={summary_source}")
+print(f"CHECKOUT_RC={checkout_rc}")
+print(f"MISSING_INPUTS={missing_inputs}")
 print(f"LAST_COMPLETED_PAGE={last_completed}")
 print(f"COMPLETED_COUNT={completed_count}")
 print(f"UNFINISHED_FIRST={unfinished_first_10[0] if unfinished_first_10 else None}")
 print(f"SCANNED_TOTAL={scanned_total}")
 print(f"COMPLETE={complete}")
 PY
+SUMMARY_RC=$?
 
 bash scripts/git_publish_files_via_worktree.sh \
   "reports: publish HZ23 formal compact summary" \
@@ -130,5 +144,6 @@ bash scripts/git_publish_files_via_worktree.sh \
 PUBLISH_RC=$?
 git fetch origin runtime-evidence >/dev/null 2>&1 || true
 
+echo "SUMMARY_RC=$SUMMARY_RC"
 echo "PUBLISH_RC=$PUBLISH_RC"
 echo "RUNTIME_EVIDENCE_HEAD=$(git rev-parse --short origin/runtime-evidence 2>/dev/null)"
