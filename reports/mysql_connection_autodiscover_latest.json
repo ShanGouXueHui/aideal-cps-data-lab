@@ -1,0 +1,317 @@
+{
+  "attempts": [
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "process_env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "config/hz23-service.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "config/hz11_high_commission.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "config/hz12_product_all_full.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "config/ci-bridge.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "config/hz11_product_all.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "run/hz23_observation_delay.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "run/hz23_observation_resume_delay.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": null,
+        "database_present": false,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "run/hz23_smoke_delay.env",
+        "user": null,
+        "user_present": false
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": "mysql",
+        "database_present": true,
+        "host": "localhost",
+        "password_present": false,
+        "port": "3306",
+        "socket": "/var/run/mysqld/mysqld.sock",
+        "source": "local_root_socket",
+        "user": "root",
+        "user_present": true
+      },
+      "rc": 127
+    },
+    {
+      "connect_ok": false,
+      "error_tail": "mysql_client_missing",
+      "profile": {
+        "database": "mysql",
+        "database_present": true,
+        "host": "127.0.0.1",
+        "password_present": false,
+        "port": "3306",
+        "socket": null,
+        "source": "local_root_tcp_no_password",
+        "user": "root",
+        "user_present": true
+      },
+      "rc": 127
+    }
+  ],
+  "generated_at": "2026-07-01T20:26:41Z",
+  "masked_config_lines": [],
+  "mysql_bin": "mysql",
+  "mysql_bin_found": false,
+  "ok": false,
+  "profiles": [
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "process_env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "config/hz23-service.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "config/hz11_high_commission.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "config/hz12_product_all_full.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "config/ci-bridge.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "config/hz11_product_all.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "run/hz23_observation_delay.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "run/hz23_observation_resume_delay.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": null,
+      "database_present": false,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "run/hz23_smoke_delay.env",
+      "user": null,
+      "user_present": false
+    },
+    {
+      "database": "mysql",
+      "database_present": true,
+      "host": "localhost",
+      "password_present": false,
+      "port": "3306",
+      "socket": "/var/run/mysqld/mysqld.sock",
+      "source": "local_root_socket",
+      "user": "root",
+      "user_present": true
+    },
+    {
+      "database": "mysql",
+      "database_present": true,
+      "host": "127.0.0.1",
+      "password_present": false,
+      "port": "3306",
+      "socket": null,
+      "source": "local_root_tcp_no_password",
+      "user": "root",
+      "user_present": true
+    }
+  ],
+  "schema_result": {
+    "attempted": false,
+    "connection_ok": false,
+    "failures": [],
+    "schema_ready": false
+  },
+  "schema_version": "mysql-connection-autodiscover-readonly/v1",
+  "selected_profile": null,
+  "table_name": "aideal_cps_commission_products"
+}
