@@ -1,0 +1,44 @@
+{
+  "collect": {
+    "collect_unavailable_count": 67,
+    "collect_unavailable_unexpected": [],
+    "expected_reason": "hz21_collector_not_mainlined"
+  },
+  "completion": {
+    "commercial_segment_complete": true,
+    "completed_count": 67,
+    "extra_pages": [],
+    "last_completed_page": 67,
+    "missing_pages": []
+  },
+  "gate_pass": true,
+  "generated_at": "2026-07-01T18:47:31Z",
+  "hard_failures": [],
+  "round_id": "hz23_obs_20260624_093503",
+  "runtime_state": {
+    "final_error": [],
+    "resume_rc": 0,
+    "resume_status": "complete",
+    "state_extra": "unfinished_pages_empty",
+    "state_mode": "complete",
+    "stop_reason": null
+  },
+  "scan": {
+    "expected_scanned_total": 4020,
+    "missing_rows": [],
+    "row_scanned_sum": 4019,
+    "scan_not_ok": [],
+    "scanned_anomalies": [
+      {
+        "page": 63,
+        "scanned": 59
+      }
+    ],
+    "summary_scanned_total": 4019
+  },
+  "schema_version": "hz23-quality-gate/v1",
+  "warnings": [
+    "scanned_total_or_page_count_not_exact",
+    "collect_unavailable_expected_until_hz21_mainlined"
+  ]
+}
